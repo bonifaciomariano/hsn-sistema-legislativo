@@ -1,0 +1,1010 @@
+{
+  "reuniones": [
+    {
+      "seccion": "senadores",
+      "dia": "MIÉRCOLES",
+      "fecha": "17/06",
+      "hora": "15:00",
+      "modalidad": "",
+      "comisiones": [
+        "ASUNTOS CONSTITUCIONALES",
+        "LEGISLACIÓN GENERAL"
+      ],
+      "salon": "ILLIA",
+      "salon_completo": "ILLIA 1° PISO DEL PALACIO DEL HSN",
+      "temario": [
+        {
+          "numero": "C.D-1/26",
+          "extracto": "PROYECTO DE LEY EN REVISIÓN QUE DEROGA LA LEGISLACIÓN OBSOLETA \"LEY DE HOJARASCA\"."
+        }
+      ],
+      "tipo": "senadores",
+      "boletin_id": 2296,
+      "boletin_numero": "64/26"
+    },
+    {
+      "seccion": "senadores",
+      "dia": "MIÉRCOLES",
+      "fecha": "17/06",
+      "hora": "15:30",
+      "modalidad": "",
+      "comisiones": [
+        "MINERÍA, ENERGÍA Y COMBUSTIBLES",
+        "PRESUPUESTO Y HACIENDA"
+      ],
+      "salon": "AZUL",
+      "salon_completo": "AZUL 1° PISO DEL PALACIO DEL HSN",
+      "temario": [
+        {
+          "numero": "S-1271/25",
+          "extracto": "AVILA: PROYECTO DE LEY QUE MODIFICA SU SIMILAR 27.640 - BIOCOMBUSTIBLES-, RESPECTO DEL PORCENTAJE OBLIGATORIO DE BIODIESEL Y BIOETANOL EN EL GASOIL Y LA NAFTA."
+        },
+        {
+          "numero": "S-1861/25",
+          "extracto": "CARAMBIA Y GADANO: PROYECTO DE LEY QUE REGULA LAS ACTIVIDADES DE ELABORACIÓN, ALMACENAJE, COMERCIALIZACIÓN, MEZCLA Y AUTOCONSUMO DE BIOCOMBUSTIBLES."
+        },
+        {
+          "numero": "S-3/26",
+          "extracto": "VIGO Y ESPÍNOLA: PROYECTO DE LEY QUE MODIFICA SU SIMILAR 27.640 - BIOCOMBUSTIBLES-, RESPECTO DE NUEVOS CRONOGRAMAS RELATIVOS A LA EXTENSIÓN TEMPORAL DE LAS REGULACIONES Y DE LA IMPLEMENTACIÓN DE LAS CUOTAS DE CORTES DE COMBUSTIBLES FÓSILES."
+        },
+        {
+          "numero": "S-809/26",
+          "extracto": "BULLRICH Y OTROS: PROYECTO DE LEY QUE ESTABLECE MARCO REGULATORIO DE BIOCOMBUSTIBLES EN EL TERRITORIO NACIONAL."
+        },
+        {
+          "numero": "S-916/26",
+          "extracto": "ROYÓN: PROYECTO DE LEY QUE ESTABLECE EL MARCO REGULATORIO DE LOS BIOCOMBUSTIBLES."
+        },
+        {
+          "numero": "S-1035/26",
+          "extracto": "ARCE Y ROJAS DECUT: PROYECTO DE LEY QUE ESTABLECE EL MARCO REGULATORIO DE LOS BIOCOMBUSTIBLES EN EL TERRITORIO NACIONAL. EXPOSITORES: MAURICIO ALEJANDRO MARTÍN, DIRECTOR SUPLENTE DE YPF S.A. Y VICEPRESIDENTE EJECUTIVO DE MIDSTREAM Y DOWNSTREAM. CLAUDIO ALEJANDRO MOLINA, CONTADOR PÚBLICO, ANALISTA DE ENERGÍAS RENOVABLES Y FERROCARRILES."
+        }
+      ],
+      "tipo": "senadores",
+      "boletin_id": 2296,
+      "boletin_numero": "64/26"
+    },
+    {
+      "seccion": "senadores",
+      "dia": "MIÉRCOLES",
+      "fecha": "17/06",
+      "hora": "16:00",
+      "modalidad": "",
+      "comisiones": [
+        "ASUNTOS CONSTITUCIONALES",
+        "AMBIENTE Y DESARROLLO SUSTENTABLE"
+      ],
+      "salon": "ILLIA",
+      "salon_completo": "ILLIA 1° PISO DEL PALACIO DEL HSN",
+      "temario": [
+        {
+          "numero": "S-361/26",
+          "extracto": "GADANO: PROYECTO DE LEY QUE APRUEBA EL CONVENIO DE CREACIÓN DEL PARQUE INTERJURISDICCIONAL MARINO MONTE LEÓN, ENTRE EL ESTADO NACIONAL Y LA PROVINCIA DE SANTA CRUZ."
+        }
+      ],
+      "tipo": "senadores",
+      "boletin_id": 2296,
+      "boletin_numero": "64/26"
+    },
+    {
+      "seccion": "senadores",
+      "dia": "MIÉRCOLES",
+      "fecha": "17/06",
+      "hora": "14:00",
+      "modalidad": "",
+      "comisiones": [
+        "ACUERDOS"
+      ],
+      "salon": "ILLIA",
+      "salon_completo": "ILLIA 1° PISO DEL PALACIO DEL HSN",
+      "temario": [
+        {
+          "numero": "P.E-133/26",
+          "extracto": "MENSAJE N° 138/26 QUE SOLICITA ACUERDO PARA PROMOVER AL GRADO INMEDIATO SUPERIOR, AL 31 DE DICIEMBRE DE 2025, AL GENERAL DE BRIGADA SEBASTIÁN IGNACIO IBÁÑEZ."
+        }
+      ],
+      "tipo": "senadores",
+      "boletin_id": 2296,
+      "boletin_numero": "64/26"
+    },
+    {
+      "seccion": "senadores",
+      "dia": "MIÉRCOLES",
+      "fecha": "17/06",
+      "hora": "17:00",
+      "modalidad": "",
+      "comisiones": [
+        "ASUNTOS ADMINISTRATIVOS Y",
+        "MUNICIPALES"
+      ],
+      "salon": "ILLIA",
+      "salon_completo": "ILLIA 1° PISO DEL PALACIO DEL HSN",
+      "temario": [
+        {
+          "numero": "S-94/25",
+          "extracto": "LEDESMA ABDALA: PROYECTO DE LEY QUE TRANSFIERE A TÍTULO GRATUITO A FAVOR DE LA UNIVERSIDAD NACIONAL DE SANTIAGO DEL ESTERO UN INMUEBLE PROPIEDAD DEL ESTADO NACIONAL UBICADO EN LA AV. BELGRANO (S) N° 2180 DE LA CIUDAD CAPITAL DE LA PROVINCIA DE SANTIAGO DEL ESTERO."
+        },
+        {
+          "numero": "S-258/26",
+          "extracto": "GALARETTO Y OTROS: PROYECTO DE LEY QUE TRANSFIERE A TÍTULO GRATUITO A FAVOR DE LA MUNICIPALIDAD DE SAN JAVIER DIVERSOS INMUEBLES PROPIEDAD DEL ESTADO NACIONAL SITOS EN LA PROV. DE SANTA FE."
+        },
+        {
+          "numero": "S-342/26",
+          "extracto": "ZAMORA Y OTROS: PROYECTO DE LEY QUE TRANSFIERE A TÍTULO GRATUITO A FAVOR DE LA UNIVERSIDAD NACIONAL DE SANTIAGO DEL ESTERO UN INMUEBLE PROPIEDAD DEL ESTADO NACIONAL UBICADO EN LA AV. BELGRANO (S) N° 2180 DE LA CIUDAD CAPITAL DE LA PROVINCIA DE SANTIAGO DEL ESTERO."
+        },
+        {
+          "numero": "S-472/26",
+          "extracto": "UÑAC: REPRODUCE PROYECTO DE LEY QUE TRANSFIERE A TÍTULO GRATUITO A LA MUNICIPALIDAD DE RAWSON, PROV. DE SAN JUAN, LA PARCELA DE TERRENO PROPIEDAD DEL ESTADO NACIONAL, UBICADA EN CALLE TASCHERET Y PÍO XII, COLONIA RODAS, PROV. DE SAN JUAN. (REF. S-383/24)."
+        },
+        {
+          "numero": "S-526/26",
+          "extracto": "MARKS Y SORIA: PROYECTO DE LEY QUE TRANSFIERE A TÍTULO GRATUITO A FAVOR DE LA ASOCIACIÓN CIVIL CLUB DEPORTIVO Y SOCIAL VILLA LOS COIHUES, UN INMUEBLE PROPIEDAD DEL ESTADO NACIONAL SITO EN LA LOC. DE SAN CARLOS DE BARILOCHE, PROV. DE RÍO NEGRO."
+        },
+        {
+          "numero": "S-695/26",
+          "extracto": "TERENZI: PROYECTO DE LEY QUE MODIFICA SU SIMILAR 27.623 - TRANSFERENCIA DE INMUEBLES A FAVOR DE LA MUNICIPALIDAD DE PUERTO MADRYN-, RESPECTO DEL DESTINO DEL INMUEBLE TRANSFERIDO, Y DE LOS PARTÍCIPES EN EL PROCEDIMIENTO DE SUBASTA O LICITACIÓN PÚBLICA."
+        },
+        {
+          "numero": "S-700/26",
+          "extracto": "TERENZI: COMUNICA FE DE ERRATAS EN EL PROYECTO DE LEY QUE MODIFICA SU SIMILAR 27.623 - TRANSFERENCIA DE INMUEBLES A FAVOR DE LA MUNICIPALIDAD DE PUERTO MADRYN-, RESPECTO DEL DESTINO DEL INMUEBLE TRANSFERIDO, Y DE LOS PARTÍCIPES EN EL PROCEDIMIENTO DE SUBASTA O LICITACIÓN PÚBLICA. (REF. S-695/26)."
+        }
+      ],
+      "tipo": "senadores",
+      "boletin_id": 2296,
+      "boletin_numero": "64/26"
+    },
+    {
+      "seccion": "senadores",
+      "dia": "MARTES",
+      "fecha": "16/06",
+      "hora": "12:00",
+      "modalidad": "",
+      "comisiones": [
+        "POBLACIÓN Y DESARROLLO HUMANO",
+        "INDUSTRIA Y COMERCIO"
+      ],
+      "salon": "FRONDIZI - MORENO",
+      "salon_completo": "FRONDIZI - MORENO 5° PISO DEL ED. ALFREDO PALACIOS",
+      "temario": [
+        {
+          "numero": "S-645/26",
+          "extracto": "TERENZI Y OTROS: PROYECTO DE LEY QUE DISPONE LA OBLIGATORIEDAD DE COMERCIOS DEL RUBRO GASTRONÓMICO A INCLUIR CARTAS ADAPTADAS CON PICTOGRAMAS."
+        }
+      ],
+      "tipo": "senadores",
+      "boletin_id": 2295,
+      "boletin_numero": "63/26"
+    },
+    {
+      "seccion": "senadores",
+      "dia": "MARTES",
+      "fecha": "23/06",
+      "hora": "16:00",
+      "modalidad": "",
+      "comisiones": [
+        "BICAMERAL MIXTA REVISORA DE",
+        "CUENTAS"
+      ],
+      "salon": "ILLIA",
+      "salon_completo": "ILLIA 1° PISO DEL PALACIO DEL HSN",
+      "temario": [
+        {
+          "numero": "",
+          "extracto": "SE RECIBIRÁ AL SEÑOR PRESIDENTE DE LA AUDITORÍA GENERAL DE LA NACIÓN, DR. JUAN MANUEL OLMOS A LOS FINES DE EXPONER ESTADO DE SITUACIÓN Y PLAN DE TRABAJO DEL ORGANISMO A SU CARGO."
+        }
+      ],
+      "tipo": "bicameral",
+      "boletin_id": 2301,
+      "boletin_numero": "68/26"
+    },
+    {
+      "seccion": "senadores",
+      "dia": "MIÉRCOLES",
+      "fecha": "17/06",
+      "hora": "11:00",
+      "modalidad": "",
+      "comisiones": [
+        "SEGURIDAD INTERIOR Y NARCOTRÁFICO"
+      ],
+      "salon": "MAYA",
+      "salon_completo": "MAYA 4° PISO DEL ED. ALFREDO PALACIOS",
+      "temario": [
+        {
+          "numero": "S-93/26",
+          "extracto": "ABAD: REPRODUCE PROYECTO DE LEY QUE MODIFICA SU SIMILAR 26.045 - REGISTRO NAC. DE PRECURSORES QUÍMICOS -, RESPECTO DE ACTUALIZAR LAS MULTAS Y SE GARANTICE SU PORCENTAJE DE LO RECAUDADO PARA LA FINANCIACIÓN DE POLÍTICAS DE PREVENCIÓN. (REF. S-1984/24). INVITADOS: FUNCIONARIOS DEL MINISTERIO DE SEGURIDAD NACIONAL."
+        }
+      ],
+      "tipo": "senadores",
+      "boletin_id": 2296,
+      "boletin_numero": "64/26"
+    },
+    {
+      "seccion": "senadores",
+      "dia": "MIÉRCOLES",
+      "fecha": "24/06",
+      "hora": "14:00",
+      "modalidad": "",
+      "comisiones": [
+        "ECONOMÍAS REGIONALES, ECONOMÍA",
+        "SOCIAL, MICRO, PEQUEÑA Y MEDIANA",
+        "EMPRESA"
+      ],
+      "salon": "ILLIA",
+      "salon_completo": "ILLIA 1° PISO DEL PALACIO DEL HSN",
+      "temario": [
+        {
+          "numero": "S-804/25",
+          "extracto": "CORA: PROYECTO DE COMUNICACIÓN QUE SOLICITA INFORMES SOBRE DIVERSOS PUNTOS RELACIONADOS CON EL DCTO. 339/2025, QUE DEROGA DIFERENTES PROGRAMAS Y POLÍTICAS DE PROMOCIÓN PARA EL SECTOR PYME DE LAS LEYES 24.467 Y 25.872."
+        },
+        {
+          "numero": "S-1465/25",
+          "extracto": "GIMÉNEZ: PROYECTO DE COMUNICACIÓN QUE SOLICITA INFORME SOBRE EL ESTADO DE LAS ECONOMÍAS REGIONALES EN LA PROVINCIA DE SALTA Y OTRAS CUESTIONES CONEXAS. PROYECTOS DE DECLARACIÓN:"
+        },
+        {
+          "numero": "S-514/25",
+          "extracto": "GIMÉNEZ: PROYECTO DE DECLARACIÓN QUE DECLARA DE INTERÉS EL \"ENCUENTRO INTERNACIONAL ÍTALO ARGENTINO DE CÁMARAS DE PEQUEÑAS Y MEDIANAS EMPRESAS\", REALIZADO EN LA PROV. DE SALTA EL 19 DE ABRIL DE 2024."
+        }
+      ],
+      "tipo": "senadores",
+      "boletin_id": 2303,
+      "boletin_numero": "69/26"
+    },
+    {
+      "seccion": "senadores",
+      "dia": "MARTES",
+      "fecha": "23/06",
+      "hora": "14:00",
+      "modalidad": "",
+      "comisiones": [
+        "DEPORTE"
+      ],
+      "salon": "MAYA",
+      "salon_completo": "MAYA 4° PISO DEL ED. ALFREDO PALACIOS",
+      "temario": [
+        {
+          "numero": "S-1232/25",
+          "extracto": "ABDALA: PROYECTO DE DECLARACIÓN QUE RINDE HOMENAJE AL CUMPLIRSE EL 45° ANIVERSARIO DEL FALLECIMIENTO DEL AUTOMOVILISTA NACIONAL, ROSENDO HERNÁNDEZ."
+        },
+        {
+          "numero": "S-1258/25",
+          "extracto": "VALENZUELA: PROYECTO DE DECLARACIÓN QUE DECLARA DE INTERÉS LA 60° FIESTA NACIONAL DE LA PESCA DEL DORADO, A REALIZARSE EN LA CDAD. DE PASO DE LA PATRIA, PROV. DE CORRIENTES, DEL 13 AL 17 DE AGOSTO DE 2025."
+        },
+        {
+          "numero": "S-1260/25",
+          "extracto": "ZIMMERMANN: PROYECTO DE DECLARACIÓN QUE EXPRESA BENEPLÁCITO POR LA CONMEMORACIÓN DEL 23° ANIVERSARIO DE LA CREACIÓN DE LA BANDERA DEL DEPORTE CHAQUEÑO, EL 24 DE JULIO DE 2025."
+        },
+        {
+          "numero": "S-1263/25",
+          "extracto": "ZIMMERMANN: PROYECTO DE DECLARACIÓN QUE EXPRESA BENEPLÁCITO POR LA CONMEMORACIÓN DEL 98° ANIVERSARIO DE LA ASOCIACIÓN ESPAÑOLA, MUTUAL, CULTURAL Y DEPORTIVA DE CHARATA, PROV. DEL CHACO, EL 17 DE JULIO."
+        },
+        {
+          "numero": "S-1264/25",
+          "extracto": "ZIMMERMANN: PROYECTO DE DECLARACIÓN QUE EXPRESA BENEPLÁCITO POR LA CONMEMORACIÓN DEL 112° ANIVERSARIO DE LA FUNDACIÓN DEL CLUB ATLÉTICO CHACO FOR EVER, DE LA PROV. DEL CHACO, A CELEBRARSE EL 27 DE JULIO DE 2025."
+        },
+        {
+          "numero": "S-1308/25",
+          "extracto": "BENSUSÁN: PROYECTO DE DECLARACIÓN QUE DECLARA DE INTERÉS EL EVENTO DEPORTIVO \"WORLD POWERLIFTING CHAMPIONSHIPS 2025\", A REALIZARSE EN CABA, DEL 30 DE OCTUBRE AL 2 DE NOVIEMBRE DE 2025."
+        },
+        {
+          "numero": "S-1311/25",
+          "extracto": "BLANCO: PROYECTO DE DECLARACIÓN QUE DECLARA DE INTERÉS LA 50° COMPETENCIA AUTOMOVILÍSTICA INTERNACIONAL \"GRAN PREMIO DE LA HERMANDAD\", QUE UNE LA CIUDAD. DE RÍO GRANDE, PROV. DE TIERRA DEL FUEGO, ANTÁRTIDA E ISLAS DEL ATLÁNTICO SUR Y LA CIUDAD DE PORVENIR, REP. DE CHILE, DEL 16 AL 18 DE AGOSTO DE 2025."
+        },
+        {
+          "numero": "S-1346/25",
+          "extracto": "ZIMMERMANN: PROYECTO DE DECLARACIÓN QUE EXPRESA BENEPLÁCITO POR EL ATLETA ARGENTINO ELÍAS GASPAR LARREGINA, QUIEN SE CONSAGRÓ CAMPEÓN EN PRUEBAS INTERNACIONALES DE 400 METROS LLANOS EN FRANCIA, ESPAÑA E IRLANDA, FIJANDO UN NUEVO RÉCORD NACIONAL."
+        },
+        {
+          "numero": "S-1371/25",
+          "extracto": "LÓPEZ, M.F.: PROYECTO DE DECLARACIÓN QUE DECLARA DE INTERÉS EL 8° ENCUENTRO DEPORTIVO DE LA RADU - EDICIÓN ESPECIAL 20° ANIVERSARIO, EN LA CDAD. DE LA RIOJA, PROV. HOMÓNIMA, EL 29 Y 30 DE AGOSTO DE 2025."
+        },
+        {
+          "numero": "S-431/26",
+          "extracto": "GOERLING LARA Y OTROS: PROYECTO DE DECLARACIÓN QUE RECHAZA Y REPUDIA LA DECISIÓN DE LA ASOCIACIÓN DEL FÚTBOL ARGENTINO (AFA), DE SUSCRIBIR UN ACUERDO DE PATROCINIO CON UNA MARCA DE YERBA MATE DE ORIGEN BRASILEÑO, PARA ACTUAR COMO SPONSOR OFICIAL DE LA SELECCIÓN NACIONAL DE FÚTBOL."
+        },
+        {
+          "numero": "S-522/26",
+          "extracto": "VISCHI: PROYECTO DE DECLARACIÓN QUE DECLARA DE INTERÉS \"LA JORNADA DEPORTIVA INCLUSIVA\" EN LA SECRETARÍA NACIONAL DE DISCAPACIDAD (SENADIS), EL 18 DE ABRIL DE 2026."
+        },
+        {
+          "numero": "S-545/26",
+          "extracto": "VALENZUELA: PROYECTO DE DECLARACIÓN QUE DECLARA DE INTERÉS LA XLIX EDICIÓN DE LA FIESTA NACIONAL DEL SURUBÍ, A CELEBRARSE EN LA CDAD. DE GOYA, PROV. DE CORRIENTES, DEL 27 DE ABRIL AL 3 DE MAYO DEL 2026."
+        },
+        {
+          "numero": "S-693/26",
+          "extracto": "HUALA: PROYECTO DE DECLARACIÓN QUE EXPRESA BENEPLÁCITO POR EL 105° ANIVERSARIO DEL CLUB ATLÉTICO PAMPERO DE LA LOC. DE GUATRACHÉ, PROV. DE LA PAMPA, EL 26 DE JUNIO DE 2026."
+        },
+        {
+          "numero": "S-897/26",
+          "extracto": "CARAMBIA Y JUEZ: PROYECTO DE DECLARACIÓN QUE EXPRESA BENEPLÁCITO POR LA CLASIFICACIÓN DE LOS ATLETAS ANNA SGARIGLIA Y MIRKO DEFAZIO DE LA CDAD. DE EL CALAFATE, PROV. DE SANTA CRUZ, AL CAMPEONATO MUNDIAL JUVENIL DE ESCALADA DEPORTIVA EN LA CDAD. DE ARCO, ITALIA, DEL 18 AL 25 DE JULIO DE 2026."
+        },
+        {
+          "numero": "S-1028/26",
+          "extracto": "MOISÉS: PROYECTO DE DECLARACIÓN QUE EXPRESA BENEPLÁCITO POR LA OBTENCIÓN DE LA MEDALLA DE ORO POR PARTE DEL DEPORTISTA JUJEÑO SANTIAGO FEDERICO FERRARI, EN EL CAMPEONATO PANAMERICANO DISPUTADO EN MEDELLÍN COLOMBIA, EN MAYO DE 2026."
+        },
+        {
+          "numero": "S-1031/26",
+          "extracto": "SCHNEIDER: PROYECTO DE DECLARACIÓN QUE EXPRESA BENEPLÁCITO POR LA REALIZACIÓN DE LA CUARTA EDICIÓN DEL \"SINERGIA MARATHON FEST 2026\", EN LA CDAD. DE RESISTENCIA, PROV. DEL CHACO, EL 13 Y 14 DE JUNIO."
+        }
+      ],
+      "tipo": "senadores",
+      "boletin_id": 2301,
+      "boletin_numero": "68/26"
+    },
+    {
+      "seccion": "senadores",
+      "dia": "MARTES",
+      "fecha": "23/06",
+      "hora": "14:00",
+      "modalidad": "",
+      "comisiones": [
+        "POBLACIÓN Y DESARROLLO HUMANO",
+        "EDUCACIÓN Y CULTURA"
+      ],
+      "salon": "FRONDIZI - MORENO",
+      "salon_completo": "FRONDIZI - MORENO 5° PISO DEL ED. ALFREDO PALACIOS",
+      "temario": [
+        {
+          "numero": "S-319/25",
+          "extracto": "HUALA: REPRODUCE PROYECTO DE LEY QUE INSTITUYE EL 2 DE MAYO DE CADA AÑO COMO \"DÍA NACIONAL PARA LA PREVENCIÓN DEL BULLYING Y OTRAS FORMAS DE VIOLENCIA Y ACOSO ESCOLAR\". (REF. S-1243/23)."
+        },
+        {
+          "numero": "S-697/25",
+          "extracto": "AVILA: PROYECTO DE LEY QUE INCORPORA EL ART. 4 BIS A SU SIMILAR 25.415 - PROGRAMA DE DETECCIÓN DE LA HIPOACUSIA-, RESPECTO DE INCORPORAR DIVERSAS ACCIONES EN EL ÁMBITO EDUCATIVO."
+        },
+        {
+          "numero": "S-517/25",
+          "extracto": "DE ANGELI: PROYECTO DE LEY QUE INSTITUYE EL DÍA 15 DE ABRIL DE CADA AÑO COMO EL \"DÍA NACIONAL DEL INMIGRANTE ALEMÁN DEL VOLGA\"."
+        },
+        {
+          "numero": "S-404/26",
+          "extracto": "GADANO: PROYECTO DE LEY QUE INSTITUYE EL DÍA 27 DE NOVIEMBRE DE CADA AÑO COMO \"DÍA DEL BASTÓN VERDE\"."
+        },
+        {
+          "numero": "S-714/26",
+          "extracto": "LÓPEZ FLORENCIA: PROYECTO DE LEY QUE INSTITUYE EL 3 DE AGOSTO DE CADA AÑO COMO EL \"DÍA NACIONAL DE LA RESILIENCIA\"."
+        },
+        {
+          "numero": "S-997/26",
+          "extracto": "AVILA: PROYECTO DE LEY QUE ESTABLECE EL TERCER JUEVES DE MARZO DE CADA AÑO COMO EL \"DÍA DE REFLEXIÓN CONTRA LA VIOLENCIA JUVENIL\"."
+        }
+      ],
+      "tipo": "senadores",
+      "boletin_id": 2301,
+      "boletin_numero": "68/26"
+    },
+    {
+      "seccion": "senadores",
+      "dia": "MIÉRCOLES",
+      "fecha": "24/06",
+      "hora": "11:00",
+      "modalidad": "",
+      "comisiones": [
+        "BANCA DE LA MUJER"
+      ],
+      "salon": "FRONDIZI - MORENO",
+      "salon_completo": "FRONDIZI - MORENO 5° PISO DEL ED. ALFREDO PALACIOS",
+      "temario": [
+        {
+          "numero": "S-199/26",
+          "extracto": "FERNÁNDEZ SAGASTI: REPRODUCE PROYECTO DE LEY QUE INSTITUYE EL 5 DE SEPTIEMBRE DE CADA AÑO, COMO EL \"DÍA NACIONAL DE LA MUJER INDÍGENA\". (REF. S-751/24). PROYECTO DE COMUNICACIÓN:"
+        },
+        {
+          "numero": "S-931/26",
+          "extracto": "KIRCHNER: PROYECTO DE COMUNICACIÓN QUE SOLICITA INFORME SOBRE EL \"GEMELO DIGITAL PARA POLÍTICAS PÚBLICAS INCLUSIVAS Y EFECTIVAS\" Y OTRAS CUESTIONES CONEXAS. PROYECTOS DE DECLARACIÓN:"
+        },
+        {
+          "numero": "S-590/25",
+          "extracto": "DURÉ: PROYECTO DE DECLARACIÓN QUE ADHIERE A LA CONMEMORACIÓN DEL \"DÍA INTERNACIONAL DEL ORGULLO\", EL 28 DE JUNIO DE CADA AÑO."
+        },
+        {
+          "numero": "S-927/25",
+          "extracto": "DURÉ Y OTRAS: PROYECTO DE DECLARACIÓN QUE EXPRESA BENEPLÁCITO POR EL 10° ANIVERSARIO DE LA PRIMERA MOVILIZACIÓN DE \"NI UNA MENOS\", EL 3 DE JUNIO DE 2025."
+        }
+      ],
+      "tipo": "senadores",
+      "boletin_id": 2303,
+      "boletin_numero": "69/26"
+    },
+    {
+      "seccion": "senadores",
+      "dia": "MIÉRCOLES",
+      "fecha": "24/06",
+      "hora": "11:00",
+      "modalidad": "",
+      "comisiones": [
+        "DEPORTE"
+      ],
+      "salon": "ILLIA",
+      "salon_completo": "ILLIA 1° PISO DEL PALACIO DEL HSN",
+      "temario": [
+        {
+          "numero": "S-1232/25",
+          "extracto": "ABDALA: PROYECTO DE DECLARACIÓN QUE RINDE HOMENAJE AL CUMPLIRSE EL 45° ANIVERSARIO DEL FALLECIMIENTO DEL AUTOMOVILISTA NACIONAL, ROSENDO HERNÁNDEZ."
+        },
+        {
+          "numero": "S-1258/25",
+          "extracto": "VALENZUELA: PROYECTO DE DECLARACIÓN QUE DECLARA DE INTERÉS LA 60° FIESTA NACIONAL DE LA PESCA DEL DORADO, A REALIZARSE EN LA CDAD. DE PASO DE LA PATRIA, PROV. DE CORRIENTES, DEL 13 AL 17 DE AGOSTO DE 2025."
+        },
+        {
+          "numero": "S-1260/25",
+          "extracto": "ZIMMERMANN: PROYECTO DE DECLARACIÓN QUE EXPRESA BENEPLÁCITO POR LA CONMEMORACIÓN DEL 23° ANIVERSARIO DE LA CREACIÓN DE LA BANDERA DEL DEPORTE CHAQUEÑO, EL 24 DE JULIO DE 2025."
+        },
+        {
+          "numero": "S-1263/25",
+          "extracto": "ZIMMERMANN: PROYECTO DE DECLARACIÓN QUE EXPRESA BENEPLÁCITO POR LA CONMEMORACIÓN DEL 98° ANIVERSARIO DE LA ASOCIACIÓN ESPAÑOLA, MUTUAL, CULTURAL Y DEPORTIVA DE CHARATA, PROV. DEL CHACO, EL 17 DE JULIO."
+        },
+        {
+          "numero": "S-1264/25",
+          "extracto": "ZIMMERMANN: PROYECTO DE DECLARACIÓN QUE EXPRESA BENEPLÁCITO POR LA CONMEMORACIÓN DEL 112° ANIVERSARIO DE LA FUNDACIÓN DEL CLUB ATLÉTICO CHACO FOR EVER, DE LA PROV. DEL CHACO, A CELEBRARSE EL 27 DE JULIO DE 2025."
+        },
+        {
+          "numero": "S-1308/25",
+          "extracto": "BENSUSÁN: PROYECTO DE DECLARACIÓN QUE DECLARA DE INTERÉS EL EVENTO DEPORTIVO \"WORLD POWERLIFTING CHAMPIONSHIPS 2025\", A REALIZARSE EN CABA, DEL 30 DE OCTUBRE AL 2 DE NOVIEMBRE DE 2025."
+        },
+        {
+          "numero": "S-1311/25",
+          "extracto": "BLANCO: PROYECTO DE DECLARACIÓN QUE DECLARA DE INTERÉS LA 50° COMPETENCIA AUTOMOVILÍSTICA INTERNACIONAL \"GRAN PREMIO DE LA HERMANDAD\", QUE UNE LA CIUDAD. DE RÍO GRANDE, PROV. DE TIERRA DEL FUEGO, ANTÁRTIDA E ISLAS DEL ATLÁNTICO SUR Y LA CIUDAD DE PORVENIR, REP. DE CHILE, DEL 16 AL 18 DE AGOSTO DE 2025."
+        },
+        {
+          "numero": "S-1346/25",
+          "extracto": "ZIMMERMANN: PROYECTO DE DECLARACIÓN QUE EXPRESA BENEPLÁCITO POR EL ATLETA ARGENTINO ELÍAS GASPAR LARREGINA, QUIEN SE CONSAGRÓ CAMPEÓN EN PRUEBAS INTERNACIONALES DE 400 METROS LLANOS EN FRANCIA, ESPAÑA E IRLANDA, FIJANDO UN NUEVO RÉCORD NACIONAL."
+        },
+        {
+          "numero": "S-1371/25",
+          "extracto": "LÓPEZ, M.F.: PROYECTO DE DECLARACIÓN QUE DECLARA DE INTERÉS EL 8° ENCUENTRO DEPORTIVO DE LA RADU - EDICIÓN ESPECIAL 20° ANIVERSARIO, EN LA CDAD. DE LA RIOJA, PROV. HOMÓNIMA, EL 29 Y 30 DE AGOSTO DE 2025."
+        },
+        {
+          "numero": "S-1390/25",
+          "extracto": "ZIMMERMANN: PROYECTO DE DECLARACIÓN QUE EXPRESA BENEPLÁCITO POR LA CONMEMORACIÓN DEL 104° ANIVERSARIO DEL AEROCLUB CHACO DE RESISTENCIA, PROV. DEL CHACO, EL 28 DE AGOSTO DE 2025."
+        },
+        {
+          "numero": "S-1391/25",
+          "extracto": "ZIMMERMANN: PROYECTO DE DECLARACIÓN QUE EXPRESA PESAR POR EL FALLECIMIENTO DE LA DEPORTISTA ALEJANDRA \"LOCOMOTORA\" OLIVERAS, EL 28 DE JULIO DE 2025."
+        },
+        {
+          "numero": "S-1453/25",
+          "extracto": "GALARETTO Y KRONEBERGER: PROYECTO DE DECLARACIÓN QUE EXPRESA PESAR POR EL FALLECIMIENTO DE ALEJANDRA MARINA \"LA LOCOMOTORA\" OLIVERAS, EL 28 DE JULIO DE 2025."
+        }
+      ],
+      "tipo": "senadores",
+      "boletin_id": 2303,
+      "boletin_numero": "69/26"
+    },
+    {
+      "seccion": "senadores",
+      "dia": "MIÉRCOLES",
+      "fecha": "24/06",
+      "hora": "17:00",
+      "modalidad": "",
+      "comisiones": [
+        "CIENCIA Y TECNOLOGÍA"
+      ],
+      "salon": "AZUL",
+      "salon_completo": "AZUL 1° PISO DEL PALACIO DEL HSN",
+      "temario": [
+        {
+          "numero": "",
+          "extracto": "SE RECIBIRÁ A INVESTIGADORES DEL CONICET, ESPECIALISTAS Y REPRESENTANTES DE LA SOCIEDAD CIVIL A FIN DE DAR A CONOCER LAS PRINCIPALES CONCLUSIONES DEL CUARTO INFORME DEL OBSERVATORIO DE TIERRAS DEL CONICET."
+        }
+      ],
+      "tipo": "senadores",
+      "boletin_id": 2303,
+      "boletin_numero": "69/26"
+    },
+    {
+      "seccion": "senadores",
+      "dia": "MARTES",
+      "fecha": "23/06",
+      "hora": "11:00",
+      "modalidad": "",
+      "comisiones": [
+        "INFRAESTRUCTURA, VIVIENDA Y",
+        "TRANSPORTE"
+      ],
+      "salon": "RAMELLA",
+      "salon_completo": "RAMELLA 4° PISO DEL ED. ALFREDO PALACIOS",
+      "temario": [
+        {
+          "numero": "S-191/25",
+          "extracto": "BENSUSÁN: REPRODUCE PROYECTO DE LEY QUE MODIFICA EL INC. C) DEL ART. 13, DE SU SIMILAR 24.449 - TRÁNSITO -, RESPECTO DE LA DETERMINACIÓN DE LOS PERIODOS DE VIGENCIA DE LA LICENCIA NACIONAL DE CONDUCIR, POR PARTE DE LA AUTORIDAD EXPEDIDORA. (REF. S-841/23)."
+        },
+        {
+          "numero": "S-1117/25",
+          "extracto": "CARAMBIA: PROYECTO DE LEY QUE SUSTITUYE EL ART. 11 DE SU SIMILAR 24.449 - TRÁNSITO -, RESPECTO DE LAS EDADES MÍNIMAS PARA CONDUCIR."
+        },
+        {
+          "numero": "S-1462/25",
+          "extracto": "OLIVERA LUCERO: PROYECTO DE LEY QUE MODIFICA EL ART. 55 DE SU SIMILAR 24.449 - TRÁNSITO -, RESPECTO DEL TRANSPORTE DE ESCOLARES."
+        },
+        {
+          "numero": "S-1719/25",
+          "extracto": "AVILA: PROYECTO DE LEY QUE ESTABLECE LA OBLIGATORIEDAD DE EFECTUAR CONTROLES PSICOFÍSICOS A CONDUCTORES DE VEHÍCULOS DE PASAJEROS DE LARGA DISTANCIA."
+        },
+        {
+          "numero": "S-1877/25",
+          "extracto": "AVILA: PROYECTO DE LEY QUE MODIFICA EL ART. 55 DE SU SIMILAR 24.449 - TRÁNSITO - RESPECTO DE LAS CONDICIONES DE SEGURIDAD EN TRANSPORTE DE ESCOLARES."
+        },
+        {
+          "numero": "S-1896/25",
+          "extracto": "AVILA: PROYECTO DE LEY QUE MODIFICA EL ART. 11 INCISO C) DE LA LEY 24.449 - TRÁNSITO -, RESPECTO DE LAS CONDICIONES PARA CONDUCIR VEHÍCULOS ELÉCTRICOS. EXPTE S-200/26, FERNÁNDEZ SAGASTI: REPRODUCE PROYECTO DE LEY QUE MODIFICA SU SIMILAR 24.449 - LEY DE TRÁNSITO -, INCORPORANDO EL ART. 68 BIS - LÍMITES A LA EXCLUSIÓN DE COBERTURA (REF. S-753/24). EXPTE S-726/26, FULLONE: PROYECTO DE LEY QUE ESTABLECE UN RÉGIMEN EXCEPCIONAL PARA LA REGULACIÓN DE LA OBRA PÚBLICA NACIONAL. PROYECTOS DE COMUNICACIÓN:"
+        },
+        {
+          "numero": "S-230/25",
+          "extracto": "LÓPEZ C.Y OTRAS: PROYECTO DE COMUNICACIÓN QUE SOLICITA INFORME SOBRE LAS MEDIDAS DE MANTENIMIENTO IMPLEMENTADAS EN LAS RUTAS NACIONALES QUE ATRAVIESAN LA PROV. DE TIERRA DEL FUEGO, ANTÁRTIDA E ISLAS DEL ATLÁNTICO SUR Y OTRAS CUESTIONES CONEXAS."
+        },
+        {
+          "numero": "S-238/25",
+          "extracto": "LEWANDOWSKI: PROYECTO DE COMUNICACIÓN QUE SOLICITA INFORME SOBRE DIVERSOS PUNTOS RELACIONADOS CON EL PUENTE SOBRE EL ARROYO SALADILLO, EN EL TRAMO DE LA AUTOPISTA ROSARIO-BUENOS AIRES."
+        },
+        {
+          "numero": "S-279/25",
+          "extracto": "AVILA: PROYECTO DE COMUNICACIÓN QUE SOLICITA INFORME SOBRE EL ESTADO DE LAS RUTAS NACIONALES QUE ATRAVIESAN LA PROVINCIA DE TUCUMÁN Y OTRAS CUESTIONES CONEXAS."
+        },
+        {
+          "numero": "S-1675/25",
+          "extracto": "VISCHI: PROYECTO DE COMUNICACIÓN QUE SOLICITA INFORME SOBRE EL ESTADO DE LA INTERSECCIÓN DE LAS RUTAS NACIONALES 14, 119 Y 127 EN LA PROVINCIA DE CORRIENTES Y OTRAS CUESTIONES CONEXAS."
+        },
+        {
+          "numero": "S-2161/25",
+          "extracto": "ÁLVAREZ RIVERO: PROYECTO DE COMUNICACIÓN QUE SOLICITA SE IDENTIFIQUE A LA R.N. N° 158 COMO CORREDOR LOGÍSTICO PRIORITARIO EN EL MARCO DE LOS ACUERDOS COMERCIALES CELEBRADOS CON LA UNIÓN EUROPEA, Y LOS ESTADOS UNIDOS DE AMÉRICA."
+        },
+        {
+          "numero": "S-49/26",
+          "extracto": "CAPITANICH: PROYECTO DE COMUNICACIÓN QUE SOLICITA INFORME SOBRE DIVERSOS PUNTOS RELACIONADOS AL PROYECTO DE OBRA \"SEGUNDO PUENTE CHACO - CORRIENTES\"."
+        },
+        {
+          "numero": "S-421/26",
+          "extracto": "ROYÓN: PROYECTO DE COMUNICACIÓN QUE SOLICITA INFORME SOBRE EL ESTADO DE EJECUCIÓN Y SITUACIÓN PRESUPUESTARIA DE LAS OBRAS DEL SISTEMA MODULAR DE MANTENIMIENTO DE LAS RUTAS NACIONALES N° 40 Y N° 51 DE LA PROV. DE SALTA Y OTRAS CUESTIONES CONEXAS. EXPTE S-462/26, BENSUSÁN: PROYECTO DE COMUNICACIÓN QUE SOLICITA INFORME SOBRE DIVERSOS PUNTOS RELACIONADOS A LA PARALIZACIÓN DE LAS OBRAS EN EL TRAMO DE LA R.N. N° 5 QUE CONECTA LAS CIUDADES DE MERCEDES Y SUIPACHA, EN LA PROV. DE BUENOS AIRES. EXPTE S-649/26, KRONEBERGER: PROYECTO DE COMUNICACIÓN QUE SOLICITA INFORME SOBRE DIVERSOS PUNTOS RELACIONADOS AL PUENTE DE LA RUTA NACIONAL N° 22, UBICADO SOBRE EL RÍO COLORADO Y CONECTA LA LOC. HOMÓNIMA EN LA PROV. DE RÍO NEGRO CON LA LOC. DE LA ADELA (PROV. DE LA PAMPA). PROYECTOS DE DECLARACIÓN:"
+        },
+        {
+          "numero": "S-2162/25",
+          "extracto": "ÁLVAREZ RIVERO: PROYECTO DE DECLARACIÓN QUE DECLARA A LA R.N. N° 158 COMO CORREDOR LOGÍSTICO PRIORITARIO EN EL MARCO DE LOS ACUERDOS COMERCIALES CELEBRADOS CON LA UNIÓN EUROPEA, Y LOS ESTADOS UNIDOS DE AMÉRICA. EXPTE S-1023/26, AVILA: PROYECTO DE DECLARACIÓN QUE DECLARA DE INTERÉS EL 90° ANIVERSARIO DE LA CÁMARA ARGENTINA DE LA CONSTRUCCIÓN (CAMARCO), EL 6 DE FEBRERO DE 2026."
+        }
+      ],
+      "tipo": "senadores",
+      "boletin_id": 2301,
+      "boletin_numero": "68/26"
+    },
+    {
+      "seccion": "senadores",
+      "dia": "MARTES",
+      "fecha": "23/06",
+      "hora": "13:00",
+      "modalidad": "",
+      "comisiones": [
+        "SISTEMAS, MEDIOS DE COMUNICACIÓN",
+        "Y LIBERTAD DE EXPRESIÓN",
+        "ECONOMÍA NACIONAL E INVERSIÓN"
+      ],
+      "salon": "BITTEL",
+      "salon_completo": "BITTEL 4° PISO DEL ED. ALFREDO PALACIOS",
+      "temario": [
+        {
+          "numero": "S-543/25",
+          "extracto": "REJAL Y ANDRADA: PROYECTO DE LEY QUE CREA LA LÍNEA DE ATENCIÓN CONTRA ESTAFAS VIRTUALES Y FRAUDE DE DATOS PERSONALES."
+        }
+      ],
+      "tipo": "senadores",
+      "boletin_id": 2301,
+      "boletin_numero": "68/26"
+    },
+    {
+      "seccion": "senadores",
+      "dia": "MIÉRCOLES",
+      "fecha": "24/06",
+      "hora": "15:30",
+      "modalidad": "",
+      "comisiones": [
+        "LEGISLACIÓN GENERAL"
+      ],
+      "salon": "ILLIA",
+      "salon_completo": "ILLIA 1° PISO DEL PALACIO DEL HSN",
+      "temario": [
+        {
+          "numero": "P.E-193/26",
+          "extracto": "MENSAJE N° 187/26 Y PROYECTO DE LEY GENERAL DE SOCIEDADES."
+        }
+      ],
+      "tipo": "senadores",
+      "boletin_id": 2303,
+      "boletin_numero": "69/26"
+    },
+    {
+      "seccion": "senadores",
+      "dia": "MARTES",
+      "fecha": "30/06",
+      "hora": "11:00",
+      "modalidad": "AUDIENCIA PÚBLICA",
+      "comisiones": [
+        "ACUERDOS"
+      ],
+      "salon": "AZUL",
+      "salon_completo": "AZUL 1° PISO DEL PALACIO DEL HSN",
+      "temario": [
+        {
+          "numero": "P.E-121/26",
+          "extracto": "MENSAJE N° 129/26 QUE SOLICITA ACUERDO PARA DESIGNAR JUEZ DE CÁMARA DEL TRIBUNAL ORAL EN LO CRIMINAL FEDERAL N° 2 DE SAN MARTÍN, PROV. DE BUENOS AIRES, AL DR. BERNARDO MARÍA RODRÍGUEZ PALMA."
+        },
+        {
+          "numero": "P.E-128/26",
+          "extracto": "MENSAJE N° 136/26 QUE SOLICITA ACUERDO PARA DESIGNAR CONJUECES DE LOS JUZGADOS FEDERALES DE PRIMERA INSTANCIA DE LA JURISDICCIÓN DE LA CÁMARA FEDERAL DE APELACIONES DE CÓRDOBA. DR. MAXIMILIANO DANIEL CHÁVEZ. DRA. ANDREA CRISTINA DI GREGORIO. DR. AGUSTÍN GARCÍA FAURÉ. DR. GABRIEL ANDRÉS MARNICH. DR. JOSÉ EDUARDO VILLENA. DR. FERNANDO GABRIEL ZARABOZO."
+        },
+        {
+          "numero": "P.E-143/26",
+          "extracto": "MENSAJE N° 146/26 QUE SOLICITA ACUERDO PARA DESIGNAR JUEZ DE CÁMARA DEL TRIBUNAL ORAL EN LO CRIMINAL FEDERAL DE TUCUMÁN, PROV. DE TUCUMÁN, AL DR. PABLO ROBERTO TOLEDO."
+        },
+        {
+          "numero": "P.E-144/26",
+          "extracto": "MENSAJE N° 147/26 QUE SOLICITA ACUERDO PARA DESIGNAR JUEZA DE CÁMARA DEL TRIBUNAL ORAL EN LO CRIMINAL FEDERAL DE POSADAS, PROV. DE MISIONES, A LA DRA. RUTH MARÍA PONCE DE LEÓN."
+        },
+        {
+          "numero": "P.E-145/26",
+          "extracto": "MENSAJE N° 148/26 QUE SOLICITA ACUERDO PARA DESIGNAR FISCAL FEDERAL DE LA UNIDAD FISCAL DE CORRIENTES, PROV. DE CORRIENTES, AL DR. JUAN MARCELO BURELLA ACEVEDO."
+        },
+        {
+          "numero": "P.E-146/26",
+          "extracto": "MENSAJE N° 149/26 QUE SOLICITA ACUERDO PARA DESIGNAR VOCAL DE LA CÁMARA FEDERAL DE APELACIONES DE RESISTENCIA, PROV. DEL CHACO, A LA DRA. MARÍA VIRGINIA ISE."
+        },
+        {
+          "numero": "P.E-147/26",
+          "extracto": "MENSAJE N° 150/26 QUE SOLICITA ACUERDO PARA DESIGNAR JUEZ DE CÁMARA DEL TRIBUNAL ORAL EN LO CRIMINAL FEDERAL DE TUCUMÁN, PROV. DE TUCUMÁN, AL DR. ÁNGEL ROGER LUNA ROLDÁN."
+        },
+        {
+          "numero": "P.E-148/26",
+          "extracto": "MENSAJE N° 151/26 QUE SOLICITA ACUERDO PARA DESIGNAR JUEZ DE CÁMARA DEL TRIBUNAL ORAL EN LO CRIMINAL Y CORRECCIONAL N° 9 DE LA CAPITAL FEDERAL, AL DR. JUAN CARLOS RICCARDINI."
+        },
+        {
+          "numero": "P.E-150/26",
+          "extracto": "MENSAJE N° 153/26 QUE SOLICITA ACUERDO PARA DESIGNAR JUEZA DE CÁMARA DEL TRIBUNAL ORAL EN LO CRIMINAL Y CORRECCIONAL N° 18 DE LA CAPITAL FEDERAL, A LA DRA. PAULA VANESA ROMEO."
+        },
+        {
+          "numero": "P.E-152/26",
+          "extracto": "MENSAJE N° 155/26 QUE SOLICITA ACUERDO PARA DESIGNAR JUEZ DEL JUZGADO FEDERAL DE PRIMERA INSTANCIA EN LO CRIMINAL Y CORRECCIONAL N° 2 DE LOMAS DE ZAMORA, PROVINCIA DE BUENOS AIRES, AL DR. JUAN TOMÁS RODRÍGUEZ PONTE."
+        },
+        {
+          "numero": "P.E-153/26",
+          "extracto": "MENSAJE N° 156/26 QUE SOLICITA ACUERDO PARA DESIGNAR FISCAL FEDERAL DE LA SEDE FISCAL DESCENTRALIZADA DE PASO DE LOS LIBRES, PROVINCIA DE CORRIENTES, AL DR. HUGO DANIEL FROY."
+        }
+      ],
+      "tipo": "senadores",
+      "boletin_id": 2305,
+      "boletin_numero": "71/26"
+    },
+    {
+      "seccion": "senadores",
+      "dia": "MIÉRCOLES",
+      "fecha": "01/07",
+      "hora": "11:00",
+      "modalidad": "AUDIENCIA PÚBLICA",
+      "comisiones": [
+        "ACUERDOS"
+      ],
+      "salon": "AZUL",
+      "salon_completo": "AZUL 1° PISO DEL PALACIO DEL HSN",
+      "temario": [
+        {
+          "numero": "P.E-105/26",
+          "extracto": "MENSAJE N° 113/26 QUE SOLICITA ACUERDO PARA DESIGNAR DEFENSORA PÚBLICA DE VÍCTIMA CON ASIENTO EN LA PROV. DE RÍO NEGRO, A LA DRA. MARÍA LAURA IRASTORZA."
+        },
+        {
+          "numero": "P.E-158/26",
+          "extracto": "MENSAJE N° 160/26 QUE SOLICITA ACUERDO PARA DESIGNAR DEFENSORA PÚBLICA OFICIAL ANTE LOS TRIBUNALES ORALES EN LO CRIMINAL Y CORRECCIONAL DE LA CAPITAL FEDERAL, DEFENSORÍA N° 7, A LA DRA. AMANDA ESPINO."
+        },
+        {
+          "numero": "P.E-159/26",
+          "extracto": "MENSAJE N° 161/26 QUE SOLICITA ACUERDO PARA DESIGNAR VOCAL DE LA CÁMARA FEDERAL DE APELACIONES DE SALTA, PROV. DE SALTA, SALA I, AL DR. SANTIAGO FRENCH."
+        },
+        {
+          "numero": "P.E-160/26",
+          "extracto": "MENSAJE N° 162/26 QUE SOLICITA ACUERDO PARA DESIGNAR VOCAL DE LA CÁMARA FEDERAL DE APELACIONES DE MAR DEL PLATA, PROV. DE BUENOS AIRES, AL DR. SANTIAGO JOSÉ MARTÍN."
+        },
+        {
+          "numero": "P.E-161/26",
+          "extracto": "MENSAJE N° 163/26 QUE SOLICITA ACUERDO PARA DESIGNAR FISCAL FEDERAL DE LA UNIDAD FISCAL DE RESISTENCIA, PROVINCIA DEL CHACO, AL DR. PATRICIO NICOLÁS SABADINI."
+        },
+        {
+          "numero": "P.E-163/26",
+          "extracto": "MENSAJE N° 165/26 QUE SOLICITA ACUERDO PARA DESIGNAR JUEZ DEL JUZGADO NACIONAL DE PRIMERA INSTANCIA EN LO COMERCIAL N° 28 DE LA CAPITAL FEDERAL, AL DR. PEDRO MANUEL CRESPO."
+        },
+        {
+          "numero": "P.E-168/26",
+          "extracto": "MENSAJE N° 170/26 QUE SOLICITA ACUERDO PARA DESIGNAR FISCAL FEDERAL DE LA UNIDAD FISCAL MENDOZA, PROVINCIA DE MENDOZA, AL DR. FERNANDO GABRIEL ALCARAZ."
+        },
+        {
+          "numero": "P.E-173/26",
+          "extracto": "MENSAJE N° 174/26 QUE SOLICITA ACUERDO PARA DESIGNAR VOCAL DE LA CÁMARA NACIONAL DE APELACIONES EN LO COMERCIAL DE LA CAPITAL FEDERAL, SALA C, AL DR. JAVIER JORGE COSENTINO."
+        },
+        {
+          "numero": "P.E-183/26",
+          "extracto": "MENSAJE N° 177/26 QUE SOLICITA ACUERDO PARA DESIGNAR JUEZ DE CÁMARA DEL TRIBUNAL ORAL EN LO CRIMINAL Y CORRECCIONAL N° 14 DE LA CAPITAL FEDERAL, AL DR. JOSÉ IGNACIO POLIZZA."
+        },
+        {
+          "numero": "P.E-188/26",
+          "extracto": "MENSAJE N° 182/26 QUE SOLICITA ACUERDO PARA DESIGNAR JUEZA DEL JUZGADO FEDERAL DE PRIMERA INSTANCIA DE LA SEGURIDAD SOCIAL N° 5 DE LA CAPITAL FEDERAL, A LA DRA. MARÍA GABRIELA JANEIRO."
+        },
+        {
+          "numero": "P.E-190/26",
+          "extracto": "MENSAJE N° 184/26 QUE SOLICITA ACUERDO PARA DESIGNAR JUEZ DE CÁMARA DEL TRIBUNAL ORAL EN LO CRIMINAL Y CORRECCIONAL N° 9 DE LA CAPITAL FEDERAL, AL DR. MARIANO ADOLFO KLUMPP."
+        }
+      ],
+      "tipo": "senadores",
+      "boletin_id": 2305,
+      "boletin_numero": "71/26"
+    },
+    {
+      "seccion": "senadores",
+      "dia": "MARTES",
+      "fecha": "30/06",
+      "hora": "14:00",
+      "modalidad": "",
+      "comisiones": [
+        "INDUSTRIA Y COMERCIO"
+      ],
+      "salon": "FRONDIZI - MORENO",
+      "salon_completo": "FRONDIZI - MORENO 5° PISO DEL ED. ALFREDO PALACIOS",
+      "temario": [
+        {
+          "numero": "S-31/25",
+          "extracto": "GARCÍA LARRABURU: PROYECTO DE LEY QUE INSTITUYE EL RÉGIMEN DE PROMOCIÓN EN LA ELABORACIÓN, DISTRIBUCIÓN Y COMERCIALIZACIÓN, DE BEBIDAS ESPIRITUOSAS ARTESANALES."
+        },
+        {
+          "numero": "S-89/25",
+          "extracto": "GARCÍA LARRABURU: PROYECTO DE LEY QUE PROHÍBE LA VENTA Y EXPENDIO DE BEBIDAS ENERGIZANTES A MENORES DE 18 AÑOS. PROYECTOS DE COMUNICACIÓN:"
+        },
+        {
+          "numero": "S-2142/25",
+          "extracto": "LEWANDOWSKI: PROYECTO DE COMUNICACIÓN QUE SOLICITA INFORME SOBRE DISTINTOS PUNTOS RELACIONADOS CON LA INDUSTRIA METALÚRGICA Y LA IMPORTACIÓN DE ESTRUCTURAS DE ACERO."
+        },
+        {
+          "numero": "S-565/25",
+          "extracto": "REJAL Y OTROS: PROYECTO DE COMUNICACIÓN QUE SOLICITA INFORME SOBRE LOS EFECTOS DE LAS MEDIDAS ADOPTADAS POR LOS DCTOS. 908/2024 Y 236/2025, RESPECTO DE LA INDUSTRIA TEXTIL."
+        }
+      ],
+      "tipo": "senadores",
+      "boletin_id": 2304,
+      "boletin_numero": "70/26"
+    },
+    {
+      "seccion": "senadores",
+      "dia": "MARTES",
+      "fecha": "30/06",
+      "hora": "11:00",
+      "modalidad": "",
+      "comisiones": [
+        "BICAMERAL DEL DEFENSOR DE LOS",
+        "DERECHOS DE NIÑAS, NIÑOS Y",
+        "ADOLESCENTES"
+      ],
+      "salon": "ILLIA",
+      "salon_completo": "ILLIA 1° PISO DEL PALACIO DEL HSN",
+      "temario": [
+        {
+          "numero": "",
+          "extracto": "1. DEFINICIÓN DE UN PLAN DE TRABAJO, PAUTAS Y LINEAMIENTOS GENERALES PARA LA ELABORACIÓN DEL REGLAMENTO APLICABLE A NUEVO CONCURSO PÚBLICO 2026 PARA LA DESIGNACIÓN DEL DEFENSOR DE LOS DERECHOS DE LAS NIÑAS, NIÑOS Y ADOLESCENTES. 2. TRATAMIENTO DE CUESTIONES ATINENTES AL ARTÍCULO 2° DE LA RESOLUCIÓN Nº 2/2026 DE LA COMISIÓN BICAMERAL."
+        }
+      ],
+      "tipo": "bicameral",
+      "boletin_id": 2305,
+      "boletin_numero": "71/26"
+    },
+    {
+      "seccion": "senadores",
+      "dia": "MARTES",
+      "fecha": "30/06",
+      "hora": "17:00",
+      "modalidad": "",
+      "comisiones": [
+        "INDUSTRIA Y COMERCIO"
+      ],
+      "salon": "ILLIA",
+      "salon_completo": "ILLIA 1° PISO DEL PALACIO DEL HSN",
+      "temario": [
+        {
+          "numero": "S-565/25",
+          "extracto": "REJAL Y OTROS: PROYECTO DE COMUNICACIÓN QUE SOLICITA INFORME SOBRE LOS EFECTOS DE LAS MEDIDAS ADOPTADAS POR LOS DCTOS. 908/2024 Y 236/2025, RESPECTO DE LA INDUSTRIA TEXTIL."
+        },
+        {
+          "numero": "S-2142/25",
+          "extracto": "LEWANDOWSKI: PROYECTO DE COMUNICACIÓN QUE SOLICITA INFORME SOBRE DISTINTOS PUNTOS RELACIONADOS CON LA INDUSTRIA METALÚRGICA Y LA IMPORTACIÓN DE ESTRUCTURAS DE ACERO. PROYECTOS DE DECLARACIÓN:"
+        },
+        {
+          "numero": "S-1372/25",
+          "extracto": "LÓPEZ F.: PROYECTO DE DECLARACIÓN QUE DECLARA DE INTERÉS EL “6° CONGRESO INDUSTRIAL DEL CONSENSO NACIONAL DEL TRABAJO Y LA PRODUCCIÓN” Y LA “3° EXPOSICIÓN DE INDUSTRIAS Y SERVICIOS MULTISECTORIAL NACIONAL E INTERNACIONAL 2025” A DESARROLLARSE DEL 19 AL 21 DE AGOSTO DE 2025."
+        },
+        {
+          "numero": "S-1641/25",
+          "extracto": "CRISTINA: PROYECTO DE DECLARACIÓN QUE DECLARA DE INTERÉS LA LABOR DE PROMOCIÓN SOCIAL Y AMBIENTAL DE LA INDUSTRIA TEXTIL SUSTENTABLE, LLEVADA A CABO A TRAVÉS DEL DESFILE \"R.D.C. (RECODIFICAR LA MODA), IMPULSADO POR EL INSTITUTO MÉDICO ALTAMIRA, PROV. DEL CHUBUT, EL 27 DE SEPTIEMBRE DE 2025."
+        },
+        {
+          "numero": "S-1808/25",
+          "extracto": "GADANO: PROYECTO DE DECLARACIÓN QUE ADHIERE A LA CONMEMORACIÓN DEL \"DÍA DE LA INDUSTRIA\", EL 2 DE SEPTIEMBRE DE 2025."
+        },
+        {
+          "numero": "S-1957/25",
+          "extracto": "LÓPEZ C. Y OTROS: PROYECTO DE DECLARACIÓN QUE EXPRESA PREOCUPACIÓN Y REPUDIA LA RES. N° 489/25 DE LA SECRETARÍA DE INDUSTRIA Y COMERCIO DEL MIN. DE ECONOMÍA, QUE APRUEBA UN NUEVO PROCESO PRODUCTIVO BASE PARA LA FABRICACIÓN DE EQUIPOS DE RADIOCOMUNICACIONES MOVILES CELULARES."
+        },
+        {
+          "numero": "S-367/26",
+          "extracto": "MENDOZA: PROYECTO DE DECLARACIÓN QUE EXPRESA BENEPLÁCITO POR LA PRESENTACIÓN DEL PRIMER CAFÉ CULTIVADO, COSECHADO Y PROCESADO ÍNTEGRAMENTE EN SUELO ARGENTINO, A PARTIR DE UN ACUERDO ENTRE LA EMPRESA CABRALES Y LA PROV. DE TUCUMÁN."
+        },
+        {
+          "numero": "S-600/26",
+          "extracto": "LÓPEZ F.: PROYECTO DE DECLARACIÓN QUE DECLARA DE INTERÉS LA \"7° EDICIÓN DEL CONGRESO INDUSTRIAL DEL CONSENSO NACIONAL DEL TRABAJO Y LA PRODUCCIÓN\" Y LA \"EXPO DE INDUSTRIAS Y SERVICIOS 2026 - IV EDICIÓN NACIONAL E INTERNACIONAL.\", A DESARROLLARSE EN EL PREDIO FERIAL DE LA RURAL, CABA, DEL 25 AL 27 DE AGOSTO DE 2026."
+        },
+        {
+          "numero": "S-953/26",
+          "extracto": "GUZMÁN CORAITA: PROYECTO DE DECLARACIÓN QUE DECLARA DE INTERÉS EL \"CONCURSO ACCIONES POSITIVAS\" IMPULSADA POR LA CÁMARA DE COMERCIO SUIZO ARGENTINA JUNTO A LA EMBAJADA DE SUIZA EN LA REP. ARGENTINA."
+        }
+      ],
+      "tipo": "senadores",
+      "boletin_id": 2305,
+      "boletin_numero": "71/26"
+    },
+    {
+      "seccion": "senadores",
+      "dia": "MARTES",
+      "fecha": "30/06",
+      "hora": "18:00",
+      "modalidad": "",
+      "comisiones": [
+        "POBLACIÓN Y DESARROLLO HUMANO",
+        "INDUSTRIA Y COMERCIO"
+      ],
+      "salon": "ILLIA",
+      "salon_completo": "ILLIA 1° PISO DEL PALACIO DEL HSN",
+      "temario": [
+        {
+          "numero": "S-645/26",
+          "extracto": "TERENZI Y OTROS: PROYECTO DE LEY QUE DISPONE LA OBLIGATORIEDAD DE COMERCIOS DEL RUBRO GASTRONÓMICO A INCLUIR CARTAS ADAPTADAS CON PICTOGRAMAS."
+        }
+      ],
+      "tipo": "senadores",
+      "boletin_id": 2305,
+      "boletin_numero": "71/26"
+    },
+    {
+      "seccion": "senadores",
+      "dia": "MIÉRCOLES",
+      "fecha": "01/07",
+      "hora": "14:00",
+      "modalidad": "",
+      "comisiones": [
+        "INFRAESTRUCTURA, VIVIENDA Y",
+        "TRANSPORTE"
+      ],
+      "salon": "ILLIA",
+      "salon_completo": "ILLIA 1° PISO DEL PALACIO DEL HSN",
+      "temario": [
+        {
+          "numero": "S-522/25",
+          "extracto": "ROJAS DECUT Y ARCE: PROYECTO DE DECLARACIÓN QUE DECLARA DE INTERÉS LA INAUGURACIÓN DE LA AEROESTACIÓN YABOTÍ, EN LA PROVINCIA DE MISIONES."
+        },
+        {
+          "numero": "S-743/25",
+          "extracto": "HUALA: PROYECTO DE DECLARACIÓN QUE ADHIERE A LA \"8VA SEMANA MUNDIAL DE LA SEGURIDAD VIAL\", A CELEBRARSE ENTRE EL 12 Y 18 DE MAYO DE 2025."
+        },
+        {
+          "numero": "S-969/25",
+          "extracto": "ABDALA: PROYECTO DE DECLARACIÓN QUE DECLARA DE INTERÉS EL IV CONGRESO NACIONAL DE SEGURIDAD VIAL, A REALIZARSE EN LA CIUDAD DE SAN JUAN, DE LA PROV. HOMÓNIMA, DEL 4 AL 6 DE JUNIO DE 2025."
+        },
+        {
+          "numero": "S-1582/25",
+          "extracto": "ÁLVAREZ RIVERO: PROYECTO DE DECLARACIÓN QUE DECLARA DE INTERÉS LA CONSOLIDACIÓN Y DESARROLLO DEL CORREDOR BIOCEÁNICO CENTRAL COMO EJE DE INTEGRACIÓN ENTRE ARGENTINA, BRASIL, URUGUAY Y CHILE."
+        },
+        {
+          "numero": "S-209/26",
+          "extracto": "MONTE DE OCA: PROYECTO DE DECLARACIÓN QUE EXPRESA BENEPLÁCITO POR LA REALIZACIÓN DEL PRIMER VUELO PRIVADO ARGENTINO HACIA LA ANTÁRTIDA DENOMINADO \"ANTÁRTICO PETREL 01\", EL 12 DE FEBRERO DE 2026."
+        },
+        {
+          "numero": "S-574/26",
+          "extracto": "LEWANDOWSKI: PROYECTO DE DECLARACIÓN QUE DECLARA DE INTERÉS EL \"20° ENCUENTRO ARGENTINO DE TRANSPORTE FLUVIAL (EATF)\", A REALIZARSE EN LA CDAD. DE ROSARIO, PROV. DE SANTA FE, EL 28 DE ABRIL DE 2026. EXPTE S-1023/26, AVILA: PROYECTO DE DECLARACIÓN QUE DECLARA DE INTERÉ S EL 90° ANIVERSARIO DE LA CÁMARA ARGENTINA DE LA CONSTRUCCIÓN (CAMARCO), EL 6 DE FEBRERO DE 2026."
+        },
+        {
+          "numero": "S-2162/25",
+          "extracto": "ÁLVAREZ RIVERO: PROYECTO DE DECLARACIÓN QUE DECLARA A LA R.N. N° 158 COMO CORREDOR LOGÍSTICO PRIORITARIO EN EL MAR CO DE LOS ACUERDOS COMERCIALES CELEBRADOS CON LA UNIÓN EUROPEA, Y LOS ESTADOS UNIDOS DE AMÉRICA."
+        }
+      ],
+      "tipo": "senadores",
+      "boletin_id": 2305,
+      "boletin_numero": "71/26"
+    },
+    {
+      "seccion": "senadores",
+      "dia": "MIÉRCOLES",
+      "fecha": "01/07",
+      "hora": "15:00",
+      "modalidad": "",
+      "comisiones": [
+        "ASUNTOS CONSTITUCIONALES"
+      ],
+      "salon": "ILLIA",
+      "salon_completo": "ILLIA 1° PISO DEL PALACIO DEL HSN",
+      "temario": [
+        {
+          "numero": "S-1034/26",
+          "extracto": "MAYANS Y OTROS: PROYECTO DE RESOLUCIÓN QUE CITA AL JEFE DE GABINETE DE MINISTROS, SR. MANUEL ADORNI, PARA SER INTERPELADO CONFORME A LO ESTABLECIDO EN EL ART. 101 DE LA C.N., RESPECTO DE LAS INCONSISTENCIAS PATRIMONIALES EN SUS PRESENTACIONES ANTE LA OFICINA ANTICORRUPCIÓN (OA) Y LA AGENCIA DE REGULACIÓN Y CONTROL ADUANERO (ARCA)."
+        },
+        {
+          "numero": "S-1096/26",
+          "extracto": "GOERLING LARA Y HUALA: PROYECTO DE RESOLUCIÓN QUE CITA AL SEÑOR JEFE DE GABINETE DE MINISTROS, MANUEL ADORNI, PARA SER INTERPELADO CONFORME A LO ESTABLECIDO EN EL ART. 101 DE LA C.N., A EFECTOS DE CONSIDERAR UNA MOCIÓN DE CENSURA O REMOCIÓN."
+        }
+      ],
+      "tipo": "senadores",
+      "boletin_id": 2305,
+      "boletin_numero": "71/26"
+    },
+    {
+      "seccion": "senadores",
+      "dia": "LUNES",
+      "fecha": "29/06",
+      "hora": "14:00",
+      "modalidad": "",
+      "comisiones": [
+        "INDUSTRIA Y COMERCIO"
+      ],
+      "salon": "FRONDIZI - MORENO",
+      "salon_completo": "FRONDIZI - MORENO 5° PISO DEL ED. ALFREDO PALACIOS",
+      "temario": [
+        {
+          "numero": "S-31/25",
+          "extracto": "GARCÍA LARRABURU: PROYECTO DE LEY QUE INSTITUYE EL RÉGIMEN DE PROMOCIÓN EN LA ELABORACIÓN, DISTRIBUCIÓN Y COMERCIALIZACIÓN, DE BEBIDAS ESPIRITUOSAS ARTESANALES."
+        },
+        {
+          "numero": "S-89/25",
+          "extracto": "GARCÍA LARRABURU: PROYECTO DE LEY QUE PROHÍBE LA VENTA Y EXPENDIO DE BEBIDAS ENERGIZANTES A MENORES DE 18 AÑOS. PROYECTOS DE COMUNICACIÓN:"
+        },
+        {
+          "numero": "S-2142/25",
+          "extracto": "LEWANDOWSKI: PROYECTO DE COMUNICACIÓN QUE SOLICITA INFORME SOBRE DISTINTOS PUNTOS RELACIONADOS CON LA INDUSTRIA METALÚRGICA Y LA IMPORTACIÓN DE ESTRUCTURAS DE ACERO."
+        },
+        {
+          "numero": "S-565/25",
+          "extracto": "REJAL Y OTROS: PROYECTO DE COMUNICACIÓN QUE SOLICITA INFORME SOBRE LOS EFECTOS DE LAS MEDIDAS ADOPTADAS POR LOS DCTOS. 908/2024 Y 236/2025, RESPECTO DE LA INDUSTRIA TEXTIL."
+        },
+        {
+          "numero": "S-801/25",
+          "extracto": "GARCÍA LARRABURU: PROYECTO DE COMUNICACIÓN QUE SOLICITA INFORME SOBRE DISTINTOS PUNTOS RELACIONADOS CON LA PROBLEMÁTICA FINANCIERA QUE ENFRENTA LA EMPRESA PRODUCTORA DE CARBONATO DE SODIO ALCALINO DE LA PATAGONIA (ALPAT). PROYECTOS DE DECLARACIÓN:"
+        },
+        {
+          "numero": "S-600/26",
+          "extracto": "LÓPEZ M.F.: PROYECTO DE DECLARACIÓN QUE DECLARA DE INTERÉS LA “7° EDICIÓN DEL CONGRESO INDUSTRIAL DEL CONSENSO NACIONAL DEL TRABAJO Y LA PRODUCCIÓN” Y LA “EXPO DE INDUSTRIAS Y SERVICIOS 2026 - IV EDICIÓN NACIONAL E INTERNACIONAL”, A DESARROLLARSE EN EL PREDIO FERIAL DE LA RURAL, CABA, DEL 25 AL 27 DE AGOSTO DE 2026."
+        },
+        {
+          "numero": "S-953/26",
+          "extracto": "GUZMÁN CORAITA: PROYECTO DE DECLARACIÓN QUE DECLARA DE INTERÉS EL “CONCURSO ACCIONES POSITIVAS” IMPULSADA POR LA CÁMARA DE COMERCIO SUIZO ARGENTINA JUNTA A LA EMBAJADA DE SUIZA EN LA REP. ARGENTINA."
+        },
+        {
+          "numero": "S-367/26",
+          "extracto": "MENDOZA: PROYECTO DE DECLARACIÓN QUE EXPRESA BENEPLÁCITO POR LA PRESENTACIÓN DEL PRIMER CAFÉ CULTIVADO, COSECHADO Y PROCESADO ÍNTEGRAMENTE EN SUELO ARGENTINO, A PARTIR DE UN ACUERDO ENTRE LA EMPRESA CABRALES Y LA PROV. DE TUCUMÁN."
+        },
+        {
+          "numero": "S-376/25",
+          "extracto": "JUEZ: PROYECTO DE DECLARACIÓN QUE EXPRESA BENEPLÁCITO Y RECONOCIMIENTO POR EL 70° ANIVERSARIO DE LA PLANTA SANTA ISABEL DE RENAULT ARGENTINA, EL 12 DE MARZO DE 2025."
+        },
+        {
+          "numero": "S-632/25",
+          "extracto": "SILVA: PROYECTO DE DECLARACIÓN QUE EXPRESA PREOCUPACIÓN Y REPUDIO EL DCTO. 273/2025 DEL PEN, QUE DEROGA EL CERTIFICADO DE IMPORTACIÓN DE BIENES USADOS (CIBU), QUE HABILITA LA IMPORTACIÓN DE MAQUINARIAS Y EQUIPOS USADOS SIN RESTRICCIÓN."
+        },
+        {
+          "numero": "S-1372/25",
+          "extracto": "LÓPEZ M.F.: PROYECTO DE DECLARACIÓN QUE DECLARA DE INTERÉS EL “6° CONGRESO INDUSTRIAL DEL CONSENSO NACIONAL DEL TRABAJO Y LA PRODUCCIÓN” Y LA “3° EXPOSICIÓN DE INDUSTRIAS Y SERVICIOS MULTISECTORIAL NACIONAL E INTERNACIONAL 2025” A DESARROLLARSE DEL 19 AL 21 DE AGOSTO DE 2025."
+        },
+        {
+          "numero": "S-1497/25",
+          "extracto": "ZIMMERMANN: PROYECTO DE DECLARACIÓN QUE ADHIERE AL DÍA DE LA INDUSTRIA, EL 2 DE SEPTIEMBRE."
+        },
+        {
+          "numero": "S-1548/25",
+          "extracto": "PILATTI VERGARA: PROYECTO DE DECLARACIÓN QUE EXPRESA PREOCUPACIÓN Y RECHAZA LA DECISIÓN DE LA EMPRESA TERNIUM-SIDERAR DE APAGAR EL ALTO HORNO DE LA PLANTA “GENERAL SAVIO” DE SAN NICOLÁS, PROV. DE BUENOS AIRES."
+        },
+        {
+          "numero": "S-1641/25",
+          "extracto": "CRISTINA: PROYECTO DE DECLARACIÓN QUE DECLARA DE INTERÉS LA LABOR DE PROMOCIÓN SOCIAL Y AMBIENTAL DE LA INDUSTRIA TEXTIL SUSTENTABLE, LLEVADA A CABO A TRAVÉS DEL DESFILE “R.D.C. (RECODIFICAR LA MODA), IMPULSADO POR EL INSTITUTO MÉDICO ALTAMIRA, PROV. DEL CHUBUT, EL 27 DE SEPTIEMBRE DE 2025."
+        }
+      ],
+      "tipo": "senadores",
+      "boletin_id": 2305,
+      "boletin_numero": "71/26"
+    }
+  ]
+}
