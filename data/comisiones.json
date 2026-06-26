@@ -39,6 +39,11 @@
         "rol": ""
       },
       {
+        "nombre": "JURI, Mariana",
+        "bloque": "UCR - UNIÓN CÍVICA RADICAL",
+        "rol": ""
+      },
+      {
         "nombre": "LOSADA, Carolina",
         "bloque": "UCR - UNIÓN CÍVICA RADICAL",
         "rol": ""
@@ -66,11 +71,6 @@
       {
         "nombre": "ROYÓN, Flavia Gabriela",
         "bloque": "PRIMERO LOS SALTEÑOS",
-        "rol": ""
-      },
-      {
-        "nombre": "VISCHI, Eduardo Alejandro",
-        "bloque": "UCR - UNIÓN CÍVICA RADICAL",
         "rol": ""
       }
     ]
@@ -191,6 +191,16 @@
         "rol": ""
       },
       {
+        "nombre": "ARRASCAETA, Ivanna Marcela",
+        "bloque": "LA LIBERTAD AVANZA",
+        "rol": ""
+      },
+      {
+        "nombre": "ATAUCHE, Ezequiel",
+        "bloque": "LA LIBERTAD AVANZA",
+        "rol": ""
+      },
+      {
         "nombre": "BEDIA, Vilma Facunda",
         "bloque": "LA LIBERTAD AVANZA",
         "rol": ""
@@ -198,6 +208,11 @@
       {
         "nombre": "MÁRQUEZ, Nadia Judith",
         "bloque": "LA LIBERTAD AVANZA",
+        "rol": ""
+      },
+      {
+        "nombre": "KRONEBERGER, Daniel Ricardo",
+        "bloque": "UCR - UNIÓN CÍVICA RADICAL",
         "rol": ""
       },
       {
@@ -221,28 +236,13 @@
         "rol": ""
       },
       {
+        "nombre": "GADANO, Natalia Elena",
+        "bloque": "MOVERE POR SANTA CRUZ",
+        "rol": ""
+      },
+      {
         "nombre": "ROYÓN, Flavia Gabriela",
         "bloque": "PRIMERO LOS SALTEÑOS",
-        "rol": ""
-      },
-      {
-        "nombre": "ALVAREZ RIVERO, Carmen",
-        "bloque": "LA LIBERTAD AVANZA",
-        "rol": ""
-      },
-      {
-        "nombre": "HUALA, María Victoria",
-        "bloque": "FRENTE PRO",
-        "rol": ""
-      },
-      {
-        "nombre": "ABDALA, Bartolomé Esteban",
-        "bloque": "LA LIBERTAD AVANZA",
-        "rol": ""
-      },
-      {
-        "nombre": "FAMA, Flavio Sergio",
-        "bloque": "UCR - UNIÓN CÍVICA RADICAL",
         "rol": ""
       }
     ]
@@ -348,6 +348,11 @@
         "rol": ""
       },
       {
+        "nombre": "ALVAREZ RIVERO, Carmen",
+        "bloque": "LA LIBERTAD AVANZA",
+        "rol": ""
+      },
+      {
         "nombre": "BULLRICH, Patricia",
         "bloque": "LA LIBERTAD AVANZA",
         "rol": ""
@@ -430,16 +435,6 @@
       {
         "nombre": "RECALDE, Mariano",
         "bloque": "JUSTICIALISTA",
-        "rol": ""
-      },
-      {
-        "nombre": "ABDALA, Bartolomé Esteban",
-        "bloque": "LA LIBERTAD AVANZA",
-        "rol": ""
-      },
-      {
-        "nombre": "ALVAREZ RIVERO, Carmen",
-        "bloque": "LA LIBERTAD AVANZA",
         "rol": ""
       }
     ]
@@ -1101,6 +1096,11 @@
         "rol": ""
       },
       {
+        "nombre": "ALVAREZ RIVERO, Carmen",
+        "bloque": "LA LIBERTAD AVANZA",
+        "rol": ""
+      },
+      {
         "nombre": "ARRASCAETA, Ivanna Marcela",
         "bloque": "LA LIBERTAD AVANZA",
         "rol": ""
@@ -1163,11 +1163,6 @@
       {
         "nombre": "LÓPEZ, Cándida Cristina",
         "bloque": "JUSTICIALISTA",
-        "rol": ""
-      },
-      {
-        "nombre": "MONTE DE OCA, María Belén",
-        "bloque": "LA LIBERTAD AVANZA",
         "rol": ""
       }
     ]
@@ -1384,6 +1379,11 @@
         "rol": ""
       },
       {
+        "nombre": "ABAD, Maximiliano",
+        "bloque": "UCR - UNIÓN CÍVICA RADICAL",
+        "rol": ""
+      },
+      {
         "nombre": "LOSADA, Carolina",
         "bloque": "UCR - UNIÓN CÍVICA RADICAL",
         "rol": ""
@@ -1442,11 +1442,6 @@
         "nombre": "SORIA, Martín",
         "bloque": "JUSTICIALISTA",
         "rol": ""
-      },
-      {
-        "nombre": "KRONEBERGER, Daniel Ricardo",
-        "bloque": "UCR - UNIÓN CÍVICA RADICAL",
-        "rol": ""
       }
     ]
   },
@@ -1470,6 +1465,11 @@
         "rol": ""
       },
       {
+        "nombre": "ALVAREZ RIVERO, Carmen",
+        "bloque": "LA LIBERTAD AVANZA",
+        "rol": ""
+      },
+      {
         "nombre": "BULLRICH, Patricia",
         "bloque": "LA LIBERTAD AVANZA",
         "rol": ""
@@ -1480,8 +1480,18 @@
         "rol": ""
       },
       {
+        "nombre": "SUÁREZ, Rodolfo Alejandro",
+        "bloque": "UCR - UNIÓN CÍVICA RADICAL",
+        "rol": ""
+      },
+      {
         "nombre": "VISCHI, Eduardo Alejandro",
         "bloque": "UCR - UNIÓN CÍVICA RADICAL",
+        "rol": ""
+      },
+      {
+        "nombre": "HUALA, María Victoria",
+        "bloque": "FRENTE PRO",
         "rol": ""
       },
       {
@@ -1532,26 +1542,6 @@
       {
         "nombre": "SORIA, Martín",
         "bloque": "JUSTICIALISTA",
-        "rol": ""
-      },
-      {
-        "nombre": "GOERLING LARA, Enrique Martín",
-        "bloque": "FRENTE PRO",
-        "rol": ""
-      },
-      {
-        "nombre": "GALARETTO, Eduardo Horacio",
-        "bloque": "UCR - UNIÓN CÍVICA RADICAL",
-        "rol": ""
-      },
-      {
-        "nombre": "JURI, Mariana",
-        "bloque": "UCR - UNIÓN CÍVICA RADICAL",
-        "rol": ""
-      },
-      {
-        "nombre": "ALVAREZ RIVERO, Carmen",
-        "bloque": "LA LIBERTAD AVANZA",
         "rol": ""
       }
     ]
@@ -1702,6 +1692,11 @@
         "rol": ""
       },
       {
+        "nombre": "VISCHI, Eduardo",
+        "bloque": "DESCONOCIDO",
+        "rol": ""
+      },
+      {
         "nombre": "BENSUSÁN, Daniel Pablo",
         "bloque": "JUSTICIALISTA",
         "rol": ""
@@ -1839,6 +1834,11 @@
         "rol": ""
       },
       {
+        "nombre": "SUÁREZ, Rodolfo Alejandro",
+        "bloque": "UCR - UNIÓN CÍVICA RADICAL",
+        "rol": ""
+      },
+      {
         "nombre": "VISCHI, Eduardo Alejandro",
         "bloque": "UCR - UNIÓN CÍVICA RADICAL",
         "rol": ""
@@ -1886,11 +1886,6 @@
       {
         "nombre": "MANZUR, Juan Luis",
         "bloque": "JUSTICIALISTA",
-        "rol": ""
-      },
-      {
-        "nombre": "JURI, Mariana",
-        "bloque": "UCR - UNIÓN CÍVICA RADICAL",
         "rol": ""
       }
     ]

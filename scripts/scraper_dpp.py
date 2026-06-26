@@ -8,6 +8,14 @@ a comisiones, parsea los reemplazos de integración y actualiza data/comisiones.
 Ajuste de diseño: el texto del DPP no trae roles. Cuando se designa a alguien "en
 reemplazo de" otro, el nuevo HEREDA el rol que el reemplazado tenía en comisiones.json.
 
+La integración vigente se siembra desde el índice del repo comisiones-senado
+(comisiones_state.json → data/comisiones.json), que ya refleja todos los DPP
+históricos. Por eso se corre una vez en modo BASELINE para marcar los DPP actuales
+como preexistentes; a partir de ahí el scraper solo aplica decretos nuevos.
+
+Variables de entorno:
+    BASELINE   "1" para marcar los DPP actuales como preexistentes sin aplicarlos.
+
 Tolerante a fallos: si un DPP falla, se registra el error y se continúa con el resto.
 """
 
@@ -32,6 +40,8 @@ DATA_DIR = os.path.join(REPO_ROOT, "data")
 COMISIONES_JSON = os.path.join(DATA_DIR, "comisiones.json")
 SENADORES_JSON = os.path.join(DATA_DIR, "senadores.json")
 DPP_PROCESADOS_JSON = os.path.join(DATA_DIR, "dpp_procesados.json")
+
+BASELINE = os.getenv("BASELINE", "") == "1"
 
 BASE_URL = "https://www.senado.gob.ar"
 URL_DECRETOS = f"{BASE_URL}/parlamentario/parlamentaria/decreto"
@@ -347,6 +357,23 @@ def main():
         log.error(f"No se pudo listar decretos: {exc}")
         return
     log.info(f"  → {len(decretos)} decretos en la tabla")
+
+    # Modo baseline: la integración vigente ya está en comisiones.json (índice del
+    # repo comisiones-senado). Marcamos los DPP actuales como preexistentes SIN
+    # aplicarlos, para que el scraper solo procese decretos nuevos en adelante.
+    if BASELINE:
+        marcados = 0
+        for dec in decretos:
+            if dec["numero"] not in procesados:
+                procesados[dec["numero"]] = {"fecha": dec["fecha"], "tema": dec["tema"],
+                                             "status": "baseline"}
+                marcados += 1
+        guardar_json(DPP_PROCESADOS_JSON, procesados)
+        log.info(f"  → BASELINE: {marcados} DPP marcados como preexistentes "
+                 f"(sin aplicar); {len(procesados)} registrados")
+        log.info("scraper_dpp finalizado (baseline).")
+        log.info("=" * 60)
+        return
 
     total_aplicados = 0
     for dec in decretos:

@@ -2,56 +2,51 @@
   "65/26": {
     "fecha": "17-06-2026",
     "tema": "DESIGNANDO REEMPLAZOS EN DIVERSAS COMISIONES",
-    "articulos": 3,
-    "designaciones": 6
+    "status": "baseline"
   },
   "64/26": {
     "fecha": "16-06-2026",
     "tema": "DESIGNANDO REEMPLAZOS EN LA COMISIÓN BICAMERAL PERMANENTE DE SEGUIMIENTO Y CONTROL DEL MINISTERIO PÚBLICO DE LA NACIÓN (LEY 24.946 Y SUS MODIFICATORIAS LEY 27.148 Y 27.149)",
-    "status": "sin_texto"
+    "status": "baseline"
   },
   "63/26": {
     "fecha": "16-06-2026",
     "tema": "DESIGNANDO REEMPLAZOS EN DISTINTAS COMISIONES UNICAMERALES",
-    "status": "sin_texto"
+    "status": "baseline"
   },
   "62/26": {
     "fecha": "10-06-2026",
     "tema": "DESIGNANDO REEMPLAZOS EN LA COMISIÓN BICAMERAL PERMANENTE DE SEGUIMIENTO Y CONTROL DEL MINISTERIO PÚBLICO DE LA NACIÓN (LEY 24.946 Y SUS MODIFICATORIAS LEY 27.148 Y 27.149)",
-    "status": "sin_texto"
+    "status": "baseline"
   },
   "61/26": {
     "fecha": "09-06-2026",
     "tema": "DESIGNANDO REEMPLAZOS EN DIVERSAS COMISIONES",
-    "articulos": 2,
-    "designaciones": 2
+    "status": "baseline"
   },
   "60/26": {
     "fecha": "09-06-2026",
     "tema": "DESIGNANDO REEMPLAZO EN LA COMISIÓN DE AMBIENTE Y DESARROLLO SUSTENTABLE",
-    "articulos": 1,
-    "designaciones": 1
+    "status": "baseline"
   },
   "59/26": {
     "fecha": "09-06-2026",
     "tema": "DESIGNANDO REEMPLAZOS EN DIVERSAS COMISIONES",
-    "articulos": 11,
-    "designaciones": 17
+    "status": "baseline"
   },
   "58/26": {
     "fecha": "03-06-2026",
     "tema": "DESIGNANDO REEMPLAZOS EN DIVERSAS COMISIONES",
-    "articulos": 2,
-    "designaciones": 2
+    "status": "baseline"
   },
   "57/26": {
     "fecha": "02-06-2026",
     "tema": "DESIGNANDO REEMPLAZOS EN DIVERSAS COMISIONES",
-    "status": "sin_texto"
+    "status": "baseline"
   },
   "56/26": {
     "fecha": "02-06-2026",
     "tema": "DESIGNANDO REEMPLAZOS EN DIVERSAS COMISIONES",
-    "status": "sin_texto"
+    "status": "baseline"
   }
 }
