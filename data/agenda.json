@@ -667,8 +667,8 @@
         }
       ],
       "tipo": "senadores",
-      "boletin_id": 2305,
-      "boletin_numero": "71/26"
+      "boletin_id": 2306,
+      "boletin_numero": "72/26"
     },
     {
       "seccion": "senadores",
@@ -728,8 +728,8 @@
         }
       ],
       "tipo": "senadores",
-      "boletin_id": 2305,
-      "boletin_numero": "71/26"
+      "boletin_id": 2306,
+      "boletin_numero": "72/26"
     },
     {
       "seccion": "senadores",
@@ -784,8 +784,8 @@
         }
       ],
       "tipo": "bicameral",
-      "boletin_id": 2305,
-      "boletin_numero": "71/26"
+      "boletin_id": 2306,
+      "boletin_numero": "72/26"
     },
     {
       "seccion": "senadores",
@@ -837,8 +837,8 @@
         }
       ],
       "tipo": "senadores",
-      "boletin_id": 2305,
-      "boletin_numero": "71/26"
+      "boletin_id": 2306,
+      "boletin_numero": "72/26"
     },
     {
       "seccion": "senadores",
@@ -859,8 +859,8 @@
         }
       ],
       "tipo": "senadores",
-      "boletin_id": 2305,
-      "boletin_numero": "71/26"
+      "boletin_id": 2306,
+      "boletin_numero": "72/26"
     },
     {
       "seccion": "senadores",
@@ -905,8 +905,8 @@
         }
       ],
       "tipo": "senadores",
-      "boletin_id": 2305,
-      "boletin_numero": "71/26"
+      "boletin_id": 2306,
+      "boletin_numero": "72/26"
     },
     {
       "seccion": "senadores",
@@ -930,8 +930,8 @@
         }
       ],
       "tipo": "senadores",
-      "boletin_id": 2305,
-      "boletin_numero": "71/26"
+      "boletin_id": 2306,
+      "boletin_numero": "72/26"
     },
     {
       "seccion": "senadores",
@@ -1003,8 +1003,31 @@
         }
       ],
       "tipo": "senadores",
-      "boletin_id": 2305,
-      "boletin_numero": "71/26"
+      "boletin_id": 2306,
+      "boletin_numero": "72/26"
+    },
+    {
+      "seccion": "senadores",
+      "dia": "MARTES",
+      "fecha": "30/06",
+      "hora": "17:00",
+      "modalidad": "",
+      "comisiones": [
+        "ECONOMÍAS REGIONALES, ECONOMÍA",
+        "SOCIAL, MICRO, PEQUEÑA Y MEDIANA",
+        "EMPRESA"
+      ],
+      "salon": "AZUL",
+      "salon_completo": "AZUL 1° PISO DEL PALACIO DEL HSN",
+      "temario": [
+        {
+          "numero": "",
+          "extracto": "DEBATE SOBRE EL SOSTÉN DE LAS PYMES."
+        }
+      ],
+      "tipo": "senadores",
+      "boletin_id": 2306,
+      "boletin_numero": "72/26"
     }
   ]
 }
