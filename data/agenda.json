@@ -667,8 +667,8 @@
         }
       ],
       "tipo": "senadores",
-      "boletin_id": 2306,
-      "boletin_numero": "72/26"
+      "boletin_id": 2308,
+      "boletin_numero": "73/26"
     },
     {
       "seccion": "senadores",
@@ -728,8 +728,8 @@
         }
       ],
       "tipo": "senadores",
-      "boletin_id": 2306,
-      "boletin_numero": "72/26"
+      "boletin_id": 2308,
+      "boletin_numero": "73/26"
     },
     {
       "seccion": "senadores",
@@ -834,11 +834,15 @@
         {
           "numero": "S-953/26",
           "extracto": "GUZMÁN CORAITA: PROYECTO DE DECLARACIÓN QUE DECLARA DE INTERÉS EL \"CONCURSO ACCIONES POSITIVAS\" IMPULSADA POR LA CÁMARA DE COMERCIO SUIZO ARGENTINA JUNTO A LA EMBAJADA DE SUIZA EN LA REP. ARGENTINA."
+        },
+        {
+          "numero": "S-1497/25",
+          "extracto": "ZIMMERMANN: PROYECTO DE DECLARACIÓN QUE ADHIERE AL DÍA DE LA INDUSTRIA, EL 2 DE SEPTIEMBRE."
         }
       ],
       "tipo": "senadores",
-      "boletin_id": 2306,
-      "boletin_numero": "72/26"
+      "boletin_id": 2308,
+      "boletin_numero": "73/26"
     },
     {
       "seccion": "senadores",
@@ -859,8 +863,8 @@
         }
       ],
       "tipo": "senadores",
-      "boletin_id": 2306,
-      "boletin_numero": "72/26"
+      "boletin_id": 2308,
+      "boletin_numero": "73/26"
     },
     {
       "seccion": "senadores",
@@ -901,12 +905,12 @@
         },
         {
           "numero": "S-2162/25",
-          "extracto": "ÁLVAREZ RIVERO: PROYECTO DE DECLARACIÓN QUE DECLARA A LA R.N. N° 158 COMO CORREDOR LOGÍSTICO PRIORITARIO EN EL MAR CO DE LOS ACUERDOS COMERCIALES CELEBRADOS CON LA UNIÓN EUROPEA, Y LOS ESTADOS UNIDOS DE AMÉRICA."
+          "extracto": "ÁLVAREZ RIVERO: PROYECTO DE DECLARACIÓN QUE DECLARA A LA R.N. N° 158 COMO CORREDOR LOGÍSTICO PRIORITARIO EN EL MARCO DE LOS ACUERDOS COMERCIALES CELEBRADOS CON LA UNIÓN EUROPEA, Y LOS ESTADOS UNIDOS DE AMÉRICA."
         }
       ],
       "tipo": "senadores",
-      "boletin_id": 2306,
-      "boletin_numero": "72/26"
+      "boletin_id": 2308,
+      "boletin_numero": "73/26"
     },
     {
       "seccion": "senadores",
@@ -1026,8 +1030,29 @@
         }
       ],
       "tipo": "senadores",
-      "boletin_id": 2306,
-      "boletin_numero": "72/26"
+      "boletin_id": 2308,
+      "boletin_numero": "73/26"
+    },
+    {
+      "seccion": "senadores",
+      "dia": "JUEVES",
+      "fecha": "02/07",
+      "hora": "11:00",
+      "modalidad": "",
+      "comisiones": [
+        "LEGISLACIÓN GENERAL"
+      ],
+      "salon": "FRONDIZI - MORENO",
+      "salon_completo": "FRONDIZI - MORENO 5° PISO DEL ED. ALFREDO PALACIOS",
+      "temario": [
+        {
+          "numero": "P.E-193/26",
+          "extracto": "MENSAJE N° 187/26 Y PROYECTO DE LEY GENERAL DE SOCIEDADES. REGULARIZACIÓN DE LOS PEDIDOS DE INFORMES Y AMPLIACIONES QUE SE REALIZARON EN EL AÑO 2025 AL MINISTERIO DE ECONOMÍA."
+        }
+      ],
+      "tipo": "senadores",
+      "boletin_id": 2308,
+      "boletin_numero": "73/26"
     }
   ]
 }
