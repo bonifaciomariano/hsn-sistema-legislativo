@@ -76,39 +76,43 @@ body{font-family:'Poppins',Calibri,sans-serif;background:#F5F7FA;color:#4A4A4A;f
 .section-hint{font-size:10px;color:rgba(255,255,255,0.65)}
 .section-body{padding:16px}
 
-/* ── Dashboard ────────────────────────────────────────────────────────── */
-.dash-stats-row{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:16px}
-.dash-panels-row{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
-@media(max-width:900px){
-  .dash-stats-row{grid-template-columns:repeat(2,1fr)}
-  .dash-panels-row{grid-template-columns:1fr}
-}
-.stat-card{background:#F5F7FA;border-radius:8px;padding:14px 12px;border-left:4px solid #1B5EA2}
-.stat-num{font-size:28px;font-weight:700;color:#1B5EA2;line-height:1}
-.stat-label{font-size:11px;color:#4A4A4A;margin-top:3px}
-.dash-subtitle{font-size:11px;font-weight:600;color:#2E75B6;text-transform:uppercase;letter-spacing:1px;margin:0 0 8px;padding-bottom:4px;border-bottom:1px solid #D6E4F0}
-.tipo-bar-row{display:flex;align-items:center;gap:8px;margin-bottom:7px;cursor:pointer;padding:3px 6px;border-radius:6px;transition:background .12s}
-.tipo-bar-row:hover{background:#F0F4FA}
-.tipo-bar-row.on{background:#D6E4F0}
-.tipo-pill{font-size:11px;font-weight:700;border-radius:4px;padding:3px 8px;min-width:36px;text-align:center;flex-shrink:0}
-.tipo-nombre{font-size:12px;color:#4A4A4A;flex:1}
-.bar-track{flex:2;height:7px;background:#D6E4F0;border-radius:4px;overflow:hidden}
-.bar-fill{height:100%;border-radius:4px;transition:width .3s}
-.tipo-count{font-size:12px;font-weight:700;min-width:28px;text-align:right}
-.bloque-row{display:flex;align-items:center;gap:8px;margin-bottom:6px;cursor:pointer;padding:3px 6px;border-radius:6px;transition:background .12s}
-.bloque-row:hover,.com-row:hover{background:#F0F4FA}
-.bloque-row.on,.com-row.on{background:#D6E4F0}
-.bloque-name{font-size:11px;color:#4A4A4A;flex:1;line-height:1.3}
-.bloque-bar-track{flex:2;height:6px;background:#D6E4F0;border-radius:3px;overflow:hidden}
-.bloque-bar-fill{height:100%;border-radius:3px;transition:width .3s}
-.bloque-count{font-size:11px;font-weight:700;color:#2E75B6;min-width:24px;text-align:right}
-.com-row{display:flex;align-items:center;gap:8px;margin-bottom:6px;cursor:pointer;padding:3px 6px;border-radius:6px;transition:background .12s}
-.com-name{font-size:11px;color:#4A4A4A;flex:1;line-height:1.3}
-.com-bar-track{flex:2;height:6px;background:#D6E4F0;border-radius:3px;overflow:hidden}
-.com-bar-fill{height:100%;background:#2E75B6;border-radius:3px;transition:width .3s}
-.com-count{font-size:11px;font-weight:700;color:#2E75B6;min-width:24px;text-align:right}
-.dash-context{font-size:11px;color:#2E75B6;background:#EAF0FA;border-radius:6px;padding:6px 10px;margin-bottom:10px;display:none}
-.dash-context.visible{display:block}
+/* ── Dashboard de análisis ────────────────────────────────────────────── */
+.dash-toolbar{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:14px}
+.dash-anio-label{font-size:10px;font-weight:600;color:#888;text-transform:uppercase;letter-spacing:1px;margin-right:2px}
+.dash-total{margin-left:auto;font-size:12px;color:#888}
+.dash-total strong{color:#1B5EA2;font-size:16px}
+.dash-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+.dash-grid .span2{grid-column:1 / -1}
+@media(max-width:900px){.dash-grid{grid-template-columns:1fr}.dash-grid .span2{grid-column:auto}}
+.viz-card{background:#fff;border:1px solid #D6E4F0;border-radius:10px;box-shadow:0 1px 4px rgba(0,0,0,0.06);padding:14px}
+.viz-head{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:10px;flex-wrap:wrap}
+.viz-title{font-size:12px;font-weight:700;color:#1B5EA2;text-transform:uppercase;letter-spacing:.8px}
+.viz-svg{width:100%;height:auto;display:block;overflow:visible}
+.viz-legend{display:flex;flex-wrap:wrap;gap:7px 14px;margin-top:10px}
+.legend-item{display:flex;align-items:center;gap:5px;font-size:11px;color:#4A4A4A}
+.legend-swatch{width:11px;height:11px;border-radius:3px;flex-shrink:0}
+.viz-toggle{display:flex;gap:4px}
+.viz-toggle button{padding:4px 12px;border-radius:14px;border:1.5px solid #D6E4F0;background:#fff;font-family:inherit;font-size:11px;color:#4A4A4A;cursor:pointer;transition:all .15s}
+.viz-toggle button.on{background:#1B5EA2;border-color:#1B5EA2;color:#fff;font-weight:600}
+.viz-empty{font-size:12px;color:#aaa;text-align:center;padding:30px 10px}
+/* SVG text helpers */
+.viz-axis{font-size:10px;fill:#999}
+.viz-gridline{stroke:#EEF2F8;stroke-width:1}
+.hm-label{font-size:10px;fill:#4A4A4A}
+/* tooltip flotante compartido */
+.dash-tooltip{position:fixed;pointer-events:none;background:#0d3f73;color:#fff;font-size:11px;line-height:1.5;padding:7px 10px;border-radius:7px;box-shadow:0 4px 14px rgba(0,0,0,0.28);z-index:300;opacity:0;transition:opacity .1s;max-width:260px}
+.dash-tooltip.show{opacity:1}
+.dash-tt-title{font-weight:700;margin-bottom:4px;border-bottom:1px solid rgba(255,255,255,0.25);padding-bottom:3px}
+.dash-tt-row{display:flex;align-items:center;gap:6px;white-space:nowrap}
+.dash-tt-dot{width:8px;height:8px;border-radius:2px;flex-shrink:0}
+.dash-tt-row .v{margin-left:auto;font-weight:700;padding-left:10px}
+/* top comisiones + sparkline */
+.topcom-row{display:flex;align-items:center;gap:10px;padding:7px 2px;border-bottom:1px solid #EEF2F8}
+.topcom-row:last-child{border-bottom:none}
+.topcom-rank{font-size:11px;font-weight:700;color:#9aacbd;width:18px;text-align:right;flex-shrink:0}
+.topcom-name{font-size:12px;color:#4A4A4A;flex:1;line-height:1.25}
+.topcom-count{font-size:14px;font-weight:700;color:#1B5EA2;width:36px;text-align:right;flex-shrink:0}
+.topcom-spark{width:92px;height:26px;flex-shrink:0}
 
 /* ── Tabla dinámica (pivot) ───────────────────────────────────────────── */
 .pivot-wrap{padding:12px}
@@ -204,7 +208,7 @@ var ORIGEN_LABEL={S:'Senado',PE:'Poder Ejecutivo',CD:'Diputados',OV:'Otros'};
 var ORIGEN_CODE={};Object.keys(ORIGEN_LABEL).forEach(function(k){ORIGEN_CODE[ORIGEN_LABEL[k]]=k});
 var BC=['#1B5EA2','#2E75B6','#5B4DA0','#1a7a4a','#7a5c1a','#7a1a3a','#2E8B7A','#6B3A2A','#1a4a7a','#4a7a1a','#7a1a5a','#2a7a6a','#5a2a7a','#2a5a2a'];
 var ALL_BLOQUES=[];
-var dashFiltroTipo='',dashFiltroBloque='',dashFiltroCom='',dashActiveAnio='',dashSancionado=false;
+var dashAnio='2026',dashEvoMode='tipo';
 var activeTipos={},activeBloque='',activeOrigen='',activeProvincia='',activeAnio='';
 
 /* ── Escapado HTML básico ──────────────────────────────────────────── */
@@ -251,7 +255,7 @@ function init(){
   fillSelect('provincia-select',Object.keys(provSet).sort());
 
   initPivot();
-  renderDash(DATA);
+  renderDashboard();
   syncFilterUI();
   renderList();
   renderPivot();
@@ -262,96 +266,261 @@ function fillSelect(id,values){
     var o=document.createElement('option');o.value=v;o.textContent=v;sel.appendChild(o);
   });
 }
-function getBloqueColor(b){return BC[ALL_BLOQUES.indexOf(b)%BC.length]}
-
-/* ── Dashboard ─────────────────────────────────────────────────── */
-function getDashFiltered(){
-  return DATA.filter(function(p){
-    if(dashActiveAnio&&String(p.anio)!==dashActiveAnio)return false;
-    if(dashSancionado&&!p.sancionado)return false;
-    if(dashFiltroTipo&&p.tipo!==dashFiltroTipo)return false;
-    if(dashFiltroBloque&&p.bloques.indexOf(dashFiltroBloque)<0)return false;
-    if(dashFiltroCom&&(p.comisiones[0]||'')!==dashFiltroCom)return false;
-    return true;
-  });
+function getBloqueColor(b){
+  var i=ALL_BLOQUES.indexOf(b);
+  if(i<0){var h=0;for(var k=0;k<b.length;k++)h=(h*31+b.charCodeAt(k))|0;i=h;}
+  return BC[((i%BC.length)+BC.length)%BC.length];
 }
-function calcStats(data){
-  var t={},b={},c={};
-  data.forEach(function(p){
-    t[p.tipo]=(t[p.tipo]||0)+1;
-    p.bloques.forEach(function(x){b[x]=(b[x]||0)+1});
-    if(p.comisiones[0])c[p.comisiones[0]]=(c[p.comisiones[0]]||0)+1;
-  });
-  return{tipos:t,bloques:b,coms:c};
-}
-function renderDash(data){
-  var s=calcStats(data),total=data.length;
-  document.getElementById('stat-total').innerHTML=total;
-  document.getElementById('stat-pl').innerHTML=s.tipos['PL']||0;
-  document.getElementById('stat-pd').innerHTML=s.tipos['PD']||0;
-  document.getElementById('stat-otros').innerHTML=total-(s.tipos['PL']||0)-(s.tipos['PD']||0);
 
-  var partes=[];
-  if(dashFiltroTipo)partes.push('Tipo: '+(TIPOS[dashFiltroTipo]||dashFiltroTipo));
-  if(dashFiltroBloque)partes.push('Bloque: '+dashFiltroBloque);
-  if(dashFiltroCom)partes.push('Comisión: '+dashFiltroCom);
-  var ctx=document.getElementById('dash-context');
-  if(partes.length){
-    ctx.innerHTML='Filtrando: <strong>'+partes.map(esc).join(' &middot; ')+'</strong> &nbsp;<button onclick="clearDash()" style="background:none;border:none;color:#1B5EA2;cursor:pointer;font-size:11px;font-weight:700;padding:0 4px">Limpiar filtro &#x2715;</button>';
-    ctx.className='dash-context visible';
-  }else{ctx.className='dash-context'}
-
-  var tipoOrder=['PL','PD','PC','PR','CA','AC','CV'],maxT=0;
-  tipoOrder.forEach(function(t){if((s.tipos[t]||0)>maxT)maxT=s.tipos[t]||0});
-  var tb='';
-  tipoOrder.forEach(function(t){
-    if(!DATA.some(function(p){return p.tipo===t}))return;
-    var n=s.tipos[t]||0,pct=maxT?Math.round(n/maxT*100):0;
-    var fg=TIPO_FG[t]||'#888',bg=TIPO_BG[t]||'#eee';
-    var on=dashFiltroTipo===t?' on':'';
-    tb+='<div class="tipo-bar-row'+on+'" onclick="clickDashTipo(\''+t+'\')"><span class="tipo-pill" style="background:'+bg+';color:'+fg+'">'+t+'</span><span class="tipo-nombre">'+(TIPOS[t]||t)+'</span><div class="bar-track"><div class="bar-fill" style="width:'+pct+'%;background:'+fg+'"></div></div><span class="tipo-count" style="color:'+fg+'">'+n+'</span></div>';
-  });
-  document.getElementById('tipo-bars').innerHTML=tb;
-
-  var blist=Object.keys(s.bloques).sort(function(a,b){return s.bloques[b]-s.bloques[a]});
-  var maxB=blist.length?s.bloques[blist[0]]:1;
-  var bb='';
-  blist.forEach(function(b){
-    var n=s.bloques[b],pct=Math.round(n/maxB*100),color=getBloqueColor(b);
-    var safe=b.replace(/\\/g,'\\\\').replace(/'/g,"\\'");
-    var on=dashFiltroBloque===b?' on':'';
-    bb+='<div class="bloque-row'+on+'" onclick="clickDashBloque(\''+safe+'\')"><span class="bloque-name">'+esc(b)+'</span><div class="bloque-bar-track"><div class="bloque-bar-fill" style="width:'+pct+'%;background:'+color+'"></div></div><span class="bloque-count">'+n+'</span></div>';
-  });
-  document.getElementById('bloque-bars').innerHTML=bb||'<div style="font-size:11px;color:#aaa">Sin datos.</div>';
-
-  var clist=Object.keys(s.coms).sort(function(a,b){return s.coms[b]-s.coms[a]}).slice(0,10);
-  var maxC=clist.length?s.coms[clist[0]]:1;
-  var cb='';
-  clist.forEach(function(c){
-    var n=s.coms[c],pct=Math.round(n/maxC*100);
-    var safe=c.replace(/\\/g,'\\\\').replace(/'/g,"\\'");
-    var on=dashFiltroCom===c?' on':'';
-    cb+='<div class="com-row'+on+'" onclick="clickDashCom(\''+safe+'\')"><span class="com-name">'+esc(c)+'</span><div class="com-bar-track"><div class="com-bar-fill" style="width:'+pct+'%"></div></div><span class="com-count">'+n+'</span></div>';
-  });
-  document.getElementById('com-bars').innerHTML=cb||'<div style="font-size:11px;color:#aaa">Sin datos.</div>';
-}
-function clickDashTipo(t){dashFiltroTipo=dashFiltroTipo===t?'':t;renderDash(getDashFiltered())}
-function clickDashBloque(b){dashFiltroBloque=dashFiltroBloque===b?'':b;renderDash(getDashFiltered())}
-function clickDashCom(c){dashFiltroCom=dashFiltroCom===c?'':c;renderDash(getDashFiltered())}
-function setDashAnio(anio){
-  dashActiveAnio=anio;
-  ['all','2025','2026'].forEach(function(a){
+/* ── Dashboard de análisis ─────────────────────────────────────── */
+var MESES=['Ene','Feb','Mar','Abr','May','Jun','Jul','Ago','Sep','Oct','Nov','Dic'];
+function dashData(){return DATA.filter(function(p){return String(p.anio)===dashAnio})}
+function setDashAnio(y){
+  dashAnio=y;
+  ['2026','2025'].forEach(function(a){
     var el=document.getElementById('dash-anio-'+a);
-    if(el)el.className='chip'+(anio===(a==='all'?'':a)?' on':'');
+    if(el)el.className='chip'+(dashAnio===a?' on':'');
   });
-  renderDash(getDashFiltered());
+  renderDashboard();
 }
-function toggleDashSanc(){
-  dashSancionado=!dashSancionado;
-  document.getElementById('dash-sanc').className='chip'+(dashSancionado?' on':'');
-  renderDash(getDashFiltered());
+function setEvoMode(m){
+  dashEvoMode=m;
+  document.getElementById('evo-tipo').className=(m==='tipo'?'on':'');
+  document.getElementById('evo-bloque').className=(m==='bloque'?'on':'');
+  renderEvolucion(dashData());
 }
-function clearDash(){dashFiltroTipo='';dashFiltroBloque='';dashFiltroCom='';renderDash(getDashFiltered())}
+function renderDashboard(){
+  var data=dashData();
+  hmSelRow='';hmSelCol='';
+  document.getElementById('dash-total').innerHTML='<strong>'+data.length+'</strong> proyectos en '+dashAnio;
+  renderEvolucion(data);
+  renderHeatmap(data);
+  renderStacked(data);
+  renderDonut(data);
+  renderTopComs(data);
+}
+/* tooltip flotante compartido */
+function showTip(html,ev){
+  var t=document.getElementById('dash-tooltip');
+  t.innerHTML=html;t.className='dash-tooltip show';
+  var x=ev.clientX,y=ev.clientY,w=t.offsetWidth,h=t.offsetHeight;
+  if(x+w+18>window.innerWidth)x=x-w-14;else x=x+14;
+  if(y+h+18>window.innerHeight)y=y-h-14;else y=y+14;
+  t.style.left=x+'px';t.style.top=y+'px';
+}
+function hideTip(){document.getElementById('dash-tooltip').className='dash-tooltip';}
+/* helpers de agregación */
+function topSeries(counts,n){
+  /* counts: {clave:total}; devuelve top n claves + 'Otros' si sobra */
+  var keys=Object.keys(counts).sort(function(a,b){return counts[b]-counts[a]});
+  if(keys.length<=n)return{keys:keys,hasOtros:false};
+  return{keys:keys.slice(0,n),hasOtros:true};
+}
+/* ── Viz 1: Evolución temporal (líneas) ──────────────────────── */
+var EVO=null;
+function monthOf(p){if(!p.fecha)return -1;var pp=p.fecha.split('/');return pp.length===3?parseInt(pp[1],10)-1:-1;}
+function evoKey(p){return dashEvoMode==='tipo'?p.tipo:(p.bloques[0]||(ORIGEN_LABEL[p.origen]||'Otros'));}
+function evoColor(k){if(k==='__otros')return '#9aacbd';return dashEvoMode==='tipo'?(TIPO_FG[k]||'#888'):getBloqueColor(k);}
+function evoLabel(k){if(k==='__otros')return 'Resto';return dashEvoMode==='tipo'?(TIPOS[k]||k):k;}
+function renderEvolucion(data){
+  var totals={};
+  data.forEach(function(p){var k=evoKey(p);totals[k]=(totals[k]||0)+1;});
+  var sel=topSeries(totals,5),keys=sel.keys.slice(),useOtros=sel.hasOtros;
+  var lastM=0,any=false;
+  data.forEach(function(p){var m=monthOf(p);if(m>=0){any=true;if(m>lastM)lastM=m;}});
+  var nM=any?lastM+1:1;
+  var series={};keys.forEach(function(k){series[k]=[];for(var j=0;j<nM;j++)series[k].push(0);});
+  if(useOtros){series['__otros']=[];for(var j=0;j<nM;j++)series['__otros'].push(0);}
+  data.forEach(function(p){
+    var m=monthOf(p);if(m<0||m>=nM)return;
+    var k=evoKey(p);
+    if(keys.indexOf(k)>=0)series[k][m]++;else if(useOtros)series['__otros'][m]++;
+  });
+  var order=keys.slice();if(useOtros)order.push('__otros');
+  var maxY=1;order.forEach(function(k){series[k].forEach(function(v){if(v>maxY)maxY=v;});});
+
+  var W=600,H=240,L=38,R=14,T=12,B=26,pw=W-L-R,ph=H-T-B;
+  function X(i){return nM>1?L+i/(nM-1)*pw:L+pw/2;}
+  function Y(v){return T+ph-(v/maxY)*ph;}
+  var svg='<svg class="viz-svg" viewBox="0 0 '+W+' '+H+'" preserveAspectRatio="xMidYMid meet">';
+  [0,0.5,1].forEach(function(f){var v=Math.round(maxY*f),y=Y(v);
+    svg+='<line class="viz-gridline" x1="'+L+'" y1="'+y+'" x2="'+(W-R)+'" y2="'+y+'"/>';
+    svg+='<text class="viz-axis" x="'+(L-6)+'" y="'+(y+3)+'" text-anchor="end">'+v+'</text>';});
+  for(var i=0;i<nM;i++)svg+='<text class="viz-axis" x="'+X(i)+'" y="'+(H-8)+'" text-anchor="middle">'+MESES[i]+'</text>';
+  order.forEach(function(k){
+    var pts=series[k].map(function(v,i){return X(i).toFixed(1)+','+Y(v).toFixed(1);}).join(' ');
+    var c=evoColor(k);
+    svg+='<polyline points="'+pts+'" fill="none" stroke="'+c+'" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>';
+    series[k].forEach(function(v,i){svg+='<circle cx="'+X(i).toFixed(1)+'" cy="'+Y(v).toFixed(1)+'" r="2.6" fill="'+c+'"/>';});
+  });
+  svg+='<line id="evo-guide" x1="0" y1="'+T+'" x2="0" y2="'+(T+ph)+'" stroke="#1B5EA2" stroke-width="1" stroke-dasharray="3 3" opacity="0"/>';
+  for(var i=0;i<nM;i++){
+    var bw=nM>1?pw/(nM-1):pw, bx=nM>1?X(i)-bw/2:L;
+    svg+='<rect x="'+bx.toFixed(1)+'" y="'+T+'" width="'+bw.toFixed(1)+'" height="'+ph+'" fill="transparent" onmousemove="evoHover(event,'+i+')" onmouseleave="evoOut()"/>';
+  }
+  svg+='</svg>';
+  document.getElementById('viz-evolucion').innerHTML=svg;
+  var leg='';order.forEach(function(k){leg+='<span class="legend-item"><span class="legend-swatch" style="background:'+evoColor(k)+'"></span>'+esc(evoLabel(k))+'</span>';});
+  document.getElementById('evo-legend').innerHTML=leg;
+  EVO={nM:nM,order:order,series:series,xs:[]};for(var i=0;i<nM;i++)EVO.xs.push(X(i));
+}
+function evoHover(ev,i){
+  if(!EVO)return;
+  var g=document.getElementById('evo-guide');
+  if(g){g.setAttribute('x1',EVO.xs[i]);g.setAttribute('x2',EVO.xs[i]);g.setAttribute('opacity','1');}
+  var rows='';
+  EVO.order.forEach(function(k){
+    rows+='<div class="dash-tt-row"><span class="dash-tt-dot" style="background:'+evoColor(k)+'"></span>'+esc(evoLabel(k))+'<span class="v">'+EVO.series[k][i]+'</span></div>';
+  });
+  showTip('<div class="dash-tt-title">'+MESES[i]+' '+dashAnio+'</div>'+rows,ev);
+}
+function evoOut(){var g=document.getElementById('evo-guide');if(g)g.setAttribute('opacity','0');hideTip();}
+/* ── Viz 2: Mapa de calor Bloque × Comisión (1er giro) ───────── */
+function bloqueOf(p){return p.bloques[0]||(ORIGEN_LABEL[p.origen]||'Otros');}
+function trunc(s,n){s=String(s);return s.length>n?s.slice(0,n-1)+'…':s;}
+var hmSelRow='',hmSelCol='',HM={rows:[],cols:[]};
+function renderHeatmap(data){
+  /* top por cantidad para elegir cuáles, luego orden alfabético para mostrar */
+  var comC={};data.forEach(function(p){var c=p.comisiones[0];if(c)comC[c]=(comC[c]||0)+1;});
+  var cols=Object.keys(comC).sort(function(a,b){return comC[b]-comC[a];}).slice(0,10).sort();
+  var blC={};data.forEach(function(p){if(p.comisiones[0]){var b=bloqueOf(p);blC[b]=(blC[b]||0)+1;}});
+  var rows=Object.keys(blC).sort(function(a,b){return blC[b]-blC[a];}).slice(0,15).sort();
+  HM={rows:rows,cols:cols};
+  var box=document.getElementById('viz-heatmap');
+  if(!cols.length||!rows.length){box.innerHTML='<div class="viz-empty">Sin datos para este a&ntilde;o.</div>';return;}
+  if(rows.indexOf(hmSelRow)<0)hmSelRow='';
+  if(cols.indexOf(hmSelCol)<0)hmSelCol='';
+  var cell={},maxV=0;
+  data.forEach(function(p){
+    var c=p.comisiones[0];if(!c)return;
+    var b=bloqueOf(p);
+    if(rows.indexOf(b)<0||cols.indexOf(c)<0)return;
+    var k=b+'~|~'+c;cell[k]=(cell[k]||0)+1;if(cell[k]>maxV)maxV=cell[k];
+  });
+  var sel=(hmSelRow||hmSelCol);
+  var leftW=168,topH=98,cw=50,ch=26;
+  var W=leftW+cols.length*cw,H=topH+rows.length*ch;
+  var svg='<svg viewBox="0 0 '+W+' '+H+'" preserveAspectRatio="xMinYMin meet" style="display:block;min-width:'+W+'px;width:100%;height:auto">';
+  cols.forEach(function(c,ci){
+    var x=leftW+ci*cw+cw/2;
+    var col=hmSelCol===c?'#1B5EA2':(sel?'#c2ccd6':'#4A4A4A');
+    var fw=hmSelCol===c?'700':'400';
+    svg+='<text class="hm-label" x="'+x+'" y="'+(topH-9)+'" text-anchor="start" transform="rotate(-45 '+x+' '+(topH-9)+')" style="cursor:pointer;fill:'+col+';font-weight:'+fw+'" onclick="hmClickCol('+ci+')">'+esc(trunc(c,18))+'<title>'+esc(c)+' (clic para resaltar)</title></text>';
+  });
+  rows.forEach(function(b,ri){
+    var y=topH+ri*ch;
+    var rcol=hmSelRow===b?'#1B5EA2':(sel?'#c2ccd6':'#4A4A4A');
+    var rfw=hmSelRow===b?'700':'400';
+    svg+='<text class="hm-label" x="'+(leftW-6)+'" y="'+(y+ch/2+3)+'" text-anchor="end" style="cursor:pointer;fill:'+rcol+';font-weight:'+rfw+'" onclick="hmClickRow('+ri+')">'+esc(trunc(b,24))+'<title>'+esc(b)+' (clic para resaltar)</title></text>';
+    cols.forEach(function(c,ci){
+      var v=cell[b+'~|~'+c]||0,x=leftW+ci*cw,inten=maxV?v/maxV:0;
+      var hot=(!sel)||(b===hmSelRow)||(c===hmSelCol);
+      var fill=v?'rgba(27,94,162,'+(0.06+inten*0.74).toFixed(3)+')':'#F5F7FA';
+      var op=hot?'1':'0.16';
+      svg+='<rect x="'+x+'" y="'+y+'" width="'+(cw-2)+'" height="'+(ch-2)+'" rx="3" fill="'+fill+'" opacity="'+op+'"><title>'+esc(b)+' · '+esc(c)+': '+v+'</title></rect>';
+      if(v&&hot){var tc=inten>0.55?'#fff':'#1B5EA2';svg+='<text x="'+(x+(cw-2)/2)+'" y="'+(y+ch/2+3)+'" text-anchor="middle" style="font-size:10px;font-weight:600;fill:'+tc+'">'+v+'</text>';}
+    });
+  });
+  svg+='</svg>';
+  box.innerHTML=svg;
+}
+function hmClickRow(i){var b=HM.rows[i];hmSelRow=(hmSelRow===b?'':b);renderHeatmap(dashData());}
+function hmClickCol(i){var c=HM.cols[i];hmSelCol=(hmSelCol===c?'':c);renderHeatmap(dashData());}
+/* ── Viz 3: Barras apiladas horizontales (Tipo por Bloque) ───── */
+function renderStacked(data){
+  var box=document.getElementById('viz-stacked');
+  var tipoTot={};data.forEach(function(p){tipoTot[p.tipo]=(tipoTot[p.tipo]||0)+1;});
+  var tipos=Object.keys(tipoTot).sort(function(a,b){return tipoTot[b]-tipoTot[a];});
+  if(!tipos.length){box.innerHTML='<div class="viz-empty">Sin datos.</div>';document.getElementById('stacked-legend').innerHTML='';return;}
+  var blTot={};data.forEach(function(p){var b=bloqueOf(p);blTot[b]=(blTot[b]||0)+1;});
+  var selB=topSeries(blTot,6),topB=selB.keys,useResto=selB.hasOtros;
+  var m={};
+  data.forEach(function(p){
+    var t=p.tipo,b=bloqueOf(p),key=topB.indexOf(b)>=0?b:'__resto';
+    (m[t]=m[t]||{});m[t][key]=(m[t][key]||0)+1;
+  });
+  var order=topB.slice();if(useResto)order.push('__resto');
+  var maxT=tipos.reduce(function(mx,t){return Math.max(mx,tipoTot[t]);},1);
+  var W=600,L=46,R=46,T=6,rowH=30,barH=18,pw=W-L-R,H=T+tipos.length*rowH+2;
+  function sc(c){return c==='__resto'?'#9aacbd':getBloqueColor(c);}
+  function sl(c){return c==='__resto'?'Resto':c;}
+  var svg='<svg viewBox="0 0 '+W+' '+H+'" preserveAspectRatio="xMidYMid meet" style="width:100%;height:auto;display:block">';
+  tipos.forEach(function(t,ti){
+    var cy=T+ti*rowH+rowH/2,barY=cy-barH/2,xacc=L;
+    svg+='<text x="0" y="'+(cy+4)+'" style="font-size:12px;font-weight:700;fill:'+(TIPO_FG[t]||'#888')+'">'+esc(t)+'</text>';
+    order.forEach(function(b){
+      var v=(m[t]&&m[t][b])||0;if(!v)return;
+      var w=v/maxT*pw;
+      svg+='<rect x="'+xacc.toFixed(1)+'" y="'+barY+'" width="'+w.toFixed(1)+'" height="'+barH+'" fill="'+sc(b)+'"><title>'+esc(sl(b))+' &middot; '+esc(TIPOS[t]||t)+': '+v+' ('+Math.round(v/tipoTot[t]*100)+'%)</title></rect>';
+      xacc+=w;
+    });
+    svg+='<text x="'+(L+tipoTot[t]/maxT*pw+5).toFixed(1)+'" y="'+(cy+4)+'" style="font-size:11px;font-weight:700;fill:#1B5EA2">'+tipoTot[t]+'</text>';
+  });
+  svg+='</svg>';
+  box.innerHTML=svg;
+  var leg='';order.forEach(function(b){leg+='<span class="legend-item"><span class="legend-swatch" style="background:'+sc(b)+'"></span>'+esc(trunc(sl(b),22))+'</span>';});
+  document.getElementById('stacked-legend').innerHTML=leg;
+}
+/* ── Viz 5: Donut — distribución por tipo de proyecto ────────── */
+function renderDonut(data){
+  var box=document.getElementById('viz-donut');
+  var tipoTot={};data.forEach(function(p){tipoTot[p.tipo]=(tipoTot[p.tipo]||0)+1;});
+  var tipos=Object.keys(tipoTot).sort(function(a,b){return tipoTot[b]-tipoTot[a];});
+  var total=data.length;
+  if(!total){box.innerHTML='<div class="viz-empty">Sin datos para este a&ntilde;o.</div>';return;}
+  var cx=100,cy=100,R=70,SW=28,C=2*Math.PI*R,cum=0;
+  var svg='<svg viewBox="0 0 200 200" style="width:150px;height:150px;flex-shrink:0"><g transform="rotate(-90 '+cx+' '+cy+')">';
+  tipos.forEach(function(t){
+    var frac=tipoTot[t]/total,dash=frac*C,c=TIPO_FG[t]||'#888';
+    svg+='<circle cx="'+cx+'" cy="'+cy+'" r="'+R+'" fill="none" stroke="'+c+'" stroke-width="'+SW+'" stroke-dasharray="'+dash.toFixed(2)+' '+(C-dash).toFixed(2)+'" stroke-dashoffset="'+(-cum*C).toFixed(2)+'"><title>'+esc(TIPOS[t]||t)+': '+tipoTot[t]+' ('+Math.round(frac*100)+'%)</title></circle>';
+    cum+=frac;
+  });
+  svg+='</g><text x="'+cx+'" y="'+(cy-1)+'" text-anchor="middle" style="font-size:30px;font-weight:700;fill:#1B5EA2">'+total+'</text>';
+  svg+='<text x="'+cx+'" y="'+(cy+17)+'" text-anchor="middle" style="font-size:11px;fill:#888">proyectos</text></svg>';
+  var leg='<div class="viz-legend" style="flex:1;margin-top:0;flex-direction:column;gap:5px;min-width:130px">';
+  tipos.forEach(function(t){
+    var pct=Math.round(tipoTot[t]/total*100);
+    leg+='<span class="legend-item" style="justify-content:flex-start"><span class="legend-swatch" style="background:'+(TIPO_FG[t]||'#888')+'"></span>'+esc(TIPOS[t]||t)+' &middot; <strong style="margin-left:3px">'+tipoTot[t]+'</strong> ('+pct+'%)</span>';
+  });
+  leg+='</div>';
+  box.innerHTML='<div style="display:flex;gap:16px;align-items:center;flex-wrap:wrap;justify-content:center">'+svg+leg+'</div>';
+}
+/* ── Viz 4: Top 10 comisiones con sparkline de tendencia ─────── */
+function fmtDM(d){return ('0'+d.getDate()).slice(-2)+'/'+('0'+(d.getMonth()+1)).slice(-2);}
+function sparkline(vals,bins){
+  var w=92,h=26,p=3,n=vals.length,mx=Math.max.apply(null,vals)||1;
+  function X(i){return p+(n>1?i/(n-1)*(w-2*p):(w-2*p)/2);}
+  function Y(v){return h-p-(v/mx)*(h-2*p);}
+  var pts=vals.map(function(v,i){return X(i).toFixed(1)+','+Y(v).toFixed(1);}).join(' ');
+  var s='<svg class="topcom-spark" viewBox="0 0 '+w+' '+h+'">';
+  s+='<line x1="'+p+'" y1="'+(h-p)+'" x2="'+(w-p)+'" y2="'+(h-p)+'" stroke="#E3EAF3" stroke-width="1"/>';
+  s+='<polyline points="'+pts+'" fill="none" stroke="#2E75B6" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"/>';
+  vals.forEach(function(v,i){
+    var last=i===n-1;
+    s+='<circle cx="'+X(i).toFixed(1)+'" cy="'+Y(v).toFixed(1)+'" r="'+(last?2.4:1.4)+'" fill="'+(last?'#1B5EA2':'#2E75B6')+'"><title>Semana '+fmtDM(bins[i][0])+'–'+fmtDM(bins[i][1])+': '+v+'</title></circle>';
+  });
+  s+='</svg>';
+  return s;
+}
+function renderTopComs(data){
+  var box=document.getElementById('viz-topcoms');
+  var comC={};data.forEach(function(p){var c=p.comisiones[0];if(c)comC[c]=(comC[c]||0)+1;});
+  var coms=Object.keys(comC).sort(function(a,b){return comC[b]-comC[a];}).slice(0,10);
+  if(!coms.length){box.innerHTML='<div class="viz-empty">Sin datos para este a&ntilde;o.</div>';return;}
+  var maxD=null;data.forEach(function(p){var d=parseFecha(p.fecha);if(d&&(!maxD||d>maxD))maxD=d;});
+  if(!maxD)maxD=new Date();
+  var WEEKS=8,MS=7*24*3600*1000;
+  var bins=[];for(var i=0;i<WEEKS;i++){var end=new Date(maxD.getTime()-(WEEKS-1-i)*MS);bins.push([new Date(end.getTime()-6*MS),end]);}
+  function binOf(d){var idx=WEEKS-1-Math.floor((maxD-d)/MS);return (idx>=0&&idx<WEEKS)?idx:-1;}
+  var series={};coms.forEach(function(c){series[c]=[];for(var i=0;i<WEEKS;i++)series[c].push(0);});
+  data.forEach(function(p){var c=p.comisiones[0];if(coms.indexOf(c)<0)return;var d=parseFecha(p.fecha);if(!d)return;var b=binOf(d);if(b>=0)series[c][b]++;});
+  var rango=fmtDM(bins[0][0])+' &ndash; '+fmtDM(bins[WEEKS-1][1]);
+  var html='<div style="font-size:10px;color:#888;margin-bottom:6px">Tendencia &uacute;ltimas 8 semanas ('+rango+') &middot; conteo total por 1er giro</div>';
+  coms.forEach(function(c,i){
+    html+='<div class="topcom-row"><span class="topcom-rank">'+(i+1)+'</span><span class="topcom-name">'+esc(c)+'</span><span class="topcom-count">'+comC[c]+'</span>'+sparkline(series[c],bins)+'</div>';
+  });
+  box.innerHTML=html;
+}
 
 /* ── Tabla dinámica (pivot table) ──────────────────────────────── */
 /* Dimensiones disponibles para Filas / Columnas */
@@ -674,52 +843,48 @@ HTML_TEMPLATE = """<!DOCTYPE html>
     <button class="sub-btn" data-sub="expedientes" onclick="switchSub('expedientes')">Expedientes</button>
   </div>
 
-  <!-- SUB: DASHBOARD -->
+  <!-- SUB: DASHBOARD (análisis político, 5 visualizaciones SVG) -->
   <div id="sub-dashboard" class="sub-content active">
     <div class="section-block">
       <div class="section-header">
-        <h2>Resumen general</h2>
-        <span class="section-hint">Toc&aacute; las barras para filtrar</span>
+        <h2>Dashboard de an&aacute;lisis</h2>
+        <span class="section-hint">Proyectos ingresados &middot; an&aacute;lisis pol&iacute;tico</span>
       </div>
       <div class="section-body">
-        <div id="dash-context" class="dash-context"></div>
-        <div class="filter-row" style="margin-bottom:12px;align-items:center">
-          <button class="chip on" id="dash-anio-all" onclick="setDashAnio('')">Todos</button>
+        <div class="dash-toolbar">
+          <span class="dash-anio-label">A&ntilde;o</span>
+          <button class="chip on" id="dash-anio-2026" onclick="setDashAnio('2026')">2026</button>
           <button class="chip" id="dash-anio-2025" onclick="setDashAnio('2025')">2025</button>
-          <button class="chip" id="dash-anio-2026" onclick="setDashAnio('2026')">2026</button>
-          <span style="width:1px;height:18px;background:#D6E4F0;margin:0 4px"></span>
-          <button class="chip" id="dash-sanc" onclick="toggleDashSanc()">Sancionados</button>
+          <span class="dash-total" id="dash-total"></span>
         </div>
-        <div class="dash-stats-row">
-          <div class="stat-card">
-            <div class="stat-num" id="stat-total">{total}</div>
-            <div class="stat-label">Total proyectos</div>
+        <div class="dash-grid">
+          <div class="viz-card span2">
+            <div class="viz-head">
+              <span class="viz-title">Evoluci&oacute;n temporal</span>
+              <div class="viz-toggle">
+                <button id="evo-tipo" class="on" onclick="setEvoMode('tipo')">Por tipo</button>
+                <button id="evo-bloque" onclick="setEvoMode('bloque')">Por bloque</button>
+              </div>
+            </div>
+            <div id="viz-evolucion"></div>
+            <div class="viz-legend" id="evo-legend"></div>
           </div>
-          <div class="stat-card" style="border-left-color:#2E75B6">
-            <div class="stat-num" style="color:#2E75B6" id="stat-pl">{pl}</div>
-            <div class="stat-label">Proyectos de ley</div>
+          <div class="viz-card span2">
+            <div class="viz-head"><span class="viz-title">Mapa de calor &middot; Bloque &times; Comisi&oacute;n</span></div>
+            <div id="viz-heatmap" style="overflow-x:auto"></div>
           </div>
-          <div class="stat-card" style="border-left-color:#5B4DA0">
-            <div class="stat-num" style="color:#5B4DA0" id="stat-pd">{pd}</div>
-            <div class="stat-label">Declaraciones</div>
+          <div class="viz-card">
+            <div class="viz-head"><span class="viz-title">Tipo por bloque</span></div>
+            <div id="viz-stacked"></div>
+            <div class="viz-legend" id="stacked-legend"></div>
           </div>
-          <div class="stat-card" style="border-left-color:#1a7a4a">
-            <div class="stat-num" style="color:#1a7a4a" id="stat-otros">{otros}</div>
-            <div class="stat-label">Otros tipos</div>
+          <div class="viz-card">
+            <div class="viz-head"><span class="viz-title">Distribuci&oacute;n por tipo</span></div>
+            <div id="viz-donut"></div>
           </div>
-        </div>
-        <div class="dash-panels-row">
-          <div>
-            <div class="dash-subtitle">Por tipo de proyecto</div>
-            <div id="tipo-bars"></div>
-          </div>
-          <div>
-            <div class="dash-subtitle">Por bloque pol&iacute;tico</div>
-            <div id="bloque-bars"></div>
-          </div>
-          <div>
-            <div class="dash-subtitle">Por comisiones (Top 10)</div>
-            <div id="com-bars"></div>
+          <div class="viz-card span2">
+            <div class="viz-head"><span class="viz-title">Top 10 comisiones &middot; tendencia 8 semanas</span></div>
+            <div id="viz-topcoms"></div>
           </div>
         </div>
       </div>
@@ -897,6 +1062,8 @@ HTML_TEMPLATE = """<!DOCTYPE html>
     <p>Secci&oacute;n en construcci&oacute;n &mdash; pr&oacute;ximamente en Fase 2.</p>
   </div>
 </div>
+
+<div id="dash-tooltip" class="dash-tooltip"></div>
 
 <div class="footer">Prosecretar&iacute;a Parlamentaria &middot; Senado de la Naci&oacute;n Argentina<br>Datos al {fecha}</div>
 
