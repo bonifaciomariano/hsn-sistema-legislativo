@@ -110,37 +110,39 @@ body{font-family:'Poppins',Calibri,sans-serif;background:#F5F7FA;color:#4A4A4A;f
 .dash-context{font-size:11px;color:#2E75B6;background:#EAF0FA;border-radius:6px;padding:6px 10px;margin-bottom:10px;display:none}
 .dash-context.visible{display:block}
 
-/* ── Tabla dinámica ───────────────────────────────────────────────────── */
-.tabla-wrap{padding:12px}
-.tabla-toolbar{display:flex;align-items:center;gap:10px;margin-bottom:12px;flex-wrap:wrap}
-.tabla-toolbar .filter-label{margin:0}
-.tabla-summary{font-size:11px;color:#888;margin-left:auto}
-.tabla-group{background:#fff;border:1px solid #D6E4F0;border-radius:8px;margin-bottom:8px;overflow:hidden;box-shadow:0 1px 3px rgba(0,0,0,0.05)}
-.tabla-gh{display:flex;align-items:center;gap:10px;padding:11px 14px;cursor:pointer;background:#F5F8FC;transition:background .12s}
-.tabla-gh:hover{background:#EAF0FA}
-.tabla-caret{display:inline-block;transition:transform .15s;color:#2E75B6;font-size:11px;flex-shrink:0}
-.tabla-caret.open{transform:rotate(90deg)}
-.tabla-gname{font-weight:600;color:#1B5EA2;flex:1;font-size:13px}
-.tabla-gcount{background:#1B5EA2;color:#fff;border-radius:12px;padding:2px 10px;font-size:11px;font-weight:700;flex-shrink:0}
-.tabla-row{display:grid;grid-template-columns:46px 96px 1fr 170px 84px 124px;gap:10px;align-items:center;padding:8px 14px;border-top:1px solid #EEF2F8;font-size:12px}
-.tabla-row:hover{background:#F8FAFD}
-.exp-nro-link{font-weight:700;color:#1B5EA2;text-decoration:none;white-space:nowrap}
-.exp-nro-link:hover{text-decoration:underline}
-.tabla-ext{color:#4A4A4A;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
-.tabla-autor{color:#666;font-size:11px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
-.tabla-fecha{color:#888;font-size:11px;white-space:nowrap}
-.tabla-ver{font-size:10px;color:#2E75B6;text-decoration:none;font-weight:600;border:1px solid #2E75B6;padding:3px 8px;border-radius:12px;white-space:nowrap;text-align:center}
-.tabla-ver:hover{background:#2E75B6;color:#fff}
-.tabla-sh{display:flex;align-items:center;gap:8px;padding:7px 14px 7px 28px;cursor:pointer;border-top:1px solid #EEF2F8;background:#FCFDFE;transition:background .12s}
-.tabla-sh:hover{background:#F0F4FA}
-.tabla-sname{flex:1;font-size:12px;font-weight:600;color:#2E75B6}
-.tabla-scount{background:#D6E4F0;color:#1B5EA2;border-radius:10px;padding:1px 8px;font-size:10px;font-weight:700;flex-shrink:0}
-.tabla-sh ~ .tabla-row{padding-left:28px}
-@media(max-width:760px){
-  .tabla-row{display:flex;flex-wrap:wrap;gap:6px}
-  .tabla-ext{flex-basis:100%;white-space:normal}
-  .tabla-autor{flex-basis:100%;white-space:normal}
-}
+/* ── Tabla dinámica (pivot) ───────────────────────────────────────────── */
+.pivot-wrap{padding:12px}
+.pivot-config{background:#fff;border:1px solid #D6E4F0;border-radius:10px;padding:12px 14px;margin-bottom:10px;box-shadow:0 1px 3px rgba(0,0,0,0.05)}
+.pivot-axes{display:flex;gap:14px;flex-wrap:wrap}
+.pivot-field{display:flex;flex-direction:column;gap:3px;min-width:170px;flex:1}
+.pivot-field .filter-label{margin:0}
+.pivot-field .select-wrapper{margin-bottom:0}
+.pivot-filters{display:flex;gap:10px;flex-wrap:wrap;align-items:center;border-top:1px dashed #D6E4F0;margin-top:12px;padding-top:11px}
+.pivot-filters .filter-label{margin:0}
+.pivot-filters .select-wrapper{min-width:140px;margin-bottom:0;flex:0 1 200px}
+.pivot-clear{background:none;border:none;color:#1B5EA2;font-family:inherit;font-size:11px;font-weight:700;cursor:pointer;padding:4px 6px}
+.pivot-clear:hover{text-decoration:underline}
+.pivot-meta{font-size:11px;color:#888;margin-bottom:8px;padding:0 2px}
+.pivot-meta strong{color:#1B5EA2}
+.pivot-scroll{overflow:auto;max-height:calc(100vh - 250px);border:1px solid #D6E4F0;border-radius:10px;background:#fff}
+.pivot-table{border-collapse:separate;border-spacing:0;font-size:12px;width:100%}
+.pivot-table th,.pivot-table td{border-right:1px solid #EEF2F8;border-bottom:1px solid #EEF2F8;padding:6px 10px;text-align:center;white-space:nowrap}
+.pivot-table thead th{position:sticky;top:0;background:#1B5EA2;color:#fff;font-weight:600;font-size:11px;z-index:2}
+.pivot-table .pv-corner{position:sticky;left:0;top:0;z-index:3;background:#0d3f73;text-align:left;font-size:10px;text-transform:uppercase;letter-spacing:.5px}
+.pivot-table .pv-rowhead{position:sticky;left:0;background:#F5F8FC;color:#1B5EA2;font-weight:600;text-align:left;z-index:1;max-width:260px;overflow:hidden;text-overflow:ellipsis}
+.pv-cell{color:#4A4A4A;transition:outline .1s}
+.pv-click{cursor:pointer}
+.pv-click:hover{outline:2px solid #2E75B6;outline-offset:-2px}
+.pv-empty{color:#cfd8e3}
+.pv-tot{font-weight:700;background:#EAF0FA;color:#1B5EA2}
+.pivot-table .pv-totrow th,.pivot-table .pv-totrow td{background:#D6E4F0;border-top:2px solid #1B5EA2}
+.pv-grand{font-weight:700;background:#1B5EA2!important;color:#fff!important}
+@media(max-width:760px){.pivot-field{min-width:130px}.pivot-filters .select-wrapper{flex-basis:140px}}
+
+/* ── Vista unificada Expedientes: panel de análisis colapsable ─────────── */
+.analisis-toggle-btn{background:rgba(255,255,255,0.18);border:none;color:#fff;font-family:inherit;font-size:11px;font-weight:600;cursor:pointer;padding:5px 12px;border-radius:6px;transition:background .15s}
+.analisis-toggle-btn:hover{background:rgba(255,255,255,0.32)}
+#buscador-block{scroll-margin-top:112px}
 
 /* ── Buscador: layout dos columnas ────────────────────────────────────── */
 .detalle-layout{display:flex;gap:16px;padding:12px;align-items:flex-start}
@@ -199,6 +201,7 @@ var TIPOS={PL:'Proy. de Ley',PD:'Declaración',PC:'Comunicación',PR:'Resolució
 var TIPO_FG={PL:'#1B5EA2',PD:'#2E75B6',PC:'#0d7a4a',PR:'#5B4DA0',CA:'#1a7a4a',AC:'#7a5c1a',CV:'#7a1a3a'};
 var TIPO_BG={PL:'#D6E4F0',PD:'#EAF0FA',PC:'#DCF0E8',PR:'#EDE8FA',CA:'#E0F4EC',AC:'#F9F0DA',CV:'#FAE0EA'};
 var ORIGEN_LABEL={S:'Senado',PE:'Poder Ejecutivo',CD:'Diputados',OV:'Otros'};
+var ORIGEN_CODE={};Object.keys(ORIGEN_LABEL).forEach(function(k){ORIGEN_CODE[ORIGEN_LABEL[k]]=k});
 var BC=['#1B5EA2','#2E75B6','#5B4DA0','#1a7a4a','#7a5c1a','#7a1a3a','#2E8B7A','#6B3A2A','#1a4a7a','#4a7a1a','#7a1a5a','#2a7a6a','#5a2a7a','#2a5a2a'];
 var ALL_BLOQUES=[];
 var dashFiltroTipo='',dashFiltroBloque='',dashFiltroCom='',dashActiveAnio='',dashSancionado=false;
@@ -220,7 +223,7 @@ function switchSub(id){
   document.querySelectorAll('.sub-content').forEach(function(c){c.classList.remove('active')});
   document.getElementById('sub-'+id).classList.add('active');
   document.querySelector('[data-sub="'+id+'"]').classList.add('active');
-  if(id==='tabla')renderTabla();
+  if(id==='expedientes')renderPivot();
 }
 
 function init(){
@@ -247,9 +250,11 @@ function init(){
   DATA.forEach(function(p){(p.provincias||[]).forEach(function(pv){if(pv)provSet[pv]=1})});
   fillSelect('provincia-select',Object.keys(provSet).sort());
 
+  initPivot();
   renderDash(DATA);
-  renderFilters();
+  syncFilterUI();
   renderList();
+  renderPivot();
 }
 function fillSelect(id,values){
   var sel=document.getElementById(id);
@@ -348,68 +353,159 @@ function toggleDashSanc(){
 }
 function clearDash(){dashFiltroTipo='';dashFiltroBloque='';dashFiltroCom='';renderDash(getDashFiltered())}
 
-/* ── Tabla dinámica ────────────────────────────────────────────── */
-var tablaGroupBy='com1';
-var tablaExpanded={},tablaSenExpanded={};
-var TABLA_GROUPS=[],TABLA_SEN=[];
+/* ── Tabla dinámica (pivot table) ──────────────────────────────── */
+/* Dimensiones disponibles para Filas / Columnas */
+var DIMS={
+  tipo:{label:'Tipo de proyecto',get:function(p){return p.tipo},disp:function(v){return (TIPOS[v]||v)+' ('+v+')'}},
+  anio:{label:'Año',get:function(p){return String(p.anio)}},
+  origen:{label:'Origen',get:function(p){return ORIGEN_LABEL[p.origen]||p.origen}},
+  bloque:{label:'Bloque político (1°)',get:function(p){return p.bloques[0]||(ORIGEN_LABEL[p.origen]||'(Sin bloque)')}},
+  com1:{label:'Comisión (1er giro)',get:function(p){return p.comisiones[0]||'(Sin comisión)'}},
+  provincia:{label:'Provincia (1°)',get:function(p){return (p.provincias&&p.provincias[0])||'(Sin provincia)'}},
+  sancionado:{label:'Sancionado',get:function(p){return p.sancionado?'Sí':'No'}},
+  mes:{label:'Mes (AAAA-MM)',get:function(p){var f=p.fecha?p.fecha.split('/'):null;return (f&&f.length===3)?f[2]+'-'+f[1]:'(Sin fecha)'}}
+};
+var DIM_ORDER=['bloque','com1','tipo','origen','provincia','anio','mes','sancionado'];
+var DISP_NAME={abs:'Conteo de proyectos',ptotal:'% del total general',prow:'% de la fila',pcol:'% de la columna'};
+var pvRow='bloque',pvCol='tipo',pvDisp='abs';
+var PV_ROWKEYS=[],PV_COLKEYS=[];
 
-function setTablaGroup(v){tablaGroupBy=v;tablaExpanded={};tablaSenExpanded={};renderTabla()}
-function groupKeyFor(p){
-  if(tablaGroupBy==='com1')return p.comisiones[0]||'(Sin comisión)';
-  if(tablaGroupBy==='bloque')return p.bloques[0]||(ORIGEN_LABEL[p.origen]||'(Sin bloque)');
-  return p.tipo;
-}
-function tablaGroupData(){
-  var g={};
-  DATA.forEach(function(p){var k=groupKeyFor(p);(g[k]=g[k]||[]).push(p)});
-  return g;
-}
-function tablaRow(p){
-  var fg=TIPO_FG[p.tipo]||'#888',bg=TIPO_BG[p.tipo]||'#eee';
-  var expNro=p.origen+'-'+p.nro+'/'+String(p.anio).slice(-2);
-  var autor=p.autores[0]||'—';
-  var ext=p.extracto.length>110?p.extracto.slice(0,110)+'…':p.extracto;
-  var link=p.url?'<a class="exp-nro-link" href="'+escAttr(p.url)+'" target="_blank">'+esc(expNro)+'</a>':'<span class="exp-nro-link">'+esc(expNro)+'</span>';
-  var ver=p.url?'<a class="tabla-ver" href="'+escAttr(p.url)+'" target="_blank">Ver en Senado &#8599;</a>':'<span></span>';
-  return '<div class="tabla-row"><span class="exp-badge" style="background:'+bg+';color:'+fg+'">'+esc(p.tipo)+'</span>'+link+'<span class="tabla-ext" title="'+escAttr(p.extracto)+'">'+esc(ext)+'</span><span class="tabla-autor" title="'+escAttr(p.autores.join(', '))+'">'+esc(autor)+'</span><span class="tabla-fecha">'+esc(p.fecha||'')+'</span>'+ver+'</div>';
-}
-function renderSenadorSub(bloque,rows){
-  var sg={};
-  rows.forEach(function(p){
-    var autores=p.autores.length?p.autores:['(Sin autor)'];
-    autores.forEach(function(a){(sg[a]=sg[a]||[]).push(p)});
+function initPivot(){
+  var ro=document.getElementById('pv-row'),co=document.getElementById('pv-col');
+  DIM_ORDER.forEach(function(k){
+    var o=document.createElement('option');o.value=k;o.textContent=DIMS[k].label;ro.appendChild(o);
+    var o2=document.createElement('option');o2.value=k;o2.textContent=DIMS[k].label;co.appendChild(o2);
   });
-  var keys=Object.keys(sg).sort(function(a,b){return sg[b].length-sg[a].length});
-  var html='';
-  keys.forEach(function(a){
-    var skey=bloque+'||'+a,open=tablaSenExpanded[skey];
-    var si=TABLA_SEN.length;TABLA_SEN.push(skey);
-    html+='<div class="tabla-sh" onclick="toggleTablaSen('+si+')"><span class="tabla-caret'+(open?' open':'')+'">&#9656;</span><span class="tabla-sname">'+esc(a)+'</span><span class="tabla-scount">'+sg[a].length+'</span></div>';
-    if(open)sg[a].forEach(function(p){html+=tablaRow(p)});
-  });
-  return html;
+  var none=document.createElement('option');none.value='none';none.textContent='— Ninguna (solo total) —';co.appendChild(none);
+  ro.value=pvRow;co.value=pvCol;
+  var anios={},tipos={},origs={};
+  DATA.forEach(function(p){anios[p.anio]=1;tipos[p.tipo]=1;origs[p.origen]=1});
+  Object.keys(anios).sort().forEach(function(a){var o=document.createElement('option');o.value=a;o.textContent=a;document.getElementById('pv-f-anio').appendChild(o)});
+  Object.keys(tipos).sort().forEach(function(t){var o=document.createElement('option');o.value=t;o.textContent=t+' · '+(TIPOS[t]||t);document.getElementById('pv-f-tipo').appendChild(o)});
+  Object.keys(origs).sort().forEach(function(x){var o=document.createElement('option');o.value=x;o.textContent=ORIGEN_LABEL[x]||x;document.getElementById('pv-f-origen').appendChild(o)});
 }
-function renderTabla(){
-  var g=tablaGroupData();
-  var keys=Object.keys(g).sort(function(a,b){return g[b].length-g[a].length});
-  TABLA_GROUPS=keys;TABLA_SEN=[];
-  document.getElementById('tabla-summary').textContent=DATA.length+' proyectos en '+keys.length+' grupos';
-  var html='';
-  keys.forEach(function(k,gi){
-    var rows=g[k],open=tablaExpanded[k];
-    var label=(tablaGroupBy==='tipo')?((TIPOS[k]||k)+' ('+k+')'):k;
-    html+='<div class="tabla-group">';
-    html+='<div class="tabla-gh" onclick="toggleTablaGroup('+gi+')"><span class="tabla-caret'+(open?' open':'')+'">&#9656;</span><span class="tabla-gname">'+esc(label)+'</span><span class="tabla-gcount">'+rows.length+'</span></div>';
-    if(open){
-      if(tablaGroupBy==='bloque')html+=renderSenadorSub(k,rows);
-      else rows.forEach(function(p){html+=tablaRow(p)});
-    }
-    html+='</div>';
+/* Filtra por el estado COMPARTIDO (año/tipo/origen) — mismo que el buscador */
+function pvFilteredData(){
+  var tk=Object.keys(activeTipos);
+  return DATA.filter(function(p){
+    if(activeAnio&&String(p.anio)!==activeAnio)return false;
+    if(tk.length&&!activeTipos[p.tipo])return false;
+    if(activeOrigen&&p.origen!==activeOrigen)return false;
+    return true;
   });
-  document.getElementById('tabla-body').innerHTML=html||'<div class="no-results">Sin datos.</div>';
 }
-function toggleTablaGroup(gi){var k=TABLA_GROUPS[gi];tablaExpanded[k]=!tablaExpanded[k];renderTabla()}
-function toggleTablaSen(si){var k=TABLA_SEN[si];tablaSenExpanded[k]=!tablaSenExpanded[k];renderTabla()}
+/* Ejes y modo de cálculo del pivot (no son estado compartido) */
+function setPivot(){
+  pvRow=document.getElementById('pv-row').value;
+  pvCol=document.getElementById('pv-col').value;
+  pvDisp=document.getElementById('pv-disp').value;
+  renderPivot();
+}
+function renderPivot(){
+  var data=pvFilteredData();
+  var cNone=(pvCol==='none');
+  var rget=DIMS[pvRow].get,cget=cNone?function(){return 'Conteo'}:DIMS[pvCol].get;
+  var cells={},rowTot={},colTot={},grand=0,rowSet={},colSet={};
+  data.forEach(function(p){
+    var rk=rget(p),ck=cget(p);
+    rowSet[rk]=1;colSet[ck]=1;
+    cells[rk+'~|~'+ck]=(cells[rk+'~|~'+ck]||0)+1;
+    rowTot[rk]=(rowTot[rk]||0)+1;colTot[ck]=(colTot[ck]||0)+1;grand++;
+  });
+  var rowKeys=Object.keys(rowSet).sort(function(a,b){return rowTot[b]-rowTot[a]});
+  var colKeys=Object.keys(colSet).sort(function(a,b){return colTot[b]-colTot[a]});
+  PV_ROWKEYS=rowKeys;PV_COLKEYS=colKeys;
+  var maxCell=0;
+  rowKeys.forEach(function(rk){colKeys.forEach(function(ck){var v=cells[rk+'~|~'+ck]||0;if(v>maxCell)maxCell=v})});
+
+  var dispRow=DIMS[pvRow].disp||function(v){return v};
+  var dispCol=cNone?function(v){return v}:(DIMS[pvCol].disp||function(v){return v});
+  function fmt(v,rk,ck){
+    if(!v)return '';
+    if(pvDisp==='abs')return v;
+    var d=pvDisp==='ptotal'?grand:(pvDisp==='prow'?rowTot[rk]:colTot[ck]);
+    return d?(Math.round(v/d*1000)/10)+'%':'';
+  }
+  var h='<table class="pivot-table"><thead><tr><th class="pv-corner">'+esc(DIMS[pvRow].label)+(cNone?'':' \\ '+esc(DIMS[pvCol].label))+'</th>';
+  colKeys.forEach(function(ck){h+='<th>'+esc(dispCol(ck))+'</th>'});
+  h+='<th class="pv-tot">Total</th></tr></thead><tbody>';
+  rowKeys.forEach(function(rk,ri){
+    h+='<tr><th class="pv-rowhead" title="'+escAttr(dispRow(rk))+'">'+esc(dispRow(rk))+'</th>';
+    colKeys.forEach(function(ck,ci){
+      var v=cells[rk+'~|~'+ck]||0;
+      var style='',cls='pv-cell';
+      if(v){
+        cls+=' pv-click';
+        var intensity=maxCell?v/maxCell:0;
+        style='background:rgba(27,94,162,'+(0.06+intensity*0.74).toFixed(3)+')';
+        if(intensity>0.55)style+=';color:#fff';
+      }else{cls+=' pv-empty'}
+      h+='<td class="'+cls+'" style="'+style+'"'+(v?' onclick="drillPivot('+ri+','+ci+')"':'')+'>'+fmt(v,rk,ck)+'</td>';
+    });
+    h+='<td class="pv-tot">'+rowTot[rk]+'</td></tr>';
+  });
+  h+='<tr class="pv-totrow"><th class="pv-rowhead">Total general</th>';
+  colKeys.forEach(function(ck){h+='<td class="pv-tot">'+colTot[ck]+'</td>'});
+  h+='<td class="pv-grand">'+grand+'</td></tr></tbody></table>';
+  document.getElementById('pivot-body').innerHTML=grand?h:'<div class="no-results">Sin datos para los filtros seleccionados.</div>';
+  document.getElementById('pivot-meta').innerHTML='<strong>'+grand+'</strong> proyectos &middot; '+rowKeys.length+' filas &times; '+colKeys.length+' columna'+(colKeys.length!==1?'s':'')+' &middot; Valor: <strong>'+DISP_NAME[pvDisp]+'</strong> &middot; <span style="color:#aaa">toc&aacute; una celda para filtrar los expedientes de abajo</span>';
+}
+/* Limpia los filtros propios del buscador (no los compartidos año/tipo/origen) */
+function resetBuscadorOnly(){
+  activeBloque='';activeProvincia='';
+  setSelVal('bloque-select','');setSelVal('provincia-select','');
+  setSelVal('com-select-1','');setSelVal('com-select-adic','');setSelVal('autor-select','');
+  document.getElementById('search').value='';
+  document.getElementById('fecha-desde').value='';
+  document.getElementById('fecha-hasta').value='';
+}
+/* Clic en celda: preserva los filtros compartidos (universo del pivot), resetea
+   los del buscador, mapea fila+columna de la celda y baja hasta el buscador */
+function drillPivot(ri,ci){
+  resetBuscadorOnly();
+  applyDimToFilter(pvRow,PV_ROWKEYS[ri]);
+  if(pvCol!=='none')applyDimToFilter(pvCol,PV_COLKEYS[ci]);
+  applyAll();
+  var b=document.getElementById('buscador-block');
+  if(b)b.scrollIntoView({behavior:'smooth',block:'start'});
+}
+function setSelVal(id,v){var el=document.getElementById(id);if(el){el.value=v;el.className=v?'filter-select on':'filter-select';}}
+function applyDimToFilter(dim,value){
+  if(dim==='anio'){activeAnio=value;}
+  else if(dim==='tipo'){activeTipos={};activeTipos[value]=1;}
+  else if(dim==='origen'){if(ORIGEN_CODE[value])activeOrigen=ORIGEN_CODE[value];}
+  else if(dim==='bloque'){
+    if(ALL_BLOQUES.indexOf(value)>=0){activeBloque=value;setSelVal('bloque-select',value);}
+    else if(ORIGEN_CODE[value]){activeOrigen=ORIGEN_CODE[value];}
+  }
+  else if(dim==='provincia'){if(value!=='(Sin provincia)'){activeProvincia=value;setSelVal('provincia-select',value);}}
+  else if(dim==='com1'){if(value!=='(Sin comisión)'){setSelVal('com-select-1',value);}}
+  /* sancionado, mes: sin filtro equivalente en el buscador -> se ignoran */
+}
+
+/* ── Estado de filtros compartido (año/tipo/origen) ─────────────── */
+function applyAll(){syncFilterUI();renderPivot();renderList();}
+function syncFilterUI(){
+  ['all','2025','2026'].forEach(function(a){
+    var el=document.getElementById('anio-det-'+a);
+    if(el)el.className='chip'+(activeAnio===(a==='all'?'':a)?' on':'');
+  });
+  var pa=document.getElementById('pv-f-anio');if(pa)pa.value=activeAnio;
+  var tk=Object.keys(activeTipos);
+  var pt=document.getElementById('pv-f-tipo');if(pt)pt.value=(tk.length===1?tk[0]:'');
+  var po=document.getElementById('pv-f-origen');if(po)po.value=activeOrigen;
+  renderFilters();
+}
+function setAnioShared(v){activeAnio=v;applyAll();}
+function setTipoShared(v){activeTipos={};if(v)activeTipos[v]=1;applyAll();}
+function setOrigenShared(v){activeOrigen=v;applyAll();}
+function clearSharedFilters(){activeAnio='';activeTipos={};activeOrigen='';applyAll();}
+function toggleAnalisis(){
+  var b=document.getElementById('analisis-body'),btn=document.getElementById('analisis-toggle');
+  var collapsed=(b.style.display==='none');
+  b.style.display=collapsed?'':'none';
+  btn.innerHTML=collapsed?'Colapsar &#9650;':'Expandir &#9660;';
+}
 
 /* ── Buscador: filtros ─────────────────────────────────────────── */
 function renderFilters(){
@@ -432,17 +528,9 @@ function renderFilters(){
 }
 function toggleTipo(t){
   if(t==='__all__'){activeTipos={}}else{if(activeTipos[t])delete activeTipos[t];else activeTipos[t]=1}
-  renderFilters();renderList();
+  applyAll();
 }
-function toggleOrigen(o){activeOrigen=activeOrigen===o?'':o;renderFilters();renderList()}
-function setAnioDetalle(anio){
-  activeAnio=anio;
-  ['all','2025','2026'].forEach(function(a){
-    var el=document.getElementById('anio-det-'+a);
-    if(el)el.className='chip'+(anio===(a==='all'?'':a)?' on':'');
-  });
-  renderList();
-}
+function toggleOrigen(o){activeOrigen=activeOrigen===o?'':o;applyAll()}
 function setBloque(val){
   activeBloque=val;
   var el=document.getElementById('bloque-select');
@@ -583,8 +671,7 @@ HTML_TEMPLATE = """<!DOCTYPE html>
 <div id="main-proyectos" class="mtab-content active">
   <div class="sub-nav">
     <button class="sub-btn active" data-sub="dashboard" onclick="switchSub('dashboard')">Dashboard</button>
-    <button class="sub-btn" data-sub="tabla" onclick="switchSub('tabla')">Tabla din&aacute;mica</button>
-    <button class="sub-btn" data-sub="buscador" onclick="switchSub('buscador')">Buscador</button>
+    <button class="sub-btn" data-sub="expedientes" onclick="switchSub('expedientes')">Expedientes</button>
   </div>
 
   <!-- SUB: DASHBOARD -->
@@ -639,27 +726,69 @@ HTML_TEMPLATE = """<!DOCTYPE html>
     </div>
   </div>
 
-  <!-- SUB: TABLA DINÁMICA -->
-  <div id="sub-tabla" class="sub-content">
-    <div class="tabla-wrap">
-      <div class="tabla-toolbar">
-        <span class="filter-label">Agrupar por</span>
-        <div class="select-wrapper" style="width:auto;min-width:220px;margin-bottom:0">
-          <select class="filter-select" id="tabla-group-select" onchange="setTablaGroup(this.value)">
-            <option value="com1">Comisi&oacute;n (1er giro)</option>
-            <option value="bloque">Bloque pol&iacute;tico</option>
-            <option value="tipo">Tipo de proyecto</option>
-          </select>
-          <span class="select-arrow">&#9660;</span>
-        </div>
-        <span class="tabla-summary" id="tabla-summary"></span>
-      </div>
-      <div id="tabla-body"></div>
-    </div>
-  </div>
+  <!-- SUB: EXPEDIENTES (panel de análisis + buscador unificados) -->
+  <div id="sub-expedientes" class="sub-content">
 
-  <!-- SUB: BUSCADOR -->
-  <div id="sub-buscador" class="sub-content">
+    <!-- BLOQUE SUPERIOR: panel de análisis (pivot table, colapsable) -->
+    <div class="section-block">
+      <div class="section-header">
+        <h2>Panel de an&aacute;lisis</h2>
+        <button class="analisis-toggle-btn" id="analisis-toggle" onclick="toggleAnalisis()">Colapsar &#9650;</button>
+      </div>
+      <div class="section-body" id="analisis-body">
+        <div class="pivot-config">
+          <div class="pivot-axes">
+            <div class="pivot-field">
+              <span class="filter-label">Filas</span>
+              <div class="select-wrapper">
+                <select class="filter-select" id="pv-row" onchange="setPivot()"></select>
+                <span class="select-arrow">&#9660;</span>
+              </div>
+            </div>
+            <div class="pivot-field">
+              <span class="filter-label">Columnas</span>
+              <div class="select-wrapper">
+                <select class="filter-select" id="pv-col" onchange="setPivot()"></select>
+                <span class="select-arrow">&#9660;</span>
+              </div>
+            </div>
+            <div class="pivot-field">
+              <span class="filter-label">Valores</span>
+              <div class="select-wrapper">
+                <select class="filter-select" id="pv-disp" onchange="setPivot()">
+                  <option value="abs">Conteo de proyectos</option>
+                  <option value="ptotal">% del total general</option>
+                  <option value="prow">% de la fila</option>
+                  <option value="pcol">% de la columna</option>
+                </select>
+                <span class="select-arrow">&#9660;</span>
+              </div>
+            </div>
+          </div>
+          <div class="pivot-filters">
+            <span class="filter-label">Filtros</span>
+            <div class="select-wrapper">
+              <select class="filter-select" id="pv-f-anio" onchange="setAnioShared(this.value)"><option value="">Todos los a&ntilde;os</option></select>
+              <span class="select-arrow">&#9660;</span>
+            </div>
+            <div class="select-wrapper">
+              <select class="filter-select" id="pv-f-tipo" onchange="setTipoShared(this.value)"><option value="">Todos los tipos</option></select>
+              <span class="select-arrow">&#9660;</span>
+            </div>
+            <div class="select-wrapper">
+              <select class="filter-select" id="pv-f-origen" onchange="setOrigenShared(this.value)"><option value="">Todos los or&iacute;genes</option></select>
+              <span class="select-arrow">&#9660;</span>
+            </div>
+            <button class="pivot-clear" onclick="clearSharedFilters()">Limpiar filtros &#x2715;</button>
+          </div>
+        </div>
+        <div class="pivot-meta" id="pivot-meta"></div>
+        <div class="pivot-scroll"><div id="pivot-body"></div></div>
+      </div>
+    </div>
+
+    <!-- BLOQUE INFERIOR: buscador de expedientes -->
+    <div id="buscador-block">
     <div class="detalle-layout">
       <div class="filters-panel">
         <div class="section-header">
@@ -668,9 +797,9 @@ HTML_TEMPLATE = """<!DOCTYPE html>
         <div class="filters-body">
           <div class="filter-label" style="margin-top:0">A&ntilde;o</div>
           <div class="filter-row" style="margin-bottom:10px">
-            <button class="chip on" id="anio-det-all" onclick="setAnioDetalle('')">Todos</button>
-            <button class="chip" id="anio-det-2025" onclick="setAnioDetalle('2025')">2025</button>
-            <button class="chip" id="anio-det-2026" onclick="setAnioDetalle('2026')">2026</button>
+            <button class="chip on" id="anio-det-all" onclick="setAnioShared('')">Todos</button>
+            <button class="chip" id="anio-det-2025" onclick="setAnioShared('2025')">2025</button>
+            <button class="chip" id="anio-det-2026" onclick="setAnioShared('2026')">2026</button>
           </div>
 
           <input class="search-box" type="text" id="search" placeholder="Buscar por extracto, autor o comisi&oacute;n&hellip;" oninput="renderList()">
@@ -738,8 +867,9 @@ HTML_TEMPLATE = """<!DOCTYPE html>
         <div id="list"></div>
       </div>
     </div>
-  </div>
-</div>
+    </div><!-- /buscador-block -->
+  </div><!-- /sub-expedientes -->
+</div><!-- /main-proyectos -->
 
 <!-- ====================== MAIN: COMISIONES ====================== -->
 <div id="main-comisiones" class="mtab-content">
