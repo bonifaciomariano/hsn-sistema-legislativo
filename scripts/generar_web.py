@@ -77,11 +77,11 @@ body{font-family:'Poppins',Calibri,sans-serif;background:#F5F7FA;color:#4A4A4A;f
 .section-body{padding:16px}
 
 /* ── Dashboard de análisis ────────────────────────────────────────────── */
-.dash-toolbar{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:14px}
+.dash-toolbar{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin:0 auto 14px;max-width:1500px}
 .dash-anio-label{font-size:10px;font-weight:600;color:#888;text-transform:uppercase;letter-spacing:1px;margin-right:2px}
 .dash-total{margin-left:auto;font-size:12px;color:#888}
 .dash-total strong{color:#1B5EA2;font-size:16px}
-.dash-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+.dash-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;max-width:1500px;margin:0 auto;align-items:start}
 .dash-grid .span2{grid-column:1 / -1}
 @media(max-width:900px){.dash-grid{grid-template-columns:1fr}.dash-grid .span2{grid-column:auto}}
 .viz-card{background:#fff;border:1px solid #D6E4F0;border-radius:10px;box-shadow:0 1px 4px rgba(0,0,0,0.06);padding:14px}
@@ -398,9 +398,9 @@ function renderHeatmap(data){
     var k=b+'~|~'+c;cell[k]=(cell[k]||0)+1;if(cell[k]>maxV)maxV=cell[k];
   });
   var sel=(hmSelRow||hmSelCol);
-  var leftW=168,topH=98,cw=50,ch=26;
+  var leftW=168,topH=98,cw=50,ch=22;
   var W=leftW+cols.length*cw,H=topH+rows.length*ch;
-  var svg='<svg viewBox="0 0 '+W+' '+H+'" preserveAspectRatio="xMinYMin meet" style="display:block;min-width:'+W+'px;width:100%;height:auto">';
+  var svg='<svg viewBox="0 0 '+W+' '+H+'" preserveAspectRatio="xMinYMin meet" style="display:block;margin:0 auto;min-width:'+W+'px;height:auto">';
   cols.forEach(function(c,ci){
     var x=leftW+ci*cw+cw/2;
     var col=hmSelCol===c?'#1B5EA2':(sel?'#c2ccd6':'#4A4A4A');
@@ -858,7 +858,7 @@ HTML_TEMPLATE = """<!DOCTYPE html>
           <span class="dash-total" id="dash-total"></span>
         </div>
         <div class="dash-grid">
-          <div class="viz-card span2">
+          <div class="viz-card">
             <div class="viz-head">
               <span class="viz-title">Evoluci&oacute;n temporal</span>
               <div class="viz-toggle">
@@ -868,6 +868,10 @@ HTML_TEMPLATE = """<!DOCTYPE html>
             </div>
             <div id="viz-evolucion"></div>
             <div class="viz-legend" id="evo-legend"></div>
+          </div>
+          <div class="viz-card">
+            <div class="viz-head"><span class="viz-title">Distribuci&oacute;n por tipo</span></div>
+            <div id="viz-donut"></div>
           </div>
           <div class="viz-card span2">
             <div class="viz-head"><span class="viz-title">Mapa de calor &middot; Bloque &times; Comisi&oacute;n</span></div>
@@ -879,10 +883,6 @@ HTML_TEMPLATE = """<!DOCTYPE html>
             <div class="viz-legend" id="stacked-legend"></div>
           </div>
           <div class="viz-card">
-            <div class="viz-head"><span class="viz-title">Distribuci&oacute;n por tipo</span></div>
-            <div id="viz-donut"></div>
-          </div>
-          <div class="viz-card span2">
             <div class="viz-head"><span class="viz-title">Top 10 comisiones &middot; tendencia 8 semanas</span></div>
             <div id="viz-topcoms"></div>
           </div>
