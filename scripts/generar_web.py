@@ -150,10 +150,6 @@ body{font-family:'Poppins',Calibri,sans-serif;background:#F5F7FA;color:#4A4A4A;f
 .pv-grand{font-weight:700;background:#1B5EA2!important;color:#fff!important}
 @media(max-width:760px){.pivot-field{min-width:130px}.pivot-filters .select-wrapper{flex-basis:140px}}
 
-/* ── Vista unificada Expedientes: panel de análisis colapsable ─────────── */
-.analisis-toggle-btn{background:rgba(255,255,255,0.18);border:none;color:#fff;font-family:inherit;font-size:11px;font-weight:600;cursor:pointer;padding:5px 12px;border-radius:6px;transition:background .15s}
-.analisis-toggle-btn:hover{background:rgba(255,255,255,0.32)}
-#buscador-block{scroll-margin-top:112px}
 
 /* ── Buscador: layout dos columnas ────────────────────────────────────── */
 .detalle-layout{display:flex;gap:16px;padding:12px;align-items:flex-start}
@@ -234,7 +230,8 @@ function switchSub(id){
   document.querySelectorAll('.sub-content').forEach(function(c){c.classList.remove('active')});
   document.getElementById('sub-'+id).classList.add('active');
   document.querySelector('[data-sub="'+id+'"]').classList.add('active');
-  if(id==='expedientes')renderPivot();
+  if(id==='tabla')renderPivot();
+  if(id==='dashboard')renderDashboard();
 }
 
 function init(){
@@ -322,7 +319,7 @@ function renderDashboard(){
     ci.className='dash-cross active';
   }else{ci.className='dash-cross';ci.innerHTML='';}
   renderEvolucion(data);
-  renderHeatmap(data);
+  renderTreemap(data);
   renderStacked(data);
   renderDonut(data);
   renderTopComs(data);
@@ -409,43 +406,74 @@ function evoHover(ev,i){
   showTip('<div class="dash-tt-title">'+MESES[i]+' '+dashAnio+'</div>'+rows,ev);
 }
 function evoOut(){var g=document.getElementById('evo-guide');if(g)g.setAttribute('opacity','0');hideTip();}
-/* ── Viz 2: Mapa de calor Bloque × Comisión (1er giro) ───────── */
+/* ── Viz 2: Treemap por bloque, subdividido por tipo ─────────── */
 function bloqueOf(p){return p.bloques[0]||(ORIGEN_LABEL[p.origen]||'Otros');}
 function trunc(s,n){s=String(s);return s.length>n?s.slice(0,n-1)+'…':s;}
-function renderHeatmap(data){
-  /* top por cantidad para elegir cuáles, luego orden alfabético para mostrar */
-  var comC={};data.forEach(function(p){var c=p.comisiones[0];if(c)comC[c]=(comC[c]||0)+1;});
-  var cols=Object.keys(comC).sort(function(a,b){return comC[b]-comC[a];}).slice(0,10).sort();
-  var blC={};data.forEach(function(p){if(p.comisiones[0]){var b=bloqueOf(p);blC[b]=(blC[b]||0)+1;}});
-  var rows=Object.keys(blC).sort(function(a,b){return blC[b]-blC[a];}).slice(0,15).sort();
-  var box=document.getElementById('viz-heatmap');
-  if(!cols.length||!rows.length){box.innerHTML='<div class="viz-empty">Sin datos para este a&ntilde;o.</div>';return;}
-  var cell={},maxV=0;
-  data.forEach(function(p){
-    var c=p.comisiones[0];if(!c)return;
-    var b=bloqueOf(p);
-    if(rows.indexOf(b)<0||cols.indexOf(c)<0)return;
-    var k=b+'~|~'+c;cell[k]=(cell[k]||0)+1;if(cell[k]>maxV)maxV=cell[k];
-  });
-  var leftW=168,topH=98,cw=50,ch=22;
-  var W=leftW+cols.length*cw,H=topH+rows.length*ch;
-  var svg='<svg viewBox="0 0 '+W+' '+H+'" preserveAspectRatio="xMidYMin meet" style="display:block;margin:0 auto;width:'+W+'px;max-width:100%;height:auto">';
-  cols.forEach(function(c,ci){
-    var x=leftW+ci*cw+cw/2,on=(dashCross.dim==='com'&&dashCross.val===c);
-    svg+='<text class="hm-label" x="'+x+'" y="'+(topH-9)+'" text-anchor="start" transform="rotate(-45 '+x+' '+(topH-9)+')" style="cursor:pointer;fill:'+(on?'#1B5EA2':'#4A4A4A')+';font-weight:'+(on?'700':'400')+'" onclick="crossClick(\'com\',\''+jsStr(c)+'\')">'+esc(trunc(c,18))+'<title>'+esc(c)+' (clic para filtrar)</title></text>';
-  });
-  rows.forEach(function(b,ri){
-    var y=topH+ri*ch,on=(dashCross.dim==='bloque'&&dashCross.val===b);
-    svg+='<text class="hm-label" x="'+(leftW-6)+'" y="'+(y+ch/2+3)+'" text-anchor="end" style="cursor:pointer;fill:'+(on?'#1B5EA2':'#4A4A4A')+';font-weight:'+(on?'700':'400')+'" onclick="crossClick(\'bloque\',\''+jsStr(b)+'\')">'+esc(trunc(b,24))+'<title>'+esc(b)+' (clic para filtrar)</title></text>';
-    cols.forEach(function(c,ci){
-      var v=cell[b+'~|~'+c]||0,x=leftW+ci*cw,inten=maxV?v/maxV:0;
-      var fill=v?'rgba(27,94,162,'+(0.06+inten*0.74).toFixed(3)+')':'#F5F7FA';
-      svg+='<rect x="'+x+'" y="'+y+'" width="'+(cw-2)+'" height="'+(ch-2)+'" rx="3" fill="'+fill+'"><title>'+esc(b)+' · '+esc(c)+': '+v+'</title></rect>';
-      if(v){var tc=inten>0.55?'#fff':'#1B5EA2';svg+='<text x="'+(x+(cw-2)/2)+'" y="'+(y+ch/2+3)+'" text-anchor="middle" style="font-size:10px;font-weight:600;fill:'+tc+'">'+v+'</text>';}
+/* treemap "squarified" (tiles casi cuadrados, sin librerías) */
+function treemapLayout(items,x,y,w,h){
+  if(!items.length)return [];
+  var total=0;items.forEach(function(it){total+=it.value;});
+  if(total<=0)return [];
+  var scale=(w*h)/total;
+  var rem=items.map(function(it){return {key:it.key,value:it.value,area:it.value*scale};});
+  var area={x:x,y:y,w:w,h:h},out=[];
+  function worst(row,side){
+    var s=0,mx=-Infinity,mn=Infinity;
+    row.forEach(function(r){s+=r.area;if(r.area>mx)mx=r.area;if(r.area<mn)mn=r.area;});
+    var s2=s*s,l2=side*side;
+    return Math.max(l2*mx/s2,s2/(l2*mn));
+  }
+  while(rem.length){
+    var side=Math.min(area.w,area.h),row=[];
+    while(rem.length){
+      if(row.length===0||worst(row,side)>=worst(row.concat([rem[0]]),side))row.push(rem.shift());
+      else break;
+    }
+    var rs=0;row.forEach(function(r){rs+=r.area;});
+    if(area.w>=area.h){
+      var dw=rs/area.h,yy=area.y;
+      row.forEach(function(r){var rh=r.area/dw;out.push({key:r.key,value:r.value,x:area.x,y:yy,w:dw,h:rh});yy+=rh;});
+      area.x+=dw;area.w-=dw;
+    }else{
+      var dh=rs/area.w,xx=area.x;
+      row.forEach(function(r){var rw=r.area/dh;out.push({key:r.key,value:r.value,x:xx,y:area.y,w:rw,h:dh});xx+=rw;});
+      area.y+=dh;area.h-=dh;
+    }
+  }
+  return out;
+}
+function renderTreemap(data){
+  var box=document.getElementById('viz-treemap');
+  /* solo bloques políticos: expedientes de origen Senado (S) con bloque asignado */
+  var dS=data.filter(function(p){return p.origen==='S'&&p.bloques[0];});
+  var blTot={};dS.forEach(function(p){var b=p.bloques[0];blTot[b]=(blTot[b]||0)+1;});
+  var keys=Object.keys(blTot).sort(function(a,b){return blTot[b]-blTot[a];});
+  if(!keys.length){box.innerHTML='<div class="viz-empty">Sin datos para este a&ntilde;o.</div>';document.getElementById('treemap-legend').innerHTML='';return;}
+  var items=keys.map(function(k){return {key:k,value:blTot[k]};});
+  var tb={};dS.forEach(function(p){var b=p.bloques[0];(tb[b]=tb[b]||{});tb[b][p.tipo]=(tb[b][p.tipo]||0)+1;});
+  var W=1000,H=300,pad=3,tipoOrder=['PL','PD','PC','PR','CA','AC','CV'];
+  var rects=treemapLayout(items,0,0,W,H);
+  var svg='<svg viewBox="0 0 '+W+' '+H+'" preserveAspectRatio="xMidYMid meet" style="display:block;width:100%;height:auto;max-height:380px">';
+  rects.forEach(function(r){
+    var bl=r.key,label=bl,comp=tb[bl]||{};
+    var x=r.x+pad/2,y=r.y+pad/2,w=Math.max(0,r.w-pad),h=Math.max(0,r.h-pad),horiz=w>=h,acc=0;
+    var oc=' style="cursor:pointer" onclick="crossClick(\'bloque\',\''+jsStr(bl)+'\')"';
+    tipoOrder.forEach(function(t){
+      var v=comp[t]||0;if(!v)return;
+      var frac=v/r.value,sc=TIPO_FG[t]||'#888';
+      if(horiz){var sw=w*frac;svg+='<rect x="'+(x+acc).toFixed(1)+'" y="'+y.toFixed(1)+'" width="'+sw.toFixed(1)+'" height="'+h.toFixed(1)+'" fill="'+sc+'"'+oc+'><title>'+esc(label)+' · '+esc(TIPOS[t]||t)+': '+v+'</title></rect>';acc+=sw;}
+      else{var sh=h*frac;svg+='<rect x="'+x.toFixed(1)+'" y="'+(y+acc).toFixed(1)+'" width="'+w.toFixed(1)+'" height="'+sh.toFixed(1)+'" fill="'+sc+'"'+oc+'><title>'+esc(label)+' · '+esc(TIPOS[t]||t)+': '+v+'</title></rect>';acc+=sh;}
     });
+    svg+='<rect x="'+x.toFixed(1)+'" y="'+y.toFixed(1)+'" width="'+w.toFixed(1)+'" height="'+h.toFixed(1)+'" fill="none" stroke="#fff" stroke-width="1.5" pointer-events="none"/>';
+    if(w>62&&h>28){
+      svg+='<text x="'+(x+5).toFixed(1)+'" y="'+(y+15).toFixed(1)+'" style="font-size:11px;font-weight:700;fill:#fff;pointer-events:none">'+esc(trunc(label,Math.floor(w/7)))+'</text>';
+      svg+='<text x="'+(x+5).toFixed(1)+'" y="'+(y+30).toFixed(1)+'" style="font-size:12px;font-weight:700;fill:#fff;opacity:.85;pointer-events:none">'+r.value+'</text>';
+    }
   });
   svg+='</svg>';
   box.innerHTML=svg;
+  var leg='';tipoOrder.forEach(function(t){if(!dS.some(function(p){return p.tipo===t;}))return;leg+='<span class="legend-item"><span class="legend-swatch" style="background:'+(TIPO_FG[t]||'#888')+'"></span>'+esc(TIPOS[t]||t)+'</span>';});
+  document.getElementById('treemap-legend').innerHTML=leg;
 }
 /* ── Viz 3: Barras apiladas horizontales (Tipo por Bloque) ───── */
 function renderStacked(data){
@@ -657,14 +685,14 @@ function resetBuscadorOnly(){
   document.getElementById('fecha-hasta').value='';
 }
 /* Clic en celda: preserva los filtros compartidos (universo del pivot), resetea
-   los del buscador, mapea fila+columna de la celda y baja hasta el buscador */
+   los del buscador, mapea fila+columna de la celda y salta al Buscador */
 function drillPivot(ri,ci){
   resetBuscadorOnly();
   applyDimToFilter(pvRow,PV_ROWKEYS[ri]);
   if(pvCol!=='none')applyDimToFilter(pvCol,PV_COLKEYS[ci]);
   applyAll();
-  var b=document.getElementById('buscador-block');
-  if(b)b.scrollIntoView({behavior:'smooth',block:'start'});
+  switchSub('buscador');
+  window.scrollTo({top:0,behavior:'smooth'});
 }
 function setSelVal(id,v){var el=document.getElementById(id);if(el){el.value=v;el.className=v?'filter-select on':'filter-select';}}
 function applyDimToFilter(dim,value){
@@ -697,12 +725,6 @@ function setAnioShared(v){activeAnio=v;applyAll();}
 function setTipoShared(v){activeTipos={};if(v)activeTipos[v]=1;applyAll();}
 function setOrigenShared(v){activeOrigen=v;applyAll();}
 function clearSharedFilters(){activeAnio='';activeTipos={};activeOrigen='';applyAll();}
-function toggleAnalisis(){
-  var b=document.getElementById('analisis-body'),btn=document.getElementById('analisis-toggle');
-  var collapsed=(b.style.display==='none');
-  b.style.display=collapsed?'':'none';
-  btn.innerHTML=collapsed?'Colapsar &#9650;':'Expandir &#9660;';
-}
 
 /* ── Buscador: filtros ─────────────────────────────────────────── */
 function renderFilters(){
@@ -867,12 +889,13 @@ HTML_TEMPLATE = """<!DOCTYPE html>
 <!-- ====================== MAIN: PROYECTOS ====================== -->
 <div id="main-proyectos" class="mtab-content active">
   <div class="sub-nav">
-    <button class="sub-btn active" data-sub="dashboard" onclick="switchSub('dashboard')">Dashboard</button>
-    <button class="sub-btn" data-sub="expedientes" onclick="switchSub('expedientes')">Expedientes</button>
+    <button class="sub-btn active" data-sub="buscador" onclick="switchSub('buscador')">Buscador</button>
+    <button class="sub-btn" data-sub="tabla" onclick="switchSub('tabla')">Tabla din&aacute;mica</button>
+    <button class="sub-btn" data-sub="dashboard" onclick="switchSub('dashboard')">Dashboard</button>
   </div>
 
   <!-- SUB: DASHBOARD (análisis político, 5 visualizaciones SVG) -->
-  <div id="sub-dashboard" class="sub-content active">
+  <div id="sub-dashboard" class="sub-content">
     <div class="section-block">
       <div class="section-header">
         <h2>Dashboard de an&aacute;lisis</h2>
@@ -903,8 +926,9 @@ HTML_TEMPLATE = """<!DOCTYPE html>
             <div id="viz-donut"></div>
           </div>
           <div class="viz-card span2">
-            <div class="viz-head"><span class="viz-title">Mapa de calor &middot; Bloque &times; Comisi&oacute;n</span></div>
-            <div id="viz-heatmap" style="overflow-x:auto"></div>
+            <div class="viz-head"><span class="viz-title">Bloques pol&iacute;ticos (Senado) &middot; composici&oacute;n por tipo</span></div>
+            <div id="viz-treemap"></div>
+            <div class="viz-legend" id="treemap-legend"></div>
           </div>
           <div class="viz-card">
             <div class="viz-head"><span class="viz-title">Tipo por bloque</span></div>
@@ -920,16 +944,14 @@ HTML_TEMPLATE = """<!DOCTYPE html>
     </div>
   </div>
 
-  <!-- SUB: EXPEDIENTES (panel de análisis + buscador unificados) -->
-  <div id="sub-expedientes" class="sub-content">
-
-    <!-- BLOQUE SUPERIOR: panel de análisis (pivot table, colapsable) -->
+  <!-- SUB: TABLA DINÁMICA (pivot) -->
+  <div id="sub-tabla" class="sub-content">
     <div class="section-block">
       <div class="section-header">
-        <h2>Panel de an&aacute;lisis</h2>
-        <button class="analisis-toggle-btn" id="analisis-toggle" onclick="toggleAnalisis()">Colapsar &#9650;</button>
+        <h2>Tabla din&aacute;mica</h2>
+        <span class="section-hint">Toc&aacute; una celda para ver esos expedientes en el Buscador</span>
       </div>
-      <div class="section-body" id="analisis-body">
+      <div class="section-body">
         <div class="pivot-config">
           <div class="pivot-axes">
             <div class="pivot-field">
@@ -980,9 +1002,10 @@ HTML_TEMPLATE = """<!DOCTYPE html>
         <div class="pivot-scroll"><div id="pivot-body"></div></div>
       </div>
     </div>
+  </div><!-- /sub-tabla -->
 
-    <!-- BLOQUE INFERIOR: buscador de expedientes -->
-    <div id="buscador-block">
+  <!-- SUB: BUSCADOR de expedientes -->
+  <div id="sub-buscador" class="sub-content active">
     <div class="detalle-layout">
       <div class="filters-panel">
         <div class="section-header">
@@ -1061,8 +1084,7 @@ HTML_TEMPLATE = """<!DOCTYPE html>
         <div id="list"></div>
       </div>
     </div>
-    </div><!-- /buscador-block -->
-  </div><!-- /sub-expedientes -->
+  </div><!-- /sub-buscador -->
 </div><!-- /main-proyectos -->
 
 <!-- ====================== MAIN: COMISIONES ====================== -->
