@@ -17,6 +17,8 @@ azul institucional #1B5EA2, vanilla JS, mobile-first.
 
 import json
 import os
+import re
+import unicodedata
 from datetime import datetime
 
 REPO_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -199,6 +201,57 @@ body{font-family:'Poppins',Calibri,sans-serif;background:#F5F7FA;color:#4A4A4A;f
 .ctag{display:inline-block;font-size:11px;padding:3px 8px;border-radius:4px;margin-right:4px;margin-bottom:3px;background:#EAF0FA;color:#1B5EA2;border:1px solid #c8daf0}
 .no-results{text-align:center;padding:48px 16px;color:#aaa;font-size:14px}
 .footer{text-align:center;padding:20px 16px;font-size:11px;color:#aaa;font-style:italic}
+
+/* ── Comisiones ───────────────────────────────────────────────────────── */
+.com-nivel{display:none}
+.com-nivel.active{display:block}
+.com-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:12px;margin-top:14px}
+.com-card{background:#fff;border:1px solid #D6E4F0;border-radius:10px;padding:14px 16px;cursor:pointer;transition:all .15s;box-shadow:0 1px 3px rgba(0,0,0,0.05)}
+.com-card:hover{border-color:#1B5EA2;box-shadow:0 2px 8px rgba(27,94,162,0.15);transform:translateY(-1px)}
+.com-card-nombre{font-size:14px;font-weight:700;color:#1B5EA2;line-height:1.3}
+.btn-volver{padding:7px 14px;border-radius:8px;border:1.5px solid #fff;background:transparent;color:#fff;font-family:inherit;font-size:11px;font-weight:600;cursor:pointer;transition:all .15s}
+.btn-volver:hover{background:#fff;color:#1B5EA2}
+.com-detalle-layout{display:flex;gap:16px;align-items:flex-start}
+.com-panel{flex:1;min-width:0}
+.com-panel-integrantes{flex:0 0 340px}
+.com-panel-title{font-size:11px;font-weight:700;color:#1B5EA2;text-transform:uppercase;letter-spacing:1px;margin-bottom:10px;padding-bottom:6px;border-bottom:1px solid #D6E4F0}
+@media(max-width:800px){.com-detalle-layout{flex-direction:column}.com-panel-integrantes{flex:0 0 auto;width:100%}}
+.integrante-row{display:flex;align-items:center;gap:8px;padding:8px 4px;border-bottom:1px solid #EEF2F8}
+.integrante-row:last-child{border-bottom:none}
+.integrante-nombre{font-size:12.5px;color:#4A4A4A;flex:1;min-width:0}
+.rol-badge{font-size:9.5px;font-weight:700;padding:2px 7px;border-radius:10px;text-transform:uppercase;letter-spacing:.4px;white-space:nowrap;flex-shrink:0}
+.rol-Presidente{background:#1B5EA2;color:#fff}
+.rol-Vicepresidente{background:#D6E4F0;color:#1B5EA2}
+.rol-Secretario{background:#EAF0FA;color:#2E75B6}
+.rol-Vocal{background:#F5F7FA;color:#9aacbd}
+.com-proximareunion{margin-top:16px;background:#D6E4F0;border-left:3px solid #2E75B6;border-radius:6px;padding:12px 16px;font-size:12.5px;color:#0d3f73;display:flex;flex-wrap:wrap;gap:6px 18px;align-items:center}
+.com-proximareunion strong{color:#1B5EA2}
+.semaforo{display:inline-block;width:9px;height:9px;border-radius:50%;flex-shrink:0}
+.sem-verde{background:#1a9c4a}
+.sem-amarillo{background:#d9a300}
+.sem-rojo{background:#c0392b}
+.com-empty{text-align:center;padding:40px 16px;color:#aaa;font-size:13px}
+
+/* ── Representación por bloques ──────────────────────────────────────── */
+.repr-titulo{font-size:11px;font-weight:700;color:#1B5EA2;text-transform:uppercase;letter-spacing:1px;margin:18px 0 8px;padding-bottom:5px;border-bottom:1px solid #D6E4F0}
+.repr-titulo:first-child{margin-top:0}
+.repr-hint{font-size:11px;color:#888;margin-bottom:8px}
+.repr-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;border:1px solid #D6E4F0;border-radius:10px}
+table.repr-table{width:100%;border-collapse:collapse;font-size:12px}
+table.repr-table th{background:#1B5EA2;color:#fff;padding:8px 12px;text-align:left;font-weight:600;font-size:11px;white-space:nowrap}
+table.repr-table th.num,table.repr-table td.num{text-align:center}
+table.repr-table td{padding:7px 12px;border-bottom:1px solid #EEF2F8;vertical-align:middle}
+table.repr-table tr:last-child td{border-bottom:none}
+table.repr-table tr:hover td{background:#F5F8FC}
+.repr-bloque-cell{display:flex;align-items:center;gap:7px;white-space:nowrap}
+.repr-dot{width:10px;height:10px;border-radius:50%;flex-shrink:0}
+table.cross-table{border-collapse:collapse;font-size:11px}
+table.cross-table th.blq-col{text-align:left;padding:8px 12px;background:#1B5EA2;color:#fff;white-space:nowrap;position:sticky;left:0;z-index:2;min-width:150px}
+table.cross-table th.com-col{background:#1B5EA2;color:#fff;padding:0 3px 8px;width:30px;min-width:30px;max-width:30px;vertical-align:bottom;text-align:center}
+table.cross-table th.com-col span{display:block;writing-mode:vertical-rl;transform:rotate(180deg);font-size:9.5px;font-weight:500;line-height:1;white-space:nowrap;max-height:110px;overflow:hidden}
+table.cross-table td.blq-name{padding:6px 12px;white-space:nowrap;font-size:11px;font-weight:600;position:sticky;left:0;border-right:1px solid #EEF2F8}
+table.cross-table td.val{text-align:center;padding:5px 3px;border-bottom:1px solid #EEF2F8;border-right:1px solid #EEF2F8;font-size:11.5px;width:30px}
+table.cross-table tr:last-child td{border-bottom:none}
 """
 
 # ── JavaScript (vanilla) ───────────────────────────────────────────────────────
@@ -263,6 +316,8 @@ function init(){
   syncFilterUI();
   renderList();
   renderPivot();
+  renderComisionesList();
+  renderRepresentacion();
 }
 function fillSelect(id,values){
   var sel=document.getElementById(id);
@@ -853,6 +908,168 @@ function exportarExcel(){
   XLSX.utils.book_append_sheet(wb,ws,'Proyectos');
   XLSX.writeFile(wb,'proyectos_filtrados.xlsx');
 }
+
+/* ── Comisiones ────────────────────────────────────────────────── */
+function normCom(s){return String(s||'').toUpperCase().trim()}
+function nombreCom(s){return String(s||'').replace(/^De\s+/,'')}
+function renderComisionesList(){
+  var q=(document.getElementById('com-search').value||'').toLowerCase().trim();
+  var lista=COMISIONES.filter(function(c){return !q||nombreCom(c.nombre).toLowerCase().indexOf(q)>=0});
+  var el=document.getElementById('com-list');
+  if(!lista.length){el.innerHTML='<div class="com-empty">Sin comisiones para este filtro.</div>';return}
+  var html='';
+  lista.forEach(function(c,i){
+    var idx=COMISIONES.indexOf(c);
+    html+='<div class="com-card" onclick="abrirComision('+idx+')">'
+      +'<div class="com-card-nombre">'+esc(nombreCom(c.nombre))+'</div>'
+      +'</div>';
+  });
+  el.innerHTML=html;
+}
+function abrirComision(idx){
+  var c=COMISIONES[idx];
+  if(!c)return;
+  document.getElementById('com-detalle-nombre').textContent=nombreCom(c.nombre);
+  document.getElementById('com-nivel1').classList.remove('active');
+  document.getElementById('com-nivel2').classList.add('active');
+  renderIntegrantes(c);
+  renderProyectosComision(c);
+  renderProximaReunion(c);
+}
+function volverComisiones(){
+  document.getElementById('com-nivel2').classList.remove('active');
+  document.getElementById('com-nivel1').classList.add('active');
+}
+function renderIntegrantes(c){
+  var html='';
+  c.integrantes.forEach(function(m){
+    var col=getBloqueColor(m.bloque);
+    html+='<div class="integrante-row">'
+      +'<span class="integrante-nombre">'+esc(m.nombre)+'</span>'
+      +'<span class="btag" style="background:'+col+'22;color:'+col+'">'+esc(m.bloque)+'</span>'
+      +'<span class="rol-badge rol-'+m.rol+'">'+esc(m.rol)+'</span>'
+      +'</div>';
+  });
+  document.getElementById('com-integrantes-list').innerHTML=html||'<div class="com-empty">Sin integrantes cargados.</div>';
+}
+function parseFechaDMY(fecha){
+  var parts=(fecha||'').split('/');
+  if(parts.length!==3)return null;
+  return new Date(+parts[2],+parts[1]-1,+parts[0]);
+}
+function semaforoAntiguedad(fecha){
+  var d=parseFechaDMY(fecha);
+  if(!d)return'';
+  var dias=Math.floor((Date.now()-d.getTime())/86400000);
+  var cls=dias<30?'sem-verde':dias<=90?'sem-amarillo':'sem-rojo';
+  return '<span class="semaforo '+cls+'" title="'+dias+' d&iacute;as desde el ingreso"></span>';
+}
+function renderProyectosComision(c){
+  var nom=normCom(c.nombre);
+  var lista=DATA.filter(function(p){
+    var coms=p.comisiones||[];
+    return coms.length&&normCom(coms[0])===nom;
+  });
+  lista.sort(function(a,b){
+    var da=parseFechaDMY(a.fecha),db=parseFechaDMY(b.fecha);
+    return (db?db.getTime():0)-(da?da.getTime():0);
+  });
+  var el=document.getElementById('com-proyectos-list');
+  if(!lista.length){el.innerHTML='<div class="com-empty">No hay proyectos en tr&aacute;mite en esta comisi&oacute;n.</div>';return}
+  var html='';
+  lista.forEach(function(p){
+    var fg=TIPO_FG[p.tipo]||'#888',bg=TIPO_BG[p.tipo]||'#eee';
+    var expNro=p.origen+'-'+p.nro+'/'+String(p.anio).slice(-2);
+    var linkBtn=p.url?'<a class="exp-link" href="'+escAttr(p.url)+'" target="_blank">Ver en Senado &#8599;</a>':'';
+    var autorPrincipal=p.autores&&p.autores[0]?p.autores[0]:'';
+    var bloquePrincipal=p.bloques&&p.bloques[0]?p.bloques[0]:'';
+    var col=getBloqueColor(bloquePrincipal);
+    html+='<div class="card"><div class="card-exp"><div class="exp-id">'+semaforoAntiguedad(p.fecha)
+      +'<span class="exp-badge" style="background:'+bg+';color:'+fg+'">'+esc(p.tipo)+'</span>'
+      +'<span class="exp-nro">'+esc(expNro)+'</span>'
+      +(p.fecha?'<span class="exp-fecha">'+esc(p.fecha)+'</span>':'')
+      +'</div>'+linkBtn+'</div><div class="card-body"><div class="extracto">'+esc(p.extracto)+'</div>'
+      +'<div class="card-meta">'
+      +(autorPrincipal?'<div class="meta-row"><span class="meta-bold">'+esc(autorPrincipal)+'</span></div>':'')
+      +(bloquePrincipal?'<div class="meta-row"><span class="btag" style="background:'+col+'22;color:'+col+'">'+esc(bloquePrincipal)+'</span></div>':'')
+      +'</div></div></div>';
+  });
+  el.innerHTML=html;
+}
+var COM_NOMBRE_CORTO={
+  'De Economías Regionales, Economía Social, Micro, Pequeña y Mediana Empresa':'Ec. Regionales',
+  'De Sistemas, Medios de Comunicación y Libertad de Expresión':'Sistemas y Medios',
+  'De Coparticipación Federal de Impuestos':'Coparticipación',
+  'De Infraestructura, Vivienda y Transporte':'Infraestructura',
+  'De Asuntos Administrativos y Municipales':'Asuntos Adm.',
+  'De Asuntos Constitucionales':'Constitucionales',
+  'De Seguridad Interior y Narcotráfico':'Seg. Interior',
+  'De Relaciones Exteriores y Culto':'RR.EE. y Culto',
+  'De Población y Desarrollo Humano':'Pob. y Des. Humano',
+  'De Trabajo y Previsión Social':'Trabajo',
+  'De Minería, Energía y Combustibles':'Minería',
+  'De Agricultura, Ganadería y Pesca':'Agricultura',
+  'De Ambiente y Desarrollo Sustentable':'Ambiente',
+  'De Economía Nacional e Inversión':'Ec. Nacional',
+  'De Derechos y Garantías':'Der. y Garantías',
+  'De Defensa Nacional':'Defensa',
+  'De Educación y Cultura':'Educación',
+  'De Industria y Comercio':'Industria',
+  'De Legislación General':'Legislación',
+  'De Ciencia y Tecnología':'Ciencia',
+  'De Justicia y Asuntos Penales':'Justicia Penal'
+};
+function nombreComCorto(nombre){return COM_NOMBRE_CORTO[nombre]||nombreCom(nombre)}
+function renderRepresentacion(){
+  var totalSenadores=0;
+  Object.keys(BLOQUE_TOTALES).forEach(function(b){totalSenadores+=BLOQUE_TOTALES[b]});
+  var bloques=Object.keys(BLOQUE_TOTALES).sort(function(a,b){return BLOQUE_TOTALES[b]-BLOQUE_TOTALES[a]});
+
+  var globalHtml='<div class="repr-titulo">Resumen global</div>'
+    +'<p class="repr-hint">"Com. de 17" y "Com. de 19" son las bancas proporcionales seg&uacute;n el peso de cada bloque en la c&aacute;mara (senadores &divide; '+totalSenadores+' &times; cupo).</p>'
+    +'<div class="repr-wrap"><table class="repr-table"><thead><tr>'
+    +'<th>Bloque</th><th class="num">Senadores</th><th class="num">% c&aacute;mara</th>'
+    +'<th class="num">Com. de 17</th><th class="num">Com. de 19</th>'
+    +'</tr></thead><tbody>';
+  bloques.forEach(function(b){
+    var total=BLOQUE_TOTALES[b];
+    var pct=(total/totalSenadores*100).toFixed(2);
+    var exp17=(total/totalSenadores*17).toFixed(2);
+    var exp19=(total/totalSenadores*19).toFixed(2);
+    var col=getBloqueColor(b);
+    globalHtml+='<tr><td><div class="repr-bloque-cell"><span class="repr-dot" style="background:'+col+'"></span>'+esc(b)+'</div></td>'
+      +'<td class="num">'+total+'</td><td class="num">'+pct+'%</td>'
+      +'<td class="num">'+exp17+'</td><td class="num">'+exp19+'</td></tr>';
+  });
+  globalHtml+='</tbody></table></div>';
+  document.getElementById('repr-global').innerHTML=globalHtml;
+
+  var crossHtml='<div class="repr-titulo">Integrantes por bloque y comisi&oacute;n</div>'
+    +'<p class="repr-hint">Desplaz&aacute; horizontalmente para ver todas las comisiones.</p>'
+    +'<div class="repr-wrap"><table class="cross-table"><thead><tr><th class="blq-col">Bloque</th>';
+  COMISIONES.forEach(function(c){crossHtml+='<th class="com-col"><span>'+esc(nombreComCorto(c.nombre))+'</span></th>'});
+  crossHtml+='</tr></thead><tbody>';
+  bloques.forEach(function(b){
+    crossHtml+='<tr><td class="blq-name">'+esc(b)+'</td>';
+    COMISIONES.forEach(function(c){
+      var n=c.integrantes.filter(function(m){return m.bloque===b}).length;
+      crossHtml+='<td class="val" style="color:'+(n>0?'#4A4A4A':'#cfd8e3')+';font-weight:'+(n>0?'600':'400')+'">'+(n>0?n:'&mdash;')+'</td>';
+    });
+    crossHtml+='</tr>';
+  });
+  crossHtml+='</tbody></table></div>';
+  document.getElementById('repr-cross').innerHTML=crossHtml;
+}
+function renderProximaReunion(c){
+  var el=document.getElementById('com-proxima-reunion');
+  var r=c.proximaReunion;
+  if(!r){el.innerHTML='';return}
+  el.innerHTML='<div class="com-proximareunion">'
+    +'<span>&#128197; <strong>Pr&oacute;xima reuni&oacute;n:</strong> '+esc(r.fecha)+' &middot; '+esc(r.hora)+' hs</span>'
+    +'<span>&#128205; '+esc(r.salon)+'</span>'
+    +'<span>&#128196; '+r.nExpedientes+' expediente'+(r.nExpedientes!==1?'s':'')+' en el temario</span>'
+    +'</div>';
+}
 """
 
 # ── Plantilla HTML ─────────────────────────────────────────────────────────────
@@ -1089,11 +1306,55 @@ HTML_TEMPLATE = """<!DOCTYPE html>
 
 <!-- ====================== MAIN: COMISIONES ====================== -->
 <div id="main-comisiones" class="mtab-content">
-  <div class="placeholder">
-    <div class="placeholder-icon">&#127963;</div>
-    <h3>Comisiones</h3>
-    <p>Secci&oacute;n en construcci&oacute;n &mdash; pr&oacute;ximamente en Fase 2.</p>
+
+  <!-- NIVEL 1: lista de comisiones -->
+  <div id="com-nivel1" class="com-nivel active">
+    <div class="section-block">
+      <div class="section-header">
+        <h2>Comisiones permanentes</h2>
+        <span class="section-hint">Senado de la Naci&oacute;n</span>
+      </div>
+      <div class="section-body">
+        <input class="search-box" type="text" id="com-search" placeholder="Buscar comisi&oacute;n&hellip;" oninput="renderComisionesList()" style="max-width:360px">
+        <div id="com-list" class="com-grid"></div>
+      </div>
+    </div>
+
+    <div class="section-block">
+      <div class="section-header">
+        <h2>Representaci&oacute;n por bloques</h2>
+        <span class="section-hint">Composici&oacute;n del Senado y de cada comisi&oacute;n</span>
+      </div>
+      <div class="section-body">
+        <div id="repr-global"></div>
+        <div id="repr-cross"></div>
+      </div>
+    </div>
   </div>
+
+  <!-- NIVEL 2: detalle de comisión -->
+  <div id="com-nivel2" class="com-nivel">
+    <div class="section-block">
+      <div class="section-header">
+        <h2 id="com-detalle-nombre">&nbsp;</h2>
+        <button class="btn-volver" onclick="volverComisiones()">&larr; Volver</button>
+      </div>
+      <div class="section-body">
+        <div class="com-detalle-layout">
+          <div class="com-panel com-panel-integrantes">
+            <div class="com-panel-title">Integrantes</div>
+            <div id="com-integrantes-list"></div>
+          </div>
+          <div class="com-panel com-panel-proyectos">
+            <div class="com-panel-title">Proyectos en tr&aacute;mite</div>
+            <div id="com-proyectos-list"></div>
+          </div>
+        </div>
+        <div id="com-proxima-reunion"></div>
+      </div>
+    </div>
+  </div>
+
 </div>
 
 <!-- ====================== MAIN: AGENDA ====================== -->
@@ -1120,11 +1381,45 @@ HTML_TEMPLATE = """<!DOCTYPE html>
 
 <script>
 var DATA = {datos};
+var COMISIONES = {comisiones};
+var BLOQUE_TOTALES = {bloque_totales};
 {js}
 init();
 </script>
 </body>
 </html>"""
+
+
+# Autoridades por comisión (pres/vice/secr) — fuente: repo comisiones-senado
+# (no viene en el scraper de comisiones.json; roles no listados = Vocal).
+AUTORIDADES = {
+    'De Acuerdos': {'pres': 'PAGOTTO, Juan Carlos', 'vice': 'ABAD, Maximiliano', 'secr': 'GOERLING LARA, Enrique Martín'},
+    'De Agricultura, Ganadería y Pesca': {'pres': 'BENEGAS LYNCH, Joaquín Alberto', 'vice': 'KRONEBERGER, Daniel Ricardo', 'secr': ''},
+    'De Ambiente y Desarrollo Sustentable': {'pres': 'TERENZI, Edith Elizabeth', 'vice': '', 'secr': ''},
+    'De Asuntos Administrativos y Municipales': {'pres': 'KRONEBERGER, Daniel Ricardo', 'vice': 'MARKS, Ana Inés', 'secr': ''},
+    'De Asuntos Constitucionales': {'pres': 'COTO, Agustín Pedro', 'vice': 'LÓPEZ, María Florencia', 'secr': ''},
+    'De Ciencia y Tecnología': {'pres': 'DE PEDRO, Eduardo Enrique', 'vice': 'ALMEIDA, Romina María', 'secr': ''},
+    'De Coparticipación Federal de Impuestos': {'pres': 'VISCHI, Eduardo Alejandro', 'vice': 'ROYÓN, Flavia Gabriela', 'secr': ''},
+    'De Defensa Nacional': {'pres': 'JUEZ, Luis Alfredo', 'vice': 'LINARES, Carlos Alberto', 'secr': ''},
+    'De Deporte': {'pres': 'FERNÁNDEZ SAGASTI, Anabel', 'vice': 'ABAD, Maximiliano', 'secr': 'ABDALA, Bartolomé Esteban'},
+    'De Derechos y Garantías': {'pres': 'BENSUSÁN, Daniel Pablo', 'vice': '', 'secr': 'CERVI, Mario Pablo'},
+    'De Economía Nacional e Inversión': {'pres': 'GOERLING LARA, Enrique Martín', 'vice': '', 'secr': 'CORROZA, Julieta'},
+    'De Economías Regionales, Economía Social, Micro, Pequeña y Mediana Empresa': {'pres': 'CAPITANICH, Jorge Milton', 'vice': '', 'secr': ''},
+    'De Educación y Cultura': {'pres': 'ROJAS DECUT, Sonia Elizabeth', 'vice': 'VALENZUELA, Mercedes Gabriela', 'secr': ''},
+    'De Industria y Comercio': {'pres': 'LEWANDOWSKI, Marcelo Néstor', 'vice': 'GADANO, Natalia Elena', 'secr': ''},
+    'De Infraestructura, Vivienda y Transporte': {'pres': 'ÁVILA, Beatriz Luisa', 'vice': 'FULLONE, Enzo Paolo', 'secr': 'LEWANDOWSKI, Marcelo Néstor'},
+    'De Justicia y Asuntos Penales': {'pres': 'GUZMÁN CORAITA, Gonzalo', 'vice': '', 'secr': ''},
+    'De Legislación General': {'pres': 'MÁRQUEZ, Nadia Judith', 'vice': 'BENSUSÁN, Daniel Pablo', 'secr': ''},
+    'De Minería, Energía y Combustibles': {'pres': 'FAMA, Flavio Sergio', 'vice': '', 'secr': ''},
+    'De Población y Desarrollo Humano': {'pres': 'KIRCHNER, Alicia Margarita Antonia', 'vice': 'GODOY, Juan Cruz', 'secr': ''},
+    'De Presupuesto y Hacienda': {'pres': 'MONTEVERDE, Agustín Aníbal', 'vice': '', 'secr': 'SCHNEIDER, Silvana Lorena'},
+    'De Relaciones Exteriores y Culto': {'pres': 'PAOLTRONI, Francisco Manuel', 'vice': '', 'secr': ''},
+    'De Salud': {'pres': 'ARRASCAETA, Ivanna Marcela', 'vice': 'ARCE, Carlos Omar', 'secr': ''},
+    'De Seguridad Interior y Narcotráfico': {'pres': 'LOSADA, Carolina', 'vice': '', 'secr': ''},
+    'De Sistemas, Medios de Comunicación y Libertad de Expresión': {'pres': 'MOISÉS, María Carolina', 'vice': '', 'secr': ''},
+    'De Trabajo y Previsión Social': {'pres': 'ALVAREZ RIVERO, Carmen', 'vice': '', 'secr': ''},
+    'De Turismo': {'pres': 'JURI, Mariana', 'vice': '', 'secr': ''},
+}
 
 
 def _cargar(nombre, default):
@@ -1135,6 +1430,119 @@ def _cargar(nombre, default):
         except Exception:
             return default
     return default
+
+
+def _norm_com(s):
+    """Normaliza nombre de comisión: mayúsculas, sin tildes, sin prefijo 'DE '."""
+    if not s:
+        return ""
+    s = unicodedata.normalize("NFD", s.upper().strip())
+    s = "".join(c for c in s if unicodedata.category(c) != "Mn")
+    s = re.sub(r"^DE\s+", "", s)
+    s = re.sub(r"[^A-Z0-9, ]", "", s)
+    return s
+
+
+def _rol_de(nombre_com, nombre_miembro):
+    aut = AUTORIDADES.get(nombre_com, {})
+    if aut.get("pres") == nombre_miembro:
+        return "Presidente"
+    if aut.get("vice") == nombre_miembro:
+        return "Vicepresidente"
+    if aut.get("secr") == nombre_miembro:
+        return "Secretario"
+    return "Vocal"
+
+
+def _parse_fecha_agenda(fecha_dd_mm, boletin_numero):
+    """'17/06' + boletín '64/26' -> datetime(2026,6,17). Sin año -> None."""
+    try:
+        dia, mes = fecha_dd_mm.split("/")
+        anio_suffix = (boletin_numero or "").split("/")[-1]
+        anio = 2000 + int(anio_suffix)
+        return datetime(anio, int(mes), int(dia))
+    except Exception:
+        return None
+
+
+def construir_bloque_totales():
+    """Cantidad de senadores vigentes por bloque, según data/senadores.json."""
+    senadores = _cargar("senadores.json", {})
+    totales = {}
+    for datos in senadores.values():
+        if not datos.get("vigente"):
+            continue
+        bloque = datos.get("bloque", "")
+        totales[bloque] = totales.get(bloque, 0) + 1
+    return totales
+
+
+def construir_comisiones(proyectos):
+    comisiones = _cargar("comisiones.json", [])
+    agenda = _cargar("agenda.json", {})
+    reuniones = agenda.get("reuniones", [])
+
+    # Conteo de proyectos en trámite por comisión (comisiones[0], normalizado)
+    conteo_proyectos = {}
+    for p in proyectos:
+        coms = p.get("comisiones") or []
+        if coms and coms[0]:
+            key = _norm_com(coms[0])
+            conteo_proyectos[key] = conteo_proyectos.get(key, 0) + 1
+
+    # Próxima reunión futura por comisión (matching por prefijo normalizado,
+    # porque agenda.json trae nombres truncados/mayúsculas del boletín)
+    ahora = datetime.now()
+    proxima = {}
+    for r in reuniones:
+        fecha_dt = _parse_fecha_agenda(r.get("fecha", ""), r.get("boletin_numero", ""))
+        if not fecha_dt or fecha_dt <= ahora:
+            continue
+        for c_nombre in r.get("comisiones") or []:
+            n_ag = _norm_com(c_nombre)
+            if not n_ag:
+                continue
+            for com in comisiones:
+                n_com = _norm_com(com["nombre"])
+                if n_com.startswith(n_ag) or n_ag.startswith(n_com):
+                    prev = proxima.get(com["nombre"])
+                    if not prev or fecha_dt < prev["_dt"]:
+                        proxima[com["nombre"]] = {
+                            "_dt": fecha_dt,
+                            "fecha": r.get("fecha", ""),
+                            "hora": r.get("hora", ""),
+                            "salon": r.get("salon_completo") or r.get("salon", ""),
+                            "nExpedientes": len(r.get("temario") or []),
+                        }
+                    break
+
+    resultado = []
+    for com in comisiones:
+        nombre = com["nombre"]
+        integrantes = [
+            {
+                "nombre": m["nombre"],
+                "bloque": m.get("bloque", ""),
+                "rol": _rol_de(nombre, m["nombre"]),
+            }
+            for m in com.get("miembros", [])
+        ]
+        # Presidente/Vice/Secretario primero, luego Vocales
+        orden_rol = {"Presidente": 0, "Vicepresidente": 1, "Secretario": 2, "Vocal": 3}
+        integrantes.sort(key=lambda x: orden_rol.get(x["rol"], 9))
+
+        pr = proxima.get(nombre)
+        resultado.append({
+            "nombre": nombre,
+            "cupo": com.get("cupo", 0),
+            "integrantes": integrantes,
+            "nProyectos": conteo_proyectos.get(_norm_com(nombre), 0),
+            "proximaReunion": {
+                "fecha": pr["fecha"], "hora": pr["hora"],
+                "salon": pr["salon"], "nExpedientes": pr["nExpedientes"],
+            } if pr else None,
+        })
+    return resultado
 
 
 def parse_fecha_sort(fecha_str):
@@ -1162,12 +1570,16 @@ def main():
         tipos_count[p.get("tipo", "")] = tipos_count.get(p.get("tipo", ""), 0) + 1
 
     datos_js = json.dumps(proyectos, ensure_ascii=False)
+    comisiones_js = json.dumps(construir_comisiones(proyectos), ensure_ascii=False)
+    bloque_totales_js = json.dumps(construir_bloque_totales(), ensure_ascii=False)
     fecha = datetime.now().strftime("%d/%m/%Y %H:%M")
 
     html = HTML_TEMPLATE.format(
         css=CSS,
         js=JS,
         datos=datos_js,
+        comisiones=comisiones_js,
+        bloque_totales=bloque_totales_js,
         fecha=fecha,
         total=total,
         pl=tipos_count.get("PL", 0),
