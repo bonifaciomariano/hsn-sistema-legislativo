@@ -1,0 +1,4737 @@
+{
+ "fechas": {
+  "104/25": "16/12/2025",
+  "105/25": "16/12/2025",
+  "107/25": "17/12/2025",
+  "108/25": "17/12/2025",
+  "109/25": "18/12/2025",
+  "110/25": "18/12/2025",
+  "3/26": "12/02/2026",
+  "4/26": "13/02/2026",
+  "5/26": "18/02/2026",
+  "6/26": "18/02/2026",
+  "7/26": "19/02/2026",
+  "8/26": "19/02/2026",
+  "9/26": "19/02/2026",
+  "10/26": "19/02/2026",
+  "11/26": "19/02/2026",
+  "16/26": "25/02/2026",
+  "18/26": "10/03/2026",
+  "19/26": "10/03/2026",
+  "20/26": "12/03/2026",
+  "21/26": "12/03/2026",
+  "23/26": "17/03/2026",
+  "24/26": "17/03/2026",
+  "25/26": "17/03/2026",
+  "26/26": "18/03/2026",
+  "27/26": "18/03/2026",
+  "28/26": "19/03/2026",
+  "29/26": "25/03/2026",
+  "30/26": "07/04/2026",
+  "31/26": "07/04/2026",
+  "33/26": "14/04/2026",
+  "34/26": "16/04/2026",
+  "35/26": "21/04/2026",
+  "36/26": "22/04/2026",
+  "38/26": "28/04/2026",
+  "39/26": "29/04/2026",
+  "40/26": "29/04/2026",
+  "41/26": "30/04/2026",
+  "43/26": "06/05/2026",
+  "44/26": "06/05/2026",
+  "45/26": "06/05/2026",
+  "46/26": "07/05/2026",
+  "48/26": "07/05/2026",
+  "49/26": "07/05/2026",
+  "52/26": "12/05/2026",
+  "53/26": "19/05/2026",
+  "55/26": "20/05/2026",
+  "56/26": "02/06/2026",
+  "57/26": "02/06/2026",
+  "58/26": "03/06/2026",
+  "59/26": "08/06/2026",
+  "60/26": "09/06/2026",
+  "61/26": "09/06/2026",
+  "63/26": "16/06/2026",
+  "65/26": "17/06/2026"
+ },
+ "cambios": [
+  {
+   "dpp": "104/25",
+   "comision": "De Justicia y Asuntos Penales",
+   "tipo": "add",
+   "senador": "PAGOTTO, Juan Carlos"
+  },
+  {
+   "dpp": "104/25",
+   "comision": "De Justicia y Asuntos Penales",
+   "tipo": "add",
+   "senador": "BULLRICH, Patricia"
+  },
+  {
+   "dpp": "104/25",
+   "comision": "De Justicia y Asuntos Penales",
+   "tipo": "add",
+   "senador": "GUZMÁN CORAITA, Gonzalo"
+  },
+  {
+   "dpp": "104/25",
+   "comision": "De Justicia y Asuntos Penales",
+   "tipo": "add",
+   "senador": "MONTE DE OCA, María Belén"
+  },
+  {
+   "dpp": "104/25",
+   "comision": "De Justicia y Asuntos Penales",
+   "tipo": "add",
+   "senador": "JUEZ, Luis Alfredo"
+  },
+  {
+   "dpp": "104/25",
+   "comision": "De Justicia y Asuntos Penales",
+   "tipo": "add",
+   "senador": "VISCHI, Eduardo Alejandro"
+  },
+  {
+   "dpp": "104/25",
+   "comision": "De Justicia y Asuntos Penales",
+   "tipo": "add",
+   "senador": "LOSADA, Carolina"
+  },
+  {
+   "dpp": "104/25",
+   "comision": "De Justicia y Asuntos Penales",
+   "tipo": "add",
+   "senador": "ABAD, Maximiliano"
+  },
+  {
+   "dpp": "104/25",
+   "comision": "De Justicia y Asuntos Penales",
+   "tipo": "add",
+   "senador": "HUALA, María Victoria"
+  },
+  {
+   "dpp": "104/25",
+   "comision": "De Justicia y Asuntos Penales",
+   "tipo": "add",
+   "senador": "ARCE, Carlos Omar"
+  },
+  {
+   "dpp": "104/25",
+   "comision": "De Justicia y Asuntos Penales",
+   "tipo": "add",
+   "senador": "ESPÍNOLA, Carlos Mauricio"
+  },
+  {
+   "dpp": "104/25",
+   "comision": "De Justicia y Asuntos Penales",
+   "tipo": "add",
+   "senador": "ÁVILA, Beatriz Luisa"
+  },
+  {
+   "dpp": "104/25",
+   "comision": "De Presupuesto y Hacienda",
+   "tipo": "add",
+   "senador": "ATAUCHE, Ezequiel"
+  },
+  {
+   "dpp": "104/25",
+   "comision": "De Presupuesto y Hacienda",
+   "tipo": "add",
+   "senador": "MONTEVERDE, Agustín Aníbal"
+  },
+  {
+   "dpp": "104/25",
+   "comision": "De Presupuesto y Hacienda",
+   "tipo": "add",
+   "senador": "BULLRICH, Patricia"
+  },
+  {
+   "dpp": "104/25",
+   "comision": "De Presupuesto y Hacienda",
+   "tipo": "add",
+   "senador": "OLIVERA LUCERO, Bruno Antonio"
+  },
+  {
+   "dpp": "104/25",
+   "comision": "De Presupuesto y Hacienda",
+   "tipo": "add",
+   "senador": "ABDALA, Bartolomé Esteban"
+  },
+  {
+   "dpp": "104/25",
+   "comision": "De Presupuesto y Hacienda",
+   "tipo": "add",
+   "senador": "FAMA, Flavio Sergio"
+  },
+  {
+   "dpp": "104/25",
+   "comision": "De Presupuesto y Hacienda",
+   "tipo": "add",
+   "senador": "JURI, Mariana"
+  },
+  {
+   "dpp": "104/25",
+   "comision": "De Presupuesto y Hacienda",
+   "tipo": "add",
+   "senador": "SCHNEIDER, Silvana Lorena"
+  },
+  {
+   "dpp": "104/25",
+   "comision": "De Presupuesto y Hacienda",
+   "tipo": "add",
+   "senador": "CRISTINA, Andrea Marcela"
+  },
+  {
+   "dpp": "104/25",
+   "comision": "De Presupuesto y Hacienda",
+   "tipo": "add",
+   "senador": "VIGO, Alejandra María"
+  },
+  {
+   "dpp": "104/25",
+   "comision": "De Presupuesto y Hacienda",
+   "tipo": "add",
+   "senador": "TERENZI, Edith Elizabeth"
+  },
+  {
+   "dpp": "104/25",
+   "comision": "De Presupuesto y Hacienda",
+   "tipo": "add",
+   "senador": "ÁVILA, Beatriz Luisa"
+  },
+  {
+   "dpp": "104/25",
+   "comision": "De Trabajo y Previsión Social",
+   "tipo": "add",
+   "senador": "BULLRICH, Patricia"
+  },
+  {
+   "dpp": "104/25",
+   "comision": "De Trabajo y Previsión Social",
+   "tipo": "add",
+   "senador": "ALVAREZ RIVERO, Carmen"
+  },
+  {
+   "dpp": "104/25",
+   "comision": "De Trabajo y Previsión Social",
+   "tipo": "add",
+   "senador": "BENEGAS LYNCH, Joaquín Alberto"
+  },
+  {
+   "dpp": "104/25",
+   "comision": "De Trabajo y Previsión Social",
+   "tipo": "add",
+   "senador": "GODOY, Juan Cruz"
+  },
+  {
+   "dpp": "104/25",
+   "comision": "De Trabajo y Previsión Social",
+   "tipo": "add",
+   "senador": "OLIVERA LUCERO, Bruno Antonio"
+  },
+  {
+   "dpp": "104/25",
+   "comision": "De Trabajo y Previsión Social",
+   "tipo": "add",
+   "senador": "VISCHI, Eduardo Alejandro"
+  },
+  {
+   "dpp": "104/25",
+   "comision": "De Trabajo y Previsión Social",
+   "tipo": "add",
+   "senador": "SUÁREZ, Rodolfo Alejandro"
+  },
+  {
+   "dpp": "104/25",
+   "comision": "De Trabajo y Previsión Social",
+   "tipo": "add",
+   "senador": "SCHNEIDER, Silvana Lorena"
+  },
+  {
+   "dpp": "104/25",
+   "comision": "De Trabajo y Previsión Social",
+   "tipo": "add",
+   "senador": "GOERLING LARA, Enrique Martín"
+  },
+  {
+   "dpp": "104/25",
+   "comision": "De Trabajo y Previsión Social",
+   "tipo": "add",
+   "senador": "ROJAS DECUT, Sonia Elizabeth"
+  },
+  {
+   "dpp": "104/25",
+   "comision": "De Trabajo y Previsión Social",
+   "tipo": "add",
+   "senador": "ESPÍNOLA, Carlos Mauricio"
+  },
+  {
+   "dpp": "104/25",
+   "comision": "De Trabajo y Previsión Social",
+   "tipo": "add",
+   "senador": "ROYÓN, Flavia Gabriela"
+  },
+  {
+   "dpp": "104/25",
+   "comision": "De Minería, Energía y Combustibles",
+   "tipo": "add",
+   "senador": "FAMA, Flavio Sergio"
+  },
+  {
+   "dpp": "104/25",
+   "comision": "De Minería, Energía y Combustibles",
+   "tipo": "add",
+   "senador": "CERVI, Mario Pablo"
+  },
+  {
+   "dpp": "104/25",
+   "comision": "De Minería, Energía y Combustibles",
+   "tipo": "add",
+   "senador": "OLIVERA LUCERO, Bruno Antonio"
+  },
+  {
+   "dpp": "104/25",
+   "comision": "De Minería, Energía y Combustibles",
+   "tipo": "add",
+   "senador": "GODOY, Juan Cruz"
+  },
+  {
+   "dpp": "104/25",
+   "comision": "De Minería, Energía y Combustibles",
+   "tipo": "add",
+   "senador": "GUZMÁN CORAITA, Gonzalo"
+  },
+  {
+   "dpp": "104/25",
+   "comision": "De Minería, Energía y Combustibles",
+   "tipo": "add",
+   "senador": "COTO, Agustín Pedro"
+  },
+  {
+   "dpp": "104/25",
+   "comision": "De Minería, Energía y Combustibles",
+   "tipo": "add",
+   "senador": "BULLRICH, Patricia"
+  },
+  {
+   "dpp": "104/25",
+   "comision": "De Minería, Energía y Combustibles",
+   "tipo": "add",
+   "senador": "JURI, Mariana"
+  },
+  {
+   "dpp": "104/25",
+   "comision": "De Minería, Energía y Combustibles",
+   "tipo": "add",
+   "senador": "GALARETTO, Eduardo Horacio"
+  },
+  {
+   "dpp": "104/25",
+   "comision": "De Minería, Energía y Combustibles",
+   "tipo": "add",
+   "senador": "CRISTINA, Andrea Marcela"
+  },
+  {
+   "dpp": "104/25",
+   "comision": "De Minería, Energía y Combustibles",
+   "tipo": "add",
+   "senador": "ROYÓN, Flavia Gabriela"
+  },
+  {
+   "dpp": "104/25",
+   "comision": "De Minería, Energía y Combustibles",
+   "tipo": "add",
+   "senador": "CARAMBIA, José María"
+  },
+  {
+   "dpp": "104/25",
+   "comision": "De Minería, Energía y Combustibles",
+   "tipo": "add",
+   "senador": "CORROZA, Julieta"
+  },
+  {
+   "dpp": "104/25",
+   "comision": "De Ambiente y Desarrollo Sustentable",
+   "tipo": "add",
+   "senador": "TERENZI, Edith Elizabeth"
+  },
+  {
+   "dpp": "104/25",
+   "comision": "De Ambiente y Desarrollo Sustentable",
+   "tipo": "add",
+   "senador": "GADANO, Natalia Elena"
+  },
+  {
+   "dpp": "104/25",
+   "comision": "De Ambiente y Desarrollo Sustentable",
+   "tipo": "add",
+   "senador": "ROJAS DECUT, Sonia Elizabeth"
+  },
+  {
+   "dpp": "104/25",
+   "comision": "De Ambiente y Desarrollo Sustentable",
+   "tipo": "add",
+   "senador": "VALENZUELA, Mercedes Gabriela"
+  },
+  {
+   "dpp": "104/25",
+   "comision": "De Ambiente y Desarrollo Sustentable",
+   "tipo": "add",
+   "senador": "KRONEBERGER, Daniel Ricardo"
+  },
+  {
+   "dpp": "104/25",
+   "comision": "De Ambiente y Desarrollo Sustentable",
+   "tipo": "add",
+   "senador": "VISCHI, Eduardo Alejandro"
+  },
+  {
+   "dpp": "104/25",
+   "comision": "De Ambiente y Desarrollo Sustentable",
+   "tipo": "add",
+   "senador": "GOERLING LARA, Enrique Martín"
+  },
+  {
+   "dpp": "104/25",
+   "comision": "De Ambiente y Desarrollo Sustentable",
+   "tipo": "add",
+   "senador": "ATAUCHE, Ezequiel"
+  },
+  {
+   "dpp": "104/25",
+   "comision": "De Ambiente y Desarrollo Sustentable",
+   "tipo": "add",
+   "senador": "ALVAREZ RIVERO, Carmen"
+  },
+  {
+   "dpp": "104/25",
+   "comision": "De Ambiente y Desarrollo Sustentable",
+   "tipo": "add",
+   "senador": "BEDIA, Vilma Facunda"
+  },
+  {
+   "dpp": "104/25",
+   "comision": "De Ambiente y Desarrollo Sustentable",
+   "tipo": "add",
+   "senador": "ALMEIDA, Romina María"
+  },
+  {
+   "dpp": "104/25",
+   "comision": "De Ambiente y Desarrollo Sustentable",
+   "tipo": "add",
+   "senador": "ABDALA, Bartolomé Esteban"
+  },
+  {
+   "dpp": "105/25",
+   "comision": "De Minería, Energía y Combustibles",
+   "tipo": "replace",
+   "senador": "MONTE DE OCA, María Belén",
+   "reemplaza": "OLIVERA LUCERO, Bruno Antonio"
+  },
+  {
+   "dpp": "105/25",
+   "comision": "De Minería, Energía y Combustibles",
+   "tipo": "replace",
+   "senador": "BEDIA, Vilma Facunda",
+   "reemplaza": "GODOY, Juan Cruz"
+  },
+  {
+   "dpp": "105/25",
+   "comision": "De Ambiente y Desarrollo Sustentable",
+   "tipo": "replace",
+   "senador": "MÁRQUEZ, Nadia Judith",
+   "reemplaza": "ALVAREZ RIVERO, Carmen"
+  },
+  {
+   "dpp": "105/25",
+   "comision": "De Ambiente y Desarrollo Sustentable",
+   "tipo": "replace",
+   "senador": "MONTE DE OCA, María Belén",
+   "reemplaza": "ATAUCHE, Ezequiel"
+  },
+  {
+   "dpp": "105/25",
+   "comision": "De Ambiente y Desarrollo Sustentable",
+   "tipo": "replace",
+   "senador": "ARRASCAETA, Ivanna Marcela",
+   "reemplaza": "ABDALA, Bartolomé Esteban"
+  },
+  {
+   "dpp": "107/25",
+   "comision": "De Ambiente y Desarrollo Sustentable",
+   "tipo": "replace",
+   "senador": "GALARETTO, Eduardo Horacio",
+   "reemplaza": "KRONEBERGER, Daniel Ricardo"
+  },
+  {
+   "dpp": "108/25",
+   "comision": "De Presupuesto y Hacienda",
+   "tipo": "replace",
+   "senador": "ESPÍNOLA, Carlos Mauricio",
+   "reemplaza": "TERENZI, Edith Elizabeth"
+  },
+  {
+   "dpp": "109/25",
+   "comision": "De Ambiente y Desarrollo Sustentable",
+   "tipo": "replace",
+   "senador": "KRONEBERGER, Daniel Ricardo",
+   "reemplaza": "GALARETTO, Eduardo Horacio"
+  },
+  {
+   "dpp": "110/25",
+   "comision": "De Justicia y Asuntos Penales",
+   "tipo": "replace",
+   "senador": "CRISTINA, Andrea Marcela",
+   "reemplaza": "HUALA, María Victoria"
+  },
+  {
+   "dpp": "110/25",
+   "comision": "De Justicia y Asuntos Penales",
+   "tipo": "replace",
+   "senador": "ARRASCAETA, Ivanna Marcela",
+   "reemplaza": "JUEZ, Luis Alfredo"
+  },
+  {
+   "dpp": "110/25",
+   "comision": "De Presupuesto y Hacienda",
+   "tipo": "replace",
+   "senador": "KRONEBERGER, Daniel Ricardo",
+   "reemplaza": "FAMA, Flavio Sergio"
+  },
+  {
+   "dpp": "3/26",
+   "comision": "De Acuerdos",
+   "tipo": "add",
+   "senador": "PAGOTTO, Juan Carlos"
+  },
+  {
+   "dpp": "3/26",
+   "comision": "De Acuerdos",
+   "tipo": "add",
+   "senador": "ARCE, Carlos Omar"
+  },
+  {
+   "dpp": "3/26",
+   "comision": "De Acuerdos",
+   "tipo": "add",
+   "senador": "ESPÍNOLA, Carlos Mauricio"
+  },
+  {
+   "dpp": "3/26",
+   "comision": "De Acuerdos",
+   "tipo": "add",
+   "senador": "ÁVILA, Beatriz Luisa"
+  },
+  {
+   "dpp": "3/26",
+   "comision": "De Acuerdos",
+   "tipo": "add",
+   "senador": "JURI, Mariana"
+  },
+  {
+   "dpp": "3/26",
+   "comision": "De Acuerdos",
+   "tipo": "add",
+   "senador": "LOSADA, Carolina"
+  },
+  {
+   "dpp": "3/26",
+   "comision": "De Acuerdos",
+   "tipo": "add",
+   "senador": "ABAD, Maximiliano"
+  },
+  {
+   "dpp": "3/26",
+   "comision": "De Acuerdos",
+   "tipo": "add",
+   "senador": "GOERLING LARA, Enrique Martín"
+  },
+  {
+   "dpp": "3/26",
+   "comision": "De Acuerdos",
+   "tipo": "add",
+   "senador": "BULLRICH, Patricia"
+  },
+  {
+   "dpp": "3/26",
+   "comision": "De Acuerdos",
+   "tipo": "add",
+   "senador": "OROZCO, María Emilia"
+  },
+  {
+   "dpp": "3/26",
+   "comision": "De Acuerdos",
+   "tipo": "add",
+   "senador": "GODOY, Juan Cruz"
+  },
+  {
+   "dpp": "3/26",
+   "comision": "De Acuerdos",
+   "tipo": "add",
+   "senador": "MÁRQUEZ, Nadia Judith"
+  },
+  {
+   "dpp": "3/26",
+   "comision": "De Acuerdos",
+   "tipo": "add",
+   "senador": "MENDOZA, Sandra Mariela"
+  },
+  {
+   "dpp": "3/26",
+   "comision": "De Relaciones Exteriores y Culto",
+   "tipo": "add",
+   "senador": "PAOLTRONI, Francisco Manuel"
+  },
+  {
+   "dpp": "3/26",
+   "comision": "De Relaciones Exteriores y Culto",
+   "tipo": "add",
+   "senador": "JUEZ, Luis Alfredo"
+  },
+  {
+   "dpp": "3/26",
+   "comision": "De Relaciones Exteriores y Culto",
+   "tipo": "add",
+   "senador": "VISCHI, Eduardo Alejandro"
+  },
+  {
+   "dpp": "3/26",
+   "comision": "De Relaciones Exteriores y Culto",
+   "tipo": "add",
+   "senador": "ROJAS DECUT, Sonia Elizabeth"
+  },
+  {
+   "dpp": "3/26",
+   "comision": "De Relaciones Exteriores y Culto",
+   "tipo": "add",
+   "senador": "LOSADA, Carolina"
+  },
+  {
+   "dpp": "3/26",
+   "comision": "De Relaciones Exteriores y Culto",
+   "tipo": "add",
+   "senador": "GOERLING LARA, Enrique Martín"
+  },
+  {
+   "dpp": "3/26",
+   "comision": "De Relaciones Exteriores y Culto",
+   "tipo": "add",
+   "senador": "ABAD, Maximiliano"
+  },
+  {
+   "dpp": "3/26",
+   "comision": "De Relaciones Exteriores y Culto",
+   "tipo": "add",
+   "senador": "SUÁREZ, Rodolfo Alejandro"
+  },
+  {
+   "dpp": "3/26",
+   "comision": "De Relaciones Exteriores y Culto",
+   "tipo": "add",
+   "senador": "ARRASCAETA, Ivanna Marcela"
+  },
+  {
+   "dpp": "3/26",
+   "comision": "De Relaciones Exteriores y Culto",
+   "tipo": "add",
+   "senador": "MONTEVERDE, Agustín Aníbal"
+  },
+  {
+   "dpp": "3/26",
+   "comision": "De Relaciones Exteriores y Culto",
+   "tipo": "add",
+   "senador": "GUZMÁN CORAITA, Gonzalo"
+  },
+  {
+   "dpp": "3/26",
+   "comision": "De Relaciones Exteriores y Culto",
+   "tipo": "add",
+   "senador": "MONTE DE OCA, María Belén"
+  },
+  {
+   "dpp": "3/26",
+   "comision": "De Relaciones Exteriores y Culto",
+   "tipo": "add",
+   "senador": "CERVI, Mario Pablo"
+  },
+  {
+   "dpp": "3/26",
+   "comision": "De Relaciones Exteriores y Culto",
+   "tipo": "add",
+   "senador": "ANDRADA, Guillermo Eduardo"
+  },
+  {
+   "dpp": "4/26",
+   "comision": "De Acuerdos",
+   "tipo": "replace",
+   "senador": "COTO, Agustín Pedro",
+   "reemplaza": "OROZCO, María Emilia"
+  },
+  {
+   "dpp": "4/26",
+   "comision": "De Minería, Energía y Combustibles",
+   "tipo": "replace",
+   "senador": "OLIVERA LUCERO, Bruno Antonio",
+   "reemplaza": "BEDIA, Vilma Facunda"
+  },
+  {
+   "dpp": "4/26",
+   "comision": "De Minería, Energía y Combustibles",
+   "tipo": "replace",
+   "senador": "FULLONE, Enzo Paolo",
+   "reemplaza": "BULLRICH, Patricia"
+  },
+  {
+   "dpp": "4/26",
+   "comision": "De Minería, Energía y Combustibles",
+   "tipo": "replace",
+   "senador": "GODOY, Juan Cruz",
+   "reemplaza": "MONTE DE OCA, María Belén"
+  },
+  {
+   "dpp": "5/26",
+   "comision": "De Presupuesto y Hacienda",
+   "tipo": "replace",
+   "senador": "TERENZI, Edith Elizabeth",
+   "reemplaza": "ESPÍNOLA, Carlos Mauricio"
+  },
+  {
+   "dpp": "5/26",
+   "comision": "De Relaciones Exteriores y Culto",
+   "tipo": "replace",
+   "senador": "JURI, Mariana",
+   "reemplaza": "SUÁREZ, Rodolfo Alejandro"
+  },
+  {
+   "dpp": "6/26",
+   "comision": "De Presupuesto y Hacienda",
+   "tipo": "replace",
+   "senador": "FAMA, Flavio Sergio",
+   "reemplaza": "KRONEBERGER, Daniel Ricardo"
+  },
+  {
+   "dpp": "6/26",
+   "comision": "De Justicia y Asuntos Penales",
+   "tipo": "replace",
+   "senador": "ATAUCHE, Ezequiel",
+   "reemplaza": "ARRASCAETA, Ivanna Marcela"
+  },
+  {
+   "dpp": "7/26",
+   "comision": "De Acuerdos",
+   "tipo": "add",
+   "senador": "ROYÓN, Flavia Gabriela"
+  },
+  {
+   "dpp": "8/26",
+   "comision": "De Presupuesto y Hacienda",
+   "tipo": "replace",
+   "senador": "ESPÍNOLA, Carlos Mauricio",
+   "reemplaza": "VIGO, Alejandra María"
+  },
+  {
+   "dpp": "8/26",
+   "comision": "De Presupuesto y Hacienda",
+   "tipo": "replace",
+   "senador": "VISCHI, Eduardo Alejandro",
+   "reemplaza": "FAMA, Flavio Sergio"
+  },
+  {
+   "dpp": "8/26",
+   "comision": "De Acuerdos",
+   "tipo": "replace",
+   "senador": "KRONEBERGER, Daniel Ricardo",
+   "reemplaza": "ABAD, Maximiliano"
+  },
+  {
+   "dpp": "8/26",
+   "comision": "De Justicia y Asuntos Penales",
+   "tipo": "replace",
+   "senador": "JURI, Mariana",
+   "reemplaza": "ABAD, Maximiliano"
+  },
+  {
+   "dpp": "9/26",
+   "comision": "De Trabajo y Previsión Social",
+   "tipo": "replace",
+   "senador": "CRISTINA, Andrea Marcela",
+   "reemplaza": "GOERLING LARA, Enrique Martín"
+  },
+  {
+   "dpp": "10/26",
+   "comision": "De Trabajo y Previsión Social",
+   "tipo": "replace",
+   "senador": "JURI, Mariana",
+   "reemplaza": "SUÁREZ, Rodolfo Alejandro"
+  },
+  {
+   "dpp": "11/26",
+   "comision": "De Presupuesto y Hacienda",
+   "tipo": "replace",
+   "senador": "ARRASCAETA, Ivanna Marcela",
+   "reemplaza": "OLIVERA LUCERO, Bruno Antonio"
+  },
+  {
+   "dpp": "11/26",
+   "comision": "De Trabajo y Previsión Social",
+   "tipo": "replace",
+   "senador": "BEDIA, Vilma Facunda",
+   "reemplaza": "OLIVERA LUCERO, Bruno Antonio"
+  },
+  {
+   "dpp": "16/26",
+   "comision": "De Trabajo y Previsión Social",
+   "tipo": "replace",
+   "senador": "SUÁREZ, Rodolfo Alejandro",
+   "reemplaza": "JURI, Mariana"
+  },
+  {
+   "dpp": "16/26",
+   "comision": "De Presupuesto y Hacienda",
+   "tipo": "replace",
+   "senador": "FAMA, Flavio Sergio",
+   "reemplaza": "VISCHI, Eduardo Alejandro"
+  },
+  {
+   "dpp": "16/26",
+   "comision": "De Acuerdos",
+   "tipo": "replace",
+   "senador": "ABAD, Maximiliano",
+   "reemplaza": "KRONEBERGER, Daniel Ricardo"
+  },
+  {
+   "dpp": "16/26",
+   "comision": "De Justicia y Asuntos Penales",
+   "tipo": "replace",
+   "senador": "ABAD, Maximiliano",
+   "reemplaza": "JURI, Mariana"
+  },
+  {
+   "dpp": "16/26",
+   "comision": "De Relaciones Exteriores y Culto",
+   "tipo": "replace",
+   "senador": "SUÁREZ, Rodolfo Alejandro",
+   "reemplaza": "JURI, Mariana"
+  },
+  {
+   "dpp": "18/26",
+   "comision": "De Relaciones Exteriores y Culto",
+   "tipo": "replace",
+   "senador": "JURI, Mariana",
+   "reemplaza": "LOSADA, Carolina"
+  },
+  {
+   "dpp": "18/26",
+   "comision": "De Relaciones Exteriores y Culto",
+   "tipo": "replace",
+   "senador": "HUALA, María Victoria",
+   "reemplaza": "GOERLING LARA, Enrique Martín"
+  },
+  {
+   "dpp": "18/26",
+   "comision": "De Relaciones Exteriores y Culto",
+   "tipo": "replace",
+   "senador": "KRONEBERGER, Daniel Ricardo",
+   "reemplaza": "SUÁREZ, Rodolfo Alejandro"
+  },
+  {
+   "dpp": "18/26",
+   "comision": "De Presupuesto y Hacienda",
+   "tipo": "replace",
+   "senador": "HUALA, María Victoria",
+   "reemplaza": "CRISTINA, Andrea Marcela"
+  },
+  {
+   "dpp": "18/26",
+   "comision": "De Presupuesto y Hacienda",
+   "tipo": "replace",
+   "senador": "VISCHI, Eduardo Alejandro",
+   "reemplaza": "SCHNEIDER, Silvana Lorena"
+  },
+  {
+   "dpp": "19/26",
+   "comision": "De Economía Nacional e Inversión",
+   "tipo": "add",
+   "senador": "ABDALA, Bartolomé Esteban"
+  },
+  {
+   "dpp": "19/26",
+   "comision": "De Economía Nacional e Inversión",
+   "tipo": "add",
+   "senador": "MONTEVERDE, Agustín Aníbal"
+  },
+  {
+   "dpp": "19/26",
+   "comision": "De Economía Nacional e Inversión",
+   "tipo": "add",
+   "senador": "ARRASCAETA, Ivanna Marcela"
+  },
+  {
+   "dpp": "19/26",
+   "comision": "De Economía Nacional e Inversión",
+   "tipo": "add",
+   "senador": "ALVAREZ RIVERO, Carmen"
+  },
+  {
+   "dpp": "19/26",
+   "comision": "De Economía Nacional e Inversión",
+   "tipo": "add",
+   "senador": "GUZMÁN CORAITA, Gonzalo"
+  },
+  {
+   "dpp": "19/26",
+   "comision": "De Economía Nacional e Inversión",
+   "tipo": "add",
+   "senador": "JURI, Mariana"
+  },
+  {
+   "dpp": "19/26",
+   "comision": "De Economía Nacional e Inversión",
+   "tipo": "add",
+   "senador": "KRONEBERGER, Daniel Ricardo"
+  },
+  {
+   "dpp": "19/26",
+   "comision": "De Economía Nacional e Inversión",
+   "tipo": "add",
+   "senador": "GALARETTO, Eduardo Horacio"
+  },
+  {
+   "dpp": "19/26",
+   "comision": "De Economía Nacional e Inversión",
+   "tipo": "add",
+   "senador": "CRISTINA, Andrea Marcela"
+  },
+  {
+   "dpp": "19/26",
+   "comision": "De Economía Nacional e Inversión",
+   "tipo": "add",
+   "senador": "ANDRADA, Guillermo Eduardo"
+  },
+  {
+   "dpp": "19/26",
+   "comision": "De Economía Nacional e Inversión",
+   "tipo": "add",
+   "senador": "CORROZA, Julieta"
+  },
+  {
+   "dpp": "19/26",
+   "comision": "De Asuntos Constitucionales",
+   "tipo": "add",
+   "senador": "COTO, Agustín Pedro"
+  },
+  {
+   "dpp": "19/26",
+   "comision": "De Asuntos Constitucionales",
+   "tipo": "add",
+   "senador": "MONTE DE OCA, María Belén"
+  },
+  {
+   "dpp": "19/26",
+   "comision": "De Asuntos Constitucionales",
+   "tipo": "add",
+   "senador": "MÁRQUEZ, Nadia Judith"
+  },
+  {
+   "dpp": "19/26",
+   "comision": "De Asuntos Constitucionales",
+   "tipo": "add",
+   "senador": "JUEZ, Luis Alfredo"
+  },
+  {
+   "dpp": "19/26",
+   "comision": "De Asuntos Constitucionales",
+   "tipo": "add",
+   "senador": "PAGOTTO, Juan Carlos"
+  },
+  {
+   "dpp": "19/26",
+   "comision": "De Asuntos Constitucionales",
+   "tipo": "add",
+   "senador": "BULLRICH, Patricia"
+  },
+  {
+   "dpp": "19/26",
+   "comision": "De Asuntos Constitucionales",
+   "tipo": "add",
+   "senador": "VIGO, Alejandra María"
+  },
+  {
+   "dpp": "19/26",
+   "comision": "De Asuntos Constitucionales",
+   "tipo": "add",
+   "senador": "FAMA, Flavio Sergio"
+  },
+  {
+   "dpp": "19/26",
+   "comision": "De Asuntos Constitucionales",
+   "tipo": "add",
+   "senador": "SUÁREZ, Rodolfo Alejandro"
+  },
+  {
+   "dpp": "19/26",
+   "comision": "De Asuntos Constitucionales",
+   "tipo": "add",
+   "senador": "VISCHI, Eduardo Alejandro"
+  },
+  {
+   "dpp": "19/26",
+   "comision": "De Asuntos Constitucionales",
+   "tipo": "add",
+   "senador": "TERENZI, Edith Elizabeth"
+  },
+  {
+   "dpp": "19/26",
+   "comision": "De Asuntos Constitucionales",
+   "tipo": "add",
+   "senador": "ÁVILA, Beatriz Luisa"
+  },
+  {
+   "dpp": "19/26",
+   "comision": "De Asuntos Constitucionales",
+   "tipo": "add",
+   "senador": "MOISÉS, María Carolina"
+  },
+  {
+   "dpp": "19/26",
+   "comision": "De Asuntos Constitucionales",
+   "tipo": "add",
+   "senador": "GOERLING LARA, Enrique Martín"
+  },
+  {
+   "dpp": "19/26",
+   "comision": "De Seguridad Interior y Narcotráfico",
+   "tipo": "add",
+   "senador": "LOSADA, Carolina"
+  },
+  {
+   "dpp": "19/26",
+   "comision": "De Seguridad Interior y Narcotráfico",
+   "tipo": "add",
+   "senador": "OROZCO, María Emilia"
+  },
+  {
+   "dpp": "19/26",
+   "comision": "De Seguridad Interior y Narcotráfico",
+   "tipo": "add",
+   "senador": "PAOLTRONI, Francisco Manuel"
+  },
+  {
+   "dpp": "19/26",
+   "comision": "De Seguridad Interior y Narcotráfico",
+   "tipo": "add",
+   "senador": "PAGOTTO, Juan Carlos"
+  },
+  {
+   "dpp": "19/26",
+   "comision": "De Seguridad Interior y Narcotráfico",
+   "tipo": "add",
+   "senador": "GUZMÁN CORAITA, Gonzalo"
+  },
+  {
+   "dpp": "19/26",
+   "comision": "De Seguridad Interior y Narcotráfico",
+   "tipo": "add",
+   "senador": "COTO, Agustín Pedro"
+  },
+  {
+   "dpp": "19/26",
+   "comision": "De Seguridad Interior y Narcotráfico",
+   "tipo": "add",
+   "senador": "GALARETTO, Eduardo Horacio"
+  },
+  {
+   "dpp": "19/26",
+   "comision": "De Seguridad Interior y Narcotráfico",
+   "tipo": "add",
+   "senador": "SCHNEIDER, Silvana Lorena"
+  },
+  {
+   "dpp": "19/26",
+   "comision": "De Seguridad Interior y Narcotráfico",
+   "tipo": "add",
+   "senador": "ESPÍNOLA, Carlos Mauricio"
+  },
+  {
+   "dpp": "19/26",
+   "comision": "De Seguridad Interior y Narcotráfico",
+   "tipo": "add",
+   "senador": "CORROZA, Julieta"
+  },
+  {
+   "dpp": "19/26",
+   "comision": "De Seguridad Interior y Narcotráfico",
+   "tipo": "add",
+   "senador": "GOERLING LARA, Enrique Martín"
+  },
+  {
+   "dpp": "19/26",
+   "comision": "De Coparticipación Federal de Impuestos",
+   "tipo": "add",
+   "senador": "SCHNEIDER, Silvana Lorena"
+  },
+  {
+   "dpp": "19/26",
+   "comision": "De Coparticipación Federal de Impuestos",
+   "tipo": "add",
+   "senador": "ALVAREZ RIVERO, Carmen"
+  },
+  {
+   "dpp": "19/26",
+   "comision": "De Coparticipación Federal de Impuestos",
+   "tipo": "add",
+   "senador": "PAOLTRONI, Francisco Manuel"
+  },
+  {
+   "dpp": "19/26",
+   "comision": "De Coparticipación Federal de Impuestos",
+   "tipo": "add",
+   "senador": "ABDALA, Bartolomé Esteban"
+  },
+  {
+   "dpp": "19/26",
+   "comision": "De Coparticipación Federal de Impuestos",
+   "tipo": "add",
+   "senador": "ARRASCAETA, Ivanna Marcela"
+  },
+  {
+   "dpp": "19/26",
+   "comision": "De Coparticipación Federal de Impuestos",
+   "tipo": "add",
+   "senador": "MONTEVERDE, Agustín Aníbal"
+  },
+  {
+   "dpp": "19/26",
+   "comision": "De Coparticipación Federal de Impuestos",
+   "tipo": "add",
+   "senador": "KRONEBERGER, Daniel Ricardo"
+  },
+  {
+   "dpp": "19/26",
+   "comision": "De Coparticipación Federal de Impuestos",
+   "tipo": "add",
+   "senador": "ABAD, Maximiliano"
+  },
+  {
+   "dpp": "19/26",
+   "comision": "De Coparticipación Federal de Impuestos",
+   "tipo": "add",
+   "senador": "ROYÓN, Flavia Gabriela"
+  },
+  {
+   "dpp": "19/26",
+   "comision": "De Coparticipación Federal de Impuestos",
+   "tipo": "add",
+   "senador": "CRISTINA, Andrea Marcela"
+  },
+  {
+   "dpp": "19/26",
+   "comision": "De Coparticipación Federal de Impuestos",
+   "tipo": "add",
+   "senador": "VIGO, Alejandra María"
+  },
+  {
+   "dpp": "19/26",
+   "comision": "De Legislación General",
+   "tipo": "add",
+   "senador": "MÁRQUEZ, Nadia Judith"
+  },
+  {
+   "dpp": "19/26",
+   "comision": "De Legislación General",
+   "tipo": "add",
+   "senador": "ABDALA, Bartolomé Esteban"
+  },
+  {
+   "dpp": "19/26",
+   "comision": "De Legislación General",
+   "tipo": "add",
+   "senador": "COTO, Agustín Pedro"
+  },
+  {
+   "dpp": "19/26",
+   "comision": "De Legislación General",
+   "tipo": "add",
+   "senador": "BULLRICH, Patricia"
+  },
+  {
+   "dpp": "19/26",
+   "comision": "De Legislación General",
+   "tipo": "add",
+   "senador": "JUEZ, Luis Alfredo"
+  },
+  {
+   "dpp": "19/26",
+   "comision": "De Legislación General",
+   "tipo": "add",
+   "senador": "ABAD, Maximiliano"
+  },
+  {
+   "dpp": "19/26",
+   "comision": "De Legislación General",
+   "tipo": "add",
+   "senador": "SUÁREZ, Rodolfo Alejandro"
+  },
+  {
+   "dpp": "19/26",
+   "comision": "De Legislación General",
+   "tipo": "add",
+   "senador": "HUALA, María Victoria"
+  },
+  {
+   "dpp": "19/26",
+   "comision": "De Legislación General",
+   "tipo": "add",
+   "senador": "CARAMBIA, José María"
+  },
+  {
+   "dpp": "19/26",
+   "comision": "De Legislación General",
+   "tipo": "add",
+   "senador": "ESPÍNOLA, Carlos Mauricio"
+  },
+  {
+   "dpp": "19/26",
+   "comision": "De Legislación General",
+   "tipo": "add",
+   "senador": "MENDOZA, Sandra Mariela"
+  },
+  {
+   "dpp": "19/26",
+   "comision": "De Defensa Nacional",
+   "tipo": "add",
+   "senador": "JUEZ, Luis Alfredo"
+  },
+  {
+   "dpp": "19/26",
+   "comision": "De Defensa Nacional",
+   "tipo": "add",
+   "senador": "MONTE DE OCA, María Belén"
+  },
+  {
+   "dpp": "19/26",
+   "comision": "De Defensa Nacional",
+   "tipo": "add",
+   "senador": "PAGOTTO, Juan Carlos"
+  },
+  {
+   "dpp": "19/26",
+   "comision": "De Defensa Nacional",
+   "tipo": "add",
+   "senador": "MONTEVERDE, Agustín Aníbal"
+  },
+  {
+   "dpp": "19/26",
+   "comision": "De Defensa Nacional",
+   "tipo": "add",
+   "senador": "OLIVERA LUCERO, Bruno Antonio"
+  },
+  {
+   "dpp": "19/26",
+   "comision": "De Defensa Nacional",
+   "tipo": "add",
+   "senador": "LOSADA, Carolina"
+  },
+  {
+   "dpp": "19/26",
+   "comision": "De Defensa Nacional",
+   "tipo": "add",
+   "senador": "GALARETTO, Eduardo Horacio"
+  },
+  {
+   "dpp": "19/26",
+   "comision": "De Defensa Nacional",
+   "tipo": "add",
+   "senador": "VISCHI, Eduardo Alejandro"
+  },
+  {
+   "dpp": "19/26",
+   "comision": "De Defensa Nacional",
+   "tipo": "add",
+   "senador": "GADANO, Natalia Elena"
+  },
+  {
+   "dpp": "19/26",
+   "comision": "De Defensa Nacional",
+   "tipo": "add",
+   "senador": "ABDALA, Bartolomé Esteban"
+  },
+  {
+   "dpp": "19/26",
+   "comision": "De Defensa Nacional",
+   "tipo": "add",
+   "senador": "GOERLING LARA, Enrique Martín"
+  },
+  {
+   "dpp": "19/26",
+   "comision": "De Industria y Comercio",
+   "tipo": "add",
+   "senador": "ALMEIDA, Romina María"
+  },
+  {
+   "dpp": "19/26",
+   "comision": "De Industria y Comercio",
+   "tipo": "add",
+   "senador": "COTO, Agustín Pedro"
+  },
+  {
+   "dpp": "19/26",
+   "comision": "De Industria y Comercio",
+   "tipo": "add",
+   "senador": "CERVI, Mario Pablo"
+  },
+  {
+   "dpp": "19/26",
+   "comision": "De Industria y Comercio",
+   "tipo": "add",
+   "senador": "BENEGAS LYNCH, Joaquín Alberto"
+  },
+  {
+   "dpp": "19/26",
+   "comision": "De Industria y Comercio",
+   "tipo": "add",
+   "senador": "ABDALA, Bartolomé Esteban"
+  },
+  {
+   "dpp": "19/26",
+   "comision": "De Industria y Comercio",
+   "tipo": "add",
+   "senador": "VALENZUELA, Mercedes Gabriela"
+  },
+  {
+   "dpp": "19/26",
+   "comision": "De Industria y Comercio",
+   "tipo": "add",
+   "senador": "KRONEBERGER, Daniel Ricardo"
+  },
+  {
+   "dpp": "19/26",
+   "comision": "De Industria y Comercio",
+   "tipo": "add",
+   "senador": "SCHNEIDER, Silvana Lorena"
+  },
+  {
+   "dpp": "19/26",
+   "comision": "De Industria y Comercio",
+   "tipo": "add",
+   "senador": "GADANO, Natalia Elena"
+  },
+  {
+   "dpp": "19/26",
+   "comision": "De Industria y Comercio",
+   "tipo": "add",
+   "senador": "VIGO, Alejandra María"
+  },
+  {
+   "dpp": "19/26",
+   "comision": "De Industria y Comercio",
+   "tipo": "add",
+   "senador": "MENDOZA, Sandra Mariela"
+  },
+  {
+   "dpp": "19/26",
+   "comision": "De Agricultura, Ganadería y Pesca",
+   "tipo": "add",
+   "senador": "BENEGAS LYNCH, Joaquín Alberto"
+  },
+  {
+   "dpp": "19/26",
+   "comision": "De Agricultura, Ganadería y Pesca",
+   "tipo": "add",
+   "senador": "CERVI, Mario Pablo"
+  },
+  {
+   "dpp": "19/26",
+   "comision": "De Agricultura, Ganadería y Pesca",
+   "tipo": "add",
+   "senador": "FULLONE, Enzo Paolo"
+  },
+  {
+   "dpp": "19/26",
+   "comision": "De Agricultura, Ganadería y Pesca",
+   "tipo": "add",
+   "senador": "PAOLTRONI, Francisco Manuel"
+  },
+  {
+   "dpp": "19/26",
+   "comision": "De Agricultura, Ganadería y Pesca",
+   "tipo": "add",
+   "senador": "OROZCO, María Emilia"
+  },
+  {
+   "dpp": "19/26",
+   "comision": "De Agricultura, Ganadería y Pesca",
+   "tipo": "add",
+   "senador": "ALVAREZ RIVERO, Carmen"
+  },
+  {
+   "dpp": "19/26",
+   "comision": "De Agricultura, Ganadería y Pesca",
+   "tipo": "add",
+   "senador": "GALARETTO, Eduardo Horacio"
+  },
+  {
+   "dpp": "19/26",
+   "comision": "De Agricultura, Ganadería y Pesca",
+   "tipo": "add",
+   "senador": "KRONEBERGER, Daniel Ricardo"
+  },
+  {
+   "dpp": "19/26",
+   "comision": "De Agricultura, Ganadería y Pesca",
+   "tipo": "add",
+   "senador": "VALENZUELA, Mercedes Gabriela"
+  },
+  {
+   "dpp": "19/26",
+   "comision": "De Agricultura, Ganadería y Pesca",
+   "tipo": "add",
+   "senador": "GADANO, Natalia Elena"
+  },
+  {
+   "dpp": "19/26",
+   "comision": "De Agricultura, Ganadería y Pesca",
+   "tipo": "add",
+   "senador": "TERENZI, Edith Elizabeth"
+  },
+  {
+   "dpp": "19/26",
+   "comision": "De Agricultura, Ganadería y Pesca",
+   "tipo": "add",
+   "senador": "ESPÍNOLA, Carlos Mauricio"
+  },
+  {
+   "dpp": "19/26",
+   "comision": "De Agricultura, Ganadería y Pesca",
+   "tipo": "add",
+   "senador": "GOERLING LARA, Enrique Martín"
+  },
+  {
+   "dpp": "19/26",
+   "comision": "De Asuntos Administrativos y Municipales",
+   "tipo": "add",
+   "senador": "KRONEBERGER, Daniel Ricardo"
+  },
+  {
+   "dpp": "19/26",
+   "comision": "De Asuntos Administrativos y Municipales",
+   "tipo": "add",
+   "senador": "ABAD, Maximiliano"
+  },
+  {
+   "dpp": "19/26",
+   "comision": "De Asuntos Administrativos y Municipales",
+   "tipo": "add",
+   "senador": "VALENZUELA, Mercedes Gabriela"
+  },
+  {
+   "dpp": "19/26",
+   "comision": "De Asuntos Administrativos y Municipales",
+   "tipo": "add",
+   "senador": "BEDIA, Vilma Facunda"
+  },
+  {
+   "dpp": "19/26",
+   "comision": "De Asuntos Administrativos y Municipales",
+   "tipo": "add",
+   "senador": "OLIVERA LUCERO, Bruno Antonio"
+  },
+  {
+   "dpp": "19/26",
+   "comision": "De Asuntos Administrativos y Municipales",
+   "tipo": "add",
+   "senador": "ATAUCHE, Ezequiel"
+  },
+  {
+   "dpp": "19/26",
+   "comision": "De Asuntos Administrativos y Municipales",
+   "tipo": "add",
+   "senador": "GUZMÁN CORAITA, Gonzalo"
+  },
+  {
+   "dpp": "19/26",
+   "comision": "De Asuntos Administrativos y Municipales",
+   "tipo": "add",
+   "senador": "ROJAS DECUT, Sonia Elizabeth"
+  },
+  {
+   "dpp": "19/26",
+   "comision": "De Asuntos Administrativos y Municipales",
+   "tipo": "add",
+   "senador": "HUALA, María Victoria"
+  },
+  {
+   "dpp": "19/26",
+   "comision": "De Asuntos Administrativos y Municipales",
+   "tipo": "add",
+   "senador": "MENDOZA, Sandra Mariela"
+  },
+  {
+   "dpp": "19/26",
+   "comision": "De Asuntos Administrativos y Municipales",
+   "tipo": "add",
+   "senador": "CORROZA, Julieta"
+  },
+  {
+   "dpp": "19/26",
+   "comision": "De Sistemas, Medios de Comunicación y Libertad de Expresión",
+   "tipo": "add",
+   "senador": "MOISÉS, María Carolina"
+  },
+  {
+   "dpp": "19/26",
+   "comision": "De Sistemas, Medios de Comunicación y Libertad de Expresión",
+   "tipo": "add",
+   "senador": "BEDIA, Vilma Facunda"
+  },
+  {
+   "dpp": "19/26",
+   "comision": "De Sistemas, Medios de Comunicación y Libertad de Expresión",
+   "tipo": "add",
+   "senador": "GODOY, Juan Cruz"
+  },
+  {
+   "dpp": "19/26",
+   "comision": "De Sistemas, Medios de Comunicación y Libertad de Expresión",
+   "tipo": "add",
+   "senador": "CERVI, Mario Pablo"
+  },
+  {
+   "dpp": "19/26",
+   "comision": "De Sistemas, Medios de Comunicación y Libertad de Expresión",
+   "tipo": "add",
+   "senador": "FULLONE, Enzo Paolo"
+  },
+  {
+   "dpp": "19/26",
+   "comision": "De Sistemas, Medios de Comunicación y Libertad de Expresión",
+   "tipo": "add",
+   "senador": "OROZCO, María Emilia"
+  },
+  {
+   "dpp": "19/26",
+   "comision": "De Sistemas, Medios de Comunicación y Libertad de Expresión",
+   "tipo": "add",
+   "senador": "LOSADA, Carolina"
+  },
+  {
+   "dpp": "19/26",
+   "comision": "De Sistemas, Medios de Comunicación y Libertad de Expresión",
+   "tipo": "add",
+   "senador": "KRONEBERGER, Daniel Ricardo"
+  },
+  {
+   "dpp": "19/26",
+   "comision": "De Sistemas, Medios de Comunicación y Libertad de Expresión",
+   "tipo": "add",
+   "senador": "FAMA, Flavio Sergio"
+  },
+  {
+   "dpp": "19/26",
+   "comision": "De Sistemas, Medios de Comunicación y Libertad de Expresión",
+   "tipo": "add",
+   "senador": "ANDRADA, Guillermo Eduardo"
+  },
+  {
+   "dpp": "19/26",
+   "comision": "De Sistemas, Medios de Comunicación y Libertad de Expresión",
+   "tipo": "add",
+   "senador": "BULLRICH, Patricia"
+  },
+  {
+   "dpp": "19/26",
+   "comision": "De Educación y Cultura",
+   "tipo": "add",
+   "senador": "VALENZUELA, Mercedes Gabriela"
+  },
+  {
+   "dpp": "19/26",
+   "comision": "De Educación y Cultura",
+   "tipo": "add",
+   "senador": "ALVAREZ RIVERO, Carmen"
+  },
+  {
+   "dpp": "19/26",
+   "comision": "De Educación y Cultura",
+   "tipo": "add",
+   "senador": "MÁRQUEZ, Nadia Judith"
+  },
+  {
+   "dpp": "19/26",
+   "comision": "De Educación y Cultura",
+   "tipo": "add",
+   "senador": "ARRASCAETA, Ivanna Marcela"
+  },
+  {
+   "dpp": "19/26",
+   "comision": "De Educación y Cultura",
+   "tipo": "add",
+   "senador": "BEDIA, Vilma Facunda"
+  },
+  {
+   "dpp": "19/26",
+   "comision": "De Educación y Cultura",
+   "tipo": "add",
+   "senador": "ALMEIDA, Romina María"
+  },
+  {
+   "dpp": "19/26",
+   "comision": "De Educación y Cultura",
+   "tipo": "add",
+   "senador": "HUALA, María Victoria"
+  },
+  {
+   "dpp": "19/26",
+   "comision": "De Educación y Cultura",
+   "tipo": "add",
+   "senador": "FAMA, Flavio Sergio"
+  },
+  {
+   "dpp": "19/26",
+   "comision": "De Educación y Cultura",
+   "tipo": "add",
+   "senador": "ROJAS DECUT, Sonia Elizabeth"
+  },
+  {
+   "dpp": "19/26",
+   "comision": "De Educación y Cultura",
+   "tipo": "add",
+   "senador": "ÁVILA, Beatriz Luisa"
+  },
+  {
+   "dpp": "19/26",
+   "comision": "De Educación y Cultura",
+   "tipo": "add",
+   "senador": "MOISÉS, María Carolina"
+  },
+  {
+   "dpp": "19/26",
+   "comision": "De Infraestructura, Vivienda y Transporte",
+   "tipo": "add",
+   "senador": "FULLONE, Enzo Paolo"
+  },
+  {
+   "dpp": "19/26",
+   "comision": "De Infraestructura, Vivienda y Transporte",
+   "tipo": "add",
+   "senador": "ALMEIDA, Romina María"
+  },
+  {
+   "dpp": "19/26",
+   "comision": "De Infraestructura, Vivienda y Transporte",
+   "tipo": "add",
+   "senador": "PAOLTRONI, Francisco Manuel"
+  },
+  {
+   "dpp": "19/26",
+   "comision": "De Infraestructura, Vivienda y Transporte",
+   "tipo": "add",
+   "senador": "BENEGAS LYNCH, Joaquín Alberto"
+  },
+  {
+   "dpp": "19/26",
+   "comision": "De Infraestructura, Vivienda y Transporte",
+   "tipo": "add",
+   "senador": "JURI, Mariana"
+  },
+  {
+   "dpp": "19/26",
+   "comision": "De Infraestructura, Vivienda y Transporte",
+   "tipo": "add",
+   "senador": "GALARETTO, Eduardo Horacio"
+  },
+  {
+   "dpp": "19/26",
+   "comision": "De Infraestructura, Vivienda y Transporte",
+   "tipo": "add",
+   "senador": "VIGO, Alejandra María"
+  },
+  {
+   "dpp": "19/26",
+   "comision": "De Infraestructura, Vivienda y Transporte",
+   "tipo": "add",
+   "senador": "CORROZA, Julieta"
+  },
+  {
+   "dpp": "19/26",
+   "comision": "De Infraestructura, Vivienda y Transporte",
+   "tipo": "add",
+   "senador": "ARCE, Carlos Omar"
+  },
+  {
+   "dpp": "19/26",
+   "comision": "De Infraestructura, Vivienda y Transporte",
+   "tipo": "add",
+   "senador": "CARAMBIA, José María"
+  },
+  {
+   "dpp": "19/26",
+   "comision": "De Infraestructura, Vivienda y Transporte",
+   "tipo": "add",
+   "senador": "MENDOZA, Sandra Mariela"
+  },
+  {
+   "dpp": "19/26",
+   "comision": "De Población y Desarrollo Humano",
+   "tipo": "add",
+   "senador": "GODOY, Juan Cruz"
+  },
+  {
+   "dpp": "19/26",
+   "comision": "De Población y Desarrollo Humano",
+   "tipo": "add",
+   "senador": "ALVAREZ RIVERO, Carmen"
+  },
+  {
+   "dpp": "19/26",
+   "comision": "De Población y Desarrollo Humano",
+   "tipo": "add",
+   "senador": "FULLONE, Enzo Paolo"
+  },
+  {
+   "dpp": "19/26",
+   "comision": "De Población y Desarrollo Humano",
+   "tipo": "add",
+   "senador": "OROZCO, María Emilia"
+  },
+  {
+   "dpp": "19/26",
+   "comision": "De Población y Desarrollo Humano",
+   "tipo": "add",
+   "senador": "BENEGAS LYNCH, Joaquín Alberto"
+  },
+  {
+   "dpp": "19/26",
+   "comision": "De Población y Desarrollo Humano",
+   "tipo": "add",
+   "senador": "VISCHI, Eduardo Alejandro"
+  },
+  {
+   "dpp": "19/26",
+   "comision": "De Población y Desarrollo Humano",
+   "tipo": "add",
+   "senador": "LOSADA, Carolina"
+  },
+  {
+   "dpp": "19/26",
+   "comision": "De Población y Desarrollo Humano",
+   "tipo": "add",
+   "senador": "VALENZUELA, Mercedes Gabriela"
+  },
+  {
+   "dpp": "19/26",
+   "comision": "De Población y Desarrollo Humano",
+   "tipo": "add",
+   "senador": "HUALA, María Victoria"
+  },
+  {
+   "dpp": "19/26",
+   "comision": "De Población y Desarrollo Humano",
+   "tipo": "add",
+   "senador": "GADANO, Natalia Elena"
+  },
+  {
+   "dpp": "19/26",
+   "comision": "De Población y Desarrollo Humano",
+   "tipo": "add",
+   "senador": "MENDOZA, Sandra Mariela"
+  },
+  {
+   "dpp": "19/26",
+   "comision": "De Salud",
+   "tipo": "add",
+   "senador": "ARRASCAETA, Ivanna Marcela"
+  },
+  {
+   "dpp": "19/26",
+   "comision": "De Salud",
+   "tipo": "add",
+   "senador": "CERVI, Mario Pablo"
+  },
+  {
+   "dpp": "19/26",
+   "comision": "De Salud",
+   "tipo": "add",
+   "senador": "JUEZ, Luis Alfredo"
+  },
+  {
+   "dpp": "19/26",
+   "comision": "De Salud",
+   "tipo": "add",
+   "senador": "MONTE DE OCA, María Belén"
+  },
+  {
+   "dpp": "19/26",
+   "comision": "De Salud",
+   "tipo": "add",
+   "senador": "ALVAREZ RIVERO, Carmen"
+  },
+  {
+   "dpp": "19/26",
+   "comision": "De Salud",
+   "tipo": "add",
+   "senador": "GALARETTO, Eduardo Horacio"
+  },
+  {
+   "dpp": "19/26",
+   "comision": "De Salud",
+   "tipo": "add",
+   "senador": "VALENZUELA, Mercedes Gabriela"
+  },
+  {
+   "dpp": "19/26",
+   "comision": "De Salud",
+   "tipo": "add",
+   "senador": "TERENZI, Edith Elizabeth"
+  },
+  {
+   "dpp": "19/26",
+   "comision": "De Salud",
+   "tipo": "add",
+   "senador": "ARCE, Carlos Omar"
+  },
+  {
+   "dpp": "19/26",
+   "comision": "De Salud",
+   "tipo": "add",
+   "senador": "MOISÉS, María Carolina"
+  },
+  {
+   "dpp": "19/26",
+   "comision": "De Salud",
+   "tipo": "add",
+   "senador": "ANDRADA, Guillermo Eduardo"
+  },
+  {
+   "dpp": "19/26",
+   "comision": "De Turismo",
+   "tipo": "add",
+   "senador": "JURI, Mariana"
+  },
+  {
+   "dpp": "19/26",
+   "comision": "De Turismo",
+   "tipo": "add",
+   "senador": "BEDIA, Vilma Facunda"
+  },
+  {
+   "dpp": "19/26",
+   "comision": "De Turismo",
+   "tipo": "add",
+   "senador": "MONTE DE OCA, María Belén"
+  },
+  {
+   "dpp": "19/26",
+   "comision": "De Turismo",
+   "tipo": "add",
+   "senador": "OROZCO, María Emilia"
+  },
+  {
+   "dpp": "19/26",
+   "comision": "De Turismo",
+   "tipo": "add",
+   "senador": "FULLONE, Enzo Paolo"
+  },
+  {
+   "dpp": "19/26",
+   "comision": "De Turismo",
+   "tipo": "add",
+   "senador": "ALMEIDA, Romina María"
+  },
+  {
+   "dpp": "19/26",
+   "comision": "De Turismo",
+   "tipo": "add",
+   "senador": "VALENZUELA, Mercedes Gabriela"
+  },
+  {
+   "dpp": "19/26",
+   "comision": "De Turismo",
+   "tipo": "add",
+   "senador": "FAMA, Flavio Sergio"
+  },
+  {
+   "dpp": "19/26",
+   "comision": "De Turismo",
+   "tipo": "add",
+   "senador": "ARCE, Carlos Omar"
+  },
+  {
+   "dpp": "19/26",
+   "comision": "De Turismo",
+   "tipo": "add",
+   "senador": "VIGO, Alejandra María"
+  },
+  {
+   "dpp": "19/26",
+   "comision": "De Turismo",
+   "tipo": "add",
+   "senador": "CORROZA, Julieta"
+  },
+  {
+   "dpp": "19/26",
+   "comision": "De Ciencia y Tecnología",
+   "tipo": "add",
+   "senador": "HUALA, María Victoria"
+  },
+  {
+   "dpp": "19/26",
+   "comision": "De Ciencia y Tecnología",
+   "tipo": "add",
+   "senador": "BEDIA, Vilma Facunda"
+  },
+  {
+   "dpp": "19/26",
+   "comision": "De Ciencia y Tecnología",
+   "tipo": "add",
+   "senador": "ALMEIDA, Romina María"
+  },
+  {
+   "dpp": "19/26",
+   "comision": "De Ciencia y Tecnología",
+   "tipo": "add",
+   "senador": "OROZCO, María Emilia"
+  },
+  {
+   "dpp": "19/26",
+   "comision": "De Ciencia y Tecnología",
+   "tipo": "add",
+   "senador": "GUZMÁN CORAITA, Gonzalo"
+  },
+  {
+   "dpp": "19/26",
+   "comision": "De Ciencia y Tecnología",
+   "tipo": "add",
+   "senador": "ATAUCHE, Ezequiel"
+  },
+  {
+   "dpp": "19/26",
+   "comision": "De Ciencia y Tecnología",
+   "tipo": "add",
+   "senador": "SCHNEIDER, Silvana Lorena"
+  },
+  {
+   "dpp": "19/26",
+   "comision": "De Ciencia y Tecnología",
+   "tipo": "add",
+   "senador": "FAMA, Flavio Sergio"
+  },
+  {
+   "dpp": "19/26",
+   "comision": "De Ciencia y Tecnología",
+   "tipo": "add",
+   "senador": "JURI, Mariana"
+  },
+  {
+   "dpp": "19/26",
+   "comision": "De Ciencia y Tecnología",
+   "tipo": "add",
+   "senador": "ROJAS DECUT, Sonia Elizabeth"
+  },
+  {
+   "dpp": "19/26",
+   "comision": "De Ciencia y Tecnología",
+   "tipo": "add",
+   "senador": "ANDRADA, Guillermo Eduardo"
+  },
+  {
+   "dpp": "19/26",
+   "comision": "De Deporte",
+   "tipo": "add",
+   "senador": "OLIVERA LUCERO, Bruno Antonio"
+  },
+  {
+   "dpp": "19/26",
+   "comision": "De Deporte",
+   "tipo": "add",
+   "senador": "ABDALA, Bartolomé Esteban"
+  },
+  {
+   "dpp": "19/26",
+   "comision": "De Deporte",
+   "tipo": "add",
+   "senador": "ARRASCAETA, Ivanna Marcela"
+  },
+  {
+   "dpp": "19/26",
+   "comision": "De Deporte",
+   "tipo": "add",
+   "senador": "GODOY, Juan Cruz"
+  },
+  {
+   "dpp": "19/26",
+   "comision": "De Deporte",
+   "tipo": "add",
+   "senador": "PAOLTRONI, Francisco Manuel"
+  },
+  {
+   "dpp": "19/26",
+   "comision": "De Deporte",
+   "tipo": "add",
+   "senador": "ABAD, Maximiliano"
+  },
+  {
+   "dpp": "19/26",
+   "comision": "De Deporte",
+   "tipo": "add",
+   "senador": "GALARETTO, Eduardo Horacio"
+  },
+  {
+   "dpp": "19/26",
+   "comision": "De Deporte",
+   "tipo": "add",
+   "senador": "JURI, Mariana"
+  },
+  {
+   "dpp": "19/26",
+   "comision": "De Deporte",
+   "tipo": "add",
+   "senador": "ÁVILA, Beatriz Luisa"
+  },
+  {
+   "dpp": "19/26",
+   "comision": "De Deporte",
+   "tipo": "add",
+   "senador": "ARCE, Carlos Omar"
+  },
+  {
+   "dpp": "19/26",
+   "comision": "De Deporte",
+   "tipo": "add",
+   "senador": "ESPÍNOLA, Carlos Mauricio"
+  },
+  {
+   "dpp": "19/26",
+   "comision": "De Derechos y Garantías",
+   "tipo": "add",
+   "senador": "CERVI, Mario Pablo"
+  },
+  {
+   "dpp": "19/26",
+   "comision": "De Derechos y Garantías",
+   "tipo": "add",
+   "senador": "MÁRQUEZ, Nadia Judith"
+  },
+  {
+   "dpp": "19/26",
+   "comision": "De Derechos y Garantías",
+   "tipo": "add",
+   "senador": "PAGOTTO, Juan Carlos"
+  },
+  {
+   "dpp": "19/26",
+   "comision": "De Derechos y Garantías",
+   "tipo": "add",
+   "senador": "MONTEVERDE, Agustín Aníbal"
+  },
+  {
+   "dpp": "19/26",
+   "comision": "De Derechos y Garantías",
+   "tipo": "add",
+   "senador": "ATAUCHE, Ezequiel"
+  },
+  {
+   "dpp": "19/26",
+   "comision": "De Derechos y Garantías",
+   "tipo": "add",
+   "senador": "HUALA, María Victoria"
+  },
+  {
+   "dpp": "19/26",
+   "comision": "De Derechos y Garantías",
+   "tipo": "add",
+   "senador": "ABAD, Maximiliano"
+  },
+  {
+   "dpp": "19/26",
+   "comision": "De Derechos y Garantías",
+   "tipo": "add",
+   "senador": "FAMA, Flavio Sergio"
+  },
+  {
+   "dpp": "19/26",
+   "comision": "De Derechos y Garantías",
+   "tipo": "add",
+   "senador": "SUÁREZ, Rodolfo Alejandro"
+  },
+  {
+   "dpp": "19/26",
+   "comision": "De Derechos y Garantías",
+   "tipo": "add",
+   "senador": "TERENZI, Edith Elizabeth"
+  },
+  {
+   "dpp": "19/26",
+   "comision": "De Derechos y Garantías",
+   "tipo": "add",
+   "senador": "MOISÉS, María Carolina"
+  },
+  {
+   "dpp": "19/26",
+   "comision": "De Economías Regionales, Economía Social, Micro, Pequeña y Mediana Empresa",
+   "tipo": "add",
+   "senador": "OROZCO, María Emilia"
+  },
+  {
+   "dpp": "19/26",
+   "comision": "De Economías Regionales, Economía Social, Micro, Pequeña y Mediana Empresa",
+   "tipo": "add",
+   "senador": "ALMEIDA, Romina María"
+  },
+  {
+   "dpp": "19/26",
+   "comision": "De Economías Regionales, Economía Social, Micro, Pequeña y Mediana Empresa",
+   "tipo": "add",
+   "senador": "BENEGAS LYNCH, Joaquín Alberto"
+  },
+  {
+   "dpp": "19/26",
+   "comision": "De Economías Regionales, Economía Social, Micro, Pequeña y Mediana Empresa",
+   "tipo": "add",
+   "senador": "GODOY, Juan Cruz"
+  },
+  {
+   "dpp": "19/26",
+   "comision": "De Economías Regionales, Economía Social, Micro, Pequeña y Mediana Empresa",
+   "tipo": "add",
+   "senador": "BEDIA, Vilma Facunda"
+  },
+  {
+   "dpp": "19/26",
+   "comision": "De Economías Regionales, Economía Social, Micro, Pequeña y Mediana Empresa",
+   "tipo": "add",
+   "senador": "ÁVILA, Beatriz Luisa"
+  },
+  {
+   "dpp": "19/26",
+   "comision": "De Economías Regionales, Economía Social, Micro, Pequeña y Mediana Empresa",
+   "tipo": "add",
+   "senador": "CRISTINA, Andrea Marcela"
+  },
+  {
+   "dpp": "19/26",
+   "comision": "De Economías Regionales, Economía Social, Micro, Pequeña y Mediana Empresa",
+   "tipo": "add",
+   "senador": "SUÁREZ, Rodolfo Alejandro"
+  },
+  {
+   "dpp": "19/26",
+   "comision": "De Economías Regionales, Economía Social, Micro, Pequeña y Mediana Empresa",
+   "tipo": "add",
+   "senador": "KRONEBERGER, Daniel Ricardo"
+  },
+  {
+   "dpp": "19/26",
+   "comision": "De Economías Regionales, Economía Social, Micro, Pequeña y Mediana Empresa",
+   "tipo": "add",
+   "senador": "VALENZUELA, Mercedes Gabriela"
+  },
+  {
+   "dpp": "19/26",
+   "comision": "De Economías Regionales, Economía Social, Micro, Pequeña y Mediana Empresa",
+   "tipo": "add",
+   "senador": "ANDRADA, Guillermo Eduardo"
+  },
+  {
+   "dpp": "20/26",
+   "comision": "De Economía Nacional e Inversión",
+   "tipo": "add",
+   "senador": "DI TULLIO, Juliana"
+  },
+  {
+   "dpp": "20/26",
+   "comision": "De Economía Nacional e Inversión",
+   "tipo": "add",
+   "senador": "BAHL, Adán Humberto"
+  },
+  {
+   "dpp": "20/26",
+   "comision": "De Economía Nacional e Inversión",
+   "tipo": "add",
+   "senador": "SORIA, Martín"
+  },
+  {
+   "dpp": "20/26",
+   "comision": "De Economía Nacional e Inversión",
+   "tipo": "add",
+   "senador": "MAYANS, José Miguel Ángel"
+  },
+  {
+   "dpp": "20/26",
+   "comision": "De Economía Nacional e Inversión",
+   "tipo": "add",
+   "senador": "RECALDE, Mariano"
+  },
+  {
+   "dpp": "20/26",
+   "comision": "De Economía Nacional e Inversión",
+   "tipo": "add",
+   "senador": "REJAL, Fernando"
+  },
+  {
+   "dpp": "20/26",
+   "comision": "De Seguridad Interior y Narcotráfico",
+   "tipo": "add",
+   "senador": "BAHL, Adán Humberto"
+  },
+  {
+   "dpp": "20/26",
+   "comision": "De Seguridad Interior y Narcotráfico",
+   "tipo": "add",
+   "senador": "FERNÁNDEZ SAGASTI, Anabel"
+  },
+  {
+   "dpp": "20/26",
+   "comision": "De Seguridad Interior y Narcotráfico",
+   "tipo": "add",
+   "senador": "LEWANDOWSKI, Marcelo Néstor"
+  },
+  {
+   "dpp": "20/26",
+   "comision": "De Seguridad Interior y Narcotráfico",
+   "tipo": "add",
+   "senador": "LINARES, Carlos Alberto"
+  },
+  {
+   "dpp": "20/26",
+   "comision": "De Seguridad Interior y Narcotráfico",
+   "tipo": "add",
+   "senador": "SORIA, Martín"
+  },
+  {
+   "dpp": "20/26",
+   "comision": "De Coparticipación Federal de Impuestos",
+   "tipo": "add",
+   "senador": "BENSUSÁN, Daniel Pablo"
+  },
+  {
+   "dpp": "20/26",
+   "comision": "De Coparticipación Federal de Impuestos",
+   "tipo": "add",
+   "senador": "CORPACCI, Lucía Benigna"
+  },
+  {
+   "dpp": "20/26",
+   "comision": "De Coparticipación Federal de Impuestos",
+   "tipo": "add",
+   "senador": "DE PEDRO, Eduardo Enrique"
+  },
+  {
+   "dpp": "20/26",
+   "comision": "De Coparticipación Federal de Impuestos",
+   "tipo": "add",
+   "senador": "KIRCHNER, Alicia Margarita Antonia"
+  },
+  {
+   "dpp": "20/26",
+   "comision": "De Coparticipación Federal de Impuestos",
+   "tipo": "add",
+   "senador": "MAYANS, José Miguel Ángel"
+  },
+  {
+   "dpp": "20/26",
+   "comision": "De Coparticipación Federal de Impuestos",
+   "tipo": "add",
+   "senador": "ZAMORA, Gerardo"
+  },
+  {
+   "dpp": "20/26",
+   "comision": "De Legislación General",
+   "tipo": "add",
+   "senador": "BENSUSÁN, Daniel Pablo"
+  },
+  {
+   "dpp": "20/26",
+   "comision": "De Legislación General",
+   "tipo": "add",
+   "senador": "RECALDE, Mariano"
+  },
+  {
+   "dpp": "20/26",
+   "comision": "De Legislación General",
+   "tipo": "add",
+   "senador": "GIMÉNEZ NAVARRO, María Celeste"
+  },
+  {
+   "dpp": "20/26",
+   "comision": "De Legislación General",
+   "tipo": "add",
+   "senador": "KIRCHNER, Alicia Margarita Antonia"
+  },
+  {
+   "dpp": "20/26",
+   "comision": "De Legislación General",
+   "tipo": "add",
+   "senador": "SORIA, Martín"
+  },
+  {
+   "dpp": "20/26",
+   "comision": "De Legislación General",
+   "tipo": "add",
+   "senador": "REJAL, Fernando"
+  },
+  {
+   "dpp": "20/26",
+   "comision": "De Defensa Nacional",
+   "tipo": "add",
+   "senador": "NEDER, José Emilio"
+  },
+  {
+   "dpp": "20/26",
+   "comision": "De Defensa Nacional",
+   "tipo": "add",
+   "senador": "CORPACCI, Lucía Benigna"
+  },
+  {
+   "dpp": "20/26",
+   "comision": "De Defensa Nacional",
+   "tipo": "add",
+   "senador": "MAYANS, José Miguel Ángel"
+  },
+  {
+   "dpp": "20/26",
+   "comision": "De Defensa Nacional",
+   "tipo": "add",
+   "senador": "CAPITANICH, Jorge Milton"
+  },
+  {
+   "dpp": "20/26",
+   "comision": "De Defensa Nacional",
+   "tipo": "add",
+   "senador": "LINARES, Carlos Alberto"
+  },
+  {
+   "dpp": "20/26",
+   "comision": "De Defensa Nacional",
+   "tipo": "add",
+   "senador": "ZAMORA, Gerardo"
+  },
+  {
+   "dpp": "20/26",
+   "comision": "De Industria y Comercio",
+   "tipo": "add",
+   "senador": "LEWANDOWSKI, Marcelo Néstor"
+  },
+  {
+   "dpp": "20/26",
+   "comision": "De Industria y Comercio",
+   "tipo": "add",
+   "senador": "CORPACCI, Lucía Benigna"
+  },
+  {
+   "dpp": "20/26",
+   "comision": "De Industria y Comercio",
+   "tipo": "add",
+   "senador": "DE PEDRO, Eduardo Enrique"
+  },
+  {
+   "dpp": "20/26",
+   "comision": "De Industria y Comercio",
+   "tipo": "add",
+   "senador": "LÓPEZ, María Florencia"
+  },
+  {
+   "dpp": "20/26",
+   "comision": "De Industria y Comercio",
+   "tipo": "add",
+   "senador": "BENSUSÁN, Daniel Pablo"
+  },
+  {
+   "dpp": "20/26",
+   "comision": "De Educación y Cultura",
+   "tipo": "add",
+   "senador": "DE PEDRO, Eduardo Enrique"
+  },
+  {
+   "dpp": "20/26",
+   "comision": "De Educación y Cultura",
+   "tipo": "add",
+   "senador": "FERNÁNDEZ SAGASTI, Anabel"
+  },
+  {
+   "dpp": "20/26",
+   "comision": "De Educación y Cultura",
+   "tipo": "add",
+   "senador": "GONZÁLEZ, María Teresa Margarita"
+  },
+  {
+   "dpp": "20/26",
+   "comision": "De Educación y Cultura",
+   "tipo": "add",
+   "senador": "GIMÉNEZ NAVARRO, María Celeste"
+  },
+  {
+   "dpp": "20/26",
+   "comision": "De Educación y Cultura",
+   "tipo": "add",
+   "senador": "LÓPEZ, Cándida Cristina"
+  },
+  {
+   "dpp": "20/26",
+   "comision": "De Educación y Cultura",
+   "tipo": "add",
+   "senador": "SALINO, Fernando Aldo"
+  },
+  {
+   "dpp": "20/26",
+   "comision": "De Población y Desarrollo Humano",
+   "tipo": "add",
+   "senador": "BENSUSÁN, Daniel Pablo"
+  },
+  {
+   "dpp": "20/26",
+   "comision": "De Población y Desarrollo Humano",
+   "tipo": "add",
+   "senador": "GONZÁLEZ, María Teresa Margarita"
+  },
+  {
+   "dpp": "20/26",
+   "comision": "De Población y Desarrollo Humano",
+   "tipo": "add",
+   "senador": "GIMÉNEZ NAVARRO, María Celeste"
+  },
+  {
+   "dpp": "20/26",
+   "comision": "De Población y Desarrollo Humano",
+   "tipo": "add",
+   "senador": "MARKS, Ana Inés"
+  },
+  {
+   "dpp": "20/26",
+   "comision": "De Población y Desarrollo Humano",
+   "tipo": "add",
+   "senador": "KIRCHNER, Alicia Margarita Antonia"
+  },
+  {
+   "dpp": "20/26",
+   "comision": "De Salud",
+   "tipo": "add",
+   "senador": "CORPACCI, Lucía Benigna"
+  },
+  {
+   "dpp": "20/26",
+   "comision": "De Salud",
+   "tipo": "add",
+   "senador": "GIMÉNEZ NAVARRO, María Celeste"
+  },
+  {
+   "dpp": "20/26",
+   "comision": "De Salud",
+   "tipo": "add",
+   "senador": "MANZUR, Juan Luis"
+  },
+  {
+   "dpp": "20/26",
+   "comision": "De Salud",
+   "tipo": "add",
+   "senador": "FERNÁNDEZ SAGASTI, Anabel"
+  },
+  {
+   "dpp": "20/26",
+   "comision": "De Salud",
+   "tipo": "add",
+   "senador": "GONZÁLEZ, María Teresa Margarita"
+  },
+  {
+   "dpp": "20/26",
+   "comision": "De Salud",
+   "tipo": "add",
+   "senador": "MORENO, Elia Esther del Carmen"
+  },
+  {
+   "dpp": "20/26",
+   "comision": "De Ciencia y Tecnología",
+   "tipo": "add",
+   "senador": "DE PEDRO, Eduardo Enrique"
+  },
+  {
+   "dpp": "20/26",
+   "comision": "De Ciencia y Tecnología",
+   "tipo": "add",
+   "senador": "GIMÉNEZ NAVARRO, María Celeste"
+  },
+  {
+   "dpp": "20/26",
+   "comision": "De Ciencia y Tecnología",
+   "tipo": "add",
+   "senador": "GONZÁLEZ, María Teresa Margarita"
+  },
+  {
+   "dpp": "20/26",
+   "comision": "De Ciencia y Tecnología",
+   "tipo": "add",
+   "senador": "LINARES, Carlos Alberto"
+  },
+  {
+   "dpp": "20/26",
+   "comision": "De Ciencia y Tecnología",
+   "tipo": "add",
+   "senador": "SORIA, Martín"
+  },
+  {
+   "dpp": "20/26",
+   "comision": "De Ciencia y Tecnología",
+   "tipo": "add",
+   "senador": "SALINO, Fernando Aldo"
+  },
+  {
+   "dpp": "20/26",
+   "comision": "De Derechos y Garantías",
+   "tipo": "add",
+   "senador": "KIRCHNER, Alicia Margarita Antonia"
+  },
+  {
+   "dpp": "20/26",
+   "comision": "De Derechos y Garantías",
+   "tipo": "add",
+   "senador": "CORPACCI, Lucía Benigna"
+  },
+  {
+   "dpp": "20/26",
+   "comision": "De Derechos y Garantías",
+   "tipo": "add",
+   "senador": "FERNÁNDEZ SAGASTI, Anabel"
+  },
+  {
+   "dpp": "20/26",
+   "comision": "De Derechos y Garantías",
+   "tipo": "add",
+   "senador": "LINARES, Carlos Alberto"
+  },
+  {
+   "dpp": "20/26",
+   "comision": "De Derechos y Garantías",
+   "tipo": "add",
+   "senador": "RECALDE, Mariano"
+  },
+  {
+   "dpp": "20/26",
+   "comision": "De Economías Regionales, Economía Social, Micro, Pequeña y Mediana Empresa",
+   "tipo": "add",
+   "senador": "CORPACCI, Lucía Benigna"
+  },
+  {
+   "dpp": "20/26",
+   "comision": "De Economías Regionales, Economía Social, Micro, Pequeña y Mediana Empresa",
+   "tipo": "add",
+   "senador": "LÓPEZ, María Florencia"
+  },
+  {
+   "dpp": "20/26",
+   "comision": "De Economías Regionales, Economía Social, Micro, Pequeña y Mediana Empresa",
+   "tipo": "add",
+   "senador": "UÑAC, Sergio Mauricio"
+  },
+  {
+   "dpp": "20/26",
+   "comision": "De Economías Regionales, Economía Social, Micro, Pequeña y Mediana Empresa",
+   "tipo": "add",
+   "senador": "MARKS, Ana Inés"
+  },
+  {
+   "dpp": "20/26",
+   "comision": "De Economías Regionales, Economía Social, Micro, Pequeña y Mediana Empresa",
+   "tipo": "add",
+   "senador": "BAHL, Adán Humberto"
+  },
+  {
+   "dpp": "20/26",
+   "comision": "De Economías Regionales, Economía Social, Micro, Pequeña y Mediana Empresa",
+   "tipo": "add",
+   "senador": "ZAMORA, Gerardo"
+  },
+  {
+   "dpp": "20/26",
+   "comision": "De Asuntos Administrativos y Municipales",
+   "tipo": "add",
+   "senador": "NEDER, José Emilio"
+  },
+  {
+   "dpp": "20/26",
+   "comision": "De Asuntos Administrativos y Municipales",
+   "tipo": "add",
+   "senador": "DE PEDRO, Eduardo Enrique"
+  },
+  {
+   "dpp": "20/26",
+   "comision": "De Asuntos Administrativos y Municipales",
+   "tipo": "add",
+   "senador": "LÓPEZ, Cándida Cristina"
+  },
+  {
+   "dpp": "20/26",
+   "comision": "De Asuntos Administrativos y Municipales",
+   "tipo": "add",
+   "senador": "MARKS, Ana Inés"
+  },
+  {
+   "dpp": "20/26",
+   "comision": "De Asuntos Administrativos y Municipales",
+   "tipo": "add",
+   "senador": "CAPITANICH, Jorge Milton"
+  },
+  {
+   "dpp": "20/26",
+   "comision": "De Asuntos Administrativos y Municipales",
+   "tipo": "add",
+   "senador": "REJAL, Fernando"
+  },
+  {
+   "dpp": "20/26",
+   "comision": "De Asuntos Administrativos y Municipales",
+   "tipo": "add",
+   "senador": "ZAMORA, Gerardo"
+  },
+  {
+   "dpp": "20/26",
+   "comision": "De Deporte",
+   "tipo": "add",
+   "senador": "FERNÁNDEZ SAGASTI, Anabel"
+  },
+  {
+   "dpp": "20/26",
+   "comision": "De Deporte",
+   "tipo": "add",
+   "senador": "LEWANDOWSKI, Marcelo Néstor"
+  },
+  {
+   "dpp": "20/26",
+   "comision": "De Deporte",
+   "tipo": "add",
+   "senador": "UÑAC, Sergio Mauricio"
+  },
+  {
+   "dpp": "20/26",
+   "comision": "De Deporte",
+   "tipo": "add",
+   "senador": "DE PEDRO, Eduardo Enrique"
+  },
+  {
+   "dpp": "20/26",
+   "comision": "De Deporte",
+   "tipo": "add",
+   "senador": "LÓPEZ, Cándida Cristina"
+  },
+  {
+   "dpp": "20/26",
+   "comision": "De Deporte",
+   "tipo": "add",
+   "senador": "SALINO, Fernando Aldo"
+  },
+  {
+   "dpp": "20/26",
+   "comision": "De Deporte",
+   "tipo": "add",
+   "senador": "MORENO, Elia Esther del Carmen"
+  },
+  {
+   "dpp": "20/26",
+   "comision": "De Relaciones Exteriores y Culto",
+   "tipo": "add",
+   "senador": "LEWANDOWSKI, Marcelo Néstor"
+  },
+  {
+   "dpp": "20/26",
+   "comision": "De Relaciones Exteriores y Culto",
+   "tipo": "add",
+   "senador": "MANZUR, Juan Luis"
+  },
+  {
+   "dpp": "20/26",
+   "comision": "De Relaciones Exteriores y Culto",
+   "tipo": "add",
+   "senador": "CAPITANICH, Jorge Milton"
+  },
+  {
+   "dpp": "20/26",
+   "comision": "De Relaciones Exteriores y Culto",
+   "tipo": "add",
+   "senador": "BAHL, Adán Humberto"
+  },
+  {
+   "dpp": "20/26",
+   "comision": "De Relaciones Exteriores y Culto",
+   "tipo": "add",
+   "senador": "DI TULLIO, Juliana"
+  },
+  {
+   "dpp": "20/26",
+   "comision": "De Relaciones Exteriores y Culto",
+   "tipo": "add",
+   "senador": "FERNÁNDEZ SAGASTI, Anabel"
+  },
+  {
+   "dpp": "20/26",
+   "comision": "De Deporte",
+   "tipo": "remove",
+   "senador": "ESPÍNOLA, Carlos Mauricio"
+  },
+  {
+   "dpp": "20/26",
+   "comision": "De Relaciones Exteriores y Culto",
+   "tipo": "remove",
+   "senador": "CERVI, Mario Pablo"
+  },
+  {
+   "dpp": "20/26",
+   "comision": "De Asuntos Administrativos y Municipales",
+   "tipo": "remove",
+   "senador": "CORROZA, Julieta"
+  },
+  {
+   "dpp": "21/26",
+   "comision": "De Relaciones Exteriores y Culto",
+   "tipo": "rewrite",
+   "senador": "PAOLTRONI, Francisco Manuel"
+  },
+  {
+   "dpp": "21/26",
+   "comision": "De Relaciones Exteriores y Culto",
+   "tipo": "rewrite",
+   "senador": "JUEZ, Luis Alfredo"
+  },
+  {
+   "dpp": "21/26",
+   "comision": "De Relaciones Exteriores y Culto",
+   "tipo": "rewrite",
+   "senador": "ARRASCAETA, Ivanna Marcela"
+  },
+  {
+   "dpp": "21/26",
+   "comision": "De Relaciones Exteriores y Culto",
+   "tipo": "rewrite",
+   "senador": "MONTEVERDE, Agustín Aníbal"
+  },
+  {
+   "dpp": "21/26",
+   "comision": "De Relaciones Exteriores y Culto",
+   "tipo": "rewrite",
+   "senador": "GUZMÁN CORAITA, Gonzalo"
+  },
+  {
+   "dpp": "21/26",
+   "comision": "De Relaciones Exteriores y Culto",
+   "tipo": "rewrite",
+   "senador": "MONTE DE OCA, María Belén"
+  },
+  {
+   "dpp": "21/26",
+   "comision": "De Relaciones Exteriores y Culto",
+   "tipo": "rewrite",
+   "senador": "ROJAS DECUT, Sonia Elizabeth"
+  },
+  {
+   "dpp": "21/26",
+   "comision": "De Relaciones Exteriores y Culto",
+   "tipo": "rewrite",
+   "senador": "VISCHI, Eduardo Alejandro"
+  },
+  {
+   "dpp": "21/26",
+   "comision": "De Relaciones Exteriores y Culto",
+   "tipo": "rewrite",
+   "senador": "LOSADA, Carolina"
+  },
+  {
+   "dpp": "21/26",
+   "comision": "De Relaciones Exteriores y Culto",
+   "tipo": "rewrite",
+   "senador": "ABAD, Maximiliano"
+  },
+  {
+   "dpp": "21/26",
+   "comision": "De Relaciones Exteriores y Culto",
+   "tipo": "rewrite",
+   "senador": "SUÁREZ, Rodolfo Alejandro"
+  },
+  {
+   "dpp": "21/26",
+   "comision": "De Relaciones Exteriores y Culto",
+   "tipo": "rewrite",
+   "senador": "GOERLING LARA, Enrique Martín"
+  },
+  {
+   "dpp": "21/26",
+   "comision": "De Relaciones Exteriores y Culto",
+   "tipo": "rewrite",
+   "senador": "ANDRADA, Guillermo Eduardo"
+  },
+  {
+   "dpp": "21/26",
+   "comision": "De Relaciones Exteriores y Culto",
+   "tipo": "rewrite",
+   "senador": "LEWANDOWSKI, Marcelo Néstor"
+  },
+  {
+   "dpp": "21/26",
+   "comision": "De Relaciones Exteriores y Culto",
+   "tipo": "rewrite",
+   "senador": "MANZUR, Juan Luis"
+  },
+  {
+   "dpp": "21/26",
+   "comision": "De Relaciones Exteriores y Culto",
+   "tipo": "rewrite",
+   "senador": "CAPITANICH, Jorge Milton"
+  },
+  {
+   "dpp": "21/26",
+   "comision": "De Relaciones Exteriores y Culto",
+   "tipo": "rewrite",
+   "senador": "BAHL, Adán Humberto"
+  },
+  {
+   "dpp": "21/26",
+   "comision": "De Relaciones Exteriores y Culto",
+   "tipo": "rewrite",
+   "senador": "DI TULLIO, Juliana"
+  },
+  {
+   "dpp": "21/26",
+   "comision": "De Relaciones Exteriores y Culto",
+   "tipo": "rewrite",
+   "senador": "FERNÁNDEZ SAGASTI, Anabel"
+  },
+  {
+   "dpp": "21/26",
+   "comision": "De Minería, Energía y Combustibles",
+   "tipo": "rewrite",
+   "senador": "FAMA, Flavio Sergio"
+  },
+  {
+   "dpp": "21/26",
+   "comision": "De Minería, Energía y Combustibles",
+   "tipo": "rewrite",
+   "senador": "CERVI, Mario Pablo"
+  },
+  {
+   "dpp": "21/26",
+   "comision": "De Minería, Energía y Combustibles",
+   "tipo": "rewrite",
+   "senador": "GODOY, Juan Cruz"
+  },
+  {
+   "dpp": "21/26",
+   "comision": "De Minería, Energía y Combustibles",
+   "tipo": "rewrite",
+   "senador": "OLIVERA LUCERO, Bruno Antonio"
+  },
+  {
+   "dpp": "21/26",
+   "comision": "De Minería, Energía y Combustibles",
+   "tipo": "rewrite",
+   "senador": "ATAUCHE, Ezequiel"
+  },
+  {
+   "dpp": "21/26",
+   "comision": "De Minería, Energía y Combustibles",
+   "tipo": "rewrite",
+   "senador": "COTO, Agustín Pedro"
+  },
+  {
+   "dpp": "21/26",
+   "comision": "De Minería, Energía y Combustibles",
+   "tipo": "rewrite",
+   "senador": "FULLONE, Enzo Paolo"
+  },
+  {
+   "dpp": "21/26",
+   "comision": "De Minería, Energía y Combustibles",
+   "tipo": "rewrite",
+   "senador": "JURI, Mariana"
+  },
+  {
+   "dpp": "21/26",
+   "comision": "De Minería, Energía y Combustibles",
+   "tipo": "rewrite",
+   "senador": "GALARETTO, Eduardo Horacio"
+  },
+  {
+   "dpp": "21/26",
+   "comision": "De Minería, Energía y Combustibles",
+   "tipo": "rewrite",
+   "senador": "CRISTINA, Andrea Marcela"
+  },
+  {
+   "dpp": "21/26",
+   "comision": "De Minería, Energía y Combustibles",
+   "tipo": "rewrite",
+   "senador": "ROYÓN, Flavia Gabriela"
+  },
+  {
+   "dpp": "21/26",
+   "comision": "De Minería, Energía y Combustibles",
+   "tipo": "rewrite",
+   "senador": "CARAMBIA, José María"
+  },
+  {
+   "dpp": "21/26",
+   "comision": "De Minería, Energía y Combustibles",
+   "tipo": "rewrite",
+   "senador": "CORROZA, Julieta"
+  },
+  {
+   "dpp": "21/26",
+   "comision": "De Minería, Energía y Combustibles",
+   "tipo": "rewrite",
+   "senador": "MOISÉS, María Carolina"
+  },
+  {
+   "dpp": "21/26",
+   "comision": "De Justicia y Asuntos Penales",
+   "tipo": "rewrite",
+   "senador": "GUZMÁN CORAITA, Gonzalo"
+  },
+  {
+   "dpp": "21/26",
+   "comision": "De Justicia y Asuntos Penales",
+   "tipo": "rewrite",
+   "senador": "PAGOTTO, Juan Carlos"
+  },
+  {
+   "dpp": "21/26",
+   "comision": "De Justicia y Asuntos Penales",
+   "tipo": "rewrite",
+   "senador": "BULLRICH, Patricia"
+  },
+  {
+   "dpp": "21/26",
+   "comision": "De Justicia y Asuntos Penales",
+   "tipo": "rewrite",
+   "senador": "MONTE DE OCA, María Belén"
+  },
+  {
+   "dpp": "21/26",
+   "comision": "De Justicia y Asuntos Penales",
+   "tipo": "rewrite",
+   "senador": "JUEZ, Luis Alfredo"
+  },
+  {
+   "dpp": "21/26",
+   "comision": "De Justicia y Asuntos Penales",
+   "tipo": "rewrite",
+   "senador": "VISCHI, Eduardo Alejandro"
+  },
+  {
+   "dpp": "21/26",
+   "comision": "De Justicia y Asuntos Penales",
+   "tipo": "rewrite",
+   "senador": "LOSADA, Carolina"
+  },
+  {
+   "dpp": "21/26",
+   "comision": "De Justicia y Asuntos Penales",
+   "tipo": "rewrite",
+   "senador": "ABAD, Maximiliano"
+  },
+  {
+   "dpp": "21/26",
+   "comision": "De Justicia y Asuntos Penales",
+   "tipo": "rewrite",
+   "senador": "HUALA, María Victoria"
+  },
+  {
+   "dpp": "21/26",
+   "comision": "De Justicia y Asuntos Penales",
+   "tipo": "rewrite",
+   "senador": "ARCE, Carlos Omar"
+  },
+  {
+   "dpp": "21/26",
+   "comision": "De Justicia y Asuntos Penales",
+   "tipo": "rewrite",
+   "senador": "GADANO, Natalia Elena"
+  },
+  {
+   "dpp": "21/26",
+   "comision": "De Justicia y Asuntos Penales",
+   "tipo": "rewrite",
+   "senador": "ÁVILA, Beatriz Luisa"
+  },
+  {
+   "dpp": "21/26",
+   "comision": "De Justicia y Asuntos Penales",
+   "tipo": "rewrite",
+   "senador": "MENDOZA, Sandra Mariela"
+  },
+  {
+   "dpp": "21/26",
+   "comision": "De Presupuesto y Hacienda",
+   "tipo": "rewrite",
+   "senador": "MONTEVERDE, Agustín Aníbal"
+  },
+  {
+   "dpp": "21/26",
+   "comision": "De Presupuesto y Hacienda",
+   "tipo": "rewrite",
+   "senador": "ATAUCHE, Ezequiel"
+  },
+  {
+   "dpp": "21/26",
+   "comision": "De Presupuesto y Hacienda",
+   "tipo": "rewrite",
+   "senador": "OLIVERA LUCERO, Bruno Antonio"
+  },
+  {
+   "dpp": "21/26",
+   "comision": "De Presupuesto y Hacienda",
+   "tipo": "rewrite",
+   "senador": "ABDALA, Bartolomé Esteban"
+  },
+  {
+   "dpp": "21/26",
+   "comision": "De Presupuesto y Hacienda",
+   "tipo": "rewrite",
+   "senador": "BULLRICH, Patricia"
+  },
+  {
+   "dpp": "21/26",
+   "comision": "De Presupuesto y Hacienda",
+   "tipo": "rewrite",
+   "senador": "FAMA, Flavio Sergio"
+  },
+  {
+   "dpp": "21/26",
+   "comision": "De Presupuesto y Hacienda",
+   "tipo": "rewrite",
+   "senador": "JURI, Mariana"
+  },
+  {
+   "dpp": "21/26",
+   "comision": "De Presupuesto y Hacienda",
+   "tipo": "rewrite",
+   "senador": "SCHNEIDER, Silvana Lorena"
+  },
+  {
+   "dpp": "21/26",
+   "comision": "De Presupuesto y Hacienda",
+   "tipo": "rewrite",
+   "senador": "CRISTINA, Andrea Marcela"
+  },
+  {
+   "dpp": "21/26",
+   "comision": "De Presupuesto y Hacienda",
+   "tipo": "rewrite",
+   "senador": "VIGO, Alejandra María"
+  },
+  {
+   "dpp": "21/26",
+   "comision": "De Presupuesto y Hacienda",
+   "tipo": "rewrite",
+   "senador": "TERENZI, Edith Elizabeth"
+  },
+  {
+   "dpp": "21/26",
+   "comision": "De Presupuesto y Hacienda",
+   "tipo": "rewrite",
+   "senador": "ÁVILA, Beatriz Luisa"
+  },
+  {
+   "dpp": "21/26",
+   "comision": "De Presupuesto y Hacienda",
+   "tipo": "rewrite",
+   "senador": "ANDRADA, Guillermo Eduardo"
+  },
+  {
+   "dpp": "21/26",
+   "comision": "De Ambiente y Desarrollo Sustentable",
+   "tipo": "rewrite",
+   "senador": "TERENZI, Edith Elizabeth"
+  },
+  {
+   "dpp": "21/26",
+   "comision": "De Ambiente y Desarrollo Sustentable",
+   "tipo": "rewrite",
+   "senador": "GADANO, Natalia Elena"
+  },
+  {
+   "dpp": "21/26",
+   "comision": "De Ambiente y Desarrollo Sustentable",
+   "tipo": "rewrite",
+   "senador": "ROJAS DECUT, Sonia Elizabeth"
+  },
+  {
+   "dpp": "21/26",
+   "comision": "De Ambiente y Desarrollo Sustentable",
+   "tipo": "rewrite",
+   "senador": "ROYÓN, Flavia Gabriela"
+  },
+  {
+   "dpp": "21/26",
+   "comision": "De Ambiente y Desarrollo Sustentable",
+   "tipo": "rewrite",
+   "senador": "KRONEBERGER, Daniel Ricardo"
+  },
+  {
+   "dpp": "21/26",
+   "comision": "De Ambiente y Desarrollo Sustentable",
+   "tipo": "rewrite",
+   "senador": "VISCHI, Eduardo Alejandro"
+  },
+  {
+   "dpp": "21/26",
+   "comision": "De Ambiente y Desarrollo Sustentable",
+   "tipo": "rewrite",
+   "senador": "GOERLING LARA, Enrique Martín"
+  },
+  {
+   "dpp": "21/26",
+   "comision": "De Ambiente y Desarrollo Sustentable",
+   "tipo": "rewrite",
+   "senador": "ATAUCHE, Ezequiel"
+  },
+  {
+   "dpp": "21/26",
+   "comision": "De Ambiente y Desarrollo Sustentable",
+   "tipo": "rewrite",
+   "senador": "MÁRQUEZ, Nadia Judith"
+  },
+  {
+   "dpp": "21/26",
+   "comision": "De Ambiente y Desarrollo Sustentable",
+   "tipo": "rewrite",
+   "senador": "BEDIA, Vilma Facunda"
+  },
+  {
+   "dpp": "21/26",
+   "comision": "De Ambiente y Desarrollo Sustentable",
+   "tipo": "rewrite",
+   "senador": "ALMEIDA, Romina María"
+  },
+  {
+   "dpp": "21/26",
+   "comision": "De Ambiente y Desarrollo Sustentable",
+   "tipo": "rewrite",
+   "senador": "ARRASCAETA, Ivanna Marcela"
+  },
+  {
+   "dpp": "21/26",
+   "comision": "De Ambiente y Desarrollo Sustentable",
+   "tipo": "rewrite",
+   "senador": "MENDOZA, Sandra Mariela"
+  },
+  {
+   "dpp": "21/26",
+   "comision": "De Trabajo y Previsión Social",
+   "tipo": "rewrite",
+   "senador": "ALVAREZ RIVERO, Carmen"
+  },
+  {
+   "dpp": "21/26",
+   "comision": "De Trabajo y Previsión Social",
+   "tipo": "rewrite",
+   "senador": "BENEGAS LYNCH, Joaquín Alberto"
+  },
+  {
+   "dpp": "21/26",
+   "comision": "De Trabajo y Previsión Social",
+   "tipo": "rewrite",
+   "senador": "GODOY, Juan Cruz"
+  },
+  {
+   "dpp": "21/26",
+   "comision": "De Trabajo y Previsión Social",
+   "tipo": "rewrite",
+   "senador": "OLIVERA LUCERO, Bruno Antonio"
+  },
+  {
+   "dpp": "21/26",
+   "comision": "De Trabajo y Previsión Social",
+   "tipo": "rewrite",
+   "senador": "VISCHI, Eduardo Alejandro"
+  },
+  {
+   "dpp": "21/26",
+   "comision": "De Trabajo y Previsión Social",
+   "tipo": "rewrite",
+   "senador": "SUÁREZ, Rodolfo Alejandro"
+  },
+  {
+   "dpp": "21/26",
+   "comision": "De Trabajo y Previsión Social",
+   "tipo": "rewrite",
+   "senador": "SCHNEIDER, Silvana Lorena"
+  },
+  {
+   "dpp": "21/26",
+   "comision": "De Trabajo y Previsión Social",
+   "tipo": "rewrite",
+   "senador": "HUALA, María Victoria"
+  },
+  {
+   "dpp": "21/26",
+   "comision": "De Trabajo y Previsión Social",
+   "tipo": "rewrite",
+   "senador": "ROJAS DECUT, Sonia Elizabeth"
+  },
+  {
+   "dpp": "21/26",
+   "comision": "De Trabajo y Previsión Social",
+   "tipo": "rewrite",
+   "senador": "CARAMBIA, José María"
+  },
+  {
+   "dpp": "21/26",
+   "comision": "De Trabajo y Previsión Social",
+   "tipo": "rewrite",
+   "senador": "ROYÓN, Flavia Gabriela"
+  },
+  {
+   "dpp": "21/26",
+   "comision": "De Trabajo y Previsión Social",
+   "tipo": "rewrite",
+   "senador": "MOISÉS, María Carolina"
+  },
+  {
+   "dpp": "23/26",
+   "comision": "De Asuntos Constitucionales",
+   "tipo": "replace",
+   "senador": "ESPÍNOLA, Carlos Mauricio",
+   "reemplaza": "TERENZI, Edith Elizabeth"
+  },
+  {
+   "dpp": "23/26",
+   "comision": "De Coparticipación Federal de Impuestos",
+   "tipo": "replace",
+   "senador": "VISCHI, Eduardo Alejandro",
+   "reemplaza": "KRONEBERGER, Daniel Ricardo"
+  },
+  {
+   "dpp": "23/26",
+   "comision": "De Población y Desarrollo Humano",
+   "tipo": "replace",
+   "senador": "KRONEBERGER, Daniel Ricardo",
+   "reemplaza": "VISCHI, Eduardo Alejandro"
+  },
+  {
+   "dpp": "23/26",
+   "comision": "De Trabajo y Previsión Social",
+   "tipo": "replace",
+   "senador": "JURI, Mariana",
+   "reemplaza": "SUÁREZ, Rodolfo Alejandro"
+  },
+  {
+   "dpp": "24/26",
+   "comision": "De Industria y Comercio",
+   "tipo": "add",
+   "senador": "SALINO, Fernando Aldo"
+  },
+  {
+   "dpp": "24/26",
+   "comision": "De Infraestructura, Vivienda y Transporte",
+   "tipo": "add",
+   "senador": "GONZÁLEZ, María Teresa Margarita"
+  },
+  {
+   "dpp": "24/26",
+   "comision": "De Infraestructura, Vivienda y Transporte",
+   "tipo": "add",
+   "senador": "LEWANDOWSKI, Marcelo Néstor"
+  },
+  {
+   "dpp": "24/26",
+   "comision": "De Infraestructura, Vivienda y Transporte",
+   "tipo": "add",
+   "senador": "RECALDE, Mariano"
+  },
+  {
+   "dpp": "24/26",
+   "comision": "De Infraestructura, Vivienda y Transporte",
+   "tipo": "add",
+   "senador": "BENSUSÁN, Daniel Pablo"
+  },
+  {
+   "dpp": "24/26",
+   "comision": "De Infraestructura, Vivienda y Transporte",
+   "tipo": "add",
+   "senador": "NEDER, José Emilio"
+  },
+  {
+   "dpp": "24/26",
+   "comision": "De Infraestructura, Vivienda y Transporte",
+   "tipo": "add",
+   "senador": "ZAMORA, Gerardo"
+  },
+  {
+   "dpp": "24/26",
+   "comision": "De Turismo",
+   "tipo": "add",
+   "senador": "RECALDE, Mariano"
+  },
+  {
+   "dpp": "24/26",
+   "comision": "De Turismo",
+   "tipo": "add",
+   "senador": "LÓPEZ, Cándida Cristina"
+  },
+  {
+   "dpp": "24/26",
+   "comision": "De Turismo",
+   "tipo": "add",
+   "senador": "KIRCHNER, Alicia Margarita Antonia"
+  },
+  {
+   "dpp": "24/26",
+   "comision": "De Turismo",
+   "tipo": "add",
+   "senador": "MARKS, Ana Inés"
+  },
+  {
+   "dpp": "24/26",
+   "comision": "De Turismo",
+   "tipo": "add",
+   "senador": "DI TULLIO, Juliana"
+  },
+  {
+   "dpp": "24/26",
+   "comision": "De Turismo",
+   "tipo": "add",
+   "senador": "ZAMORA, Gerardo"
+  },
+  {
+   "dpp": "25/26",
+   "comision": "De Turismo",
+   "tipo": "replace",
+   "senador": "GUZMÁN CORAITA, Gonzalo",
+   "reemplaza": "OROZCO, María Emilia"
+  },
+  {
+   "dpp": "25/26",
+   "comision": "De Agricultura, Ganadería y Pesca",
+   "tipo": "replace",
+   "senador": "GUZMÁN CORAITA, Gonzalo",
+   "reemplaza": "OROZCO, María Emilia"
+  },
+  {
+   "dpp": "26/26",
+   "comision": "De Trabajo y Previsión Social",
+   "tipo": "replace",
+   "senador": "ESPÍNOLA, Carlos Mauricio",
+   "reemplaza": "HUALA, María Victoria"
+  },
+  {
+   "dpp": "26/26",
+   "comision": "De Defensa Nacional",
+   "tipo": "replace",
+   "senador": "ESPÍNOLA, Carlos Mauricio",
+   "reemplaza": "GOERLING LARA, Enrique Martín"
+  },
+  {
+   "dpp": "27/26",
+   "comision": "De Sistemas, Medios de Comunicación y Libertad de Expresión",
+   "tipo": "add",
+   "senador": "GIMÉNEZ NAVARRO, María Celeste"
+  },
+  {
+   "dpp": "27/26",
+   "comision": "De Sistemas, Medios de Comunicación y Libertad de Expresión",
+   "tipo": "add",
+   "senador": "NEDER, José Emilio"
+  },
+  {
+   "dpp": "27/26",
+   "comision": "De Sistemas, Medios de Comunicación y Libertad de Expresión",
+   "tipo": "add",
+   "senador": "MAYANS, José Miguel Ángel"
+  },
+  {
+   "dpp": "27/26",
+   "comision": "De Sistemas, Medios de Comunicación y Libertad de Expresión",
+   "tipo": "add",
+   "senador": "SORIA, Martín"
+  },
+  {
+   "dpp": "27/26",
+   "comision": "De Sistemas, Medios de Comunicación y Libertad de Expresión",
+   "tipo": "add",
+   "senador": "SALINO, Fernando Aldo"
+  },
+  {
+   "dpp": "27/26",
+   "comision": "De Sistemas, Medios de Comunicación y Libertad de Expresión",
+   "tipo": "add",
+   "senador": "MORENO, Elia Esther del Carmen"
+  },
+  {
+   "dpp": "28/26",
+   "comision": "De Asuntos Administrativos y Municipales",
+   "tipo": "replace",
+   "senador": "ABDALA, Bartolomé Esteban",
+   "reemplaza": "ATAUCHE, Ezequiel"
+  },
+  {
+   "dpp": "28/26",
+   "comision": "De Trabajo y Previsión Social",
+   "tipo": "replace",
+   "senador": "MONTE DE OCA, María Belén",
+   "reemplaza": "BENEGAS LYNCH, Joaquín Alberto"
+  },
+  {
+   "dpp": "28/26",
+   "comision": "De Asuntos Administrativos y Municipales",
+   "tipo": "remove",
+   "senador": "CAPITANICH, Jorge Milton"
+  },
+  {
+   "dpp": "29/26",
+   "comision": "De Asuntos Administrativos y Municipales",
+   "tipo": "replace",
+   "senador": "ATAUCHE, Ezequiel",
+   "reemplaza": "ABDALA, Bartolomé Esteban"
+  },
+  {
+   "dpp": "29/26",
+   "comision": "De Trabajo y Previsión Social",
+   "tipo": "replace",
+   "senador": "BENEGAS LYNCH, Joaquín Alberto",
+   "reemplaza": "MONTE DE OCA, María Belén"
+  },
+  {
+   "dpp": "29/26",
+   "comision": "De Acuerdos",
+   "tipo": "replace",
+   "senador": "FAMA, Flavio Sergio",
+   "reemplaza": "ABAD, Maximiliano"
+  },
+  {
+   "dpp": "29/26",
+   "comision": "De Acuerdos",
+   "tipo": "replace",
+   "senador": "VALENZUELA, Mercedes Gabriela",
+   "reemplaza": "JURI, Mariana"
+  },
+  {
+   "dpp": "29/26",
+   "comision": "De Asuntos Constitucionales",
+   "tipo": "replace",
+   "senador": "TERENZI, Edith Elizabeth",
+   "reemplaza": "VIGO, Alejandra María"
+  },
+  {
+   "dpp": "29/26",
+   "comision": "De Asuntos Constitucionales",
+   "tipo": "replace",
+   "senador": "VALENZUELA, Mercedes Gabriela",
+   "reemplaza": "VISCHI, Eduardo Alejandro"
+  },
+  {
+   "dpp": "29/26",
+   "comision": "De Asuntos Constitucionales",
+   "tipo": "replace",
+   "senador": "LOSADA, Carolina",
+   "reemplaza": "SUÁREZ, Rodolfo Alejandro"
+  },
+  {
+   "dpp": "29/26",
+   "comision": "De Asuntos Constitucionales",
+   "tipo": "replace",
+   "senador": "FULLONE, Enzo Paolo",
+   "reemplaza": "JUEZ, Luis Alfredo"
+  },
+  {
+   "dpp": "29/26",
+   "comision": "De Asuntos Constitucionales",
+   "tipo": "replace",
+   "senador": "GODOY, Juan Cruz",
+   "reemplaza": "MONTE DE OCA, María Belén"
+  },
+  {
+   "dpp": "29/26",
+   "comision": "De Turismo",
+   "tipo": "replace",
+   "senador": "OROZCO, María Emilia",
+   "reemplaza": "GUZMÁN CORAITA, Gonzalo"
+  },
+  {
+   "dpp": "30/26",
+   "comision": "De Defensa Nacional",
+   "tipo": "replace",
+   "senador": "GOERLING LARA, Enrique Martín",
+   "reemplaza": "ESPÍNOLA, Carlos Mauricio"
+  },
+  {
+   "dpp": "30/26",
+   "comision": "De Trabajo y Previsión Social",
+   "tipo": "replace",
+   "senador": "HUALA, María Victoria",
+   "reemplaza": "ESPÍNOLA, Carlos Mauricio"
+  },
+  {
+   "dpp": "30/26",
+   "comision": "De Trabajo y Previsión Social",
+   "tipo": "replace",
+   "senador": "SUÁREZ, Rodolfo Alejandro",
+   "reemplaza": "JURI, Mariana"
+  },
+  {
+   "dpp": "30/26",
+   "comision": "De Agricultura, Ganadería y Pesca",
+   "tipo": "replace",
+   "senador": "OROZCO, María Emilia",
+   "reemplaza": "GUZMÁN CORAITA, Gonzalo"
+  },
+  {
+   "dpp": "30/26",
+   "comision": "De Acuerdos",
+   "tipo": "replace",
+   "senador": "JURI, Mariana",
+   "reemplaza": "VALENZUELA, Mercedes Gabriela"
+  },
+  {
+   "dpp": "30/26",
+   "comision": "De Acuerdos",
+   "tipo": "replace",
+   "senador": "ABAD, Maximiliano",
+   "reemplaza": "FAMA, Flavio Sergio"
+  },
+  {
+   "dpp": "30/26",
+   "comision": "De Asuntos Constitucionales",
+   "tipo": "replace",
+   "senador": "VISCHI, Eduardo Alejandro",
+   "reemplaza": "VALENZUELA, Mercedes Gabriela"
+  },
+  {
+   "dpp": "30/26",
+   "comision": "De Asuntos Constitucionales",
+   "tipo": "replace",
+   "senador": "SUÁREZ, Rodolfo Alejandro",
+   "reemplaza": "LOSADA, Carolina"
+  },
+  {
+   "dpp": "30/26",
+   "comision": "De Asuntos Constitucionales",
+   "tipo": "replace",
+   "senador": "JUEZ, Luis Alfredo",
+   "reemplaza": "FULLONE, Enzo Paolo"
+  },
+  {
+   "dpp": "30/26",
+   "comision": "De Asuntos Constitucionales",
+   "tipo": "replace",
+   "senador": "MONTE DE OCA, María Belén",
+   "reemplaza": "GODOY, Juan Cruz"
+  },
+  {
+   "dpp": "30/26",
+   "comision": "De Asuntos Constitucionales",
+   "tipo": "replace",
+   "senador": "VIGO, Alejandra María",
+   "reemplaza": "ESPÍNOLA, Carlos Mauricio"
+  },
+  {
+   "dpp": "30/26",
+   "comision": "De Salud",
+   "tipo": "replace",
+   "senador": "PAOLTRONI, Francisco Manuel",
+   "reemplaza": "JUEZ, Luis Alfredo"
+  },
+  {
+   "dpp": "30/26",
+   "comision": "De Sistemas, Medios de Comunicación y Libertad de Expresión",
+   "tipo": "replace",
+   "senador": "COTO, Agustín Pedro",
+   "reemplaza": "OROZCO, María Emilia"
+  },
+  {
+   "dpp": "30/26",
+   "comision": "De Asuntos Constitucionales",
+   "tipo": "remove",
+   "senador": "GOERLING LARA, Enrique Martín"
+  },
+  {
+   "dpp": "31/26",
+   "comision": "De Justicia y Asuntos Penales",
+   "tipo": "replace",
+   "senador": "FAMA, Flavio Sergio",
+   "reemplaza": "ABAD, Maximiliano"
+  },
+  {
+   "dpp": "33/26",
+   "comision": "De Acuerdos",
+   "tipo": "replace",
+   "senador": "VIGO, Alejandra María",
+   "reemplaza": "ÁVILA, Beatriz Luisa"
+  },
+  {
+   "dpp": "33/26",
+   "comision": "De Acuerdos",
+   "tipo": "replace",
+   "senador": "MONTE DE OCA, María Belén",
+   "reemplaza": "MÁRQUEZ, Nadia Judith"
+  },
+  {
+   "dpp": "33/26",
+   "comision": "De Presupuesto y Hacienda",
+   "tipo": "replace",
+   "senador": "ESPÍNOLA, Carlos Mauricio",
+   "reemplaza": "TERENZI, Edith Elizabeth"
+  },
+  {
+   "dpp": "33/26",
+   "comision": "De Presupuesto y Hacienda",
+   "tipo": "replace",
+   "senador": "GUZMÁN CORAITA, Gonzalo",
+   "reemplaza": "OLIVERA LUCERO, Bruno Antonio"
+  },
+  {
+   "dpp": "34/26",
+   "comision": "De Acuerdos",
+   "tipo": "replace",
+   "senador": "VISCHI, Eduardo Alejandro",
+   "reemplaza": "JURI, Mariana"
+  },
+  {
+   "dpp": "34/26",
+   "comision": "De Presupuesto y Hacienda",
+   "tipo": "replace",
+   "senador": "VISCHI, Eduardo Alejandro",
+   "reemplaza": "JURI, Mariana"
+  },
+  {
+   "dpp": "34/26",
+   "comision": "De Presupuesto y Hacienda",
+   "tipo": "replace",
+   "senador": "VALENZUELA, Mercedes Gabriela",
+   "reemplaza": "FAMA, Flavio Sergio"
+  },
+  {
+   "dpp": "34/26",
+   "comision": "De Presupuesto y Hacienda",
+   "tipo": "replace",
+   "senador": "ALVAREZ RIVERO, Carmen",
+   "reemplaza": "ATAUCHE, Ezequiel"
+  },
+  {
+   "dpp": "35/26",
+   "comision": "De Acuerdos",
+   "tipo": "replace",
+   "senador": "MÁRQUEZ, Nadia Judith",
+   "reemplaza": "MONTE DE OCA, María Belén"
+  },
+  {
+   "dpp": "35/26",
+   "comision": "De Acuerdos",
+   "tipo": "replace",
+   "senador": "JURI, Mariana",
+   "reemplaza": "VISCHI, Eduardo Alejandro"
+  },
+  {
+   "dpp": "35/26",
+   "comision": "De Presupuesto y Hacienda",
+   "tipo": "replace",
+   "senador": "JURI, Mariana",
+   "reemplaza": "VISCHI, Eduardo Alejandro"
+  },
+  {
+   "dpp": "35/26",
+   "comision": "De Presupuesto y Hacienda",
+   "tipo": "replace",
+   "senador": "OLIVERA LUCERO, Bruno Antonio",
+   "reemplaza": "GUZMÁN CORAITA, Gonzalo"
+  },
+  {
+   "dpp": "35/26",
+   "comision": "De Presupuesto y Hacienda",
+   "tipo": "replace",
+   "senador": "ATAUCHE, Ezequiel",
+   "reemplaza": "ALVAREZ RIVERO, Carmen"
+  },
+  {
+   "dpp": "35/26",
+   "comision": "De Presupuesto y Hacienda",
+   "tipo": "replace",
+   "senador": "FAMA, Flavio Sergio",
+   "reemplaza": "VALENZUELA, Mercedes Gabriela"
+  },
+  {
+   "dpp": "35/26",
+   "comision": "De Presupuesto y Hacienda",
+   "tipo": "replace",
+   "senador": "GOERLING LARA, Enrique Martín",
+   "reemplaza": "CRISTINA, Andrea Marcela"
+  },
+  {
+   "dpp": "35/26",
+   "comision": "De Relaciones Exteriores y Culto",
+   "tipo": "replace",
+   "senador": "ESPÍNOLA, Carlos Mauricio",
+   "reemplaza": "GOERLING LARA, Enrique Martín"
+  },
+  {
+   "dpp": "35/26",
+   "comision": "De Relaciones Exteriores y Culto",
+   "tipo": "replace",
+   "senador": "JURI, Mariana",
+   "reemplaza": "SUAREZ, Rodolfo Alejandro"
+  },
+  {
+   "dpp": "35/26",
+   "comision": "De Relaciones Exteriores y Culto",
+   "tipo": "replace",
+   "senador": "BULLRICH, Patricia",
+   "reemplaza": "MONTE DE OCA, María Belén"
+  },
+  {
+   "dpp": "35/26",
+   "comision": "De Relaciones Exteriores y Culto",
+   "tipo": "replace",
+   "senador": "BEDIA, Vilma Facunda",
+   "reemplaza": "ARRASCAETA, Ivanna Marcela"
+  },
+  {
+   "dpp": "35/26",
+   "comision": "De Relaciones Exteriores y Culto",
+   "tipo": "replace",
+   "senador": "SCHNEIDER, Silvana Lorena",
+   "reemplaza": "LOSADA, Carolina"
+  },
+  {
+   "dpp": "35/26",
+   "comision": "De Justicia y Asuntos Penales",
+   "tipo": "replace",
+   "senador": "GODOY, Juan Cruz",
+   "reemplaza": "MONTE DE OCA, María Belén"
+  },
+  {
+   "dpp": "35/26",
+   "comision": "De Economía Nacional e Inversión",
+   "tipo": "replace",
+   "senador": "GOERLING LARA, Enrique Martín",
+   "reemplaza": "CRISTINA, Andrea Marcela"
+  },
+  {
+   "dpp": "36/26",
+   "comision": "De Justicia y Asuntos Penales",
+   "tipo": "remove",
+   "senador": "GADANO, Natalia Elena"
+  },
+  {
+   "dpp": "36/26",
+   "comision": "De Justicia y Asuntos Penales",
+   "tipo": "add",
+   "senador": "LÓPEZ, María Florencia"
+  },
+  {
+   "dpp": "36/26",
+   "comision": "De Justicia y Asuntos Penales",
+   "tipo": "add",
+   "senador": "BENSUSÁN, Daniel Pablo"
+  },
+  {
+   "dpp": "36/26",
+   "comision": "De Justicia y Asuntos Penales",
+   "tipo": "add",
+   "senador": "BAHL, Adán Humberto"
+  },
+  {
+   "dpp": "36/26",
+   "comision": "De Justicia y Asuntos Penales",
+   "tipo": "add",
+   "senador": "CAPITANICH, Jorge Milton"
+  },
+  {
+   "dpp": "36/26",
+   "comision": "De Justicia y Asuntos Penales",
+   "tipo": "add",
+   "senador": "SORIA, Martín"
+  },
+  {
+   "dpp": "38/26",
+   "comision": "De Relaciones Exteriores y Culto",
+   "tipo": "replace",
+   "senador": "MONTE DE OCA, María Belén",
+   "reemplaza": "BULLRICH, Patricia"
+  },
+  {
+   "dpp": "38/26",
+   "comision": "De Relaciones Exteriores y Culto",
+   "tipo": "replace",
+   "senador": "ARRASCAETA, Ivanna Marcela",
+   "reemplaza": "BEDIA, Vilma Facunda"
+  },
+  {
+   "dpp": "38/26",
+   "comision": "De Relaciones Exteriores y Culto",
+   "tipo": "replace",
+   "senador": "LOSADA, Carolina",
+   "reemplaza": "SCHNEIDER, Silvana Lorena"
+  },
+  {
+   "dpp": "38/26",
+   "comision": "De Relaciones Exteriores y Culto",
+   "tipo": "replace",
+   "senador": "SUÁREZ, Rodolfo Alejandro",
+   "reemplaza": "JURI, Mariana"
+  },
+  {
+   "dpp": "38/26",
+   "comision": "De Relaciones Exteriores y Culto",
+   "tipo": "replace",
+   "senador": "GOERLING LARA, Enrique Martín",
+   "reemplaza": "ESPÍNOLA, Carlos Mauricio"
+  },
+  {
+   "dpp": "38/26",
+   "comision": "De Justicia y Asuntos Penales",
+   "tipo": "replace",
+   "senador": "ABAD, Maximiliano",
+   "reemplaza": "FAMA, Flavio Sergio"
+  },
+  {
+   "dpp": "38/26",
+   "comision": "De Justicia y Asuntos Penales",
+   "tipo": "replace",
+   "senador": "MONTE DE OCA, María Belén",
+   "reemplaza": "GODOY, Juan Cruz"
+  },
+  {
+   "dpp": "38/26",
+   "comision": "De Acuerdos",
+   "tipo": "replace",
+   "senador": "ÁVILA, Beatriz Luisa",
+   "reemplaza": "VIGO, Alejandra María"
+  },
+  {
+   "dpp": "38/26",
+   "comision": "De Infraestructura, Vivienda y Transporte",
+   "tipo": "replace",
+   "senador": "GODOY, Juan Cruz",
+   "reemplaza": "PAOLTRONI, Francisco Manuel"
+  },
+  {
+   "dpp": "38/26",
+   "comision": "De Presupuesto y Hacienda",
+   "tipo": "replace",
+   "senador": "TERENZI, Edith Elizabeth",
+   "reemplaza": "ESPÍNOLA, Carlos Mauricio"
+  },
+  {
+   "dpp": "39/26",
+   "comision": "De Presupuesto y Hacienda",
+   "tipo": "replace",
+   "senador": "VISCHI, Eduardo Alejandro",
+   "reemplaza": "FAMA, Flavio Sergio"
+  },
+  {
+   "dpp": "39/26",
+   "comision": "De Infraestructura, Vivienda y Transporte",
+   "tipo": "replace",
+   "senador": "ÁVILA, Beatriz Luisa",
+   "reemplaza": "ARCE, Carlos Omar"
+  },
+  {
+   "dpp": "39/26",
+   "comision": "De Economías Regionales, Economía Social, Micro, Pequeña y Mediana Empresa",
+   "tipo": "replace",
+   "senador": "ARCE, Carlos Omar",
+   "reemplaza": "ÁVILA, Beatriz Luisa"
+  },
+  {
+   "dpp": "40/26",
+   "comision": "De Infraestructura, Vivienda y Transporte",
+   "tipo": "replace",
+   "senador": "ABAD, Maximiliano",
+   "reemplaza": "GALARETTO, Eduardo Horacio"
+  },
+  {
+   "dpp": "40/26",
+   "comision": "De Infraestructura, Vivienda y Transporte",
+   "tipo": "replace",
+   "senador": "ESPÍNOLA, Carlos Mauricio",
+   "reemplaza": "VIGO, Alejandra María"
+  },
+  {
+   "dpp": "41/26",
+   "comision": "De Acuerdos",
+   "tipo": "replace",
+   "senador": "ALVAREZ RIVERO, Carmen",
+   "reemplaza": "MÁRQUEZ, Nadia Judith"
+  },
+  {
+   "dpp": "43/26",
+   "comision": "De Presupuesto y Hacienda",
+   "tipo": "replace",
+   "senador": "FAMA, Flavio Sergio",
+   "reemplaza": "VISCHI, Eduardo Alejandro"
+  },
+  {
+   "dpp": "43/26",
+   "comision": "De Acuerdos",
+   "tipo": "replace",
+   "senador": "ROJAS DECUT, Sonia Elizabeth",
+   "reemplaza": "ARCE, Carlos Omar"
+  },
+  {
+   "dpp": "43/26",
+   "comision": "De Acuerdos",
+   "tipo": "replace",
+   "senador": "MÁRQUEZ, Nadia Judith",
+   "reemplaza": "ALVAREZ RIVERO, Carmen"
+  },
+  {
+   "dpp": "43/26",
+   "comision": "De Infraestructura, Vivienda y Transporte",
+   "tipo": "replace",
+   "senador": "GALARETTO, Eduardo Horacio",
+   "reemplaza": "ABAD, Maximiliano"
+  },
+  {
+   "dpp": "43/26",
+   "comision": "De Infraestructura, Vivienda y Transporte",
+   "tipo": "replace",
+   "senador": "PAOLTRONI, Francisco Manuel",
+   "reemplaza": "GODOY, Juan Cruz"
+  },
+  {
+   "dpp": "43/26",
+   "comision": "De Legislación General",
+   "tipo": "replace",
+   "senador": "GUZMÁN CORAITA, Gonzalo",
+   "reemplaza": "COTO, Agustín Pedro"
+  },
+  {
+   "dpp": "43/26",
+   "comision": "De Asuntos Administrativos y Municipales",
+   "tipo": "replace",
+   "senador": "COTO, Agustín Pedro",
+   "reemplaza": "GUZMÁN CORAITA, Gonzalo"
+  },
+  {
+   "dpp": "43/26",
+   "comision": "De Educación y Cultura",
+   "tipo": "replace",
+   "senador": "KRONEBERGER, Daniel Ricardo",
+   "reemplaza": "FAMA, Flavio Sergio"
+  },
+  {
+   "dpp": "45/26",
+   "comision": "De Educación y Cultura",
+   "tipo": "replace",
+   "senador": "GALARETTO, Eduardo Horacio",
+   "reemplaza": "KRONEBERGER, Daniel Ricardo"
+  },
+  {
+   "dpp": "46/26",
+   "comision": "De Economía Nacional e Inversión",
+   "tipo": "replace",
+   "senador": "CAPITANICH, Jorge Milton",
+   "reemplaza": "DI TULLIO, Juliana"
+  },
+  {
+   "dpp": "46/26",
+   "comision": "De Educación y Cultura",
+   "tipo": "replace",
+   "senador": "FAMA, Flavio Sergio",
+   "reemplaza": "GALARETTO, Eduardo Horacio"
+  },
+  {
+   "dpp": "48/26",
+   "comision": "De Trabajo y Previsión Social",
+   "tipo": "add",
+   "senador": "DI TULLIO, Juliana"
+  },
+  {
+   "dpp": "48/26",
+   "comision": "De Trabajo y Previsión Social",
+   "tipo": "add",
+   "senador": "RECALDE, Mariano"
+  },
+  {
+   "dpp": "48/26",
+   "comision": "De Trabajo y Previsión Social",
+   "tipo": "add",
+   "senador": "CAPITANICH, Jorge Milton"
+  },
+  {
+   "dpp": "48/26",
+   "comision": "De Trabajo y Previsión Social",
+   "tipo": "add",
+   "senador": "GONZÁLEZ, María Teresa Margarita"
+  },
+  {
+   "dpp": "48/26",
+   "comision": "De Trabajo y Previsión Social",
+   "tipo": "add",
+   "senador": "LEWANDOWSKI, Marcelo Néstor"
+  },
+  {
+   "dpp": "48/26",
+   "comision": "De Agricultura, Ganadería y Pesca",
+   "tipo": "add",
+   "senador": "LEWANDOWSKI, Marcelo Néstor"
+  },
+  {
+   "dpp": "48/26",
+   "comision": "De Agricultura, Ganadería y Pesca",
+   "tipo": "add",
+   "senador": "MAYANS, José Miguel Ángel"
+  },
+  {
+   "dpp": "48/26",
+   "comision": "De Agricultura, Ganadería y Pesca",
+   "tipo": "add",
+   "senador": "BAHL, Adán Humberto"
+  },
+  {
+   "dpp": "48/26",
+   "comision": "De Agricultura, Ganadería y Pesca",
+   "tipo": "add",
+   "senador": "LINARES, Carlos Alberto"
+  },
+  {
+   "dpp": "48/26",
+   "comision": "De Agricultura, Ganadería y Pesca",
+   "tipo": "add",
+   "senador": "DE PEDRO, Eduardo Enrique"
+  },
+  {
+   "dpp": "48/26",
+   "comision": "De Agricultura, Ganadería y Pesca",
+   "tipo": "add",
+   "senador": "MANZUR, Juan Luis"
+  },
+  {
+   "dpp": "48/26",
+   "comision": "De Asuntos Constitucionales",
+   "tipo": "add",
+   "senador": "NEDER, José Emilio"
+  },
+  {
+   "dpp": "48/26",
+   "comision": "De Asuntos Constitucionales",
+   "tipo": "add",
+   "senador": "RECALDE, Mariano"
+  },
+  {
+   "dpp": "48/26",
+   "comision": "De Asuntos Constitucionales",
+   "tipo": "add",
+   "senador": "LÓPEZ, María Florencia"
+  },
+  {
+   "dpp": "48/26",
+   "comision": "De Asuntos Constitucionales",
+   "tipo": "add",
+   "senador": "BENSUSÁN, Daniel Pablo"
+  },
+  {
+   "dpp": "48/26",
+   "comision": "De Asuntos Constitucionales",
+   "tipo": "add",
+   "senador": "LÓPEZ, Cándida Cristina"
+  },
+  {
+   "dpp": "48/26",
+   "comision": "De Asuntos Constitucionales",
+   "tipo": "add",
+   "senador": "GIMÉNEZ NAVARRO, María Celeste"
+  },
+  {
+   "dpp": "52/26",
+   "comision": "De Acuerdos",
+   "tipo": "replace",
+   "senador": "ARCE, Carlos Omar",
+   "reemplaza": "ROJAS DECUT, Sonia Elizabeth"
+  },
+  {
+   "dpp": "52/26",
+   "comision": "De Población y Desarrollo Humano",
+   "tipo": "replace",
+   "senador": "MÁRQUEZ, Nadia Judith",
+   "reemplaza": "FULLONE, Enzo Paolo"
+  },
+  {
+   "dpp": "52/26",
+   "comision": "De Población y Desarrollo Humano",
+   "tipo": "replace",
+   "senador": "VISCHI, Eduardo Alejandro",
+   "reemplaza": "KRONEBERGER, Daniel Ricardo"
+  },
+  {
+   "dpp": "52/26",
+   "comision": "De Coparticipación Federal de Impuestos",
+   "tipo": "replace",
+   "senador": "VALENZUELA, Mercedes Gabriela",
+   "reemplaza": "SCHNEIDER, Silvana"
+  },
+  {
+   "dpp": "52/26",
+   "comision": "De Acuerdos",
+   "tipo": "replace",
+   "senador": "ARCE, Carlos Omar",
+   "reemplaza": "ROJAS DECUT, Sonia Elizabeth"
+  },
+  {
+   "dpp": "52/26",
+   "comision": "De Población y Desarrollo Humano",
+   "tipo": "replace",
+   "senador": "MÁRQUEZ, Nadia Judith",
+   "reemplaza": "FULLONE, Enzo Paolo"
+  },
+  {
+   "dpp": "52/26",
+   "comision": "De Población y Desarrollo Humano",
+   "tipo": "replace",
+   "senador": "VISCHI, Eduardo Alejandro",
+   "reemplaza": "KRONEBERGER, Daniel Ricardo"
+  },
+  {
+   "dpp": "52/26",
+   "comision": "De Coparticipación Federal de Impuestos",
+   "tipo": "replace",
+   "senador": "VALENZUELA, Mercedes Gabriela",
+   "reemplaza": "SCHNEIDER, Silvana"
+  },
+  {
+   "dpp": "53/26",
+   "comision": "De Coparticipación Federal de Impuestos",
+   "tipo": "replace",
+   "senador": "SCHNEIDER, Silvana Lorena",
+   "reemplaza": "VALENZUELA, Mercedes Gabriela"
+  },
+  {
+   "dpp": "53/26",
+   "comision": "De Población y Desarrollo Humano",
+   "tipo": "replace",
+   "senador": "KRONEBERGER, Daniel Ricardo",
+   "reemplaza": "VISCHI, Eduardo Alejandro"
+  },
+  {
+   "dpp": "53/26",
+   "comision": "De Población y Desarrollo Humano",
+   "tipo": "replace",
+   "senador": "FULLONE, Enzo Paolo",
+   "reemplaza": "MÁRQUEZ, Nadia Judith"
+  },
+  {
+   "dpp": "53/26",
+   "comision": "De Presupuesto y Hacienda",
+   "tipo": "replace",
+   "senador": "ESPÍNOLA, Carlos Mauricio",
+   "reemplaza": "TERENZI, Edith Elizabeth"
+  },
+  {
+   "dpp": "53/26",
+   "comision": "De Presupuesto y Hacienda",
+   "tipo": "replace",
+   "senador": "KRONEBERGER, Daniel Ricardo",
+   "reemplaza": "JURI, Mariana"
+  },
+  {
+   "dpp": "53/26",
+   "comision": "De Presupuesto y Hacienda",
+   "tipo": "replace",
+   "senador": "CERVI, Mario Pablo",
+   "reemplaza": "ATAUCHE, Ezequiel"
+  },
+  {
+   "dpp": "53/26",
+   "comision": "De Presupuesto y Hacienda",
+   "tipo": "replace",
+   "senador": "VISCHI, Eduardo Alejandro",
+   "reemplaza": "FAMA, Flavio Sergio"
+  },
+  {
+   "dpp": "53/26",
+   "comision": "De Seguridad Interior y Narcotráfico",
+   "tipo": "replace",
+   "senador": "GODOY, Juan Cruz",
+   "reemplaza": "COTO, Agustín Pedro"
+  },
+  {
+   "dpp": "53/26",
+   "comision": "De Justicia y Asuntos Penales",
+   "tipo": "replace",
+   "senador": "OLIVERA LUCERO, Bruno Antonio",
+   "reemplaza": "MONTE DE OCA, María Belén"
+  },
+  {
+   "dpp": "53/26",
+   "comision": "De Justicia y Asuntos Penales",
+   "tipo": "replace",
+   "senador": "ABDALA, Bartolomé Esteban",
+   "reemplaza": "JUEZ, Luis Alfredo"
+  },
+  {
+   "dpp": "53/26",
+   "comision": "De Economía Nacional e Inversión",
+   "tipo": "replace",
+   "senador": "SCHNEIDER, Silvana Lorena",
+   "reemplaza": "JURI, Mariana"
+  },
+  {
+   "dpp": "55/26",
+   "comision": "De Asuntos Constitucionales",
+   "tipo": "replace",
+   "senador": "ALVAREZ RIVERO, Carmen",
+   "reemplaza": "JUEZ, Luis Alfredo"
+  },
+  {
+   "dpp": "55/26",
+   "comision": "De Asuntos Constitucionales",
+   "tipo": "replace",
+   "senador": "CAPITANICH, Jorge Milton",
+   "reemplaza": "GIMÉNEZ NAVARRO, María Celeste"
+  },
+  {
+   "dpp": "55/26",
+   "comision": "De Asuntos Constitucionales",
+   "tipo": "replace",
+   "senador": "ESPÍNOLA, Carlos Mauricio",
+   "reemplaza": "ÁVILA, Beatriz Luisa"
+  },
+  {
+   "dpp": "55/26",
+   "comision": "De Legislación General",
+   "tipo": "replace",
+   "senador": "ALVAREZ RIVERO, Carmen",
+   "reemplaza": "JUEZ, Luis Alfredo"
+  },
+  {
+   "dpp": "55/26",
+   "comision": "De Legislación General",
+   "tipo": "replace",
+   "senador": "MARKS, Ana Inés",
+   "reemplaza": "SORIA, Martín"
+  },
+  {
+   "dpp": "55/26",
+   "comision": "De Legislación General",
+   "tipo": "replace",
+   "senador": "SALINO, Fernando Aldo",
+   "reemplaza": "REJAL, Fernando"
+  },
+  {
+   "dpp": "55/26",
+   "comision": "De Legislación General",
+   "tipo": "replace",
+   "senador": "VISCHI, Eduardo Alejandro",
+   "reemplaza": "ABAD, Maximiliano"
+  },
+  {
+   "dpp": "55/26",
+   "comision": "De Legislación General",
+   "tipo": "replace",
+   "senador": "CAPITANICH, Jorge Milton",
+   "reemplaza": "GIMÉNEZ NAVARRO, María Celeste"
+  },
+  {
+   "dpp": "55/26",
+   "comision": "De Presupuesto y Hacienda",
+   "tipo": "replace",
+   "senador": "TERENZI, Edith Elizabeth",
+   "reemplaza": "ESPÍNOLA, Carlos Mauricio"
+  },
+  {
+   "dpp": "56/26",
+   "comision": "De Asuntos Constitucionales",
+   "tipo": "replace",
+   "senador": "JUEZ, Luis Alfredo",
+   "reemplaza": "ALVAREZ RIVERO, Carmen"
+  },
+  {
+   "dpp": "56/26",
+   "comision": "De Asuntos Constitucionales",
+   "tipo": "replace",
+   "senador": "ÁVILA, Beatriz Luisa",
+   "reemplaza": "ESPÍNOLA, Carlos Mauricio"
+  },
+  {
+   "dpp": "56/26",
+   "comision": "De Legislación General",
+   "tipo": "replace",
+   "senador": "JUEZ, Luis Alfredo",
+   "reemplaza": "ALVAREZ RIVERO, Carmen"
+  },
+  {
+   "dpp": "56/26",
+   "comision": "De Legislación General",
+   "tipo": "replace",
+   "senador": "ABAD, Maximiliano",
+   "reemplaza": "VISCHI, Eduardo Alejandro"
+  },
+  {
+   "dpp": "56/26",
+   "comision": "De Presupuesto y Hacienda",
+   "tipo": "replace",
+   "senador": "JURI, Mariana",
+   "reemplaza": "KRONEBERGER, Daniel Ricardo"
+  },
+  {
+   "dpp": "56/26",
+   "comision": "De Presupuesto y Hacienda",
+   "tipo": "replace",
+   "senador": "FAMA, Flavio Sergio",
+   "reemplaza": "VISCHI, Eduardo Alejandro"
+  },
+  {
+   "dpp": "56/26",
+   "comision": "De Presupuesto y Hacienda",
+   "tipo": "replace",
+   "senador": "ATAUCHE, Ezequiel",
+   "reemplaza": "CERVI, Mario Pablo"
+  },
+  {
+   "dpp": "56/26",
+   "comision": "De Justicia y Asuntos Penales",
+   "tipo": "replace",
+   "senador": "MONTE DE OCA, María Belén",
+   "reemplaza": "OLIVERA LUCERO, Bruno Antonio"
+  },
+  {
+   "dpp": "56/26",
+   "comision": "De Justicia y Asuntos Penales",
+   "tipo": "replace",
+   "senador": "JUEZ, Luis Alfredo",
+   "reemplaza": "ABDALA, Bartolomé Esteban"
+  },
+  {
+   "dpp": "56/26",
+   "comision": "De Minería, Energía y Combustibles",
+   "tipo": "replace",
+   "senador": "MONTE DE OCA, María Belén",
+   "reemplaza": "GODOY, Juan Cruz"
+  },
+  {
+   "dpp": "56/26",
+   "comision": "De Minería, Energía y Combustibles",
+   "tipo": "replace",
+   "senador": "GOERLING LARA, Enrique Martín",
+   "reemplaza": "CRISTINA, Andrea Marcela"
+  },
+  {
+   "dpp": "56/26",
+   "comision": "De Deporte",
+   "tipo": "replace",
+   "senador": "FULLONE, Enzo Paolo",
+   "reemplaza": "GODOY, Juan Cruz"
+  },
+  {
+   "dpp": "56/26",
+   "comision": "De Derechos y Garantías",
+   "tipo": "replace",
+   "senador": "ALVAREZ RIVERO, Carmen",
+   "reemplaza": "MONTEVERDE, Agustín Aníbal"
+  },
+  {
+   "dpp": "56/26",
+   "comision": "De Derechos y Garantías",
+   "tipo": "replace",
+   "senador": "BENSUSÁN, Daniel Pablo",
+   "reemplaza": "FERNÁNDEZ SAGASTI, Anabel"
+  },
+  {
+   "dpp": "56/26",
+   "comision": "De Relaciones Exteriores y Culto",
+   "tipo": "replace",
+   "senador": "MÁRQUEZ, Nadia Judith",
+   "reemplaza": "JUEZ, Luis Alfredo"
+  },
+  {
+   "dpp": "56/26",
+   "comision": "De Relaciones Exteriores y Culto",
+   "tipo": "replace",
+   "senador": "ALVAREZ RIVERO, Carmen",
+   "reemplaza": "MONTEVERDE, Agustín Aníbal"
+  },
+  {
+   "dpp": "56/26",
+   "comision": "De Población y Desarrollo Humano",
+   "tipo": "replace",
+   "senador": "CERVI, Mario Pablo",
+   "reemplaza": "BENEGAS LYNCH, Joaquín Alberto"
+  },
+  {
+   "dpp": "56/26",
+   "comision": "De Economías Regionales, Economía Social, Micro, Pequeña y Mediana Empresa",
+   "tipo": "replace",
+   "senador": "CAPITANICH, Jorge Milton",
+   "reemplaza": "LÓPEZ, María Florencia"
+  },
+  {
+   "dpp": "56/26",
+   "comision": "De Seguridad Interior y Narcotráfico",
+   "tipo": "replace",
+   "senador": "ABDALA, Bartolomé Esteban",
+   "reemplaza": "GODOY, Juan Cruz"
+  },
+  {
+   "dpp": "56/26",
+   "comision": "De Economía Nacional e Inversión",
+   "tipo": "replace",
+   "senador": "JURI, Mariana",
+   "reemplaza": "SCHNEIDER, Silvana Lorena"
+  },
+  {
+   "dpp": "56/26",
+   "comision": "De Presupuesto y Hacienda",
+   "tipo": "add",
+   "senador": "SALINO, Fernando Aldo"
+  },
+  {
+   "dpp": "56/26",
+   "comision": "De Acuerdos",
+   "tipo": "add",
+   "senador": "REJAL, Fernando"
+  },
+  {
+   "dpp": "57/26",
+   "comision": "De Ciencia y Tecnología",
+   "tipo": "replace",
+   "senador": "VALENZUELA, Mercedes Gabriela",
+   "reemplaza": "JURI, Mariana"
+  },
+  {
+   "dpp": "57/26",
+   "comision": "De Población y Desarrollo Humano",
+   "tipo": "replace",
+   "senador": "VISCHI, Eduardo Alejandro",
+   "reemplaza": "LOSADA, Carolina"
+  },
+  {
+   "dpp": "57/26",
+   "comision": "De Minería, Energía y Combustibles",
+   "tipo": "replace",
+   "senador": "GADANO, Natalia Elena",
+   "reemplaza": "CARAMBIA, José María"
+  },
+  {
+   "dpp": "58/26",
+   "comision": "De Legislación General",
+   "tipo": "replace",
+   "senador": "ALVAREZ RIVERO, Carmen",
+   "reemplaza": "JUEZ, Luis Alfredo"
+  },
+  {
+   "dpp": "58/26",
+   "comision": "De Asuntos Constitucionales",
+   "tipo": "replace",
+   "senador": "ALVAREZ RIVERO, Carmen",
+   "reemplaza": "JUEZ, Luis Alfredo"
+  },
+  {
+   "dpp": "59/26",
+   "comision": "De Ciencia y Tecnología",
+   "tipo": "replace",
+   "senador": "JURI, Mariana",
+   "reemplaza": "VALENZUELA, Mercedes Gabriela"
+  },
+  {
+   "dpp": "59/26",
+   "comision": "De Legislación General",
+   "tipo": "replace",
+   "senador": "GOERLING LARA, Enrique Martin",
+   "reemplaza": "HUALA, María Victoria"
+  },
+  {
+   "dpp": "59/26",
+   "comision": "De Legislación General",
+   "tipo": "replace",
+   "senador": "JUEZ, Luis Alfredo",
+   "reemplaza": "ÁLVAREZ RIVERO, Carmen"
+  },
+  {
+   "dpp": "59/26",
+   "comision": "De Población y Desarrollo Humano",
+   "tipo": "replace",
+   "senador": "LOSADA, Carolina",
+   "reemplaza": "VISCHI, Eduardo Alejandro"
+  },
+  {
+   "dpp": "59/26",
+   "comision": "De Población y Desarrollo Humano",
+   "tipo": "replace",
+   "senador": "BENEGAS LYNCH, Joaquín Alberto",
+   "reemplaza": "CERVI, Mario Pablo"
+  },
+  {
+   "dpp": "59/26",
+   "comision": "De Asuntos Constitucionales",
+   "tipo": "replace",
+   "senador": "JUEZ, Luis Alfredo",
+   "reemplaza": "ALVAREZ RIVERO, Carmen"
+  },
+  {
+   "dpp": "59/26",
+   "comision": "De Minería, Energía y Combustibles",
+   "tipo": "replace",
+   "senador": "CARAMBIA, José María",
+   "reemplaza": "GADANO, Natalia Elena"
+  },
+  {
+   "dpp": "59/26",
+   "comision": "De Minería, Energía y Combustibles",
+   "tipo": "replace",
+   "senador": "GODOY, Juan Cruz",
+   "reemplaza": "MONTE DE OCA, María Belén"
+  },
+  {
+   "dpp": "59/26",
+   "comision": "De Deporte",
+   "tipo": "replace",
+   "senador": "GODOY, Juan Cruz",
+   "reemplaza": "FULLONE, Enzo Paolo"
+  },
+  {
+   "dpp": "59/26",
+   "comision": "De Derechos y Garantías",
+   "tipo": "replace",
+   "senador": "MONTEVERDE, Agustín Aníbal",
+   "reemplaza": "ALVAREZ RIVERO, Carmen"
+  },
+  {
+   "dpp": "59/26",
+   "comision": "De Relaciones Exteriores y Culto",
+   "tipo": "replace",
+   "senador": "JUEZ, Luis Alfredo",
+   "reemplaza": "MARQUEZ, Nadia Judith"
+  },
+  {
+   "dpp": "59/26",
+   "comision": "De Relaciones Exteriores y Culto",
+   "tipo": "replace",
+   "senador": "MONTEVERDE, Agustín Aníbal",
+   "reemplaza": "ALVAREZ RIVERO, Carmen"
+  },
+  {
+   "dpp": "59/26",
+   "comision": "De Relaciones Exteriores y Culto",
+   "tipo": "replace",
+   "senador": "JURI, Mariana",
+   "reemplaza": "SUAREZ, Rodolfo Alejandro"
+  },
+  {
+   "dpp": "59/26",
+   "comision": "De Seguridad Interior y Narcotráfico",
+   "tipo": "replace",
+   "senador": "GODOY, Juan Cruz",
+   "reemplaza": "ABDALA, Bartolomé Esteban"
+  },
+  {
+   "dpp": "59/26",
+   "comision": "De Ambiente y Desarrollo Sustentable",
+   "tipo": "replace",
+   "senador": "ABDALA, Bartolomé Esteban",
+   "reemplaza": "ATAUCHE, Ezequiel"
+  },
+  {
+   "dpp": "59/26",
+   "comision": "De Ambiente y Desarrollo Sustentable",
+   "tipo": "replace",
+   "senador": "FAMA, Flavio Sergio",
+   "reemplaza": "KRONEBERGER, Daniel Ricardo"
+  },
+  {
+   "dpp": "59/26",
+   "comision": "De Acuerdos",
+   "tipo": "replace",
+   "senador": "VISCHI, Eduardo Alejandro",
+   "reemplaza": "JURI, Mariana"
+  },
+  {
+   "dpp": "60/26",
+   "comision": "De Ambiente y Desarrollo Sustentable",
+   "tipo": "replace",
+   "senador": "HUALA, María Victoria",
+   "reemplaza": "GADANO, Natalia Elena"
+  },
+  {
+   "dpp": "61/26",
+   "comision": "De Educación y Cultura",
+   "tipo": "replace",
+   "senador": "MONTE DE OCA, María Belén",
+   "reemplaza": "ALVAREZ RIVERO, Carmen"
+  },
+  {
+   "dpp": "61/26",
+   "comision": "De Relaciones Exteriores y Culto",
+   "tipo": "replace",
+   "senador": "BULLRICH, Patricia",
+   "reemplaza": "MONTEVERDE, Agustín Aníbal"
+  },
+  {
+   "dpp": "61/26",
+   "comision": "De Relaciones Exteriores y Culto",
+   "tipo": "replace",
+   "senador": "KRONEBERGER, Daniel Ricardo",
+   "reemplaza": "ABAD, Maximiliano"
+  },
+  {
+   "dpp": "61/26",
+   "comision": "De Justicia y Asuntos Penales",
+   "tipo": "replace",
+   "senador": "KRONEBERGER, Daniel Ricardo",
+   "reemplaza": "ABAD, Maximiliano"
+  },
+  {
+   "dpp": "63/26",
+   "comision": "De Salud",
+   "tipo": "replace",
+   "senador": "PAGOTTO, Juan Carlos",
+   "reemplaza": "PAOLTRONI, Francisco Manuel"
+  },
+  {
+   "dpp": "63/26",
+   "comision": "De Relaciones Exteriores y Culto",
+   "tipo": "replace",
+   "senador": "SUÁREZ, Rodolfo",
+   "reemplaza": "JURI, Mariana"
+  },
+  {
+   "dpp": "63/26",
+   "comision": "De Relaciones Exteriores y Culto",
+   "tipo": "replace",
+   "senador": "MONTEVERDE, Agustín Aníbal",
+   "reemplaza": "BULLRICH, Patricia"
+  },
+  {
+   "dpp": "63/26",
+   "comision": "De Relaciones Exteriores y Culto",
+   "tipo": "replace",
+   "senador": "ABAD, Maximiliano",
+   "reemplaza": "KRONEBERGER, Daniel Ricardo"
+  },
+  {
+   "dpp": "63/26",
+   "comision": "De Acuerdos",
+   "tipo": "replace",
+   "senador": "JURI, Mariana",
+   "reemplaza": "VISCHI, Eduardo Alejandro"
+  },
+  {
+   "dpp": "63/26",
+   "comision": "De Ambiente y Desarrollo Sustentable",
+   "tipo": "replace",
+   "senador": "KRONEBERGER, Daniel Ricardo",
+   "reemplaza": "FAMA, Flavio"
+  },
+  {
+   "dpp": "63/26",
+   "comision": "De Ambiente y Desarrollo Sustentable",
+   "tipo": "replace",
+   "senador": "ATAUCHE, Ezequiel",
+   "reemplaza": "ABDALA, Bartolomé Esteban"
+  },
+  {
+   "dpp": "63/26",
+   "comision": "De Ambiente y Desarrollo Sustentable",
+   "tipo": "replace",
+   "senador": "GADANO, Natalia Elena",
+   "reemplaza": "HUALA, María Victoria"
+  },
+  {
+   "dpp": "63/26",
+   "comision": "De Justicia y Asuntos Penales",
+   "tipo": "replace",
+   "senador": "ABAD, Maximiliano",
+   "reemplaza": "KRONEBERGER, Daniel Ricardo"
+  },
+  {
+   "dpp": "63/26",
+   "comision": "De Legislación General",
+   "tipo": "replace",
+   "senador": "HUALA, María Victoria",
+   "reemplaza": "GOERLING LARA, Enrique Martin"
+  },
+  {
+   "dpp": "63/26",
+   "comision": "De Legislación General",
+   "tipo": "replace",
+   "senador": "PAGOTTO, Juan Carlos",
+   "reemplaza": "GUZMAN CORAITA, Gonzalo"
+  },
+  {
+   "dpp": "63/26",
+   "comision": "De Legislación General",
+   "tipo": "replace",
+   "senador": "SORIA, Martin Ignacio",
+   "reemplaza": "MARKS, Ana Inés"
+  },
+  {
+   "dpp": "63/26",
+   "comision": "De Educación y Cultura",
+   "tipo": "replace",
+   "senador": "ALVAREZ RIVERO, Carmen",
+   "reemplaza": "MONTE DE OCA, María Belén"
+  },
+  {
+   "dpp": "63/26",
+   "comision": "De Presupuesto y Hacienda",
+   "tipo": "replace",
+   "senador": "ESPÍNOLA, Carlos Mauricio",
+   "reemplaza": "TERENZI, Edith Elizabeth"
+  },
+  {
+   "dpp": "63/26",
+   "comision": "De Asuntos Constitucionales",
+   "tipo": "replace",
+   "senador": "ESPÍNOLA, Carlos Mauricio",
+   "reemplaza": "TERENZI, Edith Elizabeth"
+  },
+  {
+   "dpp": "63/26",
+   "comision": "De Asuntos Constitucionales",
+   "tipo": "replace",
+   "senador": "ALVAREZ RIVERO, Carmen",
+   "reemplaza": "MONTE DE OCA, María Belén"
+  },
+  {
+   "dpp": "63/26",
+   "comision": "De Asuntos Constitucionales",
+   "tipo": "replace",
+   "senador": "JURI, Mariana",
+   "reemplaza": "SUÁREZ, Rodolfo Alejandro"
+  },
+  {
+   "dpp": "63/26",
+   "comision": "De Minería, Energía y Combustibles",
+   "tipo": "replace",
+   "senador": "ALVAREZ RIVERO, Carmen",
+   "reemplaza": "FULLONE, Enzo Paolo"
+  },
+  {
+   "dpp": "65/26",
+   "comision": "De Legislación General",
+   "tipo": "replace",
+   "senador": "GOERLING LARA, Enrique Martin",
+   "reemplaza": "HUALA, María Victoria"
+  },
+  {
+   "dpp": "65/26",
+   "comision": "De Legislación General",
+   "tipo": "replace",
+   "senador": "GALARETTO, Eduardo Horacio",
+   "reemplaza": "ABAD, Maximiliano"
+  },
+  {
+   "dpp": "65/26",
+   "comision": "De Legislación General",
+   "tipo": "replace",
+   "senador": "JURI, Mariana",
+   "reemplaza": "SUÁREZ, Rodolfo Alejandro"
+  },
+  {
+   "dpp": "65/26",
+   "comision": "De Legislación General",
+   "tipo": "replace",
+   "senador": "ALVAREZ RIVERO, Carmen",
+   "reemplaza": "JUEZ, Luis Alfredo"
+  },
+  {
+   "dpp": "65/26",
+   "comision": "De Ambiente y Desarrollo Sustentable",
+   "tipo": "replace",
+   "senador": "ALVAREZ RIVERO, Carmen",
+   "reemplaza": "ARRASCAETA, Ivanna Marcela"
+  },
+  {
+   "dpp": "65/26",
+   "comision": "De Asuntos Constitucionales",
+   "tipo": "replace",
+   "senador": "ABDALA, Bartolomé Esteban",
+   "reemplaza": "JUEZ, Luis Alfredo"
+  }
+ ]
+}

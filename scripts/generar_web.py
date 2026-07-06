@@ -213,7 +213,7 @@ body{font-family:'Poppins',Calibri,sans-serif;background:#F5F7FA;color:#4A4A4A;f
 .btn-volver:hover{background:#fff;color:#1B5EA2}
 .com-detalle-layout{display:flex;gap:16px;align-items:flex-start}
 .com-panel{flex:1;min-width:0}
-.com-panel-integrantes{flex:0 0 340px}
+.com-panel-integrantes{flex:0 0 400px}
 .com-panel-title{font-size:11px;font-weight:700;color:#1B5EA2;text-transform:uppercase;letter-spacing:1px;margin-bottom:10px;padding-bottom:6px;border-bottom:1px solid #D6E4F0}
 @media(max-width:800px){.com-detalle-layout{flex-direction:column}.com-panel-integrantes{flex:0 0 auto;width:100%}}
 .integrante-row{display:flex;align-items:center;gap:8px;padding:8px 4px;border-bottom:1px solid #EEF2F8}
@@ -226,11 +226,23 @@ body{font-family:'Poppins',Calibri,sans-serif;background:#F5F7FA;color:#4A4A4A;f
 .rol-Vocal{background:#F5F7FA;color:#9aacbd}
 .com-proximareunion{margin-top:16px;background:#D6E4F0;border-left:3px solid #2E75B6;border-radius:6px;padding:12px 16px;font-size:12.5px;color:#0d3f73;display:flex;flex-wrap:wrap;gap:6px 18px;align-items:center}
 .com-proximareunion strong{color:#1B5EA2}
-.semaforo{display:inline-block;width:9px;height:9px;border-radius:50%;flex-shrink:0}
-.sem-verde{background:#1a9c4a}
-.sem-amarillo{background:#d9a300}
-.sem-rojo{background:#c0392b}
 .com-empty{text-align:center;padding:40px 16px;color:#aaa;font-size:13px}
+.dpp-badge{font-size:9px;font-weight:700;padding:2px 7px;border-radius:10px;background:#FFF3CD;color:#7A5200;border:none;font-family:inherit;cursor:pointer;white-space:nowrap;flex-shrink:0;letter-spacing:.3px}
+.dpp-badge:hover{background:#FFE9A8}
+.dpp-badge.dpp-original{background:#F5F7FA;color:#9aacbd;cursor:default}
+.dpp-badge.dpp-solo-hist{background:#EAF0FA;color:#2E75B6}
+.dpp-badge.dpp-solo-hist:hover{background:#D6E4F0}
+.dpp-modal-overlay{display:none;position:fixed;inset:0;background:rgba(13,63,115,0.45);z-index:400;align-items:center;justify-content:center;padding:16px}
+.dpp-modal-overlay.open{display:flex}
+.dpp-modal{background:#fff;border-radius:12px;max-width:480px;width:100%;max-height:70vh;display:flex;flex-direction:column;box-shadow:0 10px 40px rgba(0,0,0,0.3);overflow:hidden}
+.dpp-modal-head{background:#1B5EA2;color:#fff;padding:12px 16px;font-size:13px;font-weight:600;display:flex;justify-content:space-between;align-items:center;gap:10px}
+.dpp-modal-close{background:none;border:none;color:#fff;font-size:15px;cursor:pointer;padding:2px 6px;flex-shrink:0}
+.dpp-modal-body{padding:14px 16px;overflow-y:auto}
+.dpp-hist-entry{background:#D6E4F0;border-left:3px solid #2E75B6;border-radius:6px;padding:9px 12px;margin-bottom:8px}
+.dpp-hist-entry:last-child{margin-bottom:0}
+.dpp-hist-dpp{font-size:12px;font-weight:700;color:#1B5EA2}
+.dpp-hist-fecha{font-size:10px;font-weight:400;color:#4A6A8A;margin-left:8px}
+.dpp-hist-detalle{font-size:12px;color:#0d3f73;margin-top:2px}
 
 /* ── Representación por bloques ──────────────────────────────────────── */
 .repr-titulo{font-size:11px;font-weight:700;color:#1B5EA2;text-transform:uppercase;letter-spacing:1px;margin:18px 0 8px;padding-bottom:5px;border-bottom:1px solid #D6E4F0}
@@ -262,7 +274,27 @@ var TIPO_FG={PL:'#1B5EA2',PD:'#2E75B6',PC:'#0d7a4a',PR:'#5B4DA0',CA:'#1a7a4a',AC
 var TIPO_BG={PL:'#D6E4F0',PD:'#EAF0FA',PC:'#DCF0E8',PR:'#EDE8FA',CA:'#E0F4EC',AC:'#F9F0DA',CV:'#FAE0EA'};
 var ORIGEN_LABEL={S:'Senado',PE:'Poder Ejecutivo',CD:'Diputados',OV:'Otros'};
 var ORIGEN_CODE={};Object.keys(ORIGEN_LABEL).forEach(function(k){ORIGEN_CODE[ORIGEN_LABEL[k]]=k});
-var BC=['#1B5EA2','#2E75B6','#5B4DA0','#1a7a4a','#7a5c1a','#7a1a3a','#2E8B7A','#6B3A2A','#1a4a7a','#4a7a1a','#7a1a5a','#2a7a6a','#5a2a7a','#2a5a2a'];
+/* Colores por bloque — mismo mapa que el repo comisiones-senado */
+var BLOQUE_COLORS={
+  'LA LIBERTAD AVANZA':                      {dot:'#7030A0', bg:'#F3E8FA', badge:'#4A1870'},
+  'JUSTICIALISTA':                           {dot:'#1F4E9C', bg:'#E6EDF8', badge:'#0D2A5E'},
+  'JUSTICIA SOCIAL FEDERAL':                 {dot:'#00B0F0', bg:'#E5F7FE', badge:'#005F80'},
+  'UCR - UNIÓN CÍVICA RADICAL':              {dot:'#FF0000', bg:'#FFE8E8', badge:'#8B0000'},
+  'CONVICCIÓN FEDERAL':                      {dot:'#5B9BD5', bg:'#EBF3FB', badge:'#1A4A70'},
+  'FRENTE PRO':                              {dot:'#FFD700', bg:'#FFFBE6', badge:'#6B5600'},
+  'PROVINCIAS UNIDAS':                       {dot:'#ED7D31', bg:'#FDF0E7', badge:'#7A3800'},
+  'FRENTE RENOVADOR DE LA CONCORDIA SOCIAL': {dot:'#70AD47', bg:'#EDF5E7', badge:'#2E5018'},
+  'FRENTE CÍVICO POR SANTIAGO':              {dot:'#548235', bg:'#EAF2E3', badge:'#2D4A1A'},
+  'MOVERE POR SANTA CRUZ':                   {dot:'#00B050', bg:'#E6F5ED', badge:'#005A28'},
+  'DESPIERTA CHUBUT':                        {dot:'#7B3F00', bg:'#F5EBE4', badge:'#4A2400'},
+  'INDEPENDENCIA':                           {dot:'#4472C4', bg:'#EAF0FA', badge:'#1B3A7A'},
+  'LA NEUQUINIDAD':                          {dot:'#FF69B4', bg:'#FDE8F3', badge:'#8B0050'},
+  'PRIMERO LOS SALTEÑOS':                    {dot:'#92D050', bg:'#F0FAE6', badge:'#3A6010'}
+};
+var BLOQUE_COLOR_DEFAULT={dot:'#9CA3AF', bg:'#F9FAFB', badge:'#374151'};
+function normBloque(b){return String(b||'').toUpperCase().normalize('NFD').replace(/[̀-ͯ]/g,'').trim()}
+var BLOQUE_COLORS_NORM={};
+Object.keys(BLOQUE_COLORS).forEach(function(k){BLOQUE_COLORS_NORM[normBloque(k)]=BLOQUE_COLORS[k]});
 var ALL_BLOQUES=[];
 var dashAnio='2026',dashEvoMode='tipo',dashCross={dim:'',val:''};
 var activeTipos={},activeBloque='',activeOrigen='',activeProvincia='',activeAnio='';
@@ -325,11 +357,8 @@ function fillSelect(id,values){
     var o=document.createElement('option');o.value=v;o.textContent=v;sel.appendChild(o);
   });
 }
-function getBloqueColor(b){
-  var i=ALL_BLOQUES.indexOf(b);
-  if(i<0){var h=0;for(var k=0;k<b.length;k++)h=(h*31+b.charCodeAt(k))|0;i=h;}
-  return BC[((i%BC.length)+BC.length)%BC.length];
-}
+function blqColor(b){return BLOQUE_COLORS_NORM[normBloque(b)]||BLOQUE_COLOR_DEFAULT}
+function getBloqueColor(b){return blqColor(b).dot}
 
 /* ── Dashboard de análisis ─────────────────────────────────────── */
 var MESES=['Ene','Feb','Mar','Abr','May','Jun','Jul','Ago','Sep','Oct','Nov','Dic'];
@@ -861,8 +890,8 @@ function buildCard(p){
   var autoresTxt=p.autores.slice(0,3).join(' · ')+(p.autores.length>3?' +'+(p.autores.length-3)+' más':'');
   var btags='',ctags='';
   p.bloques.forEach(function(b){
-    var c=getBloqueColor(b);
-    btags+='<span class="btag" style="background:'+c+'22;color:'+c+'">'+esc(b)+'</span>';
+    var c=blqColor(b);
+    btags+='<span class="btag" style="background:'+c.bg+';color:'+c.badge+'">'+esc(b)+'</span>';
   });
   p.comisiones.forEach(function(c){ctags+='<span class="ctag">'+esc(c)+'</span>'});
   var expNro=p.origen+'-'+p.nro+'/'+String(p.anio).slice(-2);
@@ -940,29 +969,55 @@ function volverComisiones(){
   document.getElementById('com-nivel2').classList.remove('active');
   document.getElementById('com-nivel1').classList.add('active');
 }
+var comisionAbierta=null;
 function renderIntegrantes(c){
+  comisionAbierta=c;
   var html='';
-  c.integrantes.forEach(function(m){
-    var col=getBloqueColor(m.bloque);
+  c.integrantes.forEach(function(m,i){
+    var col=blqColor(m.bloque);
+    var dppBadge;
+    if(m.dpp)dppBadge='<button class="dpp-badge" onclick="mostrarDppHist('+i+')" title="Ver historial de DPP">DPP-'+esc(m.dpp)+'</button>';
+    else if(m.hist&&m.hist.length)dppBadge='<button class="dpp-badge dpp-solo-hist" onclick="mostrarDppHist('+i+')" title="Ver historial de DPP">historial</button>';
+    else dppBadge='<span class="dpp-badge dpp-original">original</span>';
     html+='<div class="integrante-row">'
       +'<span class="integrante-nombre">'+esc(m.nombre)+'</span>'
-      +'<span class="btag" style="background:'+col+'22;color:'+col+'">'+esc(m.bloque)+'</span>'
+      +'<span class="btag" style="background:'+col.bg+';color:'+col.badge+'">'+esc(m.bloque)+'</span>'
       +'<span class="rol-badge rol-'+m.rol+'">'+esc(m.rol)+'</span>'
+      +dppBadge
       +'</div>';
   });
   document.getElementById('com-integrantes-list').innerHTML=html||'<div class="com-empty">Sin integrantes cargados.</div>';
+}
+var DPP_TIPO_LABEL={add:'Designado/a',replace:'Designado/a',remove:'Dado/a de baja',rewrite:'Confirmado/a en recomposici&oacute;n'};
+function mostrarDppHist(i){
+  if(!comisionAbierta)return;
+  var m=comisionAbierta.integrantes[i];
+  if(!m)return;
+  document.getElementById('dpp-modal-title').textContent=m.nombre+' — '+nombreCom(comisionAbierta.nombre);
+  var body='';
+  if(m.hist&&m.hist.length){
+    m.hist.forEach(function(h){
+      var detalle=DPP_TIPO_LABEL[h.tipo]||h.tipo;
+      if(h.tipo==='replace'&&h.reemplaza)detalle+=' en reemplazo de '+esc(h.reemplaza);
+      body+='<div class="dpp-hist-entry">'
+        +'<div class="dpp-hist-dpp">DPP-'+esc(h.dpp)+(h.fecha?'<span class="dpp-hist-fecha">'+esc(h.fecha)+'</span>':'')+'</div>'
+        +'<div class="dpp-hist-detalle">'+detalle+'</div>'
+        +'</div>';
+    });
+  }else{
+    body='<div class="com-empty">Miembro incorporado en la constituci&oacute;n original.</div>';
+  }
+  document.getElementById('dpp-modal-body').innerHTML=body;
+  document.getElementById('dpp-modal-overlay').classList.add('open');
+}
+function cerrarDppModal(e){
+  if(e&&e.target!==document.getElementById('dpp-modal-overlay'))return;
+  document.getElementById('dpp-modal-overlay').classList.remove('open');
 }
 function parseFechaDMY(fecha){
   var parts=(fecha||'').split('/');
   if(parts.length!==3)return null;
   return new Date(+parts[2],+parts[1]-1,+parts[0]);
-}
-function semaforoAntiguedad(fecha){
-  var d=parseFechaDMY(fecha);
-  if(!d)return'';
-  var dias=Math.floor((Date.now()-d.getTime())/86400000);
-  var cls=dias<30?'sem-verde':dias<=90?'sem-amarillo':'sem-rojo';
-  return '<span class="semaforo '+cls+'" title="'+dias+' d&iacute;as desde el ingreso"></span>';
 }
 function renderProyectosComision(c){
   var nom=normCom(c.nombre);
@@ -983,15 +1038,15 @@ function renderProyectosComision(c){
     var linkBtn=p.url?'<a class="exp-link" href="'+escAttr(p.url)+'" target="_blank">Ver en Senado &#8599;</a>':'';
     var autorPrincipal=p.autores&&p.autores[0]?p.autores[0]:'';
     var bloquePrincipal=p.bloques&&p.bloques[0]?p.bloques[0]:'';
-    var col=getBloqueColor(bloquePrincipal);
-    html+='<div class="card"><div class="card-exp"><div class="exp-id">'+semaforoAntiguedad(p.fecha)
+    var col=blqColor(bloquePrincipal);
+    html+='<div class="card"><div class="card-exp"><div class="exp-id">'
       +'<span class="exp-badge" style="background:'+bg+';color:'+fg+'">'+esc(p.tipo)+'</span>'
       +'<span class="exp-nro">'+esc(expNro)+'</span>'
       +(p.fecha?'<span class="exp-fecha">'+esc(p.fecha)+'</span>':'')
       +'</div>'+linkBtn+'</div><div class="card-body"><div class="extracto">'+esc(p.extracto)+'</div>'
       +'<div class="card-meta">'
       +(autorPrincipal?'<div class="meta-row"><span class="meta-bold">'+esc(autorPrincipal)+'</span></div>':'')
-      +(bloquePrincipal?'<div class="meta-row"><span class="btag" style="background:'+col+'22;color:'+col+'">'+esc(bloquePrincipal)+'</span></div>':'')
+      +(bloquePrincipal?'<div class="meta-row"><span class="btag" style="background:'+col.bg+';color:'+col.badge+'">'+esc(bloquePrincipal)+'</span></div>':'')
       +'</div></div></div>';
   });
   el.innerHTML=html;
@@ -1060,6 +1115,117 @@ function renderRepresentacion(){
   crossHtml+='</tbody></table></div>';
   document.getElementById('repr-cross').innerHTML=crossHtml;
 }
+/* ── Exportar integrantes de la comisión abierta a PDF (diseño del
+      repo comisiones-senado, adaptado a una sola comisión) ──────── */
+function loadPoppins(doc){
+  doc.addFileToVFS('Poppins-Regular.ttf',FONT_POPPINS_REGULAR);
+  doc.addFont('Poppins-Regular.ttf','Poppins','normal');
+  doc.addFileToVFS('Poppins-Bold.ttf',FONT_POPPINS_BOLD);
+  doc.addFont('Poppins-Bold.ttf','Poppins','bold');
+}
+function exportarComisionPdf(){
+  var c=comisionAbierta;
+  if(!c)return;
+  var jsPDFLib=window.jspdf;
+  if(!jsPDFLib){alert('Error: jsPDF no cargó correctamente.');return}
+  var jsPDF=jsPDFLib.jsPDF;
+  var doc=new jsPDF({orientation:'portrait',unit:'mm',format:'a4'});
+  loadPoppins(doc);
+  var W=210,H=297,ML=15,MR=15,pageW=180;
+  var BLUE=[27,94,162],BLUE_LT=[214,228,240],GRAY=[74,74,74],WHITE=[255,255,255];
+  var d=new Date();
+  var months=['enero','febrero','marzo','abril','mayo','junio','julio','agosto','septiembre','octubre','noviembre','diciembre'];
+  var TODAY=d.getDate()+' de '+months[d.getMonth()]+' de '+d.getFullYear();
+  var pageNum=1,y=22,BOTTOM=H-14;
+
+  function drawHeader(){
+    doc.setFillColor(BLUE[0],BLUE[1],BLUE[2]);
+    doc.rect(0,0,W,18,'F');
+    doc.setTextColor(WHITE[0],WHITE[1],WHITE[2]);
+    doc.setFont('Poppins','normal');doc.setFontSize(7);
+    doc.text('SENADO DE LA NACIÓN ARGENTINA',ML,6.5);
+    doc.setFont('Poppins','bold');doc.setFontSize(9.5);
+    doc.text('PROSECRETARÍA PARLAMENTARIA',ML,13);
+    doc.setFont('Poppins','normal');doc.setFontSize(7);
+    doc.text('INTEGRACIÓN DE COMISIONES · PERÍODO 2026',W-MR,6.5,{align:'right'});
+    doc.text(TODAY,W-MR,13,{align:'right'});
+    doc.setFillColor(BLUE_LT[0],BLUE_LT[1],BLUE_LT[2]);
+    doc.rect(0,18,W,0.8,'F');
+  }
+  function drawFooter(n,total){
+    doc.setDrawColor(BLUE_LT[0],BLUE_LT[1],BLUE_LT[2]);doc.setLineWidth(0.3);
+    doc.line(ML,H-9,W-MR,H-9);
+    doc.setFont('Poppins','normal');doc.setFontSize(7);doc.setTextColor(150,150,150);
+    doc.text('Prosecretaría Parlamentaria · Senado de la Nación Argentina',ML,H-5);
+    doc.text('Página '+n+' de '+total,W/2,H-5,{align:'center'});
+    doc.text('Documento generado automáticamente',W-MR,H-5,{align:'right'});
+  }
+  function checkPage(needed){
+    if(y+needed>BOTTOM){doc.addPage();pageNum++;drawHeader();y=22;}
+  }
+
+  drawHeader();
+  var ROW_H=7;
+  checkPage(22);
+
+  doc.setFillColor(BLUE[0],BLUE[1],BLUE[2]);
+  doc.rect(ML,y,pageW,13,'F');
+  doc.setFont('Poppins','bold');doc.setFontSize(11);
+  doc.setTextColor(WHITE[0],WHITE[1],WHITE[2]);
+  var nameLines=doc.splitTextToSize(c.nombre,pageW-30);
+  doc.text(nameLines[0],ML+3,y+8.5);
+  doc.setFont('Poppins','normal');doc.setFontSize(8);
+  doc.setTextColor(BLUE_LT[0],BLUE_LT[1],BLUE_LT[2]);
+  doc.text(c.integrantes.length+' integrantes',W-MR-3,y+8.5,{align:'right'});
+  y+=14;
+
+  doc.setFillColor(BLUE_LT[0],BLUE_LT[1],BLUE_LT[2]);
+  doc.rect(ML,y,pageW,6.5,'F');
+  doc.setFont('Poppins','bold');doc.setFontSize(7.5);
+  doc.setTextColor(BLUE[0],BLUE[1],BLUE[2]);
+  doc.text('SENADOR/A',ML+8,y+4.5);
+  doc.text('BLOQUE',ML+80,y+4.5);
+  doc.text('CARGO',ML+133,y+4.5);
+  doc.text('DPP',W-MR-3,y+4.5,{align:'right'});
+  y+=6.5;
+
+  c.integrantes.forEach(function(m,i){
+    checkPage(ROW_H);
+    if(i%2===0){doc.setFillColor(248,250,252);doc.rect(ML,y,pageW,ROW_H,'F');}
+    var bc=blqColor(m.bloque);
+    var hex=bc.dot.replace('#','');
+    doc.setFillColor(parseInt(hex.substring(0,2),16),parseInt(hex.substring(2,4),16),parseInt(hex.substring(4,6),16));
+    doc.circle(ML+4.5,y+ROW_H/2,1.4,'F');
+    doc.setFont('Poppins','normal');doc.setFontSize(8.5);
+    doc.setTextColor(GRAY[0],GRAY[1],GRAY[2]);
+    doc.text(m.nombre,ML+8,y+ROW_H/2+1.3);
+    doc.setFontSize(7.5);doc.setTextColor(100,100,100);
+    var bname=m.bloque||'';
+    doc.text(bname.length>26?bname.substring(0,24)+'…':bname,ML+80,y+ROW_H/2+1.3);
+    doc.setFont('Poppins','bold');doc.setFontSize(7.5);
+    if(m.rol==='Presidente'){doc.setTextColor(30,64,175);doc.text('Presidente/a',ML+133,y+ROW_H/2+1.3);}
+    else if(m.rol==='Vicepresidente'){doc.setTextColor(124,58,237);doc.text('Vicepresidente/a',ML+133,y+ROW_H/2+1.3);}
+    else if(m.rol==='Secretario'){doc.setTextColor(6,95,70);doc.text('Secretario/a',ML+133,y+ROW_H/2+1.3);}
+    else{doc.setTextColor(150,150,150);doc.text('Vocal',ML+133,y+ROW_H/2+1.3);}
+    doc.setFont('Poppins','normal');doc.setTextColor(GRAY[0],GRAY[1],GRAY[2]);
+    if(m.dpp){
+      doc.setFillColor(255,243,205);
+      doc.roundedRect(W-MR-19,y+1.5,17,4,1,1,'F');
+      doc.setFont('Poppins','bold');doc.setFontSize(6.5);
+      doc.setTextColor(122,82,0);
+      doc.text('DPP-'+m.dpp,W-MR-10.5,y+ROW_H/2+0.8,{align:'center'});
+      doc.setFont('Poppins','normal');doc.setTextColor(GRAY[0],GRAY[1],GRAY[2]);
+    }
+    doc.setDrawColor(241,245,249);doc.setLineWidth(0.2);
+    doc.line(ML,y+ROW_H,W-MR,y+ROW_H);
+    y+=ROW_H;
+  });
+
+  var totalPages=pageNum;
+  for(var p=1;p<=totalPages;p++){doc.setPage(p);drawFooter(p,totalPages);}
+  var fileName=nombreCom(c.nombre).trim().replace(/[\s,]/g,'_').replace(/_+/g,'_').substring(0,40)+'.pdf';
+  doc.save(fileName);
+}
 function renderProximaReunion(c){
   var el=document.getElementById('com-proxima-reunion');
   var r=c.proximaReunion;
@@ -1082,6 +1248,7 @@ HTML_TEMPLATE = """<!DOCTYPE html>
 <title>Sistema Legislativo &mdash; HSN</title>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 <script src="https://cdn.sheetjs.com/xlsx-0.20.3/package/dist/xlsx.full.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 <style>{css}</style>
 </head>
 <body>
@@ -1337,7 +1504,10 @@ HTML_TEMPLATE = """<!DOCTYPE html>
     <div class="section-block">
       <div class="section-header">
         <h2 id="com-detalle-nombre">&nbsp;</h2>
-        <button class="btn-volver" onclick="volverComisiones()">&larr; Volver</button>
+        <div style="display:flex;gap:8px">
+          <button class="btn-volver" onclick="exportarComisionPdf()">&#128196; Exportar PDF</button>
+          <button class="btn-volver" onclick="volverComisiones()">&larr; Volver</button>
+        </div>
       </div>
       <div class="section-body">
         <div class="com-detalle-layout">
@@ -1377,12 +1547,24 @@ HTML_TEMPLATE = """<!DOCTYPE html>
 
 <div id="dash-tooltip" class="dash-tooltip"></div>
 
+<div id="dpp-modal-overlay" class="dpp-modal-overlay" onclick="cerrarDppModal(event)">
+  <div class="dpp-modal">
+    <div class="dpp-modal-head">
+      <span id="dpp-modal-title"></span>
+      <button class="dpp-modal-close" onclick="cerrarDppModal()">&#10005;</button>
+    </div>
+    <div class="dpp-modal-body" id="dpp-modal-body"></div>
+  </div>
+</div>
+
 <div class="footer">Prosecretar&iacute;a Parlamentaria &middot; Senado de la Naci&oacute;n Argentina<br>Datos al {fecha}</div>
 
 <script>
 var DATA = {datos};
 var COMISIONES = {comisiones};
 var BLOQUE_TOTALES = {bloque_totales};
+var FONT_POPPINS_REGULAR = "{font_regular}";
+var FONT_POPPINS_BOLD = "{font_bold}";
 {js}
 init();
 </script>
@@ -1443,6 +1625,51 @@ def _norm_com(s):
     return s
 
 
+def _norm_nombre(s):
+    """Normaliza nombre de senador para comparar: mayúsculas, sin tildes."""
+    if not s:
+        return ""
+    s = unicodedata.normalize("NFD", s.upper().strip())
+    return "".join(c for c in s if unicodedata.category(c) != "Mn")
+
+
+def construir_dpp_state(cambios):
+    """Reproduce el log de DPP (misma lógica que buildState del repo
+    comisiones-senado: rewrites aplicados inline en orden cronológico).
+    Devuelve {comision_norm: [{nombre_norm, dpp}]}."""
+    state = {}
+    rewrites_pend = {}
+    for c in cambios:
+        com = _norm_com(c["comision"])
+        sen = _norm_nombre(c.get("senador", ""))
+        state.setdefault(com, [])
+        if c["tipo"] == "rewrite":
+            pr = rewrites_pend.get(com)
+            if pr is None or pr["dpp"] != c["dpp"]:
+                if pr is not None:
+                    state[com] = pr["members"]
+                rewrites_pend[com] = pr = {"dpp": c["dpp"], "members": []}
+            pr["members"].append({"nombre": sen, "dpp": c["dpp"]})
+        else:
+            if com in rewrites_pend:
+                state[com] = list(rewrites_pend[com]["members"])
+                del rewrites_pend[com]
+            lst = state[com]
+            if c["tipo"] == "add":
+                if not any(m["nombre"] == sen for m in lst):
+                    lst.append({"nombre": sen, "dpp": c["dpp"]})
+            elif c["tipo"] == "replace":
+                rem = _norm_nombre(c.get("reemplaza", ""))
+                lst[:] = [m for m in lst if m["nombre"] != rem]
+                if not any(m["nombre"] == sen for m in lst):
+                    lst.append({"nombre": sen, "dpp": c["dpp"]})
+            elif c["tipo"] == "remove":
+                lst[:] = [m for m in lst if m["nombre"] != sen]
+    for com, pr in rewrites_pend.items():
+        state[com] = pr["members"]
+    return state
+
+
 def _rol_de(nombre_com, nombre_miembro):
     aut = AUTORIDADES.get(nombre_com, {})
     if aut.get("pres") == nombre_miembro:
@@ -1481,6 +1708,10 @@ def construir_comisiones(proyectos):
     comisiones = _cargar("comisiones.json", [])
     agenda = _cargar("agenda.json", {})
     reuniones = agenda.get("reuniones", [])
+    dpp_data = _cargar("dpp_cambios.json", {})
+    dpp_cambios = dpp_data.get("cambios", [])
+    dpp_fechas = dpp_data.get("fechas", {})
+    dpp_state = construir_dpp_state(dpp_cambios)
 
     # Conteo de proyectos en trámite por comisión (comisiones[0], normalizado)
     conteo_proyectos = {}
@@ -1519,14 +1750,31 @@ def construir_comisiones(proyectos):
     resultado = []
     for com in comisiones:
         nombre = com["nombre"]
-        integrantes = [
-            {
+        com_norm = _norm_com(nombre)
+        estado_com = dpp_state.get(com_norm, [])
+        integrantes = []
+        for m in com.get("miembros", []):
+            nom_norm = _norm_nombre(m["nombre"])
+            vigente = next((e for e in estado_com if e["nombre"] == nom_norm), None)
+            hist = [
+                {
+                    "dpp": c["dpp"],
+                    "fecha": dpp_fechas.get(c["dpp"], ""),
+                    "tipo": c["tipo"],
+                    "reemplaza": c.get("reemplaza", ""),
+                }
+                for c in dpp_cambios
+                if _norm_com(c["comision"]) == com_norm
+                and (_norm_nombre(c.get("senador", "")) == nom_norm
+                     or _norm_nombre(c.get("reemplaza", "")) == nom_norm)
+            ]
+            integrantes.append({
                 "nombre": m["nombre"],
                 "bloque": m.get("bloque", ""),
                 "rol": _rol_de(nombre, m["nombre"]),
-            }
-            for m in com.get("miembros", [])
-        ]
+                "dpp": vigente["dpp"] if vigente else None,
+                "hist": hist,
+            })
         # Presidente/Vice/Secretario primero, luego Vocales
         orden_rol = {"Presidente": 0, "Vicepresidente": 1, "Secretario": 2, "Vocal": 3}
         integrantes.sort(key=lambda x: orden_rol.get(x["rol"], 9))
@@ -1572,6 +1820,7 @@ def main():
     datos_js = json.dumps(proyectos, ensure_ascii=False)
     comisiones_js = json.dumps(construir_comisiones(proyectos), ensure_ascii=False)
     bloque_totales_js = json.dumps(construir_bloque_totales(), ensure_ascii=False)
+    fonts = _cargar("fonts_poppins.json", {})
     fecha = datetime.now().strftime("%d/%m/%Y %H:%M")
 
     html = HTML_TEMPLATE.format(
@@ -1580,6 +1829,8 @@ def main():
         datos=datos_js,
         comisiones=comisiones_js,
         bloque_totales=bloque_totales_js,
+        font_regular=fonts.get("regular", ""),
+        font_bold=fonts.get("bold", ""),
         fecha=fecha,
         total=total,
         pl=tipos_count.get("PL", 0),
