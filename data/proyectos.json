@@ -34589,6 +34589,28 @@
     "archivado": false
   },
   {
+    "nro": 6,
+    "anio": 2026,
+    "tipo": "PL",
+    "tipo_label": "Proyecto de Ley",
+    "extracto": "PROYECTO DE LEY EN REVISION SOBRE REGIMEN DE INCENTIVO PARA GRANDES INVERSIONES EN NUEVAS INDUSTRIAS (SUPER RIGI).",
+    "autores": [],
+    "coautores": [],
+    "bloques": [],
+    "provincias": [],
+    "comisiones": [
+      "DE PRESUPUESTO Y HACIENDA",
+      "DE ECONOMÍA NACIONAL E INVERSIÓN",
+      "DE LEGISLACIÓN GENERAL"
+    ],
+    "fecha": "26/06/2026",
+    "dae": "52/2026",
+    "origen": "CD",
+    "url": "https://www.senado.gob.ar/parlamentario/comisiones/verExp/6.26/CD/PL",
+    "sancionado": false,
+    "archivado": false
+  },
+  {
     "nro": 5,
     "anio": 2026,
     "tipo": "CV",
