@@ -21649,6 +21649,26 @@
     "archivado": false
   },
   {
+    "nro": 237,
+    "anio": 2026,
+    "tipo": "AC",
+    "tipo_label": "Acuerdo",
+    "extracto": "MENSAJE N° 222/26 QUE SOLICITA ACUERDO PARA DESIGNAR CONJUECES DE LOS JUZGADOS NACIONALES DE PRIMERA INSTANCIA DEL TRABAJO DE LA JURISDICCION DE LA CAMARA NACIONAL DE APELACIONES DEL TRABAJO DE LA CAPITAL FEDERAL.",
+    "autores": [],
+    "coautores": [],
+    "bloques": [],
+    "provincias": [],
+    "comisiones": [
+      "DE ACUERDOS"
+    ],
+    "fecha": "17/07/2026",
+    "dae": "",
+    "origen": "PE",
+    "url": "https://www.senado.gob.ar/parlamentario/comisiones/verExp/237.26/PE/AC",
+    "sancionado": false,
+    "archivado": false
+  },
+  {
     "nro": 236,
     "anio": 2026,
     "tipo": "CV",
@@ -21663,6 +21683,26 @@
     "dae": "",
     "origen": "OV",
     "url": "https://www.senado.gob.ar/parlamentario/comisiones/verExp/236.26/OV/CV",
+    "sancionado": false,
+    "archivado": false
+  },
+  {
+    "nro": 236,
+    "anio": 2026,
+    "tipo": "AC",
+    "tipo_label": "Acuerdo",
+    "extracto": "MENSAJE N° 221/26 QUE SOLICITA ACUERDO PARA DESIGNAR CONJUECES DE LOS TRIBUNALES ORALES EN LO CRIMINAL Y CORRECIONAL DE LA CAPITAL FEDERAL.",
+    "autores": [],
+    "coautores": [],
+    "bloques": [],
+    "provincias": [],
+    "comisiones": [
+      "DE ACUERDOS"
+    ],
+    "fecha": "17/07/2026",
+    "dae": "",
+    "origen": "PE",
+    "url": "https://www.senado.gob.ar/parlamentario/comisiones/verExp/236.26/PE/AC",
     "sancionado": false,
     "archivado": false
   },
