@@ -216,9 +216,10 @@ body{font-family:'Poppins',Calibri,sans-serif;background:#F5F7FA;color:#4A4A4A;f
 .com-panel-integrantes{flex:0 0 400px}
 .com-panel-title{font-size:11px;font-weight:700;color:#1B5EA2;text-transform:uppercase;letter-spacing:1px;margin-bottom:10px;padding-bottom:6px;border-bottom:1px solid #D6E4F0}
 @media(max-width:800px){.com-detalle-layout{flex-direction:column}.com-panel-integrantes{flex:0 0 auto;width:100%}}
-.integrante-row{display:flex;align-items:center;gap:8px;padding:8px 4px;border-bottom:1px solid #EEF2F8}
+.integrante-row{display:flex;flex-direction:column;gap:5px;padding:9px 4px;border-bottom:1px solid #EEF2F8}
 .integrante-row:last-child{border-bottom:none}
-.integrante-nombre{font-size:12.5px;color:#4A4A4A;flex:1;min-width:0}
+.integrante-nombre{font-size:12.5px;font-weight:600;color:#4A4A4A;line-height:1.3}
+.integrante-meta{display:flex;align-items:center;gap:6px;flex-wrap:wrap}
 .rol-badge{font-size:9.5px;font-weight:700;padding:2px 7px;border-radius:10px;text-transform:uppercase;letter-spacing:.4px;white-space:nowrap;flex-shrink:0}
 .rol-Presidente{background:#1B5EA2;color:#fff}
 .rol-Vicepresidente{background:#D6E4F0;color:#1B5EA2}
@@ -229,9 +230,6 @@ body{font-family:'Poppins',Calibri,sans-serif;background:#F5F7FA;color:#4A4A4A;f
 .com-empty{text-align:center;padding:40px 16px;color:#aaa;font-size:13px}
 .dpp-badge{font-size:9px;font-weight:700;padding:2px 7px;border-radius:10px;background:#FFF3CD;color:#7A5200;border:none;font-family:inherit;cursor:pointer;white-space:nowrap;flex-shrink:0;letter-spacing:.3px}
 .dpp-badge:hover{background:#FFE9A8}
-.dpp-badge.dpp-original{background:#F5F7FA;color:#9aacbd;cursor:default}
-.dpp-badge.dpp-solo-hist{background:#EAF0FA;color:#2E75B6}
-.dpp-badge.dpp-solo-hist:hover{background:#D6E4F0}
 .dpp-modal-overlay{display:none;position:fixed;inset:0;background:rgba(13,63,115,0.45);z-index:400;align-items:center;justify-content:center;padding:16px}
 .dpp-modal-overlay.open{display:flex}
 .dpp-modal{background:#fff;border-radius:12px;max-width:480px;width:100%;max-height:70vh;display:flex;flex-direction:column;box-shadow:0 10px 40px rgba(0,0,0,0.3);overflow:hidden}
@@ -975,15 +973,14 @@ function renderIntegrantes(c){
   var html='';
   c.integrantes.forEach(function(m,i){
     var col=blqColor(m.bloque);
-    var dppBadge;
-    if(m.dpp)dppBadge='<button class="dpp-badge" onclick="mostrarDppHist('+i+')" title="Ver historial de DPP">DPP-'+esc(m.dpp)+'</button>';
-    else if(m.hist&&m.hist.length)dppBadge='<button class="dpp-badge dpp-solo-hist" onclick="mostrarDppHist('+i+')" title="Ver historial de DPP">historial</button>';
-    else dppBadge='<span class="dpp-badge dpp-original">original</span>';
+    var dppBadge='<button class="dpp-badge" onclick="mostrarDppHist('+i+')" title="Ver historial de DPP">DPP-'+esc(m.dpp)+'</button>';
     html+='<div class="integrante-row">'
-      +'<span class="integrante-nombre">'+esc(m.nombre)+'</span>'
+      +'<div class="integrante-nombre">'+esc(m.nombre)+'</div>'
+      +'<div class="integrante-meta">'
       +'<span class="btag" style="background:'+col.bg+';color:'+col.badge+'">'+esc(m.bloque)+'</span>'
       +'<span class="rol-badge rol-'+m.rol+'">'+esc(m.rol)+'</span>'
       +dppBadge
+      +'</div>'
       +'</div>';
   });
   document.getElementById('com-integrantes-list').innerHTML=html||'<div class="com-empty">Sin integrantes cargados.</div>';
@@ -1633,52 +1630,99 @@ def _norm_nombre(s):
     return "".join(c for c in s if unicodedata.category(c) != "Mn")
 
 
+def _nombres_coinciden(a, b):
+    """Compara dos nombres 'APELLIDO, Nombre' tolerando nombres de pila
+    incompletos (ej. 'FAMA, Flavio' vs 'FAMA, Flavio Sergio')."""
+    na, nb = _norm_nombre(a), _norm_nombre(b)
+    if na == nb:
+        return True
+    ap_a = na.split(",")[0].strip()
+    ap_b = nb.split(",")[0].strip()
+    if ap_a != ap_b:
+        return False
+    resto_a = na.split(",", 1)[1].strip() if "," in na else ""
+    resto_b = nb.split(",", 1)[1].strip() if "," in nb else ""
+    if not resto_a or not resto_b:
+        return True
+    return resto_a.startswith(resto_b) or resto_b.startswith(resto_a)
+
+
 def construir_dpp_state(cambios):
     """Reproduce el log de DPP (misma lógica que buildState del repo
     comisiones-senado: rewrites aplicados inline en orden cronológico).
-    Devuelve {comision_norm: [{nombre_norm, dpp}]}."""
+    Devuelve {comision_norm: [{nombre, dpp}]} — el roster VIGENTE
+    (últimos designados) de cada comisión según el log, con el nombre
+    tal como figura en el DPP que los designó."""
     state = {}
     rewrites_pend = {}
     for c in cambios:
         com = _norm_com(c["comision"])
-        sen = _norm_nombre(c.get("senador", ""))
-        state.setdefault(com, [])
+        sen_orig = c.get("senador", "")
+        sen = _norm_nombre(sen_orig)
+        state.setdefault(com, {})
         if c["tipo"] == "rewrite":
             pr = rewrites_pend.get(com)
             if pr is None or pr["dpp"] != c["dpp"]:
                 if pr is not None:
                     state[com] = pr["members"]
-                rewrites_pend[com] = pr = {"dpp": c["dpp"], "members": []}
-            pr["members"].append({"nombre": sen, "dpp": c["dpp"]})
+                rewrites_pend[com] = pr = {"dpp": c["dpp"], "members": {}}
+            pr["members"][sen] = {"nombre": sen_orig, "dpp": c["dpp"]}
         else:
             if com in rewrites_pend:
-                state[com] = list(rewrites_pend[com]["members"])
+                state[com] = dict(rewrites_pend[com]["members"])
                 del rewrites_pend[com]
-            lst = state[com]
+            d = state[com]
             if c["tipo"] == "add":
-                if not any(m["nombre"] == sen for m in lst):
-                    lst.append({"nombre": sen, "dpp": c["dpp"]})
+                d[sen] = {"nombre": sen_orig, "dpp": c["dpp"]}
             elif c["tipo"] == "replace":
                 rem = _norm_nombre(c.get("reemplaza", ""))
-                lst[:] = [m for m in lst if m["nombre"] != rem]
-                if not any(m["nombre"] == sen for m in lst):
-                    lst.append({"nombre": sen, "dpp": c["dpp"]})
+                d.pop(rem, None)
+                d[sen] = {"nombre": sen_orig, "dpp": c["dpp"]}
             elif c["tipo"] == "remove":
-                lst[:] = [m for m in lst if m["nombre"] != sen]
+                d.pop(sen, None)
     for com, pr in rewrites_pend.items():
         state[com] = pr["members"]
-    return state
+    return {com: list(members.values()) for com, members in state.items()}
 
 
 def _rol_de(nombre_com, nombre_miembro):
     aut = AUTORIDADES.get(nombre_com, {})
-    if aut.get("pres") == nombre_miembro:
+    if aut.get("pres") and _nombres_coinciden(aut["pres"], nombre_miembro):
         return "Presidente"
-    if aut.get("vice") == nombre_miembro:
+    if aut.get("vice") and _nombres_coinciden(aut["vice"], nombre_miembro):
         return "Vicepresidente"
-    if aut.get("secr") == nombre_miembro:
+    if aut.get("secr") and _nombres_coinciden(aut["secr"], nombre_miembro):
         return "Secretario"
     return "Vocal"
+
+
+def construir_bloque_por_senador():
+    """Mapa nombre_norm -> bloque, desde data/senadores.json (fuente
+    principal) con fallback por apellido para nombres de pila incompletos."""
+    senadores = _cargar("senadores.json", {})
+    directo = {}
+    por_apellido = {}
+    for nombre, datos in senadores.items():
+        n = _norm_nombre(nombre)
+        bloque = datos.get("bloque", "")
+        directo[n] = bloque
+        apellido = n.split(",")[0].strip()
+        por_apellido.setdefault(apellido, []).append((n, bloque))
+
+    def buscar(nombre_buscado):
+        n = _norm_nombre(nombre_buscado)
+        if n in directo:
+            return directo[n]
+        apellido = n.split(",")[0].strip()
+        candidatos = por_apellido.get(apellido, [])
+        if len(candidatos) == 1:
+            return candidatos[0][1]
+        for k, bloque in candidatos:
+            if _nombres_coinciden(k, n):
+                return bloque
+        return ""
+
+    return buscar
 
 
 def _parse_fecha_agenda(fecha_dd_mm, boletin_numero):
@@ -1712,6 +1756,14 @@ def construir_comisiones(proyectos):
     dpp_cambios = dpp_data.get("cambios", [])
     dpp_fechas = dpp_data.get("fechas", {})
     dpp_state = construir_dpp_state(dpp_cambios)
+    bloque_de_senador = construir_bloque_por_senador()
+
+    # Fallback de bloque: nombre_norm -> bloque, según el scrape de comisiones.json
+    # (por si un senador no aparece en senadores.json).
+    bloque_fallback = {}
+    for com in comisiones:
+        for m in com.get("miembros", []):
+            bloque_fallback.setdefault(_norm_nombre(m["nombre"]), m.get("bloque", ""))
 
     # Conteo de proyectos en trámite por comisión (comisiones[0], normalizado)
     conteo_proyectos = {}
@@ -1751,11 +1803,13 @@ def construir_comisiones(proyectos):
     for com in comisiones:
         nombre = com["nombre"]
         com_norm = _norm_com(nombre)
+        # El roster vigente sale del log de DPP (últimos designados), no del
+        # scrape de comisiones.json — así todos los integrantes tienen el DPP
+        # que los designó y no hay ambigüedad entre fuentes.
         estado_com = dpp_state.get(com_norm, [])
         integrantes = []
-        for m in com.get("miembros", []):
-            nom_norm = _norm_nombre(m["nombre"])
-            vigente = next((e for e in estado_com if e["nombre"] == nom_norm), None)
+        for e in estado_com:
+            nom_norm = _norm_nombre(e["nombre"])
             hist = [
                 {
                     "dpp": c["dpp"],
@@ -1765,14 +1819,15 @@ def construir_comisiones(proyectos):
                 }
                 for c in dpp_cambios
                 if _norm_com(c["comision"]) == com_norm
-                and (_norm_nombre(c.get("senador", "")) == nom_norm
-                     or _norm_nombre(c.get("reemplaza", "")) == nom_norm)
+                and (_nombres_coinciden(c.get("senador", ""), e["nombre"])
+                     or _nombres_coinciden(c.get("reemplaza", ""), e["nombre"]))
             ]
+            bloque = bloque_de_senador(e["nombre"]) or bloque_fallback.get(nom_norm, "")
             integrantes.append({
-                "nombre": m["nombre"],
-                "bloque": m.get("bloque", ""),
-                "rol": _rol_de(nombre, m["nombre"]),
-                "dpp": vigente["dpp"] if vigente else None,
+                "nombre": e["nombre"],
+                "bloque": bloque,
+                "rol": _rol_de(nombre, e["nombre"]),
+                "dpp": e["dpp"],
                 "hist": hist,
             })
         # Presidente/Vice/Secretario primero, luego Vocales
