@@ -290,6 +290,14 @@ table.cross-table tr:last-child td{border-bottom:none}
 .temario-num{display:inline-block;font-size:12px;font-weight:700;color:#1B5EA2;margin-right:8px}
 .card-footer{padding:0 14px 12px}
 .reunion-badge{display:inline-block;font-size:11px;font-weight:600;padding:4px 10px;border-radius:6px;background:#D6E4F0;color:#1B5EA2}
+.agenda-badges{display:flex;align-items:center;gap:6px;flex-wrap:wrap}
+.plenaria-badge{display:inline-block;font-size:9.5px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;padding:2px 8px;border-radius:10px;background:#0d3f73;color:#fff}
+/* ── Colapsables (grupos pasados / sección asesores) ──────────────────── */
+.colapsable-head{cursor:pointer;user-select:none;display:flex;align-items:center;gap:7px}
+.colapsable-head:hover{color:#2E75B6}
+.agenda-chevron{display:inline-block;transition:transform .15s;font-size:10px;color:#9aacbd;flex-shrink:0}
+.agenda-colapsable:not(.collapsed)>.colapsable-head .agenda-chevron{transform:rotate(90deg)}
+.agenda-colapsable.collapsed>.agenda-colapsable-body{display:none}
 """
 
 # ── JavaScript (vanilla) ───────────────────────────────────────────────────────
@@ -1277,13 +1285,31 @@ function reunionTime(r){
   var t=r.fecha_iso?new Date(r.fecha_iso).getTime():NaN;
   return isNaN(t)?-Infinity:t;
 }
+function chevron(){return '<span class="agenda-chevron">&#9656;</span>';}
+function toggleColapso(headEl){
+  var wrap=headEl.parentNode;
+  if(wrap)wrap.classList.toggle('collapsed');
+}
+function plenariaBadge(r){
+  return (r.comisiones&&r.comisiones.length>1)?'<span class="plenaria-badge">Plenaria</span>':'';
+}
+function agendaCardsHtml(arr,isPast){
+  var h='';
+  arr.forEach(function(r){h+=buildReunionCard(r,AGENDA.indexOf(r),isPast);});
+  return h;
+}
 function agendaGrupoHtml(titulo,arr,isPast){
   if(!arr.length)return '';
-  var h='<div class="agenda-grupo-title">'+esc(titulo)+' <span class="agenda-grupo-count">('+arr.length+')</span></div>';
-  arr.forEach(function(r){
-    h+=buildReunionCard(r,AGENDA.indexOf(r),isPast);
-  });
-  return h;
+  var cards=agendaCardsHtml(arr,isPast);
+  var count=' <span class="agenda-grupo-count">('+arr.length+')</span>';
+  /* Las pasadas van colapsadas por defecto (lista larga de referencia) */
+  if(isPast){
+    return '<div class="agenda-colapsable collapsed">'
+      +'<div class="agenda-grupo-title colapsable-head" onclick="toggleColapso(this)">'+chevron()+esc(titulo)+count+'</div>'
+      +'<div class="agenda-colapsable-body">'+cards+'</div>'
+      +'</div>';
+  }
+  return '<div class="agenda-grupo-title">'+esc(titulo)+count+'</div>'+cards;
 }
 function buildReunionCard(r,idx,isPast){
   var tl=REUNION_TIPO_LABEL[r.tipo]||r.tipo;
@@ -1292,7 +1318,7 @@ function buildReunionCard(r,idx,isPast){
   return '<div class="agenda-card'+(isPast?' agenda-pasada':'')+'" onclick="abrirReunion('+idx+')">'
     +'<div class="agenda-card-top">'
     +'<span class="agenda-fecha">'+esc(r.dia?r.dia+' ':'')+esc(r.fecha_completa||r.fecha)+' &middot; '+esc(r.hora)+' hs</span>'
-    +'<span class="exp-badge" style="background:'+col.bg+';color:'+col.fg+'">'+esc(tl)+'</span>'
+    +'<span class="agenda-badges">'+plenariaBadge(r)+'<span class="exp-badge" style="background:'+col.bg+';color:'+col.fg+'">'+esc(tl)+'</span></span>'
     +'</div>'
     +'<div class="agenda-card-com">'+coms+'</div>'
     +'<div class="agenda-card-salon">'+esc(r.salon_completo||r.salon)+(isPast?' <span class="agenda-pasada-tag">Realizada</span>':'')+'</div>'
@@ -1310,8 +1336,17 @@ function agendaSeccionHtml(tituloSeccion, hint, arr, esAsesores){
   pasadas.sort(function(a,b){return reunionTime(b)-reunionTime(a)});
   var cuerpo=agendaGrupoHtml('Pr&oacute;ximas',proximas,false)+agendaGrupoHtml('Reuniones pasadas',pasadas,true);
   if(!cuerpo)return '';
-  return '<div class="agenda-seccion'+(esAsesores?' agenda-seccion-asesores':'')+'">'
-    +'<div class="agenda-seccion-title">'+esc(tituloSeccion)+(hint?' <span class="agenda-seccion-hint">'+esc(hint)+'</span>':'')+'</div>'
+  var hintHtml=hint?' <span class="agenda-seccion-hint">'+esc(hint)+'</span>':'';
+  var count=' <span class="agenda-grupo-count">('+arr.length+')</span>';
+  /* La sección de asesores va colapsada por defecto (instancia secundaria) */
+  if(esAsesores){
+    return '<div class="agenda-seccion agenda-seccion-asesores agenda-colapsable collapsed">'
+      +'<div class="agenda-seccion-title colapsable-head" onclick="toggleColapso(this)">'+chevron()+esc(tituloSeccion)+hintHtml+count+'</div>'
+      +'<div class="agenda-colapsable-body">'+cuerpo+'</div>'
+      +'</div>';
+  }
+  return '<div class="agenda-seccion">'
+    +'<div class="agenda-seccion-title">'+esc(tituloSeccion)+hintHtml+'</div>'
     +cuerpo+'</div>';
 }
 function renderAgenda(){
@@ -1351,6 +1386,7 @@ function abrirReunion(idx){
   document.getElementById('agenda-detalle-titulo').textContent=(r.comisiones||[]).join(' · ');
   document.getElementById('agenda-detalle-meta').innerHTML='<div class="agenda-detalle-row">'
     +'<span class="exp-badge" style="background:'+col.bg+';color:'+col.fg+'">'+esc(tl)+'</span>'
+    +plenariaBadge(r)
     +'<span class="agenda-fecha">'+esc(r.dia?r.dia+' ':'')+esc(r.fecha_completa||r.fecha)+' &middot; '+esc(r.hora)+' hs</span>'
     +'</div><div class="agenda-detalle-salon">&#128205; '+esc(r.salon_completo||r.salon)+'</div>';
   var th='';
