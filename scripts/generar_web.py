@@ -262,6 +262,28 @@ table.cross-table th.com-col span{display:block;writing-mode:vertical-rl;transfo
 table.cross-table td.blq-name{padding:6px 12px;white-space:nowrap;font-size:11px;font-weight:600;position:sticky;left:0;border-right:1px solid #EEF2F8}
 table.cross-table td.val{text-align:center;padding:5px 3px;border-bottom:1px solid #EEF2F8;border-right:1px solid #EEF2F8;font-size:11.5px;width:30px}
 table.cross-table tr:last-child td{border-bottom:none}
+
+/* ── Agenda ───────────────────────────────────────────────────────────── */
+.agenda-grupo-title{font-size:11px;font-weight:700;color:#1B5EA2;text-transform:uppercase;letter-spacing:1px;margin:18px 12px 8px;padding-bottom:5px;border-bottom:1px solid #D6E4F0}
+.agenda-grupo-title:first-child{margin-top:0}
+.agenda-grupo-count{color:#9aacbd;font-weight:600}
+.agenda-card{background:#fff;border:1px solid #D6E4F0;border-radius:10px;padding:12px 16px;margin:0 12px 10px;cursor:pointer;transition:all .15s;box-shadow:0 1px 3px rgba(0,0,0,0.05)}
+.agenda-card:hover{border-color:#1B5EA2;box-shadow:0 2px 8px rgba(27,94,162,0.15)}
+.agenda-card.agenda-pasada{opacity:.62}
+.agenda-card-top{display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap;margin-bottom:6px}
+.agenda-fecha{font-size:12px;font-weight:600;color:#4A4A4A}
+.agenda-card-com{font-size:13.5px;font-weight:600;color:#2C2C2C;margin-bottom:4px;line-height:1.35}
+.agenda-card-salon{font-size:11px;color:#888}
+.agenda-pasada-tag{font-size:9.5px;font-weight:700;text-transform:uppercase;letter-spacing:.4px;color:#9aacbd;border:1px solid #D6E4F0;border-radius:10px;padding:1px 7px;margin-left:4px}
+.agenda-detalle-row{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:6px}
+.agenda-detalle-salon{font-size:12px;color:#888;margin-bottom:4px}
+.temario-item{padding:10px 4px;border-bottom:1px solid #EEF2F8;font-size:13px;color:#4A4A4A;line-height:1.4}
+.temario-item:last-child{border-bottom:none}
+.temario-item.clk{cursor:pointer}
+.temario-item.clk:hover{background:#F5F8FC}
+.temario-num{display:inline-block;font-size:12px;font-weight:700;color:#1B5EA2;margin-right:8px}
+.card-footer{padding:0 14px 12px}
+.reunion-badge{display:inline-block;font-size:11px;font-weight:600;padding:4px 10px;border-radius:6px;background:#D6E4F0;color:#1B5EA2}
 """
 
 # ── JavaScript (vanilla) ───────────────────────────────────────────────────────
@@ -272,6 +294,8 @@ var TIPO_FG={PL:'#1B5EA2',PD:'#2E75B6',PC:'#0d7a4a',PR:'#5B4DA0',CA:'#1a7a4a',AC
 var TIPO_BG={PL:'#D6E4F0',PD:'#EAF0FA',PC:'#DCF0E8',PR:'#EDE8FA',CA:'#E0F4EC',AC:'#F9F0DA',CV:'#FAE0EA'};
 var ORIGEN_LABEL={S:'Senado',PE:'Poder Ejecutivo',CD:'Diputados',OV:'Otros'};
 var ORIGEN_CODE={};Object.keys(ORIGEN_LABEL).forEach(function(k){ORIGEN_CODE[ORIGEN_LABEL[k]]=k});
+var REUNION_TIPO_LABEL={senadores:'Reunión de senadores',asesores:'Reunión de asesores',bicameral:'Reunión bicameral'};
+var REUNION_TIPO_COLOR={senadores:{fg:'#1B5EA2',bg:'#D6E4F0'},asesores:{fg:'#0d7a4a',bg:'#DCF0E8'},bicameral:{fg:'#5B4DA0',bg:'#EDE8FA'}};
 /* Colores por bloque — mismo mapa que el repo comisiones-senado */
 var BLOQUE_COLORS={
   'LA LIBERTAD AVANZA':                      {dot:'#7030A0', bg:'#F3E8FA', badge:'#4A1870'},
@@ -348,6 +372,7 @@ function init(){
   renderPivot();
   renderComisionesList();
   renderRepresentacion();
+  renderAgenda();
 }
 function fillSelect(id,values){
   var sel=document.getElementById(id);
@@ -877,11 +902,18 @@ function getFiltered(){
       }
     }
     if(q){
-      var hay=(p.extracto+' '+p.autores.join(' ')+' '+p.comisiones.join(' ')).toLowerCase();
+      var hay=(p.extracto+' '+p.autores.join(' ')+' '+p.comisiones.join(' ')+' '+expNroOf(p)).toLowerCase();
       if(hay.indexOf(q)<0)return false;
     }
     return true;
   });
+}
+function expNroOf(p){return p.origen+'-'+p.nro+'/'+String(p.anio).slice(-2);}
+function reunionBadgeHtml(p){
+  if(!p.reuniones||!p.reuniones.length)return '';
+  var r=p.reuniones[0];
+  var extra=p.reuniones.length>1?' (+'+(p.reuniones.length-1)+' anteriores)':'';
+  return '<div class="card-footer"><span class="reunion-badge">Tratado en reuni&oacute;n: '+esc(r.comision)+' &middot; '+esc(r.fecha)+extra+'</span></div>';
 }
 function buildCard(p){
   var fg=TIPO_FG[p.tipo]||'#888',bg=TIPO_BG[p.tipo]||'#eee';
@@ -892,9 +924,9 @@ function buildCard(p){
     btags+='<span class="btag" style="background:'+c.bg+';color:'+c.badge+'">'+esc(b)+'</span>';
   });
   p.comisiones.forEach(function(c){ctags+='<span class="ctag">'+esc(c)+'</span>'});
-  var expNro=p.origen+'-'+p.nro+'/'+String(p.anio).slice(-2);
+  var expNro=expNroOf(p);
   var linkBtn=p.url?'<a class="exp-link" href="'+escAttr(p.url)+'" target="_blank">Ver en Senado &#8599;</a>':'';
-  return '<div class="card"><div class="card-exp"><div class="exp-id"><span class="exp-badge" style="background:'+bg+';color:'+fg+'">'+esc(p.tipo)+'</span><span class="exp-nro">'+esc(expNro)+'</span>'+(p.fecha?'<span class="exp-fecha">'+esc(p.fecha)+'</span>':'')+'</div>'+linkBtn+'</div><div class="card-body"><div class="extracto">'+esc(p.extracto)+'</div><div class="card-meta">'+(autoresTxt?'<div class="meta-row"><span class="meta-bold">'+esc(autoresTxt)+'</span></div>':'')+(btags?'<div class="meta-row">'+btags+'</div>':'')+(ctags?'<div class="meta-row">'+ctags+'</div>':'')+'</div></div></div>';
+  return '<div class="card"><div class="card-exp"><div class="exp-id"><span class="exp-badge" style="background:'+bg+';color:'+fg+'">'+esc(p.tipo)+'</span><span class="exp-nro">'+esc(expNro)+'</span>'+(p.fecha?'<span class="exp-fecha">'+esc(p.fecha)+'</span>':'')+'</div>'+linkBtn+'</div><div class="card-body"><div class="extracto">'+esc(p.extracto)+'</div><div class="card-meta">'+(autoresTxt?'<div class="meta-row"><span class="meta-bold">'+esc(autoresTxt)+'</span></div>':'')+(btags?'<div class="meta-row">'+btags+'</div>':'')+(ctags?'<div class="meta-row">'+ctags+'</div>':'')+'</div></div>'+reunionBadgeHtml(p)+'</div>';
 }
 function renderList(){
   var filtered=getFiltered();
@@ -1233,6 +1265,91 @@ function renderProximaReunion(c){
     +'<span>&#128196; '+r.nExpedientes+' expediente'+(r.nExpedientes!==1?'s':'')+' en el temario</span>'
     +'</div>';
 }
+
+/* ── Agenda de reuniones ──────────────────────────────────────────── */
+function reunionTime(r){
+  var t=r.fecha_iso?new Date(r.fecha_iso).getTime():NaN;
+  return isNaN(t)?-Infinity:t;
+}
+function agendaGrupoHtml(titulo,arr,isPast){
+  if(!arr.length)return '';
+  var h='<div class="agenda-grupo-title">'+esc(titulo)+' <span class="agenda-grupo-count">('+arr.length+')</span></div>';
+  arr.forEach(function(r){
+    h+=buildReunionCard(r,AGENDA.indexOf(r),isPast);
+  });
+  return h;
+}
+function buildReunionCard(r,idx,isPast){
+  var tl=REUNION_TIPO_LABEL[r.tipo]||r.tipo;
+  var col=REUNION_TIPO_COLOR[r.tipo]||{fg:'#888',bg:'#eee'};
+  var coms=(r.comisiones||[]).map(esc).join(' &middot; ');
+  return '<div class="agenda-card'+(isPast?' agenda-pasada':'')+'" onclick="abrirReunion('+idx+')">'
+    +'<div class="agenda-card-top">'
+    +'<span class="agenda-fecha">'+esc(r.dia?r.dia+' ':'')+esc(r.fecha_completa||r.fecha)+' &middot; '+esc(r.hora)+' hs</span>'
+    +'<span class="exp-badge" style="background:'+col.bg+';color:'+col.fg+'">'+esc(tl)+'</span>'
+    +'</div>'
+    +'<div class="agenda-card-com">'+coms+'</div>'
+    +'<div class="agenda-card-salon">'+esc(r.salon_completo||r.salon)+(isPast?' <span class="agenda-pasada-tag">Pasada</span>':'')+'</div>'
+    +'</div>';
+}
+function renderAgenda(){
+  var q=(document.getElementById('agenda-search').value||'').toLowerCase().trim();
+  var lista=AGENDA.filter(function(r){
+    return !q||(r.comisiones||[]).join(' ').toLowerCase().indexOf(q)>=0;
+  });
+  var now=Date.now(),proximas=[],pasadas=[];
+  lista.forEach(function(r){
+    var t=reunionTime(r);
+    if(t!==-Infinity&&t>=now)proximas.push(r);else pasadas.push(r);
+  });
+  proximas.sort(function(a,b){return reunionTime(a)-reunionTime(b)});
+  pasadas.sort(function(a,b){return reunionTime(b)-reunionTime(a)});
+  var html=agendaGrupoHtml('Pr&oacute;ximas reuniones',proximas,false)+agendaGrupoHtml('Reuniones pasadas',pasadas,true);
+  document.getElementById('agenda-list').innerHTML=html||'<div class="no-results">Sin reuniones para este filtro.</div>';
+}
+function parseExpNumero(numero){
+  var m=/^([A-ZÑ.]+)-(\d+)\/(\d+)$/.exec(String(numero||'').trim().toUpperCase());
+  if(!m)return null;
+  return {origen:m[1].replace(/\./g,''),nro:parseInt(m[2],10),anio:2000+parseInt(m[3],10)};
+}
+function irAExpediente(numero){
+  var exp=parseExpNumero(numero);
+  if(!exp)return;
+  resetBuscadorOnly();
+  activeAnio='';activeTipos={};activeOrigen='';
+  document.getElementById('search').value=exp.origen+'-'+exp.nro+'/'+String(exp.anio).slice(-2);
+  switchMain('proyectos');
+  switchSub('buscador');
+  applyAll();
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+function abrirReunion(idx){
+  var r=AGENDA[idx];
+  if(!r)return;
+  document.getElementById('agenda-nivel1').classList.remove('active');
+  document.getElementById('agenda-nivel2').classList.add('active');
+  var tl=REUNION_TIPO_LABEL[r.tipo]||r.tipo;
+  var col=REUNION_TIPO_COLOR[r.tipo]||{fg:'#888',bg:'#eee'};
+  document.getElementById('agenda-detalle-titulo').textContent=(r.comisiones||[]).join(' · ');
+  document.getElementById('agenda-detalle-meta').innerHTML='<div class="agenda-detalle-row">'
+    +'<span class="exp-badge" style="background:'+col.bg+';color:'+col.fg+'">'+esc(tl)+'</span>'
+    +'<span class="agenda-fecha">'+esc(r.dia?r.dia+' ':'')+esc(r.fecha_completa||r.fecha)+' &middot; '+esc(r.hora)+' hs</span>'
+    +'</div><div class="agenda-detalle-salon">&#128205; '+esc(r.salon_completo||r.salon)+'</div>';
+  var th='';
+  (r.temario||[]).forEach(function(it){
+    var clickable=!!parseExpNumero(it.numero);
+    th+='<div class="temario-item'+(clickable?' clk':'')+'"'+(clickable?' onclick="irAExpediente(\''+jsStr(it.numero)+'\')"':'')+'>'
+      +(it.numero?'<span class="temario-num">'+esc(it.numero)+'</span>':'')
+      +'<span class="temario-extracto">'+esc(it.extracto)+'</span>'
+      +'</div>';
+  });
+  document.getElementById('agenda-temario-list').innerHTML=th||'<div class="com-empty">Sin temario cargado.</div>';
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+function volverAgenda(){
+  document.getElementById('agenda-nivel2').classList.remove('active');
+  document.getElementById('agenda-nivel1').classList.add('active');
+}
 """
 
 # ── Plantilla HTML ─────────────────────────────────────────────────────────────
@@ -1526,11 +1643,36 @@ HTML_TEMPLATE = """<!DOCTYPE html>
 
 <!-- ====================== MAIN: AGENDA ====================== -->
 <div id="main-agenda" class="mtab-content">
-  <div class="placeholder">
-    <div class="placeholder-icon">&#128197;</div>
-    <h3>Agenda</h3>
-    <p>Secci&oacute;n en construcci&oacute;n &mdash; pr&oacute;ximamente en Fase 2.</p>
+
+  <!-- NIVEL 1: lista de reuniones -->
+  <div id="agenda-nivel1" class="com-nivel active">
+    <div class="section-block">
+      <div class="section-header">
+        <h2>Agenda de reuniones</h2>
+        <span class="section-hint">Boletines de comisiones del HSN</span>
+      </div>
+      <div class="section-body">
+        <input class="search-box" type="text" id="agenda-search" placeholder="Buscar por comisi&oacute;n&hellip;" oninput="renderAgenda()" style="max-width:360px">
+        <div id="agenda-list"></div>
+      </div>
+    </div>
   </div>
+
+  <!-- NIVEL 2: detalle de reunión -->
+  <div id="agenda-nivel2" class="com-nivel">
+    <div class="section-block">
+      <div class="section-header">
+        <h2 id="agenda-detalle-titulo">&nbsp;</h2>
+        <button class="btn-volver" onclick="volverAgenda()">&larr; Volver</button>
+      </div>
+      <div class="section-body">
+        <div id="agenda-detalle-meta"></div>
+        <div class="filter-label" style="margin-top:14px">Temario</div>
+        <div id="agenda-temario-list"></div>
+      </div>
+    </div>
+  </div>
+
 </div>
 
 <!-- ====================== MAIN: AYUDA MEMORIA ====================== -->
@@ -1559,6 +1701,7 @@ HTML_TEMPLATE = """<!DOCTYPE html>
 <script>
 var DATA = {datos};
 var COMISIONES = {comisiones};
+var AGENDA = {agenda};
 var BLOQUE_TOTALES = {bloque_totales};
 var FONT_POPPINS_REGULAR = "{font_regular}";
 var FONT_POPPINS_BOLD = "{font_bold}";
@@ -1736,6 +1879,110 @@ def _parse_fecha_agenda(fecha_dd_mm, boletin_numero):
         return None
 
 
+RE_EXP_NUMERO = re.compile(r"^([A-ZÑ.]+)-(\d+)/(\d+)$")
+
+
+def _parse_exp_numero(numero):
+    """'S-1271/25' -> ('S', 1271, 2025). 'P.E-133/26' -> ('PE', 133, 2026).
+    Formato no reconocible (o vacío, como en ítems de temario sin EXPTE.) -> None."""
+    if not numero:
+        return None
+    m = RE_EXP_NUMERO.match(numero.strip().upper())
+    if not m:
+        return None
+    try:
+        origen = m.group(1).replace(".", "")
+        nro = int(m.group(2))
+        anio = 2000 + int(m.group(3))
+    except ValueError:
+        return None
+    return origen, nro, anio
+
+
+def _nombre_com_display(s):
+    return re.sub(r"^De\s+", "", s or "")
+
+
+def _resolver_comisiones_reunion(raw_lines, comisiones):
+    """Las comisiones de una reunión vienen del PDF como líneas sueltas: pueden
+    ser el nombre de UNA comisión partido por el ancho de columna, o VARIAS
+    comisiones distintas (reunión conjunta). Se resuelve buscando qué nombres
+    oficiales de comisiones.json aparecen como substring del texto unido y
+    normalizado; si ninguno matchea (ej. comisiones bicamerales, que no están
+    en comisiones.json), se devuelve el texto crudo unido como fallback."""
+    flat = _norm_com(" ".join(raw_lines or []))
+    encontradas = []
+    for com in comisiones:
+        n = _norm_com(com["nombre"])
+        if n and n in flat:
+            encontradas.append(_nombre_com_display(com["nombre"]))
+    if encontradas:
+        return encontradas
+    texto = " ".join(l.strip() for l in (raw_lines or []) if l.strip())
+    return [texto] if texto else []
+
+
+def construir_agenda(comisiones):
+    """Procesa data/agenda.json para embeber en la web: resuelve nombres de
+    comisión y agrega fecha completa (con año) y fecha ISO para ordenar/comparar
+    en el cliente."""
+    agenda = _cargar("agenda.json", {})
+    reuniones = agenda.get("reuniones", []) if isinstance(agenda, dict) else agenda
+    resultado = []
+    for r in reuniones:
+        fecha_dt = _parse_fecha_agenda(r.get("fecha", ""), r.get("boletin_numero", ""))
+        hora = r.get("hora", "")
+        fecha_completa, fecha_iso = r.get("fecha", ""), ""
+        if fecha_dt:
+            fecha_completa = fecha_dt.strftime("%d/%m/%Y")
+            try:
+                hh, mm = hora.split(":")
+                fecha_iso = fecha_dt.replace(hour=int(hh), minute=int(mm)).isoformat()
+            except Exception:
+                fecha_iso = fecha_dt.isoformat()
+        resultado.append({
+            "dia": r.get("dia", ""),
+            "fecha": r.get("fecha", ""),
+            "fecha_completa": fecha_completa,
+            "fecha_iso": fecha_iso,
+            "hora": hora,
+            "modalidad": r.get("modalidad", ""),
+            "comisiones": _resolver_comisiones_reunion(r.get("comisiones", []), comisiones),
+            "salon": r.get("salon", ""),
+            "salon_completo": r.get("salon_completo", ""),
+            "temario": r.get("temario", []),
+            "tipo": r.get("tipo", ""),
+            "boletin_numero": r.get("boletin_numero", ""),
+        })
+    return resultado
+
+
+def cruzar_proyectos_agenda(proyectos, agenda_procesada):
+    """Por cada proyecto, agrega (in place) un campo 'reuniones' con las
+    reuniones en cuyo temario aparece su expediente, más recientes primero."""
+    idx = {(p.get("origen"), p.get("nro"), p.get("anio")): p for p in proyectos}
+    for r in agenda_procesada:
+        comision_display = r["comisiones"][0] if r["comisiones"] else ""
+        for item in r.get("temario", []):
+            exp = _parse_exp_numero(item.get("numero", ""))
+            if not exp:
+                continue
+            p = idx.get(exp)
+            if not p:
+                continue
+            p.setdefault("reuniones", []).append({
+                "fecha": r["fecha_completa"],
+                "comision": comision_display,
+                "tipo": r["tipo"],
+                "_iso": r["fecha_iso"],
+            })
+    for p in proyectos:
+        if p.get("reuniones"):
+            p["reuniones"].sort(key=lambda x: x["_iso"] or "", reverse=True)
+            for rr in p["reuniones"]:
+                rr.pop("_iso", None)
+
+
 def construir_bloque_totales():
     """Cantidad de senadores vigentes por bloque, según data/senadores.json."""
     senadores = _cargar("senadores.json", {})
@@ -1872,8 +2119,13 @@ def main():
     for p in proyectos:
         tipos_count[p.get("tipo", "")] = tipos_count.get(p.get("tipo", ""), 0) + 1
 
+    comisiones_oficiales = _cargar("comisiones.json", [])
+    agenda_procesada = construir_agenda(comisiones_oficiales)
+    cruzar_proyectos_agenda(proyectos, agenda_procesada)
+
     datos_js = json.dumps(proyectos, ensure_ascii=False)
     comisiones_js = json.dumps(construir_comisiones(proyectos), ensure_ascii=False)
+    agenda_js = json.dumps(agenda_procesada, ensure_ascii=False)
     bloque_totales_js = json.dumps(construir_bloque_totales(), ensure_ascii=False)
     fonts = _cargar("fonts_poppins.json", {})
     fecha = datetime.now().strftime("%d/%m/%Y %H:%M")
@@ -1883,6 +2135,7 @@ def main():
         js=JS,
         datos=datos_js,
         comisiones=comisiones_js,
+        agenda=agenda_js,
         bloque_totales=bloque_totales_js,
         font_regular=fonts.get("regular", ""),
         font_bold=fonts.get("bold", ""),
