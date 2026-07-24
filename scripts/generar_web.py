@@ -264,7 +264,13 @@ table.cross-table td.val{text-align:center;padding:5px 3px;border-bottom:1px sol
 table.cross-table tr:last-child td{border-bottom:none}
 
 /* ── Agenda ───────────────────────────────────────────────────────────── */
+.agenda-seccion-title{font-size:13px;font-weight:700;color:#1B5EA2;text-transform:uppercase;letter-spacing:1px;margin:4px 12px 6px;padding-bottom:8px;border-bottom:2px solid #1B5EA2}
+.agenda-seccion+.agenda-seccion{margin-top:8px}
+.agenda-seccion-asesores{opacity:.92}
+.agenda-seccion-asesores .agenda-seccion-title{color:#8a97a6;border-bottom-color:#D6E4F0;font-size:12px}
+.agenda-seccion-hint{font-size:10px;color:#aaa;font-weight:400;text-transform:none;letter-spacing:0;margin-left:6px}
 .agenda-grupo-title{font-size:11px;font-weight:700;color:#1B5EA2;text-transform:uppercase;letter-spacing:1px;margin:18px 12px 8px;padding-bottom:5px;border-bottom:1px solid #D6E4F0}
+.agenda-seccion-asesores .agenda-grupo-title{color:#9aacbd}
 .agenda-grupo-title:first-child{margin-top:0}
 .agenda-grupo-count{color:#9aacbd;font-weight:600}
 .agenda-card{background:#fff;border:1px solid #D6E4F0;border-radius:10px;padding:12px 16px;margin:0 12px 10px;cursor:pointer;transition:all .15s;box-shadow:0 1px 3px rgba(0,0,0,0.05)}
@@ -1289,22 +1295,34 @@ function buildReunionCard(r,idx,isPast){
     +'<span class="exp-badge" style="background:'+col.bg+';color:'+col.fg+'">'+esc(tl)+'</span>'
     +'</div>'
     +'<div class="agenda-card-com">'+coms+'</div>'
-    +'<div class="agenda-card-salon">'+esc(r.salon_completo||r.salon)+(isPast?' <span class="agenda-pasada-tag">Pasada</span>':'')+'</div>'
+    +'<div class="agenda-card-salon">'+esc(r.salon_completo||r.salon)+(isPast?' <span class="agenda-pasada-tag">Realizada</span>':'')+'</div>'
     +'</div>';
+}
+/* Separa próximas/pasadas dentro de un conjunto de reuniones ya filtrado */
+function agendaSeccionHtml(tituloSeccion, hint, arr, esAsesores){
+  if(!arr.length)return '';
+  var now=Date.now(),proximas=[],pasadas=[];
+  arr.forEach(function(r){
+    var t=reunionTime(r);
+    if(t!==-Infinity&&t>=now)proximas.push(r);else pasadas.push(r);
+  });
+  proximas.sort(function(a,b){return reunionTime(a)-reunionTime(b)});
+  pasadas.sort(function(a,b){return reunionTime(b)-reunionTime(a)});
+  var cuerpo=agendaGrupoHtml('Pr&oacute;ximas',proximas,false)+agendaGrupoHtml('Reuniones pasadas',pasadas,true);
+  if(!cuerpo)return '';
+  return '<div class="agenda-seccion'+(esAsesores?' agenda-seccion-asesores':'')+'">'
+    +'<div class="agenda-seccion-title">'+esc(tituloSeccion)+(hint?' <span class="agenda-seccion-hint">'+esc(hint)+'</span>':'')+'</div>'
+    +cuerpo+'</div>';
 }
 function renderAgenda(){
   var q=(document.getElementById('agenda-search').value||'').toLowerCase().trim();
   var lista=AGENDA.filter(function(r){
     return !q||(r.comisiones||[]).join(' ').toLowerCase().indexOf(q)>=0;
   });
-  var now=Date.now(),proximas=[],pasadas=[];
-  lista.forEach(function(r){
-    var t=reunionTime(r);
-    if(t!==-Infinity&&t>=now)proximas.push(r);else pasadas.push(r);
-  });
-  proximas.sort(function(a,b){return reunionTime(a)-reunionTime(b)});
-  pasadas.sort(function(a,b){return reunionTime(b)-reunionTime(a)});
-  var html=agendaGrupoHtml('Pr&oacute;ximas reuniones',proximas,false)+agendaGrupoHtml('Reuniones pasadas',pasadas,true);
+  var principales=lista.filter(function(r){return r.tipo!=='asesores'});
+  var asesores=lista.filter(function(r){return r.tipo==='asesores'});
+  var html=agendaSeccionHtml('Reuniones de senadores y bicamerales','',principales,false)
+    +agendaSeccionHtml('Reuniones de asesores','instancia previa, no vinculante',asesores,true);
   document.getElementById('agenda-list').innerHTML=html||'<div class="no-results">Sin reuniones para este filtro.</div>';
 }
 function parseExpNumero(numero){
