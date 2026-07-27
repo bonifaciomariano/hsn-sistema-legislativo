@@ -288,8 +288,23 @@ table.cross-table tr:last-child td{border-bottom:none}
 .temario-item.clk{cursor:pointer}
 .temario-item.clk:hover{background:#F5F8FC}
 .temario-num{display:inline-block;font-size:12px;font-weight:700;color:#1B5EA2;margin-right:8px}
-.card-footer{padding:0 14px 12px}
+.card-footer{padding:0 14px 12px;display:flex;align-items:center;gap:6px;flex-wrap:wrap}
 .reunion-badge{display:inline-block;font-size:11px;font-weight:600;padding:4px 10px;border-radius:6px;background:#D6E4F0;color:#1B5EA2}
+.od-badge{display:inline-block;font-size:11px;font-weight:600;padding:4px 10px;border-radius:6px;background:#E8F4E8;color:#0F6E56;border:1px solid #5DCAA5;text-decoration:none}
+.od-badge:hover{background:#dcefdc}
+.od-tabs{display:flex;gap:4px;border-bottom:1px solid #D6E4F0;margin-bottom:14px;overflow-x:auto}
+.od-tab-btn{padding:10px 18px;background:transparent;border:none;color:#888;font-family:inherit;font-size:12px;font-weight:600;cursor:pointer;border-bottom:3px solid transparent;transition:all .2s;white-space:nowrap}
+.od-tab-btn.active{color:#1B5EA2;border-bottom-color:#1B5EA2}
+.od-tab-btn:hover{color:#2E75B6}
+.od-card{background:#fff;border:1px solid #D6E4F0;border-radius:10px;padding:12px 16px;margin-bottom:10px;box-shadow:0 1px 3px rgba(0,0,0,0.05)}
+.od-card-top{display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap;margin-bottom:6px}
+.od-nro{font-size:14px;font-weight:700;color:#1B5EA2;text-decoration:none}
+.od-nro:hover{text-decoration:underline}
+.od-tipo-tag{font-size:9.5px;font-weight:700;text-transform:uppercase;letter-spacing:.4px;color:#9aacbd;border:1px solid #D6E4F0;border-radius:10px;padding:1px 7px}
+.od-exp-row{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:2px}
+.od-exp-link{font-size:12px;color:#2E75B6;text-decoration:none;font-weight:600}
+.od-exp-link:hover{text-decoration:underline}
+.od-exp-extracto{font-size:12.5px;color:#4A4A4A;line-height:1.4;margin:2px 0 10px;padding-left:8px;border-left:2px solid #D6E4F0}
 .agenda-badges{display:flex;align-items:center;gap:6px;flex-wrap:wrap}
 .plenaria-badge{display:inline-block;font-size:9.5px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;padding:2px 8px;border-radius:10px;background:#0d3f73;color:#fff}
 /* ── Colapsables (grupos pasados / sección asesores) ──────────────────── */
@@ -387,6 +402,7 @@ function init(){
   renderComisionesList();
   renderRepresentacion();
   renderAgenda();
+  renderOd();
 }
 function fillSelect(id,values){
   var sel=document.getElementById(id);
@@ -923,11 +939,17 @@ function getFiltered(){
   });
 }
 function expNroOf(p){return p.origen+'-'+p.nro+'/'+String(p.anio).slice(-2);}
-function reunionBadgeHtml(p){
-  if(!p.reuniones||!p.reuniones.length)return '';
-  var r=p.reuniones[0];
-  var extra=p.reuniones.length>1?' (+'+(p.reuniones.length-1)+' anteriores)':'';
-  return '<div class="card-footer"><span class="reunion-badge">Tratado en reuni&oacute;n: '+esc(r.comision)+' &middot; '+esc(r.fecha)+extra+'</span></div>';
+function cardFooterHtml(p){
+  var html='';
+  if(p.reuniones&&p.reuniones.length){
+    var r=p.reuniones[0];
+    var extra=p.reuniones.length>1?' (+'+(p.reuniones.length-1)+' anteriores)':'';
+    html+='<span class="reunion-badge">Tratado en reuni&oacute;n: '+esc(r.comision)+' &middot; '+esc(r.fecha)+extra+'</span>';
+  }
+  if(p.od){
+    html+='<a class="od-badge" href="'+escAttr(p.od.url_pdf)+'" target="_blank">OD N&ordm; '+esc(p.od.nro_od+'/'+String(p.od.anio_od).slice(-2))+'</a>';
+  }
+  return html?'<div class="card-footer">'+html+'</div>':'';
 }
 function buildCard(p){
   var fg=TIPO_FG[p.tipo]||'#888',bg=TIPO_BG[p.tipo]||'#eee';
@@ -940,7 +962,7 @@ function buildCard(p){
   p.comisiones.forEach(function(c){ctags+='<span class="ctag">'+esc(c)+'</span>'});
   var expNro=expNroOf(p);
   var linkBtn=p.url?'<a class="exp-link" href="'+escAttr(p.url)+'" target="_blank">Ver en Senado &#8599;</a>':'';
-  return '<div class="card"><div class="card-exp"><div class="exp-id"><span class="exp-badge" style="background:'+bg+';color:'+fg+'">'+esc(p.tipo)+'</span><span class="exp-nro">'+esc(expNro)+'</span>'+(p.fecha?'<span class="exp-fecha">'+esc(p.fecha)+'</span>':'')+'</div>'+linkBtn+'</div><div class="card-body"><div class="extracto">'+esc(p.extracto)+'</div><div class="card-meta">'+(autoresTxt?'<div class="meta-row"><span class="meta-bold">'+esc(autoresTxt)+'</span></div>':'')+(btags?'<div class="meta-row">'+btags+'</div>':'')+(ctags?'<div class="meta-row">'+ctags+'</div>':'')+'</div></div>'+reunionBadgeHtml(p)+'</div>';
+  return '<div class="card"><div class="card-exp"><div class="exp-id"><span class="exp-badge" style="background:'+bg+';color:'+fg+'">'+esc(p.tipo)+'</span><span class="exp-nro">'+esc(expNro)+'</span>'+(p.fecha?'<span class="exp-fecha">'+esc(p.fecha)+'</span>':'')+'</div>'+linkBtn+'</div><div class="card-body"><div class="extracto">'+esc(p.extracto)+'</div><div class="card-meta">'+(autoresTxt?'<div class="meta-row"><span class="meta-bold">'+esc(autoresTxt)+'</span></div>':'')+(btags?'<div class="meta-row">'+btags+'</div>':'')+(ctags?'<div class="meta-row">'+ctags+'</div>':'')+'</div></div>'+cardFooterHtml(p)+'</div>';
 }
 function renderList(){
   var filtered=getFiltered();
@@ -1360,6 +1382,65 @@ function renderAgenda(){
     +agendaSeccionHtml('Reuniones de asesores','instancia previa, no vinculante',asesores,true);
   document.getElementById('agenda-list').innerHTML=html||'<div class="no-results">Sin reuniones para este filtro.</div>';
 }
+/* ── Ayuda Memoria (Órdenes del Día) ──────────────────────────────── */
+var ODTAB='ley';
+var PROYECTOS_POR_CLAVE=null;
+function claveExp(origen,nro,anio){return origen+'~|~'+nro+'~|~'+anio}
+function proyectoDeExp(exp){
+  if(!PROYECTOS_POR_CLAVE){
+    PROYECTOS_POR_CLAVE={};
+    DATA.forEach(function(p){PROYECTOS_POR_CLAVE[claveExp(p.origen,p.nro,p.anio)]=p});
+  }
+  return PROYECTOS_POR_CLAVE[claveExp(exp.origen,exp.nro,exp.anio)]||null;
+}
+function odCategoria(o){
+  var tipo=(o.expedientes&&o.expedientes[0])?o.expedientes[0].tipo:'';
+  if(tipo==='PL')return 'ley';
+  if(tipo==='PD'||tipo==='PC'||tipo==='PR')return 'anexo1';
+  if(tipo==='AC')return 'acuerdos';
+  return 'otros';
+}
+function switchOdTab(id){
+  ODTAB=id;
+  document.querySelectorAll('.od-tab-btn').forEach(function(b){b.classList.remove('active')});
+  document.querySelector('[data-odtab="'+id+'"]').classList.add('active');
+  renderOd();
+}
+function odExpLabel(exp){return exp.origen+'-'+exp.nro+'/'+String(exp.anio).slice(-2)+'-'+exp.tipo}
+function buildOdCard(o){
+  var expHtml='';
+  o.expedientes.forEach(function(exp){
+    var p=proyectoDeExp(exp);
+    expHtml+='<div class="od-exp-row"><a class="od-exp-link" href="'+escAttr(exp.url)+'" target="_blank">'+esc(odExpLabel(exp))+'</a></div>';
+    if(p)expHtml+='<div class="od-exp-extracto">'+esc(p.extracto)+'</div>';
+  });
+  var tipoLabel=o.tipo_od==='A'?'Anexo':'Normal';
+  return '<div class="od-card"><div class="od-card-top">'
+    +'<a class="od-nro" href="'+escAttr(o.url_pdf)+'" target="_blank">OD N&ordm; '+esc(o.nro_od+'/'+String(o.anio_od).slice(-2))+'</a>'
+    +'<span class="od-tipo-tag">'+esc(tipoLabel)+'</span>'
+    +'</div>'+expHtml+'</div>';
+}
+function renderOd(){
+  var searchEl=document.getElementById('od-search');
+  var q=(searchEl&&searchEl.value||'').toLowerCase().trim();
+  var lista=(OD_DATA||[]).filter(function(o){
+    if(odCategoria(o)!==ODTAB)return false;
+    if(!q)return true;
+    var nroStr=(o.nro_od+'/'+o.anio_od).toLowerCase();
+    if(nroStr.indexOf(q)>=0)return true;
+    return o.expedientes.some(function(exp){
+      var p=proyectoDeExp(exp);
+      return p&&p.extracto&&p.extracto.toLowerCase().indexOf(q)>=0;
+    });
+  });
+  lista=lista.slice().sort(function(a,b){return (b.anio_od-a.anio_od)||(b.nro_od-a.nro_od)||(a.tipo_od<b.tipo_od?-1:1)});
+  var el=document.getElementById('od-list');
+  if(!el)return;
+  if(!lista.length){el.innerHTML='<div class="no-results">Sin &oacute;rdenes del d&iacute;a para este filtro.</div>';return}
+  var html='';
+  lista.forEach(function(o){html+=buildOdCard(o)});
+  el.innerHTML=html;
+}
 function parseExpNumero(numero){
   var m=/^([A-ZÑ.]+)-(\d+)\/(\d+)$/.exec(String(numero||'').trim().toUpperCase());
   if(!m)return null;
@@ -1731,10 +1812,21 @@ HTML_TEMPLATE = """<!DOCTYPE html>
 
 <!-- ====================== MAIN: AYUDA MEMORIA ====================== -->
 <div id="main-ayuda" class="mtab-content">
-  <div class="placeholder">
-    <div class="placeholder-icon">&#128221;</div>
-    <h3>Ayuda Memoria</h3>
-    <p>Secci&oacute;n en construcci&oacute;n &mdash; pr&oacute;ximamente en Fase 2.</p>
+  <div class="section-block">
+    <div class="section-header">
+      <h2>Ayuda Memoria</h2>
+      <span class="section-hint">&Oacute;rdenes del D&iacute;a del HSN</span>
+    </div>
+    <div class="section-body">
+      <div class="od-tabs">
+        <button class="od-tab-btn active" data-odtab="ley" onclick="switchOdTab('ley')">OD de Ley</button>
+        <button class="od-tab-btn" data-odtab="anexo1" onclick="switchOdTab('anexo1')">Anexo 1</button>
+        <button class="od-tab-btn" data-odtab="acuerdos" onclick="switchOdTab('acuerdos')">OD de Acuerdos</button>
+        <button class="od-tab-btn" data-odtab="otros" onclick="switchOdTab('otros')">Otros</button>
+      </div>
+      <input class="search-box" type="text" id="od-search" placeholder="Buscar por n&uacute;mero de OD o extracto&hellip;" oninput="renderOd()" style="max-width:360px">
+      <div id="od-list"></div>
+    </div>
   </div>
 </div>
 
@@ -1756,6 +1848,7 @@ HTML_TEMPLATE = """<!DOCTYPE html>
 var DATA = {datos};
 var COMISIONES = {comisiones};
 var AGENDA = {agenda};
+var OD_DATA = {od};
 var BLOQUE_TOTALES = {bloque_totales};
 var FONT_POPPINS_REGULAR = "{font_regular}";
 var FONT_POPPINS_BOLD = "{font_bold}";
@@ -2037,6 +2130,27 @@ def cruzar_proyectos_agenda(proyectos, agenda_procesada):
                 rr.pop("_iso", None)
 
 
+def construir_od():
+    """Carga data/od.json (generado por scraper_od.py) para embeber en la web."""
+    return _cargar("od.json", [])
+
+
+def cruzar_proyectos_od(proyectos, od_data):
+    """Por cada proyecto, agrega (in place) un campo 'od' con la primera OD
+    (más reciente) en cuyos expedientes aparece, si tiene alguna."""
+    idx = {(p.get("origen"), p.get("nro"), p.get("anio")): p for p in proyectos}
+    for o in od_data:
+        for exp in o.get("expedientes", []):
+            p = idx.get((exp.get("origen"), exp.get("nro"), exp.get("anio")))
+            if not p or p.get("od"):
+                continue
+            p["od"] = {
+                "nro_od": o["nro_od"],
+                "anio_od": o["anio_od"],
+                "url_pdf": o["url_pdf"],
+            }
+
+
 def construir_bloque_totales():
     """Cantidad de senadores vigentes por bloque, según data/senadores.json."""
     senadores = _cargar("senadores.json", {})
@@ -2177,9 +2291,13 @@ def main():
     agenda_procesada = construir_agenda(comisiones_oficiales)
     cruzar_proyectos_agenda(proyectos, agenda_procesada)
 
+    od_procesada = construir_od()
+    cruzar_proyectos_od(proyectos, od_procesada)
+
     datos_js = json.dumps(proyectos, ensure_ascii=False)
     comisiones_js = json.dumps(construir_comisiones(proyectos), ensure_ascii=False)
     agenda_js = json.dumps(agenda_procesada, ensure_ascii=False)
+    od_js = json.dumps(od_procesada, ensure_ascii=False)
     bloque_totales_js = json.dumps(construir_bloque_totales(), ensure_ascii=False)
     fonts = _cargar("fonts_poppins.json", {})
     fecha = datetime.now().strftime("%d/%m/%Y %H:%M")
@@ -2190,6 +2308,7 @@ def main():
         datos=datos_js,
         comisiones=comisiones_js,
         agenda=agenda_js,
+        od=od_js,
         bloque_totales=bloque_totales_js,
         font_regular=fonts.get("regular", ""),
         font_bold=fonts.get("bold", ""),
