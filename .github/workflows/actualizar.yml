@@ -42,6 +42,10 @@ jobs:
         continue-on-error: true
         run: python scripts/scraper_od.py
 
+      - name: Scraper de sanciones HSN (boletín de novedades)
+        continue-on-error: true
+        run: python scripts/scraper_sanciones.py
+
       - name: Generar web
         run: python scripts/generar_web.py
 

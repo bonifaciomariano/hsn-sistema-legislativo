@@ -292,10 +292,14 @@ table.cross-table tr:last-child td{border-bottom:none}
 .reunion-badge{display:inline-block;font-size:11px;font-weight:600;padding:4px 10px;border-radius:6px;background:#D6E4F0;color:#1B5EA2}
 .od-badge{display:inline-block;font-size:11px;font-weight:600;padding:4px 10px;border-radius:6px;background:#E8F4E8;color:#0F6E56;border:1px solid #5DCAA5;text-decoration:none}
 .od-badge:hover{background:#dcefdc}
-.od-tabs{display:flex;gap:4px;border-bottom:1px solid #D6E4F0;margin-bottom:14px;overflow-x:auto}
-.od-tab-btn{padding:10px 18px;background:transparent;border:none;color:#888;font-family:inherit;font-size:12px;font-weight:600;cursor:pointer;border-bottom:3px solid transparent;transition:all .2s;white-space:nowrap}
-.od-tab-btn.active{color:#1B5EA2;border-bottom-color:#1B5EA2}
-.od-tab-btn:hover{color:#2E75B6}
+.pref-badge{display:inline-block;font-size:11px;font-weight:600;padding:4px 10px;border-radius:6px;background:#FFF8E1;color:#F57F17;border:1px solid #F9A825}
+.sancionado-badge{display:inline-block;font-size:11px;font-weight:600;padding:4px 10px;border-radius:6px;background:#E8F5E9;color:#1B5E20;border:1px solid #4CAF50;text-decoration:none;cursor:pointer}
+.sancionado-badge:hover{background:#dcefdc}
+.diputados-badge{display:inline-block;font-size:11px;font-weight:600;padding:4px 10px;border-radius:6px;background:#E3F2FD;color:#0D47A1;border:1px solid #1976D2}
+.od-tabs,.sanc-tabs{display:flex;gap:4px;border-bottom:1px solid #D6E4F0;margin-bottom:14px;overflow-x:auto}
+.od-tab-btn,.sanc-tab-btn{padding:10px 18px;background:transparent;border:none;color:#888;font-family:inherit;font-size:12px;font-weight:600;cursor:pointer;border-bottom:3px solid transparent;transition:all .2s;white-space:nowrap}
+.od-tab-btn.active,.sanc-tab-btn.active{color:#1B5EA2;border-bottom-color:#1B5EA2}
+.od-tab-btn:hover,.sanc-tab-btn:hover{color:#2E75B6}
 .od-card{background:#fff;border:1px solid #D6E4F0;border-radius:10px;padding:12px 16px;margin-bottom:10px;box-shadow:0 1px 3px rgba(0,0,0,0.05)}
 .od-card-top{display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap;margin-bottom:6px}
 .od-nro{font-size:14px;font-weight:700;color:#1B5EA2;text-decoration:none}
@@ -305,6 +309,9 @@ table.cross-table tr:last-child td{border-bottom:none}
 .od-exp-link{font-size:12px;color:#2E75B6;text-decoration:none;font-weight:600}
 .od-exp-link:hover{text-decoration:underline}
 .od-exp-extracto{font-size:12.5px;color:#4A4A4A;line-height:1.4;margin:2px 0 10px;padding-left:8px;border-left:2px solid #D6E4F0}
+.sanc-fecha{font-size:11px;color:#9aacbd;margin-left:auto}
+.sanc-obs{font-size:12px;color:#4A4A4A;margin-top:2px}
+.sanc-obs.ley{color:#1B5EA2;font-weight:700}
 .agenda-badges{display:flex;align-items:center;gap:6px;flex-wrap:wrap}
 .plenaria-badge{display:inline-block;font-size:9.5px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;padding:2px 8px;border-radius:10px;background:#0d3f73;color:#fff}
 /* ── Colapsables (grupos pasados / sección asesores) ──────────────────── */
@@ -403,6 +410,7 @@ function init(){
   renderRepresentacion();
   renderAgenda();
   renderOd();
+  renderSanciones();
 }
 function fillSelect(id,values){
   var sel=document.getElementById(id);
@@ -949,6 +957,16 @@ function cardFooterHtml(p){
   if(p.od){
     html+='<a class="od-badge" href="'+escAttr(p.od.url_pdf)+'" target="_blank">OD N&ordm; '+esc(p.od.nro_od+'/'+String(p.od.anio_od).slice(-2))+'</a>';
   }
+  if(p.badge_preferencia){
+    html+='<span class="pref-badge">Preferencia solicitada &middot; sesi&oacute;n del '+esc(p.badge_preferencia.fecha)+'</span>';
+  }
+  if(p.badge_sancionado){
+    var txtSanc=p.badge_sancionado.ley?('Sancionado &middot; '+esc(p.badge_sancionado.ley)):('Sancionado &middot; sesi&oacute;n del '+esc(p.badge_sancionado.fecha));
+    html+='<a class="sancionado-badge" onclick="irASanciones(\''+jsStr(expNroOf(p))+'\')">'+txtSanc+'</a>';
+  }
+  if(p.badge_diputados){
+    html+='<span class="diputados-badge">Enviado a Diputados &middot; sesi&oacute;n del '+esc(p.badge_diputados.fecha)+'</span>';
+  }
   return html?'<div class="card-footer">'+html+'</div>':'';
 }
 function buildCard(p){
@@ -1485,6 +1503,67 @@ function volverAgenda(){
   document.getElementById('agenda-nivel2').classList.remove('active');
   document.getElementById('agenda-nivel1').classList.add('active');
 }
+
+/* ── Sanciones HSN (Boletín de Novedades) ─────────────────────────── */
+var SANCTAB='ley';
+var SANC_SECCION_LABEL={ley:'Ley',decreto_res_com_dec:'Decreto/Res/Com/Dec',acuerdo:'Acuerdo',preferencia:'Preferencia'};
+function fechaSesionDisplay(iso){
+  var p=String(iso||'').split('-');
+  return p.length===3?(p[2]+'/'+p[1]+'/'+p[0]):(iso||'');
+}
+function sancCategoria(item){
+  if(item.seccion==='ley'&&item.resultado==='APROBADO')return 'ley';
+  if(item.seccion==='acuerdo'&&item.resultado==='APROBADO')return 'acuerdo';
+  if(item.resultado==='APROBADO'||item.resultado==='APROBADA')return 'otros';
+  return null;
+}
+function switchSancTab(id){
+  SANCTAB=id;
+  document.querySelectorAll('.sanc-tab-btn').forEach(function(b){b.classList.remove('active')});
+  document.querySelector('[data-sanctab="'+id+'"]').classList.add('active');
+  renderSanciones();
+}
+function sancObsHtml(item){
+  if(!item.observaciones||item.observaciones==='-')return '';
+  var cls='sanc-obs'+(/^Ley N/.test(item.observaciones)?' ley':'');
+  return '<div class="'+cls+'">'+esc(item.observaciones)+'</div>';
+}
+function buildSancCard(item){
+  var exp=parseExpNumero(item.expediente);
+  var p=exp?proyectoDeExp(exp):null;
+  var linkHtml=(p&&p.url)?'<a class="od-nro" href="'+escAttr(p.url)+'" target="_blank">'+esc(item.expediente)+'</a>':'<span class="od-nro">'+esc(item.expediente)+'</span>';
+  var seccionHtml='<span class="od-tipo-tag">'+esc(SANC_SECCION_LABEL[item.seccion]||item.seccion)+'</span>';
+  var odHtml=item.od_nro?'<span class="od-tipo-tag">OD N&ordm; '+esc(item.od_nro)+'</span>':'';
+  var extractoHtml=p?'<div class="od-exp-extracto">'+esc(p.extracto)+'</div>':'';
+  return '<div class="od-card"><div class="od-card-top">'+linkHtml+seccionHtml+odHtml+'<span class="sanc-fecha">'+esc(fechaSesionDisplay(item.fecha_sesion))+'</span></div>'+extractoHtml+sancObsHtml(item)+'</div>';
+}
+function renderSanciones(){
+  var searchEl=document.getElementById('sanc-search');
+  var q=(searchEl&&searchEl.value||'').toLowerCase().trim();
+  var lista=(SANCIONES_DATA||[]).filter(function(it){
+    if(sancCategoria(it)!==SANCTAB)return false;
+    if(!q)return true;
+    if(it.expediente.toLowerCase().indexOf(q)>=0)return true;
+    var exp=parseExpNumero(it.expediente);
+    var p=exp?proyectoDeExp(exp):null;
+    return !!(p&&p.extracto&&p.extracto.toLowerCase().indexOf(q)>=0);
+  });
+  lista=lista.slice().sort(function(a,b){return (b.fecha_sesion||'').localeCompare(a.fecha_sesion||'')});
+  var el=document.getElementById('sanc-list');
+  if(!el)return;
+  if(!lista.length){el.innerHTML='<div class="no-results">Sin resultados para este filtro.</div>';return}
+  var html='';
+  lista.forEach(function(it){html+=buildSancCard(it)});
+  el.innerHTML=html;
+}
+function irASanciones(expediente){
+  switchMain('sanciones');
+  var it=(SANCIONES_DATA||[]).filter(function(x){return x.expediente===expediente})[0];
+  switchSancTab((it&&sancCategoria(it))||'ley');
+  var searchEl=document.getElementById('sanc-search');
+  if(searchEl){searchEl.value=expediente;renderSanciones()}
+  window.scrollTo({top:0,behavior:'smooth'});
+}
 """
 
 # ── Plantilla HTML ─────────────────────────────────────────────────────────────
@@ -1516,6 +1595,7 @@ HTML_TEMPLATE = """<!DOCTYPE html>
     <button class="mtab-btn" data-main="comisiones" onclick="switchMain('comisiones')">Comisiones</button>
     <button class="mtab-btn" data-main="agenda" onclick="switchMain('agenda')">Agenda</button>
     <button class="mtab-btn" data-main="ayuda" onclick="switchMain('ayuda')">Ayuda Memoria</button>
+    <button class="mtab-btn" data-main="sanciones" onclick="switchMain('sanciones')">Sanciones HSN</button>
   </div>
 </div>
 
@@ -1830,6 +1910,25 @@ HTML_TEMPLATE = """<!DOCTYPE html>
   </div>
 </div>
 
+<!-- ====================== MAIN: SANCIONES HSN ====================== -->
+<div id="main-sanciones" class="mtab-content">
+  <div class="section-block">
+    <div class="section-header">
+      <h2>Sanciones HSN</h2>
+      <span class="section-hint">Bolet&iacute;n de Novedades del HSN</span>
+    </div>
+    <div class="section-body">
+      <div class="sanc-tabs">
+        <button class="sanc-tab-btn active" data-sanctab="ley" onclick="switchSancTab('ley')">Leyes sancionadas</button>
+        <button class="sanc-tab-btn" data-sanctab="acuerdo" onclick="switchSancTab('acuerdo')">Acuerdos aprobados</button>
+        <button class="sanc-tab-btn" data-sanctab="otros" onclick="switchSancTab('otros')">Otros</button>
+      </div>
+      <input class="search-box" type="text" id="sanc-search" placeholder="Buscar por n&uacute;mero de expediente o extracto&hellip;" oninput="renderSanciones()" style="max-width:360px">
+      <div id="sanc-list"></div>
+    </div>
+  </div>
+</div>
+
 <div id="dash-tooltip" class="dash-tooltip"></div>
 
 <div id="dpp-modal-overlay" class="dpp-modal-overlay" onclick="cerrarDppModal(event)">
@@ -1849,6 +1948,7 @@ var DATA = {datos};
 var COMISIONES = {comisiones};
 var AGENDA = {agenda};
 var OD_DATA = {od};
+var SANCIONES_DATA = {sanciones};
 var BLOQUE_TOTALES = {bloque_totales};
 var FONT_POPPINS_REGULAR = "{font_regular}";
 var FONT_POPPINS_BOLD = "{font_bold}";
@@ -2135,6 +2235,56 @@ def construir_od():
     return _cargar("od.json", [])
 
 
+def construir_sanciones():
+    """Carga data/sanciones.json (generado por scraper_sanciones.py) para
+    embeber en la web."""
+    return _cargar("sanciones.json", [])
+
+
+RE_LEY_NRO = re.compile(r"Ley N[°º]\s*[\d.]+")
+
+
+def _fecha_iso_a_dmy(iso):
+    partes = (iso or "").split("-")
+    if len(partes) != 3:
+        return iso or ""
+    return f"{partes[2]}/{partes[1]}/{partes[0]}"
+
+
+def cruzar_proyectos_sanciones(proyectos, sanciones_data):
+    """Por cada proyecto, agrega (in place) hasta 3 badges según su
+    expediente aparezca en data/sanciones.json (Boletín de Novedades):
+      - badge_preferencia: moción de preferencia aprobada.
+      - badge_sancionado: sanción/aprobación en ley, acuerdo o
+        decreto/res/com/dec (con nro de ley si consta en observaciones).
+      - badge_diputados: comunicado a la H. Cámara de Diputados.
+    """
+    idx = {}
+    for it in sanciones_data:
+        idx.setdefault(it.get("expediente"), []).append(it)
+
+    for p in proyectos:
+        exp = f"{p.get('origen')}-{p.get('nro')}/{str(p.get('anio'))[-2:]}"
+        items = idx.get(exp)
+        if not items:
+            continue
+        for it in items:
+            seccion = it.get("seccion")
+            resultado = (it.get("resultado") or "").upper()
+            observaciones = it.get("observaciones") or ""
+            fecha = _fecha_iso_a_dmy(it.get("fecha_sesion"))
+
+            if seccion == "preferencia" and "badge_preferencia" not in p:
+                p["badge_preferencia"] = {"fecha": fecha}
+
+            elif seccion in ("ley", "acuerdo", "decreto_res_com_dec") and resultado in ("APROBADO", "APROBADA"):
+                if "badge_sancionado" not in p:
+                    m = RE_LEY_NRO.search(observaciones)
+                    p["badge_sancionado"] = {"fecha": fecha, "ley": m.group(0) if m else None}
+                if "Se comunica a la H. Cámara de Diputados" in observaciones and "badge_diputados" not in p:
+                    p["badge_diputados"] = {"fecha": fecha}
+
+
 def cruzar_proyectos_od(proyectos, od_data):
     """Por cada proyecto, agrega (in place) un campo 'od' con la primera OD
     (más reciente) en cuyos expedientes aparece, si tiene alguna."""
@@ -2294,10 +2444,14 @@ def main():
     od_procesada = construir_od()
     cruzar_proyectos_od(proyectos, od_procesada)
 
+    sanciones_procesada = construir_sanciones()
+    cruzar_proyectos_sanciones(proyectos, sanciones_procesada)
+
     datos_js = json.dumps(proyectos, ensure_ascii=False)
     comisiones_js = json.dumps(construir_comisiones(proyectos), ensure_ascii=False)
     agenda_js = json.dumps(agenda_procesada, ensure_ascii=False)
     od_js = json.dumps(od_procesada, ensure_ascii=False)
+    sanciones_js = json.dumps(sanciones_procesada, ensure_ascii=False)
     bloque_totales_js = json.dumps(construir_bloque_totales(), ensure_ascii=False)
     fonts = _cargar("fonts_poppins.json", {})
     fecha = datetime.now().strftime("%d/%m/%Y %H:%M")
@@ -2309,6 +2463,7 @@ def main():
         comisiones=comisiones_js,
         agenda=agenda_js,
         od=od_js,
+        sanciones=sanciones_js,
         bloque_totales=bloque_totales_js,
         font_regular=fonts.get("regular", ""),
         font_bold=fonts.get("bold", ""),
