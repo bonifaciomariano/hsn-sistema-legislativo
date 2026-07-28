@@ -75,6 +75,11 @@ Campos que `generar_web.py` agrega **in place** al cruzar con otras fuentes:
 ### `data/od.json` (scraper_od.py)
 `{nro_od, anio_od, tipo_od (N/A), expedientes:[{nro,anio,tipo,origen,url}], url_pdf, fecha}`.
 
+### `data/acuerdos.json` (importado a mano desde CSV, ver §5.6)
+Lista plana de expedientes AC (Acuerdos del PE al Senado):
+`{nro, anio, caratula, dado_cuenta (bool), fecha_dado_cuenta (str dd/mm/aaaa|null),
+dae (int|null), aprobado (bool), fecha_aprobacion (str|null), nro_od (int|null), origen}`.
+
 ### `data/sanciones.json` (scraper_sanciones.py)
 Lista plana de ítems extraídos del Boletín de Novedades (uno por expediente aprobado):
 `{expediente (ej. "S-289/26"), od_nro (int|null), resultado ("APROBADO"/"APROBADA"/otro),
@@ -154,6 +159,29 @@ suelen no estarlo).
 - **Enviado a Diputados** (azul `#E3F2FD`/`#0D47A1`): observaciones contienen
   "Se comunica a la H. Cámara de Diputados".
 
+### 5.6 Acuerdos (expedientes AC)
+Los expedientes AC (mensajes del PE solicitando acuerdo del Senado para designaciones)
+tienen 2 estados adicionales, importados a mano desde un CSV de la Prosecretaría
+(`data/AC_2026_acuerdos.csv` → `scripts/importar_acuerdos.py` → `data/acuerdos.json`,
+ver §3). `cruzar_proyectos_acuerdos()` en `generar_web.py` cruza por `nro`+`anio` y
+agrega in-place `dado_cuenta`, `fecha_dado_cuenta`, `aprobado_ac`, `fecha_aprobacion_ac`
+a los proyectos tipo AC.
+
+**Cruce con tarjetas de Proyectos** — 2 badges nuevos en `cardFooterHtml()`:
+- **Dado cuenta** (verde `#E8F5E9`/`#1B5E20`): `dado_cuenta === true`.
+- **Pendiente de dar cuenta** (ámbar `#FFF8E1`/`#F57F17`): `dado_cuenta === false`.
+
+**Filtro en el Buscador:** cuando el filtro de Tipo activo es exclusivamente `AC`,
+aparece un filtro adicional "Estado del acuerdo" (Todos / Dado cuenta / Pendiente de
+dar cuenta), implementado con `activeAcuerdoEstado` + chips en `#acuerdo-estado-filter`.
+
+**Pendiente — automatizar el scraping de "dado cuenta":** hoy `data/acuerdos.json` se
+carga a mano desde un CSV que la Prosecretaría exporta periódicamente (no hay scraper).
+El campo "dado cuenta" está disponible en la página de cada expediente AC del Senado,
+en la tabla **"Fechas en Dir. Mesa de Entradas"**. Cuando se automatice, la idea es que
+`scripts/scraper_proyectos.py`, al visitar un expediente de tipo AC, lea esa celda y
+actualice `data/acuerdos.json` directamente — sin depender del CSV manual.
+
 ---
 
 ## 6. Convenciones técnicas y aprendizajes
@@ -205,4 +233,9 @@ suelen no estarlo).
 - **Fase 5b — Sanciones HSN:** scraper de Boletines de Novedades (`scraper_sanciones.py`,
   vía `pdfplumber.extract_tables()`), pestaña Sanciones HSN (Leyes/Acuerdos/Otros), y
   3 badges de cruce en tarjetas de Proyectos (Preferencia solicitada, Sancionado,
-  Enviado a Diputados). ← estado actual
+  Enviado a Diputados).
+- **Fase 5c — Acuerdos (AC):** importación manual de `data/acuerdos.json` desde CSV
+  (`importar_acuerdos.py`), cruce `cruzar_proyectos_acuerdos()`, 2 badges (Dado cuenta /
+  Pendiente de dar cuenta) y filtro "Estado del acuerdo" en el Buscador cuando el tipo
+  activo es exclusivamente AC. Scraping automático queda pendiente (ver §5.6). ← estado
+  actual

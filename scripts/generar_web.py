@@ -296,6 +296,8 @@ table.cross-table tr:last-child td{border-bottom:none}
 .sancionado-badge{display:inline-block;font-size:11px;font-weight:600;padding:4px 10px;border-radius:6px;background:#E8F5E9;color:#1B5E20;border:1px solid #4CAF50;text-decoration:none;cursor:pointer}
 .sancionado-badge:hover{background:#dcefdc}
 .diputados-badge{display:inline-block;font-size:11px;font-weight:600;padding:4px 10px;border-radius:6px;background:#E3F2FD;color:#0D47A1;border:1px solid #1976D2}
+.dadocuenta-badge{display:inline-block;font-size:11px;font-weight:600;padding:4px 10px;border-radius:6px;background:#E8F5E9;color:#1B5E20;border:1px solid #4CAF50}
+.pendientecuenta-badge{display:inline-block;font-size:11px;font-weight:600;padding:4px 10px;border-radius:6px;background:#FFF8E1;color:#F57F17;border:1px solid #F9A825}
 .od-tabs,.sanc-tabs{display:flex;gap:4px;border-bottom:1px solid #D6E4F0;margin-bottom:14px;overflow-x:auto}
 .od-tab-btn,.sanc-tab-btn{padding:10px 18px;background:transparent;border:none;color:#888;font-family:inherit;font-size:12px;font-weight:600;cursor:pointer;border-bottom:3px solid transparent;transition:all .2s;white-space:nowrap}
 .od-tab-btn.active,.sanc-tab-btn.active{color:#1B5EA2;border-bottom-color:#1B5EA2}
@@ -355,7 +357,7 @@ var BLOQUE_COLORS_NORM={};
 Object.keys(BLOQUE_COLORS).forEach(function(k){BLOQUE_COLORS_NORM[normBloque(k)]=BLOQUE_COLORS[k]});
 var ALL_BLOQUES=[];
 var dashAnio='2026',dashEvoMode='tipo',dashCross={dim:'',val:''};
-var activeTipos={},activeBloque='',activeOrigen='',activeProvincia='',activeAnio='';
+var activeTipos={},activeBloque='',activeOrigen='',activeProvincia='',activeAnio='',activeAcuerdoEstado='';
 
 /* ── Escapado HTML básico ──────────────────────────────────────────── */
 function esc(s){return String(s==null?'':s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;')}
@@ -869,7 +871,7 @@ function syncFilterUI(){
 function setAnioShared(v){activeAnio=v;applyAll();}
 function setTipoShared(v){activeTipos={};if(v)activeTipos[v]=1;applyAll();}
 function setOrigenShared(v){activeOrigen=v;applyAll();}
-function clearSharedFilters(){activeAnio='';activeTipos={};activeOrigen='';applyAll();}
+function clearSharedFilters(){activeAnio='';activeTipos={};activeOrigen='';activeAcuerdoEstado='';applyAll();}
 
 /* ── Buscador: filtros ─────────────────────────────────────────── */
 function renderFilters(){
@@ -889,7 +891,20 @@ function renderFilters(){
     ohtml+='<button class="chip'+(activeOrigen===o?' on':'')+'" onclick="toggleOrigen(\''+o+'\')">'+(ORIGEN_LABEL[o]||o)+'</button>';
   });
   document.getElementById('origen-filters').innerHTML=ohtml;
+
+  var tk=Object.keys(activeTipos);
+  var soloAC=tk.length===1&&tk[0]==='AC';
+  var acBox=document.getElementById('acuerdo-estado-filter');
+  if(acBox){
+    acBox.style.display=soloAC?'':'none';
+    if(!soloAC){activeAcuerdoEstado=''}
+    var ah='<button class="chip'+(activeAcuerdoEstado===''?' on':'')+'" onclick="setAcuerdoEstado(\'\')">Todos</button>'
+      +'<button class="chip'+(activeAcuerdoEstado==='dado'?' on':'')+'" onclick="setAcuerdoEstado(\'dado\')">Dado cuenta</button>'
+      +'<button class="chip'+(activeAcuerdoEstado==='pendiente'?' on':'')+'" onclick="setAcuerdoEstado(\'pendiente\')">Pendiente de dar cuenta</button>';
+    document.getElementById('acuerdo-estado-chips').innerHTML=ah;
+  }
 }
+function setAcuerdoEstado(v){activeAcuerdoEstado=v;renderList();}
 function toggleTipo(t){
   if(t==='__all__'){activeTipos={}}else{if(activeTipos[t])delete activeTipos[t];else activeTipos[t]=1}
   applyAll();
@@ -929,6 +944,8 @@ function getFiltered(){
     if(activeBloque&&p.bloques.indexOf(activeBloque)<0)return false;
     if(activeOrigen&&p.origen!==activeOrigen)return false;
     if(activeProvincia&&(!p.provincias||p.provincias.indexOf(activeProvincia)<0))return false;
+    if(activeAcuerdoEstado==='dado'&&p.dado_cuenta!==true)return false;
+    if(activeAcuerdoEstado==='pendiente'&&p.dado_cuenta!==false)return false;
     if(selCom1&&p.comisiones[0]!==selCom1)return false;
     if(selComAdic&&p.comisiones.slice(1).indexOf(selComAdic)<0)return false;
     if(selAutor&&p.autores.indexOf(selAutor)<0)return false;
@@ -966,6 +983,12 @@ function cardFooterHtml(p){
   }
   if(p.badge_diputados){
     html+='<span class="diputados-badge">Enviado a Diputados &middot; sesi&oacute;n del '+esc(p.badge_diputados.fecha)+'</span>';
+  }
+  if(p.tipo==='AC'&&p.dado_cuenta===true){
+    html+='<span class="dadocuenta-badge">Dado cuenta &middot; sesi&oacute;n del '+esc(p.fecha_dado_cuenta)+'</span>';
+  }
+  if(p.tipo==='AC'&&p.dado_cuenta===false){
+    html+='<span class="pendientecuenta-badge">Pendiente de dar cuenta</span>';
   }
   return html?'<div class="card-footer">'+html+'</div>':'';
 }
@@ -1468,7 +1491,7 @@ function irAExpediente(numero){
   var exp=parseExpNumero(numero);
   if(!exp)return;
   resetBuscadorOnly();
-  activeAnio='';activeTipos={};activeOrigen='';
+  activeAnio='';activeTipos={};activeOrigen='';activeAcuerdoEstado='';
   document.getElementById('search').value=exp.origen+'-'+exp.nro+'/'+String(exp.anio).slice(-2);
   switchMain('proyectos');
   switchSub('buscador');
@@ -1736,6 +1759,11 @@ HTML_TEMPLATE = """<!DOCTYPE html>
 
           <div class="filter-label">Tipo</div>
           <div class="filter-row" id="tipo-filters"></div>
+
+          <div id="acuerdo-estado-filter" style="display:none">
+            <div class="filter-label">Estado del acuerdo</div>
+            <div class="filter-row" id="acuerdo-estado-chips"></div>
+          </div>
 
           <div class="filter-label">Bloque</div>
           <div class="select-wrapper">
@@ -2301,6 +2329,25 @@ def cruzar_proyectos_od(proyectos, od_data):
             }
 
 
+def cruzar_proyectos_acuerdos(proyectos, acuerdos_data):
+    """Por cada proyecto de tipo AC, agrega (in place) el estado del acuerdo
+    según data/acuerdos.json (migrado a mano desde el CSV de la Prosecretaría):
+      - dado_cuenta / fecha_dado_cuenta
+      - aprobado_ac / fecha_aprobacion_ac
+    """
+    idx = {(a["nro"], a["anio"]): a for a in acuerdos_data}
+    for p in proyectos:
+        if p.get("tipo") != "AC":
+            continue
+        a = idx.get((p.get("nro"), p.get("anio")))
+        if not a:
+            continue
+        p["dado_cuenta"] = a["dado_cuenta"]
+        p["fecha_dado_cuenta"] = a["fecha_dado_cuenta"]
+        p["aprobado_ac"] = a["aprobado"]
+        p["fecha_aprobacion_ac"] = a["fecha_aprobacion"]
+
+
 def construir_bloque_totales():
     """Cantidad de senadores vigentes por bloque, según data/senadores.json."""
     senadores = _cargar("senadores.json", {})
@@ -2446,6 +2493,9 @@ def main():
 
     sanciones_procesada = construir_sanciones()
     cruzar_proyectos_sanciones(proyectos, sanciones_procesada)
+
+    acuerdos_procesados = _cargar("acuerdos.json", [])
+    cruzar_proyectos_acuerdos(proyectos, acuerdos_procesados)
 
     datos_js = json.dumps(proyectos, ensure_ascii=False)
     comisiones_js = json.dumps(construir_comisiones(proyectos), ensure_ascii=False)
