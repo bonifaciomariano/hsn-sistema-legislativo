@@ -12,13 +12,18 @@ Tipo de reunión:
   - Ajuste: cualquier reunión cuya comisión contenga la palabra BICAMERAL se
     tipifica como 'bicameral', sin importar la sección.
 
-Dos formatos de boletín conviven (el sitio cambió de formato en julio de 2026):
+Dos formatos de boletín conviven (el sitio cambió de formato en julio de 2026,
+y volvió a cambiarlo levemente en agosto):
   - "Tabular" (histórico): tablas FECHA|HORA|COMISIÓN|SALÓN. El encabezado de
     sección ("REUNIONES DE ASESORES", etc.) NO forma parte de ninguna tabla —
     pdfplumber lo descarta si sólo se leen extract_tables(). Por eso se resuelve
     la sección de cada tabla por posición vertical (ver extraer_filas_con_seccion).
-  - "Texto libre" (actual): sin tablas, con marcadores 🗓/🕑/📍/📋 y secciones
-    "AGENDA DE SENADORES" / "AGENDA DE ASESORES".
+  - "Texto libre" (actual): sin tablas, con marcadores 🗓/🕑/📍/📋. Hasta julio
+    de 2026 traía secciones "AGENDA DE SENADORES" / "AGENDA DE ASESORES";
+    desde agosto de 2026 ese encabezado desapareció (un único listado, sin
+    distinguir senadores de asesores) — por eso la detección de formato se
+    basa en el marcador de fecha (RE_FECHA_LINEA) y no en ese encabezado, que
+    ahora es opcional (ver _es_texto_formato_libre / parsear_reuniones_texto_libre).
 
 Tolerante a fallos: si un boletín falla, se registra el error y se continúa.
 """
@@ -74,6 +79,9 @@ MESES_NOMBRE = {
 }
 RE_FECHA_LINEA = re.compile(
     r"🗓\s*([A-ZÁÉÍÓÚÑ]+)\s+(\d{1,2})\s+DE\s+([A-ZÁÉÍÓÚÑ]+)\s*🕑\s*(.+?)\s*📍\s*(.+)$")
+# Marca el inicio de una lista de expositores de audiencia pública (no son
+# expedientes; hay que dejar de acumular temario a partir de acá).
+RE_EXPOSITORES = re.compile(r"\bEXPOSITORES\s*:", re.IGNORECASE)
 
 logging.basicConfig(
     level=logging.INFO,
@@ -353,34 +361,71 @@ def parsear_reuniones_tabular(filas_con_seccion):
 
 
 # ─────────────────────────────── Parseo del boletín (formato texto libre) ────
+# Desde ~agosto de 2026 este formato dejó de traer el encabezado "AGENDA DE
+# SENADORES" / "AGENDA DE ASESORES" (ya no separa reuniones de senadores de
+# las de asesores; todo va en un único listado), pero sigue usando los
+# marcadores 🗓🕑📍📋 — por eso la detección de formato se basa en el marcador
+# de fecha, no en ese encabezado (que ahora es opcional).
+
+RE_BOLETIN_PREAMBULO = re.compile(
+    r"^(N[°ºo]\s*\d+\s*/\s*\d+|INFORMACI[ÓO]N\s+AL\b.*)$", re.IGNORECASE)
+
 
 def _es_texto_formato_libre(texto):
-    return bool(re.search(r"AGENDA\s+DE\s+SENADORES", texto or "", re.IGNORECASE))
+    # RE_FECHA_LINEA usa '$' sin re.MULTILINE (se aplica línea por línea en el
+    # parser); acá sólo interesa detectar la presencia de los marcadores.
+    texto = texto or ""
+    return "🗓" in texto and "📍" in texto
 
 
 def _parece_nombre_comision(linea, comisiones_norm):
-    """¿Esta línea es el nombre de una comisión (y no texto de temario)?
-    Las comisiones bicamerales ad-hoc no están en comisiones.json, pero su
-    nombre siempre empieza con la palabra BICAMERAL."""
-    up = linea.strip().upper()
-    if not up:
-        return False
-    if up.startswith("BICAMERAL"):
-        return True
-    return _norm_com(up) in comisiones_norm
+    """¿Esta línea es el nombre de una comisión (y no texto de temario)? Las
+    reuniones conjuntas listan varias comisiones separadas por "|" en la misma
+    línea, así que alcanza con que UNA de las partes lo sea. Las comisiones
+    bicamerales ad-hoc y las audiencias públicas de acuerdos no están en
+    comisiones.json (no son comisiones permanentes), pero sus nombres siempre
+    empiezan con "BICAMERAL" o "ACUERDOS" respectivamente."""
+    partes = [p.strip() for p in linea.upper().split("|")] if "|" in linea else [linea.strip().upper()]
+    for up in partes:
+        if not up:
+            continue
+        if up.startswith("BICAMERAL") or up.startswith("ACUERDOS"):
+            return True
+        if _norm_com(up) in comisiones_norm:
+            return True
+    return False
+
+
+def _comisiones_desde_buffer(buffer):
+    """Arma la lista final de comisiones a partir de las líneas acumuladas
+    antes de la fecha. Si en algún punto aparece "|" (reunión conjunta en el
+    formato narrativo/agosto-2026), se separa por ese carácter; si no, cada
+    línea acumulada es una comisión (formato histórico). Descarta artefactos
+    de extracción: palabras sueltas de 3 letras o menos."""
+    texto = " ".join(buffer)
+    if "|" in texto:
+        partes = [p.strip() for p in texto.split("|") if p.strip()]
+    else:
+        partes = [c for c in buffer if c.strip()]
+    limpio = [c for c in partes
+              if len(re.sub(r"[^A-ZÁÉÍÓÚÑ]", "", c.upper())) > 3]
+    return limpio or partes or buffer
 
 
 def parsear_reuniones_texto_libre(texto, comisiones_norm):
-    """Parsea el formato de texto libre (AGENDA DE SENADORES / AGENDA DE
-    ASESORES, marcadores 🗓🕑📍📋). Como no hay separador explícito entre el
-    temario de una reunión y el nombre de la siguiente comisión cuando dos
-    reuniones de la misma sección van seguidas, se reconoce el nombre de la
-    próxima comisión contra la lista oficial (o el prefijo BICAMERAL)."""
+    """Parsea el formato de texto libre (marcadores 🗓🕑📍📋). Como no hay
+    separador explícito entre el temario de una reunión y el nombre de la
+    siguiente comisión cuando dos reuniones van seguidas, se reconoce el
+    nombre de la próxima comisión contra la lista oficial (o el prefijo
+    BICAMERAL). El encabezado "AGENDA DE SENADORES/ASESORES" es opcional: si
+    no aparece (boletines desde agosto de 2026), todo se tipifica como
+    'senadores' salvo lo que sea bicameral."""
     lineas = [l.strip() for l in (texto or "").split("\n") if l.strip()]
     reuniones = []
-    seccion = None
+    seccion = "senadores"
     comision_buffer = []
     reunion = None
+    en_expositores = False
 
     def cerrar():
         nonlocal reunion
@@ -398,13 +443,15 @@ def parsear_reuniones_texto_libre(texto, comisiones_norm):
         if m_sec:
             cerrar()
             comision_buffer = []
+            en_expositores = False
             seccion = "senadores" if m_sec.group(1).upper() == "SENADORES" else "asesores"
             continue
-        if seccion is None:
+        if RE_BOLETIN_PREAMBULO.match(up):
             continue  # encabezado del boletín (N°, INFORMACIÓN AL...)
         if up.startswith("NO HAY REUNIONES"):
             cerrar()
             comision_buffer = []
+            en_expositores = False
             continue
         if up.startswith("*SE ACTUALIZAR"):
             cerrar()
@@ -415,6 +462,7 @@ def parsear_reuniones_texto_libre(texto, comisiones_norm):
         m_fecha = RE_FECHA_LINEA.search(linea)
         if m_fecha:
             cerrar()
+            en_expositores = False
             dia_txt, dd, mes_txt, hora_txt, salon_txt = m_fecha.groups()
             mes_num = MESES_NOMBRE.get(mes_txt.upper())
             fecha = f"{int(dd):02d}/{mes_num:02d}" if mes_num else ""
@@ -432,7 +480,7 @@ def parsear_reuniones_texto_libre(texto, comisiones_norm):
                 "fecha": fecha,
                 "hora": hora,
                 "modalidad": "",
-                "comisiones": comision_buffer,
+                "comisiones": _comisiones_desde_buffer(comision_buffer),
                 "salon": salon,
                 "salon_completo": salon_txt,
                 "_temario_raw": "",
@@ -444,14 +492,19 @@ def parsear_reuniones_texto_libre(texto, comisiones_norm):
         if linea.startswith("📋"):
             continue  # marcador "TEMARIO"
 
+        if RE_EXPOSITORES.match(up):
+            en_expositores = True  # lo que sigue son nombres de expositores, no expedientes
+            continue
+
         if reunion is not None and _parece_nombre_comision(linea, comisiones_norm):
             cerrar()
+            en_expositores = False
             comision_buffer = [linea]
             continue
 
         if reunion is None:
             comision_buffer.append(linea)
-        else:
+        elif not en_expositores:
             reunion["_temario_raw"] += " " + linea
 
     cerrar()
