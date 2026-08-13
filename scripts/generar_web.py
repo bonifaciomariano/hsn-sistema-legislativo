@@ -348,7 +348,7 @@ table.cross-table tr:last-child td{border-bottom:none}
 
 .am-scrim{position:fixed;inset:0;background:rgba(20,30,45,0.55);display:none;align-items:center;justify-content:center;z-index:200;padding:20px}
 .am-scrim.open{display:flex}
-.am-story{width:520px;max-width:100%;height:640px;max-height:92vh;background:#fff;border-radius:18px;overflow:hidden;position:relative;display:flex;flex-direction:column;box-shadow:0 30px 60px -20px rgba(0,0,0,0.35);font-family:inherit}
+.am-story{width:520px;max-width:100%;min-height:300px;max-height:92vh;background:#fff;border-radius:18px;overflow:hidden;position:relative;display:flex;flex-direction:column;box-shadow:0 30px 60px -20px rgba(0,0,0,0.35);font-family:inherit}
 .am-progress{display:flex;gap:4px;padding:14px 16px 0}
 .am-progress .bar{flex:1;height:3px;background:#D6E4F0;border-radius:2px;overflow:hidden}
 .am-progress .bar .fill{height:100%;width:0%;background:#1B5EA2;transition:width .2s}
