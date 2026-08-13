@@ -40,7 +40,16 @@ CATEGORIA_MAP = {
     "AC": "Acuerdo",
 }
 PARTICULAS = {"DE", "DEL", "LA", "LOS", "LAS", "Y", "E"}
-TITULO_CUES = ("DR.", "DRA.", "LIC.", "ING.", "DOCTOR", "DOCTORA")
+# Conectores gramaticales que se dejan en minúscula al title-casear la
+# descripción (salvo que sean la primera palabra de la oración): evita que
+# "solicita", "que", "para" etc. queden en mayúscula, sin necesidad de
+# reconocer qué palabras son nombres propios (el texto fuente viene todo en
+# mayúsculas, así que no hay forma de distinguirlos por caja).
+CONECTORES = PARTICULAS | {
+    "A", "EL", "EN", "QUE", "POR", "PARA", "CON", "SU", "SUS", "AL", "UN",
+    "UNA", "UNOS", "UNAS", "SOBRE", "ENTRE", "SE", "NO", "LO", "COMO", "SIN",
+    "TRAS",
+}
 
 RE_EXP_CODIGO = re.compile(r"^([A-Z.]+)-\d+/\d+(?:-([A-Z]{2}))?$")
 
@@ -67,35 +76,46 @@ def _titlecase_particulas(raw):
     return " ".join(out)
 
 
+RE_ORDINAL = re.compile(r"^\d+[a-zñ]{1,3}$")
+
+
+def _capitalizar(palabra):
+    """Pone en mayúscula la primera letra alfabética de la palabra, dejando
+    intacta cualquier puntuación/número pegado (paréntesis, comas, '24.898').
+    No toca ordinales tipo '8va'/'1ro' (mayuscular la letra pegada al número
+    quedaría '8Va')."""
+    if RE_ORDINAL.match(palabra):
+        return palabra
+    m = re.search(r"[a-zA-Zá-úñÁ-ÚÑ]", palabra)
+    if not m:
+        return palabra
+    i = m.start()
+    return palabra[:i] + palabra[i].upper() + palabra[i + 1:]
+
+
 def sentence_case(texto):
-    """Texto en MAYÚSCULAS -> minúsculas con mayúscula de inicio de oración,
-    y capitalizando lo que sigue a 'Dr./Dra./Lic./Ing.' (título + nombre
-    propio). No intenta reconocer nombres propios sueltos: varios apellidos
-    de senadores coinciden con palabras comunes (Juez, Coto, Paz...) y eso
-    generaba falsos positivos en el resto del texto."""
+    """Texto en MAYÚSCULAS -> Title Case (cada palabra con inicial
+    mayúscula), dejando en minúscula los conectores gramaticales salvo que
+    empiecen oración. No intenta reconocer nombres propios/siglas
+    específicos (el texto fuente viene todo en mayúsculas, no hay señal de
+    caja para distinguirlos) — el trade-off es capitalizar también verbos
+    comunes, pero es preferible a que los nombres propios y siglas queden
+    en minúscula."""
     t = (texto or "").strip()
     if not t:
         return t
-    lower = t.lower()
-    lower = re.sub(
-        r"(^|[.!?]\s+)([a-záéíóúñ])",
-        lambda m: m.group(1) + m.group(2).upper(),
-        lower,
-    )
-    palabras = lower.split(" ")
-    cue_restante = 0
-    for i, w in enumerate(palabras):
+    palabras = t.lower().split(" ")
+    out = []
+    inicio_oracion = True
+    for w in palabras:
         limpio = re.sub(r"[^\wÁÉÍÓÚÑáéíóúñ]", "", w, flags=re.UNICODE)
-        if not limpio:
-            continue
         clave = _sin_tildes(limpio).upper()
-        if clave + "." in TITULO_CUES or clave in TITULO_CUES:
-            cue_restante = 5
-            continue
-        if cue_restante > 0:
-            palabras[i] = w[:1].upper() + w[1:] if w else w
-            cue_restante = 0 if re.search(r"[.,]\s*$", w) else cue_restante - 1
-    return " ".join(palabras)
+        if inicio_oracion or (clave and clave not in CONECTORES):
+            out.append(_capitalizar(w))
+        else:
+            out.append(w)
+        inicio_oracion = w.rstrip().endswith((".", "!", "?"))
+    return " ".join(out)
 
 
 def _limpiar_giros(giros_raw):

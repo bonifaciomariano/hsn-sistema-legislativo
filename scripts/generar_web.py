@@ -159,6 +159,11 @@ body{font-family:'Poppins',Calibri,sans-serif;background:#F5F7FA;color:#4A4A4A;f
 .filters-panel .section-header{border-radius:0}
 .filters-body{padding:14px}
 .results-panel{flex:1;min-width:0}
+/* Aísla el layout de la lista de resultados (2000+ tarjetas): sin esto,
+   cualquier cambio de DOM en OTRA sección de la página (ej. el modal de
+   Ayuda Memoria) fuerza al navegador a recalcular también el layout de
+   esta lista entera. Es solo un límite de layout, no cambia nada visual. */
+#list{contain:content}
 @media(max-width:900px){
   .detalle-layout{flex-direction:column}
   .filters-panel{width:100%;position:static;max-height:none}
@@ -337,10 +342,6 @@ table.cross-table tr:last-child td{border-bottom:none}
 .am-exp-num{font-size:11px;color:#9aacbd;font-weight:600;white-space:nowrap}
 .am-autor{font-size:11px;font-weight:700;color:#1B5EA2;margin:0 0 4px;text-transform:uppercase;letter-spacing:.02em}
 .am-desc{font-size:13px;color:#4A4A4A;line-height:1.48;margin:0 0 10px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
-.am-flags{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px}
-.am-flag{font-size:10px;font-weight:600;padding:2px 7px;border-radius:5px}
-.am-flag.firmantes{color:#1B5E20;background:#E8F5E9}
-.am-flag.links{color:#1B5EA2;background:#D6E4F0}
 .am-card-bottom{display:flex;justify-content:space-between;align-items:center;font-size:11px;color:#9aacbd;gap:8px}
 .am-comision{font-weight:600;color:#1B5EA2;max-width:70%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 .am-read-hint{color:#1B5EA2;font-weight:600;white-space:nowrap}
@@ -1492,12 +1493,17 @@ function proyectoDeExp(exp){
 var AM_CATS=['Todos','Acuerdo','Proyecto de Ley','Proyecto de Declaración','Proyecto de Comunicación','Proyecto de Resolución'];
 var AM_CAT_LABELS={'Todos':'Todos','Acuerdo':'Acuerdos','Proyecto de Ley':'Proyectos de Ley','Proyecto de Declaración':'Declaraciones','Proyecto de Comunicación':'Comunicaciones','Proyecto de Resolución':'Resoluciones'};
 var AM_CAT_CODE={'Acuerdo':'AC','Proyecto de Ley':'PL','Proyecto de Declaración':'PD','Proyecto de Comunicación':'PC','Proyecto de Resolución':'PR'};
-var amCat='Todos',amComision='',amSearch='',amCurrent=null,amStep=0,amFiltered=[];
+var amCat='Todos',amComision='',amAutor='',amSearch='',amCurrent=null,amStep=0,amFiltered=[];
 function amInit(){
-  var comSet={};
-  (AYUDA_MEMORIA||[]).forEach(function(d){(d.comisiones||[]).forEach(function(c){if(c)comSet[c]=1})});
+  var comSet={},autorSet={};
+  (AYUDA_MEMORIA||[]).forEach(function(d){
+    (d.comisiones||[]).forEach(function(c){if(c)comSet[c]=1});
+    if(d.autor)autorSet[d.autor]=1;
+  });
   fillSelect('am-comision-select',Object.keys(comSet).sort());
   document.getElementById('am-comision-select').addEventListener('change',function(e){amComision=e.target.value;renderAm()});
+  fillSelect('am-autor-select',Object.keys(autorSet).sort());
+  document.getElementById('am-autor-select').addEventListener('change',function(e){amAutor=e.target.value;renderAm()});
 
   var chipsEl=document.getElementById('am-chips');
   AM_CATS.forEach(function(c){
@@ -1534,15 +1540,11 @@ function amCardBadge(d){
   return '<span class="am-badge" style="background:'+bg+';color:'+fg+'">'+esc(d.categoria)+'</span>';
 }
 function buildAmCard(d,idx){
-  var flags='';
-  if(d.firmantesMayoria&&d.firmantesMayoria.length)flags+='<span class="am-flag firmantes">&#10003; Firmantes ('+d.firmantesMayoria.length+')</span>';
-  if(d.odLink||(d.expedientes||[]).some(function(e){return e.url}))flags+='<span class="am-flag links">&#128279; Con enlaces</span>';
   var comision=d.comisionCabecera||(d.comisiones&&d.comisiones[0])||'';
   return '<div class="am-card" onclick="amOpenStory('+idx+')">'
     +'<div class="am-card-top">'+amCardBadge(d)+'<span class="am-exp-num">OD '+esc(d.numero)+'/'+esc(String(d.periodo).slice(-2))+'</span></div>'
     +(d.autor?'<div class="am-autor">'+esc(d.autor)+'</div>':'')
     +'<p class="am-desc">'+esc(d.descripcion)+'</p>'
-    +(flags?'<div class="am-flags">'+flags+'</div>':'')
     +'<div class="am-card-bottom"><span class="am-comision">'+esc(comision)+'</span><span class="am-read-hint">Ver ficha &rarr;</span></div>'
     +'</div>';
 }
@@ -1551,6 +1553,7 @@ function renderAm(){
   amFiltered=data.filter(function(d){
     if(amCat!=='Todos'&&d.categoria!==amCat)return false;
     if(amComision&&(d.comisiones||[]).indexOf(amComision)<0)return false;
+    if(amAutor&&d.autor!==amAutor)return false;
     if(amSearch){
       var hay=(d.descripcion+' '+(d.autor||'')+' '+(d.expedientes||[]).map(function(e){return e.codigo}).join(' ')).toLowerCase();
       if(hay.indexOf(amSearch)<0)return false;
@@ -2089,6 +2092,12 @@ HTML_TEMPLATE = """<!DOCTYPE html>
         <div class="select-wrapper">
           <select class="filter-select" id="am-comision-select">
             <option value="">Todas las comisiones</option>
+          </select>
+          <span class="select-arrow">&#9660;</span>
+        </div>
+        <div class="select-wrapper">
+          <select class="filter-select" id="am-autor-select">
+            <option value="">Todos los autores</option>
           </select>
           <span class="select-arrow">&#9660;</span>
         </div>
