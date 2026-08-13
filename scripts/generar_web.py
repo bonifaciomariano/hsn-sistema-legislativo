@@ -322,6 +322,62 @@ table.cross-table tr:last-child td{border-bottom:none}
 .agenda-chevron{display:inline-block;transition:transform .15s;font-size:10px;color:#9aacbd;flex-shrink:0}
 .agenda-colapsable:not(.collapsed)>.colapsable-head .agenda-chevron{transform:rotate(90deg)}
 .agenda-colapsable.collapsed>.agenda-colapsable-body{display:none}
+
+/* ── Ayuda Memoria (tarjetas + stories) ────────────────────────────────── */
+.am-controls{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-bottom:12px}
+.am-controls .search-box{flex:1;min-width:220px;margin-bottom:0}
+.am-controls .select-wrapper{width:auto;min-width:200px;max-width:260px}
+.am-chips{display:flex;flex-wrap:wrap;gap:7px;margin-bottom:10px}
+.am-count{font-size:12px;color:#9aacbd;margin-bottom:12px}
+.am-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:12px}
+.am-card{background:#fff;border:1px solid #D6E4F0;border-radius:10px;padding:14px 16px 12px;cursor:pointer;transition:all .15s;box-shadow:0 1px 3px rgba(0,0,0,0.05)}
+.am-card:hover{transform:translateY(-2px);box-shadow:0 8px 20px -12px rgba(27,94,162,0.35);border-color:#1B5EA2}
+.am-card-top{display:flex;justify-content:space-between;align-items:flex-start;gap:8px;margin-bottom:8px}
+.am-badge{font-size:9.5px;font-weight:700;text-transform:uppercase;letter-spacing:.4px;padding:3px 8px;border-radius:6px;white-space:nowrap}
+.am-exp-num{font-size:11px;color:#9aacbd;font-weight:600;white-space:nowrap}
+.am-autor{font-size:11px;font-weight:700;color:#1B5EA2;margin:0 0 4px;text-transform:uppercase;letter-spacing:.02em}
+.am-desc{font-size:13px;color:#4A4A4A;line-height:1.48;margin:0 0 10px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+.am-flags{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px}
+.am-flag{font-size:10px;font-weight:600;padding:2px 7px;border-radius:5px}
+.am-flag.firmantes{color:#1B5E20;background:#E8F5E9}
+.am-flag.links{color:#1B5EA2;background:#D6E4F0}
+.am-card-bottom{display:flex;justify-content:space-between;align-items:center;font-size:11px;color:#9aacbd;gap:8px}
+.am-comision{font-weight:600;color:#1B5EA2;max-width:70%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.am-read-hint{color:#1B5EA2;font-weight:600;white-space:nowrap}
+
+.am-scrim{position:fixed;inset:0;background:rgba(20,30,45,0.55);display:none;align-items:center;justify-content:center;z-index:200;padding:20px}
+.am-scrim.open{display:flex}
+.am-story{width:520px;max-width:100%;height:640px;max-height:92vh;background:#fff;border-radius:18px;overflow:hidden;position:relative;display:flex;flex-direction:column;box-shadow:0 30px 60px -20px rgba(0,0,0,0.35);font-family:inherit}
+.am-progress{display:flex;gap:4px;padding:14px 16px 0}
+.am-progress .bar{flex:1;height:3px;background:#D6E4F0;border-radius:2px;overflow:hidden}
+.am-progress .bar .fill{height:100%;width:0%;background:#1B5EA2;transition:width .2s}
+.am-story-head{display:flex;justify-content:space-between;align-items:center;padding:12px 18px 8px}
+.am-story-head .id{font-size:11px;color:#1B5EA2;font-weight:700;letter-spacing:.04em}
+.am-story-head .close{background:none;border:none;color:#9aacbd;font-size:20px;cursor:pointer;line-height:1}
+.am-story-nav{position:absolute;top:56px;bottom:66px;width:32%;background:transparent;border:none;cursor:pointer}
+.am-story-nav.prev{left:0}.am-story-nav.next{right:0}
+.am-story-body{flex:1;padding:6px 26px 20px;overflow-y:auto;color:#4A4A4A}
+.am-step-label{font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:#1B5EA2;margin-bottom:10px;font-weight:700}
+.am-story-body h2{font-size:19px;line-height:1.35;margin:0 0 14px;font-weight:700;color:#1B5EA2}
+.am-badges-row{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:16px}
+.am-badges-row span{font-size:10.5px;padding:3px 8px;border-radius:5px;background:#D6E4F0;color:#1B5EA2;font-weight:600}
+.am-story-body p{font-size:14px;line-height:1.62;color:#4A4A4A;margin:0 0 14px}
+.am-kv{display:grid;grid-template-columns:auto 1fr;gap:8px 14px;font-size:13px;margin-bottom:6px}
+.am-kv dt{color:#9aacbd;font-size:10.5px;text-transform:uppercase;letter-spacing:.05em;align-self:start;padding-top:2px}
+.am-kv dd{margin:0;color:#4A4A4A;line-height:1.5}
+.am-link-row{display:flex;gap:8px;flex-wrap:wrap;margin-top:8px}
+.am-link-btn{display:inline-flex;align-items:center;gap:6px;font-size:12.5px;font-weight:600;color:#fff;background:#1B5EA2;padding:8px 12px;border-radius:8px;text-decoration:none}
+.am-link-btn:hover{background:#164a87}
+.am-firmantes-bloque{margin-bottom:14px}
+.am-firmantes-bloque .bl-name{font-size:11px;font-weight:700;padding:2px 8px;border-radius:5px;display:inline-block;margin-bottom:6px}
+.am-firmantes-bloque .bl-list{font-size:13px;color:#4A4A4A;line-height:1.6}
+.am-story-foot{display:flex;justify-content:space-between;align-items:center;padding:14px 18px;border-top:1px solid #D6E4F0}
+.am-story-foot button{font-size:12.5px;font-weight:600;color:#1B5EA2;background:#fff;border:1.5px solid #D6E4F0;padding:8px 14px;border-radius:8px;cursor:pointer}
+.am-story-foot button:disabled{opacity:.35;cursor:default}
+.am-dots{display:flex;gap:6px}
+.am-dot{width:6px;height:6px;border-radius:50%;background:#D6E4F0}
+.am-dot.active{background:#1B5EA2}
+@media (max-width:560px){.am-story{height:100%;border-radius:0}.am-story-nav{top:50px;bottom:60px}}
 """
 
 # ── JavaScript (vanilla) ───────────────────────────────────────────────────────
@@ -411,7 +467,7 @@ function init(){
   renderComisionesList();
   renderRepresentacion();
   renderAgenda();
-  renderOd();
+  amInit();
   renderSanciones();
 }
 function fillSelect(id,values){
@@ -1424,7 +1480,6 @@ function renderAgenda(){
   document.getElementById('agenda-list').innerHTML=html||'<div class="no-results">Sin reuniones para este filtro.</div>';
 }
 /* ── Ayuda Memoria (Órdenes del Día) ──────────────────────────────── */
-var ODTAB='ley';
 var PROYECTOS_POR_CLAVE=null;
 function claveExp(origen,nro,anio){return origen+'~|~'+nro+'~|~'+anio}
 function proyectoDeExp(exp){
@@ -1434,54 +1489,157 @@ function proyectoDeExp(exp){
   }
   return PROYECTOS_POR_CLAVE[claveExp(exp.origen,exp.nro,exp.anio)]||null;
 }
-function odCategoria(o){
-  var tipo=(o.expedientes&&o.expedientes[0])?o.expedientes[0].tipo:'';
-  if(tipo==='PL')return 'ley';
-  if(tipo==='PD'||tipo==='PC'||tipo==='PR')return 'anexo1';
-  if(tipo==='AC')return 'acuerdos';
-  return 'otros';
-}
-function switchOdTab(id){
-  ODTAB=id;
-  document.querySelectorAll('.od-tab-btn').forEach(function(b){b.classList.remove('active')});
-  document.querySelector('[data-odtab="'+id+'"]').classList.add('active');
-  renderOd();
-}
-function odExpLabel(exp){return exp.origen+'-'+exp.nro+'/'+String(exp.anio).slice(-2)+'-'+exp.tipo}
-function buildOdCard(o){
-  var expHtml='';
-  o.expedientes.forEach(function(exp){
-    var p=proyectoDeExp(exp);
-    expHtml+='<div class="od-exp-row"><a class="od-exp-link" href="'+escAttr(exp.url)+'" target="_blank">'+esc(odExpLabel(exp))+'</a></div>';
-    if(p)expHtml+='<div class="od-exp-extracto">'+esc(p.extracto)+'</div>';
-  });
-  var tipoLabel=o.tipo_od==='A'?'Anexo':'Normal';
-  return '<div class="od-card"><div class="od-card-top">'
-    +'<a class="od-nro" href="'+escAttr(o.url_pdf)+'" target="_blank">OD N&ordm; '+esc(o.nro_od+'/'+String(o.anio_od).slice(-2))+'</a>'
-    +'<span class="od-tipo-tag">'+esc(tipoLabel)+'</span>'
-    +'</div>'+expHtml+'</div>';
-}
-function renderOd(){
-  var searchEl=document.getElementById('od-search');
-  var q=(searchEl&&searchEl.value||'').toLowerCase().trim();
-  var lista=(OD_DATA||[]).filter(function(o){
-    if(odCategoria(o)!==ODTAB)return false;
-    if(!q)return true;
-    var nroStr=(o.nro_od+'/'+o.anio_od).toLowerCase();
-    if(nroStr.indexOf(q)>=0)return true;
-    return o.expedientes.some(function(exp){
-      var p=proyectoDeExp(exp);
-      return p&&p.extracto&&p.extracto.toLowerCase().indexOf(q)>=0;
+var AM_CATS=['Todos','Acuerdo','Proyecto de Ley','Proyecto de Declaración','Proyecto de Comunicación','Proyecto de Resolución'];
+var AM_CAT_LABELS={'Todos':'Todos','Acuerdo':'Acuerdos','Proyecto de Ley':'Proyectos de Ley','Proyecto de Declaración':'Declaraciones','Proyecto de Comunicación':'Comunicaciones','Proyecto de Resolución':'Resoluciones'};
+var AM_CAT_CODE={'Acuerdo':'AC','Proyecto de Ley':'PL','Proyecto de Declaración':'PD','Proyecto de Comunicación':'PC','Proyecto de Resolución':'PR'};
+var amCat='Todos',amComision='',amSearch='',amCurrent=null,amStep=0,amFiltered=[];
+function amInit(){
+  var comSet={};
+  (AYUDA_MEMORIA||[]).forEach(function(d){(d.comisiones||[]).forEach(function(c){if(c)comSet[c]=1})});
+  fillSelect('am-comision-select',Object.keys(comSet).sort());
+  document.getElementById('am-comision-select').addEventListener('change',function(e){amComision=e.target.value;renderAm()});
+
+  var chipsEl=document.getElementById('am-chips');
+  AM_CATS.forEach(function(c){
+    var chip=document.createElement('div');
+    chip.className='chip'+(c===amCat?' on':'');
+    chip.textContent=AM_CAT_LABELS[c]||c;
+    chip.addEventListener('click',function(){
+      amCat=c;
+      document.querySelectorAll('#am-chips .chip').forEach(function(x){x.classList.remove('on')});
+      chip.classList.add('on');
+      renderAm();
     });
+    chipsEl.appendChild(chip);
   });
-  lista=lista.slice().sort(function(a,b){return (b.anio_od-a.anio_od)||(b.nro_od-a.nro_od)||(a.tipo_od<b.tipo_od?-1:1)});
-  var el=document.getElementById('od-list');
-  if(!el)return;
-  if(!lista.length){el.innerHTML='<div class="no-results">Sin &oacute;rdenes del d&iacute;a para este filtro.</div>';return}
-  var html='';
-  lista.forEach(function(o){html+=buildOdCard(o)});
-  el.innerHTML=html;
+
+  document.getElementById('am-search').addEventListener('input',function(e){amSearch=e.target.value.toLowerCase();renderAm()});
+  document.getElementById('am-close').addEventListener('click',amCloseStory);
+  document.getElementById('am-prev-zone').addEventListener('click',amPrevStep);
+  document.getElementById('am-next-zone').addEventListener('click',amNextStep);
+  document.getElementById('am-btn-prev').addEventListener('click',amPrevStep);
+  document.getElementById('am-btn-next').addEventListener('click',amNextStep);
+  document.getElementById('am-scrim').addEventListener('click',function(e){if(e.target.id==='am-scrim')amCloseStory()});
+  document.addEventListener('keydown',function(e){
+    if(!document.getElementById('am-scrim').classList.contains('open'))return;
+    if(e.key==='Escape')amCloseStory();
+    if(e.key==='ArrowRight')amNextStep();
+    if(e.key==='ArrowLeft')amPrevStep();
+  });
+  renderAm();
 }
+function amCardBadge(d){
+  var code=AM_CAT_CODE[d.categoria]||'';
+  var fg=TIPO_FG[code]||'#666',bg=TIPO_BG[code]||'#eee';
+  return '<span class="am-badge" style="background:'+bg+';color:'+fg+'">'+esc(d.categoria)+'</span>';
+}
+function buildAmCard(d,idx){
+  var flags='';
+  if(d.firmantesMayoria&&d.firmantesMayoria.length)flags+='<span class="am-flag firmantes">&#10003; Firmantes ('+d.firmantesMayoria.length+')</span>';
+  if(d.odLink||(d.expedientes||[]).some(function(e){return e.url}))flags+='<span class="am-flag links">&#128279; Con enlaces</span>';
+  var comision=d.comisionCabecera||(d.comisiones&&d.comisiones[0])||'';
+  return '<div class="am-card" onclick="amOpenStory('+idx+')">'
+    +'<div class="am-card-top">'+amCardBadge(d)+'<span class="am-exp-num">OD '+esc(d.numero)+'/'+esc(String(d.periodo).slice(-2))+'</span></div>'
+    +(d.autor?'<div class="am-autor">'+esc(d.autor)+'</div>':'')
+    +'<p class="am-desc">'+esc(d.descripcion)+'</p>'
+    +(flags?'<div class="am-flags">'+flags+'</div>':'')
+    +'<div class="am-card-bottom"><span class="am-comision">'+esc(comision)+'</span><span class="am-read-hint">Ver ficha &rarr;</span></div>'
+    +'</div>';
+}
+function renderAm(){
+  var data=AYUDA_MEMORIA||[];
+  amFiltered=data.filter(function(d){
+    if(amCat!=='Todos'&&d.categoria!==amCat)return false;
+    if(amComision&&(d.comisiones||[]).indexOf(amComision)<0)return false;
+    if(amSearch){
+      var hay=(d.descripcion+' '+(d.autor||'')+' '+(d.expedientes||[]).map(function(e){return e.codigo}).join(' ')).toLowerCase();
+      if(hay.indexOf(amSearch)<0)return false;
+    }
+    return true;
+  });
+  var countEl=document.getElementById('am-count');
+  if(countEl)countEl.textContent=amFiltered.length+' de '+data.length+' expedientes';
+  var grid=document.getElementById('am-grid');
+  if(!grid)return;
+  if(!amFiltered.length){grid.innerHTML='<div class="no-results">No hay expedientes que coincidan con el filtro.</div>';return}
+  var html='';
+  amFiltered.forEach(function(d){html+=buildAmCard(d,data.indexOf(d))});
+  grid.innerHTML=html;
+}
+function amBuildSteps(d){
+  var steps=[];
+  steps.push({
+    label:'Qué es',
+    title:d.autor?d.autor:(d.origen==='Poder Ejecutivo'?'Mensaje del Poder Ejecutivo':'Proyecto en revisión'),
+    badges:[d.categoria,d.origen],
+    body:d.descripcion
+  });
+  var links=[];
+  if(d.odLink)links.push('<a class="am-link-btn" href="'+escAttr(d.odLink)+'" target="_blank" rel="noopener">&darr; Descargar Orden del D&iacute;a</a>');
+  var primerExp=(d.expedientes||[])[0];
+  if(primerExp&&primerExp.url)links.push('<a class="am-link-btn" href="'+escAttr(primerExp.url)+'" target="_blank" rel="noopener">&#128196; Ver expediente</a>');
+  steps.push({
+    label:'Trámite',
+    title:'Datos del expediente',
+    kv:[
+      ['Expediente(s)', esc((d.expedientes||[]).map(function(e){return e.codigo}).join(' · '))],
+      ['Comisi&oacute;n(es)', esc(d.comisionCabecera||(d.comisiones||[]).join(' · ')||'—')],
+      ['Fecha de dictamen', esc(d.fechaDictamen||'—')],
+      ['Orden del D&iacute;a', 'N&ordm; '+esc(d.numero)+' / '+esc(d.periodo)+(d.tipoOD==='ANEXO'?' (anexo)':'')]
+    ],
+    linksHtml:links.length?'<div class="am-link-row">'+links.join('')+'</div>':''
+  });
+  if(d.firmantesPorBloque&&d.firmantesPorBloque.length){
+    steps.push({label:'Firmantes',title:'Firmantes del dictamen de mayoría',firmantesPorBloque:d.firmantesPorBloque});
+  }
+  return steps;
+}
+function amOpenStory(idx){
+  amCurrent=idx;amStep=0;
+  var d=(AYUDA_MEMORIA||[])[idx];
+  if(!d)return;
+  document.getElementById('am-story-id').textContent='OD '+d.numero+'/'+String(d.periodo).slice(-2);
+  var steps=amBuildSteps(d);
+  document.getElementById('am-progress').innerHTML=steps.map(function(){return '<div class="bar"><div class="fill"></div></div>'}).join('');
+  document.getElementById('am-dots').innerHTML=steps.map(function(s,i){return '<div class="am-dot" data-i="'+i+'"></div>'}).join('');
+  amRenderStep();
+  document.getElementById('am-scrim').classList.add('open');
+}
+function amCloseStory(){document.getElementById('am-scrim').classList.remove('open');amCurrent=null}
+function amRenderStep(){
+  var d=(AYUDA_MEMORIA||[])[amCurrent];
+  if(!d)return;
+  var steps=amBuildSteps(d);
+  var s=steps[amStep];
+  var html='<div class="am-step-label">'+esc(s.label)+' &middot; '+(amStep+1)+'/'+steps.length+'</div>'
+    +'<h2>'+esc(s.title)+'</h2>';
+  if(s.badges)html+='<div class="am-badges-row">'+s.badges.filter(Boolean).map(function(b){return '<span>'+esc(b)+'</span>'}).join('')+'</div>';
+  if(s.body)html+='<p>'+esc(s.body)+'</p>';
+  if(s.kv)html+='<dl class="am-kv">'+s.kv.map(function(kv){return '<dt>'+kv[0]+'</dt><dd>'+kv[1]+'</dd>'}).join('')+'</dl>';
+  if(s.linksHtml)html+=s.linksHtml;
+  if(s.firmantesPorBloque){
+    html+=s.firmantesPorBloque.map(function(g){
+      var col=blqColor(g.bloque);
+      return '<div class="am-firmantes-bloque"><span class="bl-name" style="background:'+col.bg+';color:'+col.badge+'">'+esc(g.bloque)+'</span>'
+        +'<div class="bl-list">'+esc(g.integrantes.join(' · '))+'</div></div>';
+    }).join('');
+  }
+  document.getElementById('am-story-body').innerHTML=html;
+  document.querySelectorAll('#am-progress .bar').forEach(function(bar,i){
+    var fill=bar.querySelector('.fill');
+    fill.style.width=i<=amStep?'100%':'0%';
+  });
+  document.querySelectorAll('#am-dots .am-dot').forEach(function(dot,i){dot.classList.toggle('active',i===amStep)});
+  document.getElementById('am-btn-prev').disabled=amStep===0;
+  document.getElementById('am-btn-next').textContent=amStep===steps.length-1?'Cerrar ✕':'Siguiente →';
+}
+function amNextStep(){
+  var d=(AYUDA_MEMORIA||[])[amCurrent];
+  if(!d)return;
+  var steps=amBuildSteps(d);
+  if(amStep<steps.length-1){amStep++;amRenderStep()}else{amCloseStory()}
+}
+function amPrevStep(){if(amStep>0){amStep--;amRenderStep()}}
 function parseExpNumero(numero){
   var m=/^([A-ZÑ.]+)-(\d+)\/(\d+)$/.exec(String(numero||'').trim().toUpperCase());
   if(!m)return null;
@@ -1926,14 +2084,36 @@ HTML_TEMPLATE = """<!DOCTYPE html>
       <span class="section-hint">&Oacute;rdenes del D&iacute;a del HSN</span>
     </div>
     <div class="section-body">
-      <div class="od-tabs">
-        <button class="od-tab-btn active" data-odtab="ley" onclick="switchOdTab('ley')">OD de Ley</button>
-        <button class="od-tab-btn" data-odtab="anexo1" onclick="switchOdTab('anexo1')">Anexo 1</button>
-        <button class="od-tab-btn" data-odtab="acuerdos" onclick="switchOdTab('acuerdos')">OD de Acuerdos</button>
-        <button class="od-tab-btn" data-odtab="otros" onclick="switchOdTab('otros')">Otros</button>
+      <div class="am-controls">
+        <input class="search-box" type="text" id="am-search" placeholder="Buscar por texto, autor o expediente&hellip;">
+        <div class="select-wrapper">
+          <select class="filter-select" id="am-comision-select">
+            <option value="">Todas las comisiones</option>
+          </select>
+          <span class="select-arrow">&#9660;</span>
+        </div>
       </div>
-      <input class="search-box" type="text" id="od-search" placeholder="Buscar por n&uacute;mero de OD o extracto&hellip;" oninput="renderOd()" style="max-width:360px">
-      <div id="od-list"></div>
+      <div class="am-chips" id="am-chips"></div>
+      <div class="am-count" id="am-count"></div>
+      <div class="am-grid" id="am-grid"></div>
+    </div>
+  </div>
+</div>
+
+<div class="am-scrim" id="am-scrim">
+  <div class="am-story">
+    <div class="am-progress" id="am-progress"></div>
+    <div class="am-story-head">
+      <div class="id" id="am-story-id">OD 000/26</div>
+      <button class="close" id="am-close">&#10005;</button>
+    </div>
+    <button class="am-story-nav prev" id="am-prev-zone"></button>
+    <button class="am-story-nav next" id="am-next-zone"></button>
+    <div class="am-story-body" id="am-story-body"></div>
+    <div class="am-story-foot">
+      <button id="am-btn-prev">&larr; Anterior</button>
+      <div class="am-dots" id="am-dots"></div>
+      <button id="am-btn-next">Siguiente &rarr;</button>
     </div>
   </div>
 </div>
@@ -1975,7 +2155,7 @@ HTML_TEMPLATE = """<!DOCTYPE html>
 var DATA = {datos};
 var COMISIONES = {comisiones};
 var AGENDA = {agenda};
-var OD_DATA = {od};
+var AYUDA_MEMORIA = {ayuda_memoria};
 var SANCIONES_DATA = {sanciones};
 var BLOQUE_TOTALES = {bloque_totales};
 var FONT_POPPINS_REGULAR = "{font_regular}";
@@ -2360,6 +2540,60 @@ def construir_bloque_totales():
     return totales
 
 
+def _resolver_firmante(nombre_firmante, bloque_de_senador):
+    """Un firmante de dictamen viene como 'Nombre M. Apellido' (orden
+    inverso al de senadores.json, que es 'APELLIDO, Nombre'). Prueba el
+    apellido como los últimos 3, 2 y 1 términos del nombre (más específico
+    primero, para cubrir apellidos compuestos como 'Olivera Lucero' o 'de
+    Pedro') armando la clave 'apellido, resto' que espera
+    construir_bloque_por_senador(), sin duplicar su lógica de matching.
+    Devuelve (apellido_para_ordenar, bloque)."""
+    palabras = nombre_firmante.split()
+    for k in range(min(3, len(palabras) - 1), 0, -1):
+        apellido = " ".join(palabras[-k:])
+        resto = " ".join(palabras[:-k])
+        bloque = bloque_de_senador(f"{apellido}, {resto}")
+        if bloque:
+            return apellido, bloque
+    return (palabras[-1] if palabras else nombre_firmante), ""
+
+
+def construir_ayuda_memoria():
+    """Carga data/ayuda_memoria.json (generado a mano por
+    scripts/parse_ayuda_memoria.py mientras el scraper del sitio del Senado
+    esté bloqueado por el anti-bot) y agrupa los firmantes de cada dictamen
+    por bloque político, ordenados por apellido dentro de cada bloque —
+    misma lógica de matching de nombres que usa construir_comisiones()."""
+    items = _cargar("ayuda_memoria.json", [])
+    comisiones_oficiales = _cargar("comisiones.json", [])
+    bloque_de_senador = construir_bloque_por_senador()
+    nombres_com_oficiales = {_norm_com(c["nombre"]): c["nombre"] for c in comisiones_oficiales}
+
+    for it in items:
+        it["comisiones"] = [
+            nombres_com_oficiales.get(_norm_com(c), c) for c in (it.get("comisiones") or [])
+        ]
+        if it.get("comisionCabecera") and it["comisionCabecera"] != "Acuerdos":
+            n = _norm_com(it["comisionCabecera"])
+            it["comisionCabecera"] = nombres_com_oficiales.get(n, it["comisionCabecera"])
+
+        firmantes = it.get("firmantesMayoria") or []
+        if not firmantes:
+            continue
+        por_bloque = {}
+        for nombre in firmantes:
+            apellido, bloque = _resolver_firmante(nombre, bloque_de_senador)
+            por_bloque.setdefault(bloque or "Sin bloque identificado", []).append((apellido, nombre))
+        it["firmantesPorBloque"] = [
+            {
+                "bloque": bloque,
+                "integrantes": [n for _, n in sorted(nombres, key=lambda x: x[0])],
+            }
+            for bloque, nombres in sorted(por_bloque.items(), key=lambda x: x[0])
+        ]
+    return items
+
+
 def construir_comisiones(proyectos):
     comisiones = _cargar("comisiones.json", [])
     agenda = _cargar("agenda.json", {})
@@ -2497,10 +2731,12 @@ def main():
     acuerdos_procesados = _cargar("acuerdos.json", [])
     cruzar_proyectos_acuerdos(proyectos, acuerdos_procesados)
 
+    ayuda_memoria_procesada = construir_ayuda_memoria()
+
     datos_js = json.dumps(proyectos, ensure_ascii=False)
     comisiones_js = json.dumps(construir_comisiones(proyectos), ensure_ascii=False)
     agenda_js = json.dumps(agenda_procesada, ensure_ascii=False)
-    od_js = json.dumps(od_procesada, ensure_ascii=False)
+    ayuda_memoria_js = json.dumps(ayuda_memoria_procesada, ensure_ascii=False)
     sanciones_js = json.dumps(sanciones_procesada, ensure_ascii=False)
     bloque_totales_js = json.dumps(construir_bloque_totales(), ensure_ascii=False)
     fonts = _cargar("fonts_poppins.json", {})
@@ -2512,7 +2748,7 @@ def main():
         datos=datos_js,
         comisiones=comisiones_js,
         agenda=agenda_js,
-        od=od_js,
+        ayuda_memoria=ayuda_memoria_js,
         sanciones=sanciones_js,
         bloque_totales=bloque_totales_js,
         font_regular=fonts.get("regular", ""),
