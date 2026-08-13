@@ -18445,5 +18445,21 @@
     ],
     "url_pdf": "https://www.senado.gob.ar/parlamentario/parlamentaria/51604/downloadOrdenDia",
     "fecha": null
+  },
+  {
+    "nro_od": 293,
+    "anio_od": 2026,
+    "tipo_od": "N",
+    "expedientes": [
+      {
+        "nro": 231,
+        "anio": 2026,
+        "tipo": "AC",
+        "origen": "PE",
+        "url": "https://www.senado.gob.ar/parlamentario/comisiones/verExp/231.26/PE/AC"
+      }
+    ],
+    "url_pdf": "https://www.senado.gob.ar/parlamentario/parlamentaria/51618/downloadOrdenDia",
+    "fecha": null
   }
 ]
