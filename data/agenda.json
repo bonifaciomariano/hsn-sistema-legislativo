@@ -5466,8 +5466,8 @@
         }
       ],
       "tipo": "senadores",
-      "boletin_id": 2334,
-      "boletin_numero": "93/26"
+      "boletin_id": 2335,
+      "boletin_numero": "94/26"
     },
     {
       "seccion": "senadores",
@@ -5540,11 +5540,11 @@
         },
         {
           "numero": "OV-8/26",
-          "extracto": "AUDITORÍA GENERAL DE LA NACIÓN: COMUNICA RESOLUCIÓN N° 49/26 QUE TOMA CONOCIMIENTO DE LOS INFORMES DE REVISIÓN DE LOS ESTADOS FINANCIEROS CONSOLIDADOS CONDENSADOS Y SEPARADOS CONDENSADOS REFERIDOS AL BANCO DE INVERSIÓN Y COMERCIO EXTERIOR SOCIEDAD ANONIMA (BICE SA), DEL PERÍODO INTERMEDIO AUDITADO 01/01/2025 AL 30/06/2025"
+          "extracto": "AUDITORÍA GENERAL DE LA NACIÓN: COMUNICA RESOLUCIÓN N° 49/26 QUE TOMA CONOCIMIENTO DE LOS INFORMES DE REVISIÓN DE LOS ESTADOS FINANCIEROS CONSOLIDADOS CONDENSADOS Y SEPARADOS CONDENSADOS REFERIDOS AL BANCO DE INVERSIÓN Y COMERCIO EXTERIOR SOCIEDAD ANÓNIMA (BICE SA), DEL PERÍODO INTERMEDIO AUDITADO 01/01/2025 AL 30/06/2025"
         },
         {
           "numero": "OV-9/26",
-          "extracto": "AUDITORÍA GENERAL DE LA NACIÓN: COMUNICA RESOLUCIÓN N° 50/26, QUE TOMA CONOCIMIENTO DE LOS INFORMES DE REVISIÓN DE LOS ESTADOS FINANCIEROS CONSOLIDADOS CONDENSADOS Y SEPARADOS CONDENSADOS REFERIDOS AL BANCO DE INVERSIÓN Y COMERCIO EXTERIOR SOCIEDAD ANONIMA (BICE SA) DEL PERIODO INTERMEDIO AUDITADO 01/01/25 AL 30/09/25. AYSA"
+          "extracto": "AUDITORÍA GENERAL DE LA NACIÓN: COMUNICA RESOLUCIÓN N° 50/26, QUE TOMA CONOCIMIENTO DE LOS INFORMES DE REVISIÓN DE LOS ESTADOS FINANCIEROS CONSOLIDADOS CONDENSADOS Y SEPARADOS CONDENSADOS REFERIDOS AL BANCO DE INVERSIÓN Y COMERCIO EXTERIOR SOCIEDAD ANÓNIMA (BICE SA) DEL PERIODO INTERMEDIO AUDITADO 01/01/25 AL 30/09/25. AYSA"
         },
         {
           "numero": "OV-355/25",
@@ -5740,8 +5740,8 @@
         }
       ],
       "tipo": "bicameral",
-      "boletin_id": 2334,
-      "boletin_numero": "93/26"
+      "boletin_id": 2335,
+      "boletin_numero": "94/26"
     },
     {
       "seccion": "senadores",
@@ -5810,8 +5810,176 @@
         }
       ],
       "tipo": "senadores",
-      "boletin_id": 2334,
-      "boletin_numero": "93/26"
+      "boletin_id": 2335,
+      "boletin_numero": "94/26"
+    },
+    {
+      "seccion": "senadores",
+      "dia": "MARTES",
+      "fecha": "18/08",
+      "hora": "14:00",
+      "modalidad": "",
+      "comisiones": [
+        "ACUERDOS - AUDIENCIA PÚBLICA"
+      ],
+      "salon": "AZUL",
+      "salon_completo": "SALÓN AZUL",
+      "temario": [
+        {
+          "numero": "PE-110/26",
+          "extracto": "MENSAJE N° 118/26 QUE SOLICITA ACUERDO PARA DESIGNAR DEFENSOR PÚBLICO OFICIAL ADJUNTO ANTE LOS TRIBUNALES ORALES EN LO CRIMINAL Y CORRECCIONAL DE LA CAPITAL FEDERAL, DEFENSORÍA N° 11, AL DOCTOR GERMÁN LUIS ARTOLA"
+        },
+        {
+          "numero": "PE-195/26",
+          "extracto": "MENSAJE N° 190/26 QUE SOLICITA ACUERDO PARA DESIGNAR VOCAL DE LA CÁMARA FEDERAL DE APELACIONES DE SAN JUSTO, PROVINCIA DE BUENOS AIRES, AL DOCTOR ANDRÉS GUILLERMO FRAGA"
+        },
+        {
+          "numero": "PE-205/26",
+          "extracto": "MENSAJE N° 194/26 QUE SOLICITA ACUERDO PARA DESIGNAR VOCAL DE LA CÁMARA FEDERAL DE APELACIONES DE CÓRDOBA, PROVINCIA DE CÓRDOBA, SALA B, AL DOCTOR FACUNDO CARLOS CORTÉS"
+        },
+        {
+          "numero": "PE-206/26",
+          "extracto": "MENSAJE N° 195/26 QUE SOLICITA ACUERDO PARA DESIGNAR DEFENSOR PÚBLICO OFICIAL FEDERAL DEL INTERIOR DEL PAÍS CON ASIENTO EN LA CIUDAD DE SALTA, PROVINCIA DE SALTA, AL DOCTOR CARLOS NICOLÁS ESCANDAR"
+        },
+        {
+          "numero": "PE-207/26",
+          "extracto": "MENSAJE N° 196/26 QUE SOLICITA ACUERDO PARA DESIGNAR DEFENSORA PÚBLICA OFICIAL ANTE EL JUZGADO FEDERAL DE PRIMERA INSTANCIA DE DOLORES, PROVINCIA DE BUENOS AIRES, A LA DOCTORA PAULA INÉS LO GIOIA"
+        },
+        {
+          "numero": "PE-213/26",
+          "extracto": "MENSAJE N° 202/26 QUE SOLICITA ACUERDO PARA DESIGNAR VOCAL DE LA CÁMARA FEDERAL DE APELACIONES DE CÓRDOBA, PROVINCIA DE CÓRDOBA, SALA A, A LA DOCTORA MARÍA SOLEDAD MANCINI"
+        },
+        {
+          "numero": "PE-214/26",
+          "extracto": "MENSAJE N° 203/26 QUE SOLICITA ACUERDO PARA DESIGNAR JUEZA DE CÁMARA DEL TRIBUNAL ORAL EN LO CRIMINAL FEDERAL DE CATAMARCA, PROVINCIA DE CATAMARCA, A LA DOCTORA MARÍA VIRGINIA MIGUEL CARMONA"
+        },
+        {
+          "numero": "PE-215/26",
+          "extracto": "MENSAJE N° 204/26 QUE SOLICITA ACUERDO PARA DESIGNAR DEFENSOR PÚBLICO OFICIAL ANTE LOS TRIBUNALES ORALES EN LO CRIMINAL FEDERAL DE LA PLATA, PROVINCIA DE BUENOS AIRES, DEFENSORÍA N° 2, AL DOCTOR LEANDRO GASTÓN"
+        },
+        {
+          "numero": "PE-221/26",
+          "extracto": "MENSAJE N° 210/26 QUE SOLICITA ACUERDO PARA DESIGNAR FISCAL ANTE LOS JUZGADOS NACIONALES EN LO CRIMINAL Y CORRECCIONAL DE LA CAPITAL FEDERAL, FISCALÍA N° 7, AL DOCTOR MATÍAS EZEQUIEL EIDEM"
+        },
+        {
+          "numero": "PE-222/26",
+          "extracto": "MENSAJE N° 211/26 QUE SOLICITA ACUERDO PARA DESIGNAR FISCAL ANTE LOS JUZGADOS NACIONALES EN LO CRIMINAL Y CORRECCIONAL DE LA CAPITAL FEDERAL, FISCALÍA N° 27, A LA DOCTORA ORNELLA ROMINA RIGGITANO"
+        },
+        {
+          "numero": "PE-228/26",
+          "extracto": "MENSAJE N° 213/26 QUE SOLICITA ACUERDO PARA DESIGNAR JUEZ DE CÁMARA DEL TRIBUNAL ORAL EN LO CRIMINAL FEDERAL N° 6 DE LA CAPITAL FEDERAL, AL DOCTOR SANTIAGO JUAN SCHIOPETTO"
+        },
+        {
+          "numero": "PE-230/26",
+          "extracto": "MENSAJE N° 215/26 QUE SOLICITA ACUERDO PARA DESIGNAR JUEZ DEL JUZGADO NACIONAL DE PRIMERA INSTANCIA EN LO CIVIL N° 26 DE LA CAPITAL FEDERAL, AL DOCTOR SERGIO BUITRAGO"
+        },
+        {
+          "numero": "PE-232/26",
+          "extracto": "MENSAJE N° 217/26 QUE SOLICITA ACUERDO PARA DESIGNAR JUEZA DE CÁMARA DEL TRIBUNAL ORAL EN LO CRIMINAL FEDERAL N° 4 DE LA CAPITAL FEDERAL, A LA DOCTORA VALERIA ALEJANDRA RICO"
+        },
+        {
+          "numero": "PE-233/26",
+          "extracto": "MENSAJE N° 218/26 QUE SOLICITA ACUERDO PARA DESIGNAR JUEZ DE CÁMARA DEL TRIBUNAL ORAL EN LO CRIMINAL FEDERAL N° 6 DE LA CAPITAL FEDERAL, AL DOCTOR RAMIRO VELASCO"
+        }
+      ],
+      "tipo": "senadores",
+      "boletin_id": 2337,
+      "boletin_numero": "95/26"
+    },
+    {
+      "seccion": "senadores",
+      "dia": "MIÉRCOLES",
+      "fecha": "19/08",
+      "hora": "9:30",
+      "modalidad": "",
+      "comisiones": [
+        "BICAMERAL DE TRÁMITE LEGISLATIVO (LEY 26.122)"
+      ],
+      "salon": "ILLIA",
+      "salon_completo": "SALÓN ILLIA",
+      "temario": [
+        {
+          "numero": "",
+          "extracto": "CONSIDERACIÓN DE DECRETOS INGRESADOS PENDIENTES DE TRATAMIENTO."
+        }
+      ],
+      "tipo": "bicameral",
+      "boletin_id": 2337,
+      "boletin_numero": "95/26"
+    },
+    {
+      "seccion": "senadores",
+      "dia": "MIÉRCOLES",
+      "fecha": "19/08",
+      "hora": "10:00",
+      "modalidad": "",
+      "comisiones": [
+        "LEGISLACIÓN GENERAL",
+        "AMBIENTE Y DESARROLLO SUSTENTABLE",
+        "PRESUPUESTO Y HACIENDA"
+      ],
+      "salon": "AZUL",
+      "salon_completo": "SALÓN AZUL",
+      "temario": [
+        {
+          "numero": "S-808/26",
+          "extracto": "ROYÓN: PROYECTO DE LEY SOBRE MARCO REGULATORIO DEL MERCADO VOLUNTARIO DE CARBONO"
+        },
+        {
+          "numero": "S-865/26",
+          "extracto": "ROJAS DECUT Y ARCE: PROYECTO DE LEY QUE ESTABLECE LOS PRESUPUESTOS MÍNIMOS DE PROTECCIÓN AMBIENTAL APLICABLE AL DESARROLLO DE LOS MERCADOS DE CARBONO EN LA REP. ARGENTINA Y SU INTEGRACIÓN AL MERCADO DE CAPITALES NACIONAL"
+        }
+      ],
+      "tipo": "senadores",
+      "boletin_id": 2337,
+      "boletin_numero": "95/26"
+    },
+    {
+      "seccion": "senadores",
+      "dia": "MIÉRCOLES",
+      "fecha": "19/08",
+      "hora": "11:00",
+      "modalidad": "",
+      "comisiones": [
+        "BICAMERAL DE SEGUIMIENTO Y CONTROL DEL MINISTERIO PÚBLICO",
+        "DE LA NACIÓN (LEY 27.148)"
+      ],
+      "salon": "SALA DE REUNIONES N° 4 DEL 3° PISO DEL ANEXO “A” DE LA",
+      "salon_completo": "SALA DE REUNIONES N° 4 DEL 3° PISO DEL ANEXO “A” DE LA",
+      "temario": [
+        {
+          "numero": "",
+          "extracto": "HCDN ASISTIRÁ EL SEÑOR DEFENSOR GENERAL DE LA NACIÓN (INT.) DR. JULIÁN LANGEVIN PARA PRESENTAR: ESTADO DE SITUACIÓN 2025/2026. ESTADO DE IMPLEMENTACIÓN DEL CÓDIGO PROCESAL PENAL FEDERAL. ESTADO DE LA IMPLEMENTACIÓN DEL NUEVO RÉGIMEN PENAL JUVENIL. PROYECTOS DE EJECUCIÓN ACTUAL Y FUTURA."
+        }
+      ],
+      "tipo": "bicameral",
+      "boletin_id": 2337,
+      "boletin_numero": "95/26"
+    },
+    {
+      "seccion": "senadores",
+      "dia": "MIÉRCOLES",
+      "fecha": "19/08",
+      "hora": "11:30",
+      "modalidad": "",
+      "comisiones": [
+        "LEGISLACIÓN GENERAL"
+      ],
+      "salon": "ILLIA",
+      "salon_completo": "SALÓN ILLIA",
+      "temario": [
+        {
+          "numero": "",
+          "extracto": "[CONTINUACIÓN DEL CUARTO INTERMEDIO] PROYECTO DE LEY"
+        },
+        {
+          "numero": "PE-193/26",
+          "extracto": "MENSAJE N° 187/26 Y PROYECTO DE LEY GENERAL DE SOCIEDADES"
+        }
+      ],
+      "tipo": "senadores",
+      "boletin_id": 2337,
+      "boletin_numero": "95/26"
     }
   ]
 }
