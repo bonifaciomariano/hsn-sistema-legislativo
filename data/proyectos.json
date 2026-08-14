@@ -1,5 +1,3370 @@
 [
   {
+    "nro": 1361,
+    "anio": 2026,
+    "tipo": "PD",
+    "tipo_label": "Proyecto de Declaración",
+    "extracto": "PROYECTO DE DECLARACIÓN QUE DECLARA DE INTERÉS LA VISITA OFICIAL DEL PAPA LEON XIV, DEL 6 AL 17 DE NOVIEMBRE DE 2026",
+    "autores": [
+      "VISCHI, EDUARDO ALEJANDRO"
+    ],
+    "coautores": [],
+    "bloques": [
+      "UCR - UNIÓN CÍVICA RADICAL"
+    ],
+    "provincias": [
+      "CORRIENTES"
+    ],
+    "comisiones": [
+      "DE RELACIONES EXTERIORES Y CULTO"
+    ],
+    "fecha": "12/08/2026",
+    "dae": "59/2026",
+    "origen": "S",
+    "url": "https://www.senado.gob.ar/parlamentario/comisiones/verExp/1361.26/S/PD",
+    "sancionado": false,
+    "archivado": false
+  },
+  {
+    "nro": 1360,
+    "anio": 2026,
+    "tipo": "PD",
+    "tipo_label": "Proyecto de Declaración",
+    "extracto": "PROYECTO DE DECLARACIÓN QUE DECLARA DE INTERÉS EL 4° CONGRESO ECOTURÍSTICO DE LA REGIÓN LITORAL, EN LA CDAD. DE CORRIENTES, PROV. HOMONIMA, EL 3 Y 4 DE SEPTIEMBRE DE 2026.",
+    "autores": [
+      "VISCHI, EDUARDO ALEJANDRO",
+      "VALENZUELA, MERCEDES GABRIELA"
+    ],
+    "coautores": [],
+    "bloques": [
+      "UCR - UNIÓN CÍVICA RADICAL"
+    ],
+    "provincias": [
+      "CORRIENTES"
+    ],
+    "comisiones": [
+      "DE TURISMO"
+    ],
+    "fecha": "12/08/2026",
+    "dae": "59/2026",
+    "origen": "S",
+    "url": "https://www.senado.gob.ar/parlamentario/comisiones/verExp/1360.26/S/PD",
+    "sancionado": false,
+    "archivado": false
+  },
+  {
+    "nro": 1359,
+    "anio": 2026,
+    "tipo": "PD",
+    "tipo_label": "Proyecto de Declaración",
+    "extracto": "PROYECTO DE DECLARACIÓN QUE EXPRESA BENEPLÁCITO POR LA CONMEMORACIÓN DEL 50° ANIVERSARIO DE LA FUNDACIÓN DEL JARDIN DE INFANTES N° 21 \"ALUEN\", DE LA LOC. DE 28 DE NOVIEMBRE, PROV. DE SANTA CRUZ, EL 2 DE JUNIO DE 2026.",
+    "autores": [
+      "KIRCHNER, ALICIA MARGARITA ANTONIA"
+    ],
+    "coautores": [],
+    "bloques": [
+      "JUSTICIALISTA"
+    ],
+    "provincias": [
+      "SANTA CRUZ"
+    ],
+    "comisiones": [
+      "DE EDUCACIÓN Y CULTURA"
+    ],
+    "fecha": "12/08/2026",
+    "dae": "59/2026",
+    "origen": "S",
+    "url": "https://www.senado.gob.ar/parlamentario/comisiones/verExp/1359.26/S/PD",
+    "sancionado": false,
+    "archivado": false
+  },
+  {
+    "nro": 1358,
+    "anio": 2026,
+    "tipo": "PC",
+    "tipo_label": "Proyecto de Comunicación",
+    "extracto": "PROYECTO DE COMUNICACIÓN QUE SOLICITA INFORME SOBRE DISTINTOS PUNTOS RELACIONADOS AL CUMPLIMIENTO DE LA LEY 23.966, QUE ESTABLECE LA AFECTACIÓN ESPECÍFICA DE UNA PARTE DE LOS IMPUESTOS A LOS COMBUSTIBLES LÍQUIDOS Y AL GAS NATURAL AL SISTEMA VIAL INTEGRADO (SISVIAL).",
+    "autores": [
+      "KIRCHNER, ALICIA MARGARITA ANTONIA"
+    ],
+    "coautores": [
+      "LÓPEZ, CÁNDIDA CRISTINA",
+      "LINARES, CARLOS ALBERTO",
+      "LEWANDOWSKI, MARCELO NÉSTOR",
+      "DI TULLIO, JULIANA",
+      "SORIA, MARTIN IGNACIO",
+      "MARKS, ANA INÉS"
+    ],
+    "bloques": [
+      "JUSTICIALISTA"
+    ],
+    "provincias": [
+      "SANTA CRUZ"
+    ],
+    "comisiones": [
+      "DE PRESUPUESTO Y HACIENDA"
+    ],
+    "fecha": "12/08/2026",
+    "dae": "59/2026",
+    "origen": "S",
+    "url": "https://www.senado.gob.ar/parlamentario/comisiones/verExp/1358.26/S/PC",
+    "sancionado": false,
+    "archivado": false
+  },
+  {
+    "nro": 1357,
+    "anio": 2026,
+    "tipo": "PR",
+    "tipo_label": "Proyecto de Resolución",
+    "extracto": "PROYECTO DE RESOLUCION QUE CITA AL JEFE DE GABINETE DE MINISTROS, CPN DIEGO CESAR SANTILLI, Y AL MINISTRO DE ECONOMÍA, LIC. LUIS ANDRES CAPUTO, DE CONFORMIDAD AL ART. 71 DE LA C.N.  Y EL ART. 214 DEL REGLAMENTO DE LA H. CAMARA, A FIN DE BRINDAR INFORME SOBRE EL DESTINO DE LOS RECURSO",
+    "autores": [
+      "MARKS, ANA INÉS"
+    ],
+    "coautores": [
+      "RECALDE, MARIANO",
+      "LINARES, CARLOS ALBERTO",
+      "SORIA, MARTIN IGNACIO",
+      "LÓPEZ, CÁNDIDA CRISTINA",
+      "DI TULLIO, JULIANA",
+      "BENSUSÁN, DANIEL PABLO",
+      "CAPITANICH, JORGE MILTON",
+      "BAHL, ADÁN HUMBERTO",
+      "GIMÉNEZ NAVARRO, MARÍA CELESTE"
+    ],
+    "bloques": [
+      "JUSTICIALISTA"
+    ],
+    "provincias": [
+      "RÍO NEGRO"
+    ],
+    "comisiones": [
+      "DE ASUNTOS CONSTITUCIONALES",
+      "DE PRESUPUESTO Y HACIENDA"
+    ],
+    "fecha": "12/08/2026",
+    "dae": "59/2026",
+    "origen": "S",
+    "url": "https://www.senado.gob.ar/parlamentario/comisiones/verExp/1357.26/S/PR",
+    "sancionado": false,
+    "archivado": false
+  },
+  {
+    "nro": 1356,
+    "anio": 2026,
+    "tipo": "PD",
+    "tipo_label": "Proyecto de Declaración",
+    "extracto": "PROYECTO DE DECLARACIÓN QUE DECLARA DE INTERES EL \"4° CONGRESO DE CANTO CON CAJA\", A DESARROLLARSE EN LA PROV. DE LA RIOJA, DEL 13 AL 16 DE AGOSTO DE 2026.",
+    "autores": [
+      "LÓPEZ, MARÍA FLORENCIA"
+    ],
+    "coautores": [],
+    "bloques": [
+      "JUSTICIALISTA"
+    ],
+    "provincias": [
+      "LA RIOJA"
+    ],
+    "comisiones": [
+      "DE EDUCACIÓN Y CULTURA"
+    ],
+    "fecha": "12/08/2026",
+    "dae": "59/2026",
+    "origen": "S",
+    "url": "https://www.senado.gob.ar/parlamentario/comisiones/verExp/1356.26/S/PD",
+    "sancionado": false,
+    "archivado": false
+  },
+  {
+    "nro": 1355,
+    "anio": 2026,
+    "tipo": "PD",
+    "tipo_label": "Proyecto de Declaración",
+    "extracto": "PROYECTO DE DECLARACION QUE DECLARA DE INTERES EL SITIO WEB WWW.BRIGADIERLOPEZ.AR, DESAROLLADO POR THIAGO ALBERTO LLORENTE Y SANTIAGO FERRERO.",
+    "autores": [
+      "LEWANDOWSKI, MARCELO NÉSTOR"
+    ],
+    "coautores": [],
+    "bloques": [
+      "JUSTICIALISTA"
+    ],
+    "provincias": [
+      "SANTA FE"
+    ],
+    "comisiones": [
+      "DE EDUCACIÓN Y CULTURA"
+    ],
+    "fecha": "12/08/2026",
+    "dae": "59/2026",
+    "origen": "S",
+    "url": "https://www.senado.gob.ar/parlamentario/comisiones/verExp/1355.26/S/PD",
+    "sancionado": false,
+    "archivado": false
+  },
+  {
+    "nro": 1354,
+    "anio": 2026,
+    "tipo": "PD",
+    "tipo_label": "Proyecto de Declaración",
+    "extracto": "PROYECTO DE DECLARACION QUE EXPRESA BENEPLACITO POR LA PUBLICACION DEL LIBRO \"SITIOS HISTORICOS SANMARTINIANOS: TRAS LOS PASOS DEL LIBERTADOR\", ESCRITO POR FABIANA MASTRANGELO, LILIANA GIRINI Y JUAN MARCELO CALABRIA.",
+    "autores": [
+      "JURI, MARIANA"
+    ],
+    "coautores": [],
+    "bloques": [
+      "UCR - UNIÓN CÍVICA RADICAL"
+    ],
+    "provincias": [
+      "MENDOZA"
+    ],
+    "comisiones": [
+      "DE EDUCACIÓN Y CULTURA"
+    ],
+    "fecha": "12/08/2026",
+    "dae": "59/2026",
+    "origen": "S",
+    "url": "https://www.senado.gob.ar/parlamentario/comisiones/verExp/1354.26/S/PD",
+    "sancionado": false,
+    "archivado": false
+  },
+  {
+    "nro": 1353,
+    "anio": 2026,
+    "tipo": "PD",
+    "tipo_label": "Proyecto de Declaración",
+    "extracto": "PROYECTO DE DECLARACIÓN QUE DECLARA DE INTERES LA REALIZACION DE LA 5° EDICION DE LAS OLIMPIADAS DE PROGRAMACIÓN, INNOVACION CON INTELIGENCIA ARTIFICIAL Y ROBOTICA (OPIIAR 2026) EN LA PROV. DE MISIONES.",
+    "autores": [
+      "ROJAS DECUT, SONIA ELIZABETH"
+    ],
+    "coautores": [],
+    "bloques": [
+      "FRENTE RENOVADOR DE LA CONCORDIA SOCIAL"
+    ],
+    "provincias": [
+      "MISIONES"
+    ],
+    "comisiones": [
+      "DE CIENCIA Y TECNOLOGÍA"
+    ],
+    "fecha": "12/08/2026",
+    "dae": "59/2026",
+    "origen": "S",
+    "url": "https://www.senado.gob.ar/parlamentario/comisiones/verExp/1353.26/S/PD",
+    "sancionado": false,
+    "archivado": false
+  },
+  {
+    "nro": 1352,
+    "anio": 2026,
+    "tipo": "PD",
+    "tipo_label": "Proyecto de Declaración",
+    "extracto": "PROYECTO DE DECLARACION QUE DECLARA DE INTERES EL PROGRAMA \"JUECES EN LA ESCUELA\" DESAROLLADO POR EL CENTRO DE CAPACITACION JUDICIAL DE LA PROV. DE MISIONES.",
+    "autores": [
+      "ROJAS DECUT, SONIA ELIZABETH"
+    ],
+    "coautores": [],
+    "bloques": [
+      "FRENTE RENOVADOR DE LA CONCORDIA SOCIAL"
+    ],
+    "provincias": [
+      "MISIONES"
+    ],
+    "comisiones": [
+      "DE EDUCACIÓN Y CULTURA"
+    ],
+    "fecha": "12/08/2026",
+    "dae": "59/2026",
+    "origen": "S",
+    "url": "https://www.senado.gob.ar/parlamentario/comisiones/verExp/1352.26/S/PD",
+    "sancionado": false,
+    "archivado": false
+  },
+  {
+    "nro": 1351,
+    "anio": 2026,
+    "tipo": "PD",
+    "tipo_label": "Proyecto de Declaración",
+    "extracto": "PROYECTO DE DECLARACION QUE EXPRESA BENEPLACITO POR LA MODIFICACION DE LA LEY PROVINCIAL N°9-G DE LA PROV. DEL CHACO, QUE INCORPORA LA TECNICA DE SEDACIÓN CONSCIENTE MEDIANTE OXIDO NITROSO-OXIGENO EN LA PRACTICA ODONTOLOGICA.",
+    "autores": [
+      "SCHNEIDER, SILVANA LORENA"
+    ],
+    "coautores": [],
+    "bloques": [
+      "UCR - UNIÓN CÍVICA RADICAL"
+    ],
+    "provincias": [
+      "CHACO"
+    ],
+    "comisiones": [
+      "DE SALUD"
+    ],
+    "fecha": "12/08/2026",
+    "dae": "59/2026",
+    "origen": "S",
+    "url": "https://www.senado.gob.ar/parlamentario/comisiones/verExp/1351.26/S/PD",
+    "sancionado": false,
+    "archivado": false
+  },
+  {
+    "nro": 1350,
+    "anio": 2026,
+    "tipo": "PC",
+    "tipo_label": "Proyecto de Comunicación",
+    "extracto": "PROYECTO DE COMUNICACIÓN QUE SOLICITA LA PRÓRROGA DE LAS BECAS INTERNAS POSDOCTORALES DEL CONICET VENCIDAS EL 31 DE JULIO DE 2026, PARA SUS TITULARES POSTULADOS A LA CONVOCATORIA 2025 DE INGRESO A LA CARRERA DEL INVESTIGADOR CIENTÍFICO Y TECNOLÓGICO.",
+    "autores": [
+      "VIGO, ALEJANDRA MARÍA"
+    ],
+    "coautores": [
+      "TERENZI, EDITH ELIZABETH",
+      "AVILA, BEATRIZ LUISA",
+      "ESPÍNOLA, CARLOS MAURICIO"
+    ],
+    "bloques": [
+      "PROVINCIAS UNIDAS"
+    ],
+    "provincias": [
+      "CÓRDOBA"
+    ],
+    "comisiones": [
+      "DE CIENCIA Y TECNOLOGÍA"
+    ],
+    "fecha": "11/08/2026",
+    "dae": "59/2026",
+    "origen": "S",
+    "url": "https://www.senado.gob.ar/parlamentario/comisiones/verExp/1350.26/S/PC",
+    "sancionado": false,
+    "archivado": false
+  },
+  {
+    "nro": 1349,
+    "anio": 2026,
+    "tipo": "PR",
+    "tipo_label": "Proyecto de Resolución",
+    "extracto": "PROYECTO DE RESOLUCION QUE DISTINGUE CON EL PREMIO \"MENCION DE HONOR SENADOR DOMINGO FAUSTINO SARMIENTO\" A LA SELECCIÓN ARGENTINA DE FUTBOL.",
+    "autores": [
+      "CAPITANICH, JORGE MILTON"
+    ],
+    "coautores": [],
+    "bloques": [
+      "JUSTICIALISTA"
+    ],
+    "provincias": [
+      "CHACO"
+    ],
+    "comisiones": [
+      "DE DEPORTE",
+      "DE PRESUPUESTO Y HACIENDA"
+    ],
+    "fecha": "11/08/2026",
+    "dae": "59/2026",
+    "origen": "S",
+    "url": "https://www.senado.gob.ar/parlamentario/comisiones/verExp/1349.26/S/PR",
+    "sancionado": false,
+    "archivado": false
+  },
+  {
+    "nro": 1348,
+    "anio": 2026,
+    "tipo": "PC",
+    "tipo_label": "Proyecto de Comunicación",
+    "extracto": "PROYECTO DE COMUNICACIÓN QUE SOLICITA INFORME SOBRE EL ESTADO DE LA RED VIAL NACIONAL, MANTENIMIENTO Y EJECUCION PRESUPUESTARIA DEL SISTEMA VIAL INTEGRADO (SISVIAL), Y OTRAS CUESTIONES CONEXAS.",
+    "autores": [
+      "BENSUSÁN, DANIEL PABLO"
+    ],
+    "coautores": [],
+    "bloques": [
+      "JUSTICIALISTA"
+    ],
+    "provincias": [
+      "LA PAMPA"
+    ],
+    "comisiones": [
+      "DE INFRAESTRUCTURA, VIVIENDA Y TRANSPORTE"
+    ],
+    "fecha": "11/08/2026",
+    "dae": "59/2026",
+    "origen": "S",
+    "url": "https://www.senado.gob.ar/parlamentario/comisiones/verExp/1348.26/S/PC",
+    "sancionado": false,
+    "archivado": false
+  },
+  {
+    "nro": 1347,
+    "anio": 2026,
+    "tipo": "PC",
+    "tipo_label": "Proyecto de Comunicación",
+    "extracto": "PROYECTO DE COMUNICACION QUE SOLICITA INFORME SOBRE DIVERSOS PUNTOS RELACIONADOS A LA SITUACION CRITICA EN CUANTO A LAS PRESTACIONES Y COBERTURA MEDICA POR PARTE DE PAMI QUE ATRAVIESAN LOS AFILIADOS DE LA ZONA DE CORDILLERA DE LA PROVINCIA DEL CHUBUT.",
+    "autores": [
+      "LINARES, CARLOS ALBERTO"
+    ],
+    "coautores": [],
+    "bloques": [
+      "JUSTICIALISTA"
+    ],
+    "provincias": [
+      "CHUBUT"
+    ],
+    "comisiones": [
+      "DE TRABAJO Y PREVISIÓN SOCIAL"
+    ],
+    "fecha": "11/08/2026",
+    "dae": "58/2026",
+    "origen": "S",
+    "url": "https://www.senado.gob.ar/parlamentario/comisiones/verExp/1347.26/S/PC",
+    "sancionado": false,
+    "archivado": false
+  },
+  {
+    "nro": 1346,
+    "anio": 2026,
+    "tipo": "PL",
+    "tipo_label": "Proyecto de Ley",
+    "extracto": "PROYECTO DE LEY QUE TRANSFIERE A TITULO GRATUITO A FAVOR DE LA PROVINCIA DEL CHUBUT, UN INMUEBLE PROPIEDAD DEL ESTADO NACIONAL, UBICADO EN LA CDAD. DE PUERTO MADRYN, PROV. DEL CHUBUT.",
+    "autores": [
+      "TERENZI, EDITH ELIZABETH"
+    ],
+    "coautores": [],
+    "bloques": [
+      "DESPIERTA CHUBUT"
+    ],
+    "provincias": [
+      "CHUBUT"
+    ],
+    "comisiones": [
+      "DE ASUNTOS ADMINISTRATIVOS Y MUNICIPALES"
+    ],
+    "fecha": "10/08/2026",
+    "dae": "58/2026",
+    "origen": "S",
+    "url": "https://www.senado.gob.ar/parlamentario/comisiones/verExp/1346.26/S/PL",
+    "sancionado": false,
+    "archivado": false
+  },
+  {
+    "nro": 1345,
+    "anio": 2026,
+    "tipo": "PD",
+    "tipo_label": "Proyecto de Declaración",
+    "extracto": "PROYECTO DE DECLARACION QUE EXPRESA BENEPLACITO POR EL 79º ANIVERSARIO DE PAMPA DEL INDIO, LOC. DE LA PROV. DEL CHACO, EL 10 DE AGOSTO DE 2026.",
+    "autores": [
+      "CAPITANICH, JORGE MILTON"
+    ],
+    "coautores": [],
+    "bloques": [
+      "JUSTICIALISTA"
+    ],
+    "provincias": [
+      "CHACO"
+    ],
+    "comisiones": [
+      "DE ASUNTOS ADMINISTRATIVOS Y MUNICIPALES"
+    ],
+    "fecha": "10/08/2026",
+    "dae": "58/2026",
+    "origen": "S",
+    "url": "https://www.senado.gob.ar/parlamentario/comisiones/verExp/1345.26/S/PD",
+    "sancionado": false,
+    "archivado": false
+  },
+  {
+    "nro": 1344,
+    "anio": 2026,
+    "tipo": "PD",
+    "tipo_label": "Proyecto de Declaración",
+    "extracto": "PROYECTO DE DECLARACION QUE DECLARA DE INTERÉS LA CONMEMORACION DEL 81° ANIVERSARIO DE LA LOCALIDAD DE LAS GARCITAS, PROV. DEL CHACO, EL 10 DE AGOSTO DE 2026.",
+    "autores": [
+      "CAPITANICH, JORGE MILTON"
+    ],
+    "coautores": [],
+    "bloques": [
+      "JUSTICIALISTA"
+    ],
+    "provincias": [
+      "CHACO"
+    ],
+    "comisiones": [
+      "DE ASUNTOS ADMINISTRATIVOS Y MUNICIPALES"
+    ],
+    "fecha": "10/08/2026",
+    "dae": "58/2026",
+    "origen": "S",
+    "url": "https://www.senado.gob.ar/parlamentario/comisiones/verExp/1344.26/S/PD",
+    "sancionado": false,
+    "archivado": false
+  },
+  {
+    "nro": 1343,
+    "anio": 2026,
+    "tipo": "PD",
+    "tipo_label": "Proyecto de Declaración",
+    "extracto": "PROYECTO DE DECLARACIÓN QUE ADHIERE A LA CONMEMORACION DEL 114° ANIVERSARIO DE LA CREACION DE LA FUERZA AÉREA ARGENTINA, EL 10 DE AGOSTO DE 2026.",
+    "autores": [
+      "CAPITANICH, JORGE MILTON"
+    ],
+    "coautores": [],
+    "bloques": [
+      "JUSTICIALISTA"
+    ],
+    "provincias": [
+      "CHACO"
+    ],
+    "comisiones": [
+      "DE DEFENSA NACIONAL"
+    ],
+    "fecha": "10/08/2026",
+    "dae": "58/2026",
+    "origen": "S",
+    "url": "https://www.senado.gob.ar/parlamentario/comisiones/verExp/1343.26/S/PD",
+    "sancionado": false,
+    "archivado": false
+  },
+  {
+    "nro": 1342,
+    "anio": 2026,
+    "tipo": "PD",
+    "tipo_label": "Proyecto de Declaración",
+    "extracto": "PROYECTO DE DECLARACIÓN QUE DECLARA DE INTERES EL PROYECTO TRANSMEDIA \"LENGUAS QUE CUENTAN\" IMPULSADO POR LA BIBLIOTECA DEL CONGESO DE LA NACIÓN.",
+    "autores": [
+      "AVILA, BEATRIZ LUISA"
+    ],
+    "coautores": [
+      "ROJAS DECUT, SONIA ELIZABETH",
+      "VALENZUELA, MERCEDES GABRIELA"
+    ],
+    "bloques": [
+      "INDEPENDENCIA"
+    ],
+    "provincias": [
+      "TUCUMÁN"
+    ],
+    "comisiones": [
+      "DE EDUCACIÓN Y CULTURA"
+    ],
+    "fecha": "10/08/2026",
+    "dae": "58/2026",
+    "origen": "S",
+    "url": "https://www.senado.gob.ar/parlamentario/comisiones/verExp/1342.26/S/PD",
+    "sancionado": false,
+    "archivado": false
+  },
+  {
+    "nro": 1341,
+    "anio": 2026,
+    "tipo": "PD",
+    "tipo_label": "Proyecto de Declaración",
+    "extracto": "PROYECTO DE DECLARACIÓN QUE EXPRESA BENEPLACITO POR LA 5° EDICION DE LA EXPO BRANGUS PRIMAVERA Y LA 2° EXPOSICION NACIONAL BRAHMAN PRIMAVERA, A REALIZARSE EN LA SOCIEDAD RURAL \"EL ZAPALLAR\", LOC. GENERAL JOSE DE SAN MARTIN, PROV. DEL CHACO, DEL 27 AL 30 DE OCTUBRE DE 2026.",
+    "autores": [
+      "SCHNEIDER, SILVANA LORENA"
+    ],
+    "coautores": [],
+    "bloques": [
+      "UCR - UNIÓN CÍVICA RADICAL"
+    ],
+    "provincias": [
+      "CHACO"
+    ],
+    "comisiones": [
+      "DE AGRICULTURA, GANADERÍA Y PESCA"
+    ],
+    "fecha": "10/08/2026",
+    "dae": "58/2026",
+    "origen": "S",
+    "url": "https://www.senado.gob.ar/parlamentario/comisiones/verExp/1341.26/S/PD",
+    "sancionado": false,
+    "archivado": false
+  },
+  {
+    "nro": 1340,
+    "anio": 2026,
+    "tipo": "PD",
+    "tipo_label": "Proyecto de Declaración",
+    "extracto": "PROYECTO DE DECLARACIÓN QUE EXPRESA BENEPLACITO POR EL 60° ANIVERSARIO DEL INICIO DE LAS TRANSMISIONES DE LT 81 TV CANAL 9 DE RESISTENCIA \"IMAGEN DEL NORDESTE\", PROV. DEL CHACO, EL 17 DE AGOSTO DE 2026.",
+    "autores": [
+      "SCHNEIDER, SILVANA LORENA"
+    ],
+    "coautores": [],
+    "bloques": [
+      "UCR - UNIÓN CÍVICA RADICAL"
+    ],
+    "provincias": [
+      "CHACO"
+    ],
+    "comisiones": [
+      "DE SISTEMAS, MEDIOS DE COMUNICACIÓN Y LIBERTAD DE EXPRESIÓN"
+    ],
+    "fecha": "10/08/2026",
+    "dae": "58/2026",
+    "origen": "S",
+    "url": "https://www.senado.gob.ar/parlamentario/comisiones/verExp/1340.26/S/PD",
+    "sancionado": false,
+    "archivado": false
+  },
+  {
+    "nro": 1339,
+    "anio": 2026,
+    "tipo": "PD",
+    "tipo_label": "Proyecto de Declaración",
+    "extracto": "PROYECTO DE DECLARACIÓN QUE EXPRESA BENEPLACITO POR LA CONMEMORACION DEL 79° ANIVERSARIO DE LA LOC. DE PAMPA DEL INDIO, PROV. DEL CHACO, EL 10 DE AGOSTO DE 2026.",
+    "autores": [
+      "SCHNEIDER, SILVANA LORENA"
+    ],
+    "coautores": [],
+    "bloques": [
+      "UCR - UNIÓN CÍVICA RADICAL"
+    ],
+    "provincias": [
+      "CHACO"
+    ],
+    "comisiones": [
+      "DE ASUNTOS ADMINISTRATIVOS Y MUNICIPALES"
+    ],
+    "fecha": "10/08/2026",
+    "dae": "58/2026",
+    "origen": "S",
+    "url": "https://www.senado.gob.ar/parlamentario/comisiones/verExp/1339.26/S/PD",
+    "sancionado": false,
+    "archivado": false
+  },
+  {
+    "nro": 1338,
+    "anio": 2026,
+    "tipo": "PD",
+    "tipo_label": "Proyecto de Declaración",
+    "extracto": "PROYECTO DE DECLARACION QUE DECLARA DE INTERES EL \"SEGUNDO CONGRESO INTERNACIONAL DE GERIATRIA Y GERONTOLOGÍA DEL INTERIOR DE LA ARGENTINA\", A REALIZARSE EN LA CDAD. DE ROSARIO, PROV. DE SANTA FE, EL 5 Y 6 DE NOVIEMBRE DE 2026.",
+    "autores": [
+      "LEWANDOWSKI, MARCELO NÉSTOR"
+    ],
+    "coautores": [],
+    "bloques": [
+      "JUSTICIALISTA"
+    ],
+    "provincias": [
+      "SANTA FE"
+    ],
+    "comisiones": [
+      "DE SALUD"
+    ],
+    "fecha": "10/08/2026",
+    "dae": "58/2026",
+    "origen": "S",
+    "url": "https://www.senado.gob.ar/parlamentario/comisiones/verExp/1338.26/S/PD",
+    "sancionado": false,
+    "archivado": false
+  },
+  {
+    "nro": 1337,
+    "anio": 2026,
+    "tipo": "PR",
+    "tipo_label": "Proyecto de Resolución",
+    "extracto": "PROYECTO DE RESOLUCION QUE MODIFICA EL ART. 30 DEL REGLAMENTO DE LA CÁMARA DE SENADORES DE LA NACIÓN, RESPECTO A LA PARTICIPACIÓN REMOTA EN LAS SESIONES EN CASO DE EMBARAZO.",
+    "autores": [
+      "FERNÁNDEZ SAGASTI, ANABEL"
+    ],
+    "coautores": [],
+    "bloques": [
+      "JUSTICIALISTA"
+    ],
+    "provincias": [
+      "MENDOZA"
+    ],
+    "comisiones": [
+      "DE ASUNTOS CONSTITUCIONALES"
+    ],
+    "fecha": "07/08/2026",
+    "dae": "58/2026",
+    "origen": "S",
+    "url": "https://www.senado.gob.ar/parlamentario/comisiones/verExp/1337.26/S/PR",
+    "sancionado": false,
+    "archivado": false
+  },
+  {
+    "nro": 1336,
+    "anio": 2026,
+    "tipo": "PL",
+    "tipo_label": "Proyecto de Ley",
+    "extracto": "PROYECTO DE LEY QUE MODIFICA EL ART. 67 DEL CÓDIGO PENAL, RESPECTO A LA INCORPORACIÓN DE UNA CAUSAL DE INTERRUPCIÓN DE LA PRESCRIPCIÓN DE LA ACCIÓN PENAL PARA DELITOS CONTRA LA INTEGRIDAD SEXUAL COMETIDOS SOBRE PERSONAS MENORES DE EDAD.",
+    "autores": [
+      "FERNÁNDEZ SAGASTI, ANABEL"
+    ],
+    "coautores": [],
+    "bloques": [
+      "JUSTICIALISTA"
+    ],
+    "provincias": [
+      "MENDOZA"
+    ],
+    "comisiones": [
+      "DE JUSTICIA Y ASUNTOS PENALES"
+    ],
+    "fecha": "07/08/2026",
+    "dae": "58/2026",
+    "origen": "S",
+    "url": "https://www.senado.gob.ar/parlamentario/comisiones/verExp/1336.26/S/PL",
+    "sancionado": false,
+    "archivado": false
+  },
+  {
+    "nro": 1335,
+    "anio": 2026,
+    "tipo": "PD",
+    "tipo_label": "Proyecto de Declaración",
+    "extracto": "PROYECTO DE DECLARACIÓN QUE DECLARA DE INTERÉS NACIONAL LA \"II CUMBRE DE BIOETANOL\", EN LA PROV. DE TUCUMAN EL 21 DE AGOSTO DE 2026.",
+    "autores": [
+      "AVILA, BEATRIZ LUISA"
+    ],
+    "coautores": [],
+    "bloques": [
+      "INDEPENDENCIA"
+    ],
+    "provincias": [
+      "TUCUMÁN"
+    ],
+    "comisiones": [
+      "DE MINERÍA, ENERGÍA Y COMBUSTIBLES"
+    ],
+    "fecha": "07/08/2026",
+    "dae": "58/2026",
+    "origen": "S",
+    "url": "https://www.senado.gob.ar/parlamentario/comisiones/verExp/1335.26/S/PD",
+    "sancionado": false,
+    "archivado": false
+  },
+  {
+    "nro": 1334,
+    "anio": 2026,
+    "tipo": "PD",
+    "tipo_label": "Proyecto de Declaración",
+    "extracto": "PROYECTO DE DECLARACIÓN QUE DECLARA DE INTERES LA 61° FIESTA NACIONAL DE LA PESCA DEL DORADO, A REALIZARSE EN LA CDAD. DE PASO DE LA PATRIA, PROV. DE CORRIENTES, DEL 14 AL 17 DE AGOSTO DE 2026.",
+    "autores": [
+      "VALENZUELA, MERCEDES GABRIELA"
+    ],
+    "coautores": [],
+    "bloques": [
+      "UCR - UNIÓN CÍVICA RADICAL"
+    ],
+    "provincias": [
+      "CORRIENTES"
+    ],
+    "comisiones": [
+      "DE DEPORTE"
+    ],
+    "fecha": "07/08/2026",
+    "dae": "58/2026",
+    "origen": "S",
+    "url": "https://www.senado.gob.ar/parlamentario/comisiones/verExp/1334.26/S/PD",
+    "sancionado": false,
+    "archivado": false
+  },
+  {
+    "nro": 1333,
+    "anio": 2026,
+    "tipo": "PD",
+    "tipo_label": "Proyecto de Declaración",
+    "extracto": "PROYECTO DE DECLARACION QUE EXPRESA PREOCUPACION POR LAS RELACIONES DIPLOMATICAS CON LA REPUBLICA FEDERATIVA DEL BRASIL, COMO CONSECUENCIA DE LAS EXPRESIONES FORMULADAS POR EL PRESIDENTE DE LA NACION, JAVIER MILEI.",
+    "autores": [
+      "CAPITANICH, JORGE MILTON"
+    ],
+    "coautores": [
+      "KIRCHNER, ALICIA MARGARITA ANTONIA",
+      "GIMÉNEZ NAVARRO, MARÍA CELESTE",
+      "LINARES, CARLOS ALBERTO",
+      "DE PEDRO, EDUARDO ENRIQUE",
+      "GONZÁLEZ, MARÍA TERESA MARGARITA",
+      "BAHL, ADÁN HUMBERTO",
+      "MANZUR, JUAN LUIS"
+    ],
+    "bloques": [
+      "JUSTICIALISTA"
+    ],
+    "provincias": [
+      "CHACO"
+    ],
+    "comisiones": [
+      "DE RELACIONES EXTERIORES Y CULTO"
+    ],
+    "fecha": "07/08/2026",
+    "dae": "58/2026",
+    "origen": "S",
+    "url": "https://www.senado.gob.ar/parlamentario/comisiones/verExp/1333.26/S/PD",
+    "sancionado": false,
+    "archivado": false
+  },
+  {
+    "nro": 1332,
+    "anio": 2026,
+    "tipo": "PL",
+    "tipo_label": "Proyecto de Ley",
+    "extracto": "PROYECTO DE LEY QUE INSTITUYE EL 4 DE DICIEMBRE DE CADA AÑO, COMO EL DIA NACIONAL DE LOS DERECHOS DEL PACIENTE TRASPLANTADO.",
+    "autores": [
+      "CORROZA, JULIETA"
+    ],
+    "coautores": [],
+    "bloques": [
+      "LA NEUQUINIDAD"
+    ],
+    "provincias": [
+      "NEUQUÉN"
+    ],
+    "comisiones": [
+      "DE SALUD"
+    ],
+    "fecha": "07/08/2026",
+    "dae": "58/2026",
+    "origen": "S",
+    "url": "https://www.senado.gob.ar/parlamentario/comisiones/verExp/1332.26/S/PL",
+    "sancionado": false,
+    "archivado": false
+  },
+  {
+    "nro": 1331,
+    "anio": 2026,
+    "tipo": "PL",
+    "tipo_label": "Proyecto de Ley",
+    "extracto": "PROYECTO DE LEY QUE IMPLEMENTA UNA CAMPAÑA NACIONAL PERMANENTE DE PREVENCION DE ESTAFAS TELEFONICAS, POR INTERNET Y FRAUDES CIBERASISTIDOS.",
+    "autores": [
+      "CORROZA, JULIETA"
+    ],
+    "coautores": [],
+    "bloques": [
+      "LA NEUQUINIDAD"
+    ],
+    "provincias": [
+      "NEUQUÉN"
+    ],
+    "comisiones": [
+      "DE SISTEMAS, MEDIOS DE COMUNICACIÓN Y LIBERTAD DE EXPRESIÓN",
+      "DE PRESUPUESTO Y HACIENDA",
+      "DE EDUCACIÓN Y CULTURA"
+    ],
+    "fecha": "07/08/2026",
+    "dae": "58/2026",
+    "origen": "S",
+    "url": "https://www.senado.gob.ar/parlamentario/comisiones/verExp/1331.26/S/PL",
+    "sancionado": false,
+    "archivado": false
+  },
+  {
+    "nro": 1330,
+    "anio": 2026,
+    "tipo": "PD",
+    "tipo_label": "Proyecto de Declaración",
+    "extracto": "PROYECTO DE DECLARACIÓN QUE EXPRESA BENEPLACITO POR LA REALIZACION DEL 2° CONGRESO DE LACTANCIA MATERNA \"DR. CARLOS POSSE\", EN EL DOMO DEL CENTENARIO \"ZITTO SEGOVIA\", DE LA CDAD. DE RESISTENCIA, PROV. DEL CHACO, EL 11 DE AGOSTO DE 2026.",
+    "autores": [
+      "SCHNEIDER, SILVANA LORENA"
+    ],
+    "coautores": [],
+    "bloques": [
+      "UCR - UNIÓN CÍVICA RADICAL"
+    ],
+    "provincias": [
+      "CHACO"
+    ],
+    "comisiones": [
+      "DE SALUD"
+    ],
+    "fecha": "07/08/2026",
+    "dae": "57/2026",
+    "origen": "S",
+    "url": "https://www.senado.gob.ar/parlamentario/comisiones/verExp/1330.26/S/PD",
+    "sancionado": false,
+    "archivado": false
+  },
+  {
+    "nro": 1329,
+    "anio": 2026,
+    "tipo": "PL",
+    "tipo_label": "Proyecto de Ley",
+    "extracto": "PROYECTO DE LEY QUE DECLARA PATRIMONIO CULTURAL INMATERIAL DE LA NACION, EN LOS TERMINOS DE LA LEY 26.118, AL PATRIMONIO BIOCULTURAL TEXTIL VIVO DE LA PROVINCIA DE SAN JUAN.",
+    "autores": [
+      "UÑAC, SERGIO MAURICIO"
+    ],
+    "coautores": [],
+    "bloques": [
+      "JUSTICIALISTA"
+    ],
+    "provincias": [
+      "SAN JUAN"
+    ],
+    "comisiones": [
+      "DE EDUCACIÓN Y CULTURA"
+    ],
+    "fecha": "07/08/2026",
+    "dae": "57/2026",
+    "origen": "S",
+    "url": "https://www.senado.gob.ar/parlamentario/comisiones/verExp/1329.26/S/PL",
+    "sancionado": false,
+    "archivado": false
+  },
+  {
+    "nro": 1326,
+    "anio": 2026,
+    "tipo": "PD",
+    "tipo_label": "Proyecto de Declaración",
+    "extracto": "PROYECTO DE DECLARACIÓN QUE EXPRESA BENEPLACITO POR LA CREACION DEL CENTRO REGIONAL DE ESTUDIO SUPERIOR (C.R.E.S.U.) IMPULSADO POR LA MUNIC. DE CATRIEL, PROV. DE RIO NEGRO.",
+    "autores": [
+      "MARKS, ANA INÉS",
+      "SORIA, MARTIN IGNACIO"
+    ],
+    "coautores": [],
+    "bloques": [
+      "JUSTICIALISTA"
+    ],
+    "provincias": [
+      "RÍO NEGRO"
+    ],
+    "comisiones": [
+      "DE EDUCACIÓN Y CULTURA"
+    ],
+    "fecha": "06/08/2026",
+    "dae": "57/2026",
+    "origen": "S",
+    "url": "https://www.senado.gob.ar/parlamentario/comisiones/verExp/1326.26/S/PD",
+    "sancionado": false,
+    "archivado": false
+  },
+  {
+    "nro": 1325,
+    "anio": 2026,
+    "tipo": "PC",
+    "tipo_label": "Proyecto de Comunicación",
+    "extracto": "PROYECTO DE COMUNICACIÓN QUE SOLICITA INFORME SOBRE DIVERSOS PUNTOS RELACIONADOS AL FUNCIONAMIENTO DE LA DIRECCIÓN DE ZOONOSIS Y CONTROL DE ENFERMEDADES TRANSMITIDAS POR VECTORES, EN RELACION CON SU ARTICULACION OPERATIVA CON LA PROV. DE SALTA.",
+    "autores": [
+      "ROYON, FLAVIA GABRIELA"
+    ],
+    "coautores": [],
+    "bloques": [
+      "PRIMERO LOS SALTEÑOS"
+    ],
+    "provincias": [
+      "SALTA"
+    ],
+    "comisiones": [
+      "DE SALUD"
+    ],
+    "fecha": "06/08/2026",
+    "dae": "57/2026",
+    "origen": "S",
+    "url": "https://www.senado.gob.ar/parlamentario/comisiones/verExp/1325.26/S/PC",
+    "sancionado": false,
+    "archivado": false
+  },
+  {
+    "nro": 1324,
+    "anio": 2026,
+    "tipo": "PC",
+    "tipo_label": "Proyecto de Comunicación",
+    "extracto": "PROYECTO DE COMUNICACION QUE SOLICITA SE EJECUTEN LAS OBRAS DE REPAVIMENTACION, AMPLIACIÓN Y MEJORA DE LA RUTA NACIONAL N° 9, EN EL TRAMO COMPRENDIDO ENTRE EL PUENTE WEIRNA Y EL DIQUE CAMPO ALEGRE, PROV. DE SALTA.",
+    "autores": [
+      "ROYON, FLAVIA GABRIELA"
+    ],
+    "coautores": [],
+    "bloques": [
+      "PRIMERO LOS SALTEÑOS"
+    ],
+    "provincias": [
+      "SALTA"
+    ],
+    "comisiones": [
+      "DE INFRAESTRUCTURA, VIVIENDA Y TRANSPORTE"
+    ],
+    "fecha": "06/08/2026",
+    "dae": "57/2026",
+    "origen": "S",
+    "url": "https://www.senado.gob.ar/parlamentario/comisiones/verExp/1324.26/S/PC",
+    "sancionado": false,
+    "archivado": false
+  },
+  {
+    "nro": 1323,
+    "anio": 2026,
+    "tipo": "PD",
+    "tipo_label": "Proyecto de Declaración",
+    "extracto": "PROYECTO DE DECLARACION QUE DECLARA DE INTERES LA VISITA APOSTOLICA DE SU SANTIDAD EL PAPA LEON XIV A LA REPUBLICA ARGENTINA, ENTRE EL 8 Y 11 DE NOVIEMBRE DE 2026.",
+    "autores": [
+      "ABDALA, BARTOLOMÉ ESTEBAN"
+    ],
+    "coautores": [],
+    "bloques": [
+      "LA LIBERTAD AVANZA"
+    ],
+    "provincias": [
+      "SAN LUIS"
+    ],
+    "comisiones": [
+      "DE RELACIONES EXTERIORES Y CULTO"
+    ],
+    "fecha": "06/08/2026",
+    "dae": "57/2026",
+    "origen": "S",
+    "url": "https://www.senado.gob.ar/parlamentario/comisiones/verExp/1323.26/S/PD",
+    "sancionado": false,
+    "archivado": false
+  },
+  {
+    "nro": 1321,
+    "anio": 2026,
+    "tipo": "PD",
+    "tipo_label": "Proyecto de Declaración",
+    "extracto": "PROYECTO DE DECLARACION QUE EXPRESA BENEPLACITO POR LA CONMEMORACION DEL 432° ANIVERSARIO DE LA FUNDACIÓN DE LA CIUDAD DE SAN LUIS, EL 25 DE AGOSTO DE 2026.",
+    "autores": [
+      "ARRASCAETA, IVANNA MARCELA"
+    ],
+    "coautores": [],
+    "bloques": [
+      "LA LIBERTAD AVANZA"
+    ],
+    "provincias": [
+      "SAN LUIS"
+    ],
+    "comisiones": [
+      "DE ASUNTOS ADMINISTRATIVOS Y MUNICIPALES"
+    ],
+    "fecha": "06/08/2026",
+    "dae": "57/2026",
+    "origen": "S",
+    "url": "https://www.senado.gob.ar/parlamentario/comisiones/verExp/1321.26/S/PD",
+    "sancionado": false,
+    "archivado": false
+  },
+  {
+    "nro": 1320,
+    "anio": 2026,
+    "tipo": "PD",
+    "tipo_label": "Proyecto de Declaración",
+    "extracto": "PROYECTO DE DECLARACION QUE DECLARA DE INTERÉS LA 29.ª EDICIÓN DE LA \"EXPO APÍCOLA DOBLAS\", A REALIZARSE EN LA PROV. DE LA PAMPA, EL 21 Y 22 DE AGOSTO DE 2026.",
+    "autores": [
+      "HUALA, MARÍA VICTORIA"
+    ],
+    "coautores": [],
+    "bloques": [
+      "FRENTE PRO"
+    ],
+    "provincias": [
+      "LA PAMPA"
+    ],
+    "comisiones": [
+      "DE AGRICULTURA, GANADERÍA Y PESCA"
+    ],
+    "fecha": "06/08/2026",
+    "dae": "57/2026",
+    "origen": "S",
+    "url": "https://www.senado.gob.ar/parlamentario/comisiones/verExp/1320.26/S/PD",
+    "sancionado": false,
+    "archivado": false
+  },
+  {
+    "nro": 1319,
+    "anio": 2026,
+    "tipo": "PL",
+    "tipo_label": "Proyecto de Ley",
+    "extracto": "PROYECTO DE LEY QUE TRANSFIERE A TITULO GRATUITO A FAVOR DE LA MUNICIPALIDAD DE RECONQUISTA EL DOMINIO DE LOS INMUEBLES PROPIEDAD DE LA DIRECCION NACIONAL DE VIALIDAD DEL ESTADO NACIONAL SITOS EN LA PROV. DE SANTA FE.",
+    "autores": [
+      "LOSADA, CAROLINA",
+      "GALARETTO, EDUARDO HORACIO"
+    ],
+    "coautores": [],
+    "bloques": [
+      "UCR - UNIÓN CÍVICA RADICAL"
+    ],
+    "provincias": [
+      "SANTA FE"
+    ],
+    "comisiones": [
+      "DE ASUNTOS ADMINISTRATIVOS Y MUNICIPALES"
+    ],
+    "fecha": "06/08/2026",
+    "dae": "57/2026",
+    "origen": "S",
+    "url": "https://www.senado.gob.ar/parlamentario/comisiones/verExp/1319.26/S/PL",
+    "sancionado": false,
+    "archivado": false
+  },
+  {
+    "nro": 1318,
+    "anio": 2026,
+    "tipo": "PD",
+    "tipo_label": "Proyecto de Declaración",
+    "extracto": "PROYECTO DE DECLARACIÓN QUE EXPRESA BENEPLACITO POR LA INICIATIVA IMPULSADA POR LA UNIÓN DEL PERSONAL CIVIL DE LA PROVINCIA DEL CHACO (U.P.C.P.), EN RECHAZO AL PROYECTO DE LEY DE \"INVIOLABILIDAD DE LA PROPIEDAD PRIVADA\".",
+    "autores": [
+      "CAPITANICH, JORGE MILTON"
+    ],
+    "coautores": [],
+    "bloques": [
+      "JUSTICIALISTA"
+    ],
+    "provincias": [
+      "CHACO"
+    ],
+    "comisiones": [
+      "DE ASUNTOS CONSTITUCIONALES"
+    ],
+    "fecha": "06/08/2026",
+    "dae": "57/2026",
+    "origen": "S",
+    "url": "https://www.senado.gob.ar/parlamentario/comisiones/verExp/1318.26/S/PD",
+    "sancionado": false,
+    "archivado": false
+  },
+  {
+    "nro": 1311,
+    "anio": 2026,
+    "tipo": "PL",
+    "tipo_label": "Proyecto de Ley",
+    "extracto": "PROYECTO DE LEY QUE ESTABLECE UN MARCO NORMATIVO DE MEDIDAS DE ACCIÓN POSITIVA PARA LA IGUALDAD Y NO DISCRIMINACIÓN DE LAS PERSONAS MAYORES.",
+    "autores": [
+      "GALARETTO, EDUARDO HORACIO",
+      "VALENZUELA, MERCEDES GABRIELA"
+    ],
+    "coautores": [],
+    "bloques": [
+      "UCR - UNIÓN CÍVICA RADICAL"
+    ],
+    "provincias": [
+      "SANTA FE",
+      "CORRIENTES"
+    ],
+    "comisiones": [
+      "DE LEGISLACIÓN GENERAL",
+      "DE POBLACIÓN Y DESARROLLO  HUMANO",
+      "DE PRESUPUESTO Y HACIENDA"
+    ],
+    "fecha": "06/08/2026",
+    "dae": "57/2026",
+    "origen": "S",
+    "url": "https://www.senado.gob.ar/parlamentario/comisiones/verExp/1311.26/S/PL",
+    "sancionado": false,
+    "archivado": false
+  },
+  {
+    "nro": 1310,
+    "anio": 2026,
+    "tipo": "PL",
+    "tipo_label": "Proyecto de Ley",
+    "extracto": "PROYECTO DE LEY QUE CREA LA COMISION BICAMERAL PERMANENTE DE SEGUIMIENTO Y CONTROL DE LA VIA NAVEGABLE TRONCAL.",
+    "autores": [
+      "GALARETTO, EDUARDO HORACIO"
+    ],
+    "coautores": [],
+    "bloques": [
+      "UCR - UNIÓN CÍVICA RADICAL"
+    ],
+    "provincias": [
+      "SANTA FE"
+    ],
+    "comisiones": [
+      "DE ASUNTOS CONSTITUCIONALES",
+      "DE INFRAESTRUCTURA, VIVIENDA Y TRANSPORTE",
+      "DE PRESUPUESTO Y HACIENDA"
+    ],
+    "fecha": "06/08/2026",
+    "dae": "57/2026",
+    "origen": "S",
+    "url": "https://www.senado.gob.ar/parlamentario/comisiones/verExp/1310.26/S/PL",
+    "sancionado": false,
+    "archivado": false
+  },
+  {
+    "nro": 1309,
+    "anio": 2026,
+    "tipo": "PC",
+    "tipo_label": "Proyecto de Comunicación",
+    "extracto": "PROYECTO DE COMUNICACIÓN QUE SOLICITA SE FORTALEZCA LAS POLITICAS PUBLICAS ORIENTADAS A LA PREVENCION, DETECCION TEMPRANA Y CONCIENTIZACION SOBRE EL CANCER DE PIEL, ESPECIALMENTE EN NIÑOS, NIÑAS Y ADOLESCENTES.",
+    "autores": [
+      "GALARETTO, EDUARDO HORACIO"
+    ],
+    "coautores": [],
+    "bloques": [
+      "UCR - UNIÓN CÍVICA RADICAL"
+    ],
+    "provincias": [
+      "SANTA FE"
+    ],
+    "comisiones": [
+      "DE SALUD"
+    ],
+    "fecha": "06/08/2026",
+    "dae": "57/2026",
+    "origen": "S",
+    "url": "https://www.senado.gob.ar/parlamentario/comisiones/verExp/1309.26/S/PC",
+    "sancionado": false,
+    "archivado": false
+  },
+  {
+    "nro": 1308,
+    "anio": 2026,
+    "tipo": "PC",
+    "tipo_label": "Proyecto de Comunicación",
+    "extracto": "PROYECTO DE COMUNICACIÓN QUE SOLICITA SE ADOPTEN LAS MEDIDAS PARA FORTALECER EL FUNCIONAMIENTO DEL REGISTRO NACIONAL DE ENFERMEDADES POCO FRECUENTES (EPOF).",
+    "autores": [
+      "GALARETTO, EDUARDO HORACIO"
+    ],
+    "coautores": [],
+    "bloques": [
+      "UCR - UNIÓN CÍVICA RADICAL"
+    ],
+    "provincias": [
+      "SANTA FE"
+    ],
+    "comisiones": [
+      "DE SALUD"
+    ],
+    "fecha": "06/08/2026",
+    "dae": "57/2026",
+    "origen": "S",
+    "url": "https://www.senado.gob.ar/parlamentario/comisiones/verExp/1308.26/S/PC",
+    "sancionado": false,
+    "archivado": false
+  },
+  {
+    "nro": 1307,
+    "anio": 2026,
+    "tipo": "PC",
+    "tipo_label": "Proyecto de Comunicación",
+    "extracto": "PROYECTO DE COMUNICACIÓN QUE SOLICITA INFORME SOBRE DISTINTOS PUNTOS RELACIONADOS AL IMPACTO ENERGETICO Y AMBIENTAL DE LA INFRAESTRUCTURA DIGITAL ASOCIADA AL DESARROLLO Y UTILIZACION DE SISTEMAS DE INTELIGENCIA ARTIFICIAL.",
+    "autores": [
+      "GALARETTO, EDUARDO HORACIO"
+    ],
+    "coautores": [],
+    "bloques": [
+      "UCR - UNIÓN CÍVICA RADICAL"
+    ],
+    "provincias": [
+      "SANTA FE"
+    ],
+    "comisiones": [
+      "DE MINERÍA, ENERGÍA Y COMBUSTIBLES"
+    ],
+    "fecha": "06/08/2026",
+    "dae": "57/2026",
+    "origen": "S",
+    "url": "https://www.senado.gob.ar/parlamentario/comisiones/verExp/1307.26/S/PC",
+    "sancionado": false,
+    "archivado": false
+  },
+  {
+    "nro": 1306,
+    "anio": 2026,
+    "tipo": "PC",
+    "tipo_label": "Proyecto de Comunicación",
+    "extracto": "PROYECTO DE COMUNICACIÓN QUE SOLICITA INFORME SOBRE LA IMPLEMENTACION DE LAS RESOLUCIONES N° 128/2025, 356/2025 Y 43/2026, RESPECTO DE BECAS DEPORTIVAS PARA ATLETAS DE ALTO RENDIMIENTO, ENTRENADORES Y DEMAS BENEFICIARIOS, Y OTRAS CUESTIONES CONEXAS.",
+    "autores": [
+      "GALARETTO, EDUARDO HORACIO"
+    ],
+    "coautores": [],
+    "bloques": [
+      "UCR - UNIÓN CÍVICA RADICAL"
+    ],
+    "provincias": [
+      "SANTA FE"
+    ],
+    "comisiones": [
+      "DE DEPORTE"
+    ],
+    "fecha": "06/08/2026",
+    "dae": "57/2026",
+    "origen": "S",
+    "url": "https://www.senado.gob.ar/parlamentario/comisiones/verExp/1306.26/S/PC",
+    "sancionado": false,
+    "archivado": false
+  },
+  {
+    "nro": 1305,
+    "anio": 2026,
+    "tipo": "PD",
+    "tipo_label": "Proyecto de Declaración",
+    "extracto": "PROYECTO DE DECLARACION QUE DECLARA DE INTERES EL PRIMER CONGRESO IBEROAMERICANO DE SALUD FICS, A REALIZARSE EN LA CIUDAD AUTONOMA DE BUENOS AIRES, EL 14 Y 15 DE OCTUBRE DE 2026",
+    "autores": [
+      "GALARETTO, EDUARDO HORACIO"
+    ],
+    "coautores": [],
+    "bloques": [
+      "UCR - UNIÓN CÍVICA RADICAL"
+    ],
+    "provincias": [
+      "SANTA FE"
+    ],
+    "comisiones": [
+      "DE SALUD"
+    ],
+    "fecha": "06/08/2026",
+    "dae": "57/2026",
+    "origen": "S",
+    "url": "https://www.senado.gob.ar/parlamentario/comisiones/verExp/1305.26/S/PD",
+    "sancionado": false,
+    "archivado": false
+  },
+  {
+    "nro": 1304,
+    "anio": 2026,
+    "tipo": "PD",
+    "tipo_label": "Proyecto de Declaración",
+    "extracto": "PROYECTO DE DECLARACIÓN QUE DECLARA DE INTERÉS LA PRIMERA EDICIÓN DEL SUMMA FORUM, CONCLAVE NACIONAL DE LIDERAZGO, DECISIÓN Y PROYECCIÓN FUTURA DE LA INDUSTRIA FARMACÉUTICA ARGENTINA, A REALIZARSE EN EL AUDITORIO DE LA SEDE DEL GOBIERNO DE CABA, EL 29 DE OCTUBRE DE 2026.",
+    "autores": [
+      "GALARETTO, EDUARDO HORACIO"
+    ],
+    "coautores": [],
+    "bloques": [
+      "UCR - UNIÓN CÍVICA RADICAL"
+    ],
+    "provincias": [
+      "SANTA FE"
+    ],
+    "comisiones": [
+      "DE INDUSTRIA Y COMERCIO"
+    ],
+    "fecha": "06/08/2026",
+    "dae": "57/2026",
+    "origen": "S",
+    "url": "https://www.senado.gob.ar/parlamentario/comisiones/verExp/1304.26/S/PD",
+    "sancionado": false,
+    "archivado": false
+  },
+  {
+    "nro": 1303,
+    "anio": 2026,
+    "tipo": "PD",
+    "tipo_label": "Proyecto de Declaración",
+    "extracto": "PROYECTO DE DECLARACION QUE DECLARA DE INTERES LA \"XXX FIESTA DEL TRANSPORTE\" A REALIZARSE EN LA LOC. DE PUJATO, PROV. DE SANTA FE, DEL 25 AL  27 DE SEPTIEMBRE DE 2026.",
+    "autores": [
+      "GALARETTO, EDUARDO HORACIO"
+    ],
+    "coautores": [],
+    "bloques": [
+      "UCR - UNIÓN CÍVICA RADICAL"
+    ],
+    "provincias": [
+      "SANTA FE"
+    ],
+    "comisiones": [
+      "DE INFRAESTRUCTURA, VIVIENDA Y TRANSPORTE"
+    ],
+    "fecha": "06/08/2026",
+    "dae": "57/2026",
+    "origen": "S",
+    "url": "https://www.senado.gob.ar/parlamentario/comisiones/verExp/1303.26/S/PD",
+    "sancionado": false,
+    "archivado": false
+  },
+  {
+    "nro": 1302,
+    "anio": 2026,
+    "tipo": "PD",
+    "tipo_label": "Proyecto de Declaración",
+    "extracto": "PROYECTO DE DECLARACION QUE DECLARA DE INTERES EL III CONGRESO NACIONAL \"UNIDOS POR EL CANCER\", A REALIZARSE EN LA CDAD. DE SAN CARLOS DE BARILOCHE, PROV. DE RIO NEGRO, EL 27 Y 28 DE NOVIEMBRE DE 2026.",
+    "autores": [
+      "LEWANDOWSKI, MARCELO NÉSTOR"
+    ],
+    "coautores": [],
+    "bloques": [
+      "JUSTICIALISTA"
+    ],
+    "provincias": [
+      "SANTA FE"
+    ],
+    "comisiones": [
+      "DE SALUD"
+    ],
+    "fecha": "06/08/2026",
+    "dae": "57/2026",
+    "origen": "S",
+    "url": "https://www.senado.gob.ar/parlamentario/comisiones/verExp/1302.26/S/PD",
+    "sancionado": false,
+    "archivado": false
+  },
+  {
+    "nro": 1301,
+    "anio": 2026,
+    "tipo": "PD",
+    "tipo_label": "Proyecto de Declaración",
+    "extracto": "PROYECTO DE DECLARACION QUE DECLARA DE INTERES EL \"VIII CONGRESO NACIONAL DE FOLKLORE\", A REALIZARSE EN LA CDAD. DE RESISTENCIA, PROV. DEL CHACO, DEL 19 AL 21 DE AGOSTO DE 2026.",
+    "autores": [
+      "GUZMÁN CORAITA, GONZALO",
+      "OROZCO, MARÍA EMILIA"
+    ],
+    "coautores": [],
+    "bloques": [
+      "LA LIBERTAD AVANZA"
+    ],
+    "provincias": [
+      "SALTA"
+    ],
+    "comisiones": [
+      "DE EDUCACIÓN Y CULTURA"
+    ],
+    "fecha": "06/08/2026",
+    "dae": "56/2026",
+    "origen": "S",
+    "url": "https://www.senado.gob.ar/parlamentario/comisiones/verExp/1301.26/S/PD",
+    "sancionado": false,
+    "archivado": false
+  },
+  {
+    "nro": 1300,
+    "anio": 2026,
+    "tipo": "PD",
+    "tipo_label": "Proyecto de Declaración",
+    "extracto": "PROYECTO DE DECLARACIÓN QUE DECLARA DE INTERES LA VISITA OFICIAL Y APOSTOLICA DE SU SANTIDAD EL PAPA LEON XIV A LA REPUBLICA ARGENTINA, PREVISTA PARA NOVIEMBRE DE 2026.",
+    "autores": [
+      "CAPITANICH, JORGE MILTON"
+    ],
+    "coautores": [],
+    "bloques": [
+      "JUSTICIALISTA"
+    ],
+    "provincias": [
+      "CHACO"
+    ],
+    "comisiones": [
+      "DE RELACIONES EXTERIORES Y CULTO"
+    ],
+    "fecha": "06/08/2026",
+    "dae": "56/2026",
+    "origen": "S",
+    "url": "https://www.senado.gob.ar/parlamentario/comisiones/verExp/1300.26/S/PD",
+    "sancionado": false,
+    "archivado": false
+  },
+  {
+    "nro": 1297,
+    "anio": 2026,
+    "tipo": "PD",
+    "tipo_label": "Proyecto de Declaración",
+    "extracto": "PROYECTO DE DECLARACION QUE DECLARA DE INTERES LA COLONIA RECREATIVA \"RENACIMIENTO\" PARA JUBILADOS Y PERSONAS MAYORES DE LA CDAD. DE FAMAILLÁ, PROV. DE TUCUMAN.",
+    "autores": [
+      "MENDOZA, SANDRA MARIELA"
+    ],
+    "coautores": [],
+    "bloques": [
+      "CONVICCIÓN FEDERAL"
+    ],
+    "provincias": [
+      "TUCUMÁN"
+    ],
+    "comisiones": [
+      "DE POBLACIÓN Y DESARROLLO  HUMANO"
+    ],
+    "fecha": "05/08/2026",
+    "dae": "56/2026",
+    "origen": "S",
+    "url": "https://www.senado.gob.ar/parlamentario/comisiones/verExp/1297.26/S/PD",
+    "sancionado": false,
+    "archivado": false
+  },
+  {
+    "nro": 1296,
+    "anio": 2026,
+    "tipo": "PL",
+    "tipo_label": "Proyecto de Ley",
+    "extracto": "PROYECTO DE LEY QUE DECLARA FIESTA NACIONAL A LA \"FIESTA DEL MICHAY\" QUE SE REALIZA ANUALMENTE, ENTRE LOS MESES DE FEBRERO Y MARZO, EN INGENIERO JACOBACCI, PROV. DE RIO NEGRO.",
+    "autores": [
+      "MARKS, ANA INÉS",
+      "SORIA, MARTIN IGNACIO"
+    ],
+    "coautores": [],
+    "bloques": [
+      "JUSTICIALISTA"
+    ],
+    "provincias": [
+      "RÍO NEGRO"
+    ],
+    "comisiones": [
+      "DE TURISMO"
+    ],
+    "fecha": "05/08/2026",
+    "dae": "56/2026",
+    "origen": "S",
+    "url": "https://www.senado.gob.ar/parlamentario/comisiones/verExp/1296.26/S/PL",
+    "sancionado": false,
+    "archivado": false
+  },
+  {
+    "nro": 1295,
+    "anio": 2026,
+    "tipo": "PD",
+    "tipo_label": "Proyecto de Declaración",
+    "extracto": "PROYECTO DE DECLARACIÓN QUE EXPRESA BENEPLACITO POR LA CONMEMORACION DEL 81° ANIVERSARIO DE LA LOC. DE LAS GARCITAS, PROV. DEL CHACO, EL 10 DE AGOSTO DE 2026.",
+    "autores": [
+      "SCHNEIDER, SILVANA LORENA"
+    ],
+    "coautores": [],
+    "bloques": [
+      "UCR - UNIÓN CÍVICA RADICAL"
+    ],
+    "provincias": [
+      "CHACO"
+    ],
+    "comisiones": [
+      "DE ASUNTOS ADMINISTRATIVOS Y MUNICIPALES"
+    ],
+    "fecha": "05/08/2026",
+    "dae": "56/2026",
+    "origen": "S",
+    "url": "https://www.senado.gob.ar/parlamentario/comisiones/verExp/1295.26/S/PD",
+    "sancionado": false,
+    "archivado": false
+  },
+  {
+    "nro": 1294,
+    "anio": 2026,
+    "tipo": "PD",
+    "tipo_label": "Proyecto de Declaración",
+    "extracto": "PROYECTO DE DECLARACION QUE EXPRESA BENEPLACITO POR LA CONMEMORACION DEL 50° ANIVERSARIO DE LA ESCUELA DE EDUCACION PRIMARIA N° 876 \"MARIO BRAVO\" DE LA LOC. DE HERMOSO CAMPO, PROV. DEL CHACO, EL 8 DE AGOSTO DE 2026.",
+    "autores": [
+      "SCHNEIDER, SILVANA LORENA"
+    ],
+    "coautores": [],
+    "bloques": [
+      "UCR - UNIÓN CÍVICA RADICAL"
+    ],
+    "provincias": [
+      "CHACO"
+    ],
+    "comisiones": [
+      "DE EDUCACIÓN Y CULTURA"
+    ],
+    "fecha": "05/08/2026",
+    "dae": "56/2026",
+    "origen": "S",
+    "url": "https://www.senado.gob.ar/parlamentario/comisiones/verExp/1294.26/S/PD",
+    "sancionado": false,
+    "archivado": false
+  },
+  {
+    "nro": 1293,
+    "anio": 2026,
+    "tipo": "PD",
+    "tipo_label": "Proyecto de Declaración",
+    "extracto": "PROYECTO DE DECLARACIÓN QUE EXPRESA BENEPLACITO POR LA CONMEMORACION DEL 100° ANIVERSARIO DE LA ESCUELA DE EDUCACION PRIMARIA N° 65 \"JOSE LUIS ARAUJO\" DE LA LOC. DE SAN BERNARDO, PROV. DEL CHACO, EL 10 DE AGOSTO DE 2026.",
+    "autores": [
+      "SCHNEIDER, SILVANA LORENA"
+    ],
+    "coautores": [],
+    "bloques": [
+      "UCR - UNIÓN CÍVICA RADICAL"
+    ],
+    "provincias": [
+      "CHACO"
+    ],
+    "comisiones": [
+      "DE EDUCACIÓN Y CULTURA"
+    ],
+    "fecha": "05/08/2026",
+    "dae": "56/2026",
+    "origen": "S",
+    "url": "https://www.senado.gob.ar/parlamentario/comisiones/verExp/1293.26/S/PD",
+    "sancionado": false,
+    "archivado": false
+  },
+  {
+    "nro": 1292,
+    "anio": 2026,
+    "tipo": "PL",
+    "tipo_label": "Proyecto de Ley",
+    "extracto": "PROYECTO DE LEY QUE DECLARA LA EMERGENCIA CLIMÁTICA, VIAL, PRODUCTIVA Y AGROPECURIA POR EL PLAZO DE SEIS (6) MESES, EN LA PROV. DE SANTA CRUZ.",
+    "autores": [
+      "CARAMBIA, JOSÉ MARÍA",
+      "GONZÁLEZ, MARÍA TERESA MARGARITA"
+    ],
+    "coautores": [],
+    "bloques": [
+      "MOVERE POR SANTA CRUZ",
+      "JUSTICIALISTA"
+    ],
+    "provincias": [
+      "SANTA CRUZ",
+      "FORMOSA"
+    ],
+    "comisiones": [
+      "DE AGRICULTURA, GANADERÍA Y PESCA",
+      "DE PRESUPUESTO Y HACIENDA"
+    ],
+    "fecha": "05/08/2026",
+    "dae": "56/2026",
+    "origen": "S",
+    "url": "https://www.senado.gob.ar/parlamentario/comisiones/verExp/1292.26/S/PL",
+    "sancionado": false,
+    "archivado": false
+  },
+  {
+    "nro": 1291,
+    "anio": 2026,
+    "tipo": "PR",
+    "tipo_label": "Proyecto de Resolución",
+    "extracto": "PROYECTO DE RESOLUCIÓN QUE CREA EL CORO DE NIÑAS, NIÑOS Y ADOLESCENTES DEL CONGRESO DE LA NACIÓN.",
+    "autores": [
+      "UÑAC, SERGIO MAURICIO"
+    ],
+    "coautores": [
+      "MAYANS, JOSÉ MIGUEL ÁNGEL",
+      "CAPITANICH, JORGE MILTON",
+      "MANZUR, JUAN LUIS",
+      "GIMÉNEZ NAVARRO, MARÍA CELESTE",
+      "BENSUSÁN, DANIEL PABLO",
+      "LINARES, CARLOS ALBERTO"
+    ],
+    "bloques": [
+      "JUSTICIALISTA"
+    ],
+    "provincias": [
+      "SAN JUAN"
+    ],
+    "comisiones": [
+      "DE EDUCACIÓN Y CULTURA",
+      "DE PRESUPUESTO Y HACIENDA"
+    ],
+    "fecha": "05/08/2026",
+    "dae": "56/2026",
+    "origen": "S",
+    "url": "https://www.senado.gob.ar/parlamentario/comisiones/verExp/1291.26/S/PR",
+    "sancionado": false,
+    "archivado": false
+  },
+  {
+    "nro": 1290,
+    "anio": 2026,
+    "tipo": "PD",
+    "tipo_label": "Proyecto de Declaración",
+    "extracto": "PROYECTO DE DECLARACIÓN QUE EXPRESA BENEPLACITO POR LA SELECCIÓN DE LA MUSICA, DOCENTE, INVESTIGADORA, LUTHIER Y CINEASTA PUNTANA, MARIA EMILIA SOSA CACACE, PARA PARTICIPAR EN EL INTERNATIONAL FESTIVAL OF YOUTH (IFY), EN LA CIUDAD DE EKATERIMBURGO, RUSIA, DEL 11 AL 17 DE SEPTIEMBRE DE 2026",
+    "autores": [
+      "SALINO, FERNANDO ALDO"
+    ],
+    "coautores": [],
+    "bloques": [
+      "JUSTICIA SOCIAL FEDERAL"
+    ],
+    "provincias": [
+      "SAN LUIS"
+    ],
+    "comisiones": [
+      "DE EDUCACIÓN Y CULTURA"
+    ],
+    "fecha": "04/08/2026",
+    "dae": "56/2026",
+    "origen": "S",
+    "url": "https://www.senado.gob.ar/parlamentario/comisiones/verExp/1290.26/S/PD",
+    "sancionado": false,
+    "archivado": false
+  },
+  {
+    "nro": 1289,
+    "anio": 2026,
+    "tipo": "PC",
+    "tipo_label": "Proyecto de Comunicación",
+    "extracto": "PROYECTO DE COMUNICACION QUE SOLICITA INFORME SOBRE DIVERSOS PUNTOS RELACIONADOS CON LA AUTORIZACIÓN, MEDIANTE DECRETO 650/26, PARA LA PARTICIPACIÓN DE EFECTIVOS DE LAS FUERZAS ARMADAS ARGENTINAS EN EL EJERCICIO MULTINACIONAL \"PANAMAX 2026\", Y OTRAS CUESTIONES CONEXAS.",
+    "autores": [
+      "CAPITANICH, JORGE MILTON"
+    ],
+    "coautores": [],
+    "bloques": [
+      "JUSTICIALISTA"
+    ],
+    "provincias": [
+      "CHACO"
+    ],
+    "comisiones": [
+      "DE DEFENSA NACIONAL"
+    ],
+    "fecha": "04/08/2026",
+    "dae": "56/2026",
+    "origen": "S",
+    "url": "https://www.senado.gob.ar/parlamentario/comisiones/verExp/1289.26/S/PC",
+    "sancionado": false,
+    "archivado": false
+  },
+  {
+    "nro": 1288,
+    "anio": 2026,
+    "tipo": "PL",
+    "tipo_label": "Proyecto de Ley",
+    "extracto": "PROYECTO DE LEY DE DEFENSA ACTIVA DE LOS RECURSOS NATURALES EN LOS TERRITORIOS Y ESPACIOS MARITIMOS ARGENTINOS ILEGITIMAMENTE OCUPADOS.",
+    "autores": [
+      "CAPITANICH, JORGE MILTON"
+    ],
+    "coautores": [],
+    "bloques": [
+      "JUSTICIALISTA"
+    ],
+    "provincias": [
+      "CHACO"
+    ],
+    "comisiones": [
+      "DE ASUNTOS CONSTITUCIONALES",
+      "DE LEGISLACIÓN GENERAL",
+      "DE AMBIENTE Y DESARROLLO SUSTENTABLE",
+      "DE RELACIONES EXTERIORES Y CULTO"
+    ],
+    "fecha": "04/08/2026",
+    "dae": "56/2026",
+    "origen": "S",
+    "url": "https://www.senado.gob.ar/parlamentario/comisiones/verExp/1288.26/S/PL",
+    "sancionado": false,
+    "archivado": false
+  },
+  {
+    "nro": 1287,
+    "anio": 2026,
+    "tipo": "PC",
+    "tipo_label": "Proyecto de Comunicación",
+    "extracto": "PROYECTO DE COMUNICACIÓN QUE SOLICITA INFORME SOBRE DIVERSOS PUNTOS RELACIONADOS CON LA EXPLOTACIÓN DE HIDROCARBUROS POR PARTE DE LA EMPRESA NAVITAS PETROLEUM EN LA PLATAFORMA CONTINENTAL ARGENTINA.",
+    "autores": [
+      "CAPITANICH, JORGE MILTON"
+    ],
+    "coautores": [],
+    "bloques": [
+      "JUSTICIALISTA"
+    ],
+    "provincias": [
+      "CHACO"
+    ],
+    "comisiones": [
+      "DE RELACIONES EXTERIORES Y CULTO"
+    ],
+    "fecha": "04/08/2026",
+    "dae": "56/2026",
+    "origen": "S",
+    "url": "https://www.senado.gob.ar/parlamentario/comisiones/verExp/1287.26/S/PC",
+    "sancionado": false,
+    "archivado": false
+  },
+  {
+    "nro": 1286,
+    "anio": 2026,
+    "tipo": "PD",
+    "tipo_label": "Proyecto de Declaración",
+    "extracto": "PROYECTO DE DECLARACION QUE REPUDIA LAS EXPRESIONES DEL PRESIDENTE DE LA NACION, JAVIER MILEI, CONTRA EL PRESIDENTE DE LA REPUBLICA FEDERATIVA DEL BRASIL, LUIZ INACIO LULA DA SILVA, EL MINISTRO DEL SUPREMO TRIBUNAL FEDERAL Y LAS INSTITUCIONES DEMOCRATICAS BRASILEÑAS, EN LA CIUDAD DE SAO PAULO",
+    "autores": [
+      "BAHL, ADÁN HUMBERTO"
+    ],
+    "coautores": [],
+    "bloques": [
+      "JUSTICIALISTA"
+    ],
+    "provincias": [
+      "ENTRE RÍOS"
+    ],
+    "comisiones": [
+      "DE ASUNTOS CONSTITUCIONALES"
+    ],
+    "fecha": "04/08/2026",
+    "dae": "56/2026",
+    "origen": "S",
+    "url": "https://www.senado.gob.ar/parlamentario/comisiones/verExp/1286.26/S/PD",
+    "sancionado": false,
+    "archivado": false
+  },
+  {
+    "nro": 1285,
+    "anio": 2026,
+    "tipo": "PC",
+    "tipo_label": "Proyecto de Comunicación",
+    "extracto": "PROYECTO DE COMUNICACIÓN QUE SOLICITA INFORME SOBRE DIVERSOS PUNTOS RELACIONADOS AL VIAJE DEL PRESIDENTE DE LA NACIÓN A LA CIUDAD DE SAO PAULO, REPUBLICA FEDERATIVA DEL BRASIL, EL 25 DE JULIO 2026.",
+    "autores": [
+      "BAHL, ADÁN HUMBERTO"
+    ],
+    "coautores": [],
+    "bloques": [
+      "JUSTICIALISTA"
+    ],
+    "provincias": [
+      "ENTRE RÍOS"
+    ],
+    "comisiones": [
+      "DE ASUNTOS CONSTITUCIONALES"
+    ],
+    "fecha": "04/08/2026",
+    "dae": "56/2026",
+    "origen": "S",
+    "url": "https://www.senado.gob.ar/parlamentario/comisiones/verExp/1285.26/S/PC",
+    "sancionado": false,
+    "archivado": false
+  },
+  {
+    "nro": 1284,
+    "anio": 2026,
+    "tipo": "PC",
+    "tipo_label": "Proyecto de Comunicación",
+    "extracto": "PROYECTO DE COMUNICACIÓN QUE SOLICITA INFORME SOBRE DIVERSOS PUNTOS RELACIONADOS CON LAS PREVISIONES HIDROMETEOROLÓGICAS Y LAS MEDIDAS DE PREVENCIÓN ANTE EL FENÓMENO EL NIÑO Y LA POSIBILIDAD DE CRECIENTES DE LOS RÍOS PARANÁ Y URUGUAY, CON ESPECIAL REFERENCIA A LA PROV. DE ENTRE RÍOS.",
+    "autores": [
+      "BAHL, ADÁN HUMBERTO"
+    ],
+    "coautores": [],
+    "bloques": [
+      "JUSTICIALISTA"
+    ],
+    "provincias": [
+      "ENTRE RÍOS"
+    ],
+    "comisiones": [
+      "DE DEFENSA NACIONAL"
+    ],
+    "fecha": "04/08/2026",
+    "dae": "56/2026",
+    "origen": "S",
+    "url": "https://www.senado.gob.ar/parlamentario/comisiones/verExp/1284.26/S/PC",
+    "sancionado": false,
+    "archivado": false
+  },
+  {
+    "nro": 1283,
+    "anio": 2026,
+    "tipo": "PC",
+    "tipo_label": "Proyecto de Comunicación",
+    "extracto": "PROYECTO DE COMUNICACIÓN QUE SOLICITA INFORME SOBRE DIVERSOS ASPECTOS RELACIONADOS CON LA RUTA NACIONAL 151, QUE UNE LA CDAD. DE CIPOLLETTI, PROV. DE RÍO NEGRO, CON LA RUTA NACIONAL 143, EN LA PROV. DE LA PAMPA.",
+    "autores": [
+      "MARKS, ANA INÉS"
+    ],
+    "coautores": [
+      "SORIA, MARTIN IGNACIO",
+      "BENSUSÁN, DANIEL PABLO"
+    ],
+    "bloques": [
+      "JUSTICIALISTA"
+    ],
+    "provincias": [
+      "RÍO NEGRO"
+    ],
+    "comisiones": [
+      "DE INFRAESTRUCTURA, VIVIENDA Y TRANSPORTE"
+    ],
+    "fecha": "04/08/2026",
+    "dae": "56/2026",
+    "origen": "S",
+    "url": "https://www.senado.gob.ar/parlamentario/comisiones/verExp/1283.26/S/PC",
+    "sancionado": false,
+    "archivado": false
+  },
+  {
+    "nro": 1282,
+    "anio": 2026,
+    "tipo": "PL",
+    "tipo_label": "Proyecto de Ley",
+    "extracto": "PROYECTO DE LEY QUE DECLARA LA EMERGENCIA VIAL NACIONAL EN LAS PROVINCIAS DE RIO NEGRO Y LA PAMPA POR EL PLAZO DE DIECIOCHO (18) MESES, PRORROGABLES POR UNICA VEZ POR EL MISMO PLAZO.",
+    "autores": [
+      "SORIA, MARTIN IGNACIO"
+    ],
+    "coautores": [
+      "MARKS, ANA INÉS",
+      "BENSUSÁN, DANIEL PABLO"
+    ],
+    "bloques": [
+      "JUSTICIALISTA"
+    ],
+    "provincias": [
+      "RÍO NEGRO"
+    ],
+    "comisiones": [
+      "DE INFRAESTRUCTURA, VIVIENDA Y TRANSPORTE",
+      "DE PRESUPUESTO Y HACIENDA"
+    ],
+    "fecha": "04/08/2026",
+    "dae": "56/2026",
+    "origen": "S",
+    "url": "https://www.senado.gob.ar/parlamentario/comisiones/verExp/1282.26/S/PL",
+    "sancionado": false,
+    "archivado": false
+  },
+  {
+    "nro": 1280,
+    "anio": 2026,
+    "tipo": "PL",
+    "tipo_label": "Proyecto de Ley",
+    "extracto": "PROYECTO DE LEY QUE INSTITUYE EL SISTEMA NACIONAL DE ALERTA PUBLICA POR DIFUSION CELULAR (\"ALERTAR\"), PARA LA EMISIÓN DE MENSAJES DE ALERTA TEMPRANA A DISPOSITIVOS MÓVILES EN TODO EL TERRITORIO NACIONAL.",
+    "autores": [
+      "CAPITANICH, JORGE MILTON"
+    ],
+    "coautores": [],
+    "bloques": [
+      "JUSTICIALISTA"
+    ],
+    "provincias": [
+      "CHACO"
+    ],
+    "comisiones": [
+      "DE SISTEMAS, MEDIOS DE COMUNICACIÓN Y LIBERTAD DE EXPRESIÓN",
+      "DE POBLACIÓN Y DESARROLLO  HUMANO",
+      "DE PRESUPUESTO Y HACIENDA"
+    ],
+    "fecha": "04/08/2026",
+    "dae": "56/2026",
+    "origen": "S",
+    "url": "https://www.senado.gob.ar/parlamentario/comisiones/verExp/1280.26/S/PL",
+    "sancionado": false,
+    "archivado": false
+  },
+  {
+    "nro": 1279,
+    "anio": 2026,
+    "tipo": "PL",
+    "tipo_label": "Proyecto de Ley",
+    "extracto": "PROYECTO DE LEY QUE ESTABLECE LA INCORPORACION OBLIGATORIA DE LA SILUETA DEL MAPA DE LAS ISLAS MALVINAS EN LA INDUMENTARIA OFICIAL DE DEPORTISTAS DE LA REPUBLICA ARGENTINA EN COMPETENCIAS NACIONALES E INTERNACIONALES.",
+    "autores": [
+      "GIMÉNEZ NAVARRO, MARÍA CELESTE"
+    ],
+    "coautores": [
+      "GONZÁLEZ, MARÍA TERESA MARGARITA",
+      "CAPITANICH, JORGE MILTON",
+      "LÓPEZ, CÁNDIDA CRISTINA",
+      "RECALDE, MARIANO",
+      "UÑAC, SERGIO MAURICIO",
+      "MARKS, ANA INÉS"
+    ],
+    "bloques": [
+      "JUSTICIALISTA"
+    ],
+    "provincias": [
+      "SAN JUAN"
+    ],
+    "comisiones": [
+      "DE EDUCACIÓN Y CULTURA",
+      "DE DEPORTE"
+    ],
+    "fecha": "03/08/2026",
+    "dae": "56/2026",
+    "origen": "S",
+    "url": "https://www.senado.gob.ar/parlamentario/comisiones/verExp/1279.26/S/PL",
+    "sancionado": false,
+    "archivado": false
+  },
+  {
+    "nro": 1278,
+    "anio": 2026,
+    "tipo": "PD",
+    "tipo_label": "Proyecto de Declaración",
+    "extracto": "PROYECTO DE DECLARACIÓN QUE EXPRESA BENEPLACITO Y ADHIERE A LAS ACTIVIDADES PREVISTAS PARA EL JULIO CULTURAL UNIVERSITARIO - EN SU EDICIÓN NÚMERO 27 - EN LA CDAD. DE TUCUMÁN, DESDE EL 4 DE JULIO HASTA EL 2 DE AGOSTO DE 2026.",
+    "autores": [
+      "MENDOZA, SANDRA MARIELA"
+    ],
+    "coautores": [],
+    "bloques": [
+      "CONVICCIÓN FEDERAL"
+    ],
+    "provincias": [
+      "TUCUMÁN"
+    ],
+    "comisiones": [
+      "DE EDUCACIÓN Y CULTURA"
+    ],
+    "fecha": "03/08/2026",
+    "dae": "55/2026",
+    "origen": "S",
+    "url": "https://www.senado.gob.ar/parlamentario/comisiones/verExp/1278.26/S/PD",
+    "sancionado": false,
+    "archivado": false
+  },
+  {
+    "nro": 1277,
+    "anio": 2026,
+    "tipo": "PL",
+    "tipo_label": "Proyecto de Ley",
+    "extracto": "PROYECTO DE LEY QUE CREA EL REGIMEN DE PROTECCION SEXUAL DIGITAL Y PREVENCION DE LA DIFUSION NO CONSENTIDA DE CONTENIDO MANIPULADO POR INTELIGENCIA ARTIFICIAL.",
+    "autores": [
+      "ATAUCHE, EZEQUIEL"
+    ],
+    "coautores": [],
+    "bloques": [
+      "LA LIBERTAD AVANZA"
+    ],
+    "provincias": [
+      "JUJUY"
+    ],
+    "comisiones": [
+      "DE SISTEMAS, MEDIOS DE COMUNICACIÓN Y LIBERTAD DE EXPRESIÓN",
+      "DE JUSTICIA Y ASUNTOS PENALES"
+    ],
+    "fecha": "03/08/2026",
+    "dae": "55/2026",
+    "origen": "S",
+    "url": "https://www.senado.gob.ar/parlamentario/comisiones/verExp/1277.26/S/PL",
+    "sancionado": false,
+    "archivado": false
+  },
+  {
+    "nro": 1276,
+    "anio": 2026,
+    "tipo": "PD",
+    "tipo_label": "Proyecto de Declaración",
+    "extracto": "PROYECTO DE DECLARACIÓN QUE DECLARA DE INTERES, EL 138° ANIVERSARIO DE LA LOCALIDAD DE PUERTO TIROL, PROV. DEL CHACO, EL 6 DE AGOSTO DE 2026.",
+    "autores": [
+      "CAPITANICH, JORGE MILTON"
+    ],
+    "coautores": [],
+    "bloques": [
+      "JUSTICIALISTA"
+    ],
+    "provincias": [
+      "CHACO"
+    ],
+    "comisiones": [
+      "DE ASUNTOS ADMINISTRATIVOS Y MUNICIPALES"
+    ],
+    "fecha": "03/08/2026",
+    "dae": "55/2026",
+    "origen": "S",
+    "url": "https://www.senado.gob.ar/parlamentario/comisiones/verExp/1276.26/S/PD",
+    "sancionado": false,
+    "archivado": false
+  },
+  {
+    "nro": 1275,
+    "anio": 2026,
+    "tipo": "PL",
+    "tipo_label": "Proyecto de Ley",
+    "extracto": "PROYECTO DE LEY QUE CREA EL RÉGIMEN NACIONAL DE MINERALES CRÍTICOS Y TIERRAS RARAS PARA LA SOBERANÍA TECNOLÓGICA, LA INDUSTRIALIZACIÓN Y EL DESARROLLO FEDERAL.",
+    "autores": [
+      "CAPITANICH, JORGE MILTON"
+    ],
+    "coautores": [],
+    "bloques": [
+      "JUSTICIALISTA"
+    ],
+    "provincias": [
+      "CHACO"
+    ],
+    "comisiones": [
+      "DE LEGISLACIÓN GENERAL",
+      "DE MINERÍA, ENERGÍA Y COMBUSTIBLES",
+      "DE PRESUPUESTO Y HACIENDA"
+    ],
+    "fecha": "03/08/2026",
+    "dae": "55/2026",
+    "origen": "S",
+    "url": "https://www.senado.gob.ar/parlamentario/comisiones/verExp/1275.26/S/PL",
+    "sancionado": false,
+    "archivado": false
+  },
+  {
+    "nro": 1274,
+    "anio": 2026,
+    "tipo": "PL",
+    "tipo_label": "Proyecto de Ley",
+    "extracto": "PROYECTO DE LEY QUE MODIFICA SU SIMILAR 25.188- ETICA EN EL EJERCICIO DE LA FUNCION PUBLICA, RESPECTO AL TRATO RESPETUOSO Y LA APLICACION DE UN REGIMEN SANCIONATORIO",
+    "autores": [
+      "CAPITANICH, JORGE MILTON"
+    ],
+    "coautores": [],
+    "bloques": [
+      "JUSTICIALISTA"
+    ],
+    "provincias": [
+      "CHACO"
+    ],
+    "comisiones": [
+      "DE ASUNTOS CONSTITUCIONALES",
+      "DE ASUNTOS ADMINISTRATIVOS Y MUNICIPALES"
+    ],
+    "fecha": "03/08/2026",
+    "dae": "55/2026",
+    "origen": "S",
+    "url": "https://www.senado.gob.ar/parlamentario/comisiones/verExp/1274.26/S/PL",
+    "sancionado": false,
+    "archivado": false
+  },
+  {
+    "nro": 1273,
+    "anio": 2026,
+    "tipo": "PL",
+    "tipo_label": "Proyecto de Ley",
+    "extracto": "PROYECTO DE LEY QUE SOLICITA EL ASCENSO POST MORTEM AL GRADO DE GENERAL DE BRIGADA DEL EJERCITO ARGENTINO, AL CORONEL Y EX PRESIDENTE DR. ROQUE SAENZ PEÑA.",
+    "autores": [
+      "CAPITANICH, JORGE MILTON"
+    ],
+    "coautores": [],
+    "bloques": [
+      "JUSTICIALISTA"
+    ],
+    "provincias": [
+      "CHACO"
+    ],
+    "comisiones": [
+      "DE DEFENSA NACIONAL"
+    ],
+    "fecha": "03/08/2026",
+    "dae": "55/2026",
+    "origen": "S",
+    "url": "https://www.senado.gob.ar/parlamentario/comisiones/verExp/1273.26/S/PL",
+    "sancionado": false,
+    "archivado": false
+  },
+  {
+    "nro": 1272,
+    "anio": 2026,
+    "tipo": "PD",
+    "tipo_label": "Proyecto de Declaración",
+    "extracto": "PROYECTO DE DECLARACIÓN QUE DECLARA DE INTERES LA OBRA JURIDICA \"CONSTITUCIONALISMO DELIBERATIVO: OBJECIONES A LA JURISDICCION CONSTITUCIONAL Y DEMOCRACIA DELIBERATIVA\", DE AUTORIA DEL JURISTA MENDOCINO DR. IGNACIO GIUFFRE.",
+    "autores": [
+      "FERNÁNDEZ SAGASTI, ANABEL"
+    ],
+    "coautores": [],
+    "bloques": [
+      "JUSTICIALISTA"
+    ],
+    "provincias": [
+      "MENDOZA"
+    ],
+    "comisiones": [
+      "DE EDUCACIÓN Y CULTURA"
+    ],
+    "fecha": "03/08/2026",
+    "dae": "55/2026",
+    "origen": "S",
+    "url": "https://www.senado.gob.ar/parlamentario/comisiones/verExp/1272.26/S/PD",
+    "sancionado": false,
+    "archivado": false
+  },
+  {
+    "nro": 1271,
+    "anio": 2026,
+    "tipo": "PD",
+    "tipo_label": "Proyecto de Declaración",
+    "extracto": "PROYECTO DE DECLARACIÓN QUE DECLARA DE INTERES LA \"CONFERENCIA LOCAL DE LAS JUVENTUDES SOBRE CAMBIO CLIMATICO (LCOY ARGENTINA 2026)\", A REALIZARSE EN LA PROV. DE MENDOZA, DEL 14 AL 17 DE AGOSTO DE 2026.",
+    "autores": [
+      "FERNÁNDEZ SAGASTI, ANABEL"
+    ],
+    "coautores": [],
+    "bloques": [
+      "JUSTICIALISTA"
+    ],
+    "provincias": [
+      "MENDOZA"
+    ],
+    "comisiones": [
+      "DE AMBIENTE Y DESARROLLO SUSTENTABLE"
+    ],
+    "fecha": "03/08/2026",
+    "dae": "55/2026",
+    "origen": "S",
+    "url": "https://www.senado.gob.ar/parlamentario/comisiones/verExp/1271.26/S/PD",
+    "sancionado": false,
+    "archivado": false
+  },
+  {
+    "nro": 1270,
+    "anio": 2026,
+    "tipo": "PC",
+    "tipo_label": "Proyecto de Comunicación",
+    "extracto": "PROYECTO DE COMUNICACIÓN QUE SOLICITA INFORME SOBRE DIVERSAS CUESTIONES RELACIONADAS CON LA DISOLUCIÓN DEL CORO NACIONAL DE NIÑOS, DISPUESTA MEDIANTE DECRETO N° 687/2026.",
+    "autores": [
+      "GIMÉNEZ NAVARRO, MARÍA CELESTE"
+    ],
+    "coautores": [],
+    "bloques": [
+      "JUSTICIALISTA"
+    ],
+    "provincias": [
+      "SAN JUAN"
+    ],
+    "comisiones": [
+      "DE EDUCACIÓN Y CULTURA"
+    ],
+    "fecha": "31/07/2026",
+    "dae": "55/2026",
+    "origen": "S",
+    "url": "https://www.senado.gob.ar/parlamentario/comisiones/verExp/1270.26/S/PC",
+    "sancionado": false,
+    "archivado": false
+  },
+  {
+    "nro": 1269,
+    "anio": 2026,
+    "tipo": "PL",
+    "tipo_label": "Proyecto de Ley",
+    "extracto": "PROYECTO DE LEY QUE DEROGA EL DECRETO N° 687/26, QUE DISUELVE EL CORO NACIONAL DE NIÑOS.",
+    "autores": [
+      "GIMÉNEZ NAVARRO, MARÍA CELESTE"
+    ],
+    "coautores": [
+      "MARKS, ANA INÉS",
+      "LEWANDOWSKI, MARCELO NÉSTOR",
+      "SORIA, MARTIN IGNACIO",
+      "GONZÁLEZ, MARÍA TERESA MARGARITA",
+      "BAHL, ADÁN HUMBERTO"
+    ],
+    "bloques": [
+      "JUSTICIALISTA"
+    ],
+    "provincias": [
+      "SAN JUAN"
+    ],
+    "comisiones": [
+      "DE ASUNTOS CONSTITUCIONALES",
+      "DE EDUCACIÓN Y CULTURA"
+    ],
+    "fecha": "31/07/2026",
+    "dae": "55/2026",
+    "origen": "S",
+    "url": "https://www.senado.gob.ar/parlamentario/comisiones/verExp/1269.26/S/PL",
+    "sancionado": false,
+    "archivado": false
+  },
+  {
+    "nro": 1268,
+    "anio": 2026,
+    "tipo": "PD",
+    "tipo_label": "Proyecto de Declaración",
+    "extracto": "PROYECTO DE DECLARACIÓN QUE EXPRESA PESAR POR EL FALLECIMIENTO DE 7 TRIPULANTES QUE SE ENCONTRABAN A BORDO DEL HELICOPTERO B412, REALIZANDO TAREAS DE CAPACITACION PARA COMBATIR INCENDIOS EN LA ZONA DEL PARQUE ISCHIGUALASTO, PROV. DE SAN JUAN, EL 29 DE JULIO DE 2026.",
+    "autores": [
+      "UÑAC, SERGIO MAURICIO"
+    ],
+    "coautores": [
+      "GIMÉNEZ NAVARRO, MARÍA CELESTE",
+      "OLIVERA LUCERO, BRUNO ANTONIO"
+    ],
+    "bloques": [
+      "JUSTICIALISTA"
+    ],
+    "provincias": [
+      "SAN JUAN"
+    ],
+    "comisiones": [
+      "DE EDUCACIÓN Y CULTURA"
+    ],
+    "fecha": "31/07/2026",
+    "dae": "55/2026",
+    "origen": "S",
+    "url": "https://www.senado.gob.ar/parlamentario/comisiones/verExp/1268.26/S/PD",
+    "sancionado": false,
+    "archivado": false
+  },
+  {
+    "nro": 1267,
+    "anio": 2026,
+    "tipo": "PD",
+    "tipo_label": "Proyecto de Declaración",
+    "extracto": "PROYECTO DE DECLARACIÓN QUE DECLARA DE INTERÉS LA IV CUMBRE LATINOAMERICANA DE AUTISMO \"EN MEMORIA DE IGNACIO GALIBERT\", A REALIZARSE EN LA CDAD. DE SANTA FE, PROV. HOMÓMINA, EL 26 Y 27 DE AGOSTO DE 2026.",
+    "autores": [
+      "UÑAC, SERGIO MAURICIO"
+    ],
+    "coautores": [],
+    "bloques": [
+      "JUSTICIALISTA"
+    ],
+    "provincias": [
+      "SAN JUAN"
+    ],
+    "comisiones": [
+      "DE SALUD"
+    ],
+    "fecha": "31/07/2026",
+    "dae": "55/2026",
+    "origen": "S",
+    "url": "https://www.senado.gob.ar/parlamentario/comisiones/verExp/1267.26/S/PD",
+    "sancionado": false,
+    "archivado": false
+  },
+  {
+    "nro": 1266,
+    "anio": 2026,
+    "tipo": "PD",
+    "tipo_label": "Proyecto de Declaración",
+    "extracto": "PROYECTO DE DECLARACIÓN QUE EXPRESA PREOCUPACION Y REPUDIA LOS HECHOS DE VIOLENCIA PERPETRADOS EN LA FACULTAD DE FILOSOFÍA Y LETRAS DE LA UNIVERSIDAD DE BUENOS AIRES Y EN LA FACULTAD DE HUMANIDADES DE LA UNIVERSIDAD NACIONAL DEL COMAHUE, EL 24 DE JULIO DE 2026.",
+    "autores": [
+      "MARKS, ANA INÉS"
+    ],
+    "coautores": [
+      "LINARES, CARLOS ALBERTO",
+      "SORIA, MARTIN IGNACIO"
+    ],
+    "bloques": [
+      "JUSTICIALISTA"
+    ],
+    "provincias": [
+      "RÍO NEGRO"
+    ],
+    "comisiones": [
+      "DE EDUCACIÓN Y CULTURA"
+    ],
+    "fecha": "30/07/2026",
+    "dae": "55/2026",
+    "origen": "S",
+    "url": "https://www.senado.gob.ar/parlamentario/comisiones/verExp/1266.26/S/PD",
+    "sancionado": false,
+    "archivado": false
+  },
+  {
+    "nro": 1265,
+    "anio": 2026,
+    "tipo": "PD",
+    "tipo_label": "Proyecto de Declaración",
+    "extracto": "PROYECTO DE DECLARACIÓN QUE ADHIERE A LA CONMEMORACION DEL 50° ANIVERSARIO DEL MARTIRIO DEL BEATO MONSEÑOR ENRIQUE ÁNGEL ANGELELLI CARLETTI, EL 4 DE AGOSTO DE 2026.",
+    "autores": [
+      "LÓPEZ, MARÍA FLORENCIA"
+    ],
+    "coautores": [],
+    "bloques": [
+      "JUSTICIALISTA"
+    ],
+    "provincias": [
+      "LA RIOJA"
+    ],
+    "comisiones": [
+      "DE EDUCACIÓN Y CULTURA"
+    ],
+    "fecha": "30/07/2026",
+    "dae": "55/2026",
+    "origen": "S",
+    "url": "https://www.senado.gob.ar/parlamentario/comisiones/verExp/1265.26/S/PD",
+    "sancionado": false,
+    "archivado": false
+  },
+  {
+    "nro": 1264,
+    "anio": 2026,
+    "tipo": "PD",
+    "tipo_label": "Proyecto de Declaración",
+    "extracto": "PROYECTO DE DECLARACIÓN QUE DECLARA DE INTERÉS LA REALIZACION DEL \"XXIV CONGRESO INTERNACIONAL EN INNOVACION TECNOLOGICA INFORMATICA\", A REALIZARSE EN MODALIDAD VIRTUAL, EL 1 DE OCTUBRE DE 2026.",
+    "autores": [
+      "AVILA, BEATRIZ LUISA"
+    ],
+    "coautores": [],
+    "bloques": [
+      "INDEPENDENCIA"
+    ],
+    "provincias": [
+      "TUCUMÁN"
+    ],
+    "comisiones": [
+      "DE CIENCIA Y TECNOLOGÍA"
+    ],
+    "fecha": "29/07/2026",
+    "dae": "55/2026",
+    "origen": "S",
+    "url": "https://www.senado.gob.ar/parlamentario/comisiones/verExp/1264.26/S/PD",
+    "sancionado": false,
+    "archivado": false
+  },
+  {
+    "nro": 1263,
+    "anio": 2026,
+    "tipo": "PD",
+    "tipo_label": "Proyecto de Declaración",
+    "extracto": "PROYECTO DE DECLARACIÓN QUE DECLARA DE INTERÉS EL CONGRESO INTERNACIONAL \"NEURODIVERSIDAD Y AUTISMO, UN CAMINO HACIA LA CONVIVENCIA\" 2026, A REALIZARSE EN LA CDAD. AUTONOMA DE BUENOS AIRES, EL 30 Y 31 DE OCTUBRE.",
+    "autores": [
+      "AVILA, BEATRIZ LUISA"
+    ],
+    "coautores": [],
+    "bloques": [
+      "INDEPENDENCIA"
+    ],
+    "provincias": [
+      "TUCUMÁN"
+    ],
+    "comisiones": [
+      "DE SALUD"
+    ],
+    "fecha": "29/07/2026",
+    "dae": "55/2026",
+    "origen": "S",
+    "url": "https://www.senado.gob.ar/parlamentario/comisiones/verExp/1263.26/S/PD",
+    "sancionado": false,
+    "archivado": false
+  },
+  {
+    "nro": 1262,
+    "anio": 2026,
+    "tipo": "PD",
+    "tipo_label": "Proyecto de Declaración",
+    "extracto": "PROYECTO DE DECLARACIÓN QUE DECLARA DE INTERÉS EL \"TALLER EDUCATIVO CULTURAL RAWSINITO\", BAJO EL LEMA HACER DE LA CULTURA UN DERECHO, A REALIZARSE EN LA PROV. DE SAN JUAN, DESDE EL MES DE AGOSTO HASTA EL MES DE DICIEMBRE DE 2026.",
+    "autores": [
+      "UÑAC, SERGIO MAURICIO"
+    ],
+    "coautores": [],
+    "bloques": [
+      "JUSTICIALISTA"
+    ],
+    "provincias": [
+      "SAN JUAN"
+    ],
+    "comisiones": [
+      "DE EDUCACIÓN Y CULTURA"
+    ],
+    "fecha": "29/07/2026",
+    "dae": "55/2026",
+    "origen": "S",
+    "url": "https://www.senado.gob.ar/parlamentario/comisiones/verExp/1262.26/S/PD",
+    "sancionado": false,
+    "archivado": false
+  },
+  {
+    "nro": 1261,
+    "anio": 2026,
+    "tipo": "PD",
+    "tipo_label": "Proyecto de Declaración",
+    "extracto": "PROYECTO DE DECLARACIÓN QUE EXPRESA BENEPLÁCITO POR EL SUBCAMPEONATO LOGRADO POR EL SELECCIONADO MAYOR MASCULINO ARGENTINO DE FÚTBOL EN LA COPA MUNDIAL DE LA FEDERACIÓN INTERNACIONAL DE ASOCIACIONES DE FUTBOL (FIFA) MÉXICO, ESTADOS UNIDOS Y CANADÁ 2026, DEL 11 DE JUNIO AL 19 DE JULIO.",
+    "autores": [
+      "ABDALA, BARTOLOMÉ ESTEBAN"
+    ],
+    "coautores": [],
+    "bloques": [
+      "LA LIBERTAD AVANZA"
+    ],
+    "provincias": [
+      "SAN LUIS"
+    ],
+    "comisiones": [
+      "DE DEPORTE"
+    ],
+    "fecha": "28/07/2026",
+    "dae": "55/2026",
+    "origen": "S",
+    "url": "https://www.senado.gob.ar/parlamentario/comisiones/verExp/1261.26/S/PD",
+    "sancionado": false,
+    "archivado": false
+  },
+  {
+    "nro": 1260,
+    "anio": 2026,
+    "tipo": "PD",
+    "tipo_label": "Proyecto de Declaración",
+    "extracto": "PROYECTO DE DECLARACIÓN QUE DECLARA DE INTERÉS LA EXPOSICION DE DIBUJOS Y GRABADOS \"MOMENTOS EN LA HISTORIA DE LA BELLEZA\", DE LA ARTISTA POSADEÑA MARIA NATHAN, EN LA CDAD. DE POSADAS, PROV. DE MISIONES, DURANTE EL MES DE AGOSTO DE 2026.",
+    "autores": [
+      "ROJAS DECUT, SONIA ELIZABETH",
+      "ARCE, CARLOS OMAR"
+    ],
+    "coautores": [],
+    "bloques": [
+      "FRENTE RENOVADOR DE LA CONCORDIA SOCIAL"
+    ],
+    "provincias": [
+      "MISIONES"
+    ],
+    "comisiones": [
+      "DE EDUCACIÓN Y CULTURA"
+    ],
+    "fecha": "24/07/2026",
+    "dae": "55/2026",
+    "origen": "S",
+    "url": "https://www.senado.gob.ar/parlamentario/comisiones/verExp/1260.26/S/PD",
+    "sancionado": false,
+    "archivado": false
+  },
+  {
+    "nro": 1259,
+    "anio": 2026,
+    "tipo": "PD",
+    "tipo_label": "Proyecto de Declaración",
+    "extracto": "PROYECTO DE DECLARACIÓN QUE DECLARA DE INTERÉS LA LABOR DE INVESTIGACION CIENTIFICA Y ACADEMICA LLEVADA ADELANTE POR EL OBSERVATORIO DE TIERRAS.",
+    "autores": [
+      "GIMÉNEZ NAVARRO, MARÍA CELESTE"
+    ],
+    "coautores": [],
+    "bloques": [
+      "JUSTICIALISTA"
+    ],
+    "provincias": [
+      "SAN JUAN"
+    ],
+    "comisiones": [
+      "DE AGRICULTURA, GANADERÍA Y PESCA"
+    ],
+    "fecha": "24/07/2026",
+    "dae": "54/2026",
+    "origen": "S",
+    "url": "https://www.senado.gob.ar/parlamentario/comisiones/verExp/1259.26/S/PD",
+    "sancionado": false,
+    "archivado": false
+  },
+  {
+    "nro": 1258,
+    "anio": 2026,
+    "tipo": "PD",
+    "tipo_label": "Proyecto de Declaración",
+    "extracto": "PROYECTO DE DECLARACIÓN QUE DECLARA DE INTERÉS LA REALIZACIÓN DE LAS JORNADAS NACIONALES DE PSICOLOGÍA, \"LA SUBJETIVIDAD EN LAS INFANCIAS Y ADOLESCENCIAS: REFLEXIONES, CONSTRUCCIONES E INTERVENCIONES FRENTE A LA CRUELDAD DE LA ÉPOCA\", EN LA CDAD. DE SANTA ROSA, PROV. DE LA PAMPA, EL",
+    "autores": [
+      "BENSUSÁN, DANIEL PABLO"
+    ],
+    "coautores": [],
+    "bloques": [
+      "JUSTICIALISTA"
+    ],
+    "provincias": [
+      "LA PAMPA"
+    ],
+    "comisiones": [
+      "DE SALUD"
+    ],
+    "fecha": "23/07/2026",
+    "dae": "54/2026",
+    "origen": "S",
+    "url": "https://www.senado.gob.ar/parlamentario/comisiones/verExp/1258.26/S/PD",
+    "sancionado": false,
+    "archivado": false
+  },
+  {
+    "nro": 1257,
+    "anio": 2026,
+    "tipo": "PL",
+    "tipo_label": "Proyecto de Ley",
+    "extracto": "PROYECTO DE LEY QUE SUSPENDE POR EL TERMINO DE TRESCIENTOS SESENTA Y CINCO (365) DIAS EL INICIO DE LOS JUICIOS DE EJECUCION FISCAL Y TRABA DE MEDIDAS CAUTELARES POR PARTE DE LA AGENCIA DE RECAUDACION Y CONTROL ADUANERO (ARCA).",
+    "autores": [
+      "LEWANDOWSKI, MARCELO NÉSTOR",
+      "KIRCHNER, ALICIA MARGARITA ANTONIA"
+    ],
+    "coautores": [],
+    "bloques": [
+      "JUSTICIALISTA"
+    ],
+    "provincias": [
+      "SANTA FE",
+      "SANTA CRUZ"
+    ],
+    "comisiones": [
+      "DE PRESUPUESTO Y HACIENDA",
+      "DE ECONOMÍAS REGIONALES, ECONOMÍA SOCIAL, MICRO, PEQUEÑA Y MEDIANA EMPRESA"
+    ],
+    "fecha": "22/07/2026",
+    "dae": "54/2026",
+    "origen": "S",
+    "url": "https://www.senado.gob.ar/parlamentario/comisiones/verExp/1257.26/S/PL",
+    "sancionado": false,
+    "archivado": false
+  },
+  {
+    "nro": 1256,
+    "anio": 2026,
+    "tipo": "PL",
+    "tipo_label": "Proyecto de Ley",
+    "extracto": "PROYECTO DE LEY QUE DECLARA LA EMERGENCIA AL SECTOR DE LA PESCA FRESQUERA EN TODO EL TERRITORIO DE LA REPUBLICA ARGENTINA, POR EL TERMINO DE CIENTO OCHENTA (180) DIAS, PRORROGABLE POR IGUAL TERMINO.",
+    "autores": [
+      "ABAD, MAXIMILIANO"
+    ],
+    "coautores": [],
+    "bloques": [
+      "UCR - UNIÓN CÍVICA RADICAL"
+    ],
+    "provincias": [
+      "BUENOS AIRES"
+    ],
+    "comisiones": [
+      "DE AGRICULTURA, GANADERÍA Y PESCA",
+      "DE PRESUPUESTO Y HACIENDA"
+    ],
+    "fecha": "22/07/2026",
+    "dae": "54/2026",
+    "origen": "S",
+    "url": "https://www.senado.gob.ar/parlamentario/comisiones/verExp/1256.26/S/PL",
+    "sancionado": false,
+    "archivado": false
+  },
+  {
+    "nro": 1255,
+    "anio": 2026,
+    "tipo": "PL",
+    "tipo_label": "Proyecto de Ley",
+    "extracto": "PROYECTO DE LEY QUE CREA EL RÉGIMEN DE PROMOCIÓN TECNOLÓGICA AVANZADA PARA LA ZONA FRANCA DE GENERAL PICO (ZFGP), PROV. DE LA PAMPA.",
+    "autores": [
+      "HUALA, MARÍA VICTORIA"
+    ],
+    "coautores": [],
+    "bloques": [
+      "FRENTE PRO"
+    ],
+    "provincias": [
+      "LA PAMPA"
+    ],
+    "comisiones": [
+      "DE PRESUPUESTO Y HACIENDA",
+      "DE INDUSTRIA Y COMERCIO",
+      "DE CIENCIA Y TECNOLOGÍA"
+    ],
+    "fecha": "22/07/2026",
+    "dae": "54/2026",
+    "origen": "S",
+    "url": "https://www.senado.gob.ar/parlamentario/comisiones/verExp/1255.26/S/PL",
+    "sancionado": false,
+    "archivado": false
+  },
+  {
+    "nro": 1254,
+    "anio": 2026,
+    "tipo": "PC",
+    "tipo_label": "Proyecto de Comunicación",
+    "extracto": "PROYECTO DE COMUNICACIÓN QUE SOLICITA INFORME SOBRE DIVERSOS PUNTOS VINCULADOS CON LAS ACTUACIONES DE LA ADMINISTRACIÓN NACIONAL DE AVIACIÓN CIVIL (ANAC) RESPECTO DE LA EMPRESA FLYBONDI.",
+    "autores": [
+      "JURI, MARIANA"
+    ],
+    "coautores": [],
+    "bloques": [
+      "UCR - UNIÓN CÍVICA RADICAL"
+    ],
+    "provincias": [
+      "MENDOZA"
+    ],
+    "comisiones": [
+      "DE INFRAESTRUCTURA, VIVIENDA Y TRANSPORTE"
+    ],
+    "fecha": "21/07/2026",
+    "dae": "54/2026",
+    "origen": "S",
+    "url": "https://www.senado.gob.ar/parlamentario/comisiones/verExp/1254.26/S/PC",
+    "sancionado": false,
+    "archivado": false
+  },
+  {
+    "nro": 1253,
+    "anio": 2026,
+    "tipo": "PD",
+    "tipo_label": "Proyecto de Declaración",
+    "extracto": "PROYECTO DE DECLARACIÓN QUE DECLARA DE INTERÉS EL XIII CONGRESO LATINOAMERICANO DE CIENCIA POLÍTICA, ALACIP 2026, \"CUATRO DÉCADAS DE DEMOCRACIA EN AMÉRICA LATINA: ENTRE EL FORTALECIMIENTO Y LA EROSIÓN EN UN MUNDO INCIERTO\", A REALIZARSE EN CABA, DEL 21 AL 24 DE JULIO DE 2026.",
+    "autores": [
+      "TERENZI, EDITH ELIZABETH"
+    ],
+    "coautores": [],
+    "bloques": [
+      "DESPIERTA CHUBUT"
+    ],
+    "provincias": [
+      "CHUBUT"
+    ],
+    "comisiones": [
+      "DE EDUCACIÓN Y CULTURA"
+    ],
+    "fecha": "20/07/2026",
+    "dae": "54/2026",
+    "origen": "S",
+    "url": "https://www.senado.gob.ar/parlamentario/comisiones/verExp/1253.26/S/PD",
+    "sancionado": false,
+    "archivado": false
+  },
+  {
+    "nro": 1252,
+    "anio": 2026,
+    "tipo": "PL",
+    "tipo_label": "Proyecto de Ley",
+    "extracto": "PROYECTO DE LEY QUE MODIFICA SU SIMILAR 24.240 - DEFENSA DEL CONSUMIDOR-, RESPECTO DE ESTABLECER UNA ADVERTENCIA PREVIA EN OPERACIONES DE CREDITO PARA EL CONSUMO, PARA PREVENIR EL SOBREENDEUDAMIENTO.",
+    "autores": [
+      "MARKS, ANA INÉS"
+    ],
+    "coautores": [],
+    "bloques": [
+      "JUSTICIALISTA"
+    ],
+    "provincias": [
+      "RÍO NEGRO"
+    ],
+    "comisiones": [
+      "DE DERECHOS Y GARANTÍAS",
+      "DE ECONOMÍA NACIONAL E INVERSIÓN"
+    ],
+    "fecha": "17/07/2026",
+    "dae": "54/2026",
+    "origen": "S",
+    "url": "https://www.senado.gob.ar/parlamentario/comisiones/verExp/1252.26/S/PL",
+    "sancionado": false,
+    "archivado": false
+  },
+  {
+    "nro": 1251,
+    "anio": 2026,
+    "tipo": "PL",
+    "tipo_label": "Proyecto de Ley",
+    "extracto": "PROYECTO DE LEY QUE DECLARA \"ITINERARIO CULTURAL NACIONAL\" AL CAMINO DE LA FE, CORREDOR RELIGIOSO Y CULTURAL DE LA PROV. DEL NEUQUEN QUE UNE LAS LOC. DE AILINCO Y MANZANO AMARGO CON VILLA LA ANGOSTURA.",
+    "autores": [
+      "CORROZA, JULIETA"
+    ],
+    "coautores": [],
+    "bloques": [
+      "LA NEUQUINIDAD"
+    ],
+    "provincias": [
+      "NEUQUÉN"
+    ],
+    "comisiones": [
+      "DE EDUCACIÓN Y CULTURA",
+      "DE TURISMO"
+    ],
+    "fecha": "17/07/2026",
+    "dae": "54/2026",
+    "origen": "S",
+    "url": "https://www.senado.gob.ar/parlamentario/comisiones/verExp/1251.26/S/PL",
+    "sancionado": false,
+    "archivado": false
+  },
+  {
+    "nro": 1250,
+    "anio": 2026,
+    "tipo": "PL",
+    "tipo_label": "Proyecto de Ley",
+    "extracto": "PROYECTO DE LEY QUE INSTITUYE EL MES DE AGOSTO DE CADA AÑO COMO EL \"MES DE LA VIDA Y LA FAMILIA\".",
+    "autores": [
+      "BEDIA, VILMA FACUNDA"
+    ],
+    "coautores": [
+      "LÓPEZ, CÁNDIDA CRISTINA",
+      "ALVAREZ RIVERO, CARMEN",
+      "PAGOTTO, JUAN CARLOS",
+      "MONTEVERDE, AGUSTÍN ANÍBAL",
+      "ABDALA, BARTOLOMÉ ESTEBAN",
+      "OLIVERA LUCERO, BRUNO ANTONIO",
+      "MENDOZA, SANDRA MARIELA",
+      "ALMEIDA, ROMINA MARÍA"
+    ],
+    "bloques": [
+      "LA LIBERTAD AVANZA"
+    ],
+    "provincias": [
+      "JUJUY"
+    ],
+    "comisiones": [
+      "DE POBLACIÓN Y DESARROLLO  HUMANO"
+    ],
+    "fecha": "17/07/2026",
+    "dae": "54/2026",
+    "origen": "S",
+    "url": "https://www.senado.gob.ar/parlamentario/comisiones/verExp/1250.26/S/PL",
+    "sancionado": false,
+    "archivado": false
+  },
+  {
+    "nro": 1249,
+    "anio": 2026,
+    "tipo": "PD",
+    "tipo_label": "Proyecto de Declaración",
+    "extracto": "PROYECTO DE DECLARACIÓN QUE EXPRESA BENEPLACITO POR LA PRESENTACION DEL BALLET FOLKLORICO NACIONAL EN LA CDAD. DE CHARATA, PROV. DEL CHACO, EL 17 DE JULIO DE 2026.",
+    "autores": [
+      "SCHNEIDER, SILVANA LORENA"
+    ],
+    "coautores": [],
+    "bloques": [
+      "UCR - UNIÓN CÍVICA RADICAL"
+    ],
+    "provincias": [
+      "CHACO"
+    ],
+    "comisiones": [
+      "DE EDUCACIÓN Y CULTURA"
+    ],
+    "fecha": "17/07/2026",
+    "dae": "54/2026",
+    "origen": "S",
+    "url": "https://www.senado.gob.ar/parlamentario/comisiones/verExp/1249.26/S/PD",
+    "sancionado": false,
+    "archivado": false
+  },
+  {
+    "nro": 1248,
+    "anio": 2026,
+    "tipo": "PD",
+    "tipo_label": "Proyecto de Declaración",
+    "extracto": "PROYECTO DE DECLARACIÓN QUE EXPRESA BENEPLACITO POR EL 25° ANIVERSARIO DE AIRES DE TRADICION, INSTITUCION DEDICADA A LA FORMACION, PRODUCCION Y DIFUSION DEL FOLKLORE ARGENTINO, CON SEDE EN LA CDAD. DE CHARATA, PROV. DEL CHACO.",
+    "autores": [
+      "SCHNEIDER, SILVANA LORENA"
+    ],
+    "coautores": [],
+    "bloques": [
+      "UCR - UNIÓN CÍVICA RADICAL"
+    ],
+    "provincias": [
+      "CHACO"
+    ],
+    "comisiones": [
+      "DE EDUCACIÓN Y CULTURA"
+    ],
+    "fecha": "17/07/2026",
+    "dae": "54/2026",
+    "origen": "S",
+    "url": "https://www.senado.gob.ar/parlamentario/comisiones/verExp/1248.26/S/PD",
+    "sancionado": false,
+    "archivado": false
+  },
+  {
+    "nro": 1247,
+    "anio": 2026,
+    "tipo": "PL",
+    "tipo_label": "Proyecto de Ley",
+    "extracto": "PROYECTO DE LEY QUE CREA EL REGIMEN ESPECIAL TEMPORAL PARA EL FORTALECIMIENTO DEL CABOTAJE NACIONAL Y DE LA MARINA MERCANTE ARGENTINA (RETCAN).",
+    "autores": [
+      "CAPITANICH, JORGE MILTON"
+    ],
+    "coautores": [
+      "RECALDE, MARIANO",
+      "ANDRADA, GUILLERMO EDUARDO",
+      "NEDER, JOSÉ EMILIO",
+      "LINARES, CARLOS ALBERTO",
+      "GONZÁLEZ, MARÍA TERESA MARGARITA",
+      "KIRCHNER, ALICIA MARGARITA ANTONIA",
+      "LÓPEZ, CÁNDIDA CRISTINA",
+      "UÑAC, SERGIO MAURICIO",
+      "MANZUR, JUAN LUIS",
+      "MARKS, ANA INÉS",
+      "BAHL, ADÁN HUMBERTO",
+      "MENDOZA, SANDRA MARIELA",
+      "CORPACCI, LUCÍA BENIGNA",
+      "GIMÉNEZ NAVARRO, MARÍA CELESTE",
+      "BENSUSÁN, DANIEL PABLO"
+    ],
+    "bloques": [
+      "JUSTICIALISTA"
+    ],
+    "provincias": [
+      "CHACO"
+    ],
+    "comisiones": [
+      "DE LEGISLACIÓN GENERAL",
+      "DE INFRAESTRUCTURA, VIVIENDA Y TRANSPORTE",
+      "DE PRESUPUESTO Y HACIENDA"
+    ],
+    "fecha": "17/07/2026",
+    "dae": "54/2026",
+    "origen": "S",
+    "url": "https://www.senado.gob.ar/parlamentario/comisiones/verExp/1247.26/S/PL",
+    "sancionado": false,
+    "archivado": false
+  },
+  {
+    "nro": 1246,
+    "anio": 2026,
+    "tipo": "PL",
+    "tipo_label": "Proyecto de Ley",
+    "extracto": "PROYECTO DE LEY QUE CREA EL REGIMEN DE PROMOCIÓN FEDERAL PARA LA PRODUCCION DE BIOCOMBUSTIBLES.",
+    "autores": [
+      "CAPITANICH, JORGE MILTON"
+    ],
+    "coautores": [
+      "SORIA, MARTIN IGNACIO",
+      "NEDER, JOSÉ EMILIO",
+      "ZAMORA, GERARDO"
+    ],
+    "bloques": [
+      "JUSTICIALISTA"
+    ],
+    "provincias": [
+      "CHACO"
+    ],
+    "comisiones": [
+      "DE MINERÍA, ENERGÍA Y COMBUSTIBLES",
+      "DE PRESUPUESTO Y HACIENDA"
+    ],
+    "fecha": "17/07/2026",
+    "dae": "54/2026",
+    "origen": "S",
+    "url": "https://www.senado.gob.ar/parlamentario/comisiones/verExp/1246.26/S/PL",
+    "sancionado": false,
+    "archivado": false
+  },
+  {
+    "nro": 1245,
+    "anio": 2026,
+    "tipo": "PD",
+    "tipo_label": "Proyecto de Declaración",
+    "extracto": "PROYECTO DE DECLARACIÓN QUE RECONOCE LA LABOR REALIZADA POR EL GRUPO DE VOLUNTARIOS \"LOS ANGELES DEL PUENTE\", SOBRE EL PUENTE GRAL. MANUEL BELGRANO, QUE UNE LAS PROVINCIAS DEL CHACO Y CORRIENTES.",
+    "autores": [
+      "SCHNEIDER, SILVANA LORENA"
+    ],
+    "coautores": [
+      "VALENZUELA, MERCEDES GABRIELA",
+      "VISCHI, EDUARDO ALEJANDRO"
+    ],
+    "bloques": [
+      "UCR - UNIÓN CÍVICA RADICAL"
+    ],
+    "provincias": [
+      "CHACO"
+    ],
+    "comisiones": [
+      "DE SALUD"
+    ],
+    "fecha": "17/07/2026",
+    "dae": "54/2026",
+    "origen": "S",
+    "url": "https://www.senado.gob.ar/parlamentario/comisiones/verExp/1245.26/S/PD",
+    "sancionado": false,
+    "archivado": false
+  },
+  {
+    "nro": 1244,
+    "anio": 2026,
+    "tipo": "PD",
+    "tipo_label": "Proyecto de Declaración",
+    "extracto": "PROYECTO DE DECLARACIÓN QUE EXPRESA BENEPLACITO POR LA CONMEMORACION DEL 138° ANIVERSARIO DE PUERTO TIROL, LOC. DE LA PROV. DEL CHACO, EL 6 DE AGOSTO DE 2026.",
+    "autores": [
+      "SCHNEIDER, SILVANA LORENA"
+    ],
+    "coautores": [],
+    "bloques": [
+      "UCR - UNIÓN CÍVICA RADICAL"
+    ],
+    "provincias": [
+      "CHACO"
+    ],
+    "comisiones": [
+      "DE ASUNTOS ADMINISTRATIVOS Y MUNICIPALES"
+    ],
+    "fecha": "17/07/2026",
+    "dae": "54/2026",
+    "origen": "S",
+    "url": "https://www.senado.gob.ar/parlamentario/comisiones/verExp/1244.26/S/PD",
+    "sancionado": false,
+    "archivado": false
+  },
+  {
+    "nro": 1243,
+    "anio": 2026,
+    "tipo": "PD",
+    "tipo_label": "Proyecto de Declaración",
+    "extracto": "PROYECTO DE DECLARACIÓN QUE EXPRESA BENEPLACITO POR LA CONMEMORACION DEL 65° ANIVERSARIO DE LAS PIEDRITAS, EN EL MUNIC. DE LAS BREÑAS, PROV. DEL CHACO, EL 22 DE JULIO DE 2026.",
+    "autores": [
+      "SCHNEIDER, SILVANA LORENA"
+    ],
+    "coautores": [],
+    "bloques": [
+      "UCR - UNIÓN CÍVICA RADICAL"
+    ],
+    "provincias": [
+      "CHACO"
+    ],
+    "comisiones": [
+      "DE ASUNTOS ADMINISTRATIVOS Y MUNICIPALES"
+    ],
+    "fecha": "17/07/2026",
+    "dae": "54/2026",
+    "origen": "S",
+    "url": "https://www.senado.gob.ar/parlamentario/comisiones/verExp/1243.26/S/PD",
+    "sancionado": false,
+    "archivado": false
+  },
+  {
+    "nro": 1242,
+    "anio": 2026,
+    "tipo": "PD",
+    "tipo_label": "Proyecto de Declaración",
+    "extracto": "PROYECTO DE DECLARACIÓN QUE ADHIERE A LA CONMEMORACION DEL 102° ANIVERSARIO DE LA MASACRE DE NAPALPI, EN LA PROV. DEL CHACO, EL 19 DE JULIO DE 2026.",
+    "autores": [
+      "SCHNEIDER, SILVANA LORENA"
+    ],
+    "coautores": [],
+    "bloques": [
+      "UCR - UNIÓN CÍVICA RADICAL"
+    ],
+    "provincias": [
+      "CHACO"
+    ],
+    "comisiones": [
+      "DE EDUCACIÓN Y CULTURA"
+    ],
+    "fecha": "17/07/2026",
+    "dae": "53/2026",
+    "origen": "S",
+    "url": "https://www.senado.gob.ar/parlamentario/comisiones/verExp/1242.26/S/PD",
+    "sancionado": false,
+    "archivado": false
+  },
+  {
+    "nro": 1241,
+    "anio": 2026,
+    "tipo": "PD",
+    "tipo_label": "Proyecto de Declaración",
+    "extracto": "PROYECTO DE DECLARACIÓN QUE EXPRESA BENEPLACITO POR EL 75° ANIVERSARIO DE LA PROMULGACION DE LA LEY N° 14.037 - PROVINCIALIZACION DE LOS TERRITORIOS NACIONALES DEL CHACO -, EL 8 DE AGOSTO DE 2026.",
+    "autores": [
+      "SCHNEIDER, SILVANA LORENA"
+    ],
+    "coautores": [],
+    "bloques": [
+      "UCR - UNIÓN CÍVICA RADICAL"
+    ],
+    "provincias": [
+      "CHACO"
+    ],
+    "comisiones": [
+      "DE EDUCACIÓN Y CULTURA"
+    ],
+    "fecha": "17/07/2026",
+    "dae": "53/2026",
+    "origen": "S",
+    "url": "https://www.senado.gob.ar/parlamentario/comisiones/verExp/1241.26/S/PD",
+    "sancionado": false,
+    "archivado": false
+  },
+  {
+    "nro": 1240,
+    "anio": 2026,
+    "tipo": "PD",
+    "tipo_label": "Proyecto de Declaración",
+    "extracto": "PROYECTO DE DECLARACION QUE ADHIERE A LA CONMEMORACION DEL 105° ANIVERSARIO DE LA FUNDACION DE LA CDAD. DE RIO GRANDE, PROV. DE TIERRA DEL FUEGO A.I.A.S., EL 11 DE JULIO DE 2026.",
+    "autores": [
+      "COTO, AGUSTÍN PEDRO"
+    ],
+    "coautores": [],
+    "bloques": [
+      "LA LIBERTAD AVANZA"
+    ],
+    "provincias": [
+      "TIERRA DEL FUEGO, ANTÁRTIDA E ISLAS DEL ATLÁNTICO SUR"
+    ],
+    "comisiones": [
+      "DE ASUNTOS ADMINISTRATIVOS Y MUNICIPALES"
+    ],
+    "fecha": "17/07/2026",
+    "dae": "53/2026",
+    "origen": "S",
+    "url": "https://www.senado.gob.ar/parlamentario/comisiones/verExp/1240.26/S/PD",
+    "sancionado": false,
+    "archivado": false
+  },
+  {
+    "nro": 1239,
+    "anio": 2026,
+    "tipo": "PL",
+    "tipo_label": "Proyecto de Ley",
+    "extracto": "PROYECTO DE LEY QUE INSTITUYE EL 3 DE MARZO DE CADA AÑO, COMO \"DIA NACIONAL EN HONOR AL ALMIRANTE GUILLERMO BROWN\".",
+    "autores": [
+      "COTO, AGUSTÍN PEDRO"
+    ],
+    "coautores": [],
+    "bloques": [
+      "LA LIBERTAD AVANZA"
+    ],
+    "provincias": [
+      "TIERRA DEL FUEGO, ANTÁRTIDA E ISLAS DEL ATLÁNTICO SUR"
+    ],
+    "comisiones": [
+      "DE EDUCACIÓN Y CULTURA"
+    ],
+    "fecha": "17/07/2026",
+    "dae": "53/2026",
+    "origen": "S",
+    "url": "https://www.senado.gob.ar/parlamentario/comisiones/verExp/1239.26/S/PL",
+    "sancionado": false,
+    "archivado": false
+  },
+  {
+    "nro": 1238,
+    "anio": 2026,
+    "tipo": "PL",
+    "tipo_label": "Proyecto de Ley",
+    "extracto": "PROYECTO DE LEY QUE MODIFICA EL ARTICULO 770 DEL CODIGO CIVIL Y COMERCIAL DE LA NACIÓN, SOBRE EL REGIMEN DEL ANATOCISMO.",
+    "autores": [
+      "GUZMÁN CORAITA, GONZALO",
+      "OROZCO, MARÍA EMILIA"
+    ],
+    "coautores": [],
+    "bloques": [
+      "LA LIBERTAD AVANZA"
+    ],
+    "provincias": [
+      "SALTA"
+    ],
+    "comisiones": [
+      "DE LEGISLACIÓN GENERAL"
+    ],
+    "fecha": "17/07/2026",
+    "dae": "53/2026",
+    "origen": "S",
+    "url": "https://www.senado.gob.ar/parlamentario/comisiones/verExp/1238.26/S/PL",
+    "sancionado": false,
+    "archivado": false
+  },
+  {
+    "nro": 1237,
+    "anio": 2026,
+    "tipo": "PC",
+    "tipo_label": "Proyecto de Comunicación",
+    "extracto": "PROYECTO DE COMUNICACIÓN QUE SOLICITA INFORME SOBRE DIVERSAS CUESTIONES REFERIDAS A LOS DESPIDOS EN LA COMISIÓN NACIONAL DE ENERGÍA ATÓMICA (CNEA)",
+    "autores": [
+      "GIMÉNEZ NAVARRO, MARÍA CELESTE",
+      "RECALDE, MARIANO"
+    ],
+    "coautores": [],
+    "bloques": [
+      "JUSTICIALISTA"
+    ],
+    "provincias": [
+      "SAN JUAN",
+      "CIUDAD AUTÓNOMA DE BUENOS AIRES"
+    ],
+    "comisiones": [
+      "DE TRABAJO Y PREVISIÓN SOCIAL"
+    ],
+    "fecha": "16/07/2026",
+    "dae": "53/2026",
+    "origen": "S",
+    "url": "https://www.senado.gob.ar/parlamentario/comisiones/verExp/1237.26/S/PC",
+    "sancionado": false,
+    "archivado": false
+  },
+  {
+    "nro": 1236,
+    "anio": 2026,
+    "tipo": "PL",
+    "tipo_label": "Proyecto de Ley",
+    "extracto": "PROYECTO DE LEY QUE INCORPORA COMO ARTICULO 38 BIS A SU SIMILAR 27.799 - RÉGIMEN PENAL TRIBUTARIO -, RESPECTO DEL RÉGIMEN DE DECLARACIÓN JURADA SIMPLIFICADA.",
+    "autores": [
+      "SALINO, FERNANDO ALDO"
+    ],
+    "coautores": [
+      "DI TULLIO, JULIANA",
+      "LEWANDOWSKI, MARCELO NÉSTOR"
+    ],
+    "bloques": [
+      "JUSTICIA SOCIAL FEDERAL"
+    ],
+    "provincias": [
+      "SAN LUIS"
+    ],
+    "comisiones": [
+      "DE JUSTICIA Y ASUNTOS PENALES"
+    ],
+    "fecha": "16/07/2026",
+    "dae": "53/2026",
+    "origen": "S",
+    "url": "https://www.senado.gob.ar/parlamentario/comisiones/verExp/1236.26/S/PL",
+    "sancionado": false,
+    "archivado": false
+  },
+  {
+    "nro": 1235,
+    "anio": 2026,
+    "tipo": "PL",
+    "tipo_label": "Proyecto de Ley",
+    "extracto": "PROYECTO DE LEY QUE EXCLUYE DEL REGIMEN DE EXTERIORIZACION DE ACTIVOS A FUNCIONARIOS PUBLICOS Y PERSONAL JERARQUICO, ENTRE OTROS.",
+    "autores": [
+      "SALINO, FERNANDO ALDO"
+    ],
+    "coautores": [
+      "DI TULLIO, JULIANA",
+      "LEWANDOWSKI, MARCELO NÉSTOR"
+    ],
+    "bloques": [
+      "JUSTICIA SOCIAL FEDERAL"
+    ],
+    "provincias": [
+      "SAN LUIS"
+    ],
+    "comisiones": [
+      "DE LEGISLACIÓN GENERAL",
+      "DE ASUNTOS CONSTITUCIONALES",
+      "DE ASUNTOS ADMINISTRATIVOS Y MUNICIPALES"
+    ],
+    "fecha": "16/07/2026",
+    "dae": "53/2026",
+    "origen": "S",
+    "url": "https://www.senado.gob.ar/parlamentario/comisiones/verExp/1235.26/S/PL",
+    "sancionado": false,
+    "archivado": false
+  },
+  {
+    "nro": 1234,
+    "anio": 2026,
+    "tipo": "PL",
+    "tipo_label": "Proyecto de Ley",
+    "extracto": "PROYECTO DE LEY QUE DECLARA EL AÑO 2027 COMO \"AÑO DEL CENTENARIO DEL NACIMIENTO DEL PRESIDENTE DR. RAUL RICARDO ALFONSIN\"",
+    "autores": [
+      "VISCHI, EDUARDO ALEJANDRO"
+    ],
+    "coautores": [
+      "SUÁREZ, RODOLFO ALEJANDRO",
+      "KRONEBERGER, DANIEL RICARDO",
+      "SCHNEIDER, SILVANA LORENA",
+      "GALARETTO, EDUARDO HORACIO",
+      "FAMA, FLAVIO SERGIO",
+      "JURI, MARIANA",
+      "LOSADA, CAROLINA",
+      "VALENZUELA, MERCEDES GABRIELA"
+    ],
+    "bloques": [
+      "UCR - UNIÓN CÍVICA RADICAL"
+    ],
+    "provincias": [
+      "CORRIENTES"
+    ],
+    "comisiones": [
+      "DE EDUCACIÓN Y CULTURA",
+      "DE PRESUPUESTO Y HACIENDA"
+    ],
+    "fecha": "16/07/2026",
+    "dae": "53/2026",
+    "origen": "S",
+    "url": "https://www.senado.gob.ar/parlamentario/comisiones/verExp/1234.26/S/PL",
+    "sancionado": false,
+    "archivado": false
+  },
+  {
+    "nro": 1232,
+    "anio": 2026,
+    "tipo": "PL",
+    "tipo_label": "Proyecto de Ley",
+    "extracto": "PROYECTO DE LEY QUE DECLARA MONUMENTO HISTORICO NACIONAL, AL CONJUNTO PARQUE DE LA CONSTITUCION NACIONAL, SITO EN LA CDAD. DE SANTA FE, PROV. HOMÓNIMA.",
+    "autores": [
+      "LOSADA, CAROLINA",
+      "GALARETTO, EDUARDO HORACIO"
+    ],
+    "coautores": [],
+    "bloques": [
+      "UCR - UNIÓN CÍVICA RADICAL"
+    ],
+    "provincias": [
+      "SANTA FE"
+    ],
+    "comisiones": [
+      "DE EDUCACIÓN Y CULTURA"
+    ],
+    "fecha": "16/07/2026",
+    "dae": "53/2026",
+    "origen": "S",
+    "url": "https://www.senado.gob.ar/parlamentario/comisiones/verExp/1232.26/S/PL",
+    "sancionado": false,
+    "archivado": false
+  },
+  {
+    "nro": 1226,
+    "anio": 2026,
+    "tipo": "PD",
+    "tipo_label": "Proyecto de Declaración",
+    "extracto": "PROYECTO DE DECLARACIÓN QUE DECLARA DE INTERES  LA XIII EDICION DE LA FERIA INTERNACIONAL DEL LIBRO DE COMODORO RIVADAVIA, QUE SE LLEVARÁ A CABO DEL 30 DE JULIO AL 09 DE AGOSTO DE 2026, EN LA PROV. DEL CHUBUT.",
+    "autores": [
+      "LINARES, CARLOS ALBERTO"
+    ],
+    "coautores": [],
+    "bloques": [
+      "JUSTICIALISTA"
+    ],
+    "provincias": [
+      "CHUBUT"
+    ],
+    "comisiones": [
+      "DE EDUCACIÓN Y CULTURA"
+    ],
+    "fecha": "16/07/2026",
+    "dae": "53/2026",
+    "origen": "S",
+    "url": "https://www.senado.gob.ar/parlamentario/comisiones/verExp/1226.26/S/PD",
+    "sancionado": false,
+    "archivado": false
+  },
+  {
+    "nro": 1223,
+    "anio": 2026,
+    "tipo": "PC",
+    "tipo_label": "Proyecto de Comunicación",
+    "extracto": "PROYECTO DE COMUNICACIÓN QUE SOLICITA INFORME SOBRE LAS CIRCUNSTANCIAS VINCULADAS AL TRANSITO DEL PATRULLERO OCEANICO HMS MEDWAY DE LA ROYAL NAVY DEL REINO UNIDO DURANTE SU DESPLAZAMIENTO DESDE ISLAS MALVINAS HACIA LA CDAD. DE PUNTA ARENAS, REP. DE CHILE Y OTRAS CUESTIONES CONEXAS.",
+    "autores": [
+      "BAHL, ADÁN HUMBERTO"
+    ],
+    "coautores": [],
+    "bloques": [
+      "JUSTICIALISTA"
+    ],
+    "provincias": [
+      "ENTRE RÍOS"
+    ],
+    "comisiones": [
+      "DE RELACIONES EXTERIORES Y CULTO"
+    ],
+    "fecha": "16/07/2026",
+    "dae": "53/2026",
+    "origen": "S",
+    "url": "https://www.senado.gob.ar/parlamentario/comisiones/verExp/1223.26/S/PC",
+    "sancionado": false,
+    "archivado": false
+  },
+  {
+    "nro": 1222,
+    "anio": 2026,
+    "tipo": "PL",
+    "tipo_label": "Proyecto de Ley",
+    "extracto": "PROYECTO DE LEY QUE SUSTITUYE EL INC. A) DEL ART. 8° DE SU SIMILAR 27.275 - ACCESO A LA INFORMACION PUBLICA - SOBRE EL FORTALECIMIENTO DE LA SEGURIDAD JURIDICA.",
+    "autores": [
+      "BAHL, ADÁN HUMBERTO"
+    ],
+    "coautores": [],
+    "bloques": [
+      "JUSTICIALISTA"
+    ],
+    "provincias": [
+      "ENTRE RÍOS"
+    ],
+    "comisiones": [
+      "DE ASUNTOS CONSTITUCIONALES",
+      "DE SISTEMAS, MEDIOS DE COMUNICACIÓN Y LIBERTAD DE EXPRESIÓN"
+    ],
+    "fecha": "16/07/2026",
+    "dae": "53/2026",
+    "origen": "S",
+    "url": "https://www.senado.gob.ar/parlamentario/comisiones/verExp/1222.26/S/PL",
+    "sancionado": false,
+    "archivado": false
+  },
+  {
+    "nro": 1221,
+    "anio": 2026,
+    "tipo": "PD",
+    "tipo_label": "Proyecto de Declaración",
+    "extracto": "PROYECTO DE DECLARACIÓN QUE DECLARA DE INTERÉS EL 70° ANIVERSARIO -BODAS DE PLATINO- DE LA SOCIEDAD YUGOESLAVA CULTURAL Y DEPORTIVA DE LA CDAD. DE PRESIDENCIA ROQUE SAENZ PEÑA, PROV. DEL CHACO, EL 29 DE JULIO DE 2026.",
+    "autores": [
+      "CAPITANICH, JORGE MILTON"
+    ],
+    "coautores": [],
+    "bloques": [
+      "JUSTICIALISTA"
+    ],
+    "provincias": [
+      "CHACO"
+    ],
+    "comisiones": [
+      "DE EDUCACIÓN Y CULTURA"
+    ],
+    "fecha": "16/07/2026",
+    "dae": "53/2026",
+    "origen": "S",
+    "url": "https://www.senado.gob.ar/parlamentario/comisiones/verExp/1221.26/S/PD",
+    "sancionado": false,
+    "archivado": false
+  },
+  {
+    "nro": 1220,
+    "anio": 2026,
+    "tipo": "PC",
+    "tipo_label": "Proyecto de Comunicación",
+    "extracto": "PROYECTO DE COMUNICACIÓN QUE SOLICITA INFORME SOBRE DIVERSOS PUNTOS RELACIONADOS AL CORREO OFICIAL DE LA REPUBLICA ARGENTINA.",
+    "autores": [
+      "CAPITANICH, JORGE MILTON",
+      "BAHL, ADÁN HUMBERTO"
+    ],
+    "coautores": [],
+    "bloques": [
+      "JUSTICIALISTA"
+    ],
+    "provincias": [
+      "CHACO",
+      "ENTRE RÍOS"
+    ],
+    "comisiones": [
+      "DE SISTEMAS, MEDIOS DE COMUNICACIÓN Y LIBERTAD DE EXPRESIÓN"
+    ],
+    "fecha": "16/07/2026",
+    "dae": "53/2026",
+    "origen": "S",
+    "url": "https://www.senado.gob.ar/parlamentario/comisiones/verExp/1220.26/S/PC",
+    "sancionado": false,
+    "archivado": false
+  },
+  {
+    "nro": 1219,
+    "anio": 2026,
+    "tipo": "PL",
+    "tipo_label": "Proyecto de Ley",
+    "extracto": "PROYECTO DE LEY QUE CREA EL REGIMEN PARA LA REGULACION DE LA PUBLICIDAD, PROMOCION Y PATROCINIO DEL JUEGO DE APUESTAS EN LINEA.",
+    "autores": [
+      "ALVAREZ RIVERO, CARMEN"
+    ],
+    "coautores": [],
+    "bloques": [
+      "LA LIBERTAD AVANZA"
+    ],
+    "provincias": [
+      "CÓRDOBA"
+    ],
+    "comisiones": [
+      "DE SALUD",
+      "DE LEGISLACIÓN GENERAL",
+      "DE JUSTICIA Y ASUNTOS PENALES"
+    ],
+    "fecha": "15/07/2026",
+    "dae": "53/2026",
+    "origen": "S",
+    "url": "https://www.senado.gob.ar/parlamentario/comisiones/verExp/1219.26/S/PL",
+    "sancionado": false,
+    "archivado": false
+  },
+  {
     "nro": 1185,
     "anio": 2026,
     "tipo": "PD",
@@ -17545,6 +20910,26 @@
     "archivado": false
   },
   {
+    "nro": 357,
+    "anio": 2026,
+    "tipo": "CV",
+    "tipo_label": "Com. Varias",
+    "extracto": "REMITE NOTA ENVIADA POR EL CIUDADANO ARGENTINO, JUAN LUIS GONZALEZ LANDA, POR LA CUAL SOLICITA AUTORIZACION PARA DESEMPEÑARSE EN EL CARGO VICECONSUL HONORARIO DE LOS ESTADOS UNIDOS MEXICANOS, EN LA CIUDAD DE MENDOZA, PROVINCIA HOMONIMA, CON JURISDICCION",
+    "autores": [],
+    "coautores": [],
+    "bloques": [],
+    "provincias": [],
+    "comisiones": [
+      "DE ASUNTOS CONSTITUCIONALES"
+    ],
+    "fecha": "07/08/2026",
+    "dae": "",
+    "origen": "OV",
+    "url": "https://www.senado.gob.ar/parlamentario/comisiones/verExp/357.26/OV/CV",
+    "sancionado": false,
+    "archivado": false
+  },
+  {
     "nro": 356,
     "anio": 2026,
     "tipo": "PC",
@@ -17567,6 +20952,26 @@
     "dae": "17/2026",
     "origen": "S",
     "url": "https://www.senado.gob.ar/parlamentario/comisiones/verExp/356.26/S/PC",
+    "sancionado": false,
+    "archivado": false
+  },
+  {
+    "nro": 356,
+    "anio": 2026,
+    "tipo": "CA",
+    "tipo_label": "Com. de Auditoría",
+    "extracto": "COMUNICA RESOLUCION N° 167/26 QUE TOMA CONOCIMIENTO DEL INFORME DE REVISION SOBRE LOS ESTADOS CONTABLES DE PERIODOS INTERMEDIOS FINALIZADOS EL 31 DE MARZO DE 2026 REFERIDOS A AGUA Y SANEAMIENTOS ARGENTINOS SA.",
+    "autores": [],
+    "coautores": [],
+    "bloques": [],
+    "provincias": [],
+    "comisiones": [
+      "BICAMERAL PERMANENTE MIXTA REVISORA DE CUENTAS"
+    ],
+    "fecha": "07/08/2026",
+    "dae": "",
+    "origen": "OV",
+    "url": "https://www.senado.gob.ar/parlamentario/comisiones/verExp/356.26/OV/CA",
     "sancionado": false,
     "archivado": false
   },
@@ -17597,6 +21002,26 @@
     "archivado": false
   },
   {
+    "nro": 355,
+    "anio": 2026,
+    "tipo": "CA",
+    "tipo_label": "Com. de Auditoría",
+    "extracto": "COMUNICA RESOLUCION N° 166/26 QUE APRUEBA EL INFORME CONJUNTO SOBRE EL SISTEMA DE CONTROL INTERNO DE LOS ESTADOS FINANCIEROS POR EL EJERCICIO FINALIZADO AL 31/12/2023 DE LA ENTIDAD BINACIONAL YACYRETA. Y ADJUNTA SOBRE RESERVADO.",
+    "autores": [],
+    "coautores": [],
+    "bloques": [],
+    "provincias": [],
+    "comisiones": [
+      "BICAMERAL PERMANENTE MIXTA REVISORA DE CUENTAS"
+    ],
+    "fecha": "07/08/2026",
+    "dae": "",
+    "origen": "OV",
+    "url": "https://www.senado.gob.ar/parlamentario/comisiones/verExp/355.26/OV/CA",
+    "sancionado": false,
+    "archivado": false
+  },
+  {
     "nro": 354,
     "anio": 2026,
     "tipo": "PC",
@@ -17619,6 +21044,26 @@
     "dae": "17/2026",
     "origen": "S",
     "url": "https://www.senado.gob.ar/parlamentario/comisiones/verExp/354.26/S/PC",
+    "sancionado": false,
+    "archivado": false
+  },
+  {
+    "nro": 354,
+    "anio": 2026,
+    "tipo": "CA",
+    "tipo_label": "Com. de Auditoría",
+    "extracto": "COMUNICA RESOLUCION N° 165/26 QUE PONE EN CONOCIMIENTO INFORMES DE REVISION DE LOS ESTADOS FINANCIEROS INTERMEDIOS CONSOLIDADOS, CONDENSADOS Y SEPARADOS CONDENSADOS AL 31/03/2026, REFERIDOS AL B.N.A. PERIODO AUDITADO 01/01/2026 AL 31/03/2026.",
+    "autores": [],
+    "coautores": [],
+    "bloques": [],
+    "provincias": [],
+    "comisiones": [
+      "BICAMERAL PERMANENTE MIXTA REVISORA DE CUENTAS"
+    ],
+    "fecha": "07/08/2026",
+    "dae": "",
+    "origen": "OV",
+    "url": "https://www.senado.gob.ar/parlamentario/comisiones/verExp/354.26/OV/CA",
     "sancionado": false,
     "archivado": false
   },
@@ -22917,6 +26362,26 @@
     "archivado": false
   },
   {
+    "nro": 235,
+    "anio": 2026,
+    "tipo": "PL",
+    "tipo_label": "Proyecto de Ley",
+    "extracto": "MENSAJE N°220/26 Y PROYECTO DE LEY QUE APRUEBA LAS ENMIENDAS AL CONVENIO CONSTITUTIVO DE LA ORGANIZACIÓN MARÍTIMA INTERNACIONAL, ADOPTADAS POR LA ASAMBLEA DE DICHA ORGANIZACIÓN DURANTE SU 32° PERÍODO DE SESIONES, EN LA CIUDAD DE LONDRES -REINO UNIDO DE GRAN BRETAÑA E IRLANDA DEL NORTE- EL 8 D",
+    "autores": [],
+    "coautores": [],
+    "bloques": [],
+    "provincias": [],
+    "comisiones": [
+      "DE RELACIONES EXTERIORES Y CULTO"
+    ],
+    "fecha": "16/07/2026",
+    "dae": "58/2026",
+    "origen": "PE",
+    "url": "https://www.senado.gob.ar/parlamentario/comisiones/verExp/235.26/PE/PL",
+    "sancionado": false,
+    "archivado": false
+  },
+  {
     "nro": 234,
     "anio": 2026,
     "tipo": "CV",
@@ -22931,6 +26396,26 @@
     "dae": "",
     "origen": "OV",
     "url": "https://www.senado.gob.ar/parlamentario/comisiones/verExp/234.26/OV/CV",
+    "sancionado": false,
+    "archivado": false
+  },
+  {
+    "nro": 234,
+    "anio": 2026,
+    "tipo": "PL",
+    "tipo_label": "Proyecto de Ley",
+    "extracto": "MENSAJE N° 219/26 Y PROYECTO DE LEY QUE APRUEBA EL CONVENIO RELATIVO A LA IMPORTACION TEMPORAL, CELEBRADO EN ESTAMBUL - REPUBLICA DE TÜRKIYE-, EL 26 DE JUNIO DE 1990.",
+    "autores": [],
+    "coautores": [],
+    "bloques": [],
+    "provincias": [],
+    "comisiones": [
+      "DE RELACIONES EXTERIORES Y CULTO"
+    ],
+    "fecha": "16/07/2026",
+    "dae": "58/2026",
+    "origen": "PE",
+    "url": "https://www.senado.gob.ar/parlamentario/comisiones/verExp/234.26/PE/PL",
     "sancionado": false,
     "archivado": false
   },
