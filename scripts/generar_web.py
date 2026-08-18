@@ -216,20 +216,30 @@ body{font-family:'Poppins',Calibri,sans-serif;background:#F5F7FA;color:#4A4A4A;f
 .com-card-nombre{font-size:14px;font-weight:700;color:#1B5EA2;line-height:1.3}
 .btn-volver{padding:7px 14px;border-radius:8px;border:1.5px solid #fff;background:transparent;color:#fff;font-family:inherit;font-size:11px;font-weight:600;cursor:pointer;transition:all .15s}
 .btn-volver:hover{background:#fff;color:#1B5EA2}
-.com-detalle-layout{display:flex;gap:16px;align-items:flex-start}
-.com-panel{flex:1;min-width:0}
-.com-panel-integrantes{flex:0 0 400px}
 .com-panel-title{font-size:11px;font-weight:700;color:#1B5EA2;text-transform:uppercase;letter-spacing:1px;margin-bottom:10px;padding-bottom:6px;border-bottom:1px solid #D6E4F0}
-@media(max-width:800px){.com-detalle-layout{flex-direction:column}.com-panel-integrantes{flex:0 0 auto;width:100%}}
-.integrante-row{display:flex;flex-direction:column;gap:5px;padding:9px 4px;border-bottom:1px solid #EEF2F8}
-.integrante-row:last-child{border-bottom:none}
-.integrante-nombre{font-size:12.5px;font-weight:600;color:#4A4A4A;line-height:1.3}
-.integrante-meta{display:flex;align-items:center;gap:6px;flex-wrap:wrap}
+.com-sub-nav{display:flex;gap:4px;border-bottom:1px solid #D6E4F0;margin:16px 0 16px;overflow-x:auto}
+.com-sub-btn{padding:10px 16px;background:transparent;border:none;color:#888;font-family:inherit;font-size:12px;font-weight:600;cursor:pointer;border-bottom:3px solid transparent;transition:all .2s;white-space:nowrap}
+.com-sub-btn.active{color:#1B5EA2;border-bottom-color:#1B5EA2}
+.com-sub-btn:hover{color:#2E75B6}
+.com-sub-content{display:none}
+.com-sub-content.active{display:block}
+.member-row{display:flex;align-items:center;gap:8px;padding:8px 4px;border-bottom:1px solid #EEF2F8;flex-wrap:wrap}
+.member-row:last-child{border-bottom:none}
+.bloque-dot{width:10px;height:10px;border-radius:50%;flex-shrink:0}
+.member-name{font-size:13px;font-weight:600;color:#4A4A4A;flex:1;min-width:160px}
 .rol-badge{font-size:9.5px;font-weight:700;padding:2px 7px;border-radius:10px;text-transform:uppercase;letter-spacing:.4px;white-space:nowrap;flex-shrink:0}
 .rol-Presidente{background:#1B5EA2;color:#fff}
 .rol-Vicepresidente{background:#D6E4F0;color:#1B5EA2}
 .rol-Secretario{background:#EAF0FA;color:#2E75B6}
 .rol-Vocal{background:#F5F7FA;color:#9aacbd}
+.com-proy-cats{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:16px}
+.com-proy-cat-btn{padding:10px 16px;border-radius:8px;border:1.5px solid #D6E4F0;background:#fff;color:#4A4A4A;font-family:inherit;font-size:12.5px;font-weight:600;cursor:pointer;transition:all .15s}
+.com-proy-cat-btn:hover{border-color:#1B5EA2;color:#1B5EA2}
+.com-proy-cat-btn.active{background:#1B5EA2;border-color:#1B5EA2;color:#fff}
+.com-proy-cat-btn .cnt{opacity:.75;font-weight:400}
+.com-tratado-tag{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.3px;padding:2px 8px;border-radius:10px}
+.com-tratado-tag.ok{background:#E8F5E9;color:#1B5E20}
+.com-tratado-tag.pend{background:#FFF8E1;color:#F57F17}
 .com-proximareunion{margin-top:16px;background:#D6E4F0;border-left:3px solid #2E75B6;border-radius:6px;padding:12px 16px;font-size:12.5px;color:#0d3f73;display:flex;flex-wrap:wrap;gap:6px 18px;align-items:center}
 .com-proximareunion strong{color:#1B5EA2}
 .com-empty{text-align:center;padding:40px 16px;color:#aaa;font-size:13px}
@@ -1712,14 +1722,22 @@ function abrirComision(idx){
   document.getElementById('com-nivel1').classList.remove('active');
   document.getElementById('com-nivel2').classList.add('active');
   renderIntegrantes(c);
-  renderProyectosComision(c);
   renderProximaReunion(c);
   document.getElementById('proyTema').value='';
   renderProyeccion();
+  switchComSub('integrantes');
+  initProyectosComision(c);
 }
 function volverComisiones(){
   document.getElementById('com-nivel2').classList.remove('active');
   document.getElementById('com-nivel1').classList.add('active');
+}
+function switchComSub(id){
+  var root=document.getElementById('com-nivel2');
+  root.querySelectorAll('.com-sub-btn').forEach(function(b){b.classList.remove('active')});
+  root.querySelectorAll('.com-sub-content').forEach(function(c){c.classList.remove('active')});
+  root.querySelector('[data-comsub="'+id+'"]').classList.add('active');
+  document.getElementById('com-sub-'+id).classList.add('active');
 }
 var comisionAbierta=null;
 function renderIntegrantes(c){
@@ -1727,14 +1745,13 @@ function renderIntegrantes(c){
   var html='';
   c.integrantes.forEach(function(m,i){
     var col=blqColor(m.bloque);
-    var dppBadge='<button class="dpp-badge" onclick="mostrarDppHist('+i+')" title="Ver historial de DPP">DPP-'+esc(m.dpp)+'</button>';
-    html+='<div class="integrante-row">'
-      +'<div class="integrante-nombre">'+esc(m.nombre)+'</div>'
-      +'<div class="integrante-meta">'
+    var rolHtml=(m.rol&&m.rol!=='Vocal')?'<span class="rol-badge rol-'+m.rol+'">'+esc(m.rol)+'</span>':'';
+    html+='<div class="member-row">'
+      +'<span class="bloque-dot" style="background:'+col.dot+'"></span>'
+      +'<span class="member-name">'+esc(m.nombre)+'</span>'
       +'<span class="btag" style="background:'+col.bg+';color:'+col.badge+'">'+esc(m.bloque)+'</span>'
-      +'<span class="rol-badge rol-'+m.rol+'">'+esc(m.rol)+'</span>'
-      +dppBadge
-      +'</div>'
+      +rolHtml
+      +'<button class="dpp-badge" onclick="mostrarDppHist('+i+')" title="Ver historial de DPP">DPP-'+esc(m.dpp)+'</button>'
       +'</div>';
   });
   document.getElementById('com-integrantes-list').innerHTML=html||'<div class="com-empty">Sin integrantes cargados.</div>';
@@ -1770,37 +1787,134 @@ function parseFechaDMY(fecha){
   if(parts.length!==3)return null;
   return new Date(+parts[2],+parts[1]-1,+parts[0]);
 }
-function renderProyectosComision(c){
+/* ── Proyectos en trámite (por comisión, tarjetas estilo Ayuda Memoria) ── */
+var COM_PROY_CATS=[
+  {key:'PL',label:'Proyecto de Ley',tipos:['PL']},
+  {key:'PC',label:'Proyecto de Comunicación',tipos:['PC']},
+  {key:'PR',label:'Proyecto de Resolución',tipos:['PR']},
+  {key:'Otros',label:'Otros',tipos:['PD','CA','CV']}
+];
+var comProyCategoria=null,comProyTratadosFiltro='todos',comProyListaActual=[];
+function proyectosDeComision(c){
   var nom=normCom(c.nombre);
-  var lista=DATA.filter(function(p){
+  return DATA.filter(function(p){
     var coms=p.comisiones||[];
     return coms.length&&normCom(coms[0])===nom;
   });
+}
+function reunionesCalificadas(p,comNombre){
+  var nom=normCom(nombreCom(comNombre));
+  return (p.reuniones||[]).filter(function(r){return r.tipo!=='asesores'&&normCom(nombreCom(r.comision))===nom});
+}
+/* A diferencia de "en trámite" (que sólo mira el 1er giro/cabecera), esto
+   busca en TODO DATA: un proyecto puede tratarse en la reunión de una
+   comisión aunque esa comisión sea un giro adicional, no la cabecera. */
+function proyectosTratadosEnComision(comNombre){
+  return DATA.filter(function(p){return reunionesCalificadas(p,comNombre).length});
+}
+function estadoTratado(p,comNombre){
+  var rs=reunionesCalificadas(p,comNombre);
+  if(!rs.length)return null;
+  var hoy=new Date().toISOString().slice(0,10);
+  var pasado=false,futuro=false;
+  rs.forEach(function(r){
+    if(!r.iso)return;
+    var f=r.iso.slice(0,10);
+    if(f<hoy)pasado=true;else futuro=true;
+  });
+  return {tratado:pasado,pendiente:!pasado&&futuro};
+}
+function initProyectosComision(c){
+  comProyCategoria=null;
+  comProyTratadosFiltro='todos';
+  var proyectos=proyectosDeComision(c);
+  var soloAcuerdos=proyectos.length&&proyectos.every(function(p){return p.tipo==='AC'});
+  var cats=soloAcuerdos
+    ? [{key:'AC',label:'Acuerdos',tipos:['AC']}]
+    : COM_PROY_CATS;
+  var tratadosCount=proyectosTratadosEnComision(c.nombre).length;
+  var html=cats.map(function(cat){
+    var n=proyectos.filter(function(p){return cat.tipos.indexOf(p.tipo)>=0}).length;
+    return '<button class="com-proy-cat-btn" data-catkey="'+cat.key+'" onclick="selectComProyCategoria(\''+cat.key+'\')">'+esc(cat.label)+' <span class="cnt">('+n+')</span></button>';
+  }).join('')
+  +'<button class="com-proy-cat-btn" data-catkey="Tratados" onclick="selectComProyCategoria(\'Tratados\')">Tratadas en reunión de senadores <span class="cnt">('+tratadosCount+')</span></button>';
+  document.getElementById('com-proy-cats').innerHTML=html;
+  document.getElementById('com-proy-tratados-chips').style.display='none';
+  document.getElementById('com-proy-tratados-chips').innerHTML='';
+  document.getElementById('com-proy-grid').innerHTML='';
+}
+function selectComProyCategoria(key){
+  comProyCategoria=key;
+  comProyTratadosFiltro='todos';
+  document.querySelectorAll('#com-proy-cats .com-proy-cat-btn').forEach(function(b){
+    b.classList.toggle('active',b.getAttribute('data-catkey')===key);
+  });
+  renderComProyGrid();
+}
+function renderComProyTratadosChips(){
+  var el=document.getElementById('com-proy-tratados-chips');
+  if(comProyCategoria!=='Tratados'){el.style.display='none';el.innerHTML='';return}
+  var opts=[['todos','Todos'],['tratados','Ya tratados'],['pendientes','Pendientes de tratar']];
+  el.style.display='flex';
+  el.innerHTML=opts.map(function(o){
+    return '<button class="chip'+(comProyTratadosFiltro===o[0]?' on':'')+'" onclick="setComProyTratadosFiltro(\''+o[0]+'\')">'+o[1]+'</button>';
+  }).join('');
+}
+function setComProyTratadosFiltro(v){
+  comProyTratadosFiltro=v;
+  renderComProyGrid();
+}
+function renderComProyGrid(){
+  var c=comisionAbierta;
+  var grid=document.getElementById('com-proy-grid');
+  if(!c||!comProyCategoria){grid.innerHTML='';return}
+  var proyectos=proyectosDeComision(c);
+  var cat=COM_PROY_CATS.concat([{key:'AC',tipos:['AC']}]).filter(function(x){return x.key===comProyCategoria})[0];
+  var lista;
+  if(comProyCategoria==='Tratados'){
+    lista=proyectosTratadosEnComision(c.nombre);
+    if(comProyTratadosFiltro!=='todos'){
+      lista=lista.filter(function(p){
+        var est=estadoTratado(p,c.nombre);
+        return comProyTratadosFiltro==='tratados'?(est&&est.tratado):(est&&est.pendiente);
+      });
+    }
+  }else{
+    lista=proyectos.filter(function(p){return cat&&cat.tipos.indexOf(p.tipo)>=0});
+  }
+  renderComProyTratadosChips();
   lista.sort(function(a,b){
     var da=parseFechaDMY(a.fecha),db=parseFechaDMY(b.fecha);
     return (db?db.getTime():0)-(da?da.getTime():0);
   });
-  var el=document.getElementById('com-proyectos-list');
-  if(!lista.length){el.innerHTML='<div class="com-empty">No hay proyectos en tr&aacute;mite en esta comisi&oacute;n.</div>';return}
-  var html='';
-  lista.forEach(function(p){
-    var fg=TIPO_FG[p.tipo]||'#888',bg=TIPO_BG[p.tipo]||'#eee';
-    var expNro=p.origen+'-'+p.nro+'/'+String(p.anio).slice(-2);
-    var linkBtn=p.url?'<a class="exp-link" href="'+escAttr(p.url)+'" target="_blank">Ver en Senado &#8599;</a>':'';
-    var autorPrincipal=p.autores&&p.autores[0]?p.autores[0]:'';
-    var bloquePrincipal=p.bloques&&p.bloques[0]?p.bloques[0]:'';
-    var col=blqColor(bloquePrincipal);
-    html+='<div class="card"><div class="card-exp"><div class="exp-id">'
-      +'<span class="exp-badge" style="background:'+bg+';color:'+fg+'">'+esc(p.tipo)+'</span>'
-      +'<span class="exp-nro">'+esc(expNro)+'</span>'
-      +(p.fecha?'<span class="exp-fecha">'+esc(p.fecha)+'</span>':'')
-      +'</div>'+linkBtn+'</div><div class="card-body"><div class="extracto">'+esc(p.extracto)+'</div>'
-      +'<div class="card-meta">'
-      +(autorPrincipal?'<div class="meta-row"><span class="meta-bold">'+esc(autorPrincipal)+'</span></div>':'')
-      +(bloquePrincipal?'<div class="meta-row"><span class="btag" style="background:'+col.bg+';color:'+col.badge+'">'+esc(bloquePrincipal)+'</span></div>':'')
-      +'</div></div></div>';
-  });
-  el.innerHTML=html;
+  comProyListaActual=lista;
+  if(!lista.length){grid.innerHTML='<div class="com-empty">No hay proyectos para este filtro.</div>';return}
+  grid.innerHTML=lista.map(function(p,i){return buildComProyCard(p,i,c.nombre)}).join('');
+}
+function buildComProyCard(p,idx,comNombre){
+  var fg=TIPO_FG[p.tipo]||'#888',bg=TIPO_BG[p.tipo]||'#eee';
+  var expNro=p.origen+'-'+p.nro+'/'+String(p.anio).slice(-2);
+  var autor=p.autores&&p.autores[0]?p.autores[0]:'';
+  var bloque=p.bloques&&p.bloques[0]?p.bloques[0]:'';
+  var col=blqColor(bloque);
+  var tratadoTag='';
+  if(comProyCategoria==='Tratados'){
+    var est=estadoTratado(p,comNombre);
+    if(est)tratadoTag='<span class="com-tratado-tag '+(est.tratado?'ok':'pend')+'">'+(est.tratado?'Ya tratado':'Pendiente')+'</span>';
+  }
+  return '<div class="am-card" onclick="irAExpedienteComision('+idx+')">'
+    +'<div class="am-card-top"><span class="am-badge" style="background:'+bg+';color:'+fg+'">'+esc(p.tipo)+'</span><span class="am-exp-num">'+esc(expNro)+'</span></div>'
+    +(autor?'<div class="am-autor">'+esc(autor)+'</div>':'')
+    +'<p class="am-desc">'+esc(p.extracto)+'</p>'
+    +'<div class="am-card-bottom">'
+    +(bloque?'<span class="btag" style="background:'+col.bg+';color:'+col.badge+'">'+esc(bloque)+'</span>':'<span></span>')
+    +tratadoTag
+    +'</div></div>';
+}
+function irAExpedienteComision(idx){
+  var p=comProyListaActual[idx];
+  if(!p)return;
+  irAExpediente(p.origen+'-'+p.nro+'/'+String(p.anio).slice(-2));
 }
 var COM_NOMBRE_CORTO={
   'De Economías Regionales, Economía Social, Micro, Pequeña y Mediana Empresa':'Ec. Regionales',
@@ -3770,20 +3884,25 @@ HTML_TEMPLATE = """<!DOCTYPE html>
         </div>
       </div>
       <div class="section-body">
-        <div class="com-detalle-layout">
-          <div class="com-panel com-panel-integrantes">
-            <div class="com-panel-title">Integrantes</div>
-            <div id="com-integrantes-list"></div>
-          </div>
-          <div class="com-panel com-panel-proyectos">
-            <div class="com-panel-title">Proyectos en tr&aacute;mite</div>
-            <div id="com-proyectos-list"></div>
-          </div>
-        </div>
         <div id="com-proxima-reunion"></div>
 
-        <div class="proy-panel">
-          <div class="com-panel-title">Proyecci&oacute;n de votaci&oacute;n</div>
+        <div class="com-sub-nav">
+          <button class="com-sub-btn active" data-comsub="integrantes" onclick="switchComSub('integrantes')">Integrantes</button>
+          <button class="com-sub-btn" data-comsub="proyectos" onclick="switchComSub('proyectos')">Proyectos en tr&aacute;mite</button>
+          <button class="com-sub-btn" data-comsub="proyeccion" onclick="switchComSub('proyeccion')">Proyecci&oacute;n de votaci&oacute;n</button>
+        </div>
+
+        <div id="com-sub-integrantes" class="com-sub-content active">
+          <div id="com-integrantes-list"></div>
+        </div>
+
+        <div id="com-sub-proyectos" class="com-sub-content">
+          <div class="com-proy-cats" id="com-proy-cats"></div>
+          <div class="am-chips" id="com-proy-tratados-chips" style="display:none"></div>
+          <div class="am-grid" id="com-proy-grid"></div>
+        </div>
+
+        <div id="com-sub-proyeccion" class="com-sub-content">
           <div class="proy-controls">
             <div class="proy-control-group" style="flex:1">
               <label>Tema en tratamiento</label>
@@ -4368,13 +4487,11 @@ def cruzar_proyectos_agenda(proyectos, agenda_procesada):
                 "fecha": r["fecha_completa"],
                 "comision": comision_display,
                 "tipo": r["tipo"],
-                "_iso": r["fecha_iso"],
+                "iso": r["fecha_iso"],
             })
     for p in proyectos:
         if p.get("reuniones"):
-            p["reuniones"].sort(key=lambda x: x["_iso"] or "", reverse=True)
-            for rr in p["reuniones"]:
-                rr.pop("_iso", None)
+            p["reuniones"].sort(key=lambda x: x["iso"] or "", reverse=True)
 
 
 def construir_od():
