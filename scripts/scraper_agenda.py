@@ -396,6 +396,26 @@ def _parece_nombre_comision(linea, comisiones_norm):
     return False
 
 
+def _le_sigue_fecha(lineas, i):
+    """¿La línea en `i` es (el inicio de) un nombre de comisión que termina
+    justo antes de una línea de fecha, con a lo sumo 1 línea de continuación
+    en el medio y sin que aparezca contenido de temario (token de expediente)
+    en el camino? Señal estructural —no depende de reconocer el nombre
+    contra comisiones.json— para comisiones ad-hoc que no son ni BICAMERAL
+    ni ACUERDOS (p.ej. "ADMINISTRADORA DE LA BIBLIOTECA DEL CONGRESO DE LA
+    NACIÓN", una comisión especial que ni siquiera está en comisiones.json)."""
+    for j in (i + 1, i + 2):
+        if j >= len(lineas):
+            break
+        candidata = lineas[j]
+        if RE_FECHA_LINEA.search(candidata):
+            return True
+        cu = candidata.upper()
+        if RE_EXP_TOKEN.search(candidata) or cu.startswith("TEMARIO") or candidata.startswith("📋"):
+            return False
+    return False
+
+
 def _comisiones_desde_buffer(buffer):
     """Arma la lista final de comisiones a partir de las líneas acumuladas
     antes de la fecha. Si en algún punto aparece "|" (reunión conjunta en el
@@ -436,7 +456,7 @@ def parsear_reuniones_texto_libre(texto, comisiones_norm):
             reuniones.append(reunion)
             reunion = None
 
-    for linea in lineas:
+    for i, linea in enumerate(lineas):
         up = linea.upper()
 
         m_sec = RE_AGENDA_SEC.match(up)
@@ -496,7 +516,12 @@ def parsear_reuniones_texto_libre(texto, comisiones_norm):
             en_expositores = True  # lo que sigue son nombres de expositores, no expedientes
             continue
 
-        if reunion is not None and _parece_nombre_comision(linea, comisiones_norm):
+        parece_nombre_ad_hoc = (
+            not RE_EXP_TOKEN.search(linea)
+            and not linea.rstrip().endswith((".", ":"))
+            and _le_sigue_fecha(lineas, i)
+        )
+        if reunion is not None and (_parece_nombre_comision(linea, comisiones_norm) or parece_nombre_ad_hoc):
             cerrar()
             en_expositores = False
             comision_buffer = [linea]
