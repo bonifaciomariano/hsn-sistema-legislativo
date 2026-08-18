@@ -6092,8 +6092,8 @@
         }
       ],
       "tipo": "senadores",
-      "boletin_id": 2338,
-      "boletin_numero": "96/26"
+      "boletin_id": 2339,
+      "boletin_numero": "97/26"
     },
     {
       "seccion": "senadores",
@@ -6114,8 +6114,8 @@
         }
       ],
       "tipo": "bicameral",
-      "boletin_id": 2338,
-      "boletin_numero": "96/26"
+      "boletin_id": 2339,
+      "boletin_numero": "97/26"
     },
     {
       "seccion": "senadores",
@@ -6126,8 +6126,8 @@
       "comisiones": [
         "LEGISLACIÓN GENERAL"
       ],
-      "salon": "ILLIA",
-      "salon_completo": "SALÓN ILLIA",
+      "salon": "AZUL",
+      "salon_completo": "SALÓN AZUL",
       "temario": [
         {
           "numero": "",
@@ -6139,8 +6139,8 @@
         }
       ],
       "tipo": "senadores",
-      "boletin_id": 2338,
-      "boletin_numero": "96/26"
+      "boletin_id": 2339,
+      "boletin_numero": "97/26"
     },
     {
       "seccion": "senadores",
@@ -6160,8 +6160,8 @@
         }
       ],
       "tipo": "senadores",
-      "boletin_id": 2338,
-      "boletin_numero": "96/26"
+      "boletin_id": 2339,
+      "boletin_numero": "97/26"
     },
     {
       "seccion": "senadores",
@@ -6183,8 +6183,8 @@
         }
       ],
       "tipo": "senadores",
-      "boletin_id": 2338,
-      "boletin_numero": "96/26"
+      "boletin_id": 2339,
+      "boletin_numero": "97/26"
     },
     {
       "seccion": "senadores",
@@ -6205,8 +6205,8 @@
         }
       ],
       "tipo": "bicameral",
-      "boletin_id": 2338,
-      "boletin_numero": "96/26"
+      "boletin_id": 2339,
+      "boletin_numero": "97/26"
     },
     {
       "seccion": "senadores",
@@ -6230,8 +6230,8 @@
         }
       ],
       "tipo": "senadores",
-      "boletin_id": 2338,
-      "boletin_numero": "96/26"
+      "boletin_id": 2339,
+      "boletin_numero": "97/26"
     },
     {
       "seccion": "senadores",
@@ -6247,7 +6247,7 @@
       "temario": [
         {
           "numero": "S-417/25",
-          "extracto": "PILATTI VERGARA: PROYECTO DE COMUNICACIÓN QUE SOLICITA INFORME SOBRE DIVERSOS PUNTOS RELACIONADOS AL CONSEJO NACIONAL DE INVESTIGACIONES CIENTIFICAS Y TECNICAS (CONICET) Y EL FINANCIAMIENTO DE LA ACTIVIDAD CIENTÍFICA A TRAVÉS DEL MENCIONADO ORGANISMO"
+          "extracto": "PILATTI VERGARA: PROYECTO DE COMUNICACIÓN QUE SOLICITA INFORME SOBRE DIVERSOS PUNTOS RELACIONADOS AL CONSEJO NACIONAL DE INVESTIGACIONES CIENTÍFICAS Y TÉCNICAS (CONICET) Y EL FINANCIAMIENTO DE LA ACTIVIDAD CIENTÍFICA A TRAVÉS DEL MENCIONADO ORGANISMO"
         },
         {
           "numero": "S-421/25",
@@ -6415,8 +6415,29 @@
         }
       ],
       "tipo": "senadores",
-      "boletin_id": 2338,
-      "boletin_numero": "96/26"
+      "boletin_id": 2339,
+      "boletin_numero": "97/26"
+    },
+    {
+      "seccion": "senadores",
+      "dia": "MARTES",
+      "fecha": "25/08",
+      "hora": "14:00",
+      "modalidad": "",
+      "comisiones": [
+        "TURISMO"
+      ],
+      "salon": "BITTEL",
+      "salon_completo": "SALÓN BITTEL",
+      "temario": [
+        {
+          "numero": "",
+          "extracto": "REUNIÓN INFORMATIVA Y ORGANIZATIVA DEL EVENTO DE ENTREGA DE DIPLOMAS DE LA MENCIÓN DE HONOR AL MÉRITO TURÍSTICO “DISTINCIÓN COMISIÓN DE TURISMO HONORABLE SENADO DE LA NACIÓN”."
+        }
+      ],
+      "tipo": "senadores",
+      "boletin_id": 2339,
+      "boletin_numero": "97/26"
     }
   ]
 }
