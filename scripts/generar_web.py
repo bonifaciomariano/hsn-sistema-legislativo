@@ -321,6 +321,35 @@ table.cross-table tr:last-child td{border-bottom:none}
 .sanc-obs.ley{color:#1B5EA2;font-weight:700}
 .agenda-badges{display:flex;align-items:center;gap:6px;flex-wrap:wrap}
 .plenaria-badge{display:inline-block;font-size:9.5px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;padding:2px 8px;border-radius:10px;background:#0d3f73;color:#fff}
+/* ── Agenda: calendario ──────────────────────────────────────────────── */
+.agenda-cal-controls{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:16px}
+.cal-header{display:flex;align-items:center;justify-content:center;gap:18px;margin:4px 0 10px}
+.cal-mes-label{font-size:15px;font-weight:700;color:#1B5EA2;min-width:170px;text-align:center}
+.cal-nav{width:32px;height:32px;border-radius:50%;border:1px solid #D6E4F0;background:#fff;color:#1B5EA2;font-size:17px;line-height:1;cursor:pointer;transition:all .15s;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.cal-nav:hover:not(:disabled){background:#1B5EA2;color:#fff;border-color:#1B5EA2}
+.cal-nav:disabled{opacity:.3;cursor:default}
+.cal-dow-row{display:grid;grid-template-columns:repeat(7,1fr);gap:4px;margin-bottom:4px}
+.cal-dow{text-align:center;font-size:10.5px;font-weight:700;color:#9aacbd;text-transform:uppercase;letter-spacing:.5px;padding:4px 0}
+.cal-dow.weekend{color:#c98a4b}
+.cal-grid{display:grid;grid-template-columns:repeat(7,1fr);gap:4px;margin-bottom:8px}
+.cal-day{min-height:92px;border:1px solid #EEF2F8;border-radius:8px;padding:5px 5px 4px;background:#fff;display:flex;flex-direction:column;gap:3px}
+.cal-day.weekend{background:#F7F5F0}
+.cal-day.outside{background:#FAFBFC;opacity:.4}
+.cal-day.has-items{cursor:pointer}
+.cal-day.has-items:hover{border-color:#1B5EA2;box-shadow:0 2px 6px rgba(27,94,162,0.15)}
+.cal-day.today .cal-day-num{background:#1B5EA2;color:#fff}
+.cal-day-num{font-size:12px;font-weight:700;color:#4A4A4A;width:20px;height:20px;display:flex;align-items:center;justify-content:center;border-radius:50%;flex-shrink:0}
+.cal-day-items{display:flex;flex-direction:column;gap:2px;overflow:hidden}
+.cal-pill{font-size:9.5px;font-weight:600;padding:1.5px 5px;border-radius:5px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;line-height:1.5}
+.cal-more{font-size:9px;color:#9aacbd;font-weight:600;padding-left:2px}
+@media(max-width:700px){
+  .cal-day{min-height:52px;padding:3px}
+  .cal-day-items{flex-direction:row;flex-wrap:wrap;gap:2px}
+  .cal-pill{font-size:0;padding:0;width:6px;height:6px;min-width:6px;border-radius:50%}
+  .cal-more{display:none}
+}
+.agenda-dia-modal{max-width:520px;max-height:82vh}
+.agenda-dia-modal .dpp-modal-body{padding:14px 0}
 /* ── Colapsables (grupos pasados / sección asesores) ──────────────────── */
 .colapsable-head{cursor:pointer;user-select:none;display:flex;align-items:center;gap:7px}
 .colapsable-head:hover{color:#2E75B6}
@@ -467,7 +496,7 @@ function init(){
   renderPivot();
   renderComisionesList();
   renderRepresentacion();
-  renderAgenda();
+  agendaInit();
   amInit();
   renderSanciones();
 }
@@ -1469,16 +1498,167 @@ function agendaSeccionHtml(tituloSeccion, hint, arr, esAsesores){
     +'<div class="agenda-seccion-title">'+esc(tituloSeccion)+hintHtml+'</div>'
     +cuerpo+'</div>';
 }
-function renderAgenda(){
-  var q=(document.getElementById('agenda-search').value||'').toLowerCase().trim();
-  var lista=AGENDA.filter(function(r){
-    return !q||(r.comisiones||[]).join(' ').toLowerCase().indexOf(q)>=0;
+/* ── Agenda: calendario mensual (senadores + bicamerales) ────────────── */
+var MESES_LARGO=['enero','febrero','marzo','abril','mayo','junio','julio','agosto','septiembre','octubre','noviembre','diciembre'];
+var DIAS_SEMANA_LARGO=['domingo','lunes','martes','miércoles','jueves','viernes','sábado'];
+var agendaComision='',agendaSearch='';
+var AGENDA_CAL_MES=null,AGENDA_CAL_MIN=null,AGENDA_CAL_MAX=null;
+
+function agendaPrincipales(){return AGENDA.filter(function(r){return r.tipo!=='asesores'})}
+function agendaTextoBusqueda(r){
+  var partes=(r.comisiones||[]).slice();
+  (r.temario||[]).forEach(function(it){
+    if(it.numero)partes.push(it.numero);
+    if(it.extracto)partes.push(it.extracto);
   });
-  var principales=lista.filter(function(r){return r.tipo!=='asesores'});
-  var asesores=lista.filter(function(r){return r.tipo==='asesores'});
-  var html=agendaSeccionHtml('Reuniones de senadores y bicamerales','',principales,false)
-    +agendaSeccionHtml('Reuniones de asesores','instancia previa, no vinculante',asesores,true);
-  document.getElementById('agenda-list').innerHTML=html||'<div class="no-results">Sin reuniones para este filtro.</div>';
+  return partes.join(' ');
+}
+/* Coincidencia de palabra(s) exacta(s): cada término tipeado debe aparecer
+   como palabra completa (no substring de otra palabra), sin importar
+   mayúsculas. Unicode-aware para que tildes/ñ no rompan el límite de palabra.
+   Para que filtre a medida que se escribe (y no recién al completar la
+   palabra), la última palabra —mientras no haya un espacio después— se
+   busca por prefijo; las anteriores, ya "cerradas" por el espacio, exigen
+   coincidencia exacta. */
+function matchPalabraExacta(query,texto){
+  query=query||'';
+  var terminaEnEspacio=/\s$/.test(query);
+  var tokens=query.trim().split(/\s+/).filter(Boolean);
+  if(!tokens.length)return true;
+  texto=texto||'';
+  return tokens.every(function(tok,i){
+    var esUltimaIncompleta=(i===tokens.length-1)&&!terminaEnEspacio;
+    var escTok=tok.replace(/[.*+?^${}()|[\]\\]/g,'\\$&');
+    try{
+      var patron='(?<![\\p{L}\\p{N}])'+escTok+(esUltimaIncompleta?'':'(?![\\p{L}\\p{N}])');
+      return new RegExp(patron,'iu').test(texto);
+    }catch(e){
+      return texto.toLowerCase().indexOf(tok.toLowerCase())>=0;
+    }
+  });
+}
+function agendaPasaFiltro(r){
+  if(agendaComision&&(r.comisiones||[]).indexOf(agendaComision)<0)return false;
+  if(agendaSearch&&!matchPalabraExacta(agendaSearch,agendaTextoBusqueda(r)))return false;
+  return true;
+}
+function agendaPrincipalesFiltradas(){return agendaPrincipales().filter(agendaPasaFiltro)}
+
+function agendaInit(){
+  var principales=agendaPrincipales();
+  var comSet={};
+  principales.forEach(function(r){(r.comisiones||[]).forEach(function(c){if(c)comSet[c]=1})});
+  fillSelect('agenda-comision-select',Object.keys(comSet).sort());
+  document.getElementById('agenda-comision-select').addEventListener('change',function(e){agendaComision=e.target.value;agendaOnFiltro()});
+  document.getElementById('agenda-search').addEventListener('input',function(e){agendaSearch=e.target.value;agendaOnFiltro()});
+
+  var fechas=principales.map(function(r){return r.fecha_iso?new Date(r.fecha_iso):null}).filter(Boolean);
+  var hoy=new Date();
+  if(fechas.length){
+    var min=fechas.reduce(function(a,b){return b<a?b:a});
+    var max=fechas.reduce(function(a,b){return b>a?b:a});
+    AGENDA_CAL_MIN=new Date(min.getFullYear(),min.getMonth(),1);
+    AGENDA_CAL_MAX=new Date(max.getFullYear(),max.getMonth(),1);
+  }else{
+    AGENDA_CAL_MIN=AGENDA_CAL_MAX=new Date(hoy.getFullYear(),hoy.getMonth(),1);
+  }
+  var inicial=new Date(hoy.getFullYear(),hoy.getMonth(),1);
+  if(inicial<AGENDA_CAL_MIN)inicial=new Date(AGENDA_CAL_MIN);
+  if(inicial>AGENDA_CAL_MAX)inicial=new Date(AGENDA_CAL_MAX);
+  AGENDA_CAL_MES=inicial;
+
+  renderAgendaCalendario();
+  renderAgendaAsesores();
+}
+function agendaOnFiltro(){
+  renderAgendaCalendario();
+  renderAgendaAsesores();
+}
+function agendaCambiarMes(delta){
+  var m=new Date(AGENDA_CAL_MES.getFullYear(),AGENDA_CAL_MES.getMonth()+delta,1);
+  if(m<AGENDA_CAL_MIN)m=new Date(AGENDA_CAL_MIN);
+  if(m>AGENDA_CAL_MAX)m=new Date(AGENDA_CAL_MAX);
+  AGENDA_CAL_MES=m;
+  renderAgendaCalendario();
+}
+function renderAgendaCalendario(){
+  var mes=AGENDA_CAL_MES;
+  var nombreMes=MESES_LARGO[mes.getMonth()];
+  document.getElementById('cal-mes-label').textContent=nombreMes.charAt(0).toUpperCase()+nombreMes.slice(1)+' de '+mes.getFullYear();
+
+  var prevMes=new Date(mes.getFullYear(),mes.getMonth()-1,1);
+  var nextMes=new Date(mes.getFullYear(),mes.getMonth()+1,1);
+  document.getElementById('cal-prev').disabled=prevMes<AGENDA_CAL_MIN;
+  document.getElementById('cal-next').disabled=nextMes>AGENDA_CAL_MAX;
+
+  var filtradas=agendaPrincipalesFiltradas();
+  var porDia={};
+  filtradas.forEach(function(r){
+    if(!r.fecha_iso)return;
+    var d=new Date(r.fecha_iso);
+    if(d.getFullYear()!==mes.getFullYear()||d.getMonth()!==mes.getMonth())return;
+    (porDia[d.getDate()]=porDia[d.getDate()]||[]).push(r);
+  });
+  Object.keys(porDia).forEach(function(k){porDia[k].sort(function(a,b){return reunionTime(a)-reunionTime(b)})});
+
+  var primerDiaSemana=(mes.getDay()+6)%7; /* 0=lunes ... 6=domingo */
+  var diasEnMes=new Date(mes.getFullYear(),mes.getMonth()+1,0).getDate();
+  var diasMesAnterior=new Date(mes.getFullYear(),mes.getMonth(),0).getDate();
+  var hoy=new Date();
+  var hoyKey=hoy.getFullYear()+'-'+hoy.getMonth()+'-'+hoy.getDate();
+
+  var celdas=[];
+  for(var i=0;i<primerDiaSemana;i++)celdas.push({num:diasMesAnterior-primerDiaSemana+1+i,outside:true});
+  for(var d2=1;d2<=diasEnMes;d2++)celdas.push({num:d2,outside:false,items:porDia[d2]||[]});
+  var trailNum=1;
+  while(celdas.length%7!==0)celdas.push({num:trailNum++,outside:true});
+
+  var html='';
+  celdas.forEach(function(c,idx){
+    var dow=idx%7,weekend=(dow===5||dow===6);
+    var cls='cal-day'+(weekend?' weekend':'')+(c.outside?' outside':'');
+    if(!c.outside&&(mes.getFullYear()+'-'+mes.getMonth()+'-'+c.num)===hoyKey)cls+=' today';
+    var itemsHtml='';
+    if(!c.outside&&c.items&&c.items.length){
+      cls+=' has-items';
+      var max=3;
+      c.items.slice(0,max).forEach(function(r){
+        var col=REUNION_TIPO_COLOR[r.tipo]||{fg:'#888',bg:'#eee'};
+        var txt=r.hora+' '+(r.comisiones||[]).join(', ');
+        itemsHtml+='<span class="cal-pill" style="background:'+col.bg+';color:'+col.fg+'" title="'+escAttr(txt)+'">'+esc(txt)+'</span>';
+      });
+      if(c.items.length>max)itemsHtml+='<span class="cal-more">+'+(c.items.length-max)+' más</span>';
+    }
+    var onclick=(!c.outside&&c.items&&c.items.length)?' onclick="agendaAbrirDia('+mes.getFullYear()+','+mes.getMonth()+','+c.num+')"':'';
+    html+='<div class="'+cls+'"'+onclick+'><span class="cal-day-num">'+c.num+'</span><div class="cal-day-items">'+itemsHtml+'</div></div>';
+  });
+  document.getElementById('cal-grid').innerHTML=html;
+
+  var msgEl=document.getElementById('cal-empty-msg');
+  var hayFiltro=agendaComision||agendaSearch;
+  msgEl.style.display=(hayFiltro&&!filtradas.length)?'block':'none';
+}
+function agendaAbrirDia(anio,mes,dia){
+  var reuniones=agendaPrincipalesFiltradas().filter(function(r){
+    if(!r.fecha_iso)return false;
+    var d=new Date(r.fecha_iso);
+    return d.getFullYear()===anio&&d.getMonth()===mes&&d.getDate()===dia;
+  });
+  reuniones.sort(function(a,b){return reunionTime(a)-reunionTime(b)});
+  var diaSemana=DIAS_SEMANA_LARGO[new Date(anio,mes,dia).getDay()];
+  document.getElementById('agenda-dia-titulo').textContent=diaSemana.charAt(0).toUpperCase()+diaSemana.slice(1)+' '+dia+' de '+MESES_LARGO[mes]+' de '+anio;
+  document.getElementById('agenda-dia-body').innerHTML=reuniones.map(function(r){
+    return buildReunionCard(r,AGENDA.indexOf(r),reunionTime(r)<Date.now());
+  }).join('')||'<div class="com-empty">Sin reuniones.</div>';
+  document.getElementById('agenda-dia-overlay').classList.add('open');
+}
+function agendaCerrarDia(e){
+  if(e&&e.target!==document.getElementById('agenda-dia-overlay'))return;
+  document.getElementById('agenda-dia-overlay').classList.remove('open');
+}
+function renderAgendaAsesores(){
+  var asesores=AGENDA.filter(function(r){return r.tipo==='asesores'}).filter(agendaPasaFiltro);
+  document.getElementById('agenda-asesores').innerHTML=agendaSeccionHtml('Reuniones de asesores','instancia previa, no vinculante',asesores,true);
 }
 /* ── Ayuda Memoria (Órdenes del Día) ──────────────────────────────── */
 var PROYECTOS_POR_CLAVE=null;
@@ -1662,6 +1842,7 @@ function irAExpediente(numero){
 function abrirReunion(idx){
   var r=AGENDA[idx];
   if(!r)return;
+  agendaCerrarDia({target:document.getElementById('agenda-dia-overlay')});
   document.getElementById('agenda-nivel1').classList.remove('active');
   document.getElementById('agenda-nivel2').classList.add('active');
   var tl=REUNION_TIPO_LABEL[r.tipo]||r.tipo;
@@ -2048,7 +2229,7 @@ HTML_TEMPLATE = """<!DOCTYPE html>
 <!-- ====================== MAIN: AGENDA ====================== -->
 <div id="main-agenda" class="mtab-content">
 
-  <!-- NIVEL 1: lista de reuniones -->
+  <!-- NIVEL 1: calendario de reuniones -->
   <div id="agenda-nivel1" class="com-nivel active">
     <div class="section-block">
       <div class="section-header">
@@ -2056,8 +2237,28 @@ HTML_TEMPLATE = """<!DOCTYPE html>
         <span class="section-hint">Boletines de comisiones del HSN</span>
       </div>
       <div class="section-body">
-        <input class="search-box" type="text" id="agenda-search" placeholder="Buscar por comisi&oacute;n&hellip;" oninput="renderAgenda()" style="max-width:360px">
-        <div id="agenda-list"></div>
+        <div class="agenda-cal-controls">
+          <input class="search-box" type="text" id="agenda-search" placeholder="Buscar palabra exacta (comisi&oacute;n o temario)&hellip;" style="max-width:320px">
+          <div class="select-wrapper">
+            <select class="filter-select" id="agenda-comision-select">
+              <option value="">Todas las comisiones</option>
+            </select>
+            <span class="select-arrow">&#9660;</span>
+          </div>
+        </div>
+        <div class="cal-header">
+          <button class="cal-nav" id="cal-prev" onclick="agendaCambiarMes(-1)" aria-label="Mes anterior">&#8249;</button>
+          <div class="cal-mes-label" id="cal-mes-label">&nbsp;</div>
+          <button class="cal-nav" id="cal-next" onclick="agendaCambiarMes(1)" aria-label="Mes siguiente">&#8250;</button>
+        </div>
+        <div class="cal-dow-row">
+          <div class="cal-dow">Lun</div><div class="cal-dow">Mar</div><div class="cal-dow">Mi&eacute;</div>
+          <div class="cal-dow">Jue</div><div class="cal-dow">Vie</div><div class="cal-dow weekend">S&aacute;b</div>
+          <div class="cal-dow weekend">Dom</div>
+        </div>
+        <div class="cal-grid" id="cal-grid"></div>
+        <div class="no-results" id="cal-empty-msg" style="display:none">Sin reuniones para este filtro en el rango cargado.</div>
+        <div id="agenda-asesores"></div>
       </div>
     </div>
   </div>
@@ -2077,6 +2278,16 @@ HTML_TEMPLATE = """<!DOCTYPE html>
     </div>
   </div>
 
+</div>
+
+<div id="agenda-dia-overlay" class="dpp-modal-overlay" onclick="agendaCerrarDia(event)">
+  <div class="dpp-modal agenda-dia-modal">
+    <div class="dpp-modal-head">
+      <span id="agenda-dia-titulo"></span>
+      <button class="dpp-modal-close" onclick="agendaCerrarDia()">&#10005;</button>
+    </div>
+    <div class="dpp-modal-body" id="agenda-dia-body"></div>
+  </div>
 </div>
 
 <!-- ====================== MAIN: AYUDA MEMORIA ====================== -->
