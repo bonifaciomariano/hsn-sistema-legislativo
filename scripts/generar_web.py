@@ -247,6 +247,52 @@ body{font-family:'Poppins',Calibri,sans-serif;background:#F5F7FA;color:#4A4A4A;f
 .dpp-hist-fecha{font-size:10px;font-weight:400;color:#4A6A8A;margin-left:8px}
 .dpp-hist-detalle{font-size:12px;color:#0d3f73;margin-top:2px}
 
+/* ── Proyección de votación (adaptado de comisiones-senado) ───────────── */
+.proy-panel{margin-top:16px}
+.proy-controls{background:#fff;border:1px solid #D6E4F0;border-radius:10px;padding:16px 20px;margin-bottom:16px;display:flex;flex-wrap:wrap;gap:12px;align-items:flex-end}
+.proy-control-group{display:flex;flex-direction:column;gap:4px}
+.proy-control-group label{font-size:11px;font-weight:600;color:#1B5EA2;text-transform:uppercase;letter-spacing:.5px}
+.proy-input{height:36px;padding:0 12px;border:1px solid #D6E4F0;border-radius:6px;font-family:inherit;font-size:13px;color:#4A4A4A;background:#F5F7FA;outline:none;min-width:260px}
+.proy-input:focus{border-color:#1B5EA2}
+.dictamen-banner{border-radius:10px;padding:14px 20px;margin-bottom:16px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;border-width:2px;border-style:solid}
+.dictamen-banner.no-dictamen{background:#FEE2E2;border-color:#FCA5A5}
+.dictamen-banner.hay-dictamen{background:#D1FAE5;border-color:#6EE7B7}
+.dictamen-status{font-size:22px;font-weight:800;letter-spacing:1px}
+.dictamen-banner.no-dictamen .dictamen-status{color:#991B1B}
+.dictamen-banner.hay-dictamen .dictamen-status{color:#065F46}
+.dictamen-counter{font-size:13px;font-weight:500;color:#4B5563}
+.dictamen-counter span{font-weight:700}
+.proy-actions{display:flex;gap:8px;margin-bottom:12px;align-items:center;flex-wrap:wrap}
+.btn-reset-proy{height:36px;padding:0 14px;background:#F3F4F6;color:#4A4A4A;border:1px solid #D6E4F0;border-radius:6px;font-family:inherit;font-size:12px;font-weight:500;cursor:pointer;transition:background .15s}
+.btn-reset-proy:hover{background:#E5E7EB}
+.btn-pdf{display:flex;align-items:center;gap:6px;height:34px;padding:0 14px;background:#1B5EA2;color:#fff;border:none;border-radius:6px;font-family:inherit;font-size:12px;font-weight:600;cursor:pointer;white-space:nowrap;transition:background .15s}
+.btn-pdf:hover{background:#2E75B6}
+.proy-mayoria-label{font-size:12px;color:#6B7280;margin-left:auto}
+.proy-bloque-panel{background:#fff;border:1px solid #D6E4F0;border-radius:10px;padding:14px 20px;margin-bottom:14px;display:none}
+.proy-bloque-panel-title{font-size:10px;font-weight:700;color:#1B5EA2;text-transform:uppercase;letter-spacing:.8px;margin-bottom:10px}
+.proy-bloque-row{display:flex;align-items:center;gap:8px;padding:5px 0;border-bottom:1px solid #F1F5F9;flex-wrap:wrap}
+.proy-bloque-row:last-child{border-bottom:none}
+.proy-bloque-name{flex:1;min-width:160px;font-size:12px;font-weight:500;color:#4A4A4A;display:flex;align-items:center;gap:6px}
+.bloque-dot{width:10px;height:10px;border-radius:50%;flex-shrink:0}
+.proy-vote-btns{display:flex;gap:4px;flex-wrap:wrap}
+.vote-btn{padding:4px 10px;border:1px solid;border-radius:5px;font-family:inherit;font-size:11px;font-weight:600;cursor:pointer;transition:background .12s,color .12s}
+.vote-btn.mayoria{border-color:#059669;color:#059669;background:#fff}
+.vote-btn.mayoria.active{background:#D1FAE5;border-color:#059669;color:#065F46}
+.vote-btn.mayoria_dis{border-color:#D97706;color:#D97706;background:#fff}
+.vote-btn.mayoria_dis.active{background:#FEF3C7;border-color:#D97706;color:#92400E}
+.vote-btn.minoria{border-color:#DC2626;color:#DC2626;background:#fff}
+.vote-btn.minoria.active{background:#FEE2E2;border-color:#DC2626;color:#991B1B}
+.vote-btn.sin{border-color:#9CA3AF;color:#6B7280;background:#fff}
+.vote-btn.sin.active{background:#F3F4F6;border-color:#6B7280;color:#374151}
+.proy-table-wrap{background:#fff;border:1px solid #D6E4F0;border-radius:10px;overflow:hidden;overflow-x:auto}
+.proy-table{width:100%;border-collapse:collapse;font-size:13px}
+.proy-table th{background:#1B5EA2;color:#fff;padding:9px 14px;text-align:left;font-weight:600;font-size:11px;text-transform:uppercase;letter-spacing:.3px;white-space:nowrap}
+.proy-table td{padding:8px 14px;border-bottom:1px solid #F1F5F9;vertical-align:middle}
+.proy-table tr:last-child td{border-bottom:none}
+.proy-table tr:hover td{background:#F8FAFF}
+.proy-empty{text-align:center;padding:40px;color:#9CA3AF;font-size:14px}
+@media(max-width:700px){.proy-controls{padding:12px}.proy-input{min-width:100%}}
+
 /* ── Representación por bloques ──────────────────────────────────────── */
 .repr-titulo{font-size:11px;font-weight:700;color:#1B5EA2;text-transform:uppercase;letter-spacing:1px;margin:18px 0 8px;padding-bottom:5px;border-bottom:1px solid #D6E4F0}
 .repr-titulo:first-child{margin-top:0}
@@ -1668,6 +1714,8 @@ function abrirComision(idx){
   renderIntegrantes(c);
   renderProyectosComision(c);
   renderProximaReunion(c);
+  document.getElementById('proyTema').value='';
+  renderProyeccion();
 }
 function volverComisiones(){
   document.getElementById('com-nivel2').classList.remove('active');
@@ -1778,6 +1826,201 @@ var COM_NOMBRE_CORTO={
   'De Justicia y Asuntos Penales':'Justicia Penal'
 };
 function nombreComCorto(nombre){return COM_NOMBRE_CORTO[nombre]||nombreCom(nombre)}
+
+/* ── Proyección de votación (adaptado de comisiones-senado) ───────────── */
+var PROY_VOTOS={};
+var _PROY_BLOQUE_IDX={};
+function renderProyeccion(){
+  var c=comisionAbierta;
+  var tbody=document.getElementById('proyTableBody');
+  var panel=document.getElementById('proyBloquePanel');
+  Object.keys(PROY_VOTOS).forEach(function(k){delete PROY_VOTOS[k]});
+  Object.keys(_PROY_BLOQUE_IDX).forEach(function(k){delete _PROY_BLOQUE_IDX[k]});
+  var integrantes=(c&&c.integrantes)||[];
+  if(!integrantes.length){
+    tbody.innerHTML='<tr><td colspan="5" class="proy-empty">Sin integrantes cargados.</td></tr>';
+    if(panel)panel.style.display='none';
+    updateDictamenBanner();
+    return;
+  }
+  integrantes.forEach(function(m,i){
+    if(!_PROY_BLOQUE_IDX[m.bloque])_PROY_BLOQUE_IDX[m.bloque]=[];
+    _PROY_BLOQUE_IDX[m.bloque].push(i);
+  });
+  if(panel){
+    var bloques=[];
+    integrantes.forEach(function(m){if(bloques.indexOf(m.bloque)<0)bloques.push(m.bloque)});
+    panel.innerHTML='<div class="proy-bloque-panel-title">Posicionamiento por bloque</div>'
+      +bloques.map(function(b,bi){
+        var bc=blqColor(b);
+        var cnt=_PROY_BLOQUE_IDX[b].length;
+        return '<div class="proy-bloque-row">'
+          +'<div class="proy-bloque-name"><span class="bloque-dot" style="background:'+bc.dot+'"></span>'+esc(b)+'<span style="font-size:10px;color:#9CA3AF;margin-left:4px">('+cnt+')</span></div>'
+          +'<div class="proy-vote-btns">'
+          +'<button class="vote-btn mayoria" onclick="setVotoBloque('+bi+',\'mayoria\')">Mayor&iacute;a</button>'
+          +'<button class="vote-btn mayoria_dis" onclick="setVotoBloque('+bi+',\'mayoria_dis\')">May. c/ disidencia</button>'
+          +'<button class="vote-btn minoria" onclick="setVotoBloque('+bi+',\'minoria\')">Minor&iacute;a</button>'
+          +'<button class="vote-btn sin" onclick="setVotoBloque('+bi+',\'sin\')">Sin definir</button>'
+          +'</div></div>';
+      }).join('');
+    panel.style.display='block';
+    panel._bloques=bloques;
+  }
+  tbody.innerHTML=integrantes.map(function(m,i){
+    PROY_VOTOS[i]='sin';
+    var bc=blqColor(m.bloque);
+    var cLabel=(m.rol&&m.rol!=='Vocal')?m.rol:'';
+    return '<tr id="proy-row-'+i+'">'
+      +'<td><span class="bloque-dot" style="background:'+bc.dot+'"></span></td>'
+      +'<td style="font-weight:500">'+esc(m.nombre)+'</td>'
+      +'<td><span style="font-size:11px;padding:2px 7px;border-radius:10px;background:'+bc.bg+';color:'+bc.badge+'">'+esc(m.bloque)+'</span></td>'
+      +'<td style="font-size:11px;color:#6B7280">'+esc(cLabel)+'</td>'
+      +'<td><div class="proy-vote-btns">'
+      +'<button class="vote-btn mayoria" onclick="setVoto('+i+',\'mayoria\')">Mayor&iacute;a</button>'
+      +'<button class="vote-btn mayoria_dis" onclick="setVoto('+i+',\'mayoria_dis\')">May. c/ disidencia</button>'
+      +'<button class="vote-btn minoria" onclick="setVoto('+i+',\'minoria\')">Minor&iacute;a</button>'
+      +'<button class="vote-btn sin active" onclick="setVoto('+i+',\'sin\')">Sin definir</button>'
+      +'</div></td></tr>';
+  }).join('');
+  updateDictamenBanner();
+}
+function setVotoBloque(bloqueIdx,voto){
+  var panel=document.getElementById('proyBloquePanel');
+  var bloque=panel&&panel._bloques?panel._bloques[bloqueIdx]:null;
+  if(!bloque)return;
+  (_PROY_BLOQUE_IDX[bloque]||[]).forEach(function(i){setVoto(i,voto)});
+}
+function setVoto(idx,voto){
+  PROY_VOTOS[idx]=voto;
+  var row=document.getElementById('proy-row-'+idx);
+  if(!row)return;
+  row.querySelectorAll('.vote-btn').forEach(function(b){
+    b.classList.remove('active');
+    if(b.classList.contains(voto))b.classList.add('active');
+  });
+  updateDictamenBanner();
+}
+function resetProyVotos(){
+  Object.keys(PROY_VOTOS).forEach(function(k){
+    PROY_VOTOS[k]='sin';
+    var row=document.getElementById('proy-row-'+k);
+    if(row){
+      row.querySelectorAll('.vote-btn').forEach(function(b){
+        b.classList.remove('active');
+        if(b.classList.contains('sin'))b.classList.add('active');
+      });
+    }
+  });
+  updateDictamenBanner();
+}
+function updateDictamenBanner(){
+  var vals=Object.values(PROY_VOTOS);
+  var total=vals.length;
+  var mayoria=vals.filter(function(v){return v==='mayoria'}).length;
+  var mayoriaDis=vals.filter(function(v){return v==='mayoria_dis'}).length;
+  var minoria=vals.filter(function(v){return v==='minoria'}).length;
+  var sin=vals.filter(function(v){return v==='sin'}).length;
+  var mayoriaAbsoluta=total>0?Math.floor(total/2)+1:1;
+  var hayDictamen=(mayoria+mayoriaDis)>=mayoriaAbsoluta&&total>0;
+  var banner=document.getElementById('dictamenBanner');
+  if(!banner)return;
+  banner.className='dictamen-banner '+(hayDictamen?'hay-dictamen':'no-dictamen');
+  document.getElementById('dictamenStatus').textContent=hayDictamen?'HAY DICTAMEN':'NO HAY DICTAMEN';
+  document.getElementById('dictamenCounter').innerHTML=
+    '<span style="color:#059669">'+mayoria+' mayoría</span> · <span style="color:#D97706">'+mayoriaDis+' may. c/ disidencia</span> · <span style="color:#DC2626">'+minoria+' minoría</span> · '+sin+' sin definir · '+total+' total';
+  document.getElementById('proyMayoriaLabel').textContent=total>0?'Mayoría absoluta: '+mayoriaAbsoluta+' votos':'';
+}
+function exportProyPdf(){
+  var jsPDFLib=window.jspdf;
+  if(!jsPDFLib){alert('Error: jsPDF no cargó correctamente.');return;}
+  var jsPDF=jsPDFLib.jsPDF;
+  var c=comisionAbierta;
+  if(!c){alert('Abrí una comisión primero.');return;}
+  var tema=document.getElementById('proyTema').value||'Sin especificar';
+  var rows=document.querySelectorAll('#proyTableBody tr[id^="proy-row-"]');
+  if(!rows.length){alert('No hay integrantes para exportar.');return;}
+  var doc=new jsPDF({orientation:'portrait',unit:'mm',format:'a4'});
+  loadPoppins(doc);
+  var W=210,H=297,ML=15,MR=15;
+  var BLUE=[27,94,162];var BLUE_LT=[214,228,240];var WHITE=[255,255,255];
+  var d=new Date();
+  var TODAY=d.getDate()+' de '+MESES_LARGO[d.getMonth()]+' de '+d.getFullYear();
+  doc.setFillColor(BLUE[0],BLUE[1],BLUE[2]);doc.rect(0,0,W,18,'F');
+  doc.setTextColor(WHITE[0],WHITE[1],WHITE[2]);
+  doc.setFont('Poppins','normal');doc.setFontSize(7);
+  doc.text('SENADO DE LA NACIÓN',ML,6.5);
+  doc.setFont('Poppins','bold');doc.setFontSize(9.5);
+  doc.text('PROSECRETARÍA PARLAMENTARIA',ML,13);
+  doc.setFont('Poppins','normal');doc.setFontSize(7);
+  doc.text('PROYECCIÓN DE VOTACIÓN',W-MR,6.5,{align:'right'});
+  doc.text(TODAY,W-MR,13,{align:'right'});
+  doc.setFillColor(BLUE_LT[0],BLUE_LT[1],BLUE_LT[2]);doc.rect(0,18,W,0.8,'F');
+  var y=26;
+  doc.setFont('Poppins','bold');doc.setFontSize(12);doc.setTextColor(BLUE[0],BLUE[1],BLUE[2]);
+  var titleLines=doc.splitTextToSize(nombreCom(c.nombre),180);
+  titleLines.forEach(function(l){doc.text(l,ML,y);y+=6;});
+  y+=2;
+  doc.setFont('Poppins','normal');doc.setFontSize(9);doc.setTextColor(74,74,74);
+  doc.text('Tema: '+tema,ML,y);y+=5;
+  var vals=Object.values(PROY_VOTOS);
+  var total=vals.length;
+  var nMayoria=vals.filter(function(v){return v==='mayoria'}).length;
+  var nMayoriaDis=vals.filter(function(v){return v==='mayoria_dis'}).length;
+  var nMinoria=vals.filter(function(v){return v==='minoria'}).length;
+  var nSin=vals.filter(function(v){return v==='sin'}).length;
+  var mayoriaAbsoluta=Math.floor(total/2)+1;
+  var hayDictamen=(nMayoria+nMayoriaDis)>=mayoriaAbsoluta&&total>0;
+  y+=3;
+  var dictColor=hayDictamen?[6,95,70]:[153,27,27];
+  var dictBg=hayDictamen?[209,250,229]:[254,226,226];
+  doc.setFillColor(dictBg[0],dictBg[1],dictBg[2]);doc.rect(ML,y-5,W-ML-MR,10,'F');
+  doc.setFont('Poppins','bold');doc.setFontSize(13);doc.setTextColor(dictColor[0],dictColor[1],dictColor[2]);
+  doc.text(hayDictamen?'HAY DICTAMEN':'NO HAY DICTAMEN',W/2,y+1,{align:'center'});
+  y+=9;
+  doc.setFont('Poppins','normal');doc.setFontSize(9);doc.setTextColor(74,74,74);
+  doc.text(nMayoria+' mayoría · '+nMayoriaDis+' may. c/ disidencia · '+nMinoria+' minoría · '+nSin+' sin definir · '+total+' total',W/2,y,{align:'center'});
+  y+=8;
+  doc.setFillColor(BLUE[0],BLUE[1],BLUE[2]);doc.rect(ML,y,W-ML-MR,6,'F');
+  doc.setTextColor(WHITE[0],WHITE[1],WHITE[2]);doc.setFont('Poppins','bold');doc.setFontSize(7.5);
+  doc.text('NOMBRE',ML+2,y+4);doc.text('BLOQUE',ML+75,y+4);doc.text('CARGO',ML+130,y+4);doc.text('POSICIÓN',W-MR-2,y+4,{align:'right'});
+  y+=8;
+  var idx=0;
+  while(true){
+    var row=document.getElementById('proy-row-'+idx);
+    if(!row)break;
+    if(y>H-20){
+      doc.setDrawColor(BLUE_LT[0],BLUE_LT[1],BLUE_LT[2]);doc.setLineWidth(0.3);doc.line(ML,H-9,W-MR,H-9);
+      doc.setFont('Poppins','normal');doc.setFontSize(7);doc.setTextColor(150,150,150);
+      doc.text('Prosecretaría Parlamentaria',ML,H-5);doc.text(TODAY,W-MR,H-5,{align:'right'});
+      doc.addPage();
+      y=22;
+      doc.setFillColor(BLUE[0],BLUE[1],BLUE[2]);doc.rect(ML,y,W-ML-MR,6,'F');
+      doc.setTextColor(WHITE[0],WHITE[1],WHITE[2]);doc.setFont('Poppins','bold');doc.setFontSize(7.5);
+      doc.text('NOMBRE',ML+2,y+4);doc.text('BLOQUE',ML+75,y+4);doc.text('CARGO',ML+130,y+4);doc.text('POSICIÓN',W-MR-2,y+4,{align:'right'});
+      y+=8;
+    }
+    if(idx%2===0){doc.setFillColor(248,250,255);doc.rect(ML,y-3,W-ML-MR,6,'F');}
+    var voto=PROY_VOTOS[idx]||'sin';
+    var votoLabel=voto==='mayoria'?'Mayoría':voto==='mayoria_dis'?'May. c/ disidencia':voto==='minoria'?'Minoría':'Sin definir';
+    var votoColor=voto==='mayoria'?[5,150,105]:voto==='mayoria_dis'?[217,119,6]:voto==='minoria'?[220,38,38]:[156,163,175];
+    var cells=row.querySelectorAll('td');
+    var nombre=cells[1]?cells[1].textContent.trim():'';
+    var bloque=cells[2]?cells[2].textContent.trim():'';
+    var cargo=cells[3]?cells[3].textContent.trim():'';
+    doc.setFont('Poppins','normal');doc.setFontSize(8);doc.setTextColor(74,74,74);
+    doc.text(nombre.substring(0,40),ML+2,y+1);
+    doc.text(bloque.substring(0,28),ML+75,y+1);
+    doc.text(cargo.substring(0,20),ML+130,y+1);
+    doc.setTextColor(votoColor[0],votoColor[1],votoColor[2]);doc.setFont('Poppins','bold');
+    doc.text(votoLabel,W-MR-2,y+1,{align:'right'});
+    y+=6;idx++;
+  }
+  doc.setDrawColor(BLUE_LT[0],BLUE_LT[1],BLUE_LT[2]);doc.setLineWidth(0.3);doc.line(ML,H-9,W-MR,H-9);
+  doc.setFont('Poppins','normal');doc.setFontSize(7);doc.setTextColor(150,150,150);
+  doc.text('Prosecretaría Parlamentaria',ML,H-5);doc.text(TODAY,W-MR,H-5,{align:'right'});
+  doc.save('proyeccion-'+nombreCom(c.nombre).replace(/[^a-zA-Z0-9]/g,'-').substring(0,30)+'.pdf');
+}
+
 function renderRepresentacion(){
   var totalSenadores=0;
   Object.keys(BLOQUE_TOTALES).forEach(function(b){totalSenadores+=BLOQUE_TOTALES[b]});
@@ -3538,6 +3781,40 @@ HTML_TEMPLATE = """<!DOCTYPE html>
           </div>
         </div>
         <div id="com-proxima-reunion"></div>
+
+        <div class="proy-panel">
+          <div class="com-panel-title">Proyecci&oacute;n de votaci&oacute;n</div>
+          <div class="proy-controls">
+            <div class="proy-control-group" style="flex:1">
+              <label>Tema en tratamiento</label>
+              <input type="text" class="proy-input" id="proyTema" placeholder="Ingres&aacute; el tema a proyectar&hellip;" oninput="updateDictamenBanner()">
+            </div>
+          </div>
+          <div class="dictamen-banner no-dictamen" id="dictamenBanner">
+            <span class="dictamen-status" id="dictamenStatus">NO HAY DICTAMEN</span>
+            <span class="dictamen-counter" id="dictamenCounter">0 mayor&iacute;a &middot; 0 may. c/ disidencia &middot; 0 minor&iacute;a &middot; 0 sin definir &middot; 0 total</span>
+          </div>
+          <div class="proy-actions">
+            <button class="btn-reset-proy" onclick="resetProyVotos()">Resetear posicionamientos</button>
+            <button class="btn-pdf" onclick="exportProyPdf()">&#128196; Exportar PDF</button>
+            <span class="proy-mayoria-label" id="proyMayoriaLabel"></span>
+          </div>
+          <div class="proy-bloque-panel" id="proyBloquePanel"></div>
+          <div class="proy-table-wrap">
+            <table class="proy-table">
+              <thead><tr>
+                <th style="width:12px"></th>
+                <th>Nombre</th>
+                <th>Bloque</th>
+                <th>Cargo</th>
+                <th>Posicionamiento</th>
+              </tr></thead>
+              <tbody id="proyTableBody">
+                <tr><td colspan="5" class="proy-empty">Sin integrantes cargados.</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
       </div>
     </div>
   </div>
