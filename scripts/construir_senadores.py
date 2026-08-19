@@ -46,8 +46,28 @@ def sin_tildes(texto):
     )
 
 
+def _clave_bloque(bloque):
+    """Clave de normalización para detectar el mismo bloque escrito distinto
+    (mayúsculas/minúsculas, tildes) entre las dos planillas fuente. Misma
+    lógica que normBloque() en el JS del sitio (mayúsculas + sin tildes)."""
+    return sin_tildes(bloque).upper().strip()
+
+
 def construir_padron():
     padron = {}
+    # Nombre canónico por bloque (clave normalizada -> primera grafía vista).
+    # Los senadores en ejercicio (Senadores_2026.xlsx) se procesan primero,
+    # así que su grafía manda; Senadores_mandato_cumplido_2025.xlsx sólo
+    # aporta una grafía propia para bloques que no existan entre los
+    # vigentes (bloques ya disueltos, p.ej. "Unidad Ciudadana").
+    canonico = {}
+
+    def bloque_canonico(bloque_raw):
+        bloque_raw = (bloque_raw or "Sin datos").strip()
+        clave = _clave_bloque(bloque_raw)
+        if clave not in canonico:
+            canonico[clave] = bloque_raw
+        return canonico[clave]
 
     # 1) Senadores en ejercicio (xlsx 2026)
     if os.path.exists(XLSX_VIGENTES):
@@ -59,7 +79,7 @@ def construir_padron():
                 continue
             nombre_norm = normalizar_nombre(f"{apellido}, {nombre}" if nombre else apellido)
             padron[nombre_norm] = {
-                "bloque": (bloque or "Sin datos").strip(),
+                "bloque": bloque_canonico(bloque),
                 "provincia": (provincia or "").strip(),
                 "vigente": True,
             }
@@ -77,7 +97,7 @@ def construir_padron():
             if nombre_norm in padron:
                 continue
             padron[nombre_norm] = {
-                "bloque": (bloque or "Sin datos").strip(),
+                "bloque": bloque_canonico(bloque),
                 "provincia": (distrito or "").strip().upper(),
                 "vigente": False,
             }
