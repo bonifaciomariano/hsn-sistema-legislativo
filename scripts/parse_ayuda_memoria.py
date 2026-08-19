@@ -1,8 +1,11 @@
 """Migra los xlsx manuales de Ayuda Memoria a data/ayuda_memoria.json.
 
-Fuente primaria: ordenes_dia.xlsx (export "Órdenes del Día" del Senado, es la
-más actualizada y ya trae expedientes/giros/fechas estructurados e
-hipervínculos reales, pero sin firmantes).
+Fuente primaria: ordenes_dia_2025.xlsx + ordenes_dia_2026.xlsx (export
+"Órdenes del Día" del Senado, uno por período; son los más actualizados y ya
+traen expedientes/giros/fechas estructurados e hipervínculos reales, pero sin
+firmantes). El de 2025 se filtra a sólo OD de Proyecto de Ley (PL) — a
+pedido de Mariano, el resto de las categorías de ese período ya no interesa
+para Ayuda Memoria.
 
 Fuente de enriquecimiento: AYUDA_MEMORIA_2026.xlsx, hojas "OD LEY",
 "ANEXO I" y "OD ACUERDOS" (las únicas 3 que corresponden a esta sección; se
@@ -27,7 +30,11 @@ from datetime import datetime
 import openpyxl
 
 BASE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-ORDENES_DIA_PATH = os.path.join(BASE, "ordenes_dia.xlsx")
+# (ruta, categoría a la que se restringe ese período — None = todas)
+ORDENES_DIA_FUENTES = [
+    (os.path.join(BASE, "ordenes_dia_2025.xlsx"), "PL"),
+    (os.path.join(BASE, "ordenes_dia_2026.xlsx"), None),
+]
 AYUDA_MEMORIA_PATH = os.path.join(BASE, "AYUDA_MEMORIA_2026.xlsx")
 JSON_PATH = os.path.join(BASE, "data", "ayuda_memoria.json")
 
@@ -145,10 +152,21 @@ def _categoria_de_codigo(codigo):
     return CATEGORIA_MAP.get(tipo, "")
 
 
-# ── ordenes_dia.xlsx (fuente primaria) ──────────────────────────────────────
+# ── ordenes_dia_AAAA.xlsx (fuente primaria, una por período) ────────────────
 
-def leer_ordenes_dia():
-    wb = openpyxl.load_workbook(ORDENES_DIA_PATH, data_only=True)
+def _tipo_de_codigo(codigo):
+    """'PE-231/26-AC' -> 'AC'. Tipo crudo del expediente (no el label de
+    CATEGORIA_MAP), para poder filtrar por período sin depender de qué
+    categorías estén mapeadas a un label lindo."""
+    m = RE_EXP_CODIGO.match((codigo or "").strip().upper())
+    return m.group(2) if m and m.group(2) else ""
+
+
+def leer_ordenes_dia(path, filtro_tipo=None):
+    """filtro_tipo: si se da (ej. 'PL'), sólo se incluyen filas cuyo primer
+    expediente sea de ese tipo — se usa para restringir ordenes_dia_2025.xlsx
+    a sólo Proyectos de Ley."""
+    wb = openpyxl.load_workbook(path, data_only=True)
     ws = wb[wb.sheetnames[0]]
     filas = []
     for r in range(2, ws.max_row + 1):
@@ -166,6 +184,10 @@ def leer_ordenes_dia():
             {"codigo": c, "url": exp_link if i == 0 else None}
             for i, c in enumerate(codigos)
         ]
+        primer_codigo = codigos[0] if codigos else ""
+        if filtro_tipo and _tipo_de_codigo(primer_codigo) != filtro_tipo:
+            continue
+
         extracto_raw = (ws.cell(row=r, column=5).value or "").strip()
         giros_raw = ws.cell(row=r, column=6).value
         fecha = ws.cell(row=r, column=7).value
@@ -173,7 +195,6 @@ def leer_ordenes_dia():
         od_link = adjunto_cell.hyperlink.target if adjunto_cell.hyperlink else None
 
         autor, descripcion = _parsear_extracto(extracto_raw)
-        primer_codigo = codigos[0] if codigos else ""
 
         filas.append({
             "numero": str(int(numero)) if isinstance(numero, (int, float)) else str(numero).strip(),
@@ -286,7 +307,15 @@ def leer_enriquecimiento():
 
 
 def main():
-    filas = leer_ordenes_dia()
+    filas = []
+    for path, filtro_tipo in ORDENES_DIA_FUENTES:
+        if not os.path.exists(path):
+            print(f"AVISO: no se encontró {path}, se omite esa fuente")
+            continue
+        nuevas = leer_ordenes_dia(path, filtro_tipo)
+        print(f"  {os.path.basename(path)}: {len(nuevas)} filas"
+              + (f" (filtradas a tipo {filtro_tipo})" if filtro_tipo else ""))
+        filas.extend(nuevas)
     enriquecimiento = leer_enriquecimiento()
 
     matcheados = 0
