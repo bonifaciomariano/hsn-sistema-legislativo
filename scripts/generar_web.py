@@ -83,9 +83,19 @@ body{font-family:'Poppins',Calibri,sans-serif;background:#F5F7FA;color:#4A4A4A;f
 .dash-anio-label{font-size:10px;font-weight:600;color:#888;text-transform:uppercase;letter-spacing:1px;margin-right:2px}
 .dash-total{margin-left:auto;font-size:12px;color:#888}
 .dash-total strong{color:#1B5EA2;font-size:16px}
-.dash-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;max-width:1500px;margin:0 auto;align-items:start}
-.dash-grid .span2{grid-column:1 / -1}
-@media(max-width:900px){.dash-grid{grid-template-columns:1fr}.dash-grid .span2{grid-column:auto}}
+.dash-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:14px;max-width:1500px;margin:0 auto;align-items:start}
+.dash-grid .span6{grid-column:1 / -1}
+.dash-grid .span3{grid-column:span 3}
+.dash-grid .span2{grid-column:span 2}
+@media(max-width:1100px){.dash-grid .span2{grid-column:span 3}}
+@media(max-width:900px){.dash-grid{grid-template-columns:1fr}.dash-grid .span6,.dash-grid .span3,.dash-grid .span2{grid-column:auto}}
+.dash-anio-btn{padding:8px 20px;border-radius:8px;border:2px solid #1B5EA2;background:#fff;color:#1B5EA2;font-family:inherit;font-size:14px;font-weight:700;cursor:pointer;transition:all .15s}
+.dash-anio-btn.on{background:#1B5EA2;color:#fff;box-shadow:0 2px 8px rgba(27,94,162,0.3)}
+.dash-anio-btn:hover{background:#EAF0FA}
+.dash-anio-btn.on:hover{background:#2E75B6}
+.treemap-breadcrumb{font-size:12px;color:#1B5EA2;margin-bottom:8px;font-weight:600}
+.treemap-breadcrumb a{color:#2E75B6;cursor:pointer;text-decoration:underline}
+.treemap-breadcrumb .curr{color:#0d3f73}
 .viz-card{background:#fff;border:1px solid #D6E4F0;border-radius:10px;box-shadow:0 1px 4px rgba(0,0,0,0.06);padding:14px}
 .viz-head{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:10px;flex-wrap:wrap}
 .viz-title{font-size:12px;font-weight:700;color:#1B5EA2;text-transform:uppercase;letter-spacing:.8px}
@@ -123,20 +133,7 @@ body{font-family:'Poppins',Calibri,sans-serif;background:#F5F7FA;color:#4A4A4A;f
 .topcom-count{font-size:14px;font-weight:700;color:#1B5EA2;width:36px;text-align:right;flex-shrink:0}
 .topcom-spark{width:92px;height:26px;flex-shrink:0}
 
-/* ── Tabla dinámica (pivot) ───────────────────────────────────────────── */
-.pivot-wrap{padding:12px}
-.pivot-config{background:#fff;border:1px solid #D6E4F0;border-radius:10px;padding:12px 14px;margin-bottom:10px;box-shadow:0 1px 3px rgba(0,0,0,0.05)}
-.pivot-axes{display:flex;gap:14px;flex-wrap:wrap}
-.pivot-field{display:flex;flex-direction:column;gap:3px;min-width:170px;flex:1}
-.pivot-field .filter-label{margin:0}
-.pivot-field .select-wrapper{margin-bottom:0}
-.pivot-filters{display:flex;gap:10px;flex-wrap:wrap;align-items:center;border-top:1px dashed #D6E4F0;margin-top:12px;padding-top:11px}
-.pivot-filters .filter-label{margin:0}
-.pivot-filters .select-wrapper{min-width:140px;margin-bottom:0;flex:0 1 200px}
-.pivot-clear{background:none;border:none;color:#1B5EA2;font-family:inherit;font-size:11px;font-weight:700;cursor:pointer;padding:4px 6px}
-.pivot-clear:hover{text-decoration:underline}
-.pivot-meta{font-size:11px;color:#888;margin-bottom:8px;padding:0 2px}
-.pivot-meta strong{color:#1B5EA2}
+/* ── Ranking bloques × tipo (heatmap, reusa estilo de la ex tabla dinámica) ── */
 .pivot-scroll{overflow:auto;max-height:calc(100vh - 250px);border:1px solid #D6E4F0;border-radius:10px;background:#fff}
 .pivot-table{border-collapse:separate;border-spacing:0;font-size:12px;width:100%}
 .pivot-table th,.pivot-table td{border-right:1px solid #EEF2F8;border-bottom:1px solid #EEF2F8;padding:6px 10px;text-align:center;white-space:nowrap}
@@ -150,23 +147,41 @@ body{font-family:'Poppins',Calibri,sans-serif;background:#F5F7FA;color:#4A4A4A;f
 .pv-tot{font-weight:700;background:#EAF0FA;color:#1B5EA2}
 .pivot-table .pv-totrow th,.pivot-table .pv-totrow td{background:#D6E4F0;border-top:2px solid #1B5EA2}
 .pv-grand{font-weight:700;background:#1B5EA2!important;color:#fff!important}
-@media(max-width:760px){.pivot-field{min-width:130px}.pivot-filters .select-wrapper{flex-basis:140px}}
 
-
-/* ── Buscador: layout dos columnas ────────────────────────────────────── */
-.detalle-layout{display:flex;gap:16px;padding:12px;align-items:flex-start}
-.filters-panel{width:280px;flex-shrink:0;background:#fff;border-radius:10px;box-shadow:0 1px 4px rgba(0,0,0,0.08);overflow-y:auto;max-height:calc(100vh - 130px);position:sticky;top:112px}
-.filters-panel .section-header{border-radius:0}
-.filters-body{padding:14px}
-.results-panel{flex:1;min-width:0}
-/* Aísla el layout de la lista de resultados (2000+ tarjetas): sin esto,
-   cualquier cambio de DOM en OTRA sección de la página (ej. el modal de
-   Ayuda Memoria) fuerza al navegador a recalcular también el layout de
-   esta lista entera. Es solo un límite de layout, no cambia nada visual. */
+/* ── Buscador: filtros arriba + grid de resultados ────────────────────── */
+.detalle-layout{padding:12px}
+.filters-top{background:#fff;border-radius:10px;box-shadow:0 1px 4px rgba(0,0,0,0.08);padding:14px 16px;margin-bottom:14px}
+.filters-primary{display:flex;gap:10px;flex-wrap:wrap;align-items:flex-start}
+.filters-primary .search-box{flex:2 1 240px;margin-bottom:0}
+.filters-primary .select-wrapper{flex:1 1 170px;margin-bottom:0}
+.filters-more{margin-top:10px;border-top:1px dashed #D6E4F0;padding-top:10px}
+.filters-more summary{cursor:pointer;font-size:11px;font-weight:700;color:#1B5EA2;list-style:none;display:inline-flex;align-items:center;gap:6px;user-select:none}
+.filters-more summary::-webkit-details-marker{display:none}
+.filters-more summary:before{content:'▸';font-size:10px;display:inline-block;transition:transform .15s}
+.filters-more[open] summary:before{transform:rotate(90deg)}
+.filters-more-count{background:#1B5EA2;color:#fff;font-size:10px;font-weight:700;border-radius:10px;padding:1px 7px}
+.filters-more-body{display:flex;gap:16px;flex-wrap:wrap;margin-top:12px}
+.filter-group{min-width:170px;flex:1}
+.filter-group .filter-label{margin-top:0}
+.active-chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:12px}
+.active-chip{display:inline-flex;align-items:center;gap:5px;background:#EAF0FA;color:#1B5EA2;border:1px solid #c8daf0;border-radius:14px;padding:4px 6px 4px 11px;font-size:11px;font-weight:600}
+.active-chip button{background:none;border:none;color:#1B5EA2;cursor:pointer;font-size:13px;line-height:1;padding:0 2px;font-weight:700}
+.results-panel{min-width:0}
+.cards-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:10px}
+/* Aísla el layout de la grilla de resultados: sin esto, cualquier cambio de
+   DOM en OTRA sección de la página (ej. un modal) fuerza al navegador a
+   recalcular también el layout de esta grilla. Sólo un límite de layout. */
 #list{contain:content}
+.pagination{display:flex;align-items:center;justify-content:center;gap:6px;flex-wrap:wrap;margin:18px 0 8px}
+.page-btn{min-width:32px;height:32px;padding:0 8px;border-radius:7px;border:1.5px solid #D6E4F0;background:#fff;color:#4A4A4A;font-family:inherit;font-size:12px;font-weight:600;cursor:pointer}
+.page-btn.on{background:#1B5EA2;border-color:#1B5EA2;color:#fff}
+.page-btn:disabled{opacity:.4;cursor:default}
+.page-ellipsis{color:#aaa;font-size:12px;padding:0 3px}
 @media(max-width:900px){
-  .detalle-layout{flex-direction:column}
-  .filters-panel{width:100%;position:static;max-height:none}
+  .filters-primary{flex-direction:column}
+  .filters-primary .select-wrapper,.filters-primary .search-box{flex-basis:auto;width:100%}
+  .filters-more-body{flex-direction:column}
+  .cards-grid{grid-template-columns:1fr}
 }
 
 .search-box{width:100%;padding:10px 12px;border:1.5px solid #D6E4F0;border-radius:8px;font-family:inherit;font-size:13px;color:#4A4A4A;outline:none;margin-bottom:10px;background:#fff}
@@ -189,17 +204,18 @@ body{font-family:'Poppins',Calibri,sans-serif;background:#F5F7FA;color:#4A4A4A;f
 .date-input:focus{border-color:#1B5EA2}
 .date-sep{font-size:10px;color:#888;font-weight:600;text-transform:uppercase;letter-spacing:1px}
 
-.card{background:#fff;border-radius:10px;margin-bottom:10px;overflow:hidden;border:1px solid #D6E4F0;box-shadow:0 1px 3px rgba(0,0,0,0.05)}
-.card-exp{display:flex;align-items:center;justify-content:space-between;padding:9px 14px 7px;border-bottom:1px solid #EEF2F8;background:#F5F8FC}
+.card{background:#fff;border-radius:10px;margin-bottom:0;overflow:hidden;border:1px solid #D6E4F0;box-shadow:0 1px 3px rgba(0,0,0,0.05);cursor:pointer;transition:box-shadow .15s,border-color .15s;display:flex;flex-direction:column}
+.card:hover{box-shadow:0 3px 12px rgba(27,94,162,0.16);border-color:#9db8d8}
+.card-exp{display:flex;align-items:center;justify-content:space-between;padding:8px 12px 6px;border-bottom:1px solid #EEF2F8;background:#F5F8FC}
 .exp-id{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
 .exp-badge{font-size:11px;font-weight:700;padding:4px 9px;border-radius:4px;flex-shrink:0;letter-spacing:.5px}
-.exp-nro{font-size:14px;font-weight:700;color:#1B5EA2}
+.exp-nro{font-size:13px;font-weight:700;color:#1B5EA2}
 .exp-link{font-size:11px;color:#2E75B6;text-decoration:none;font-weight:600;border:1px solid #2E75B6;padding:3px 9px;border-radius:12px;white-space:nowrap;transition:all .15s}
 .exp-link:hover{background:#2E75B6;color:#fff}
 .exp-fecha{font-size:11px;color:#888}
-.card-body{padding:12px 14px 6px}
-.extracto{font-size:14px;font-weight:600;color:#2C2C2C;line-height:1.4;margin-bottom:10px}
-.card-meta{display:flex;flex-direction:column;gap:5px;padding-bottom:10px}
+.card-body{padding:10px 12px 4px;flex:1}
+.extracto{font-size:12.5px;font-weight:500;color:#3a3a3a;line-height:1.35;margin-bottom:8px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+.card-meta{display:flex;flex-direction:column;gap:4px;padding-bottom:8px}
 .meta-row{display:flex;gap:6px;align-items:flex-start;flex-wrap:wrap}
 .meta-bold{font-size:13px;font-weight:600;color:#4A4A4A}
 .btag{display:inline-block;font-size:11px;font-weight:600;padding:3px 8px;border-radius:4px;margin-right:4px;margin-bottom:3px}
@@ -256,6 +272,29 @@ body{font-family:'Poppins',Calibri,sans-serif;background:#F5F7FA;color:#4A4A4A;f
 .dpp-hist-dpp{font-size:12px;font-weight:700;color:#1B5EA2}
 .dpp-hist-fecha{font-size:10px;font-weight:400;color:#4A6A8A;margin-left:8px}
 .dpp-hist-detalle{font-size:12px;color:#0d3f73;margin-top:2px}
+
+/* ── Ficha de proyecto (modal) ─────────────────────────────────────────── */
+.ficha-modal{max-width:640px;max-height:85vh}
+.ficha-stepper{display:flex;align-items:flex-start;padding:18px 18px 6px;gap:0}
+.step-node{flex:1;display:flex;flex-direction:column;align-items:center;text-align:center;position:relative}
+.step-dot{width:22px;height:22px;border-radius:50%;background:#D6E4F0;color:#7d8a99;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;z-index:1}
+.step-node.done .step-dot{background:#1B5EA2;color:#fff}
+.step-node.final-sanc .step-dot{background:#1B5E20;color:#fff}
+.step-node.final-arch .step-dot{background:#9CA3AF;color:#fff}
+.step-node:not(:last-child):after{content:'';position:absolute;top:11px;left:calc(50% + 14px);right:calc(-50% + 14px);height:2px;background:#D6E4F0}
+.step-node.done:not(:last-child):after{background:#1B5EA2}
+.step-label{font-size:10px;color:#888;margin-top:6px;font-weight:600;line-height:1.3}
+.step-node.done .step-label{color:#1B5EA2}
+.step-node.final-sanc .step-label{color:#1B5E20}
+.step-node.final-arch .step-label{color:#6B7280}
+.step-sub{font-size:9.5px;color:#aaa;margin-top:1px}
+.ficha-body{padding:8px 20px 20px}
+.ficha-extracto{font-size:14px;font-weight:600;color:#2C2C2C;line-height:1.45;margin-bottom:14px}
+.ficha-kv{display:flex;flex-direction:column;gap:8px;margin-bottom:12px}
+.ficha-kv-row{display:flex;gap:10px;align-items:flex-start}
+.ficha-kv-label{font-size:10px;font-weight:700;color:#888;text-transform:uppercase;letter-spacing:.5px;width:92px;flex-shrink:0;padding-top:2px}
+.ficha-kv-val{font-size:12.5px;color:#4A4A4A;flex:1}
+.ficha-links{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
 
 /* ── Proyección de votación (adaptado de comisiones-senado) ───────────── */
 .proy-panel{margin-top:16px}
@@ -984,7 +1023,6 @@ var TIPOS={PL:'Proy. de Ley',PD:'Declaración',PC:'Comunicación',PR:'Resolució
 var TIPO_FG={PL:'#1B5EA2',PD:'#2E75B6',PC:'#0d7a4a',PR:'#5B4DA0',CA:'#1a7a4a',AC:'#7a5c1a',CV:'#7a1a3a',CC:'#2f7a7a',CD:'#8a4a1a',CE:'#4a4a8a',CM:'#7a4a4a',CO:'#4a7a2f',DC:'#8a1a5c',MS:'#1a5c8a',MD:'#5c8a1a',PP:'#8a5c1a',DE:'#5c1a8a',RC:'#1a8a7a',RP:'#8a1a1a'};
 var TIPO_BG={PL:'#D6E4F0',PD:'#EAF0FA',PC:'#DCF0E8',PR:'#EDE8FA',CA:'#E0F4EC',AC:'#F9F0DA',CV:'#FAE0EA',CC:'#DFF3F3',CD:'#F5E8DA',CE:'#E2E2F5',CM:'#F2E4E4',CO:'#E4F2DD',DC:'#F5DCEC',MS:'#DCEBF5',MD:'#EBF5DC',PP:'#F5EBDC',DE:'#EBDCF5',RC:'#DCF5EF',RP:'#F5DCDC'};
 var ORIGEN_LABEL={S:'Senado',PE:'Poder Ejecutivo',CD:'Diputados',OV:'Otros',P:'Particulares',JGM:'Jefatura de Gabinete',OVD:'Oficiales Varios Diputados'};
-var ORIGEN_CODE={};Object.keys(ORIGEN_LABEL).forEach(function(k){ORIGEN_CODE[ORIGEN_LABEL[k]]=k});
 var REUNION_TIPO_LABEL={senadores:'Reunión de senadores',asesores:'Reunión de asesores',bicameral:'Reunión bicameral'};
 var REUNION_TIPO_COLOR={senadores:{fg:'#1B5EA2',bg:'#D6E4F0'},asesores:{fg:'#0d7a4a',bg:'#DCF0E8'},bicameral:{fg:'#5B4DA0',bg:'#EDE8FA'}};
 /* Colores por bloque — mismo mapa que el repo comisiones-senado */
@@ -1011,6 +1049,9 @@ Object.keys(BLOQUE_COLORS).forEach(function(k){BLOQUE_COLORS_NORM[normBloque(k)]
 var ALL_BLOQUES=[];
 var dashAnio='2026',dashEvoMode='tipo',dashCross={dim:'',val:''};
 var activeTipos={},activeBloque='',activeOrigen='',activeProvincia='',activeAnio='',activeAcuerdoEstado='';
+var pageBuscador=1,PAGE_SIZE=25;
+var DATA_INDEX={};
+function claveP(p){return p.origen+'~'+p.nro+'~'+p.anio+'~'+p.tipo;}
 
 /* ── Escapado HTML básico ──────────────────────────────────────────── */
 function esc(s){return String(s==null?'':s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;')}
@@ -1028,8 +1069,7 @@ function switchSub(id){
   document.querySelectorAll('.sub-content').forEach(function(c){c.classList.remove('active')});
   document.getElementById('sub-'+id).classList.add('active');
   document.querySelector('[data-sub="'+id+'"]').classList.add('active');
-  if(id==='tabla')renderPivot();
-  if(id==='dashboard')renderDashboard();
+  if(id==='estadisticas')renderDashboard();
 }
 
 function init(){
@@ -1056,11 +1096,15 @@ function init(){
   DATA.forEach(function(p){(p.provincias||[]).forEach(function(pv){if(pv)provSet[pv]=1})});
   fillSelect('provincia-select',Object.keys(provSet).sort());
 
-  initPivot();
+  var oset={};
+  DATA.forEach(function(p){if(p.origen)oset[p.origen]=1});
+  fillSelectLabeled('origen-select',Object.keys(oset).sort(),function(o){return ORIGEN_LABEL[o]||o});
+
+  DATA.forEach(function(p){DATA_INDEX[claveP(p)]=p});
+
   renderDashboard();
   syncFilterUI();
   renderList();
-  renderPivot();
   renderComisionesList();
   renderRepresentacion();
   agendaInit();
@@ -1071,6 +1115,12 @@ function fillSelect(id,values){
   var sel=document.getElementById(id);
   values.forEach(function(v){
     var o=document.createElement('option');o.value=v;o.textContent=v;sel.appendChild(o);
+  });
+}
+function fillSelectLabeled(id,values,labelFn){
+  var sel=document.getElementById(id);
+  values.forEach(function(v){
+    var o=document.createElement('option');o.value=v;o.textContent=labelFn(v);sel.appendChild(o);
   });
 }
 function blqColor(b){return BLOQUE_COLORS_NORM[normBloque(b)]||BLOQUE_COLOR_DEFAULT}
@@ -1095,10 +1145,10 @@ function crossClick(dim,val){
 }
 function clearCross(){dashCross={dim:'',val:''};renderDashboard();}
 function setDashAnio(y){
-  dashAnio=y;dashCross={dim:'',val:''};
+  dashAnio=y;dashCross={dim:'',val:''};treemapDrillBloque=null;
   ['2026','2025'].forEach(function(a){
     var el=document.getElementById('dash-anio-'+a);
-    if(el)el.className='chip'+(dashAnio===a?' on':'');
+    if(el)el.className='dash-anio-btn'+(dashAnio===a?' on':'');
   });
   renderDashboard();
 }
@@ -1120,6 +1170,7 @@ function renderDashboard(){
   }else{ci.className='dash-cross';ci.innerHTML='';}
   renderEvolucion(data);
   renderTreemap(data);
+  renderRankingBloques(data);
   renderStacked(data);
   renderDonut(data);
   renderTopComs(data);
@@ -1242,38 +1293,105 @@ function treemapLayout(items,x,y,w,h){
   }
   return out;
 }
+var treemapDrillBloque=null;
+function volverTreemap(){treemapDrillBloque=null;renderTreemap(dashData());}
 function renderTreemap(data){
   var box=document.getElementById('viz-treemap');
+  var bc=document.getElementById('treemap-breadcrumb');
   /* solo bloques políticos: expedientes de origen Senado (S) con bloque asignado */
   var dS=data.filter(function(p){return p.origen==='S'&&p.bloques[0];});
+  var W=1000,H=300,pad=3;
+
+  if(treemapDrillBloque){
+    bc.innerHTML='<a onclick="volverTreemap()">Bloques</a> &#9656; '
+      +'<span class="curr" onclick="volverTreemap()" title="Volver a todos los bloques">'+esc(treemapDrillBloque)+' &#10005;</span>';
+    var dB=dS.filter(function(p){return p.bloques[0]===treemapDrillBloque;});
+    var tipoTot={};dB.forEach(function(p){tipoTot[p.tipo]=(tipoTot[p.tipo]||0)+1;});
+    var tkeys=Object.keys(tipoTot).sort(function(a,b){return tipoTot[b]-tipoTot[a];});
+    if(!tkeys.length){box.innerHTML='<div class="viz-empty">Sin datos para este bloque.</div>';document.getElementById('treemap-legend').innerHTML='';return;}
+    var titems=tkeys.map(function(k){return {key:k,value:tipoTot[k]};});
+    var trects=treemapLayout(titems,0,0,W,H);
+    var tsvg='<svg viewBox="0 0 '+W+' '+H+'" preserveAspectRatio="xMidYMid meet" style="display:block;width:100%;height:auto;max-height:380px">';
+    trects.forEach(function(r){
+      var t=r.key,x=r.x+pad/2,y=r.y+pad/2,w=Math.max(0,r.w-pad),h=Math.max(0,r.h-pad);
+      var sc=TIPO_FG[t]||'#888';
+      var on=(dashCross.dim==='tipo'&&dashCross.val===t);
+      tsvg+='<rect x="'+x.toFixed(1)+'" y="'+y.toFixed(1)+'" width="'+w.toFixed(1)+'" height="'+h.toFixed(1)+'" fill="'+sc+'" stroke="'+(on?'#0d3f73':'#fff')+'" stroke-width="'+(on?3:1.5)+'" style="cursor:pointer" onclick="crossClick(\'tipo\',\''+jsStr(t)+'\')"><title>'+esc(TIPOS[t]||t)+': '+r.value+'</title></rect>';
+      if(w>62&&h>28){
+        tsvg+='<text x="'+(x+5).toFixed(1)+'" y="'+(y+15).toFixed(1)+'" style="font-size:11px;font-weight:700;fill:#fff;pointer-events:none">'+esc(TIPOS[t]||t)+'</text>';
+        tsvg+='<text x="'+(x+5).toFixed(1)+'" y="'+(y+30).toFixed(1)+'" style="font-size:12px;font-weight:700;fill:#fff;opacity:.85;pointer-events:none">'+r.value+'</text>';
+      }
+    });
+    tsvg+='</svg>';
+    box.innerHTML=tsvg;
+    document.getElementById('treemap-legend').innerHTML='';
+    return;
+  }
+
+  bc.innerHTML='';
   var blTot={};dS.forEach(function(p){var b=p.bloques[0];blTot[b]=(blTot[b]||0)+1;});
   var keys=Object.keys(blTot).sort(function(a,b){return blTot[b]-blTot[a];});
   if(!keys.length){box.innerHTML='<div class="viz-empty">Sin datos para este a&ntilde;o.</div>';document.getElementById('treemap-legend').innerHTML='';return;}
   var items=keys.map(function(k){return {key:k,value:blTot[k]};});
-  var tb={};dS.forEach(function(p){var b=p.bloques[0];(tb[b]=tb[b]||{});tb[b][p.tipo]=(tb[b][p.tipo]||0)+1;});
-  var W=1000,H=300,pad=3,tipoOrder=['PL','PD','PC','PR','CA','AC','CV'];
   var rects=treemapLayout(items,0,0,W,H);
   var svg='<svg viewBox="0 0 '+W+' '+H+'" preserveAspectRatio="xMidYMid meet" style="display:block;width:100%;height:auto;max-height:380px">';
   rects.forEach(function(r){
-    var bl=r.key,label=bl,comp=tb[bl]||{};
-    var x=r.x+pad/2,y=r.y+pad/2,w=Math.max(0,r.w-pad),h=Math.max(0,r.h-pad),horiz=w>=h,acc=0;
-    var oc=' style="cursor:pointer" onclick="crossClick(\'bloque\',\''+jsStr(bl)+'\')"';
-    tipoOrder.forEach(function(t){
-      var v=comp[t]||0;if(!v)return;
-      var frac=v/r.value,sc=TIPO_FG[t]||'#888';
-      if(horiz){var sw=w*frac;svg+='<rect x="'+(x+acc).toFixed(1)+'" y="'+y.toFixed(1)+'" width="'+sw.toFixed(1)+'" height="'+h.toFixed(1)+'" fill="'+sc+'"'+oc+'><title>'+esc(label)+' · '+esc(TIPOS[t]||t)+': '+v+'</title></rect>';acc+=sw;}
-      else{var sh=h*frac;svg+='<rect x="'+x.toFixed(1)+'" y="'+(y+acc).toFixed(1)+'" width="'+w.toFixed(1)+'" height="'+sh.toFixed(1)+'" fill="'+sc+'"'+oc+'><title>'+esc(label)+' · '+esc(TIPOS[t]||t)+': '+v+'</title></rect>';acc+=sh;}
-    });
-    svg+='<rect x="'+x.toFixed(1)+'" y="'+y.toFixed(1)+'" width="'+w.toFixed(1)+'" height="'+h.toFixed(1)+'" fill="none" stroke="#fff" stroke-width="1.5" pointer-events="none"/>';
+    var bl=r.key,x=r.x+pad/2,y=r.y+pad/2,w=Math.max(0,r.w-pad),h=Math.max(0,r.h-pad);
+    var c=getBloqueColor(bl);
+    svg+='<rect x="'+x.toFixed(1)+'" y="'+y.toFixed(1)+'" width="'+w.toFixed(1)+'" height="'+h.toFixed(1)+'" fill="'+c+'" stroke="#fff" stroke-width="1.5" style="cursor:pointer" onclick="treemapDrillBloque=\''+jsStr(bl)+'\';renderTreemap(dashData())"><title>'+esc(bl)+': '+r.value+' &middot; clic para ver desglose por tipo</title></rect>';
     if(w>62&&h>28){
-      svg+='<text x="'+(x+5).toFixed(1)+'" y="'+(y+15).toFixed(1)+'" style="font-size:11px;font-weight:700;fill:#fff;pointer-events:none">'+esc(trunc(label,Math.floor(w/7)))+'</text>';
+      svg+='<text x="'+(x+5).toFixed(1)+'" y="'+(y+15).toFixed(1)+'" style="font-size:11px;font-weight:700;fill:#fff;pointer-events:none">'+esc(trunc(bl,Math.floor(w/7)))+'</text>';
       svg+='<text x="'+(x+5).toFixed(1)+'" y="'+(y+30).toFixed(1)+'" style="font-size:12px;font-weight:700;fill:#fff;opacity:.85;pointer-events:none">'+r.value+'</text>';
     }
   });
   svg+='</svg>';
   box.innerHTML=svg;
-  var leg='';tipoOrder.forEach(function(t){if(!dS.some(function(p){return p.tipo===t;}))return;leg+='<span class="legend-item"><span class="legend-swatch" style="background:'+(TIPO_FG[t]||'#888')+'"></span>'+esc(TIPOS[t]||t)+'</span>';});
-  document.getElementById('treemap-legend').innerHTML=leg;
+  document.getElementById('treemap-legend').innerHTML='';
+}
+function renderRankingBloques(data){
+  var dS=data.filter(function(p){return p.origen==='S'&&p.bloques[0];});
+  var cols=['PL','PC','PD'];
+  var cells={},rowTot={},colTot={PL:0,PC:0,PD:0},grand=0,rowSet={};
+  dS.forEach(function(p){
+    if(cols.indexOf(p.tipo)<0)return;
+    var rk=p.bloques[0];
+    rowSet[rk]=1;
+    cells[rk+'~|~'+p.tipo]=(cells[rk+'~|~'+p.tipo]||0)+1;
+    rowTot[rk]=(rowTot[rk]||0)+1;colTot[p.tipo]++;grand++;
+  });
+  var rowKeys=Object.keys(rowSet).sort(function(a,b){return (rowTot[b]||0)-(rowTot[a]||0)});
+  var maxCell=0;
+  rowKeys.forEach(function(rk){cols.forEach(function(ck){var v=cells[rk+'~|~'+ck]||0;if(v>maxCell)maxCell=v})});
+  var h='<table class="pivot-table"><thead><tr><th class="pv-corner">Bloque</th>';
+  cols.forEach(function(ck){h+='<th>'+ck+'</th>'});
+  h+='<th class="pv-tot">Total</th></tr></thead><tbody>';
+  rowKeys.forEach(function(rk){
+    h+='<tr><th class="pv-rowhead" title="'+escAttr(rk)+'">'+esc(rk)+'</th>';
+    cols.forEach(function(ck){
+      var v=cells[rk+'~|~'+ck]||0;
+      var style='',cls='pv-cell';
+      if(v){
+        cls+=' pv-click';
+        var intensity=maxCell?v/maxCell:0;
+        style='background:rgba(27,94,162,'+(0.06+intensity*0.74).toFixed(3)+')';
+        if(intensity>0.55)style+=';color:#fff';
+      }else{cls+=' pv-empty'}
+      h+='<td class="'+cls+'" style="'+style+'"'+(v?' onclick="drillRanking(\''+jsStr(rk)+'\',\''+ck+'\')"':'')+'>'+(v||'')+'</td>';
+    });
+    h+='<td class="pv-tot">'+rowTot[rk]+'</td></tr>';
+  });
+  h+='<tr class="pv-totrow"><th class="pv-rowhead">Total general</th>';
+  cols.forEach(function(ck){h+='<td class="pv-tot">'+colTot[ck]+'</td>'});
+  h+='<td class="pv-grand">'+grand+'</td></tr></tbody></table>';
+  document.getElementById('ranking-body').innerHTML=grand?h:'<div class="no-results">Sin datos para este a&ntilde;o.</div>';
+}
+function drillRanking(bloque,tipo){
+  resetBuscadorOnly();
+  activeBloque=bloque;setSelVal('bloque-select',bloque);
+  activeTipos={};activeTipos[tipo]=1;
+  applyAll();
+  switchSub('buscador');
+  window.scrollTo({top:0,behavior:'smooth'});
 }
 /* ── Viz 3: Barras apiladas horizontales (Tipo por Bloque) ───── */
 function renderStacked(data){
@@ -1380,101 +1498,6 @@ function renderTopComs(data){
 
 /* ── Tabla dinámica (pivot table) ──────────────────────────────── */
 /* Dimensiones disponibles para Filas / Columnas */
-var DIMS={
-  tipo:{label:'Tipo de proyecto',get:function(p){return p.tipo},disp:function(v){return (TIPOS[v]||v)+' ('+v+')'}},
-  anio:{label:'Año',get:function(p){return String(p.anio)}},
-  origen:{label:'Origen',get:function(p){return ORIGEN_LABEL[p.origen]||p.origen}},
-  bloque:{label:'Bloque político (1°)',get:function(p){return p.bloques[0]||(ORIGEN_LABEL[p.origen]||'(Sin bloque)')}},
-  com1:{label:'Comisión (1er giro)',get:function(p){return p.comisiones[0]||'(Sin comisión)'}},
-  provincia:{label:'Provincia (1°)',get:function(p){return (p.provincias&&p.provincias[0])||'(Sin provincia)'}},
-  sancionado:{label:'Sancionado',get:function(p){return p.sancionado?'Sí':'No'}},
-  mes:{label:'Mes (AAAA-MM)',get:function(p){var f=p.fecha?p.fecha.split('/'):null;return (f&&f.length===3)?f[2]+'-'+f[1]:'(Sin fecha)'}}
-};
-var DIM_ORDER=['bloque','com1','tipo','origen','provincia','anio','mes','sancionado'];
-var DISP_NAME={abs:'Conteo de proyectos',ptotal:'% del total general',prow:'% de la fila',pcol:'% de la columna'};
-var pvRow='bloque',pvCol='tipo',pvDisp='abs';
-var PV_ROWKEYS=[],PV_COLKEYS=[];
-
-function initPivot(){
-  var ro=document.getElementById('pv-row'),co=document.getElementById('pv-col');
-  DIM_ORDER.forEach(function(k){
-    var o=document.createElement('option');o.value=k;o.textContent=DIMS[k].label;ro.appendChild(o);
-    var o2=document.createElement('option');o2.value=k;o2.textContent=DIMS[k].label;co.appendChild(o2);
-  });
-  var none=document.createElement('option');none.value='none';none.textContent='— Ninguna (solo total) —';co.appendChild(none);
-  ro.value=pvRow;co.value=pvCol;
-  var anios={},tipos={},origs={};
-  DATA.forEach(function(p){anios[p.anio]=1;tipos[p.tipo]=1;origs[p.origen]=1});
-  Object.keys(anios).sort().forEach(function(a){var o=document.createElement('option');o.value=a;o.textContent=a;document.getElementById('pv-f-anio').appendChild(o)});
-  Object.keys(tipos).sort().forEach(function(t){var o=document.createElement('option');o.value=t;o.textContent=t+' · '+(TIPOS[t]||t);document.getElementById('pv-f-tipo').appendChild(o)});
-  Object.keys(origs).sort().forEach(function(x){var o=document.createElement('option');o.value=x;o.textContent=ORIGEN_LABEL[x]||x;document.getElementById('pv-f-origen').appendChild(o)});
-}
-/* Filtra por el estado COMPARTIDO (año/tipo/origen) — mismo que el buscador */
-function pvFilteredData(){
-  var tk=Object.keys(activeTipos);
-  return DATA.filter(function(p){
-    if(activeAnio&&String(p.anio)!==activeAnio)return false;
-    if(tk.length&&!activeTipos[p.tipo])return false;
-    if(activeOrigen&&p.origen!==activeOrigen)return false;
-    return true;
-  });
-}
-/* Ejes y modo de cálculo del pivot (no son estado compartido) */
-function setPivot(){
-  pvRow=document.getElementById('pv-row').value;
-  pvCol=document.getElementById('pv-col').value;
-  pvDisp=document.getElementById('pv-disp').value;
-  renderPivot();
-}
-function renderPivot(){
-  var data=pvFilteredData();
-  var cNone=(pvCol==='none');
-  var rget=DIMS[pvRow].get,cget=cNone?function(){return 'Conteo'}:DIMS[pvCol].get;
-  var cells={},rowTot={},colTot={},grand=0,rowSet={},colSet={};
-  data.forEach(function(p){
-    var rk=rget(p),ck=cget(p);
-    rowSet[rk]=1;colSet[ck]=1;
-    cells[rk+'~|~'+ck]=(cells[rk+'~|~'+ck]||0)+1;
-    rowTot[rk]=(rowTot[rk]||0)+1;colTot[ck]=(colTot[ck]||0)+1;grand++;
-  });
-  var rowKeys=Object.keys(rowSet).sort(function(a,b){return rowTot[b]-rowTot[a]});
-  var colKeys=Object.keys(colSet).sort(function(a,b){return colTot[b]-colTot[a]});
-  PV_ROWKEYS=rowKeys;PV_COLKEYS=colKeys;
-  var maxCell=0;
-  rowKeys.forEach(function(rk){colKeys.forEach(function(ck){var v=cells[rk+'~|~'+ck]||0;if(v>maxCell)maxCell=v})});
-
-  var dispRow=DIMS[pvRow].disp||function(v){return v};
-  var dispCol=cNone?function(v){return v}:(DIMS[pvCol].disp||function(v){return v});
-  function fmt(v,rk,ck){
-    if(!v)return '';
-    if(pvDisp==='abs')return v;
-    var d=pvDisp==='ptotal'?grand:(pvDisp==='prow'?rowTot[rk]:colTot[ck]);
-    return d?(Math.round(v/d*1000)/10)+'%':'';
-  }
-  var h='<table class="pivot-table"><thead><tr><th class="pv-corner">'+esc(DIMS[pvRow].label)+(cNone?'':' \\ '+esc(DIMS[pvCol].label))+'</th>';
-  colKeys.forEach(function(ck){h+='<th>'+esc(dispCol(ck))+'</th>'});
-  h+='<th class="pv-tot">Total</th></tr></thead><tbody>';
-  rowKeys.forEach(function(rk,ri){
-    h+='<tr><th class="pv-rowhead" title="'+escAttr(dispRow(rk))+'">'+esc(dispRow(rk))+'</th>';
-    colKeys.forEach(function(ck,ci){
-      var v=cells[rk+'~|~'+ck]||0;
-      var style='',cls='pv-cell';
-      if(v){
-        cls+=' pv-click';
-        var intensity=maxCell?v/maxCell:0;
-        style='background:rgba(27,94,162,'+(0.06+intensity*0.74).toFixed(3)+')';
-        if(intensity>0.55)style+=';color:#fff';
-      }else{cls+=' pv-empty'}
-      h+='<td class="'+cls+'" style="'+style+'"'+(v?' onclick="drillPivot('+ri+','+ci+')"':'')+'>'+fmt(v,rk,ck)+'</td>';
-    });
-    h+='<td class="pv-tot">'+rowTot[rk]+'</td></tr>';
-  });
-  h+='<tr class="pv-totrow"><th class="pv-rowhead">Total general</th>';
-  colKeys.forEach(function(ck){h+='<td class="pv-tot">'+colTot[ck]+'</td>'});
-  h+='<td class="pv-grand">'+grand+'</td></tr></tbody></table>';
-  document.getElementById('pivot-body').innerHTML=grand?h:'<div class="no-results">Sin datos para los filtros seleccionados.</div>';
-  document.getElementById('pivot-meta').innerHTML='<strong>'+grand+'</strong> proyectos &middot; '+rowKeys.length+' filas &times; '+colKeys.length+' columna'+(colKeys.length!==1?'s':'')+' &middot; Valor: <strong>'+DISP_NAME[pvDisp]+'</strong> &middot; <span style="color:#aaa">toc&aacute; una celda para filtrar los expedientes de abajo</span>';
-}
 /* Limpia los filtros propios del buscador (no los compartidos año/tipo/origen) */
 function resetBuscadorOnly(){
   activeBloque='';activeProvincia='';
@@ -1484,47 +1507,21 @@ function resetBuscadorOnly(){
   document.getElementById('fecha-desde').value='';
   document.getElementById('fecha-hasta').value='';
 }
-/* Clic en celda: preserva los filtros compartidos (universo del pivot), resetea
-   los del buscador, mapea fila+columna de la celda y salta al Buscador */
-function drillPivot(ri,ci){
-  resetBuscadorOnly();
-  applyDimToFilter(pvRow,PV_ROWKEYS[ri]);
-  if(pvCol!=='none')applyDimToFilter(pvCol,PV_COLKEYS[ci]);
-  applyAll();
-  switchSub('buscador');
-  window.scrollTo({top:0,behavior:'smooth'});
-}
 function setSelVal(id,v){var el=document.getElementById(id);if(el){el.value=v;el.className=v?'filter-select on':'filter-select';}}
-function applyDimToFilter(dim,value){
-  if(dim==='anio'){activeAnio=value;}
-  else if(dim==='tipo'){activeTipos={};activeTipos[value]=1;}
-  else if(dim==='origen'){if(ORIGEN_CODE[value])activeOrigen=ORIGEN_CODE[value];}
-  else if(dim==='bloque'){
-    if(ALL_BLOQUES.indexOf(value)>=0){activeBloque=value;setSelVal('bloque-select',value);}
-    else if(ORIGEN_CODE[value]){activeOrigen=ORIGEN_CODE[value];}
-  }
-  else if(dim==='provincia'){if(value!=='(Sin provincia)'){activeProvincia=value;setSelVal('provincia-select',value);}}
-  else if(dim==='com1'){if(value!=='(Sin comisión)'){setSelVal('com-select-1',value);}}
-  /* sancionado, mes: sin filtro equivalente en el buscador -> se ignoran */
-}
 
 /* ── Estado de filtros compartido (año/tipo/origen) ─────────────── */
-function applyAll(){syncFilterUI();renderPivot();renderList();}
+function applyAll(){pageBuscador=1;syncFilterUI();renderList();}
 function syncFilterUI(){
   ['all','2025','2026'].forEach(function(a){
     var el=document.getElementById('anio-det-'+a);
     if(el)el.className='chip'+(activeAnio===(a==='all'?'':a)?' on':'');
   });
-  var pa=document.getElementById('pv-f-anio');if(pa)pa.value=activeAnio;
-  var tk=Object.keys(activeTipos);
-  var pt=document.getElementById('pv-f-tipo');if(pt)pt.value=(tk.length===1?tk[0]:'');
-  var po=document.getElementById('pv-f-origen');if(po)po.value=activeOrigen;
+  var os=document.getElementById('origen-select');
+  if(os){os.value=activeOrigen;os.className=activeOrigen?'filter-select on':'filter-select';}
   renderFilters();
 }
 function setAnioShared(v){activeAnio=v;applyAll();}
-function setTipoShared(v){activeTipos={};if(v)activeTipos[v]=1;applyAll();}
 function setOrigenShared(v){activeOrigen=v;applyAll();}
-function clearSharedFilters(){activeAnio='';activeTipos={};activeOrigen='';activeAcuerdoEstado='';applyAll();}
 
 /* ── Buscador: filtros ─────────────────────────────────────────── */
 function renderFilters(){
@@ -1536,14 +1533,6 @@ function renderFilters(){
     h+='<button class="chip'+(activeTipos[t]?' on':'')+'" onclick="toggleTipo(\''+t+'\')">'+t+' &middot; '+(TIPOS[t]||t)+'</button>';
   });
   document.getElementById('tipo-filters').innerHTML=h;
-
-  var ohtml='<button class="chip'+(activeOrigen===''?' on':'')+'" onclick="toggleOrigen(\'\')">Todos</button>';
-  var oset={};
-  DATA.forEach(function(p){oset[p.origen]=1});
-  Object.keys(oset).sort().forEach(function(o){
-    ohtml+='<button class="chip'+(activeOrigen===o?' on':'')+'" onclick="toggleOrigen(\''+o+'\')">'+(ORIGEN_LABEL[o]||o)+'</button>';
-  });
-  document.getElementById('origen-filters').innerHTML=ohtml;
 
   var tk=Object.keys(activeTipos);
   var soloAC=tk.length===1&&tk[0]==='AC';
@@ -1557,24 +1546,37 @@ function renderFilters(){
     document.getElementById('acuerdo-estado-chips').innerHTML=ah;
   }
 }
-function setAcuerdoEstado(v){activeAcuerdoEstado=v;renderList();}
+function setAcuerdoEstado(v){activeAcuerdoEstado=v;pageBuscador=1;renderFilters();renderList();}
 function toggleTipo(t){
   if(t==='__all__'){activeTipos={}}else{if(activeTipos[t])delete activeTipos[t];else activeTipos[t]=1}
   applyAll();
 }
-function toggleOrigen(o){activeOrigen=activeOrigen===o?'':o;applyAll()}
 function setBloque(val){
   activeBloque=val;
   var el=document.getElementById('bloque-select');
   if(el)el.className=val?'filter-select on':'filter-select';
-  renderList();
+  pageBuscador=1;renderList();
 }
 function setProvincia(val){
   activeProvincia=val;
   var el=document.getElementById('provincia-select');
   if(el)el.className=val?'filter-select on':'filter-select';
-  renderList();
+  pageBuscador=1;renderList();
 }
+/* Filtros que sólo viven en el DOM (com1/comAdic/autor/búsqueda/fechas):
+   reaplican estilo "on" al select y resetean a página 1. */
+function onFilterChange(){
+  ['com-select-1','com-select-adic','autor-select'].forEach(function(id){
+    var el=document.getElementById(id);
+    if(el)el.className=el.value?'filter-select on':'filter-select';
+  });
+  pageBuscador=1;renderList();
+}
+function clearSearch(){document.getElementById('search').value='';onFilterChange();}
+function clearCom1(){setSelVal('com-select-1','');onFilterChange();}
+function clearComAdic(){setSelVal('com-select-adic','');onFilterChange();}
+function clearAutor(){setSelVal('autor-select','');onFilterChange();}
+function clearFechas(){document.getElementById('fecha-desde').value='';document.getElementById('fecha-hasta').value='';onFilterChange();}
 function parseFecha(s){
   if(!s)return null;
   var p=s.split('/');
@@ -1625,14 +1627,14 @@ function cardFooterHtml(p){
     html+='<span class="reunion-badge">Tratado en reuni&oacute;n: '+esc(r.comision)+' &middot; '+esc(r.fecha)+extra+'</span>';
   }
   if(p.od){
-    html+='<a class="od-badge" href="'+escAttr(p.od.url_pdf)+'" target="_blank">OD N&ordm; '+esc(p.od.nro_od+'/'+String(p.od.anio_od).slice(-2))+'</a>';
+    html+='<a class="od-badge" href="'+escAttr(p.od.url_pdf)+'" target="_blank" onclick="event.stopPropagation()">OD N&ordm; '+esc(p.od.nro_od+'/'+String(p.od.anio_od).slice(-2))+'</a>';
   }
   if(p.badge_preferencia){
     html+='<span class="pref-badge">Preferencia solicitada &middot; sesi&oacute;n del '+esc(p.badge_preferencia.fecha)+'</span>';
   }
   if(p.badge_sancionado){
     var txtSanc=p.badge_sancionado.ley?('Sancionado &middot; '+esc(p.badge_sancionado.ley)):('Sancionado &middot; sesi&oacute;n del '+esc(p.badge_sancionado.fecha));
-    html+='<a class="sancionado-badge" onclick="irASanciones(\''+jsStr(expNroOf(p))+'\')">'+txtSanc+'</a>';
+    html+='<a class="sancionado-badge" onclick="event.stopPropagation();irASanciones(\''+jsStr(expNroOf(p))+'\')">'+txtSanc+'</a>';
   }
   if(p.badge_diputados){
     html+='<span class="diputados-badge">Enviado a Diputados &middot; sesi&oacute;n del '+esc(p.badge_diputados.fecha)+'</span>';
@@ -1655,20 +1657,77 @@ function buildCard(p){
   });
   p.comisiones.forEach(function(c){ctags+='<span class="ctag">'+esc(c)+'</span>'});
   var expNro=expNroOf(p);
-  var linkBtn=p.url?'<a class="exp-link" href="'+escAttr(p.url)+'" target="_blank">Ver en Senado &#8599;</a>':'';
-  return '<div class="card"><div class="card-exp"><div class="exp-id"><span class="exp-badge" style="background:'+bg+';color:'+fg+'">'+esc(p.tipo)+'</span><span class="exp-nro">'+esc(expNro)+'</span>'+(p.fecha?'<span class="exp-fecha">'+esc(p.fecha)+'</span>':'')+'</div>'+linkBtn+'</div><div class="card-body"><div class="extracto">'+esc(p.extracto)+'</div><div class="card-meta">'+(autoresTxt?'<div class="meta-row"><span class="meta-bold">'+esc(autoresTxt)+'</span></div>':'')+(btags?'<div class="meta-row">'+btags+'</div>':'')+(ctags?'<div class="meta-row">'+ctags+'</div>':'')+'</div></div>'+cardFooterHtml(p)+'</div>';
+  var linkBtn=p.url?'<a class="exp-link" href="'+escAttr(p.url)+'" target="_blank" onclick="event.stopPropagation()">Ver en Senado &#8599;</a>':'';
+  return '<div class="card" onclick="abrirFicha(\''+jsStr(claveP(p))+'\')"><div class="card-exp"><div class="exp-id"><span class="exp-badge" style="background:'+bg+';color:'+fg+'">'+esc(p.tipo)+'</span><span class="exp-nro">'+esc(expNro)+'</span>'+(p.fecha?'<span class="exp-fecha">'+esc(p.fecha)+'</span>':'')+'</div>'+linkBtn+'</div><div class="card-body"><div class="extracto">'+esc(p.extracto)+'</div><div class="card-meta">'+(autoresTxt?'<div class="meta-row"><span class="meta-bold">'+esc(autoresTxt)+'</span></div>':'')+(btags?'<div class="meta-row">'+btags+'</div>':'')+(ctags?'<div class="meta-row">'+ctags+'</div>':'')+'</div></div>'+cardFooterHtml(p)+'</div>';
 }
 function renderList(){
   var filtered=getFiltered();
   var tot=filtered.length;
   document.getElementById('results-count').innerHTML=tot+' proyecto'+(tot!==1?'s':'')+' encontrado'+(tot!==1?'s':'');
+  renderActiveChips();
   if(!filtered.length){
     document.getElementById('list').innerHTML='<div class="no-results">Sin resultados para este filtro.</div>';
+    document.getElementById('pagination').innerHTML='';
     return;
   }
+  var totalPages=Math.max(1,Math.ceil(tot/PAGE_SIZE));
+  if(pageBuscador>totalPages)pageBuscador=totalPages;
+  if(pageBuscador<1)pageBuscador=1;
+  var pageItems=filtered.slice((pageBuscador-1)*PAGE_SIZE,pageBuscador*PAGE_SIZE);
   var html='';
-  filtered.forEach(function(p){html+=buildCard(p)});
+  pageItems.forEach(function(p){html+=buildCard(p)});
   document.getElementById('list').innerHTML=html;
+  renderPagination(totalPages);
+}
+function goToPage(n){pageBuscador=n;renderList();window.scrollTo({top:document.getElementById('list').offsetTop-90,behavior:'smooth'});}
+function renderPagination(totalPages){
+  var box=document.getElementById('pagination');
+  if(totalPages<=1){box.innerHTML='';return;}
+  var h='<button class="page-btn" '+(pageBuscador===1?'disabled':'onclick="goToPage('+(pageBuscador-1)+')"')+'>&#8249; Anterior</button>';
+  var pages=[];
+  for(var i=1;i<=totalPages;i++){
+    if(i===1||i===totalPages||Math.abs(i-pageBuscador)<=1)pages.push(i);
+    else if(pages[pages.length-1]!=='…')pages.push('…');
+  }
+  pages.forEach(function(p){
+    if(p==='…')h+='<span class="page-ellipsis">&hellip;</span>';
+    else h+='<button class="page-btn'+(p===pageBuscador?' on':'')+'" onclick="goToPage('+p+')">'+p+'</button>';
+  });
+  h+='<button class="page-btn" '+(pageBuscador===totalPages?'disabled':'onclick="goToPage('+(pageBuscador+1)+')"')+'>Siguiente &#8250;</button>';
+  box.innerHTML=h;
+}
+/* ── Chips de filtros activos (incluye los que viven sólo en el DOM) ──── */
+function renderActiveChips(){
+  var box=document.getElementById('active-chips');
+  if(!box)return;
+  var chips=[];
+  if(activeAnio)chips.push(['Año: '+activeAnio,'setAnioShared(\'\')']);
+  Object.keys(activeTipos).forEach(function(t){
+    chips.push(['Tipo: '+t,'toggleTipo(\''+jsStr(t)+'\')']);
+  });
+  if(activeBloque)chips.push(['Bloque: '+activeBloque,'setBloque(\'\')']);
+  if(activeProvincia)chips.push(['Provincia: '+activeProvincia,'setProvincia(\'\')']);
+  if(activeOrigen)chips.push(['Origen: '+(ORIGEN_LABEL[activeOrigen]||activeOrigen),'setOrigenShared(\'\')']);
+  if(activeAcuerdoEstado)chips.push(['Acuerdo: '+(activeAcuerdoEstado==='dado'?'Dado cuenta':'Pendiente'),'setAcuerdoEstado(\'\')']);
+  var com1=document.getElementById('com-select-1').value;
+  if(com1)chips.push(['Comisión: '+com1,'clearCom1()']);
+  var comAdic=document.getElementById('com-select-adic').value;
+  if(comAdic)chips.push(['Giro adicional: '+comAdic,'clearComAdic()']);
+  var autor=document.getElementById('autor-select').value;
+  if(autor)chips.push(['Autor: '+autor,'clearAutor()']);
+  var dDesde=document.getElementById('fecha-desde').value,dHasta=document.getElementById('fecha-hasta').value;
+  if(dDesde||dHasta)chips.push(['Fechas: '+(dDesde||'…')+' a '+(dHasta||'…'),'clearFechas()']);
+  var q=document.getElementById('search').value.trim();
+  if(q)chips.push(['Texto: "'+q+'"','clearSearch()']);
+  box.innerHTML=chips.map(function(c){
+    return '<span class="active-chip">'+esc(c[0])+'<button onclick="'+c[1]+'" title="Quitar filtro">&#10005;</button></span>';
+  }).join('');
+  var secCount=(activeAnio?1:0)+Object.keys(activeTipos).length+(activeProvincia?1:0)
+    +(document.getElementById('com-select-adic').value?1:0)
+    +((document.getElementById('fecha-desde').value||document.getElementById('fecha-hasta').value)?1:0)
+    +(activeAcuerdoEstado?1:0);
+  var cntEl=document.getElementById('filters-more-count');
+  if(cntEl)cntEl.textContent=secCount?('('+secCount+')'):'';
 }
 
 /* ── Exportar a Excel ──────────────────────────────────────────── */
@@ -1781,6 +1840,56 @@ function mostrarDppHist(i){
 function cerrarDppModal(e){
   if(e&&e.target!==document.getElementById('dpp-modal-overlay'))return;
   document.getElementById('dpp-modal-overlay').classList.remove('open');
+}
+
+/* ── Ficha de proyecto (modal con stepper de estado parlamentario) ────── */
+function fichaPasos(p){
+  var pasos=[
+    {label:'Ingreso',done:true,sub:p.fecha||''},
+    {label:'En comisión',done:!!(p.comisiones&&p.comisiones.length),sub:(p.comisiones&&p.comisiones[0])||''},
+    {label:'Orden del Día',done:!!p.od,sub:p.od?('N° '+p.od.nro_od+'/'+String(p.od.anio_od).slice(-2)):''}
+  ];
+  var fin={label:'En trámite',done:false,sub:'',cls:''};
+  if(p.sancionado){fin={label:'Sancionado',done:true,sub:p.ley_numero?('Ley '+p.ley_numero):(p.fecha_ley||''),cls:'final-sanc'};}
+  else if(p.caduca){fin={label:'Caducado',done:true,sub:p.fecha_caduca||'',cls:'final-arch'};}
+  else if(p.archivado){fin={label:'Archivado',done:true,sub:p.fecha_archivo||'',cls:'final-arch'};}
+  pasos.push(fin);
+  return pasos;
+}
+function abrirFicha(clave){
+  var p=DATA_INDEX[clave];
+  if(!p)return;
+  var fg=TIPO_FG[p.tipo]||'#888',bg=TIPO_BG[p.tipo]||'#eee';
+  document.getElementById('ficha-titulo').innerHTML='<span class="exp-badge" style="background:'+bg+';color:'+fg+'">'+esc(p.tipo)+'</span> '+esc(expNroOf(p))+(p.fecha?' &middot; '+esc(p.fecha):'');
+  var stepHtml=fichaPasos(p).map(function(s){
+    return '<div class="step-node'+(s.done?' done':'')+(s.cls?' '+s.cls:'')+'">'
+      +'<div class="step-dot">'+(s.done?'&#10003;':'')+'</div>'
+      +'<div class="step-label">'+esc(s.label)+'</div>'
+      +(s.sub?'<div class="step-sub">'+esc(s.sub)+'</div>':'')
+      +'</div>';
+  }).join('');
+  document.getElementById('ficha-stepper').innerHTML=stepHtml;
+  var btags='';
+  p.bloques.forEach(function(b){var c=blqColor(b);btags+='<span class="btag" style="background:'+c.bg+';color:'+c.badge+'">'+esc(b)+'</span>';});
+  var kv=[];
+  if(p.autores.length)kv.push(['Autor(es)',esc(p.autores.join(' · '))]);
+  if(btags)kv.push(['Bloque(s)',btags]);
+  if(p.provincias&&p.provincias.length)kv.push(['Provincia(s)',esc(p.provincias.join(' · '))]);
+  if(p.comisiones.length)kv.push(['Comisiones',esc(p.comisiones.join(' · '))]);
+  if(p.dae)kv.push(['DAE',esc(p.dae)]);
+  var links='';
+  if(p.url)links+='<a class="am-link-btn" href="'+escAttr(p.url)+'" target="_blank" rel="noopener">&#128196; Ver expediente en el Senado</a>';
+  if(p.od&&p.od.url_pdf)links+='<a class="am-link-btn" href="'+escAttr(p.od.url_pdf)+'" target="_blank" rel="noopener">&darr; Orden del D&iacute;a</a>';
+  document.getElementById('ficha-body').innerHTML=
+    '<div class="ficha-extracto">'+esc(p.extracto)+'</div>'
+    +'<div class="ficha-kv">'+kv.map(function(r){return '<div class="ficha-kv-row"><span class="ficha-kv-label">'+r[0]+'</span><span class="ficha-kv-val">'+r[1]+'</span></div>';}).join('')+'</div>'
+    +cardFooterHtml(p)
+    +(links?'<div class="ficha-links">'+links+'</div>':'');
+  document.getElementById('ficha-overlay').classList.add('open');
+}
+function cerrarFicha(e){
+  if(e&&e.target!==document.getElementById('ficha-overlay'))return;
+  document.getElementById('ficha-overlay').classList.remove('open');
 }
 function parseFechaDMY(fecha){
   var parts=(fecha||'').split('/');
@@ -3643,27 +3752,41 @@ HTML_TEMPLATE = """<!DOCTYPE html>
 <div id="main-proyectos" class="mtab-content active">
   <div class="sub-nav">
     <button class="sub-btn active" data-sub="buscador" onclick="switchSub('buscador')">Buscador</button>
-    <button class="sub-btn" data-sub="tabla" onclick="switchSub('tabla')">Tabla din&aacute;mica</button>
-    <button class="sub-btn" data-sub="dashboard" onclick="switchSub('dashboard')">Dashboard</button>
+    <button class="sub-btn" data-sub="estadisticas" onclick="switchSub('estadisticas')">Estad&iacute;sticas</button>
   </div>
 
-  <!-- SUB: DASHBOARD (análisis político, 5 visualizaciones SVG) -->
-  <div id="sub-dashboard" class="sub-content">
+  <!-- SUB: ESTADÍSTICAS (treemap + ranking + dashboard, unificado) -->
+  <div id="sub-estadisticas" class="sub-content">
     <div class="section-block">
       <div class="section-header">
-        <h2>Dashboard de an&aacute;lisis</h2>
+        <h2>Estad&iacute;sticas</h2>
         <span class="section-hint">Proyectos ingresados &middot; an&aacute;lisis pol&iacute;tico</span>
       </div>
       <div class="section-body">
         <div class="dash-toolbar">
           <span class="dash-anio-label">A&ntilde;o</span>
-          <button class="chip on" id="dash-anio-2026" onclick="setDashAnio('2026')">2026</button>
-          <button class="chip" id="dash-anio-2025" onclick="setDashAnio('2025')">2025</button>
+          <button class="dash-anio-btn on" id="dash-anio-2026" onclick="setDashAnio('2026')">2026</button>
+          <button class="dash-anio-btn" id="dash-anio-2025" onclick="setDashAnio('2025')">2025</button>
           <span class="dash-cross" id="dash-cross" onclick="clearCross()" title="Quitar filtro"></span>
           <span class="dash-total" id="dash-total"></span>
         </div>
         <div class="dash-grid">
-          <div class="viz-card">
+          <div class="viz-card span6">
+            <div class="viz-head"><span class="viz-title">Bloques pol&iacute;ticos (Senado) &middot; clic para ver desglose por tipo</span></div>
+            <div class="treemap-breadcrumb" id="treemap-breadcrumb"></div>
+            <div id="viz-treemap"></div>
+            <div class="viz-legend" id="treemap-legend"></div>
+          </div>
+          <div class="viz-card span3">
+            <div class="viz-head"><span class="viz-title">Ranking bloques &times; tipo (Senado)</span></div>
+            <div class="pivot-scroll" style="max-height:420px"><div id="ranking-body"></div></div>
+          </div>
+          <div class="viz-card span3">
+            <div class="viz-head"><span class="viz-title">Tipo por bloque</span></div>
+            <div id="viz-stacked"></div>
+            <div class="viz-legend" id="stacked-legend"></div>
+          </div>
+          <div class="viz-card span2">
             <div class="viz-head">
               <span class="viz-title">Evoluci&oacute;n temporal</span>
               <div class="viz-toggle">
@@ -3674,115 +3797,26 @@ HTML_TEMPLATE = """<!DOCTYPE html>
             <div id="viz-evolucion"></div>
             <div class="viz-legend" id="evo-legend"></div>
           </div>
-          <div class="viz-card">
-            <div class="viz-head"><span class="viz-title">Distribuci&oacute;n por tipo</span></div>
-            <div id="viz-donut"></div>
-          </div>
           <div class="viz-card span2">
-            <div class="viz-head"><span class="viz-title">Bloques pol&iacute;ticos (Senado) &middot; composici&oacute;n por tipo</span></div>
-            <div id="viz-treemap"></div>
-            <div class="viz-legend" id="treemap-legend"></div>
-          </div>
-          <div class="viz-card">
-            <div class="viz-head"><span class="viz-title">Tipo por bloque</span></div>
-            <div id="viz-stacked"></div>
-            <div class="viz-legend" id="stacked-legend"></div>
-          </div>
-          <div class="viz-card">
             <div class="viz-head"><span class="viz-title">Top 10 comisiones &middot; tendencia 8 semanas</span></div>
             <div id="viz-topcoms"></div>
           </div>
+          <div class="viz-card span2">
+            <div class="viz-head"><span class="viz-title">Distribuci&oacute;n por tipo</span></div>
+            <div id="viz-donut"></div>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-
-  <!-- SUB: TABLA DINÁMICA (pivot) -->
-  <div id="sub-tabla" class="sub-content">
-    <div class="section-block">
-      <div class="section-header">
-        <h2>Tabla din&aacute;mica</h2>
-        <span class="section-hint">Toc&aacute; una celda para ver esos expedientes en el Buscador</span>
-      </div>
-      <div class="section-body">
-        <div class="pivot-config">
-          <div class="pivot-axes">
-            <div class="pivot-field">
-              <span class="filter-label">Filas</span>
-              <div class="select-wrapper">
-                <select class="filter-select" id="pv-row" onchange="setPivot()"></select>
-                <span class="select-arrow">&#9660;</span>
-              </div>
-            </div>
-            <div class="pivot-field">
-              <span class="filter-label">Columnas</span>
-              <div class="select-wrapper">
-                <select class="filter-select" id="pv-col" onchange="setPivot()"></select>
-                <span class="select-arrow">&#9660;</span>
-              </div>
-            </div>
-            <div class="pivot-field">
-              <span class="filter-label">Valores</span>
-              <div class="select-wrapper">
-                <select class="filter-select" id="pv-disp" onchange="setPivot()">
-                  <option value="abs">Conteo de proyectos</option>
-                  <option value="ptotal">% del total general</option>
-                  <option value="prow">% de la fila</option>
-                  <option value="pcol">% de la columna</option>
-                </select>
-                <span class="select-arrow">&#9660;</span>
-              </div>
-            </div>
-          </div>
-          <div class="pivot-filters">
-            <span class="filter-label">Filtros</span>
-            <div class="select-wrapper">
-              <select class="filter-select" id="pv-f-anio" onchange="setAnioShared(this.value)"><option value="">Todos los a&ntilde;os</option></select>
-              <span class="select-arrow">&#9660;</span>
-            </div>
-            <div class="select-wrapper">
-              <select class="filter-select" id="pv-f-tipo" onchange="setTipoShared(this.value)"><option value="">Todos los tipos</option></select>
-              <span class="select-arrow">&#9660;</span>
-            </div>
-            <div class="select-wrapper">
-              <select class="filter-select" id="pv-f-origen" onchange="setOrigenShared(this.value)"><option value="">Todos los or&iacute;genes</option></select>
-              <span class="select-arrow">&#9660;</span>
-            </div>
-            <button class="pivot-clear" onclick="clearSharedFilters()">Limpiar filtros &#x2715;</button>
-          </div>
-        </div>
-        <div class="pivot-meta" id="pivot-meta"></div>
-        <div class="pivot-scroll"><div id="pivot-body"></div></div>
-      </div>
-    </div>
-  </div><!-- /sub-tabla -->
+  </div><!-- /sub-estadisticas -->
 
   <!-- SUB: BUSCADOR de expedientes -->
   <div id="sub-buscador" class="sub-content active">
     <div class="detalle-layout">
-      <div class="filters-panel">
-        <div class="section-header">
-          <h2>B&uacute;squeda y filtros</h2>
-        </div>
-        <div class="filters-body">
-          <div class="filter-label" style="margin-top:0">A&ntilde;o</div>
-          <div class="filter-row" style="margin-bottom:10px">
-            <button class="chip on" id="anio-det-all" onclick="setAnioShared('')">Todos</button>
-            <button class="chip" id="anio-det-2025" onclick="setAnioShared('2025')">2025</button>
-            <button class="chip" id="anio-det-2026" onclick="setAnioShared('2026')">2026</button>
-          </div>
+      <div class="filters-top">
+        <div class="filters-primary">
+          <input class="search-box" type="text" id="search" placeholder="Buscar por extracto, autor o comisi&oacute;n&hellip;" oninput="onFilterChange()">
 
-          <input class="search-box" type="text" id="search" placeholder="Buscar por extracto, autor o comisi&oacute;n&hellip;" oninput="renderList()">
-
-          <div class="filter-label">Tipo</div>
-          <div class="filter-row" id="tipo-filters"></div>
-
-          <div id="acuerdo-estado-filter" style="display:none">
-            <div class="filter-label">Estado del acuerdo</div>
-            <div class="filter-row" id="acuerdo-estado-chips"></div>
-          </div>
-
-          <div class="filter-label">Bloque</div>
           <div class="select-wrapper">
             <select class="filter-select" id="bloque-select" onchange="setBloque(this.value)">
               <option value="">Todos los bloques</option>
@@ -3790,48 +3824,79 @@ HTML_TEMPLATE = """<!DOCTYPE html>
             <span class="select-arrow">&#9660;</span>
           </div>
 
-          <div class="filter-label">Provincia</div>
           <div class="select-wrapper">
-            <select class="filter-select" id="provincia-select" onchange="setProvincia(this.value)">
-              <option value="">Todas las provincias</option>
-            </select>
-            <span class="select-arrow">&#9660;</span>
-          </div>
-
-          <div class="filter-label">Origen</div>
-          <div class="filter-row" id="origen-filters"></div>
-
-          <div class="filter-label">Rango de fechas</div>
-          <div class="date-range">
-            <input type="date" class="date-input" id="fecha-desde" onchange="renderList()">
-            <span class="date-sep">hasta</span>
-            <input type="date" class="date-input" id="fecha-hasta" onchange="renderList()">
-          </div>
-
-          <div class="filter-label">Comisi&oacute;n (1er giro)</div>
-          <div class="select-wrapper">
-            <select class="filter-select" id="com-select-1" onchange="renderList()">
-              <option value="">Todas las comisiones</option>
-            </select>
-            <span class="select-arrow">&#9660;</span>
-          </div>
-
-          <div class="filter-label">Comisi&oacute;n (giros adicionales)</div>
-          <div class="select-wrapper">
-            <select class="filter-select" id="com-select-adic" onchange="renderList()">
-              <option value="">Todos los giros adicionales</option>
-            </select>
-            <span class="select-arrow">&#9660;</span>
-          </div>
-
-          <div class="filter-label">Autor</div>
-          <div class="select-wrapper">
-            <select class="filter-select" id="autor-select" onchange="renderList()">
+            <select class="filter-select" id="autor-select" onchange="onFilterChange()">
               <option value="">Todos los autores</option>
             </select>
             <span class="select-arrow">&#9660;</span>
           </div>
+
+          <div class="select-wrapper">
+            <select class="filter-select" id="origen-select" onchange="setOrigenShared(this.value)">
+              <option value="">Todos los or&iacute;genes</option>
+            </select>
+            <span class="select-arrow">&#9660;</span>
+          </div>
+
+          <div class="select-wrapper">
+            <select class="filter-select" id="com-select-1" onchange="onFilterChange()">
+              <option value="">Comisi&oacute;n (1er giro)</option>
+            </select>
+            <span class="select-arrow">&#9660;</span>
+          </div>
         </div>
+
+        <details class="filters-more" id="filters-more">
+          <summary>M&aacute;s filtros <span class="filters-more-count" id="filters-more-count"></span></summary>
+          <div class="filters-more-body">
+            <div class="filter-group">
+              <div class="filter-label" style="margin-top:0">A&ntilde;o</div>
+              <div class="filter-row">
+                <button class="chip on" id="anio-det-all" onclick="setAnioShared('')">Todos</button>
+                <button class="chip" id="anio-det-2025" onclick="setAnioShared('2025')">2025</button>
+                <button class="chip" id="anio-det-2026" onclick="setAnioShared('2026')">2026</button>
+              </div>
+            </div>
+
+            <div class="filter-group">
+              <div class="filter-label" style="margin-top:0">Tipo</div>
+              <div class="filter-row" id="tipo-filters"></div>
+              <div id="acuerdo-estado-filter" style="display:none">
+                <div class="filter-label">Estado del acuerdo</div>
+                <div class="filter-row" id="acuerdo-estado-chips"></div>
+              </div>
+            </div>
+
+            <div class="filter-group">
+              <div class="filter-label" style="margin-top:0">Provincia</div>
+              <div class="select-wrapper">
+                <select class="filter-select" id="provincia-select" onchange="setProvincia(this.value)">
+                  <option value="">Todas las provincias</option>
+                </select>
+                <span class="select-arrow">&#9660;</span>
+              </div>
+
+              <div class="filter-label">Comisi&oacute;n (giros adicionales)</div>
+              <div class="select-wrapper">
+                <select class="filter-select" id="com-select-adic" onchange="onFilterChange()">
+                  <option value="">Todos los giros adicionales</option>
+                </select>
+                <span class="select-arrow">&#9660;</span>
+              </div>
+            </div>
+
+            <div class="filter-group">
+              <div class="filter-label" style="margin-top:0">Rango de fechas</div>
+              <div class="date-range">
+                <input type="date" class="date-input" id="fecha-desde" onchange="onFilterChange()">
+                <span class="date-sep">hasta</span>
+                <input type="date" class="date-input" id="fecha-hasta" onchange="onFilterChange()">
+              </div>
+            </div>
+          </div>
+        </details>
+
+        <div class="active-chips" id="active-chips"></div>
       </div>
 
       <div class="results-panel">
@@ -3839,7 +3904,8 @@ HTML_TEMPLATE = """<!DOCTYPE html>
           <span class="results-count" id="results-count"></span>
           <button class="btn-export" onclick="exportarExcel()">&#128196; Exportar Excel</button>
         </div>
-        <div id="list"></div>
+        <div id="list" class="cards-grid"></div>
+        <div class="pagination" id="pagination"></div>
       </div>
     </div>
   </div><!-- /sub-buscador -->
@@ -4204,6 +4270,19 @@ HTML_TEMPLATE = """<!DOCTYPE html>
       <button class="dpp-modal-close" onclick="cerrarDppModal()">&#10005;</button>
     </div>
     <div class="dpp-modal-body" id="dpp-modal-body"></div>
+  </div>
+</div>
+
+<div id="ficha-overlay" class="dpp-modal-overlay" onclick="cerrarFicha(event)">
+  <div class="dpp-modal ficha-modal">
+    <div class="dpp-modal-head">
+      <span id="ficha-titulo"></span>
+      <button class="dpp-modal-close" onclick="cerrarFicha()">&#10005;</button>
+    </div>
+    <div class="dpp-modal-body">
+      <div class="ficha-stepper" id="ficha-stepper"></div>
+      <div class="ficha-body" id="ficha-body"></div>
+    </div>
   </div>
 </div>
 

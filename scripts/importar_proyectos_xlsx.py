@@ -24,6 +24,7 @@ import openpyxl
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from scraper_proyectos import (  # noqa: E402
     TIPOS,
+    _sin_tildes,
     cargar_padron,
     clasificar_autores,
     get_bloques,
@@ -70,6 +71,30 @@ def _fecha_o_none(valor):
     return v if RE_FECHA.match(v) else None
 
 
+def _separar_prefijo_autor(caratula, autores):
+    """La CARÁTULA del xlsx trae 'APELLIDO[ Y OTRO]: texto real...' cuando hay
+    autores senadores (ej. 'VISCHI Y VALENZUELA: PROYECTO DE...'), redundante con
+    `autores` (ya parseado aparte de la columna AUTOR). Comunicaciones sin autor
+    senador (PE, AGN, ministerios) también traen ':' pero es el nombre de la
+    institución, no debe tocarse. Sólo se recorta cuando TODOS los apellidos antes
+    de ':' matchean algún autor ya parseado (mismo criterio de `clasificar_autores`,
+    comparando sin tildes para evitar falsos negativos por acentos)."""
+    if not autores or ":" not in caratula:
+        return caratula
+    prefijo, resto = caratula.split(":", 1)
+    prefijo_limpio = re.sub(r"\s*\bY\s+OTR[OA]S?\b", "", prefijo.upper()).strip()
+    partes = re.split(r"[,]\s*|\s+Y\s+", prefijo_limpio)
+    apellidos_prefijo = [p.strip() for p in partes if p.strip()]
+    if not apellidos_prefijo:
+        return caratula
+    apellidos_autores = [_sin_tildes(a.split(",")[0].strip().upper()) for a in autores]
+    matchean = all(
+        any(_sin_tildes(ap) in apellido or apellido in _sin_tildes(ap) for apellido in apellidos_autores)
+        for ap in apellidos_prefijo
+    )
+    return resto.strip() if matchean else caratula
+
+
 def _parse_ley_fecha(valor):
     """'27818 - 24/06/2026' -> ('27818', '24/06/2026'); ' - ' o vacío -> (None, None)."""
     v = (valor or "").strip()
@@ -102,6 +127,7 @@ def parsear_fila(row, padron, indice):
         if a:
             autores_todos.append(normalizar_autor(a))
     autores, coautores = clasificar_autores(caratula, autores_todos)
+    extracto = _separar_prefijo_autor(caratula, autores)
 
     comisiones = []
     for i in range(5):
@@ -127,7 +153,7 @@ def parsear_fila(row, padron, indice):
         "anio": anio,
         "tipo": tipo,
         "tipo_label": TIPOS.get(tipo, tipo),
-        "extracto": caratula,
+        "extracto": extracto,
         "autores": autores,
         "coautores": coautores,
         "bloques": get_bloques(autores, padron, indice),
