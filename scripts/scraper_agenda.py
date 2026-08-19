@@ -25,6 +25,15 @@ y volvió a cambiarlo levemente en agosto):
     basa en el marcador de fecha (RE_FECHA_LINEA) y no en ese encabezado, que
     ahora es opcional (ver _es_texto_formato_libre / parsear_reuniones_texto_libre).
 
+Reuniones "suspendidas": cada boletín nuevo es la versión vigente de la agenda
+para las fechas que trae. Si una reunión ya acumulada de un boletín anterior
+tenía una de esas fechas y no reaparece en el boletín nuevo, se marca
+`suspendida: true` (ver marcar_suspendidas()) — no distingue de una
+reprogramación a otra fecha/hora, que se ve igual (desaparece de su fecha
+original). Si una reunión suspendida vuelve a aparecer más adelante con la
+misma clave, el merge normal la reemplaza por la versión fresca y deja de
+estar suspendida.
+
 Tolerante a fallos: si un boletín falla, se registra el error y se continúa.
 """
 
@@ -624,6 +633,33 @@ def clave_reunion(r):
     return (r.get("fecha", ""), r.get("hora", ""), tuple(r.get("comisiones", [])))
 
 
+def marcar_suspendidas(reuniones_acum, reuniones_del_boletin, bid):
+    """Si este boletín trae reuniones para una fecha X, es la versión vigente
+    de la agenda para esa fecha: cualquier reunión ya acumulada (de un
+    boletín anterior) para esa misma fecha que NO reaparezca acá se considera
+    dada de baja de la agenda ('suspendida'). Si una reunión suspendida
+    reaparece más adelante con la misma clave, el merge normal la reemplaza
+    por la versión fresca (sin el flag) — vuelve a quedar vigente sola.
+    No distingue "suspendida" de "reprogramada a otra fecha/hora": ambas se
+    ven igual desde este único boletín (desaparece de su fecha original)."""
+    fechas_bol = {r["fecha"] for r in reuniones_del_boletin if r.get("fecha")}
+    if not fechas_bol:
+        return 0
+    claves_bol = {clave_reunion(r) for r in reuniones_del_boletin}
+    marcadas = 0
+    for r in reuniones_acum:
+        if r.get("fecha") not in fechas_bol:
+            continue
+        if r.get("boletin_id", 0) >= bid:
+            continue
+        if clave_reunion(r) in claves_bol:
+            continue
+        if not r.get("suspendida"):
+            r["suspendida"] = True
+            marcadas += 1
+    return marcadas
+
+
 # ─────────────────────────────── Main ─────────────────────────────────────────
 
 def main():
@@ -664,6 +700,9 @@ def main():
             reuniones, texto = parsear_boletin(contenido, comisiones_norm)
             numero_pdf = extraer_numero_boletin(texto) or bol["numero"]
             log.info(f"    → {len(reuniones)} reunión(es)")
+            marcadas = marcar_suspendidas(reuniones_acum, reuniones, bid)
+            if marcadas:
+                log.info(f"    → {marcadas} reunión(es) marcadas como suspendidas (desaparecieron de la agenda)")
             for r in reuniones:
                 r["boletin_id"] = bid
                 r["boletin_numero"] = numero_pdf

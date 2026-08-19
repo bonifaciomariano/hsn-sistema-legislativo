@@ -148,6 +148,13 @@ badge PLENARIA, reuniones pasadas colapsadas, sección separada para reuniones d
 asesores. Nivel 2 (detalle): metadatos de la reunión + temario clickeable (salta al
 expediente en el Buscador de Proyectos vía `irAExpediente()`).
 
+**(2026-08) Badge "Suspendida":** `scraper_agenda.py` marca `suspendida: true` en
+`data/agenda.json` cuando una reunión ya acumulada de un boletín anterior no
+reaparece para la misma fecha en un boletín más nuevo (`marcar_suspendidas()`).
+No distingue de una reprogramación (se ve igual: desaparece de su fecha
+original). Si reaparece más adelante con la misma clave, deja de estar
+suspendida automáticamente.
+
 ### 5.4 Ayuda Memoria
 Órdenes del Día del HSN, agrupadas en 4 sub-pestañas (`switchOdTab()`): OD de Ley,
 Anexo 1, OD de Acuerdos, Otros (clasificación por `odCategoria()` según el tipo del
