@@ -226,7 +226,21 @@ body{font-family:'Poppins',Calibri,sans-serif;background:#F5F7FA;color:#4A4A4A;f
 /* ── Comisiones ───────────────────────────────────────────────────────── */
 .com-nivel{display:none}
 .com-nivel.active{display:block}
+.stats-bar{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:14px}
+.stat-card{flex:1;min-width:130px;background:#fff;border:1.5px solid #D6E4F0;border-radius:10px;padding:12px 16px;cursor:pointer;transition:all .15s;text-align:center}
+.stat-card:hover{border-color:#2E75B6}
+.stat-card.active{background:#1B5EA2;border-color:#1B5EA2}
+.stat-card.active .stat-num,.stat-card.active .stat-label{color:#fff}
+.stat-num{font-size:24px;font-weight:800;color:#1B5EA2;line-height:1.1}
+.stat-label{font-size:10.5px;font-weight:600;color:#888;text-transform:uppercase;letter-spacing:.5px;margin-top:3px}
 .com-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:12px;margin-top:14px}
+.senator-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:10px;margin-top:14px}
+.senator-card{background:#fff;border:1px solid #D6E4F0;border-radius:10px;padding:12px 14px}
+.senator-name{font-size:13px;font-weight:700;color:#1B5EA2;margin-bottom:4px}
+.senator-bloque-tag{display:inline-block;font-size:10px;padding:2px 8px;border-radius:10px;margin-bottom:8px;font-weight:600}
+.senator-chips{display:flex;flex-wrap:wrap;gap:4px}
+.senator-count{font-size:11px;color:#9CA3AF;margin-top:6px}
+.cross-vacantes td,.cross-vacantes .blq-name{border-top:2px solid #D6E4F0;font-weight:700}
 .com-card{background:#fff;border:1px solid #D6E4F0;border-radius:10px;padding:14px 16px;cursor:pointer;transition:all .15s;box-shadow:0 1px 3px rgba(0,0,0,0.05)}
 .com-card:hover{border-color:#1B5EA2;box-shadow:0 2px 8px rgba(27,94,162,0.15);transform:translateY(-1px)}
 .com-card-nombre{font-size:14px;font-weight:700;color:#1B5EA2;line-height:1.3}
@@ -1112,6 +1126,7 @@ function init(){
   renderDashboard();
   syncFilterUI();
   renderList();
+  renderStatsBar();
   renderComisionesList();
   renderRepresentacion();
   agendaInit();
@@ -1767,9 +1782,31 @@ function exportarExcel(){
 /* ── Comisiones ────────────────────────────────────────────────── */
 function normCom(s){return String(s||'').toUpperCase().trim()}
 function nombreCom(s){return String(s||'').replace(/^De\s+/,'')}
+/* ── Barra de stats (filtro rápido: constituidas / sin constituir / con vacantes) ── */
+var comFiltroStat='';
+function comisionPasaStat(c){
+  if(comFiltroStat==='constituida')return c.integrantes.length>0;
+  if(comFiltroStat==='sinconstituir')return c.integrantes.length===0;
+  if(comFiltroStat==='vacante')return c.integrantes.length<c.cupo;
+  return true;
+}
+function setComFiltroStat(v){comFiltroStat=(comFiltroStat===v?'':v);renderStatsBar();renderComisionesList();}
+function renderStatsBar(){
+  var nConst=0,nSin=0,nVac=0;
+  COMISIONES.forEach(function(c){
+    if(c.integrantes.length>0)nConst++;else nSin++;
+    if(c.integrantes.length<c.cupo)nVac++;
+  });
+  function card(key,num,label){
+    return '<div class="stat-card'+(comFiltroStat===key?' active':'')+'" onclick="setComFiltroStat(\''+key+'\')">'
+      +'<div class="stat-num">'+num+'</div><div class="stat-label">'+label+'</div></div>';
+  }
+  document.getElementById('com-stats-bar').innerHTML=
+    card('constituida',nConst,'Constituidas')+card('sinconstituir',nSin,'Sin constituir')+card('vacante',nVac,'Con vacantes');
+}
 function renderComisionesList(){
   var q=(document.getElementById('com-search').value||'').toLowerCase().trim();
-  var lista=COMISIONES.filter(function(c){return !q||nombreCom(c.nombre).toLowerCase().indexOf(q)>=0});
+  var lista=COMISIONES.filter(function(c){return (!q||nombreCom(c.nombre).toLowerCase().indexOf(q)>=0)&&comisionPasaStat(c)});
   var el=document.getElementById('com-list');
   if(!lista.length){el.innerHTML='<div class="com-empty">Sin comisiones para este filtro.</div>';return}
   var html='';
@@ -1797,6 +1834,21 @@ function abrirComision(idx){
 function volverComisiones(){
   document.getElementById('com-nivel2').classList.remove('active');
   document.getElementById('com-nivel1').classList.add('active');
+}
+function switchComVista(id){
+  var root=document.getElementById('com-nivel1');
+  root.querySelectorAll(':scope > .sub-nav .sub-btn').forEach(function(b){b.classList.remove('active')});
+  root.querySelectorAll(':scope > .sub-content').forEach(function(c){c.classList.remove('active')});
+  root.querySelector('[data-comvista="'+id+'"]').classList.add('active');
+  document.getElementById('com-vista-'+id).classList.add('active');
+  if(id==='estadisticas'){renderRepresentacion();renderComisionesPorSenador();}
+}
+function switchComEstad(id){
+  var root=document.getElementById('com-vista-estadisticas');
+  root.querySelectorAll('.com-sub-btn').forEach(function(b){b.classList.remove('active')});
+  root.querySelectorAll('.com-sub-content').forEach(function(c){c.classList.remove('active')});
+  root.querySelector('[data-comestad="'+id+'"]').classList.add('active');
+  document.getElementById('com-estad-'+id).classList.add('active');
 }
 function switchComSub(id){
   var root=document.getElementById('com-nivel2');
@@ -1844,14 +1896,11 @@ function renderIntegrantes(c){
   document.getElementById('com-integrantes-list').innerHTML=html||'<div class="com-empty">Sin integrantes cargados.</div>';
 }
 var DPP_TIPO_LABEL={add:'Designado/a',replace:'Designado/a',remove:'Dado/a de baja',rewrite:'Confirmado/a en recomposici&oacute;n'};
-function mostrarDppHist(i){
-  if(!comisionAbierta)return;
-  var m=comisionAbierta.integrantes[i];
-  if(!m)return;
-  document.getElementById('dpp-modal-title').textContent=m.nombre+' — '+nombreCom(comisionAbierta.nombre);
+function abrirDppModal(titulo,hist){
+  document.getElementById('dpp-modal-title').textContent=titulo;
   var body='';
-  if(m.hist&&m.hist.length){
-    m.hist.forEach(function(h){
+  if(hist&&hist.length){
+    hist.forEach(function(h){
       var detalle=DPP_TIPO_LABEL[h.tipo]||h.tipo;
       if(h.tipo==='replace'&&h.reemplaza)detalle+=' en reemplazo de '+esc(h.reemplaza);
       body+='<div class="dpp-hist-entry">'
@@ -1864,6 +1913,12 @@ function mostrarDppHist(i){
   }
   document.getElementById('dpp-modal-body').innerHTML=body;
   document.getElementById('dpp-modal-overlay').classList.add('open');
+}
+function mostrarDppHist(i){
+  if(!comisionAbierta)return;
+  var m=comisionAbierta.integrantes[i];
+  if(!m)return;
+  abrirDppModal(m.nombre+' — '+nombreCom(comisionAbierta.nombre),m.hist);
 }
 function cerrarDppModal(e){
   if(e&&e.target!==document.getElementById('dpp-modal-overlay'))return;
@@ -2309,8 +2364,56 @@ function renderRepresentacion(){
     });
     crossHtml+='</tr>';
   });
+  crossHtml+='<tr class="cross-vacantes"><td class="blq-name">Vacantes</td>';
+  COMISIONES.forEach(function(c){
+    var v=c.cupo-c.integrantes.length;
+    crossHtml+='<td class="val" style="color:'+(v>0?'#B91C1C':'#cfd8e3')+';font-weight:'+(v>0?'700':'400')+'">'+(v>0?v:'&mdash;')+'</td>';
+  });
+  crossHtml+='</tr>';
   crossHtml+='</tbody></table></div>';
   document.getElementById('repr-cross').innerHTML=crossHtml;
+}
+/* ── Estadísticas > Por senador/a: invierte COMISIONES (comisión→integrantes)
+   a senador→comisiones en el cliente, sin tocar data/comisiones.json ──── */
+function renderComisionesPorSenador(){
+  var grid=document.getElementById('senador-grid');
+  if(!grid)return;
+  var q=(document.getElementById('senador-search').value||'').toLowerCase().trim();
+  var porSenador={};
+  COMISIONES.forEach(function(c){
+    c.integrantes.forEach(function(m){
+      if(!porSenador[m.nombre])porSenador[m.nombre]={bloque:m.bloque,comisiones:[]};
+      porSenador[m.nombre].comisiones.push({nombre:c.nombre,rol:m.rol,dpp:m.dpp,hist:m.hist});
+    });
+  });
+  var nombres=Object.keys(porSenador).sort(function(a,b){return a.localeCompare(b,'es')});
+  if(q)nombres=nombres.filter(function(n){return n.toLowerCase().indexOf(q)>=0});
+  if(!nombres.length){grid.innerHTML='<div class="com-empty">Sin resultados para este filtro.</div>';return}
+  var html='';
+  nombres.forEach(function(nombre){
+    var d=porSenador[nombre],col=blqColor(d.bloque);
+    var chips=d.comisiones.map(function(cm,i){
+      var rolTxt=(cm.rol&&cm.rol!=='Vocal')?' &middot; '+esc(cm.rol):'';
+      return '<button class="chip" onclick="mostrarDppHistDirecto(\''+jsStr(nombre)+'\','+i+')">'+esc(nombreComCorto(cm.nombre))+rolTxt+'</button>';
+    }).join('');
+    html+='<div class="senator-card"><div class="senator-name">'+esc(nombre)+'</div>'
+      +'<span class="senator-bloque-tag" style="background:'+col.bg+';color:'+col.badge+'">'+esc(d.bloque)+'</span>'
+      +'<div class="senator-chips">'+chips+'</div>'
+      +'<div class="senator-count">'+d.comisiones.length+' comisi&oacute;n'+(d.comisiones.length!==1?'es':'')+'</div></div>';
+  });
+  grid.innerHTML=html;
+}
+function mostrarDppHistDirecto(nombre,i){
+  var porSenador={};
+  COMISIONES.forEach(function(c){
+    c.integrantes.forEach(function(m){
+      if(!porSenador[m.nombre])porSenador[m.nombre]=[];
+      porSenador[m.nombre].push({nombre:c.nombre,dpp:m.dpp,hist:m.hist});
+    });
+  });
+  var cm=(porSenador[nombre]||[])[i];
+  if(!cm)return;
+  abrirDppModal(nombre+' — '+nombreCom(cm.nombre),cm.hist);
 }
 /* ── Exportar integrantes de la comisión abierta a PDF (diseño del
       repo comisiones-senado, adaptado a una sola comisión) ──────── */
@@ -3947,25 +4050,45 @@ HTML_TEMPLATE = """<!DOCTYPE html>
 
   <!-- NIVEL 1: lista de comisiones -->
   <div id="com-nivel1" class="com-nivel active">
-    <div class="section-block">
-      <div class="section-header">
-        <h2>Comisiones permanentes</h2>
-        <span class="section-hint">Senado de la Naci&oacute;n</span>
-      </div>
-      <div class="section-body">
-        <input class="search-box" type="text" id="com-search" placeholder="Buscar comisi&oacute;n&hellip;" oninput="renderComisionesList()" style="max-width:360px">
-        <div id="com-list" class="com-grid"></div>
+    <div class="sub-nav">
+      <button class="sub-btn active" data-comvista="lista" onclick="switchComVista('lista')">Comisiones</button>
+      <button class="sub-btn" data-comvista="estadisticas" onclick="switchComVista('estadisticas')">Estad&iacute;sticas</button>
+    </div>
+
+    <div id="com-vista-lista" class="sub-content active">
+      <div class="section-block">
+        <div class="section-header">
+          <h2>Comisiones permanentes</h2>
+          <span class="section-hint">Senado de la Naci&oacute;n</span>
+        </div>
+        <div class="section-body">
+          <div class="stats-bar" id="com-stats-bar"></div>
+          <input class="search-box" type="text" id="com-search" placeholder="Buscar comisi&oacute;n&hellip;" oninput="renderComisionesList()" style="max-width:360px">
+          <div id="com-list" class="com-grid"></div>
+        </div>
       </div>
     </div>
 
-    <div class="section-block">
-      <div class="section-header">
-        <h2>Representaci&oacute;n por bloques</h2>
-        <span class="section-hint">Composici&oacute;n del Senado y de cada comisi&oacute;n</span>
-      </div>
-      <div class="section-body">
-        <div id="repr-global"></div>
-        <div id="repr-cross"></div>
+    <div id="com-vista-estadisticas" class="sub-content">
+      <div class="section-block">
+        <div class="section-header">
+          <h2>Estad&iacute;sticas</h2>
+          <span class="section-hint">Composici&oacute;n del Senado y de cada comisi&oacute;n</span>
+        </div>
+        <div class="section-body">
+          <div class="com-sub-nav" id="com-estad-nav">
+            <button class="com-sub-btn active" data-comestad="bloque" onclick="switchComEstad('bloque')">Por bloque</button>
+            <button class="com-sub-btn" data-comestad="senador" onclick="switchComEstad('senador')">Por senador/a</button>
+          </div>
+          <div id="com-estad-bloque" class="com-sub-content active">
+            <div id="repr-global"></div>
+            <div id="repr-cross"></div>
+          </div>
+          <div id="com-estad-senador" class="com-sub-content">
+            <input class="search-box" type="text" id="senador-search" placeholder="Buscar senador/a&hellip;" oninput="renderComisionesPorSenador()" style="max-width:360px">
+            <div id="senador-grid" class="senator-grid"></div>
+          </div>
+        </div>
       </div>
     </div>
   </div>

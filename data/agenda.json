@@ -6066,7 +6066,8 @@
       ],
       "tipo": "bicameral",
       "boletin_id": 2337,
-      "boletin_numero": "95/26"
+      "boletin_numero": "95/26",
+      "suspendida": true
     },
     {
       "seccion": "senadores",
