@@ -239,6 +239,7 @@ body{font-family:'Poppins',Calibri,sans-serif;background:#F5F7FA;color:#4A4A4A;f
 .com-sub-btn:hover{color:#2E75B6}
 .com-sub-content{display:none}
 .com-sub-content.active{display:block}
+#com-integrantes-list{max-width:760px;margin:0 auto}
 .member-row{display:flex;align-items:center;gap:8px;padding:8px 4px;border-bottom:1px solid #EEF2F8;flex-wrap:wrap}
 .member-row:last-child{border-bottom:none}
 .bloque-dot{width:10px;height:10px;border-radius:50%;flex-shrink:0}
@@ -416,6 +417,8 @@ table.cross-table tr:last-child td{border-bottom:none}
 .sanc-obs.ley{color:#1B5EA2;font-weight:700}
 .agenda-badges{display:flex;align-items:center;gap:6px;flex-wrap:wrap}
 .plenaria-badge{display:inline-block;font-size:9.5px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;padding:2px 8px;border-radius:10px;background:#0d3f73;color:#fff}
+.suspendida-badge{display:inline-block;font-size:9.5px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;padding:2px 8px;border-radius:10px;background:#FEE2E2;color:#991B1B}
+.agenda-card.agenda-suspendida{opacity:.75}
 /* ── Agenda: calendario ──────────────────────────────────────────────── */
 .agenda-cal-controls{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:16px}
 .cal-header{display:flex;align-items:center;justify-content:center;gap:18px;margin:4px 0 10px}
@@ -1040,7 +1043,8 @@ var BLOQUE_COLORS={
   'DESPIERTA CHUBUT':                        {dot:'#7B3F00', bg:'#F5EBE4', badge:'#4A2400'},
   'INDEPENDENCIA':                           {dot:'#4472C4', bg:'#EAF0FA', badge:'#1B3A7A'},
   'LA NEUQUINIDAD':                          {dot:'#FF69B4', bg:'#FDE8F3', badge:'#8B0050'},
-  'PRIMERO LOS SALTEÑOS':                    {dot:'#92D050', bg:'#F0FAE6', badge:'#3A6010'}
+  'PRIMERO LOS SALTEÑOS':                    {dot:'#92D050', bg:'#F0FAE6', badge:'#3A6010'},
+  'MOVIMIENTO POR MISIONES':                 {dot:'#C00000', bg:'#FBE5E5', badge:'#6B0000'}
 };
 var BLOQUE_COLOR_DEFAULT={dot:'#9CA3AF', bg:'#F9FAFB', badge:'#374151'};
 function normBloque(b){return String(b||'').toUpperCase().normalize('NFD').replace(/[̀-ͯ]/g,'').trim()}
@@ -1055,6 +1059,9 @@ function claveP(p){return p.origen+'~'+p.nro+'~'+p.anio+'~'+p.tipo;}
 
 /* ── Escapado HTML básico ──────────────────────────────────────────── */
 function esc(s){return String(s==null?'':s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;')}
+/* Comisiones unicamerales vienen con el prefijo "DE " (ej. "DE DEFENSA NACIONAL");
+   las bicamerales no lo tienen. Sólo cosmético, no toca el dato subyacente. */
+function comLabel(s){return String(s||'').replace(/^DE\s+/i,'');}
 function escAttr(s){return esc(s).replace(/"/g,'&quot;')}
 
 /* ── Navegación ────────────────────────────────────────────────────── */
@@ -1350,8 +1357,8 @@ function renderTreemap(data){
 }
 function renderRankingBloques(data){
   var dS=data.filter(function(p){return p.origen==='S'&&p.bloques[0];});
-  var cols=['PL','PC','PD'];
-  var cells={},rowTot={},colTot={PL:0,PC:0,PD:0},grand=0,rowSet={};
+  var cols=['PL','PC','PD','PR'];
+  var cells={},rowTot={},colTot={PL:0,PC:0,PD:0,PR:0},grand=0,rowSet={};
   dS.forEach(function(p){
     if(cols.indexOf(p.tipo)<0)return;
     var rk=p.bloques[0];
@@ -1655,7 +1662,7 @@ function buildCard(p){
     var c=blqColor(b);
     btags+='<span class="btag" style="background:'+c.bg+';color:'+c.badge+'">'+esc(b)+'</span>';
   });
-  p.comisiones.forEach(function(c){ctags+='<span class="ctag">'+esc(c)+'</span>'});
+  p.comisiones.forEach(function(c){ctags+='<span class="ctag">'+esc(comLabel(c))+'</span>'});
   var expNro=expNroOf(p);
   var linkBtn=p.url?'<a class="exp-link" href="'+escAttr(p.url)+'" target="_blank" onclick="event.stopPropagation()">Ver en Senado &#8599;</a>':'';
   return '<div class="card" onclick="abrirFicha(\''+jsStr(claveP(p))+'\')"><div class="card-exp"><div class="exp-id"><span class="exp-badge" style="background:'+bg+';color:'+fg+'">'+esc(p.tipo)+'</span><span class="exp-nro">'+esc(expNro)+'</span>'+(p.fecha?'<span class="exp-fecha">'+esc(p.fecha)+'</span>':'')+'</div>'+linkBtn+'</div><div class="card-body"><div class="extracto">'+esc(p.extracto)+'</div><div class="card-meta">'+(autoresTxt?'<div class="meta-row"><span class="meta-bold">'+esc(autoresTxt)+'</span></div>':'')+(btags?'<div class="meta-row">'+btags+'</div>':'')+(ctags?'<div class="meta-row">'+ctags+'</div>':'')+'</div></div>'+cardFooterHtml(p)+'</div>';
@@ -1799,10 +1806,31 @@ function switchComSub(id){
   document.getElementById('com-sub-'+id).classList.add('active');
 }
 var comisionAbierta=null;
+/* Orden fijo pedido por Mariano: cargos de mesa primero, después LLA, después
+   UCR, después el resto de bloques ("varios"), y al final —de arriba para
+   abajo— Convicción Federal, Justicia Social Federal, Frente Cívico por
+   Santiago y, en el último lugar, Justicialista. */
+var CARGO_ORDEN={'Presidente':0,'Vicepresidente':1,'Secretario':2};
+var COM_ORDEN_TOP=['LA LIBERTAD AVANZA','UCR - UNION CIVICA RADICAL'];
+var COM_ORDEN_BOTTOM=['CONVICCION FEDERAL','JUSTICIA SOCIAL FEDERAL','FRENTE CIVICO POR SANTIAGO','JUSTICIALISTA'];
+function ordenIntegrante(m){
+  if(CARGO_ORDEN.hasOwnProperty(m.rol))return CARGO_ORDEN[m.rol];
+  var nb=normBloque(m.bloque);
+  var top=COM_ORDEN_TOP.indexOf(nb);if(top>=0)return 10+top;
+  var bot=COM_ORDEN_BOTTOM.indexOf(nb);if(bot>=0)return 1000+bot;
+  return 100;
+}
 function renderIntegrantes(c){
   comisionAbierta=c;
+  var conIdx=c.integrantes.map(function(m,i){return {m:m,i:i};});
+  conIdx.sort(function(a,b){
+    var oa=ordenIntegrante(a.m),ob=ordenIntegrante(b.m);
+    if(oa!==ob)return oa-ob;
+    return (a.m.nombre||'').localeCompare(b.m.nombre||'');
+  });
   var html='';
-  c.integrantes.forEach(function(m,i){
+  conIdx.forEach(function(pair){
+    var m=pair.m,i=pair.i;
     var col=blqColor(m.bloque);
     var rolHtml=(m.rol&&m.rol!=='Vocal')?'<span class="rol-badge rol-'+m.rol+'">'+esc(m.rol)+'</span>':'';
     html+='<div class="member-row">'
@@ -1846,7 +1874,7 @@ function cerrarDppModal(e){
 function fichaPasos(p){
   var pasos=[
     {label:'Ingreso',done:true,sub:p.fecha||''},
-    {label:'En comisión',done:!!(p.comisiones&&p.comisiones.length),sub:(p.comisiones&&p.comisiones[0])||''},
+    {label:'En comisión',done:!!(p.comisiones&&p.comisiones.length),sub:(p.comisiones&&p.comisiones[0])?comLabel(p.comisiones[0]):''},
     {label:'Orden del Día',done:!!p.od,sub:p.od?('N° '+p.od.nro_od+'/'+String(p.od.anio_od).slice(-2)):''}
   ];
   var fin={label:'En trámite',done:false,sub:'',cls:''};
@@ -1875,7 +1903,7 @@ function abrirFicha(clave){
   if(p.autores.length)kv.push(['Autor(es)',esc(p.autores.join(' · '))]);
   if(btags)kv.push(['Bloque(s)',btags]);
   if(p.provincias&&p.provincias.length)kv.push(['Provincia(s)',esc(p.provincias.join(' · '))]);
-  if(p.comisiones.length)kv.push(['Comisiones',esc(p.comisiones.join(' · '))]);
+  if(p.comisiones.length)kv.push(['Comisiones',esc(p.comisiones.map(comLabel).join(' · '))]);
   if(p.dae)kv.push(['DAE',esc(p.dae)]);
   var links='';
   if(p.url)links+='<a class="am-link-btn" href="'+escAttr(p.url)+'" target="_blank" rel="noopener">&#128196; Ver expediente en el Senado</a>';
@@ -2419,6 +2447,9 @@ function toggleColapso(headEl){
 function plenariaBadge(r){
   return (r.comisiones&&r.comisiones.length>1)?'<span class="plenaria-badge">Plenaria</span>':'';
 }
+function suspendidaBadge(r){
+  return r.suspendida?'<span class="suspendida-badge" title="Figuraba en un bolet&iacute;n anterior y desapareci&oacute; de la agenda">Suspendida</span>':'';
+}
 function agendaCardsHtml(arr,isPast){
   var h='';
   arr.forEach(function(r){h+=buildReunionCard(r,AGENDA.indexOf(r),isPast);});
@@ -2441,10 +2472,10 @@ function buildReunionCard(r,idx,isPast){
   var tl=REUNION_TIPO_LABEL[r.tipo]||r.tipo;
   var col=REUNION_TIPO_COLOR[r.tipo]||{fg:'#888',bg:'#eee'};
   var coms=(r.comisiones||[]).map(esc).join(' &middot; ');
-  return '<div class="agenda-card'+(isPast?' agenda-pasada':'')+'" onclick="abrirReunion('+idx+')">'
+  return '<div class="agenda-card'+(isPast?' agenda-pasada':'')+(r.suspendida?' agenda-suspendida':'')+'" onclick="abrirReunion('+idx+')">'
     +'<div class="agenda-card-top">'
     +'<span class="agenda-fecha">'+esc(r.dia?r.dia+' ':'')+esc(r.fecha_completa||r.fecha)+' &middot; '+esc(r.hora)+' hs</span>'
-    +'<span class="agenda-badges">'+plenariaBadge(r)+'<span class="exp-badge" style="background:'+col.bg+';color:'+col.fg+'">'+esc(tl)+'</span></span>'
+    +'<span class="agenda-badges">'+suspendidaBadge(r)+plenariaBadge(r)+'<span class="exp-badge" style="background:'+col.bg+';color:'+col.fg+'">'+esc(tl)+'</span></span>'
     +'</div>'
     +'<div class="agenda-card-com">'+coms+'</div>'
     +'<div class="agenda-card-salon">'+esc(r.salon_completo||r.salon)+(isPast?' <span class="agenda-pasada-tag">Realizada</span>':'')+'</div>'
@@ -3955,7 +3986,7 @@ HTML_TEMPLATE = """<!DOCTYPE html>
         <div class="com-sub-nav">
           <button class="com-sub-btn active" data-comsub="integrantes" onclick="switchComSub('integrantes')">Integrantes</button>
           <button class="com-sub-btn" data-comsub="proyectos" onclick="switchComSub('proyectos')">Proyectos en tr&aacute;mite</button>
-          <button class="com-sub-btn" data-comsub="proyeccion" onclick="switchComSub('proyeccion')">Proyecci&oacute;n de votaci&oacute;n</button>
+          <button class="com-sub-btn" data-comsub="proyeccion" onclick="switchComSub('proyeccion')">Proyecci&oacute;n de dictamen</button>
         </div>
 
         <div id="com-sub-integrantes" class="com-sub-content active">
@@ -4545,6 +4576,7 @@ def construir_agenda(comisiones):
             "temario": r.get("temario", []),
             "tipo": r.get("tipo", ""),
             "boletin_numero": r.get("boletin_numero", ""),
+            "suspendida": r.get("suspendida", False),
         })
     return resultado
 

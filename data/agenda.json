@@ -6159,9 +6159,10 @@
           "extracto": "REUNIÓN CONSTITUTIVA."
         }
       ],
-      "tipo": "senadores",
+      "tipo": "bicameral",
       "boletin_id": 2339,
-      "boletin_numero": "97/26"
+      "boletin_numero": "97/26",
+      "suspendida": true
     },
     {
       "seccion": "senadores",
