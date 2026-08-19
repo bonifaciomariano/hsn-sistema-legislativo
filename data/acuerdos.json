@@ -1,5 +1,437 @@
 [
   {
+    "nro": 176,
+    "anio": 2025,
+    "caratula": "MENSAJE N° 4/26 QUE SOLICITA ACUERDO A FIN DE POSIBILITAR UN NUEVO NOMBRAMIENTO PARA DESIGNAR VOCAL DE LA CAMARA FEDERAL DE CASACION PENAL, VOCALIA VII, AL DR. CARLOS ALBERTO MAHIQUES.",
+    "dado_cuenta": true,
+    "fecha_dado_cuenta": "18/03/2026",
+    "dae": 9,
+    "aprobado": true,
+    "fecha_aprobacion": "14/05/2026",
+    "nro_od": 17,
+    "origen": "PE"
+  },
+  {
+    "nro": 175,
+    "anio": 2025,
+    "caratula": "MENSAJE N° 3/26 QUE SOLICITA ACUERDO PARA NOMBRAR EMBAJADOR EXTRAORDINARIO Y PLENIPOTENCIARIO AL SEÑOR FERNANDO ADOLFO IGLESIAS.",
+    "dado_cuenta": true,
+    "fecha_dado_cuenta": "11/02/2026",
+    "dae": 8,
+    "aprobado": true,
+    "fecha_aprobacion": "26/02/2026",
+    "nro_od": 704,
+    "origen": "PE"
+  },
+  {
+    "nro": 152,
+    "anio": 2025,
+    "caratula": "JEFATURA DE GABINETE: REMITE MENSAJE N° 33/25 QUE COMUNICA EL DICTADO DEL DECRETO N° 810/25, QUE SOLICITA ACUERDO PARA DESIGNAR CARGOS DE LA AUTORIDAD NACIONAL DE LA COMPETENCIA, ORGANISMO DESCENTRALIZADO ACTUANTE EN EL ÁMBITO DEL MINISTERIO DE ECONOMÍA, EN LOS TÉRMINOS DE LOS ARTÍCULOS 21 Y 23 DE LA LEY N° 27.442.",
+    "dado_cuenta": true,
+    "fecha_dado_cuenta": "18/03/2026",
+    "dae": 7,
+    "aprobado": true,
+    "fecha_aprobacion": "09/04/2026",
+    "nro_od": 8,
+    "origen": "PE"
+  },
+  {
+    "nro": 132,
+    "anio": 2025,
+    "caratula": "MENSAJE N° 32/25 QUE SOLICITA ACUERDO PARA PROMOVER AL GRADO INMEDIATO SUPERIOR, CON FECHA 26 DE NOVIEMBRE DE 2024, AL BRIGADIER MAYOR GUSTAVO JAVIER VALVERDE.",
+    "dado_cuenta": true,
+    "fecha_dado_cuenta": "18/03/2026",
+    "dae": 6,
+    "aprobado": true,
+    "fecha_aprobacion": "09/04/2026",
+    "nro_od": 7,
+    "origen": "PE"
+  },
+  {
+    "nro": 131,
+    "anio": 2025,
+    "caratula": "MENSAJE N° 31/25 QUE SOLICITA ACUERDO PARA DESIGNAR DIRECTORES DEL BANCO CENTRAL DE LA REPUBLICA ARGENTINA.",
+    "dado_cuenta": true,
+    "fecha_dado_cuenta": "02/10/2025",
+    "dae": 5,
+    "aprobado": false,
+    "fecha_aprobacion": null,
+    "nro_od": null,
+    "origen": "PE"
+  },
+  {
+    "nro": 114,
+    "anio": 2025,
+    "caratula": "MENSAJE N° 24/25 QUE SOLICITA ACUERDO A FIN DE POSIBILITAR UN NUEVO NOMBRAMIENTO PARA DESIGNAR VOCAL DE LA CAMARA FEDERAL DE APELACIONES DE POSADAS, PROV. DE MISIONES, A LA DRA. MIRTA DELIA TYDEN.",
+    "dado_cuenta": true,
+    "fecha_dado_cuenta": "04/09/2025",
+    "dae": 4,
+    "aprobado": true,
+    "fecha_aprobacion": "02/10/2025",
+    "nro_od": 575,
+    "origen": "PE"
+  },
+  {
+    "nro": 110,
+    "anio": 2025,
+    "caratula": "MENSAJE N° 23/25 QUE SOLICITA ACUERDO PARA PROMOVER A LA CATEGORIA \"C\" MINISTRO PLENIPOTENCIARIO DE SEGUNDA CLASE A LOS FUNCIONARIOS DE LA CATEGORIA \"D\" CONSEJERO DE EMBAJADA Y CONSUL GENERAL DEL MINISTERIO DE RELACIONES EXTERIORES, COMERCIO INTERNACIONAL Y CULTO.",
+    "dado_cuenta": true,
+    "fecha_dado_cuenta": "21/08/2025",
+    "dae": 3,
+    "aprobado": true,
+    "fecha_aprobacion": "16/07/2026",
+    "nro_od": 27,
+    "origen": "PE"
+  },
+  {
+    "nro": 109,
+    "anio": 2025,
+    "caratula": "MENSAJE N° 22/25 QUE SOLICITA ACUERDO PARA PROMOVER A LA CATEGORIA \"C\" MINISTRO PLENIPOTENCIARIO DE SEGUNDA CLASE A LOS FUNCIONARIOS DE LA CATEGORIA \"D\" CONSEJERO DE EMBAJADA Y CONSUL GENERAL DEL MINISTERIO DE RELACIONES EXTERIORES, COMERCIO INTERNACIONAL Y CULTO.",
+    "dado_cuenta": true,
+    "fecha_dado_cuenta": "21/08/2025",
+    "dae": 3,
+    "aprobado": true,
+    "fecha_aprobacion": "16/07/2026",
+    "nro_od": 26,
+    "origen": "PE"
+  },
+  {
+    "nro": 108,
+    "anio": 2025,
+    "caratula": "MENSAJE N° 21/25 QUE SOLICITA ACUERDO PARA PROMOVER A LA CATEGORIA \"B\" MINISTRO PLENIPOTENCIARIO DE PRIMERA CLASE A LOS FUNCIONARIOS DE LA CATEGORIA \"C\" MINISTRO PLENIPOTENCIARIO DE SEGUNDA CLASE DEL MINISTERIO DE RELACIONES EXTERIORES, COMERCIO INTERNACIONAL Y CULTO.",
+    "dado_cuenta": true,
+    "fecha_dado_cuenta": "21/08/2025",
+    "dae": 3,
+    "aprobado": true,
+    "fecha_aprobacion": "16/07/2026",
+    "nro_od": 25,
+    "origen": "PE"
+  },
+  {
+    "nro": 107,
+    "anio": 2025,
+    "caratula": "MENSAJE N° 20/25 QUE SOLICITA ACUERDO PARA PROMOVER A LA CATEGORIA \"B\" MINISTRO PLENIPOTENCIARIO DE PRIMERA CLASE A LOS FUNCIONARIOS DE LA CATEGORIA \"C\" MINISTRO PLENIPOTENCIARIO DE SEGUNDA CLASE DEL MINISTERIO DE RELACIONES EXTERIORES, COMERCIO INTERNACIONAL Y CULTO.",
+    "dado_cuenta": true,
+    "fecha_dado_cuenta": "21/08/2025",
+    "dae": 3,
+    "aprobado": true,
+    "fecha_aprobacion": "16/07/2026",
+    "nro_od": 24,
+    "origen": "PE"
+  },
+  {
+    "nro": 106,
+    "anio": 2025,
+    "caratula": "MENSAJE N° 19/25 QUE SOLICITA ACUERDO PARA PROMOVER A LA CATEGORIA \"A\" EMBAJADOR EXTRAORDINARIO Y PLENIPOTENCIARIO A LOS FUNCIONARIOS DE LA CATEGORIA \"B\" MINISTRO PLENIPOTENCIARIO DE PRIMERA CLASE DEL MINISTERIO DE RELACIONES EXTERIORES, COMERCIO INTERNACIONAL Y CULTO.",
+    "dado_cuenta": true,
+    "fecha_dado_cuenta": "21/08/2025",
+    "dae": 3,
+    "aprobado": true,
+    "fecha_aprobacion": "16/07/2026",
+    "nro_od": 23,
+    "origen": "PE"
+  },
+  {
+    "nro": 105,
+    "anio": 2025,
+    "caratula": "MENSAJE N° 18/25 QUE SOLICITA ACUERDO PARA PROMOVER A LA CATEGORIA \"A\" EMBAJADOR EXTRAORDINARIO Y PLENIPOTENCIARIO A LOS FUNCIONARIOS DE LA CATEGORIA \"B\" MINISTRO PLENIPOTENCIARIO DE PRIMERA CLASE DEL MINISTERIO DE RELACIONES EXTERIORES, COMERCIO INTERNACIONAL Y CULTO.",
+    "dado_cuenta": true,
+    "fecha_dado_cuenta": "21/08/2025",
+    "dae": 3,
+    "aprobado": true,
+    "fecha_aprobacion": "16/07/2026",
+    "nro_od": 22,
+    "origen": "PE"
+  },
+  {
+    "nro": 34,
+    "anio": 2025,
+    "caratula": "MENSAJE N° 13/25 QUE SOLICITA ACUERDO PARA PROMOVER AL GRADO INMEDIATO SUPERIOR, CON FECHA 31 DE DICIEMBRE DE 2022, AL TENIENTE CORONEL DE INFANTERÍA FABIÁN TORRENGO.",
+    "dado_cuenta": true,
+    "fecha_dado_cuenta": "21/08/2025",
+    "dae": 2,
+    "aprobado": true,
+    "fecha_aprobacion": "09/04/2026",
+    "nro_od": 6,
+    "origen": "PE"
+  },
+  {
+    "nro": 7,
+    "anio": 2025,
+    "caratula": "MENSAJE N° 11/25 QUE SOLICITA ACUERDO PARA NOMBRAR EMBAJADOR EXTRAORDINARIO Y PLENIPOTENCIARIO AL SR. WENCESLAO BUNGE SARAVIA.",
+    "dado_cuenta": true,
+    "fecha_dado_cuenta": "03/04/2025",
+    "dae": 1,
+    "aprobado": true,
+    "fecha_aprobacion": "07/05/2025",
+    "nro_od": 81,
+    "origen": "PE"
+  },
+  {
+    "nro": 269,
+    "anio": 2026,
+    "caratula": "MENSAJE N° 250/26 QUE SOLICITA ACUERDO PARA DESIGNAR JUEZ PENAL FEDERAL DEL JUZGADO FEDERAL DE GARANTIAS CON ASIENTO EN LA CIUDAD DE ROSARIO, PROVINCIA DE SANTA FE, AL DR. FRANCO MARIANO CARBONE.",
+    "dado_cuenta": false,
+    "fecha_dado_cuenta": null,
+    "dae": 27,
+    "aprobado": false,
+    "fecha_aprobacion": null,
+    "nro_od": null,
+    "origen": "PE"
+  },
+  {
+    "nro": 268,
+    "anio": 2026,
+    "caratula": "MENSAJE N° 249/26 QUE SOLICITA ACUERDO PARA DESIGNAR JUEZA DEL JUZGADO FEDERAL DE PRIMERA INSTANCIA DE LA SEGURIDAD SOCIAL N° 8 DE LA CAPITAL FEDERAL, A LA DRA. MARIA DE LOS ANGELES SAPIN.",
+    "dado_cuenta": false,
+    "fecha_dado_cuenta": null,
+    "dae": 27,
+    "aprobado": false,
+    "fecha_aprobacion": null,
+    "nro_od": null,
+    "origen": "PE"
+  },
+  {
+    "nro": 267,
+    "anio": 2026,
+    "caratula": "MENSAJE N° 248/26 QUE SOLICITA ACUERDO PARA DESIGNAR JUEZA DEL JUZGADO FEDERAL DE PRIMERA INSTANCIA DE LA SEGURIDAD SOCIAL N° 6 DE LA CAPITAL FEDERAL, A LA DRA. VALERIA ALICIA BERTOLINI.",
+    "dado_cuenta": false,
+    "fecha_dado_cuenta": null,
+    "dae": 27,
+    "aprobado": false,
+    "fecha_aprobacion": null,
+    "nro_od": null,
+    "origen": "PE"
+  },
+  {
+    "nro": 266,
+    "anio": 2026,
+    "caratula": "MENSAJE N° 247/26 QUE SOLICITA ACUERDO PARA DESIGNAR JUEZ DE CAMARA DEL TRIBUNAL ORAL EN LO CRIMINAL Y CORRECCIONAL N° 30 DE LA CAPITAL FEDERAL, AL DR. ARIEL ALEJANDRO VILAR.",
+    "dado_cuenta": false,
+    "fecha_dado_cuenta": null,
+    "dae": 27,
+    "aprobado": false,
+    "fecha_aprobacion": null,
+    "nro_od": null,
+    "origen": "PE"
+  },
+  {
+    "nro": 265,
+    "anio": 2026,
+    "caratula": "MENSAJE N° 246/26 QUE SOLICITA ACUERDO PARA DESIGNAR JUEZ DE CAMARA DEL TRIBUNAL ORAL EN LO PENAL ECONOMICO N° 2 DE LA CAPITAL FEDERAL, AL DR. FEDERICO JOSE IUSPA.",
+    "dado_cuenta": false,
+    "fecha_dado_cuenta": null,
+    "dae": 27,
+    "aprobado": false,
+    "fecha_aprobacion": null,
+    "nro_od": null,
+    "origen": "PE"
+  },
+  {
+    "nro": 264,
+    "anio": 2026,
+    "caratula": "MENSAJE N° 245/26 QUE SOLICITA ACUERDO PARA DESIGNAR DEFENSORA AUXILIAR DE LA DEFENSORIA GENERAL DE LA NACION, A LA DRA. ROMINA SOLEDAD PARABONI.",
+    "dado_cuenta": false,
+    "fecha_dado_cuenta": null,
+    "dae": 27,
+    "aprobado": false,
+    "fecha_aprobacion": null,
+    "nro_od": null,
+    "origen": "PE"
+  },
+  {
+    "nro": 263,
+    "anio": 2026,
+    "caratula": "MENSAJE N° 244/26 QUE SOLICITA ACUERDO PARA DESIGNAR DEFENSORA PUBLICA OFICIAL ANTE LOS JUZGADOS NACIONALES EN LO CRIMINAL Y CORRECCIONAL Y ANTE LA CAMARA NACIONAL DE APELACIONES EN LO CRIMINAL Y CORRECCIONAL DE LA CAPITAL FEDERAL, DEFENSORIA N° 12, A LA DRA. MARIA LUCRECIA SAMMARTINO.",
+    "dado_cuenta": false,
+    "fecha_dado_cuenta": null,
+    "dae": 27,
+    "aprobado": false,
+    "fecha_aprobacion": null,
+    "nro_od": null,
+    "origen": "PE"
+  },
+  {
+    "nro": 262,
+    "anio": 2026,
+    "caratula": "MENSAJE N° 243/26 QUE SOLICITA ACUERDO PARA DESIGNAR JUEZ PENAL FEDERAL DEL JUZGADO FEDERAL DE GARANTIAS CON ASIENTO EN LA CIUDAD DE SAN LORENZO, PROVINCIA DE SANTA FE, AL DR. EMILIANO PEDRO MENDEZ ORTIZ.",
+    "dado_cuenta": false,
+    "fecha_dado_cuenta": null,
+    "dae": 26,
+    "aprobado": false,
+    "fecha_aprobacion": null,
+    "nro_od": null,
+    "origen": "PE"
+  },
+  {
+    "nro": 261,
+    "anio": 2026,
+    "caratula": "MENSAJE N° 242/26 QUE SOLICITA ACUERDO A FIN DE POSIBILITAR UN NUEVO NOMBRAMIENTO DEL FISCAL GENERAL ANTE LOS TRIBUNALES ORALES DE MENORES DE LA CAPITAL FEDERAL, FISCALIA N° 2, A LA DRA. SUSANA MARTA PERNAS.",
+    "dado_cuenta": false,
+    "fecha_dado_cuenta": null,
+    "dae": 26,
+    "aprobado": false,
+    "fecha_aprobacion": null,
+    "nro_od": null,
+    "origen": "PE"
+  },
+  {
+    "nro": 260,
+    "anio": 2026,
+    "caratula": "MENSAJE N° 241/26 QUE SOLICITA ACUERDO PARA DESIGNAR FISCAL FEDERAL DE LA SEDE FISCAL DESCENTRALIZADA DE CALETA OLIVIA, PROVINCIA DE SANTA CRUZ, AL DR. LUCAS ALBERTO COLLA.",
+    "dado_cuenta": false,
+    "fecha_dado_cuenta": null,
+    "dae": 26,
+    "aprobado": false,
+    "fecha_aprobacion": null,
+    "nro_od": null,
+    "origen": "PE"
+  },
+  {
+    "nro": 259,
+    "anio": 2026,
+    "caratula": "MENSAJE N° 240/26 QUE SOLICITA ACUERDO PARA DESIGNAR FISCAL ANTE EL JUZGADO FEDERAL DE PRIMERA INSTANCIA EN LO CIVIL, COMERCIAL Y CONTENCIOSO ADMINISTRATIVO DE POSADAS, PROVINCIA DE MISIONES, FISCALIA N° 2, AL DR. ARLINDO OTTO KURTZ.",
+    "dado_cuenta": false,
+    "fecha_dado_cuenta": null,
+    "dae": 26,
+    "aprobado": false,
+    "fecha_aprobacion": null,
+    "nro_od": null,
+    "origen": "PE"
+  },
+  {
+    "nro": 258,
+    "anio": 2026,
+    "caratula": "MENSAJE N° 239/26 QUE SOLICITA ACUERDO PARA DESIGNAR FISCAL ANTE LOS JUZGADOS NACIONALES EN LO CRIMINAL Y CORRECCIONAL DE LA CAPITAL FEDERAL, FISCALIA N° 45, A LA DRA. DANIELA ROMINA PART.",
+    "dado_cuenta": false,
+    "fecha_dado_cuenta": null,
+    "dae": 26,
+    "aprobado": false,
+    "fecha_aprobacion": null,
+    "nro_od": null,
+    "origen": "PE"
+  },
+  {
+    "nro": 257,
+    "anio": 2026,
+    "caratula": "MENSAJE N° 238/26 QUE SOLICITA ACUERDO PARA DESIGNAR VOCAL DE LA CAMARA NACIONAL DE APELACIONES EN LO COMERCIAL DE LA CAPITAL FEDERAL, SALA E, AL DR. FERNANDO GABRIEL D´ALESSANDRO.",
+    "dado_cuenta": false,
+    "fecha_dado_cuenta": null,
+    "dae": 26,
+    "aprobado": false,
+    "fecha_aprobacion": null,
+    "nro_od": null,
+    "origen": "PE"
+  },
+  {
+    "nro": 256,
+    "anio": 2026,
+    "caratula": "MENSAJE N° 235/26 QUE SOLICITA ACUERDO PARA DESIGNAR FISCAL ANTE LOS JUZGADOS NACIONALES EN LO CRIMINAL Y CORRECCIONAL DE LA CAPITAL FEDERAL, FISCALIA N° 49, A LA DRA. MARIA NOEL FERNANDEZ RIVERA.",
+    "dado_cuenta": false,
+    "fecha_dado_cuenta": null,
+    "dae": 26,
+    "aprobado": false,
+    "fecha_aprobacion": null,
+    "nro_od": null,
+    "origen": "PE"
+  },
+  {
+    "nro": 255,
+    "anio": 2026,
+    "caratula": "MENSAJE N° 234/26 QUE SOLICITA ACUERDO PARA DESIGNAR FISCAL ANTE LOS JUZGADOS NACIONALES EN LO CRIMINAL Y CORRECCIONAL DE LA CAPITAL FEDERAL, FISCALIA N° 55, A LA DRA. ALEJANDRA LEONOR PEREZ.",
+    "dado_cuenta": false,
+    "fecha_dado_cuenta": null,
+    "dae": 26,
+    "aprobado": false,
+    "fecha_aprobacion": null,
+    "nro_od": null,
+    "origen": "PE"
+  },
+  {
+    "nro": 254,
+    "anio": 2026,
+    "caratula": "MENSAJE N° 233/26 QUE SOLICITA ACUERDO PARA DESIGNAR FISCAL ANTE LOS JUZGADOS NACIONALES EN LO CRIMINAL Y CORRECCIONAL DE LA CAPITAL FEDERAL, FISCALIA N° 60, AL DR. GABRIEL ESTEBAN PARAMOS.",
+    "dado_cuenta": false,
+    "fecha_dado_cuenta": null,
+    "dae": 26,
+    "aprobado": false,
+    "fecha_aprobacion": null,
+    "nro_od": null,
+    "origen": "PE"
+  },
+  {
+    "nro": 253,
+    "anio": 2026,
+    "caratula": "MENSAJE N° 232/26 QUE SOLICITA ACUERDO PARA DESIGNAR FISCAL ANTE LOS JUZGADOS NACIONALES EN LO CRIMINAL Y CORRECCIONAL DE LA CAPITAL FEDERAL, FISCALIA N° 11, AL DR. SEBASTIAN EDUARDO MARTINEZ.",
+    "dado_cuenta": false,
+    "fecha_dado_cuenta": null,
+    "dae": 26,
+    "aprobado": false,
+    "fecha_aprobacion": null,
+    "nro_od": null,
+    "origen": "PE"
+  },
+  {
+    "nro": 252,
+    "anio": 2026,
+    "caratula": "MENSAJE N° 231/26 QUE SOLICITA ACUERDO PARA DESIGNAR FISCAL ANTE LOS JUZGADOS NACIONALES EN LO CRIMINAL Y CORRECCIONAL DE LA CAPITAL FEDERAL, FISCALIA N° 38, AL DR. GUSTAVO AMELOTTI.",
+    "dado_cuenta": false,
+    "fecha_dado_cuenta": null,
+    "dae": 26,
+    "aprobado": false,
+    "fecha_aprobacion": null,
+    "nro_od": null,
+    "origen": "PE"
+  },
+  {
+    "nro": 251,
+    "anio": 2026,
+    "caratula": "MENSAJE N° 230/26 QUE SOLICITA ACUERDO PARA DESIGNAR FISCAL ANTE LOS JUZGADOS NACIONALES EN LO CRIMINAL Y CORRECCIONAL DE LA CAPITAL FEDERAL, FISCALIA N° 53, AL DR. FACUNDO JESUS SORIANO.",
+    "dado_cuenta": false,
+    "fecha_dado_cuenta": null,
+    "dae": 26,
+    "aprobado": false,
+    "fecha_aprobacion": null,
+    "nro_od": null,
+    "origen": "PE"
+  },
+  {
+    "nro": 250,
+    "anio": 2026,
+    "caratula": "MENSAJE N° 229/26 QUE SOLICITA ACUERDO PARA DESIGNAR FISCAL ANTE LOS JUZGADOS NACIONALES EN LO CRIMINAL Y CORRECCIONAL DE LA CAPITAL FEDERAL, FISCALIA N° 18, AL DR. EDUARDO MIGUEL ROCCHI.",
+    "dado_cuenta": false,
+    "fecha_dado_cuenta": null,
+    "dae": 26,
+    "aprobado": false,
+    "fecha_aprobacion": null,
+    "nro_od": null,
+    "origen": "PE"
+  },
+  {
+    "nro": 249,
+    "anio": 2026,
+    "caratula": "MENSAJE N° 228/26 QUE SOLICITA ACUERDO PARA DESIGNAR DEFENSOR PUBLICO DE VICTIMA CON ASIENTO EN LA PROVINCIA DE MENDOZA AL DR. SANTIAGO BAHAMONDES.",
+    "dado_cuenta": false,
+    "fecha_dado_cuenta": null,
+    "dae": 26,
+    "aprobado": false,
+    "fecha_aprobacion": null,
+    "nro_od": null,
+    "origen": "PE"
+  },
+  {
+    "nro": 248,
+    "anio": 2026,
+    "caratula": "MENSAJE N° 227/26 QUE SOLICITA ACUERDO PARA DESIGNAR DEFENSORA PUBLICA DE MENORES E INCAPACES ANTE LOS TRIBUNALES ORALES EN LO CRIMINAL Y CORRECCIONAL DE LA CAPITAL FEDERAL, DEFENSORIA N°3 A LA DRA. CAROLINA MORALES DEGANUT.",
+    "dado_cuenta": false,
+    "fecha_dado_cuenta": null,
+    "dae": 26,
+    "aprobado": false,
+    "fecha_aprobacion": null,
+    "nro_od": null,
+    "origen": "PE"
+  },
+  {
     "nro": 237,
     "anio": 2026,
     "caratula": "MENSAJE N° 222/26 QUE SOLICITA ACUERDO PARA DESIGNAR CONJUECES DE LOS JUZGADOS NACIONALES DE PRIMERA INSTANCIA DEL TRABAJO DE LA JURISDICCION DE LA CAMARA NACIONAL DE APELACIONES DEL TRABAJO DE LA CAPITAL FEDERAL.",
@@ -56,7 +488,7 @@
     "dae": 24,
     "aprobado": false,
     "fecha_aprobacion": null,
-    "nro_od": null,
+    "nro_od": 293,
     "origen": "PE"
   },
   {
@@ -80,7 +512,7 @@
     "dae": 24,
     "aprobado": false,
     "fecha_aprobacion": null,
-    "nro_od": null,
+    "nro_od": 292,
     "origen": "PE"
   },
   {
@@ -140,7 +572,7 @@
     "dae": 23,
     "aprobado": false,
     "fecha_aprobacion": null,
-    "nro_od": null,
+    "nro_od": 306,
     "origen": "PE"
   },
   {
@@ -152,7 +584,7 @@
     "dae": 23,
     "aprobado": false,
     "fecha_aprobacion": null,
-    "nro_od": null,
+    "nro_od": 305,
     "origen": "PE"
   },
   {
@@ -164,7 +596,7 @@
     "dae": 23,
     "aprobado": false,
     "fecha_aprobacion": null,
-    "nro_od": null,
+    "nro_od": 304,
     "origen": "PE"
   },
   {
@@ -176,7 +608,7 @@
     "dae": 23,
     "aprobado": false,
     "fecha_aprobacion": null,
-    "nro_od": null,
+    "nro_od": 303,
     "origen": "PE"
   },
   {
@@ -224,7 +656,7 @@
     "dae": 23,
     "aprobado": false,
     "fecha_aprobacion": null,
-    "nro_od": null,
+    "nro_od": 302,
     "origen": "PE"
   },
   {
@@ -236,7 +668,7 @@
     "dae": 23,
     "aprobado": false,
     "fecha_aprobacion": null,
-    "nro_od": null,
+    "nro_od": 301,
     "origen": "PE"
   },
   {
@@ -248,7 +680,7 @@
     "dae": 23,
     "aprobado": false,
     "fecha_aprobacion": null,
-    "nro_od": null,
+    "nro_od": 300,
     "origen": "PE"
   },
   {
@@ -260,7 +692,7 @@
     "dae": 23,
     "aprobado": false,
     "fecha_aprobacion": null,
-    "nro_od": null,
+    "nro_od": 299,
     "origen": "PE"
   },
   {
@@ -320,7 +752,7 @@
     "dae": 23,
     "aprobado": false,
     "fecha_aprobacion": null,
-    "nro_od": null,
+    "nro_od": 298,
     "origen": "PE"
   },
   {
@@ -332,7 +764,7 @@
     "dae": 23,
     "aprobado": false,
     "fecha_aprobacion": null,
-    "nro_od": null,
+    "nro_od": 297,
     "origen": "PE"
   },
   {
@@ -344,7 +776,7 @@
     "dae": 23,
     "aprobado": false,
     "fecha_aprobacion": null,
-    "nro_od": null,
+    "nro_od": 296,
     "origen": "PE"
   },
   {
@@ -380,7 +812,7 @@
     "dae": 21,
     "aprobado": false,
     "fecha_aprobacion": null,
-    "nro_od": null,
+    "nro_od": 295,
     "origen": "PE"
   },
   {
@@ -404,7 +836,7 @@
     "dae": 20,
     "aprobado": false,
     "fecha_aprobacion": null,
-    "nro_od": null,
+    "nro_od": 294,
     "origen": "PE"
   },
   {
@@ -428,7 +860,7 @@
     "dae": 20,
     "aprobado": false,
     "fecha_aprobacion": null,
-    "nro_od": null,
+    "nro_od": 291,
     "origen": "PE"
   },
   {
@@ -464,7 +896,7 @@
     "dae": 19,
     "aprobado": false,
     "fecha_aprobacion": null,
-    "nro_od": null,
+    "nro_od": 254,
     "origen": "PE"
   },
   {
@@ -476,7 +908,7 @@
     "dae": 19,
     "aprobado": false,
     "fecha_aprobacion": null,
-    "nro_od": null,
+    "nro_od": 253,
     "origen": "PE"
   },
   {
@@ -500,7 +932,7 @@
     "dae": 18,
     "aprobado": false,
     "fecha_aprobacion": null,
-    "nro_od": null,
+    "nro_od": 252,
     "origen": "PE"
   },
   {
@@ -512,7 +944,7 @@
     "dae": 17,
     "aprobado": false,
     "fecha_aprobacion": null,
-    "nro_od": null,
+    "nro_od": 251,
     "origen": "PE"
   },
   {
@@ -524,7 +956,7 @@
     "dae": 17,
     "aprobado": false,
     "fecha_aprobacion": null,
-    "nro_od": null,
+    "nro_od": 250,
     "origen": "PE"
   },
   {
@@ -548,7 +980,7 @@
     "dae": 16,
     "aprobado": false,
     "fecha_aprobacion": null,
-    "nro_od": null,
+    "nro_od": 290,
     "origen": "PE"
   },
   {
@@ -560,7 +992,7 @@
     "dae": 16,
     "aprobado": false,
     "fecha_aprobacion": null,
-    "nro_od": null,
+    "nro_od": 289,
     "origen": "PE"
   },
   {
@@ -572,7 +1004,7 @@
     "dae": 16,
     "aprobado": false,
     "fecha_aprobacion": null,
-    "nro_od": null,
+    "nro_od": 288,
     "origen": "PE"
   },
   {
@@ -584,7 +1016,7 @@
     "dae": 16,
     "aprobado": false,
     "fecha_aprobacion": null,
-    "nro_od": null,
+    "nro_od": 270,
     "origen": "PE"
   },
   {
@@ -608,7 +1040,7 @@
     "dae": 16,
     "aprobado": false,
     "fecha_aprobacion": null,
-    "nro_od": null,
+    "nro_od": 287,
     "origen": "PE"
   },
   {
@@ -668,7 +1100,7 @@
     "dae": 16,
     "aprobado": false,
     "fecha_aprobacion": null,
-    "nro_od": null,
+    "nro_od": 286,
     "origen": "PE"
   },
   {
@@ -680,7 +1112,7 @@
     "dae": 15,
     "aprobado": false,
     "fecha_aprobacion": null,
-    "nro_od": null,
+    "nro_od": 269,
     "origen": "PE"
   },
   {
@@ -692,7 +1124,7 @@
     "dae": 15,
     "aprobado": false,
     "fecha_aprobacion": null,
-    "nro_od": null,
+    "nro_od": 268,
     "origen": "PE"
   },
   {
@@ -728,7 +1160,7 @@
     "dae": 15,
     "aprobado": false,
     "fecha_aprobacion": null,
-    "nro_od": null,
+    "nro_od": 267,
     "origen": "PE"
   },
   {
@@ -752,7 +1184,7 @@
     "dae": 15,
     "aprobado": false,
     "fecha_aprobacion": null,
-    "nro_od": null,
+    "nro_od": 266,
     "origen": "PE"
   },
   {
@@ -944,7 +1376,7 @@
     "dae": 11,
     "aprobado": false,
     "fecha_aprobacion": null,
-    "nro_od": null,
+    "nro_od": 249,
     "origen": "PE"
   },
   {
@@ -956,7 +1388,7 @@
     "dae": 11,
     "aprobado": false,
     "fecha_aprobacion": null,
-    "nro_od": null,
+    "nro_od": 248,
     "origen": "PE"
   },
   {
@@ -968,7 +1400,7 @@
     "dae": 11,
     "aprobado": false,
     "fecha_aprobacion": null,
-    "nro_od": null,
+    "nro_od": 285,
     "origen": "PE"
   },
   {
@@ -980,7 +1412,7 @@
     "dae": 11,
     "aprobado": false,
     "fecha_aprobacion": null,
-    "nro_od": null,
+    "nro_od": 265,
     "origen": "PE"
   },
   {
@@ -992,7 +1424,7 @@
     "dae": 11,
     "aprobado": false,
     "fecha_aprobacion": null,
-    "nro_od": null,
+    "nro_od": 264,
     "origen": "PE"
   },
   {
@@ -1004,7 +1436,7 @@
     "dae": 11,
     "aprobado": false,
     "fecha_aprobacion": null,
-    "nro_od": null,
+    "nro_od": 263,
     "origen": "PE"
   },
   {
@@ -1028,7 +1460,7 @@
     "dae": 11,
     "aprobado": false,
     "fecha_aprobacion": null,
-    "nro_od": null,
+    "nro_od": 247,
     "origen": "PE"
   },
   {
@@ -1040,7 +1472,7 @@
     "dae": 11,
     "aprobado": false,
     "fecha_aprobacion": null,
-    "nro_od": null,
+    "nro_od": 284,
     "origen": "PE"
   },
   {
@@ -1052,7 +1484,7 @@
     "dae": 11,
     "aprobado": false,
     "fecha_aprobacion": null,
-    "nro_od": null,
+    "nro_od": 283,
     "origen": "PE"
   },
   {
@@ -1064,7 +1496,7 @@
     "dae": 11,
     "aprobado": false,
     "fecha_aprobacion": null,
-    "nro_od": null,
+    "nro_od": 262,
     "origen": "PE"
   },
   {
@@ -1076,7 +1508,7 @@
     "dae": 11,
     "aprobado": false,
     "fecha_aprobacion": null,
-    "nro_od": null,
+    "nro_od": 282,
     "origen": "PE"
   },
   {
@@ -1088,7 +1520,7 @@
     "dae": 11,
     "aprobado": false,
     "fecha_aprobacion": null,
-    "nro_od": null,
+    "nro_od": 246,
     "origen": "PE"
   },
   {
@@ -1100,7 +1532,7 @@
     "dae": 11,
     "aprobado": false,
     "fecha_aprobacion": null,
-    "nro_od": null,
+    "nro_od": 261,
     "origen": "PE"
   },
   {
@@ -1112,7 +1544,7 @@
     "dae": 11,
     "aprobado": false,
     "fecha_aprobacion": null,
-    "nro_od": null,
+    "nro_od": 260,
     "origen": "PE"
   },
   {
@@ -1124,7 +1556,7 @@
     "dae": 11,
     "aprobado": false,
     "fecha_aprobacion": null,
-    "nro_od": null,
+    "nro_od": 281,
     "origen": "PE"
   },
   {
@@ -1136,7 +1568,7 @@
     "dae": 11,
     "aprobado": false,
     "fecha_aprobacion": null,
-    "nro_od": null,
+    "nro_od": 280,
     "origen": "PE"
   },
   {
@@ -1160,7 +1592,7 @@
     "dae": 11,
     "aprobado": false,
     "fecha_aprobacion": null,
-    "nro_od": null,
+    "nro_od": 279,
     "origen": "PE"
   },
   {
@@ -1172,7 +1604,7 @@
     "dae": 11,
     "aprobado": false,
     "fecha_aprobacion": null,
-    "nro_od": null,
+    "nro_od": 245,
     "origen": "PE"
   },
   {
@@ -1184,7 +1616,7 @@
     "dae": 11,
     "aprobado": false,
     "fecha_aprobacion": null,
-    "nro_od": null,
+    "nro_od": 244,
     "origen": "PE"
   },
   {
@@ -1196,7 +1628,7 @@
     "dae": 11,
     "aprobado": false,
     "fecha_aprobacion": null,
-    "nro_od": null,
+    "nro_od": 259,
     "origen": "PE"
   },
   {
@@ -1220,7 +1652,7 @@
     "dae": 11,
     "aprobado": false,
     "fecha_aprobacion": null,
-    "nro_od": null,
+    "nro_od": 243,
     "origen": "PE"
   },
   {
@@ -1232,7 +1664,7 @@
     "dae": 11,
     "aprobado": false,
     "fecha_aprobacion": null,
-    "nro_od": null,
+    "nro_od": 258,
     "origen": "PE"
   },
   {

@@ -48,6 +48,7 @@ REPO_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DATA_DIR = os.path.join(REPO_ROOT, "data")
 PROYECTOS_JSON = os.path.join(DATA_DIR, "proyectos.json")
 SENADORES_JSON = os.path.join(DATA_DIR, "senadores.json")
+ACUERDOS_JSON = os.path.join(DATA_DIR, "acuerdos.json")
 
 MIGRAR_TSV = os.getenv("MIGRAR_TSV", "")
 SCRAPE = os.getenv("SCRAPE", "1") != "0"
@@ -58,24 +59,34 @@ BASE_URL = "https://www.senado.gob.ar"
 URL_BUSQUEDA = f"{BASE_URL}/parlamentario/parlamentaria/"
 URL_FECHA_MESA = f"{BASE_URL}/parlamentario/parlamentaria/fechaMesa"
 
-TIPOS_INCLUIR = {"PL", "PD", "PC", "PR", "CA", "AC", "CV"}
-
-ESTADOS_DESCARTAR = frozenset([
-    "SANCION DE LEY",
-    "EL EXPEDIENTE CADUCO",
-    "ENVIADO AL ARCHIVO",
-    "VUELVE A DIP",
-])
-
+# Lista oficial completa (19 tipos), confirmada por Mariano — hasta la migración de
+# 2026-08 sólo se incluía un subconjunto de 7.
 TIPOS = {
-    "PL": "Proyecto de Ley",
-    "PD": "Proyecto de Declaración",
-    "PC": "Proyecto de Comunicación",
-    "PR": "Proyecto de Resolución",
-    "CA": "Com. de Auditoría",
     "AC": "Acuerdo",
-    "CV": "Com. Varias",
+    "CA": "Comunicación de Auditoría",
+    "CC": "Comunicación de Comisiones",
+    "CD": "Comunicación de Diputados",
+    "CE": "Comunicación del Poder Ejecutivo",
+    "CM": "Comunicación de Ministerios",
+    "CO": "Comunicación de Senadores",
+    "CV": "Comunicación Varia",
+    "DC": "Decreto",
+    "MS": "Mensaje de Senado",
+    "MD": "Mensaje de Diputados",
+    "PP": "Petición",
+    "PC": "Proyecto de Comunicación",
+    "PD": "Proyecto de Declaración",
+    "DE": "Proyecto de Decreto",
+    "PL": "Proyecto de Ley",
+    "PR": "Proyecto de Resolución",
+    "RC": "Resolución Conjunta",
+    "RP": "Respuesta de Presidencia",
 }
+TIPOS_INCLUIR = frozenset(TIPOS.keys())
+
+# Cuántos expedientes "abiertos" (no archivados/sancionados/dados cuenta) se
+# re-visitan por corrida para actualizar trazabilidad — ver revisar_expedientes_abiertos().
+LOTE_REVISION = int(os.getenv("LOTE_REVISION", "200"))
 
 PAUSA_ENTRE_REQUESTS = 1.0
 
@@ -208,6 +219,50 @@ def guardar_proyectos(proyectos):
         json.dump(proyectos, f, ensure_ascii=False, indent=2)
 
 
+# ─────────────────────────────── acuerdos.json (dado cuenta) ─────────────────
+
+def cargar_acuerdos():
+    if not os.path.exists(ACUERDOS_JSON):
+        return []
+    with open(ACUERDOS_JSON, "r", encoding="utf-8") as f:
+        return json.load(f)
+
+
+def guardar_acuerdos(acuerdos):
+    os.makedirs(DATA_DIR, exist_ok=True)
+    acuerdos.sort(key=lambda a: (int(a["anio"]), int(a["nro"])), reverse=True)
+    with open(ACUERDOS_JSON, "w", encoding="utf-8") as f:
+        json.dump(acuerdos, f, ensure_ascii=False, indent=2)
+
+
+def actualizar_acuerdo(acuerdos_por_clave, proyecto, detalle):
+    """Crea/actualiza la entrada de data/acuerdos.json para un expediente AC con
+    lo que se pudo leer en vivo (dado_cuenta/dae). No toca aprobado/fecha_aprobacion/
+    nro_od si la entrada ya existía — esos siguen viniendo del cruce con od.json/
+    sanciones.json en generar_web.py."""
+    clave = (proyecto["nro"], proyecto["anio"])
+    dae_num = None
+    if detalle.get("dae"):
+        try:
+            dae_num = int(detalle["dae"].split("/")[0])
+        except ValueError:
+            dae_num = None
+    existente = acuerdos_por_clave.get(clave)
+    if existente is None:
+        existente = {
+            "nro": proyecto["nro"], "anio": proyecto["anio"],
+            "caratula": proyecto["extracto"], "origen": proyecto["origen"],
+            "dae": dae_num, "dado_cuenta": False, "fecha_dado_cuenta": None,
+            "aprobado": False, "fecha_aprobacion": None, "nro_od": None,
+        }
+        acuerdos_por_clave[clave] = existente
+    if dae_num is not None:
+        existente["dae"] = dae_num
+    if detalle.get("dado_cuenta") is not None:
+        existente["dado_cuenta"] = detalle["dado_cuenta"]
+        existente["fecha_dado_cuenta"] = detalle["fecha_dado_cuenta"]
+
+
 # ─────────────────────────────── Migración TSV ───────────────────────────────
 
 def migrar_desde_tsv(tsv_path, padron, indice, claves_existentes):
@@ -275,7 +330,12 @@ def migrar_desde_tsv(tsv_path, padron, indice, claves_existentes):
                 "origen": origen,
                 "url": construir_url_expediente(nro, anio, origen, tipo),
                 "sancionado": False,
+                "ley_numero": None,
+                "fecha_ley": None,
                 "archivado": False,
+                "fecha_archivo": None,
+                "caduca": False,
+                "fecha_caduca": None,
             })
             claves_existentes.add((nro, anio, tipo))
     log.info(f"  → migración: {len(nuevos)} proyectos nuevos desde TSV")
@@ -367,8 +427,82 @@ def buscar_por_fechas(session, fecha_desde, fecha_hasta):
     return todos
 
 
+def _fecha_guiones_a_barras(texto):
+    """'24-06-2026' -> '24/06/2026'. None si no matchea o es 'SIN FECHA'."""
+    if not texto:
+        return None
+    m = re.search(r"(\d{2})-(\d{2})-(\d{4})", texto)
+    return f"{m.group(1)}/{m.group(2)}/{m.group(3)}" if m else None
+
+
+def _tabla_por_resumen(soup, resumen_contiene):
+    for tabla in soup.find_all("table"):
+        resumen = (tabla.get("summary") or "").upper()
+        if resumen_contiene in resumen:
+            return tabla
+    return None
+
+
+def _parsear_comisiones(soup):
+    """Tabla 'Giros del Expediente a Comisiones': sólo nos interesa el nombre de
+    la comisión de cada giro (en orden); no se guardan fechas de ingreso/egreso."""
+    comisiones = []
+    tabla = _tabla_por_resumen(soup, "GIROS DEL EXPEDIENTE")
+    if not tabla:
+        return comisiones
+    for tr in tabla.select("tbody tr"):
+        tds = tr.find_all("td")
+        if len(tds) < 1:
+            continue
+        com = re.sub(r"ORDEN DE GIRO:.*$", "", tds[0].get_text(" ", strip=True), flags=re.S).strip()
+        if com:
+            comisiones.append(com)
+    return comisiones
+
+
+def _parsear_sancion_de_ley(soup):
+    """Tabla summary='SANCION DE LEY': filas 'FECHA DE SANCION: dd-mm-aaaa' /
+    'NUMERO DE LEY: NNNNN'. Sólo existe si el expediente se convirtió en ley."""
+    tabla = _tabla_por_resumen(soup, "SANCION DE LEY")
+    if not tabla:
+        return None, None
+    texto = tabla.get_text(" ", strip=True)
+    fm = re.search(r"FECHA DE SANCION:\s*(\d{2}-\d{2}-\d{4})", texto)
+    nm = re.search(r"NUMERO DE LEY:\s*(\d+)", texto)
+    if not nm:
+        return None, None
+    return nm.group(1), (_fecha_guiones_a_barras(fm.group(1)) if fm else None)
+
+
+def _parsear_dado_cuenta(soup):
+    """Tabla 'Fechas en Mesa de Entradas' (sólo expedientes de Acuerdos): columna
+    'DADO CUENTA' — 'SIN FECHA' si todavía no se dio cuenta."""
+    tabla = _tabla_por_resumen(soup, "FECHAS EN MESA DE ENTRADAS")
+    if not tabla:
+        return None, None
+    encabezados = [th.get_text(strip=True).upper() for th in tabla.select("thead th")]
+    if "DADO CUENTA" not in encabezados:
+        return None, None
+    idx = encabezados.index("DADO CUENTA")
+    fila = tabla.select_one("tbody tr")
+    if not fila:
+        return None, None
+    celdas = fila.find_all("td")
+    if idx >= len(celdas):
+        return None, None
+    valor = celdas[idx].get_text(strip=True)
+    fecha = _fecha_guiones_a_barras(valor)
+    return bool(fecha), fecha
+
+
 def obtener_detalle(session, url):
-    resultado = {"autores_raw": [], "comisiones": [], "dae": "", "descartar": False}
+    resultado = {
+        "autores_raw": [], "comisiones": [], "dae": "",
+        "archivado": False, "fecha_archivo": None,
+        "caduca": False, "fecha_caduca": None,
+        "sancionado": False, "ley_numero": None, "fecha_ley": None,
+        "dado_cuenta": None, "fecha_dado_cuenta": None,
+    }
     try:
         resp = session.get(url, timeout=30)
         resp.raise_for_status()
@@ -377,35 +511,51 @@ def obtener_detalle(session, url):
             nombre = link.get("title", "").strip() or link.get_text(strip=True)
             if nombre:
                 resultado["autores_raw"].append(nombre)
-        for tr in soup.select("table tr"):
-            if "ORDEN DE GIRO" in tr.get_text(" ", strip=True):
-                celda = tr.find("td")
-                if celda:
-                    com = re.sub(r"\s*ORDEN DE GIRO:\s*\d+.*$", "", celda.get_text(strip=True)).strip()
-                    if com:
-                        resultado["comisiones"].append(com)
+
+        resultado["comisiones"] = _parsear_comisiones(soup)
+
         texto = soup.get_text()
         dm = re.search(r"D\.A\.E\.\s*(\d+/\d{4})", texto) or re.search(r"(\d+/\d{4})\s*Tipo:", texto)
         if dm:
             resultado["dae"] = dm.group(1)
-        texto_upper = soup.get_text(" ", strip=True).upper()
-        for estado in ESTADOS_DESCARTAR:
-            if estado in texto_upper:
-                resultado["descartar"] = True
-                break
+
+        m_archivo = re.search(r"ENVIADO AL ARCHIVO\s*:\s*(\d{2}-\d{2}-\d{4})", texto, re.I)
+        if m_archivo:
+            resultado["archivado"] = True
+            resultado["fecha_archivo"] = _fecha_guiones_a_barras(m_archivo.group(1))
+        m_caduco = re.search(r"EL EXPEDIENTE CADUCO EL\s*(\d{2}-\d{2}-\d{4})", texto, re.I)
+        if m_caduco:
+            resultado["archivado"] = True
+            resultado["caduca"] = True
+            resultado["fecha_caduca"] = _fecha_guiones_a_barras(m_caduco.group(1))
+
+        ley_numero, fecha_ley = _parsear_sancion_de_ley(soup)
+        if ley_numero:
+            resultado["sancionado"] = True
+            resultado["ley_numero"] = ley_numero
+            resultado["fecha_ley"] = fecha_ley
+
+        dado_cuenta, fecha_dado_cuenta = _parsear_dado_cuenta(soup)
+        if dado_cuenta is not None:
+            resultado["dado_cuenta"] = dado_cuenta
+            resultado["fecha_dado_cuenta"] = fecha_dado_cuenta
     except Exception as exc:
         log.warning(f"    Error en detalle {url}: {exc}")
     return resultado
 
 
-def scrape_incremental(session, padron, indice, claves_existentes):
+def _hoy_iso():
+    return datetime.now().strftime("%Y-%m-%d")
+
+
+def scrape_incremental(session, padron, indice, claves_existentes, acuerdos_por_clave):
     hoy = datetime.now()
     if FECHA_DESDE_FIJA:
         try:
             fecha_desde = datetime.strptime(FECHA_DESDE_FIJA, "%d/%m/%Y")
         except ValueError:
             log.error(f"FECHA_DESDE inválido: '{FECHA_DESDE_FIJA}'")
-            return [], set()
+            return []
     else:
         fecha_desde = hoy - timedelta(days=VENTANA_DIAS)
 
@@ -413,25 +563,22 @@ def scrape_incremental(session, padron, indice, claves_existentes):
         expedientes = buscar_por_fechas(session, fecha_desde, hoy)
     except Exception as exc:
         log.error(f"Error en búsqueda principal: {exc}")
-        return [], set()
+        return []
 
     # Solo procesar expedientes que no estén ya en la base
     pendientes = [e for e in expedientes
                   if (e["nro"], e["anio"], e["tipo"]) not in claves_existentes]
     log.info(f"  → {len(pendientes)}/{len(expedientes)} expedientes nuevos a procesar")
 
-    nuevos, claves_descartar = [], set()
+    nuevos = []
     for i, exp in enumerate(pendientes, 1):
         log.info(f"  [{i:>3}/{len(pendientes)}] {exp['tipo']} {exp['nro']}/{exp['anio']}")
         time.sleep(PAUSA_ENTRE_REQUESTS)
         detalle = obtener_detalle(session, exp["url"]) if exp["url"] else {}
-        if detalle.get("descartar"):
-            claves_descartar.add((exp["nro"], exp["anio"], exp["tipo"]))
-            continue
         autores_norm = [normalizar_autor(a) for a in detalle.get("autores_raw", []) if a.strip()]
         caratula = exp.get("caratula", exp["extracto"])
         autores, coautores = clasificar_autores(caratula, autores_norm)
-        nuevos.append({
+        proyecto = {
             "nro": exp["nro"],
             "anio": exp["anio"],
             "tipo": exp["tipo"],
@@ -446,10 +593,70 @@ def scrape_incremental(session, padron, indice, claves_existentes):
             "dae": detalle.get("dae", ""),
             "origen": exp["origen"],
             "url": exp["url"],
-            "sancionado": False,
-            "archivado": False,
-        })
-    return nuevos, claves_descartar
+            "sancionado": detalle.get("sancionado", False),
+            "ley_numero": detalle.get("ley_numero"),
+            "fecha_ley": detalle.get("fecha_ley"),
+            "archivado": detalle.get("archivado", False),
+            "fecha_archivo": detalle.get("fecha_archivo"),
+            "caduca": detalle.get("caduca", False),
+            "fecha_caduca": detalle.get("fecha_caduca"),
+            "_ultima_revision": _hoy_iso(),
+        }
+        nuevos.append(proyecto)
+        if exp["tipo"] == "AC":
+            actualizar_acuerdo(acuerdos_por_clave, proyecto, detalle)
+    return nuevos
+
+
+def revisar_expedientes_abiertos(session, proyectos, acuerdos_por_clave):
+    """Re-visita un lote acotado de expedientes ya existentes que sigan
+    'abiertos' para actualizar archivo/caducidad/sanción/dado-cuenta con el
+    tiempo, sin tener que re-scrapear toda la base en cada corrida (~4000
+    expedientes). Prioriza los menos revisados recientemente."""
+    def esta_abierto(p):
+        if p.get("archivado") or p.get("sancionado"):
+            return False
+        if p.get("tipo") == "AC":
+            clave = (p["nro"], p["anio"])
+            acuerdo = acuerdos_por_clave.get(clave)
+            if acuerdo and acuerdo.get("dado_cuenta"):
+                return False
+        return True
+
+    abiertos = [p for p in proyectos if esta_abierto(p) and p.get("url")]
+    abiertos.sort(key=lambda p: p.get("_ultima_revision") or "0000-00-00")
+    lote = abiertos[:LOTE_REVISION]
+    if not lote:
+        return 0
+    log.info(f"  → revisando {len(lote)}/{len(abiertos)} expedientes abiertos "
+              f"(trazabilidad: archivo/caducidad/sanción/dado cuenta)")
+
+    actualizados = 0
+    for i, p in enumerate(lote, 1):
+        log.info(f"  [rev {i:>3}/{len(lote)}] {p['tipo']} {p['nro']}/{p['anio']}")
+        time.sleep(PAUSA_ENTRE_REQUESTS)
+        detalle = obtener_detalle(session, p["url"])
+        p["_ultima_revision"] = _hoy_iso()
+        cambio = False
+        for campo in ("archivado", "fecha_archivo", "caduca", "fecha_caduca",
+                      "sancionado", "ley_numero", "fecha_ley", "comisiones"):
+            valor = detalle.get(campo)
+            if campo == "comisiones":
+                if valor:
+                    p[campo] = valor
+                continue
+            if valor and p.get(campo) != valor:
+                p[campo] = valor
+                cambio = True
+        if p["tipo"] == "AC":
+            antes = dict(acuerdos_por_clave.get((p["nro"], p["anio"]), {}))
+            actualizar_acuerdo(acuerdos_por_clave, p, detalle)
+            if acuerdos_por_clave.get((p["nro"], p["anio"])) != antes:
+                cambio = True
+        if cambio:
+            actualizados += 1
+    log.info(f"  → {actualizados} expedientes con cambios de trazabilidad")
+    return actualizados
 
 
 # ─────────────────────────────── Main ─────────────────────────────────────────
@@ -461,13 +668,15 @@ def main():
     padron, indice = cargar_padron()
     proyectos, claves = cargar_proyectos_existentes()
     log.info(f"  → {len(proyectos)} proyectos ya en data/proyectos.json")
+    acuerdos = cargar_acuerdos()
+    acuerdos_por_clave = {(a["nro"], a["anio"]): a for a in acuerdos}
 
     # 1. Migración desde TSV (opcional, one-shot)
     if MIGRAR_TSV:
         migrados = migrar_desde_tsv(MIGRAR_TSV, padron, indice, claves)
         proyectos.extend(migrados)
 
-    # 2. Scraping incremental web
+    # 2. Scraping incremental web + revisión de trazabilidad de abiertos
     if SCRAPE:
         session = requests.Session()
         session.headers.update({
@@ -475,16 +684,14 @@ def main():
                            "AppleWebKit/537.36 (KHTML, like Gecko) "
                            "Chrome/120.0.0.0 Safari/537.36")
         })
-        nuevos, claves_descartar = scrape_incremental(session, padron, indice, claves)
-        # Filtrar sancionados/archivados detectados (también de la base existente)
-        if claves_descartar:
-            antes = len(proyectos)
-            proyectos = [p for p in proyectos if clave_proyecto(p) not in claves_descartar]
-            log.info(f"  → {antes - len(proyectos)} proyectos eliminados (sancionados/archivados)")
+        nuevos = scrape_incremental(session, padron, indice, claves, acuerdos_por_clave)
         proyectos.extend(nuevos)
         log.info(f"  → {len(nuevos)} proyectos nuevos del scraping")
 
+        revisar_expedientes_abiertos(session, proyectos, acuerdos_por_clave)
+
     guardar_proyectos(proyectos)
+    guardar_acuerdos(list(acuerdos_por_clave.values()))
     con_bloque = sum(1 for p in proyectos if p["bloques"] and p["bloques"] != ["Sin datos"])
     log.info(f"  → TOTAL en proyectos.json: {len(proyectos)} ({con_bloque} con bloque)")
     log.info("scraper_proyectos finalizado.")

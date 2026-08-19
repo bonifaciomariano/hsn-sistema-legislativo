@@ -53,20 +53,29 @@ Lista de objetos con estos campos:
 |---|---|---|
 | `nro` | int | número de expediente |
 | `anio` | int | 2025 / 2026 |
-| `tipo` | str | `PL, PD, PC, PR, AC, CV, CA` |
+| `tipo` | str | 19 tipos oficiales (`AC,CA,CC,CD,CE,CM,CO,CV,DC,MS,MD,PP,PC,PD,DE,PL,PR,RC,RP`) |
 | `tipo_label` | str | ej. "Proyecto de Ley" |
 | `extracto` | str | texto (mayúsculas) |
 | `autores` | list[str] | "APELLIDO, NOMBRE" |
 | `coautores` | list[str] | casi siempre vacío |
 | `bloques` | list[str] | bloque(s) político(s); `bloques[0]` = principal |
 | `provincias` | list[str] | |
-| `comisiones` | list[str] | `comisiones[0]` = 1er giro |
+| `comisiones` | list[str] | nombres de comisión, un giro por elemento, en orden |
 | `fecha` | str | `dd/mm/yyyy` |
-| `dae` | str | |
-| `origen` | str | **S=Senado, PE=Poder Ejecutivo, CD=Diputados, OV=Otros** |
+| `dae` | str | `"nro/año"` |
+| `origen` | str | `S, PE, CD, OV, P, JGM, OVD` |
 | `url` | str | link al expediente en senado.gob.ar |
-| `sancionado` | bool | hoy todos `false` (no confundir con los badges de sanciones, §5.5) |
-| `archivado` | bool | hoy todos `false` |
+| `sancionado` | bool | **(2026-08)** ahora real: `true` sólo si el expediente se convirtió en ley (no confundir con los badges de sanciones HSN, §5.5, que sí distinguen aprobación parcial) |
+| `ley_numero` | str\|null | **(2026-08)** número de ley, sólo si `sancionado` |
+| `fecha_ley` | str\|null | **(2026-08)** `dd/mm/yyyy` de la sanción de ley |
+| `archivado` | bool | **(2026-08)** ahora real: expediente enviado al archivo (incluye caducidad) |
+| `fecha_archivo` | str\|null | **(2026-08)** `dd/mm/yyyy` |
+| `caduca` | bool | **(2026-08)** subcaso de `archivado`: el expediente caducó por plazo (no toda archivación es por caducidad) |
+| `fecha_caduca` | str\|null | **(2026-08)** `dd/mm/yyyy` |
+
+Fuente de estos campos: migración inicial desde `2025.xlsx`/`2026.xlsx`
+(`scripts/importar_proyectos_xlsx.py`, one-shot) y de ahí en más `scraper_proyectos.py`
+los sigue actualizando en cada corrida — ver §5.7.
 
 Campos que `generar_web.py` agrega **in place** al cruzar con otras fuentes:
 `reuniones` (agenda), `od` (órdenes del día), `badge_preferencia`, `badge_sancionado`,
@@ -75,10 +84,15 @@ Campos que `generar_web.py` agrega **in place** al cruzar con otras fuentes:
 ### `data/od.json` (scraper_od.py)
 `{nro_od, anio_od, tipo_od (N/A), expedientes:[{nro,anio,tipo,origen,url}], url_pdf, fecha}`.
 
-### `data/acuerdos.json` (importado a mano desde CSV, ver §5.6)
+### `data/acuerdos.json`
 Lista plana de expedientes AC (Acuerdos del PE al Senado):
 `{nro, anio, caratula, dado_cuenta (bool), fecha_dado_cuenta (str dd/mm/aaaa|null),
 dae (int|null), aprobado (bool), fecha_aprobacion (str|null), nro_od (int|null), origen}`.
+**(2026-08)** Ya no depende sólo del CSV manual: la migración inicial lo pobló desde
+la columna `NRO. DAE / DADO CUENTA` de los xlsx, y `scraper_proyectos.py` actualiza
+`dado_cuenta`/`fecha_dado_cuenta`/`dae` en cada corrida leyendo la tabla "Fechas en
+Mesa de Entradas" de cada expediente AC (ver §5.7). `importar_acuerdos.py`/el CSV
+manual quedan como fallback, no se usan de forma automática.
 
 ### `data/sanciones.json` (scraper_sanciones.py)
 Lista plana de ítems extraídos del Boletín de Novedades (uno por expediente aprobado):
@@ -161,11 +175,9 @@ suelen no estarlo).
 
 ### 5.6 Acuerdos (expedientes AC)
 Los expedientes AC (mensajes del PE solicitando acuerdo del Senado para designaciones)
-tienen 2 estados adicionales, importados a mano desde un CSV de la Prosecretaría
-(`data/AC_2026_acuerdos.csv` → `scripts/importar_acuerdos.py` → `data/acuerdos.json`,
-ver §3). `cruzar_proyectos_acuerdos()` en `generar_web.py` cruza por `nro`+`anio` y
-agrega in-place `dado_cuenta`, `fecha_dado_cuenta`, `aprobado_ac`, `fecha_aprobacion_ac`
-a los proyectos tipo AC.
+tienen 2 estados adicionales en `data/acuerdos.json` (ver §3). `cruzar_proyectos_acuerdos()`
+en `generar_web.py` cruza por `nro`+`anio` y agrega in-place `dado_cuenta`,
+`fecha_dado_cuenta`, `aprobado_ac`, `fecha_aprobacion_ac` a los proyectos tipo AC.
 
 **Cruce con tarjetas de Proyectos** — 2 badges nuevos en `cardFooterHtml()`:
 - **Dado cuenta** (verde `#E8F5E9`/`#1B5E20`): `dado_cuenta === true`.
@@ -175,12 +187,35 @@ a los proyectos tipo AC.
 aparece un filtro adicional "Estado del acuerdo" (Todos / Dado cuenta / Pendiente de
 dar cuenta), implementado con `activeAcuerdoEstado` + chips en `#acuerdo-estado-filter`.
 
-**Pendiente — automatizar el scraping de "dado cuenta":** hoy `data/acuerdos.json` se
-carga a mano desde un CSV que la Prosecretaría exporta periódicamente (no hay scraper).
-El campo "dado cuenta" está disponible en la página de cada expediente AC del Senado,
-en la tabla **"Fechas en Dir. Mesa de Entradas"**. Cuando se automatice, la idea es que
-`scripts/scraper_proyectos.py`, al visitar un expediente de tipo AC, lea esa celda y
-actualice `data/acuerdos.json` directamente — sin depender del CSV manual.
+**(2026-08) Resuelto — ya no depende del CSV manual:** `scripts/scraper_proyectos.py`
+lee la tabla "Fechas en Mesa de Entradas" de cada expediente AC que visita (columna
+DADO CUENTA) y actualiza `data/acuerdos.json` directamente (`actualizar_acuerdo()`).
+`scripts/importar_acuerdos.py` + el CSV quedan como fallback manual, no se usan de
+forma automática.
+
+### 5.7 Trazabilidad continua de proyectos (2026-08)
+`data/proyectos.json` se migró por completo desde `2025.xlsx`/`2026.xlsx`
+(`scripts/importar_proyectos_xlsx.py`, one-shot — ver §3 para los campos nuevos). De
+ahí en más, `scripts/scraper_proyectos.py` sigue completando esos mismos campos en
+cada corrida, en dos pasos:
+
+1. **Expedientes nuevos** (`scrape_incremental()`, sin cambios de fondo): al visitar
+   el detalle de cada expediente nuevo, además de autores/comisiones ya calcula
+   `archivado`/`caduca`/`sancionado` y, si es tipo AC,
+   `dado_cuenta` — usando las mismas tablas del HTML del expediente que se
+   confirmaron contra la web real (`ENVIADO AL ARCHIVO`, `EL EXPEDIENTE CADUCO`,
+   tabla `summary="SANCION DE LEY"`, tabla `summary="Fechas en Mesa de Entradas"`).
+2. **`revisar_expedientes_abiertos()`** (nuevo): en cada corrida re-visita un lote
+   acotado (`LOTE_REVISION`, default 200) de expedientes ya existentes que sigan
+   "abiertos" (no archivados/sancionados, o AC sin dar cuenta), priorizando los
+   menos revisados recientemente (`_ultima_revision`, campo interno). Así, con el
+   tiempo, todos los expedientes abiertos se van revisando sin tener que
+   re-scrapear las ~4000 filas dos veces por día.
+
+**Límite conocido:** no hay forma de saber por adelantado cuándo un expediente va a
+cambiar de estado, así que un expediente puede tardar varios días en ser
+re-revisado si la base de "abiertos" es grande. Si hace falta forzar la revisión de
+uno puntual, correr con `LOTE_REVISION` más alto o filtrar manualmente.
 
 ---
 

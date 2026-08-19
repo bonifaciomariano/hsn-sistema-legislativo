@@ -980,10 +980,10 @@ body.print-view-active > *:not(#main-votacion){display:none !important}
 # ── JavaScript (vanilla) ───────────────────────────────────────────────────────
 
 JS = r"""
-var TIPOS={PL:'Proy. de Ley',PD:'Declaración',PC:'Comunicación',PR:'Resolución',CA:'Com. Auditoría',AC:'Acuerdo',CV:'Com. Varias'};
-var TIPO_FG={PL:'#1B5EA2',PD:'#2E75B6',PC:'#0d7a4a',PR:'#5B4DA0',CA:'#1a7a4a',AC:'#7a5c1a',CV:'#7a1a3a'};
-var TIPO_BG={PL:'#D6E4F0',PD:'#EAF0FA',PC:'#DCF0E8',PR:'#EDE8FA',CA:'#E0F4EC',AC:'#F9F0DA',CV:'#FAE0EA'};
-var ORIGEN_LABEL={S:'Senado',PE:'Poder Ejecutivo',CD:'Diputados',OV:'Otros'};
+var TIPOS={PL:'Proy. de Ley',PD:'Declaración',PC:'Comunicación',PR:'Resolución',CA:'Com. Auditoría',AC:'Acuerdo',CV:'Com. Varias',CC:'Com. de Comisiones',CD:'Com. de Diputados',CE:'Com. del P.E.',CM:'Com. de Ministerios',CO:'Com. de Senadores',DC:'Decreto',MS:'Mensaje de Senado',MD:'Mensaje de Diputados',PP:'Petición',DE:'Proy. de Decreto',RC:'Resolución Conjunta',RP:'Respuesta de Presidencia'};
+var TIPO_FG={PL:'#1B5EA2',PD:'#2E75B6',PC:'#0d7a4a',PR:'#5B4DA0',CA:'#1a7a4a',AC:'#7a5c1a',CV:'#7a1a3a',CC:'#2f7a7a',CD:'#8a4a1a',CE:'#4a4a8a',CM:'#7a4a4a',CO:'#4a7a2f',DC:'#8a1a5c',MS:'#1a5c8a',MD:'#5c8a1a',PP:'#8a5c1a',DE:'#5c1a8a',RC:'#1a8a7a',RP:'#8a1a1a'};
+var TIPO_BG={PL:'#D6E4F0',PD:'#EAF0FA',PC:'#DCF0E8',PR:'#EDE8FA',CA:'#E0F4EC',AC:'#F9F0DA',CV:'#FAE0EA',CC:'#DFF3F3',CD:'#F5E8DA',CE:'#E2E2F5',CM:'#F2E4E4',CO:'#E4F2DD',DC:'#F5DCEC',MS:'#DCEBF5',MD:'#EBF5DC',PP:'#F5EBDC',DE:'#EBDCF5',RC:'#DCF5EF',RP:'#F5DCDC'};
+var ORIGEN_LABEL={S:'Senado',PE:'Poder Ejecutivo',CD:'Diputados',OV:'Otros',P:'Particulares',JGM:'Jefatura de Gabinete',OVD:'Oficiales Varios Diputados'};
 var ORIGEN_CODE={};Object.keys(ORIGEN_LABEL).forEach(function(k){ORIGEN_CODE[ORIGEN_LABEL[k]]=k});
 var REUNION_TIPO_LABEL={senadores:'Reunión de senadores',asesores:'Reunión de asesores',bicameral:'Reunión bicameral'};
 var REUNION_TIPO_COLOR={senadores:{fg:'#1B5EA2',bg:'#D6E4F0'},asesores:{fg:'#0d7a4a',bg:'#DCF0E8'},bicameral:{fg:'#5B4DA0',bg:'#EDE8FA'}};
