@@ -406,7 +406,19 @@ def main():
             continue
         log.info(f"  DPP {numero} — {dec['tema'][:70]}")
         try:
-            texto = descargar_texto_pdf(dec["url"])
+            # < 40 caracteres puede ser un PDF escaneado de verdad (sin capa de
+            # texto) o una descarga degradada por el rate-limit/anti-bot del
+            # sitio — reintentar antes de asumir lo primero, porque "sin_texto"
+            # es terminal (nunca se reprocesa) y confundirlas pierde datos.
+            texto = ""
+            for intento in range(1, 3):
+                texto = descargar_texto_pdf(dec["url"])
+                if len(texto.strip()) >= 40:
+                    break
+                if intento < 2:
+                    log.warning(f"    ⚠ DPP {numero}: descarga con poco texto en el intento "
+                                f"{intento}/2, reintentando en 15s...")
+                    time.sleep(15)
             if len(texto.strip()) < 40:
                 # PDF escaneado sin capa de texto (requiere OCR, fuera de alcance)
                 log.warning(f"    ⚠ DPP {numero} sin texto extraíble (PDF escaneado)")
