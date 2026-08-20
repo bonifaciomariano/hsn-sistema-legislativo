@@ -413,13 +413,10 @@ table.cross-table tr:last-child td{border-bottom:none}
 .pref-badge{display:inline-block;font-size:11px;font-weight:600;padding:4px 10px;border-radius:6px;background:#FFF8E1;color:#F57F17;border:1px solid #F9A825}
 .sancionado-badge{display:inline-block;font-size:11px;font-weight:600;padding:4px 10px;border-radius:6px;background:#E8F5E9;color:#1B5E20;border:1px solid #4CAF50;text-decoration:none;cursor:pointer}
 .sancionado-badge:hover{background:#dcefdc}
+.sanc-ley-badge{display:inline-block;font-size:11px;font-weight:700;padding:4px 10px;border-radius:6px;background:#1B5E20;color:#fff}
 .diputados-badge{display:inline-block;font-size:11px;font-weight:600;padding:4px 10px;border-radius:6px;background:#E3F2FD;color:#0D47A1;border:1px solid #1976D2}
 .dadocuenta-badge{display:inline-block;font-size:11px;font-weight:600;padding:4px 10px;border-radius:6px;background:#E8F5E9;color:#1B5E20;border:1px solid #4CAF50}
 .pendientecuenta-badge{display:inline-block;font-size:11px;font-weight:600;padding:4px 10px;border-radius:6px;background:#FFF8E1;color:#F57F17;border:1px solid #F9A825}
-.od-tabs,.sanc-tabs{display:flex;gap:4px;border-bottom:1px solid #D6E4F0;margin-bottom:14px;overflow-x:auto}
-.od-tab-btn,.sanc-tab-btn{padding:10px 18px;background:transparent;border:none;color:#888;font-family:inherit;font-size:12px;font-weight:600;cursor:pointer;border-bottom:3px solid transparent;transition:all .2s;white-space:nowrap}
-.od-tab-btn.active,.sanc-tab-btn.active{color:#1B5EA2;border-bottom-color:#1B5EA2}
-.od-tab-btn:hover,.sanc-tab-btn:hover{color:#2E75B6}
 .od-card{background:#fff;border:1px solid #D6E4F0;border-radius:10px;padding:12px 16px;margin-bottom:10px;box-shadow:0 1px 3px rgba(0,0,0,0.05)}
 .od-card-top{display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap;margin-bottom:6px}
 .od-nro{font-size:14px;font-weight:700;color:#1B5EA2;text-decoration:none}
@@ -1137,6 +1134,7 @@ function init(){
   renderRepresentacion();
   agendaInit();
   amInit();
+  renderSancChips();
   renderSanciones();
 }
 function fillSelect(id,values){
@@ -3017,24 +3015,66 @@ function volverAgenda(){
 }
 
 /* ── Sanciones HSN (Boletín de Novedades) ─────────────────────────── */
-var SANCTAB='ley';
 var SANC_SECCION_LABEL={ley:'Ley',decreto_res_com_dec:'Decreto/Res/Com/Dec',acuerdo:'Acuerdo',preferencia:'Preferencia'};
+var SANC_VISTA='landing';
+var sancCat='TODOS',sancPrefCat='TODOS';
+var SANC_CATS=['TODOS','LEY','PR','PD','PC','AC','OTROS'];
+var SANC_CAT_LABELS={TODOS:'Todos',LEY:'Ley',PR:'PR',PD:'PD',PC:'PC',AC:'Acuerdos',OTROS:'Otros'};
 function fechaSesionDisplay(iso){
   var p=String(iso||'').split('-');
   return p.length===3?(p[2]+'/'+p[1]+'/'+p[0]):(iso||'');
 }
-function sancCategoria(item){
-  if(item.seccion==='ley'&&item.resultado==='APROBADO')return 'ley';
-  if(item.seccion==='acuerdo'&&item.resultado==='APROBADO')return 'acuerdo';
-  if(item.resultado==='APROBADO'||item.resultado==='APROBADA')return 'otros';
-  return null;
+function sancTipoDe(item){
+  var exp=parseExpNumero(item.expediente);
+  var p=exp?proyectoDeExp(exp):null;
+  return p?p.tipo:null;
 }
-function switchSancTab(id){
-  SANCTAB=id;
-  document.querySelectorAll('.sanc-tab-btn').forEach(function(b){b.classList.remove('active')});
-  document.querySelector('[data-sanctab="'+id+'"]').classList.add('active');
+function sancAprobado(item){return item.resultado==='APROBADO'||item.resultado==='APROBADA';}
+/* Categoría para la landing: Ley/Acuerdos salen directo de la sección del
+   Boletín; PR/PD/PC hay que resolverlos cruzando con el tipo real del
+   proyecto (la sección "decreto_res_com_dec" del Boletín los mezcla a todos
+   con los decretos, que caen en "Otros"). */
+function sancCategoriaLanding(item){
+  if(item.seccion==='preferencia')return null;
+  if(!sancAprobado(item))return null;
+  if(item.seccion==='ley')return 'LEY';
+  if(item.seccion==='acuerdo')return 'AC';
+  var t=sancTipoDe(item);
+  if(t==='PR'||t==='PD'||t==='PC')return t;
+  return 'OTROS';
+}
+function sancPrefCatsDynamic(){
+  var set={};
+  (SANCIONES_DATA||[]).forEach(function(it){
+    if(it.seccion!=='preferencia')return;
+    var t=sancTipoDe(it);
+    if(t)set[t]=1;
+  });
+  return ['TODOS'].concat(Object.keys(set).sort());
+}
+function renderSancChips(){
+  var landing=SANC_VISTA==='landing';
+  var cats=landing?SANC_CATS:sancPrefCatsDynamic();
+  var activeCat=landing?sancCat:sancPrefCat;
+  var setter=landing?'setSancCat':'setSancPrefCat';
+  var html=cats.map(function(c){
+    var label=landing?SANC_CAT_LABELS[c]:(c==='TODOS'?'Todos':(c+' · '+(TIPOS[c]||c)));
+    return '<button class="chip'+(c===activeCat?' on':'')+'" onclick="'+setter+'(\''+c+'\')">'+esc(label)+'</button>';
+  }).join('');
+  document.getElementById(landing?'sanc-chips':'sanc-pref-chips').innerHTML=html;
+}
+function setSancVista(id){
+  SANC_VISTA=id;
+  var root=document.getElementById('sanc-root');
+  root.querySelectorAll(':scope > .sub-nav .sub-btn').forEach(function(b){b.classList.remove('active')});
+  root.querySelectorAll(':scope > .sub-content').forEach(function(c){c.classList.remove('active')});
+  root.querySelector('[data-sancvista="'+id+'"]').classList.add('active');
+  document.getElementById('sanc-vista-'+id).classList.add('active');
+  renderSancChips();
   renderSanciones();
 }
+function setSancCat(c){sancCat=c;renderSancChips();renderSanciones();}
+function setSancPrefCat(c){sancPrefCat=c;renderSancChips();renderSanciones();}
 function sancObsHtml(item){
   if(!item.observaciones||item.observaciones==='-')return '';
   var cls='sanc-obs'+(/^Ley N/.test(item.observaciones)?' ley':'');
@@ -3046,14 +3086,23 @@ function buildSancCard(item){
   var linkHtml=(p&&p.url)?'<a class="od-nro" href="'+escAttr(p.url)+'" target="_blank">'+esc(item.expediente)+'</a>':'<span class="od-nro">'+esc(item.expediente)+'</span>';
   var seccionHtml='<span class="od-tipo-tag">'+esc(SANC_SECCION_LABEL[item.seccion]||item.seccion)+'</span>';
   var odHtml=item.od_nro?'<span class="od-tipo-tag">OD N&ordm; '+esc(item.od_nro)+'</span>':'';
+  var leyHtml=(p&&p.sancionado&&p.ley_numero)?'<span class="sanc-ley-badge">Ley N&deg; '+esc(p.ley_numero)+'</span>':'';
   var extractoHtml=p?'<div class="od-exp-extracto">'+esc(p.extracto)+'</div>':'';
-  return '<div class="od-card"><div class="od-card-top">'+linkHtml+seccionHtml+odHtml+'<span class="sanc-fecha">'+esc(fechaSesionDisplay(item.fecha_sesion))+'</span></div>'+extractoHtml+sancObsHtml(item)+'</div>';
+  return '<div class="od-card"><div class="od-card-top">'+linkHtml+seccionHtml+odHtml+leyHtml+'<span class="sanc-fecha">'+esc(fechaSesionDisplay(item.fecha_sesion))+'</span></div>'+extractoHtml+sancObsHtml(item)+'</div>';
 }
 function renderSanciones(){
-  var searchEl=document.getElementById('sanc-search');
+  var landing=SANC_VISTA==='landing';
+  var searchEl=landing?document.getElementById('sanc-search'):null;
   var q=(searchEl&&searchEl.value||'').toLowerCase().trim();
   var lista=(SANCIONES_DATA||[]).filter(function(it){
-    if(sancCategoria(it)!==SANCTAB)return false;
+    if(landing){
+      var cat=sancCategoriaLanding(it);
+      if(!cat)return false;
+      if(sancCat!=='TODOS'&&cat!==sancCat)return false;
+    }else{
+      if(it.seccion!=='preferencia')return false;
+      if(sancPrefCat!=='TODOS'&&sancTipoDe(it)!==sancPrefCat)return false;
+    }
     if(!q)return true;
     if(it.expediente.toLowerCase().indexOf(q)>=0)return true;
     var exp=parseExpNumero(it.expediente);
@@ -3061,7 +3110,7 @@ function renderSanciones(){
     return !!(p&&p.extracto&&p.extracto.toLowerCase().indexOf(q)>=0);
   });
   lista=lista.slice().sort(function(a,b){return (b.fecha_sesion||'').localeCompare(a.fecha_sesion||'')});
-  var el=document.getElementById('sanc-list');
+  var el=document.getElementById(landing?'sanc-list':'sanc-pref-list');
   if(!el)return;
   if(!lista.length){el.innerHTML='<div class="no-results">Sin resultados para este filtro.</div>';return}
   var html='';
@@ -3071,9 +3120,17 @@ function renderSanciones(){
 function irASanciones(expediente){
   switchMain('sanciones');
   var it=(SANCIONES_DATA||[]).filter(function(x){return x.expediente===expediente})[0];
-  switchSancTab((it&&sancCategoria(it))||'ley');
-  var searchEl=document.getElementById('sanc-search');
-  if(searchEl){searchEl.value=expediente;renderSanciones()}
+  if(it&&it.seccion==='preferencia'){
+    setSancVista('preferencias');
+    sancPrefCat='TODOS';
+  }else{
+    setSancVista('landing');
+    sancCat=(it&&sancCategoriaLanding(it))||'TODOS';
+    var searchEl=document.getElementById('sanc-search');
+    if(searchEl)searchEl.value=expediente;
+  }
+  renderSancChips();
+  renderSanciones();
   window.scrollTo({top:0,behavior:'smooth'});
 }
 
@@ -4451,19 +4508,37 @@ HTML_TEMPLATE = """<!DOCTYPE html>
 
 <!-- ====================== MAIN: SANCIONES HSN ====================== -->
 <div id="main-sanciones" class="mtab-content">
-  <div class="section-block">
-    <div class="section-header">
-      <h2>Sanciones HSN</h2>
-      <span class="section-hint">Bolet&iacute;n de Novedades del HSN</span>
+  <div id="sanc-root">
+    <div class="sub-nav">
+      <button class="sub-btn active" data-sancvista="landing" onclick="setSancVista('landing')">Sanciones HSN</button>
+      <button class="sub-btn" data-sancvista="preferencias" onclick="setSancVista('preferencias')">Preferencias</button>
     </div>
-    <div class="section-body">
-      <div class="sanc-tabs">
-        <button class="sanc-tab-btn active" data-sanctab="ley" onclick="switchSancTab('ley')">Leyes sancionadas</button>
-        <button class="sanc-tab-btn" data-sanctab="acuerdo" onclick="switchSancTab('acuerdo')">Acuerdos aprobados</button>
-        <button class="sanc-tab-btn" data-sanctab="otros" onclick="switchSancTab('otros')">Otros</button>
+
+    <div id="sanc-vista-landing" class="sub-content active">
+      <div class="section-block">
+        <div class="section-header">
+          <h2>Sanciones HSN</h2>
+          <span class="section-hint">Bolet&iacute;n de Novedades del HSN</span>
+        </div>
+        <div class="section-body">
+          <div class="filter-row" id="sanc-chips"></div>
+          <input class="search-box" type="text" id="sanc-search" placeholder="Buscar por n&uacute;mero de expediente o extracto&hellip;" oninput="renderSanciones()" style="max-width:360px">
+          <div id="sanc-list"></div>
+        </div>
       </div>
-      <input class="search-box" type="text" id="sanc-search" placeholder="Buscar por n&uacute;mero de expediente o extracto&hellip;" oninput="renderSanciones()" style="max-width:360px">
-      <div id="sanc-list"></div>
+    </div>
+
+    <div id="sanc-vista-preferencias" class="sub-content">
+      <div class="section-block">
+        <div class="section-header">
+          <h2>Preferencias</h2>
+          <span class="section-hint">Mociones de preferencia aprobadas</span>
+        </div>
+        <div class="section-body">
+          <div class="filter-row" id="sanc-pref-chips"></div>
+          <div id="sanc-pref-list"></div>
+        </div>
+      </div>
     </div>
   </div>
 </div>
