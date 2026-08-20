@@ -1105,12 +1105,10 @@ function init(){
     if(p.comisiones[1])csetAdic[p.comisiones[1]]=1;
     if(p.comisiones[2])csetAdic[p.comisiones[2]]=1;
   });
-  fillSelect('com-select-1',Object.keys(cset1).sort());
-  fillSelect('com-select-adic',Object.keys(csetAdic).sort());
+  fillSelectLabeled('com-select-1',Object.keys(cset1).sort(),comLabel);
+  fillSelectLabeled('com-select-adic',Object.keys(csetAdic).sort(),comLabel);
 
-  var aset={};
-  DATA.forEach(function(p){p.autores.forEach(function(a){aset[a]=1})});
-  fillSelect('autor-select',Object.keys(aset).sort());
+  refreshAutorSelect();
 
   fillSelect('bloque-select',ALL_BLOQUES);
 
@@ -1121,6 +1119,10 @@ function init(){
   var oset={};
   DATA.forEach(function(p){if(p.origen)oset[p.origen]=1});
   fillSelectLabeled('origen-select',Object.keys(oset).sort(),function(o){return ORIGEN_LABEL[o]||o});
+
+  var tset0={};
+  DATA.forEach(function(p){tset0[p.tipo]=1});
+  fillSelectLabeled('tipo-select',Object.keys(tset0).sort(),function(t){return t+' · '+(TIPOS[t]||t);});
 
   DATA.forEach(function(p){DATA_INDEX[claveP(p)]=p});
 
@@ -1411,6 +1413,7 @@ function renderRankingBloques(data){
 function drillRanking(bloque,tipo){
   resetBuscadorOnly();
   activeBloque=bloque;setSelVal('bloque-select',bloque);
+  refreshAutorSelect();
   activeTipos={};activeTipos[tipo]=1;
   applyAll();
   switchSub('buscador');
@@ -1529,6 +1532,7 @@ function resetBuscadorOnly(){
   document.getElementById('search').value='';
   document.getElementById('fecha-desde').value='';
   document.getElementById('fecha-hasta').value='';
+  refreshAutorSelect();
 }
 function setSelVal(id,v){var el=document.getElementById(id);if(el){el.value=v;el.className=v?'filter-select on':'filter-select';}}
 
@@ -1541,6 +1545,9 @@ function syncFilterUI(){
   });
   var os=document.getElementById('origen-select');
   if(os){os.value=activeOrigen;os.className=activeOrigen?'filter-select on':'filter-select';}
+  var ts=document.getElementById('tipo-select');
+  var tv=Object.keys(activeTipos)[0]||'';
+  if(ts){ts.value=tv;ts.className=tv?'filter-select on':'filter-select';}
   renderFilters();
 }
 function setAnioShared(v){activeAnio=v;applyAll();}
@@ -1548,15 +1555,6 @@ function setOrigenShared(v){activeOrigen=v;applyAll();}
 
 /* ── Buscador: filtros ─────────────────────────────────────────── */
 function renderFilters(){
-  var tset={};
-  DATA.forEach(function(p){tset[p.tipo]=1});
-  var anyT=Object.keys(activeTipos).length===0;
-  var h='<button class="chip'+(anyT?' on':'')+'" onclick="toggleTipo(\'__all__\')">Todos</button>';
-  Object.keys(tset).sort().forEach(function(t){
-    h+='<button class="chip'+(activeTipos[t]?' on':'')+'" onclick="toggleTipo(\''+t+'\')">'+t+' &middot; '+(TIPOS[t]||t)+'</button>';
-  });
-  document.getElementById('tipo-filters').innerHTML=h;
-
   var tk=Object.keys(activeTipos);
   var soloAC=tk.length===1&&tk[0]==='AC';
   var acBox=document.getElementById('acuerdo-estado-filter');
@@ -1570,14 +1568,35 @@ function renderFilters(){
   }
 }
 function setAcuerdoEstado(v){activeAcuerdoEstado=v;pageBuscador=1;renderFilters();renderList();}
-function toggleTipo(t){
-  if(t==='__all__'){activeTipos={}}else{if(activeTipos[t])delete activeTipos[t];else activeTipos[t]=1}
+function setTipoSelect(v){
+  activeTipos={};if(v)activeTipos[v]=1;
+  var el=document.getElementById('tipo-select');
+  if(el)el.className=v?'filter-select on':'filter-select';
   applyAll();
+}
+/* Recalcula las opciones de Autor según el bloque activo (si hay uno) —
+   sólo autores que efectivamente tengan proyectos con ese bloque. */
+function refreshAutorSelect(){
+  var sel=document.getElementById('autor-select');
+  if(!sel)return;
+  var prev=sel.value;
+  var aset={};
+  DATA.forEach(function(p){
+    if(activeBloque&&p.bloques.indexOf(activeBloque)<0)return;
+    p.autores.forEach(function(a){aset[a]=1});
+  });
+  var opciones=Object.keys(aset).sort();
+  sel.innerHTML='<option value="">Todos los autores</option>';
+  opciones.forEach(function(a){var o=document.createElement('option');o.value=a;o.textContent=a;sel.appendChild(o)});
+  var val=opciones.indexOf(prev)>=0?prev:'';
+  sel.value=val;
+  sel.className=val?'filter-select on':'filter-select';
 }
 function setBloque(val){
   activeBloque=val;
   var el=document.getElementById('bloque-select');
   if(el)el.className=val?'filter-select on':'filter-select';
+  refreshAutorSelect();
   pageBuscador=1;renderList();
 }
 function setProvincia(val){
@@ -1726,16 +1745,16 @@ function renderActiveChips(){
   var chips=[];
   if(activeAnio)chips.push(['Año: '+activeAnio,'setAnioShared(\'\')']);
   Object.keys(activeTipos).forEach(function(t){
-    chips.push(['Tipo: '+t,'toggleTipo(\''+jsStr(t)+'\')']);
+    chips.push(['Tipo: '+t,'setTipoSelect(\'\')']);
   });
   if(activeBloque)chips.push(['Bloque: '+activeBloque,'setBloque(\'\')']);
   if(activeProvincia)chips.push(['Provincia: '+activeProvincia,'setProvincia(\'\')']);
   if(activeOrigen)chips.push(['Origen: '+(ORIGEN_LABEL[activeOrigen]||activeOrigen),'setOrigenShared(\'\')']);
   if(activeAcuerdoEstado)chips.push(['Acuerdo: '+(activeAcuerdoEstado==='dado'?'Dado cuenta':'Pendiente'),'setAcuerdoEstado(\'\')']);
   var com1=document.getElementById('com-select-1').value;
-  if(com1)chips.push(['Comisión: '+com1,'clearCom1()']);
+  if(com1)chips.push(['Comisión: '+comLabel(com1),'clearCom1()']);
   var comAdic=document.getElementById('com-select-adic').value;
-  if(comAdic)chips.push(['Giro adicional: '+comAdic,'clearComAdic()']);
+  if(comAdic)chips.push(['Giro adicional: '+comLabel(comAdic),'clearComAdic()']);
   var autor=document.getElementById('autor-select').value;
   if(autor)chips.push(['Autor: '+autor,'clearAutor()']);
   var dDesde=document.getElementById('fecha-desde').value,dHasta=document.getElementById('fecha-hasta').value;
@@ -1745,7 +1764,7 @@ function renderActiveChips(){
   box.innerHTML=chips.map(function(c){
     return '<span class="active-chip">'+esc(c[0])+'<button onclick="'+c[1]+'" title="Quitar filtro">&#10005;</button></span>';
   }).join('');
-  var secCount=(activeAnio?1:0)+Object.keys(activeTipos).length+(activeProvincia?1:0)
+  var secCount=(activeAnio?1:0)+(activeProvincia?1:0)
     +(document.getElementById('com-select-adic').value?1:0)
     +((document.getElementById('fecha-desde').value||document.getElementById('fecha-hasta').value)?1:0)
     +(activeAcuerdoEstado?1:0);
@@ -3979,6 +3998,13 @@ HTML_TEMPLATE = """<!DOCTYPE html>
           </div>
 
           <div class="select-wrapper">
+            <select class="filter-select" id="tipo-select" onchange="setTipoSelect(this.value)">
+              <option value="">Todos los tipos</option>
+            </select>
+            <span class="select-arrow">&#9660;</span>
+          </div>
+
+          <div class="select-wrapper">
             <select class="filter-select" id="com-select-1" onchange="onFilterChange()">
               <option value="">Comisi&oacute;n (1er giro)</option>
             </select>
@@ -3999,10 +4025,8 @@ HTML_TEMPLATE = """<!DOCTYPE html>
             </div>
 
             <div class="filter-group">
-              <div class="filter-label" style="margin-top:0">Tipo</div>
-              <div class="filter-row" id="tipo-filters"></div>
               <div id="acuerdo-estado-filter" style="display:none">
-                <div class="filter-label">Estado del acuerdo</div>
+                <div class="filter-label" style="margin-top:0">Estado del acuerdo</div>
                 <div class="filter-row" id="acuerdo-estado-chips"></div>
               </div>
             </div>
