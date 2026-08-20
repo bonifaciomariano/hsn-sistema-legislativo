@@ -239,10 +239,20 @@ def main():
     log.info("=" * 60)
     log.info("scraper_sanciones iniciado" + (" (TEST)" if TEST else ""))
 
-    try:
-        boletines = obtener_listado_boletines()
-    except Exception as e:
-        log.error(f"ERROR al obtener listado de boletines: {e}")
+    # El endpoint a veces devuelve una página de rechazo del sitio (no JSON)
+    # en vez de los datos — probablemente rate-limit/anti-bot intermitente.
+    # Vale la pena reintentar con espera antes de darse por vencido.
+    boletines = []
+    for intento in range(1, 4):
+        try:
+            boletines = obtener_listado_boletines()
+            break
+        except Exception as e:
+            log.error(f"ERROR al obtener listado de boletines (intento {intento}/3): {e}")
+            if intento < 3:
+                log.warning("  reintentando en 20s...")
+                time.sleep(20)
+    else:
         return
     log.info(f"  -> {len(boletines)} boletines disponibles (anio >= {MIN_ANIO})")
 

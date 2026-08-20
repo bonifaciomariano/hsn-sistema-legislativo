@@ -25,6 +25,7 @@ import logging
 import os
 import re
 import sys
+import time
 import unicodedata
 
 try:
@@ -124,9 +125,14 @@ def bloque_de(apellido, padron, indice):
 
 # ─────────────────────────────── Listado de DPP ──────────────────────────────
 
-def listar_decretos(session):
-    """Devuelve [{numero, fecha, tema, url}] de la tabla de decretos."""
-    resp = session.get(URL_DECRETOS, timeout=45)
+def listar_decretos():
+    """Devuelve [{numero, fecha, tema, url}] de la tabla de decretos.
+
+    Sin requests.Session(): esta llamada es un único GET suelto, no hace
+    falta arrastrar cookies entre requests. El sitio devuelve intermitentemente
+    una página degradada sin la tabla (probablemente rate-limit/anti-bot por
+    IP) — ver reintentos en main()."""
+    resp = requests.get(URL_DECRETOS, headers=HEADERS, timeout=45)
     resp.raise_for_status()
     soup = BeautifulSoup(resp.text, "html.parser")
     tablas = soup.find_all("table")
@@ -151,8 +157,8 @@ def listar_decretos(session):
     return decretos
 
 
-def descargar_texto_pdf(session, url):
-    resp = session.get(url, timeout=60)
+def descargar_texto_pdf(url):
+    resp = requests.get(url, headers=HEADERS, timeout=60)
     resp.raise_for_status()
     partes = []
     with pdfplumber.open(io.BytesIO(resp.content)) as pdf:
@@ -285,6 +291,12 @@ def _buscar_comision(comisiones, nombre):
 def aplicar_cambios(comisiones, cambios, padron, indice):
     aplicados, advertencias = 0, []
     for cambio in cambios:
+        # Sólo nos interesan cambios en comisiones unicamerales permanentes
+        # (data/comisiones.json). Las integraciones de comisiones bicamerales
+        # (ej. DPP 70/26 "INTEGRACIÓN COMISIÓN BICAMERAL") se ignoran a
+        # propósito — no las tenemos contempladas todavía.
+        if "BICAMERAL" in cambio["comision"].upper():
+            continue
         com = _buscar_comision(comisiones, cambio["comision"])
         if com is None:
             advertencias.append(f"comisión no encontrada: '{cambio['comision']}'")
@@ -348,14 +360,23 @@ def main():
         procesados = {n: {} for n in procesados}
     padron, indice = cargar_padron()
 
-    session = requests.Session()
-    session.headers.update(HEADERS)
-
-    try:
-        decretos = listar_decretos(session)
-    except Exception as exc:
-        log.error(f"No se pudo listar decretos: {exc}")
-        return
+    # La tabla de decretos nunca está realmente vacía (hay décadas de DPP) —
+    # 0 filas es señal de una respuesta degradada (rate-limit/anti-bot
+    # intermitente del sitio), así que vale la pena reintentar con espera
+    # antes de darse por vencido.
+    decretos = []
+    for intento in range(1, 4):
+        try:
+            decretos = listar_decretos()
+        except Exception as exc:
+            log.error(f"No se pudo listar decretos (intento {intento}/3): {exc}")
+            decretos = []
+        if decretos:
+            break
+        if intento < 3:
+            log.warning(f"  0 decretos en el intento {intento}/3, probablemente respuesta "
+                        f"degradada del sitio — reintentando en 20s...")
+            time.sleep(20)
     log.info(f"  → {len(decretos)} decretos en la tabla")
 
     # Modo baseline: la integración vigente ya está en comisiones.json (índice del
@@ -385,7 +406,7 @@ def main():
             continue
         log.info(f"  DPP {numero} — {dec['tema'][:70]}")
         try:
-            texto = descargar_texto_pdf(session, dec["url"])
+            texto = descargar_texto_pdf(dec["url"])
             if len(texto.strip()) < 40:
                 # PDF escaneado sin capa de texto (requiere OCR, fuera de alcance)
                 log.warning(f"    ⚠ DPP {numero} sin texto extraíble (PDF escaneado)")

@@ -43,6 +43,7 @@ import logging
 import os
 import re
 import sys
+import time
 import unicodedata
 
 try:
@@ -680,11 +681,22 @@ def main():
     session.headers.update(HEADERS)
     comisiones_norm = cargar_comisiones_norm()
 
-    try:
-        boletines = listar_boletines(session)
-    except Exception as exc:
-        log.error(f"No se pudo listar boletines: {exc}")
-        return
+    # El listado nunca está realmente vacío (siempre hay boletines
+    # históricos) — 0 filas es señal de una respuesta degradada
+    # (rate-limit/anti-bot intermitente del sitio); vale la pena reintentar.
+    boletines = []
+    for intento in range(1, 4):
+        try:
+            boletines = listar_boletines(session)
+        except Exception as exc:
+            log.error(f"No se pudo listar boletines (intento {intento}/3): {exc}")
+            boletines = []
+        if boletines:
+            break
+        if intento < 3:
+            log.warning(f"  0 boletines en el intento {intento}/3, probablemente respuesta "
+                        f"degradada del sitio — reintentando en 20s...")
+            time.sleep(20)
 
     nuevos = [b for b in boletines if b["id"] > ultimo_id and b["id"] not in procesados]
     log.info(f"  → {len(boletines)} boletines listados, {len(nuevos)} nuevos (último_id={ultimo_id})")
