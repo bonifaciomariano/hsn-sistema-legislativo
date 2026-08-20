@@ -1,5 +1,313 @@
 [
   {
+    "numero": "320",
+    "periodo": 2026,
+    "tipoOD": "NORMAL",
+    "origen": "Poder Ejecutivo",
+    "categoria": "Acuerdo",
+    "autor": null,
+    "descripcion": "Mensaje N° 218/26 que Solicita Acuerdo para Designar Juez de Camara del Tribunal Oral en lo Criminal Federal N° 6 de la Capital Federal, al Dr. Ramiro Velasco.",
+    "expedientes": [
+      {
+        "codigo": "PE-233/26-AC",
+        "url": "https://www.senado.gob.ar/parlamentario/comisiones/verExp/233.26/PE/AC"
+      }
+    ],
+    "comisiones": [
+      "De Acuerdos"
+    ],
+    "comisionCabecera": "Acuerdos",
+    "fechaDictamen": "19/08/2026",
+    "odLink": "https://www.senado.gob.ar/parlamentario/parlamentaria/51645/downloadOrdenDia",
+    "firmantesMayoria": null
+  },
+  {
+    "numero": "319",
+    "periodo": 2026,
+    "tipoOD": "NORMAL",
+    "origen": "Poder Ejecutivo",
+    "categoria": "Acuerdo",
+    "autor": null,
+    "descripcion": "Mensaje N° 217/26 que Solicita Acuerdo para Designar Jueza de Camara del Tribunal Oral en lo Criminal Federal N° 4 de la Capital Federal, a la Dra. Valeria Alejandra Rico.",
+    "expedientes": [
+      {
+        "codigo": "PE-232/26-AC",
+        "url": "https://www.senado.gob.ar/parlamentario/comisiones/verExp/232.26/PE/AC"
+      }
+    ],
+    "comisiones": [
+      "De Acuerdos"
+    ],
+    "comisionCabecera": "Acuerdos",
+    "fechaDictamen": "19/08/2026",
+    "odLink": "https://www.senado.gob.ar/parlamentario/parlamentaria/51644/downloadOrdenDia",
+    "firmantesMayoria": null
+  },
+  {
+    "numero": "318",
+    "periodo": 2026,
+    "tipoOD": "NORMAL",
+    "origen": "Poder Ejecutivo",
+    "categoria": "Acuerdo",
+    "autor": null,
+    "descripcion": "Mensaje N° 215/26 que Solicita Acuerdo para Designar Juez del Juzgado Nacional de Primera Instancia en lo Civil N° 26 de la Capital Federal, al Dr. Sergio Buitrago.",
+    "expedientes": [
+      {
+        "codigo": "PE-230/26-AC",
+        "url": "https://www.senado.gob.ar/parlamentario/comisiones/verExp/230.26/PE/AC"
+      }
+    ],
+    "comisiones": [
+      "De Acuerdos"
+    ],
+    "comisionCabecera": "Acuerdos",
+    "fechaDictamen": "19/08/2026",
+    "odLink": "https://www.senado.gob.ar/parlamentario/parlamentaria/51643/downloadOrdenDia",
+    "firmantesMayoria": null
+  },
+  {
+    "numero": "317",
+    "periodo": 2026,
+    "tipoOD": "NORMAL",
+    "origen": "Poder Ejecutivo",
+    "categoria": "Acuerdo",
+    "autor": null,
+    "descripcion": "Mensaje N° 213/26 que Solicita Acuerdo para Designar Juez de Camara del Tribunal Oral en lo Criminal Federal N° 6 de la Capital Federal, al Dr. Santiago Juan Schiopetto.",
+    "expedientes": [
+      {
+        "codigo": "PE-228/26-AC",
+        "url": "https://www.senado.gob.ar/parlamentario/comisiones/verExp/228.26/PE/AC"
+      }
+    ],
+    "comisiones": [
+      "De Acuerdos"
+    ],
+    "comisionCabecera": "Acuerdos",
+    "fechaDictamen": "19/08/2026",
+    "odLink": "https://www.senado.gob.ar/parlamentario/parlamentaria/51642/downloadOrdenDia",
+    "firmantesMayoria": null
+  },
+  {
+    "numero": "316",
+    "periodo": 2026,
+    "tipoOD": "NORMAL",
+    "origen": "Poder Ejecutivo",
+    "categoria": "Acuerdo",
+    "autor": null,
+    "descripcion": "Mensaje N° 211/26 que Solicita Acuerdo para Designar Fiscal Ante los Juzgados Nacionales en lo Criminal y Correccional de la Capital Federal, Fiscalia N° 27, a la Dra. Ornella Romina Riggitano.",
+    "expedientes": [
+      {
+        "codigo": "PE-222/26-AC",
+        "url": "https://www.senado.gob.ar/parlamentario/comisiones/verExp/222.26/PE/AC"
+      }
+    ],
+    "comisiones": [
+      "De Acuerdos"
+    ],
+    "comisionCabecera": "Acuerdos",
+    "fechaDictamen": "19/08/2026",
+    "odLink": "https://www.senado.gob.ar/parlamentario/parlamentaria/51641/downloadOrdenDia",
+    "firmantesMayoria": null
+  },
+  {
+    "numero": "315",
+    "periodo": 2026,
+    "tipoOD": "NORMAL",
+    "origen": "Poder Ejecutivo",
+    "categoria": "Acuerdo",
+    "autor": null,
+    "descripcion": "Mensaje N° 210/26 que Solicita Acuerdo para Designar Fiscal Ante los Juzgados Nacionales en lo Criminal y Correccional de la Capital Federal, Fiscalia N° 7, al Dr. Matias Ezequiel Eidem.",
+    "expedientes": [
+      {
+        "codigo": "PE-221/26-AC",
+        "url": "https://www.senado.gob.ar/parlamentario/comisiones/verExp/221.26/PE/AC"
+      }
+    ],
+    "comisiones": [
+      "De Acuerdos"
+    ],
+    "comisionCabecera": "Acuerdos",
+    "fechaDictamen": "19/08/2026",
+    "odLink": "https://www.senado.gob.ar/parlamentario/parlamentaria/51640/downloadOrdenDia",
+    "firmantesMayoria": null
+  },
+  {
+    "numero": "314",
+    "periodo": 2026,
+    "tipoOD": "NORMAL",
+    "origen": "Poder Ejecutivo",
+    "categoria": "Acuerdo",
+    "autor": null,
+    "descripcion": "Mensaje N° 204/26 que Solicita Acuerdo para Designar Defensor Publico Oficial Ante los Tribunales Orales en lo Criminal Federal de la Plata, Prov. De Buenos Aires, Defensoria N° 2, al Dr. Leandro Gaston.",
+    "expedientes": [
+      {
+        "codigo": "PE-215/26-AC",
+        "url": "https://www.senado.gob.ar/parlamentario/comisiones/verExp/215.26/PE/AC"
+      }
+    ],
+    "comisiones": [
+      "De Acuerdos"
+    ],
+    "comisionCabecera": "Acuerdos",
+    "fechaDictamen": "19/08/2026",
+    "odLink": "https://www.senado.gob.ar/parlamentario/parlamentaria/51639/downloadOrdenDia",
+    "firmantesMayoria": null
+  },
+  {
+    "numero": "313",
+    "periodo": 2026,
+    "tipoOD": "NORMAL",
+    "origen": "Poder Ejecutivo",
+    "categoria": "Acuerdo",
+    "autor": null,
+    "descripcion": "Mensaje N° 203/26 que Solicita Acuerdo para Designar Jueza de Camara del Tribunal Oral en lo Criminal Federal de Catamarca, Prov. De Catamarca, a la Dra. Maria Virginia Miguel Carmona.",
+    "expedientes": [
+      {
+        "codigo": "PE-214/26-AC",
+        "url": "https://www.senado.gob.ar/parlamentario/comisiones/verExp/214.26/PE/AC"
+      }
+    ],
+    "comisiones": [
+      "De Acuerdos"
+    ],
+    "comisionCabecera": "Acuerdos",
+    "fechaDictamen": "19/08/2026",
+    "odLink": "https://www.senado.gob.ar/parlamentario/parlamentaria/51638/downloadOrdenDia",
+    "firmantesMayoria": null
+  },
+  {
+    "numero": "312",
+    "periodo": 2026,
+    "tipoOD": "NORMAL",
+    "origen": "Poder Ejecutivo",
+    "categoria": "Acuerdo",
+    "autor": null,
+    "descripcion": "Mensaje N° 202/26 que Solicita Acuerdo para Designar Vocal de la Camara Federal de Apelaciones de Cordoba, Prov. De Cordoba, Sala a, a la Dra. Maria Soledad Mancini.",
+    "expedientes": [
+      {
+        "codigo": "PE-213/26-AC",
+        "url": "https://www.senado.gob.ar/parlamentario/comisiones/verExp/213.26/PE/AC"
+      }
+    ],
+    "comisiones": [
+      "De Acuerdos"
+    ],
+    "comisionCabecera": "Acuerdos",
+    "fechaDictamen": "19/08/2026",
+    "odLink": "https://www.senado.gob.ar/parlamentario/parlamentaria/51637/downloadOrdenDia",
+    "firmantesMayoria": null
+  },
+  {
+    "numero": "311",
+    "periodo": 2026,
+    "tipoOD": "NORMAL",
+    "origen": "Poder Ejecutivo",
+    "categoria": "Acuerdo",
+    "autor": null,
+    "descripcion": "Mensaje N° 196/26 que Solicita Acuerdo para Designar Defensora Publica Oficial Ante el Juzgado Federal de Primera Instancia de Dolores, Prov. De Buenos Aires, a la Dra. Paula Ines lo Gioia.",
+    "expedientes": [
+      {
+        "codigo": "PE-207/26-AC",
+        "url": "https://www.senado.gob.ar/parlamentario/comisiones/verExp/207.26/PE/AC"
+      }
+    ],
+    "comisiones": [
+      "De Acuerdos"
+    ],
+    "comisionCabecera": "Acuerdos",
+    "fechaDictamen": "19/08/2026",
+    "odLink": "https://www.senado.gob.ar/parlamentario/parlamentaria/51636/downloadOrdenDia",
+    "firmantesMayoria": null
+  },
+  {
+    "numero": "310",
+    "periodo": 2026,
+    "tipoOD": "NORMAL",
+    "origen": "Poder Ejecutivo",
+    "categoria": "Acuerdo",
+    "autor": null,
+    "descripcion": "Mensaje N° 195/26 que Solicita Acuerdo para Designar Defensor Publico Oficial Federal del Interior del Pais con Asiento en la Cdad. De Salta, Prov. De Salta, al Dr. Carlos Nicolas Escandar.",
+    "expedientes": [
+      {
+        "codigo": "PE-206/26-AC",
+        "url": "https://www.senado.gob.ar/parlamentario/comisiones/verExp/206.26/PE/AC"
+      }
+    ],
+    "comisiones": [
+      "De Acuerdos"
+    ],
+    "comisionCabecera": "Acuerdos",
+    "fechaDictamen": "19/08/2026",
+    "odLink": "https://www.senado.gob.ar/parlamentario/parlamentaria/51635/downloadOrdenDia",
+    "firmantesMayoria": null
+  },
+  {
+    "numero": "309",
+    "periodo": 2026,
+    "tipoOD": "NORMAL",
+    "origen": "Poder Ejecutivo",
+    "categoria": "Acuerdo",
+    "autor": null,
+    "descripcion": "Mensaje N° 194/26 que Solicita Acuerdo para Designar Vocal de la Camara Federal de Apelaciones de Cordoba, Prov. De Cordoba, Sala B, al Dr. Facundo Carlos Cortes.",
+    "expedientes": [
+      {
+        "codigo": "PE-205/26-AC",
+        "url": "https://www.senado.gob.ar/parlamentario/comisiones/verExp/205.26/PE/AC"
+      }
+    ],
+    "comisiones": [
+      "De Acuerdos"
+    ],
+    "comisionCabecera": "Acuerdos",
+    "fechaDictamen": "19/08/2026",
+    "odLink": "https://www.senado.gob.ar/parlamentario/parlamentaria/51634/downloadOrdenDia",
+    "firmantesMayoria": null
+  },
+  {
+    "numero": "308",
+    "periodo": 2026,
+    "tipoOD": "NORMAL",
+    "origen": "Poder Ejecutivo",
+    "categoria": "Acuerdo",
+    "autor": null,
+    "descripcion": "Mensaje N° 190/26 que Solicita Acuerdo para Designar Vocal de la Camara Federal de Apelaciones de San Justo, Provincia de Buenos Aires, al Dr. Andres Guillermo Fraga.",
+    "expedientes": [
+      {
+        "codigo": "PE-195/26-AC",
+        "url": "https://www.senado.gob.ar/parlamentario/comisiones/verExp/195.26/PE/AC"
+      }
+    ],
+    "comisiones": [
+      "De Acuerdos"
+    ],
+    "comisionCabecera": "Acuerdos",
+    "fechaDictamen": "19/08/2026",
+    "odLink": "https://www.senado.gob.ar/parlamentario/parlamentaria/51633/downloadOrdenDia",
+    "firmantesMayoria": null
+  },
+  {
+    "numero": "307",
+    "periodo": 2026,
+    "tipoOD": "NORMAL",
+    "origen": "Poder Ejecutivo",
+    "categoria": "Acuerdo",
+    "autor": null,
+    "descripcion": "Mensaje N° 118/26 que Solicita Acuerdo para Designar Defensor Publico Oficial Adjunto Ante los Tribunales Orales en lo Criminal y Correccional de la Capital Federal, Defensoria N° 11, al Dr. German Luis Artola.",
+    "expedientes": [
+      {
+        "codigo": "PE-110/26-AC",
+        "url": "https://www.senado.gob.ar/parlamentario/comisiones/verExp/110.26/PE/AC"
+      }
+    ],
+    "comisiones": [
+      "De Acuerdos"
+    ],
+    "comisionCabecera": "Acuerdos",
+    "fechaDictamen": "19/08/2026",
+    "odLink": "https://www.senado.gob.ar/parlamentario/parlamentaria/51632/downloadOrdenDia",
+    "firmantesMayoria": null
+  },
+  {
     "numero": "306",
     "periodo": 2026,
     "tipoOD": "NORMAL",
@@ -4295,7 +4603,7 @@
       "De Deporte"
     ],
     "comisionCabecera": "Deporte",
-    "fechaDictamen": "",
+    "fechaDictamen": null,
     "odLink": "https://www.senado.gob.ar/parlamentario/parlamentaria/51482/downloadOrdenDia",
     "firmantesMayoria": [
       "Anabel Fernández Sagasti",
