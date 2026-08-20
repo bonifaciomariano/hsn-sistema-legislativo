@@ -154,6 +154,9 @@ body{font-family:'Poppins',Calibri,sans-serif;background:#F5F7FA;color:#4A4A4A;f
 .filters-primary{display:flex;gap:10px;flex-wrap:wrap;align-items:flex-start}
 .filters-primary .search-box{flex:2 1 240px;margin-bottom:0}
 .filters-primary .select-wrapper{flex:1 1 170px;margin-bottom:0}
+.checkbox-filter{display:flex;align-items:center;gap:7px;padding:8px 14px;border:1.5px solid #D6E4F0;border-radius:8px;font-size:12px;color:#4A4A4A;cursor:pointer;white-space:nowrap;flex:0 0 auto;user-select:none}
+.checkbox-filter:has(input:checked){border-color:#1B5EA2;background:#EAF0FA;color:#1B5EA2;font-weight:600}
+.checkbox-filter input{cursor:pointer;accent-color:#1B5EA2}
 .filters-more{margin-top:10px;border-top:1px dashed #D6E4F0;padding-top:10px}
 .filters-more summary{cursor:pointer;font-size:11px;font-weight:700;color:#1B5EA2;list-style:none;display:inline-flex;align-items:center;gap:6px;user-select:none}
 .filters-more summary::-webkit-details-marker{display:none}
@@ -509,8 +512,8 @@ table.cross-table tr:last-child td{border-bottom:none}
 .am-kv{display:grid;grid-template-columns:auto 1fr;gap:8px 14px;font-size:13px;margin-bottom:6px}
 .am-kv dt{color:#9aacbd;font-size:10.5px;text-transform:uppercase;letter-spacing:.05em;align-self:start;padding-top:2px}
 .am-kv dd{margin:0;color:#4A4A4A;line-height:1.5}
-.am-link-row{display:flex;gap:8px;flex-wrap:wrap;margin-top:8px}
-.am-link-btn{display:inline-flex;align-items:center;gap:6px;font-size:12.5px;font-weight:600;color:#fff;background:#1B5EA2;padding:8px 12px;border-radius:8px;text-decoration:none}
+.am-link-row{display:flex;gap:8px;flex-wrap:wrap;margin-top:8px;position:relative;z-index:2}
+.am-link-btn{display:inline-flex;align-items:center;gap:6px;font-size:12.5px;font-weight:600;color:#fff;background:#1B5EA2;padding:8px 12px;border-radius:8px;text-decoration:none;position:relative;z-index:2}
 .am-link-btn:hover{background:#164a87}
 .am-firmantes-bloque{margin-bottom:14px}
 .am-firmantes-bloque .bl-name{font-size:11px;font-weight:700;padding:2px 8px;border-radius:5px;display:inline-block;margin-bottom:6px}
@@ -1067,7 +1070,7 @@ var BLOQUE_COLORS_NORM={};
 Object.keys(BLOQUE_COLORS).forEach(function(k){BLOQUE_COLORS_NORM[normBloque(k)]=BLOQUE_COLORS[k]});
 var ALL_BLOQUES=[];
 var dashAnio='2026',dashEvoMode='tipo',dashCross={dim:'',val:''};
-var activeTipos={},activeBloque='',activeOrigen='',activeProvincia='',activeAnio='',activeAcuerdoEstado='';
+var activeTipos={},activeBloque='',activeOrigen='',activeProvincia='',activeAnio='',activeAcuerdoEstado='',activeConOD=false;
 var pageBuscador=1,PAGE_SIZE=25;
 var DATA_INDEX={};
 function claveP(p){return p.origen+'~'+p.nro+'~'+p.anio+'~'+p.tipo;}
@@ -1526,12 +1529,13 @@ function renderTopComs(data){
 /* Dimensiones disponibles para Filas / Columnas */
 /* Limpia los filtros propios del buscador (no los compartidos año/tipo/origen) */
 function resetBuscadorOnly(){
-  activeBloque='';activeProvincia='';
+  activeBloque='';activeProvincia='';activeConOD=false;
   setSelVal('bloque-select','');setSelVal('provincia-select','');
   setSelVal('com-select-1','');setSelVal('com-select-adic','');setSelVal('autor-select','');
   document.getElementById('search').value='';
   document.getElementById('fecha-desde').value='';
   document.getElementById('fecha-hasta').value='';
+  var conOdEl=document.getElementById('con-od-check');if(conOdEl)conOdEl.checked=false;
   refreshAutorSelect();
 }
 function setSelVal(id,v){var el=document.getElementById(id);if(el){el.value=v;el.className=v?'filter-select on':'filter-select';}}
@@ -1599,6 +1603,8 @@ function setBloque(val){
   refreshAutorSelect();
   pageBuscador=1;renderList();
 }
+function setConOD(val){activeConOD=val;pageBuscador=1;renderList();}
+function clearConOD(){var el=document.getElementById('con-od-check');if(el)el.checked=false;setConOD(false);}
 function setProvincia(val){
   activeProvincia=val;
   var el=document.getElementById('provincia-select');
@@ -1643,6 +1649,7 @@ function getFiltered(){
     if(activeProvincia&&(!p.provincias||p.provincias.indexOf(activeProvincia)<0))return false;
     if(activeAcuerdoEstado==='dado'&&p.dado_cuenta!==true)return false;
     if(activeAcuerdoEstado==='pendiente'&&p.dado_cuenta!==false)return false;
+    if(activeConOD&&!p.od)return false;
     if(selCom1&&p.comisiones[0]!==selCom1)return false;
     if(selComAdic&&p.comisiones.slice(1).indexOf(selComAdic)<0)return false;
     if(selAutor&&p.autores.indexOf(selAutor)<0)return false;
@@ -1751,6 +1758,7 @@ function renderActiveChips(){
   if(activeProvincia)chips.push(['Provincia: '+activeProvincia,'setProvincia(\'\')']);
   if(activeOrigen)chips.push(['Origen: '+(ORIGEN_LABEL[activeOrigen]||activeOrigen),'setOrigenShared(\'\')']);
   if(activeAcuerdoEstado)chips.push(['Acuerdo: '+(activeAcuerdoEstado==='dado'?'Dado cuenta':'Pendiente'),'setAcuerdoEstado(\'\')']);
+  if(activeConOD)chips.push(['Con OD','clearConOD()']);
   var com1=document.getElementById('com-select-1').value;
   if(com1)chips.push(['Comisión: '+comLabel(com1),'clearCom1()']);
   var comAdic=document.getElementById('com-select-adic').value;
@@ -2808,17 +2816,20 @@ var AM_CAT_CODE={'Acuerdo':'AC','Proyecto de Ley':'PL','Proyecto de Declaración
    de azul casi iguales, acá conviene que se distingan de un vistazo). */
 var AM_TIPO_FG={PL:'#1B5EA2',PD:'#7C3AED',PC:'#0d7a4a',PR:'#C2650C',AC:'#7a5c1a'};
 var AM_TIPO_BG={PL:'#D6E4F0',PD:'#EDE4FB',PC:'#DCF0E8',PR:'#FBEADD',AC:'#F9F0DA'};
-var amCat='Todos',amComision='',amAutor='',amSearch='',amCurrent=null,amStep=0,amFiltered=[];
+var amCat='Todos',amComision='',amAutor='',amBloque='',amSearch='',amCurrent=null,amStep=0,amFiltered=[];
 function amInit(){
-  var comSet={},autorSet={};
+  var comSet={},autorSet={},bloqueSet={};
   (AYUDA_MEMORIA||[]).forEach(function(d){
     (d.comisiones||[]).forEach(function(c){if(c)comSet[c]=1});
     if(d.autor)autorSet[d.autor]=1;
+    (d.firmantesPorBloque||[]).forEach(function(g){if(g.bloque)bloqueSet[g.bloque]=1});
   });
   fillSelectLabeled('am-comision-select',Object.keys(comSet).sort(),comLabel);
   document.getElementById('am-comision-select').addEventListener('change',function(e){amComision=e.target.value;renderAm()});
   fillSelect('am-autor-select',Object.keys(autorSet).sort());
   document.getElementById('am-autor-select').addEventListener('change',function(e){amAutor=e.target.value;renderAm()});
+  fillSelect('am-bloque-select',Object.keys(bloqueSet).sort());
+  document.getElementById('am-bloque-select').addEventListener('change',function(e){amBloque=e.target.value;renderAm()});
 
   var chipsEl=document.getElementById('am-chips');
   AM_CATS.forEach(function(c){
@@ -2869,6 +2880,7 @@ function renderAm(){
     if(amCat!=='Todos'&&d.categoria!==amCat)return false;
     if(amComision&&(d.comisiones||[]).indexOf(amComision)<0)return false;
     if(amAutor&&d.autor!==amAutor)return false;
+    if(amBloque&&!(d.firmantesPorBloque||[]).some(function(g){return g.bloque===amBloque}))return false;
     if(amSearch){
       var hay=(d.descripcion+' '+(d.autor||'')+' '+(d.expedientes||[]).map(function(e){return e.codigo}).join(' ')).toLowerCase();
       if(hay.indexOf(amSearch)<0)return false;
@@ -4010,6 +4022,11 @@ HTML_TEMPLATE = """<!DOCTYPE html>
             </select>
             <span class="select-arrow">&#9660;</span>
           </div>
+
+          <label class="checkbox-filter">
+            <input type="checkbox" id="con-od-check" onchange="setConOD(this.checked)">
+            <span>Con OD</span>
+          </label>
         </div>
 
         <details class="filters-more" id="filters-more">
@@ -4397,6 +4414,12 @@ HTML_TEMPLATE = """<!DOCTYPE html>
         <div class="select-wrapper">
           <select class="filter-select" id="am-autor-select">
             <option value="">Todos los autores</option>
+          </select>
+          <span class="select-arrow">&#9660;</span>
+        </div>
+        <div class="select-wrapper">
+          <select class="filter-select" id="am-bloque-select">
+            <option value="">Todos los bloques</option>
           </select>
           <span class="select-arrow">&#9660;</span>
         </div>

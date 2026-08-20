@@ -1,11 +1,9 @@
 """Migra los xlsx manuales de Ayuda Memoria a data/ayuda_memoria.json.
 
-Fuente primaria: ordenes_dia_2025.xlsx + ordenes_dia_2026.xlsx (export
-"Órdenes del Día" del Senado, uno por período; son los más actualizados y ya
-traen expedientes/giros/fechas estructurados e hipervínculos reales, pero sin
-firmantes). El de 2025 se filtra a sólo OD de Proyecto de Ley (PL) — a
-pedido de Mariano, el resto de las categorías de ese período ya no interesa
-para Ayuda Memoria.
+Fuente primaria: ordenes_dia_2026.xlsx (export "Órdenes del Día" del Senado;
+es el más actualizado y ya trae expedientes/giros/fechas estructurados e
+hipervínculos reales, pero sin firmantes). Las OD de 2025 (ordenes_dia_2025.xlsx)
+se sacaron del todo — a pedido de Mariano, están caducas.
 
 Fuente de enriquecimiento: AYUDA_MEMORIA_2026.xlsx, hojas "OD LEY",
 "ANEXO I" y "OD ACUERDOS" (las únicas 3 que corresponden a esta sección; se
@@ -32,7 +30,6 @@ import openpyxl
 BASE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # (ruta, categoría a la que se restringe ese período — None = todas)
 ORDENES_DIA_FUENTES = [
-    (os.path.join(BASE, "ordenes_dia_2025.xlsx"), "PL"),
     (os.path.join(BASE, "ordenes_dia_2026.xlsx"), None),
 ]
 AYUDA_MEMORIA_PATH = os.path.join(BASE, "AYUDA_MEMORIA_2026.xlsx")
