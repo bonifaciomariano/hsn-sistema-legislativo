@@ -482,6 +482,7 @@ table.cross-table tr:last-child td{border-bottom:none}
 .am-card-top{display:flex;justify-content:space-between;align-items:flex-start;gap:8px;margin-bottom:8px}
 .am-badge{font-size:9.5px;font-weight:700;text-transform:uppercase;letter-spacing:.4px;padding:3px 8px;border-radius:6px;white-space:nowrap}
 .am-exp-num{font-size:11px;color:#9aacbd;font-weight:600;white-space:nowrap}
+.am-od-num{background:#EAF0FA;color:#1B5EA2;padding:3px 9px;border-radius:20px;box-shadow:0 1px 4px rgba(27,94,162,0.35)}
 .am-autor{font-size:11px;font-weight:700;color:#1B5EA2;margin:0 0 4px;text-transform:uppercase;letter-spacing:.02em}
 .am-desc{font-size:13px;color:#4A4A4A;line-height:1.48;margin:0 0 10px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
 .am-card-bottom{display:flex;justify-content:space-between;align-items:center;font-size:11px;color:#9aacbd;gap:8px}
@@ -2784,6 +2785,10 @@ function proyectoDeExp(exp){
 var AM_CATS=['Todos','Acuerdo','Proyecto de Ley','Proyecto de Declaración','Proyecto de Comunicación','Proyecto de Resolución'];
 var AM_CAT_LABELS={'Todos':'Todos','Acuerdo':'Acuerdos','Proyecto de Ley':'Proyectos de Ley','Proyecto de Declaración':'Declaraciones','Proyecto de Comunicación':'Comunicaciones','Proyecto de Resolución':'Resoluciones'};
 var AM_CAT_CODE={'Acuerdo':'AC','Proyecto de Ley':'PL','Proyecto de Declaración':'PD','Proyecto de Comunicación':'PC','Proyecto de Resolución':'PR'};
+/* Paleta propia de Ayuda Memoria (no la de Proyectos: ahí PL/PD son dos tonos
+   de azul casi iguales, acá conviene que se distingan de un vistazo). */
+var AM_TIPO_FG={PL:'#1B5EA2',PD:'#7C3AED',PC:'#0d7a4a',PR:'#C2650C',AC:'#7a5c1a'};
+var AM_TIPO_BG={PL:'#D6E4F0',PD:'#EDE4FB',PC:'#DCF0E8',PR:'#FBEADD',AC:'#F9F0DA'};
 var amCat='Todos',amComision='',amAutor='',amSearch='',amCurrent=null,amStep=0,amFiltered=[];
 function amInit(){
   var comSet={},autorSet={};
@@ -2791,7 +2796,7 @@ function amInit(){
     (d.comisiones||[]).forEach(function(c){if(c)comSet[c]=1});
     if(d.autor)autorSet[d.autor]=1;
   });
-  fillSelect('am-comision-select',Object.keys(comSet).sort());
+  fillSelectLabeled('am-comision-select',Object.keys(comSet).sort(),comLabel);
   document.getElementById('am-comision-select').addEventListener('change',function(e){amComision=e.target.value;renderAm()});
   fillSelect('am-autor-select',Object.keys(autorSet).sort());
   document.getElementById('am-autor-select').addEventListener('change',function(e){amAutor=e.target.value;renderAm()});
@@ -2827,13 +2832,13 @@ function amInit(){
 }
 function amCardBadge(d){
   var code=AM_CAT_CODE[d.categoria]||'';
-  var fg=TIPO_FG[code]||'#666',bg=TIPO_BG[code]||'#eee';
+  var fg=AM_TIPO_FG[code]||'#666',bg=AM_TIPO_BG[code]||'#eee';
   return '<span class="am-badge" style="background:'+bg+';color:'+fg+'">'+esc(d.categoria)+'</span>';
 }
 function buildAmCard(d,idx){
-  var comision=d.comisionCabecera||(d.comisiones&&d.comisiones[0])||'';
+  var comision=comLabel(d.comisionCabecera||(d.comisiones&&d.comisiones[0])||'');
   return '<div class="am-card" onclick="amOpenStory('+idx+')">'
-    +'<div class="am-card-top">'+amCardBadge(d)+'<span class="am-exp-num">OD '+esc(d.numero)+'/'+esc(String(d.periodo).slice(-2))+'</span></div>'
+    +'<div class="am-card-top">'+amCardBadge(d)+'<span class="am-exp-num am-od-num">OD '+esc(d.numero)+'/'+esc(String(d.periodo).slice(-2))+'</span></div>'
     +(d.autor?'<div class="am-autor">'+esc(d.autor)+'</div>':'')
     +'<p class="am-desc">'+esc(d.descripcion)+'</p>'
     +'<div class="am-card-bottom"><span class="am-comision">'+esc(comision)+'</span><span class="am-read-hint">Ver ficha &rarr;</span></div>'
@@ -2877,7 +2882,7 @@ function amBuildSteps(d){
     title:'Datos del expediente',
     kv:[
       ['Expediente(s)', esc((d.expedientes||[]).map(function(e){return e.codigo}).join(' · '))],
-      ['Comisi&oacute;n(es)', esc(d.comisionCabecera||(d.comisiones||[]).join(' · ')||'—')],
+      ['Comisi&oacute;n(es)', esc(comLabel(d.comisionCabecera)||(d.comisiones||[]).map(comLabel).join(' · ')||'—')],
       ['Fecha de dictamen', esc(d.fechaDictamen||'—')],
       ['Orden del D&iacute;a', 'N&ordm; '+esc(d.numero)+' / '+esc(d.periodo)+(d.tipoOD==='ANEXO'?' (anexo)':'')]
     ],
