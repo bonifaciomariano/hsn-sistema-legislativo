@@ -48,5 +48,11 @@
     "fecha": "02-06-2026",
     "tema": "DESIGNANDO REEMPLAZOS EN DIVERSAS COMISIONES",
     "status": "baseline"
+  },
+  "67/26": {
+    "fecha": "05-08-2026",
+    "tema": "DESIGNANDO REEMPLAZOS EN DIVERSAS COMISIONES",
+    "articulos": 5,
+    "designaciones": 12
   }
 }

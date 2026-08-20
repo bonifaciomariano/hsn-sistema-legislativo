@@ -41,6 +41,7 @@ DATA_DIR = os.path.join(REPO_ROOT, "data")
 COMISIONES_JSON = os.path.join(DATA_DIR, "comisiones.json")
 SENADORES_JSON = os.path.join(DATA_DIR, "senadores.json")
 DPP_PROCESADOS_JSON = os.path.join(DATA_DIR, "dpp_procesados.json")
+DPP_CAMBIOS_JSON = os.path.join(DATA_DIR, "dpp_cambios.json")
 
 BASELINE = os.getenv("BASELINE", "") == "1"
 
@@ -288,8 +289,15 @@ def _buscar_comision(comisiones, nombre):
     return None
 
 
-def aplicar_cambios(comisiones, cambios, padron, indice):
-    aplicados, advertencias = 0, []
+def aplicar_cambios(comisiones, cambios, padron, indice, numero_dpp):
+    """Además de aplicar los cambios a `comisiones` (data/comisiones.json,
+    usado como fallback de bloque/cupo), arma `log_entries` en el formato de
+    data/dpp_cambios.json ({dpp, comision, tipo:'replace', senador,
+    reemplaza}) — ese archivo, no comisiones.json, es la fuente que
+    construir_comisiones() en generar_web.py usa para el roster vigente del
+    sitio (ver docstring del módulo). Sin esto, un DPP nuevo actualizaba
+    comisiones.json pero nunca se veía reflejado en la web."""
+    aplicados, advertencias, log_entries = 0, [], []
     for cambio in cambios:
         # Sólo nos interesan cambios en comisiones unicamerales permanentes
         # (data/comisiones.json). Las integraciones de comisiones bicamerales
@@ -326,8 +334,17 @@ def aplicar_cambios(comisiones, cambios, padron, indice):
                     "bloque": bloque_de(apellido_nuevo, padron, indice),
                     "rol": rol_heredado,
                 })
+            entry = {
+                "dpp": numero_dpp,
+                "comision": com["nombre"],
+                "tipo": "replace" if i < len(reemplazados) else "add",
+                "senador": nombre_nuevo,
+            }
+            if i < len(reemplazados):
+                entry["reemplaza"] = nombre_dpp_a_formato(reemplazados[i])[1]
+            log_entries.append(entry)
             aplicados += 1
-    return aplicados, advertencias
+    return aplicados, advertencias, log_entries
 
 
 # ─────────────────────────────── Persistencia ────────────────────────────────
@@ -396,6 +413,8 @@ def main():
         log.info("=" * 60)
         return
 
+    dpp_data = cargar_json(DPP_CAMBIOS_JSON, {"fechas": {}, "cambios": []})
+
     total_aplicados = 0
     for dec in decretos:
         numero = dec["numero"]
@@ -425,13 +444,18 @@ def main():
                 procesados[numero] = {"fecha": dec["fecha"], "tema": dec["tema"],
                                       "status": "sin_texto"}
                 continue
-            num_pdf = extraer_numero(texto) or numero
             cambios = parsear_articulos(texto)
-            aplicados, advertencias = aplicar_cambios(comisiones, cambios, padron, indice)
+            aplicados, advertencias, log_entries = aplicar_cambios(
+                comisiones, cambios, padron, indice, numero)
             for w in advertencias:
                 log.warning(f"    ⚠ {w}")
             log.info(f"    → {len(cambios)} artículo(s), {aplicados} designación(es) aplicadas")
             total_aplicados += aplicados
+            # dpp_cambios.json (no comisiones.json) es lo que generar_web.py usa
+            # para el roster vigente del sitio — ver aplicar_cambios().
+            if log_entries:
+                dpp_data["cambios"].extend(log_entries)
+                dpp_data["fechas"][numero] = dec["fecha"].replace("-", "/")
             procesados[numero] = {
                 "fecha": dec["fecha"],
                 "tema": dec["tema"],
@@ -441,6 +465,8 @@ def main():
         except Exception as exc:
             log.error(f"    ✗ Error procesando DPP {numero}: {exc}")
             continue
+
+    guardar_json(DPP_CAMBIOS_JSON, dpp_data)
 
     guardar_json(COMISIONES_JSON, comisiones)
     guardar_json(DPP_PROCESADOS_JSON, procesados)
