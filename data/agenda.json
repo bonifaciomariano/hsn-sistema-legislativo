@@ -6232,8 +6232,8 @@
         }
       ],
       "tipo": "senadores",
-      "boletin_id": 2339,
-      "boletin_numero": "97/26"
+      "boletin_id": 2341,
+      "boletin_numero": "98/26"
     },
     {
       "seccion": "senadores",
@@ -6417,8 +6417,8 @@
         }
       ],
       "tipo": "senadores",
-      "boletin_id": 2339,
-      "boletin_numero": "97/26"
+      "boletin_id": 2341,
+      "boletin_numero": "98/26"
     },
     {
       "seccion": "senadores",
@@ -6438,8 +6438,180 @@
         }
       ],
       "tipo": "senadores",
-      "boletin_id": 2339,
-      "boletin_numero": "97/26"
+      "boletin_id": 2342,
+      "boletin_numero": "99/26"
+    },
+    {
+      "seccion": "senadores",
+      "dia": "MARTES",
+      "fecha": "25/08",
+      "hora": "16:00",
+      "modalidad": "",
+      "comisiones": [
+        "CIENCIA Y TECNOLOGÍA"
+      ],
+      "salon": "AZUL",
+      "salon_completo": "AZUL",
+      "temario": [
+        {
+          "numero": "",
+          "extracto": "SE RECIBIRÁ A LOS REPRESENTANTES DEL SISTEMA CIENTÍFICO - TECNOLÓGICO PARA QUE EXPONGAN SOBRE SU SITUACIÓN ACTUAL."
+        }
+      ],
+      "tipo": "senadores",
+      "boletin_id": 2342,
+      "boletin_numero": "99/26"
+    },
+    {
+      "seccion": "senadores",
+      "dia": "MIÉRCOLES",
+      "fecha": "26/08",
+      "hora": "15:00",
+      "modalidad": "",
+      "comisiones": [
+        "ASUNTOS CONSTITUCIONALES",
+        "AMBIENTE Y DESARROLLO SUSTENTABLE"
+      ],
+      "salon": "ILLIA",
+      "salon_completo": "ILLIA",
+      "temario": [
+        {
+          "numero": "S-361/26",
+          "extracto": "GADANO: PROYECTO DE LEY QUE APRUEBA EL CONVENIO DE CREACIÓN DEL PARQUE INTERJURISDICCIONAL MARINO MONTE LEÓN, ENTRE EL ESTADO NACIONAL Y LA PROVINCIA DE SANTA CRUZ"
+        }
+      ],
+      "tipo": "senadores",
+      "boletin_id": 2342,
+      "boletin_numero": "99/26"
+    },
+    {
+      "seccion": "senadores",
+      "dia": "MIÉRCOLES",
+      "fecha": "26/08",
+      "hora": "15:30",
+      "modalidad": "",
+      "comisiones": [
+        "ASUNTOS CONSTITUCIONALES"
+      ],
+      "salon": "ILLIA",
+      "salon_completo": "ILLIA",
+      "temario": [
+        {
+          "numero": "OV-175/24",
+          "extracto": "MINISTERIO DE RELACIONES EXTERIORES, COMERCIO INTERNACIONAL Y CULTO: REMITE NOTA ENVIADA POR LA CIUDADANA ARGENTINA CAROLINA PATRICIA KAHR PIRA, POR LA CUAL SOLICITA AUTORIZACIÓN PARA DESEMPEÑARSE EN EL CARGO DE CÓNSUL HONORARIO DE AUSTRIA EN LA CIUDAD DE MENDOZA"
+        },
+        {
+          "numero": "OV-176/24",
+          "extracto": "MINISTERIO DE RELACIONES EXTERIORES, COMERCIO INTERNACIONAL Y CULTO: REMITE NOTA ENVIADA POR EL CIUDADANO ARGENTINO DANIEL AMADO, POR LA CUAL SOLICITA AUTORIZACIÓN PARA DESEMPEÑARSE EN EL CARGO DE CÓNSUL HONORARIO DE PORTUGAL EN LA CIUDAD DE COMODORO RIVADAVIA, PROV. DEL CHUBUT"
+        },
+        {
+          "numero": "OV-234/24",
+          "extracto": "MINISTERIO DE RELACIONES EXTERIORES Y CULTO: REMITE NOTA ENVÍADA POR EL CIUDADANO ARGENTINO RAÚL ENRIQUE BURGOS, QUE SOLICITA AUTORIZACIÓN PARA DESEMPEÑARSE COMO VICECÓNSUL HONORARIO DE ESPAÑA EN LA CIUDAD DE SAN SALVADOR DE JUJUY"
+        },
+        {
+          "numero": "OV-450/24",
+          "extracto": "MINISTERIO DE RELACIONES EXTERIORES Y CULTO: REMITE NOTA ENVIADA POR EL CIUDADANO ARGENTINO JUAN CARLOS SCHROEDER, POR LA CUAL SOLICITA AUTORIZACIÓN PARA DESEMPEÑARSE EN EL CARGO DE CÓNSUL HONORARIO DE ALEMANIA EN NEUQUÉN"
+        },
+        {
+          "numero": "OV-451/24",
+          "extracto": "MINISTERIO DE RELACIONES EXTERIORES Y CULTO: REMITE NOTA ENVIADA POR EL CIUDADANO ARGENTINO JOSE CARLOS ARCAGNI, POR LA CUAL SOLICITA AUTORIZACIÓN PARA DESEMPEÑARSE EN EL CARGO DE CÓNSUL HONORARIO DE LETONIA, EN CABA"
+        },
+        {
+          "numero": "OV-452/24",
+          "extracto": "MINISTERIO DE RELACIONES EXTERIORES Y CULTO: REMITE NOTA ENVIADA POR EL CIUDADANA ARGENTINA FLAVIA LORENA SEAGE, POR LA CUAL SOLICITA AUTORIZACIÓN PARA DESEMPEÑARSE EN EL CARGO DE VICECÓNSUL HONORARIA DE ESPAÑA EN PUERTO IGUAZÚ, MISIONES"
+        },
+        {
+          "numero": "OV-453/24",
+          "extracto": "MINISTERIO DE RELACIONES EXTERIORES Y CULTO: REMITE NOTA ENVIADA POR EL CIUDADANO ARGENTINO OSCAR ENRIQUE MARTÍN, POR LA CUAL SOLICITA AUTORIZACIÓN PARA DESEMPEÑARSE EN EL CARGO DE VICECÓNSUL HONORARIO DE ESPAÑA EN GRAL. PICO, LA PAMPA"
+        },
+        {
+          "numero": "OV-31/26",
+          "extracto": "MINISTERIO DE RELACIONES EXTERIORES Y CULTO: REMITE NOTA ENVIADA POR EL CIUDADANO ARGENTINO JORGE LUIS PÉREZ ALATI, POR LA CUAL SOLICITA AUTORIZACIÓN PARA DESEMPEÑARSE EN EL CARGO DE CÓNSUL HONORARIO DE LA REPÚBLICA DE SINGAPUR EN LA CIUDAD AUTÓNOMA DE BUENOS AIRES"
+        },
+        {
+          "numero": "OV-32/26",
+          "extracto": "MINISTERIO DE RELACIONES EXTERIORES Y CULTO: REMITE NOTA ENVIADA POR LA CIUDADANA ARGENTINA ORIANA LAURA FOSSATI, POR LA CUAL SOLICITA AUTORIZACIÓN PARA DESEMPEÑARSE EN EL CARGO AGENTE CONSULAR ADJUNTO DEL CONSULADO DE LA REPÚBLICA ITALIANA EN MAR DEL PLATA, PROV. DE BS.AS"
+        },
+        {
+          "numero": "OV-74/26",
+          "extracto": "MINISTERIO DE RELACIONES EXTERIORES Y CULTO: REMITE NOTA ENVIADA POR EL CIUDADANO ARGENTINO GERMÁN ENRIQUE BÖTTGER, POR LA CUAL SOLICITA AUTORIZACIÓN PARA DESEMPEÑARSE EN EL CARGO DE CÓNSUL HONORARIO DE LA REP. FEDERAL DE ALEMANIA EN LA CIUDAD DE SAN MIGUEL DE TUCUMÁN, CON CIRCUNSCRIPCIÓN EN LAS PROVINCIAS DE CATAMARCA, SANTIAGO DEL ESTERO Y TUCUMÁN"
+        },
+        {
+          "numero": "OV-300/26",
+          "extracto": "MINISTERIO DE RELACIONES EXTERIORES, COMERCIO INTERNACIONAL Y CULTO: REMITE NOTA ENVIADA POR EL CIUDADANO ARGENTINO RODOLFO ERNESTO CAFFARO KRAMER, POR LA CUAL SOLICITA AUTORIZACIÓN PARA DESEMPEÑARSE EN EL CARGO DE CÓNSUL HONORARIO DEL REINO DE CAMBOYA, EN LA CIUDAD AUTÓNOMA DE BUENOS AIRES, CON CIRCUNSCRIPCIÓN CONSULAR EN TODO EL TERRITORIO NACIONAL"
+        },
+        {
+          "numero": "OV-331/26",
+          "extracto": "MINISTERIO DE RELACIONES EXTERIORES, COMERCIO INTERNACIONAL Y CULTO: REMITE NOTA ENVIADA POR EL CIUDADANO ARGENTINO JAVIER JOSE CALVIÑO, POR LA CUAL SOLICITA AUTORIZACIÓN PARA DESEMPEÑARSE EN EL CARGO DE CÓNSUL HONORARIO DE LA REPÚBLICA DEMOCRÁTICA DE TIMOR - LESTE, EN LA CIUDAD DE SAN ISIDRO, PROV. DE BS. AS., CON CIRCUNSCRIPCIÓN CONSULAR EN TODO EL TERRITORIO NACIONAL"
+        },
+        {
+          "numero": "OV-357/26",
+          "extracto": "MINISTERIO DE RELACIONES EXTERIORES Y CULTO: REMITE NOTA ENVIADA POR EL CIUDADANO ARGENTINO, JUAN LUIS GONZÁLEZ LANDA, POR LA CUAL SOLICITA AUTORIZACIÓN PARA DESEMPEÑARSE EN EL CARGO VICECÓNSUL HONORARIO DE LOS ESTADOS UNIDOS MEXICANOS, EN LA CIUDAD DE MENDOZA, PROVINCIA HOMÓNIMA, CON JURISDICCIÓN EN LAS PROVINCIAS DE SAN JUAN Y SAN LUIS"
+        }
+      ],
+      "tipo": "senadores",
+      "boletin_id": 2342,
+      "boletin_numero": "99/26"
+    },
+    {
+      "seccion": "senadores",
+      "dia": "MIÉRCOLES",
+      "fecha": "26/08",
+      "hora": "10:00",
+      "modalidad": "",
+      "comisiones": [
+        "LEGISLACIÓN GENERAL",
+        "AMBIENTE Y DESARROLLO SUSTENTABLE",
+        "PRESUPUESTO Y HACIENDA"
+      ],
+      "salon": "AZUL",
+      "salon_completo": "AZUL",
+      "temario": [
+        {
+          "numero": "",
+          "extracto": "(CONTINUACIÓN DEL CUARTO INTERMEDIO) PROYECTOS DE LEY"
+        },
+        {
+          "numero": "S-808/26",
+          "extracto": "ROYON: PROYECTO DE LEY SOBRE MARCO REGULATORIO DEL MERCADO VOLUNTARIO DE CARBONO"
+        },
+        {
+          "numero": "S-865/26",
+          "extracto": "ROJAS DECUT Y ARCE: PROYECTO DE LEY QUE ESTABLECE LOS PRESUPUESTOS MÍNIMOS DE PROTECCIÓN AMBIENTAL APLICABLE AL DESARROLLO DE LOS MERCADOS DE CARBONO EN LA REP. ARGENTINA Y SU INTEGRACIÓN AL MERCADO DE CAPITALES NACIONAL"
+        },
+        {
+          "numero": "S-718/26",
+          "extracto": "CAPITANICH: PROYECTO DE LEY QUE ESTABLECE UN MARCO REGULATORIO PARA LA EMISIÓN Y DESARROLLO DE ACTIVOS FINANCIEROS AMBIENTALES (AFA)"
+        }
+      ],
+      "tipo": "senadores",
+      "boletin_id": 2342,
+      "boletin_numero": "99/26"
+    },
+    {
+      "seccion": "senadores",
+      "dia": "MIÉRCOLES",
+      "fecha": "26/08",
+      "hora": "13:00",
+      "modalidad": "",
+      "comisiones": [
+        "LEGISLACIÓN GENERAL"
+      ],
+      "salon": "AZUL",
+      "salon_completo": "AZUL",
+      "temario": [
+        {
+          "numero": "",
+          "extracto": "(CONTINUACIÓN DEL CUARTO INTERMEDIO) PROYECTO DE LEY"
+        },
+        {
+          "numero": "PE-193/26",
+          "extracto": "MENSAJE N° 187/26 Y PROYECTO DE LEY GENERAL DE SOCIEDADES"
+        }
+      ],
+      "tipo": "senadores",
+      "boletin_id": 2342,
+      "boletin_numero": "99/26"
     }
   ]
 }
