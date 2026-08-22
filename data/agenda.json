@@ -6438,8 +6438,8 @@
         }
       ],
       "tipo": "senadores",
-      "boletin_id": 2342,
-      "boletin_numero": "99/26"
+      "boletin_id": 2343,
+      "boletin_numero": "100/26"
     },
     {
       "seccion": "senadores",
@@ -6459,8 +6459,8 @@
         }
       ],
       "tipo": "senadores",
-      "boletin_id": 2342,
-      "boletin_numero": "99/26"
+      "boletin_id": 2343,
+      "boletin_numero": "100/26"
     },
     {
       "seccion": "senadores",
@@ -6481,8 +6481,8 @@
         }
       ],
       "tipo": "senadores",
-      "boletin_id": 2342,
-      "boletin_numero": "99/26"
+      "boletin_id": 2343,
+      "boletin_numero": "100/26"
     },
     {
       "seccion": "senadores",
@@ -6550,8 +6550,8 @@
         }
       ],
       "tipo": "senadores",
-      "boletin_id": 2342,
-      "boletin_numero": "99/26"
+      "boletin_id": 2343,
+      "boletin_numero": "100/26"
     },
     {
       "seccion": "senadores",
@@ -6569,7 +6569,7 @@
       "temario": [
         {
           "numero": "",
-          "extracto": "(CONTINUACIÓN DEL CUARTO INTERMEDIO) PROYECTOS DE LEY"
+          "extracto": "[CONTINUACIÓN DEL CUARTO INTERMEDIO] PROYECTOS DE LEY"
         },
         {
           "numero": "S-808/26",
@@ -6585,8 +6585,8 @@
         }
       ],
       "tipo": "senadores",
-      "boletin_id": 2342,
-      "boletin_numero": "99/26"
+      "boletin_id": 2343,
+      "boletin_numero": "100/26"
     },
     {
       "seccion": "senadores",
@@ -6602,7 +6602,7 @@
       "temario": [
         {
           "numero": "",
-          "extracto": "(CONTINUACIÓN DEL CUARTO INTERMEDIO) PROYECTO DE LEY"
+          "extracto": "[CONTINUACIÓN DEL CUARTO INTERMEDIO] PROYECTO DE LEY"
         },
         {
           "numero": "PE-193/26",
@@ -6610,8 +6610,122 @@
         }
       ],
       "tipo": "senadores",
-      "boletin_id": 2342,
-      "boletin_numero": "99/26"
+      "boletin_id": 2343,
+      "boletin_numero": "100/26"
+    },
+    {
+      "seccion": "senadores",
+      "dia": "MARTES",
+      "fecha": "25/08",
+      "hora": "15:00",
+      "modalidad": "",
+      "comisiones": [
+        "BICAMERAL DE FISCALIZACIÓN DE LOS ORGANISMOS Y ACTIVIDADES",
+        "DE INTELIGENCIA"
+      ],
+      "salon": "FRONDIZI-MORENO",
+      "salon_completo": "FRONDIZI-MORENO",
+      "temario": [
+        {
+          "numero": "",
+          "extracto": "SE RECIBIRÁ AL TITULAR DE LA SECRETARÍA DE INTELIGENCIA DE ESTADO, CDOR. CRISTIAN AUGUADRA, JUNTO A FUNCIONARIOS DEL ORGANISMO. SE HACE SABER QUE, EN VIRTUD DEL ARTÍCULO 10 DEL REGLAMENTO DE LA COMISIÓN, LAS REUNIONES SON DE CARÁCTER SECRETO Y SE LIMITAN A MIEMBROS, PERSONAL AUTORIZADO Y, EXCEPCIONALMENTE, INVITADOS BAJO CONFIDENCIALIDAD."
+        }
+      ],
+      "tipo": "bicameral",
+      "boletin_id": 2343,
+      "boletin_numero": "100/26"
+    },
+    {
+      "seccion": "senadores",
+      "dia": "MIÉRCOLES",
+      "fecha": "26/08",
+      "hora": "16:00",
+      "modalidad": "",
+      "comisiones": [
+        "PRESUPUESTO Y HACIENDA",
+        "LEGISLACIÓN GENERAL",
+        "ECONOMÍAS REGIONALES, ECONOMÍA SOCIAL, MICRO, PEQUEÑA Y MEDIANA EMPRESA"
+      ],
+      "salon": "AZUL",
+      "salon_completo": "AZUL",
+      "temario": [
+        {
+          "numero": "S-702/26",
+          "extracto": "VISCHI Y OTROS: PROYECTO DE LEY QUE CREA EL RÉGIMEN DE INCENTIVO PARA INVERSIONES RELEVANTES (RIIR)"
+        }
+      ],
+      "tipo": "senadores",
+      "boletin_id": 2343,
+      "boletin_numero": "100/26"
+    },
+    {
+      "seccion": "senadores",
+      "dia": "MIÉRCOLES",
+      "fecha": "26/08",
+      "hora": "17:00",
+      "modalidad": "",
+      "comisiones": [
+        "PRESUPUESTO Y HACIENDA",
+        "ECONOMÍA NACIONAL E INVERSIÓN",
+        "LEGISLACIÓN GENERAL"
+      ],
+      "salon": "AZUL",
+      "salon_completo": "AZUL",
+      "temario": [
+        {
+          "numero": "",
+          "extracto": "[CONTINUACIÓN DEL CUARTO INTERMEDIO] PROYECTO DE LEY"
+        },
+        {
+          "numero": "CD-6/26",
+          "extracto": "PROYECTO DE LEY EN REVISIÓN SOBRE RÉGIMEN DE INCENTIVO PARA GRANDES INVERSIONES EN NUEVAS INDUSTRIAS (SÚPER RIGI)"
+        }
+      ],
+      "tipo": "senadores",
+      "boletin_id": 2343,
+      "boletin_numero": "100/26"
+    },
+    {
+      "seccion": "senadores",
+      "dia": "MIÉRCOLES",
+      "fecha": "26/08",
+      "hora": "17:00",
+      "modalidad": "",
+      "comisiones": [
+        "POBLACIÓN Y DESARROLLO HUMANO",
+        "EDUCACIÓN Y CULTURA"
+      ],
+      "salon": "ILLIA",
+      "salon_completo": "ILLIA",
+      "temario": [
+        {
+          "numero": "S-319/25",
+          "extracto": "HUALA: REPRODUCE PROYECTO DE LEY QUE INSTITUYE EL 2 DE MAYO DE CADA AÑO COMO \"DÍA NACIONAL PARA LA PREVENCIÓN DEL BULLYING Y OTRAS FORMAS DE VIOLENCIA Y ACOSO ESCOLAR\". (REF. S. 1243/23)"
+        },
+        {
+          "numero": "S-697/25",
+          "extracto": "AVILA: PROYECTO DE LEY QUE INCORPORA EL ART. 4 BIS A SU SIMILAR 25.415- PROGRAMA DE DETECCIÓN DE LA HIPOACUSIA-, RESPECTO DE INCORPORAR DIVERSAS ACCIONES EN EL ÁMBITO EDUCATIVO"
+        },
+        {
+          "numero": "S-517/25",
+          "extracto": "DE ANGELI: PROYECTO DE LEY QUE INSTITUYE EL DÍA 15 DE ABRIL DE CADA AÑO COMO EL \"DÍA NACIONAL DEL INMIGRANTE ALEMÁN DEL VOLGA\""
+        },
+        {
+          "numero": "S-404/26",
+          "extracto": "GADANO: PROYECTO DE LEY QUE INSTITUYE EL DÍA 27 DE NOVIEMBRE DE CADA AÑO COMO \"DÍA DEL BASTÓN VERDE\""
+        },
+        {
+          "numero": "S-714/26",
+          "extracto": "LÓPEZ: PROYECTO DE LEY QUE INSTITUYE EL 3 DE AGOSTO DE CADA AÑO COMO EL \"DÍA NACIONAL DE LA RESILIENCIA\""
+        },
+        {
+          "numero": "S-997/26",
+          "extracto": "AVILA: PROYECTO DE LEY QUE ESTABLECE EL TERCER JUEVES DE MARZO DE CADA AÑO COMO EL \"DÍA DE REFLEXIÓN CONTRA LA VIOLENCIA JUVENIL”"
+        }
+      ],
+      "tipo": "senadores",
+      "boletin_id": 2343,
+      "boletin_numero": "100/26"
     }
   ]
 }
