@@ -66,6 +66,10 @@ PAUSA_ENTRE_REQUESTS = 1.0
 # Expediente: "S-289/26", "PE-98/26", "CD-20/24" (origen puede traer puntos: "P.E-133/26")
 RE_EXP = re.compile(r"\b([A-ZÑ.]{1,5}-\d+/\d{2})\b")
 
+# En MOCIONES DE PREFERENCIA cada fila arranca con "Apellido: <expediente(s)...>"
+# -> el apellido de quien solicitó la preferencia.
+RE_SOLICITANTE = re.compile(r"^\s*([A-ZÁÉÍÓÚÑa-záéíóúñ][^:]{1,40}):")
+
 # Encabezados de secciones a ignorar por completo (título de sección, no de columnas)
 HEADERS_IGNORAR = (
     "CUESTIONES DE PRIVILEGIO",
@@ -171,6 +175,7 @@ def detectar_header(celdas):
 
 
 def procesar_fila(celdas, seccion, nro_boletin, fecha_sesion):
+    solicitante = None
     if seccion == "preferencia":
         if len(celdas) < 3:
             return []
@@ -178,6 +183,9 @@ def procesar_fila(celdas, seccion, nro_boletin, fecha_sesion):
         if resultado.strip().upper() != "APROBADA":
             return []
         od_nro = None
+        m = RE_SOLICITANTE.match(texto)
+        if m:
+            solicitante = norm_celda(m.group(1))
     else:
         if len(celdas) < 4:
             return []
@@ -186,7 +194,7 @@ def procesar_fila(celdas, seccion, nro_boletin, fecha_sesion):
 
     items = []
     for exp in extraer_expedientes(texto):
-        items.append({
+        item = {
             "expediente": exp,
             "od_nro": od_nro,
             "resultado": resultado,
@@ -194,7 +202,10 @@ def procesar_fila(celdas, seccion, nro_boletin, fecha_sesion):
             "seccion": seccion,
             "fecha_sesion": fecha_sesion,
             "nro_boletin": nro_boletin,
-        })
+        }
+        if solicitante:
+            item["solicitante"] = solicitante
+        items.append(item)
     return items
 
 

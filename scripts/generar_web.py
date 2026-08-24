@@ -432,7 +432,8 @@ table.cross-table tr:last-child td{border-bottom:none}
 .sanc-fecha{font-size:11px;color:#9aacbd}
 .sanc-obs{font-size:12px;color:#4A4A4A;margin-top:2px}
 .sanc-obs.ley{color:#1B5EA2;font-weight:700}
-.sanc-card-bottom{display:flex;justify-content:flex-end;align-items:center;margin-top:auto;padding-top:8px;border-top:1px solid #EEF3F8}
+.sanc-card-bottom{display:flex;justify-content:space-between;align-items:center;gap:8px;margin-top:auto;padding-top:8px;border-top:1px solid #EEF3F8}
+.sanc-solicitante{font-size:11px;font-weight:600;color:#1B5EA2}
 .agenda-badges{display:flex;align-items:center;gap:6px;flex-wrap:wrap}
 .plenaria-badge{display:inline-block;font-size:9.5px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;padding:2px 8px;border-radius:10px;background:#0d3f73;color:#fff}
 .suspendida-badge{display:inline-block;font-size:9.5px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;padding:2px 8px;border-radius:10px;background:#FEE2E2;color:#991B1B}
@@ -1681,7 +1682,8 @@ function cardFooterHtml(p){
     html+='<a class="od-badge" href="'+escAttr(p.od.url_pdf)+'" target="_blank" onclick="event.stopPropagation()">OD N&ordm; '+esc(p.od.nro_od+'/'+String(p.od.anio_od).slice(-2))+'</a>';
   }
   if(p.badge_preferencia){
-    html+='<span class="pref-badge">Preferencia solicitada &middot; sesi&oacute;n del '+esc(p.badge_preferencia.fecha)+'</span>';
+    var solTxt=p.badge_preferencia.solicitante?(' por '+esc(p.badge_preferencia.solicitante)):'';
+    html+='<span class="pref-badge">Preferencia solicitada'+solTxt+' &middot; sesi&oacute;n del '+esc(p.badge_preferencia.fecha)+'</span>';
   }
   if(p.badge_sancionado){
     var txtSanc=p.badge_sancionado.ley?('Sancionado &middot; '+esc(p.badge_sancionado.ley)):('Sancionado &middot; sesi&oacute;n del '+esc(p.badge_sancionado.fecha));
@@ -3092,7 +3094,8 @@ function buildSancCard(item){
   var odHtml=item.od_nro?'<span class="od-tipo-tag">OD N&ordm; '+esc(item.od_nro)+'</span>':'';
   var leyHtml=(p&&p.sancionado&&p.ley_numero)?'<span class="sanc-ley-badge">Ley N&deg; '+esc(p.ley_numero)+'</span>':'';
   var extractoHtml=p?'<div class="od-exp-extracto">'+esc(p.extracto)+'</div>':'';
-  return '<div class="od-card"><div class="od-card-top">'+linkHtml+seccionHtml+odHtml+leyHtml+'</div>'+extractoHtml+sancObsHtml(item)+'<div class="sanc-card-bottom"><span class="sanc-fecha">'+esc(fechaSesionDisplay(item.fecha_sesion))+'</span></div></div>';
+  var solicitanteHtml=item.solicitante?'<span class="sanc-solicitante">Solicitada por '+esc(item.solicitante)+'</span>':'<span></span>';
+  return '<div class="od-card"><div class="od-card-top">'+linkHtml+seccionHtml+odHtml+leyHtml+'</div>'+extractoHtml+sancObsHtml(item)+'<div class="sanc-card-bottom">'+solicitanteHtml+'<span class="sanc-fecha">'+esc(fechaSesionDisplay(item.fecha_sesion))+'</span></div></div>';
 }
 function renderSanciones(){
   var landing=SANC_VISTA==='landing';
@@ -4905,7 +4908,7 @@ def cruzar_proyectos_sanciones(proyectos, sanciones_data):
             fecha = _fecha_iso_a_dmy(it.get("fecha_sesion"))
 
             if seccion == "preferencia" and "badge_preferencia" not in p:
-                p["badge_preferencia"] = {"fecha": fecha}
+                p["badge_preferencia"] = {"fecha": fecha, "solicitante": it.get("solicitante")}
 
             elif seccion in ("ley", "acuerdo", "decreto_res_com_dec") and resultado in ("APROBADO", "APROBADA"):
                 if "badge_sancionado" not in p:
