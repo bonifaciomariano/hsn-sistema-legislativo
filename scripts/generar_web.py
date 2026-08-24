@@ -2052,10 +2052,11 @@ function initProyectosComision(c){
   comProyCategoria=null;
   comProyTratadosFiltro='todos';
   var proyectos=proyectosDeComision(c);
-  var soloAcuerdos=proyectos.length&&proyectos.every(function(p){return p.tipo==='AC'});
-  var cats=soloAcuerdos
+  var esComisionAcuerdos=normCom(c.nombre)==='DE ACUERDOS';
+  var hayAcuerdos=proyectos.some(function(p){return p.tipo==='AC'});
+  var cats=esComisionAcuerdos
     ? [{key:'AC',label:'Acuerdos',tipos:['AC']}]
-    : COM_PROY_CATS;
+    : COM_PROY_CATS.concat(hayAcuerdos?[{key:'AC',label:'Acuerdos',tipos:['AC']}]:[]);
   var tratadosCount=proyectosTratadosEnComision(c.nombre).length;
   var html=cats.map(function(cat){
     var n=proyectos.filter(function(p){return cat.tipos.indexOf(p.tipo)>=0}).length;
