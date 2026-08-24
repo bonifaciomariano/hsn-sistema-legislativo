@@ -493,6 +493,7 @@ table.cross-table tr:last-child td{border-bottom:none}
 .am-card-bottom{display:flex;justify-content:space-between;align-items:center;font-size:11px;color:#9aacbd;gap:8px}
 .am-comision{font-weight:600;color:#1B5EA2;max-width:70%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 .am-read-hint{color:#1B5EA2;font-weight:600;white-space:nowrap}
+.am-card-footer{margin-top:8px;padding-top:8px;border-top:1px solid #EEF3F8;display:flex;flex-wrap:wrap;gap:6px}
 
 .am-scrim{position:fixed;inset:0;background:rgba(20,30,45,0.55);display:none;align-items:center;justify-content:center;z-index:200;padding:20px}
 .am-scrim.open{display:flex}
@@ -1671,7 +1672,7 @@ function getFiltered(){
   });
 }
 function expNroOf(p){return p.origen+'-'+p.nro+'/'+String(p.anio).slice(-2);}
-function cardFooterHtml(p){
+function cardBadgesHtml(p){
   var html='';
   if(p.reuniones&&p.reuniones.length){
     var r=p.reuniones[0];
@@ -1698,6 +1699,10 @@ function cardFooterHtml(p){
   if(p.tipo==='AC'&&p.dado_cuenta===false){
     html+='<span class="pendientecuenta-badge">Pendiente de dar cuenta</span>';
   }
+  return html;
+}
+function cardFooterHtml(p){
+  var html=cardBadgesHtml(p);
   return html?'<div class="card-footer">'+html+'</div>':'';
 }
 function buildCard(p){
@@ -2127,6 +2132,7 @@ function buildComProyCard(p,idx,comNombre){
     var est=estadoTratado(p,comNombre);
     if(est)tratadoTag='<span class="com-tratado-tag '+(est.tratado?'ok':'pend')+'">'+(est.tratado?'Ya tratado':'Pendiente')+'</span>';
   }
+  var badgesHtml=cardBadgesHtml(p);
   return '<div class="am-card" onclick="irAExpedienteComision('+idx+')">'
     +'<div class="am-card-top"><span class="am-badge" style="background:'+bg+';color:'+fg+'">'+esc(p.tipo)+'</span><span class="am-exp-num">'+esc(expNro)+'</span></div>'
     +(autor?'<div class="am-autor">'+esc(autor)+'</div>':'')
@@ -2134,7 +2140,9 @@ function buildComProyCard(p,idx,comNombre){
     +'<div class="am-card-bottom">'
     +(bloque?'<span class="btag" style="background:'+col.bg+';color:'+col.badge+'">'+esc(bloque)+'</span>':'<span></span>')
     +tratadoTag
-    +'</div></div>';
+    +'</div>'
+    +(badgesHtml?'<div class="am-card-footer">'+badgesHtml+'</div>':'')
+    +'</div>';
 }
 function irAExpedienteComision(idx){
   var p=comProyListaActual[idx];
