@@ -19,7 +19,7 @@ import json
 import os
 import re
 import unicodedata
-from datetime import datetime
+from datetime import datetime, timezone, timedelta
 
 REPO_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DATA_DIR = os.path.join(REPO_ROOT, "data")
@@ -244,8 +244,9 @@ body{font-family:'Poppins',Calibri,sans-serif;background:#F5F7FA;color:#4A4A4A;f
 .senator-chips{display:flex;flex-wrap:wrap;gap:4px}
 .senator-count{font-size:11px;color:#9CA3AF;margin-top:6px}
 .cross-vacantes td,.cross-vacantes .blq-name{border-top:2px solid #D6E4F0;font-weight:700}
-.com-card{background:#fff;border:1px solid #D6E4F0;border-radius:10px;padding:14px 16px;cursor:pointer;transition:all .15s;box-shadow:0 1px 3px rgba(0,0,0,0.05)}
-.com-card:hover{border-color:#1B5EA2;box-shadow:0 2px 8px rgba(27,94,162,0.15);transform:translateY(-1px)}
+.com-card{background:#fff;border:1px solid #D6E4F0;border-radius:10px;padding:14px 16px;cursor:pointer;transition:all .15s;box-shadow:0 1px 3px rgba(0,0,0,0.05);display:flex;align-items:center;min-height:100%}
+.com-card:nth-child(even){background:#F5F9FC}
+.com-card:hover{transform:translateY(-2px);box-shadow:0 8px 20px -12px rgba(27,94,162,0.35);border-color:#1B5EA2}
 .com-card-nombre{font-size:14px;font-weight:700;color:#1B5EA2;line-height:1.3}
 .btn-volver{padding:7px 14px;border-radius:8px;border:1.5px solid #fff;background:transparent;color:#fff;font-family:inherit;font-size:11px;font-weight:600;cursor:pointer;transition:all .15s}
 .btn-volver:hover{background:#fff;color:#1B5EA2}
@@ -417,18 +418,21 @@ table.cross-table tr:last-child td{border-bottom:none}
 .diputados-badge{display:inline-block;font-size:11px;font-weight:600;padding:4px 10px;border-radius:6px;background:#E3F2FD;color:#0D47A1;border:1px solid #1976D2}
 .dadocuenta-badge{display:inline-block;font-size:11px;font-weight:600;padding:4px 10px;border-radius:6px;background:#E8F5E9;color:#1B5E20;border:1px solid #4CAF50}
 .pendientecuenta-badge{display:inline-block;font-size:11px;font-weight:600;padding:4px 10px;border-radius:6px;background:#FFF8E1;color:#F57F17;border:1px solid #F9A825}
-.od-card{background:#fff;border:1px solid #D6E4F0;border-radius:10px;padding:12px 16px;margin-bottom:10px;box-shadow:0 1px 3px rgba(0,0,0,0.05)}
-.od-card-top{display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap;margin-bottom:6px}
+.sanc-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:12px;align-items:start}
+.od-card{background:#fff;border:1px solid #D6E4F0;border-radius:10px;padding:14px 16px 12px;box-shadow:0 1px 3px rgba(0,0,0,0.05);display:flex;flex-direction:column;transition:all .15s}
+.od-card:hover{transform:translateY(-2px);box-shadow:0 8px 20px -12px rgba(27,94,162,0.35);border-color:#1B5EA2}
+.od-card-top{display:flex;align-items:center;gap:6px;flex-wrap:wrap;margin-bottom:8px}
 .od-nro{font-size:14px;font-weight:700;color:#1B5EA2;text-decoration:none}
 .od-nro:hover{text-decoration:underline}
 .od-tipo-tag{font-size:9.5px;font-weight:700;text-transform:uppercase;letter-spacing:.4px;color:#9aacbd;border:1px solid #D6E4F0;border-radius:10px;padding:1px 7px}
 .od-exp-row{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:2px}
 .od-exp-link{font-size:12px;color:#2E75B6;text-decoration:none;font-weight:600}
 .od-exp-link:hover{text-decoration:underline}
-.od-exp-extracto{font-size:12.5px;color:#4A4A4A;line-height:1.4;margin:2px 0 10px;padding-left:8px;border-left:2px solid #D6E4F0}
-.sanc-fecha{font-size:11px;color:#9aacbd;margin-left:auto}
+.od-exp-extracto{font-size:12.5px;color:#4A4A4A;line-height:1.44;margin:0 0 10px;flex:1;display:-webkit-box;-webkit-line-clamp:4;-webkit-box-orient:vertical;overflow:hidden}
+.sanc-fecha{font-size:11px;color:#9aacbd}
 .sanc-obs{font-size:12px;color:#4A4A4A;margin-top:2px}
 .sanc-obs.ley{color:#1B5EA2;font-weight:700}
+.sanc-card-bottom{display:flex;justify-content:flex-end;align-items:center;margin-top:auto;padding-top:8px;border-top:1px solid #EEF3F8}
 .agenda-badges{display:flex;align-items:center;gap:6px;flex-wrap:wrap}
 .plenaria-badge{display:inline-block;font-size:9.5px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;padding:2px 8px;border-radius:10px;background:#0d3f73;color:#fff}
 .suspendida-badge{display:inline-block;font-size:9.5px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;padding:2px 8px;border-radius:10px;background:#FEE2E2;color:#991B1B}
@@ -3088,7 +3092,7 @@ function buildSancCard(item){
   var odHtml=item.od_nro?'<span class="od-tipo-tag">OD N&ordm; '+esc(item.od_nro)+'</span>':'';
   var leyHtml=(p&&p.sancionado&&p.ley_numero)?'<span class="sanc-ley-badge">Ley N&deg; '+esc(p.ley_numero)+'</span>':'';
   var extractoHtml=p?'<div class="od-exp-extracto">'+esc(p.extracto)+'</div>':'';
-  return '<div class="od-card"><div class="od-card-top">'+linkHtml+seccionHtml+odHtml+leyHtml+'<span class="sanc-fecha">'+esc(fechaSesionDisplay(item.fecha_sesion))+'</span></div>'+extractoHtml+sancObsHtml(item)+'</div>';
+  return '<div class="od-card"><div class="od-card-top">'+linkHtml+seccionHtml+odHtml+leyHtml+'</div>'+extractoHtml+sancObsHtml(item)+'<div class="sanc-card-bottom"><span class="sanc-fecha">'+esc(fechaSesionDisplay(item.fecha_sesion))+'</span></div></div>';
 }
 function renderSanciones(){
   var landing=SANC_VISTA==='landing';
@@ -4523,7 +4527,7 @@ HTML_TEMPLATE = """<!DOCTYPE html>
         <div class="section-body">
           <div class="filter-row" id="sanc-chips"></div>
           <input class="search-box" type="text" id="sanc-search" placeholder="Buscar por n&uacute;mero de expediente o extracto&hellip;" oninput="renderSanciones()" style="max-width:360px">
-          <div id="sanc-list"></div>
+          <div id="sanc-list" class="sanc-grid"></div>
         </div>
       </div>
     </div>
@@ -4536,7 +4540,7 @@ HTML_TEMPLATE = """<!DOCTYPE html>
         </div>
         <div class="section-body">
           <div class="filter-row" id="sanc-pref-chips"></div>
-          <div id="sanc-pref-list"></div>
+          <div id="sanc-pref-list" class="sanc-grid"></div>
         </div>
       </div>
     </div>
@@ -5158,7 +5162,7 @@ def main():
     sanciones_js = json.dumps(sanciones_procesada, ensure_ascii=False)
     bloque_totales_js = json.dumps(construir_bloque_totales(), ensure_ascii=False)
     fonts = _cargar("fonts_poppins.json", {})
-    fecha = datetime.now().strftime("%d/%m/%Y %H:%M")
+    fecha = datetime.now(timezone.utc).astimezone(timezone(timedelta(hours=-3))).strftime("%d/%m/%Y %H:%M")
 
     html = HTML_TEMPLATE.format(
         css=CSS,
