@@ -1015,6 +1015,27 @@ body.print-view-active > *:not(#main-votacion){display:none !important}
     font-size: 0.85rem;
     margin-bottom: 1.25rem;
   }
+#main-votacion .pv-chamber-wrap {
+    margin-bottom: 1.5rem;
+    break-inside: avoid;
+  }
+#main-votacion .pv-chamber {
+    display: block;
+    width: 100%;
+    max-width: 640px;
+    margin: 0 auto;
+  }
+#main-votacion .pv-legend {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0 1.25rem;
+    font-size: 0.78rem;
+    color: #444;
+    margin-top: 0.4rem;
+  }
+#main-votacion .pv-legend-item { display: inline-flex; align-items: center; gap: 0.35rem; }
+#main-votacion .pv-legend-dot { width: 10px; height: 10px; border-radius: 50%; display: inline-block; }
 #main-votacion .print-view table {
     width: 100%;
     border-collapse: collapse;
@@ -3736,6 +3757,12 @@ function irASanciones(expediente){
         "</tr>";
     }).join("");
 
+    var legendHtml = '<div class="pv-legend">' +
+      VOTE_ORDER.filter(function (v) { return v !== "pending"; }).map(function (v) {
+        return '<span class="pv-legend-item"><span class="pv-legend-dot" style="background:' + VOTE_FILL[v] + '"></span>' + VOTE_LABEL[v] + "</span>";
+      }).join("") +
+      "</div>";
+
     printView.innerHTML =
       '<div class="pv-toolbar no-print">' +
         '<button id="printNowBtn" class="btn-brass">Imprimir / Guardar como PDF</button>' +
@@ -3752,10 +3779,25 @@ function irASanciones(expediente){
         "<span>Ausentes: " + data.absent + "</span>" +
         "<span>Pendientes: " + data.pending + "</span>" +
       "</div>" +
+      '<div class="pv-chamber-wrap">' +
+        '<div id="pvChamberSlot"></div>' +
+        legendHtml +
+      "</div>" +
       "<table>" +
         "<thead><tr><th>Banca</th><th>Senador/a</th><th>Bloque</th><th>Voto</th></tr></thead>" +
         "<tbody>" + rows + "</tbody>" +
       "</table>";
+
+    var chamberSnapshot = chamber.cloneNode(true);
+    chamberSnapshot.removeAttribute("id");
+    chamberSnapshot.setAttribute("class", "pv-chamber");
+    Array.prototype.forEach.call(chamberSnapshot.querySelectorAll(".seat"), function (g) {
+      g.style.opacity = "1";
+      g.removeAttribute("class"); // sin :hover/click en el PDF
+      var highlight = g.querySelector(".seat-highlight");
+      if (highlight) highlight.setAttribute("stroke", "none");
+    });
+    document.getElementById("pvChamberSlot").appendChild(chamberSnapshot);
 
     document.getElementById("printNowBtn").addEventListener("click", function () {
       window.print();
