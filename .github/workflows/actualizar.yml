@@ -1,12 +1,22 @@
 name: Actualizar datos legislativos
 
 # Dos franjas separadas para no mezclar el scraper pesado (proyectos, ~5-6
-# min y muchas requests) con los livianos de la otra franja: si un scraper
-# agota el rate-limit del sitio para la IP del runner, los que corren
-# después en el MISMO job fallan en cascada (visto en la práctica: DPP,
-# agenda y OD volvían con 0 resultados corriendo justo después de
-# proyectos). Separarlos por horario, además de reordenar liviano-antes-que-
-# pesado dentro de cada franja, reduce ese riesgo.
+# min y muchas requests) con los livianos: si un scraper agota el
+# rate-limit del sitio para la IP del runner, los que corren después en el
+# MISMO job fallan en cascada (visto en la práctica: DPP, agenda y OD
+# volvían con 0 resultados corriendo justo después de proyectos). Separarlos
+# por horario, además de reordenar liviano-antes-que-pesado dentro de cada
+# franja, reduce ese riesgo.
+#
+# Corre TODOS los días (sin excepciones de día de semana) para no tener que
+# llevar la cuenta de qué noches/mañanas quedan cubiertas por el cron -- los
+# scrapers son incrementales, así que una corrida que no encuentra nada
+# nuevo es un no-op inofensivo.
+#
+# agenda corre en las DOS franjas a propósito: si a la noche el boletín
+# todavía no fue publicado, la corrida de la mañana siguiente lo reintenta
+# (es incremental vía data/boletines_procesados.json, así que repetirlo no
+# tiene costo cuando no hay nada nuevo).
 #
 # Sanciones (Boletín de Novedades) se sacó del todo: ese endpoint
 # (micrositios/DatosAbiertos) devuelve "Request Rejected" de forma mucho más
@@ -14,10 +24,10 @@ name: Actualizar datos legislativos
 # por ahora (pendiente: revisar/rediseñar esa sección).
 on:
   schedule:
-    # 10:00 Argentina (UTC-3) = 13:00 UTC, lunes a viernes → proyectos + OD
-    - cron: "0 13 * * 1-5"
-    # 21:00 Argentina (UTC-3) = 00:00 UTC del día siguiente, martes a sábado → DPP + agenda
-    - cron: "0 0 * * 2-6"
+    # 9:00 Argentina (UTC-3) = 12:00 UTC, todos los días → DPP + agenda
+    - cron: "0 12 * * *"
+    # 22:00 Argentina (UTC-3) = 01:00 UTC del día siguiente, todos los días → OD + agenda + proyectos
+    - cron: "0 1 * * *"
   workflow_dispatch:
 
 permissions:
@@ -39,26 +49,31 @@ jobs:
       - name: Instalar dependencias
         run: pip install -r requirements.txt
 
-      # ── Franja 10:00 ART: proyectos + OD (liviano primero) ──────────────
-      - name: Scraper de OD (órdenes del día)
-        if: github.event_name == 'workflow_dispatch' || github.event.schedule == '0 13 * * 1-5'
-        continue-on-error: true
-        run: python scripts/scraper_od.py
-
-      - name: Scraper de proyectos
-        if: github.event_name == 'workflow_dispatch' || github.event.schedule == '0 13 * * 1-5'
-        run: python scripts/scraper_proyectos.py
-
-      # ── Franja 21:00 ART: DPP + agenda ───────────────────────────────────
+      # ── Franja 9:00 ART: DPP + agenda (livianos) ─────────────────────────
       - name: Scraper de DPP (comisiones)
-        if: github.event_name == 'workflow_dispatch' || github.event.schedule == '0 0 * * 2-6'
+        if: github.event_name == 'workflow_dispatch' || github.event.schedule == '0 12 * * *'
         continue-on-error: true
         run: python scripts/scraper_dpp.py
 
-      - name: Scraper de agenda (boletines)
-        if: github.event_name == 'workflow_dispatch' || github.event.schedule == '0 0 * * 2-6'
+      - name: Scraper de agenda (boletines) - mañana
+        if: github.event_name == 'workflow_dispatch' || github.event.schedule == '0 12 * * *'
         continue-on-error: true
         run: python scripts/scraper_agenda.py
+
+      # ── Franja 22:00 ART: OD + agenda (livianos) + proyectos (pesado) ────
+      - name: Scraper de OD (órdenes del día)
+        if: github.event_name == 'workflow_dispatch' || github.event.schedule == '0 1 * * *'
+        continue-on-error: true
+        run: python scripts/scraper_od.py
+
+      - name: Scraper de agenda (boletines) - noche
+        if: github.event_name == 'workflow_dispatch' || github.event.schedule == '0 1 * * *'
+        continue-on-error: true
+        run: python scripts/scraper_agenda.py
+
+      - name: Scraper de proyectos
+        if: github.event_name == 'workflow_dispatch' || github.event.schedule == '0 1 * * *'
+        run: python scripts/scraper_proyectos.py
 
       - name: Generar web
         run: python scripts/generar_web.py
