@@ -488,6 +488,7 @@ table.cross-table tr:last-child td{border-bottom:none}
 .am-badge{font-size:9.5px;font-weight:700;text-transform:uppercase;letter-spacing:.4px;padding:3px 8px;border-radius:6px;white-space:nowrap}
 .am-exp-num{font-size:11px;color:#9aacbd;font-weight:600;white-space:nowrap}
 .am-od-num{background:#EAF0FA;color:#1B5EA2;padding:3px 9px;border-radius:20px;box-shadow:0 1px 4px rgba(27,94,162,0.35)}
+.am-minoria-tag{font-size:9.5px;font-weight:700;text-transform:uppercase;letter-spacing:.3px;padding:3px 8px;border-radius:20px;background:#FFF3E0;color:#B25E09}
 .am-autor{font-size:11px;font-weight:700;color:#1B5EA2;margin:0 0 4px;text-transform:uppercase;letter-spacing:.02em}
 .am-desc{font-size:13px;color:#4A4A4A;line-height:1.48;margin:0 0 10px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
 .am-card-bottom{display:flex;justify-content:space-between;align-items:center;font-size:11px;color:#9aacbd;gap:8px}
@@ -2836,6 +2837,7 @@ function amInit(){
     (d.comisiones||[]).forEach(function(c){if(c)comSet[c]=1});
     if(d.autor)autorSet[d.autor]=1;
     (d.firmantesPorBloque||[]).forEach(function(g){if(g.bloque)bloqueSet[g.bloque]=1});
+    (d.minoria&&d.minoria.firmantesPorBloque||[]).forEach(function(g){if(g.bloque)bloqueSet[g.bloque]=1});
   });
   fillSelectLabeled('am-comision-select',Object.keys(comSet).sort(),comLabel);
   document.getElementById('am-comision-select').addEventListener('change',function(e){amComision=e.target.value;renderAm()});
@@ -2881,7 +2883,7 @@ function amCardBadge(d){
 function buildAmCard(d,idx){
   var comision=comLabel(d.comisionCabecera||(d.comisiones&&d.comisiones[0])||'');
   return '<div class="am-card" onclick="amOpenStory('+idx+')">'
-    +'<div class="am-card-top">'+amCardBadge(d)+'<span class="am-exp-num am-od-num">OD '+esc(d.numero)+'/'+esc(String(d.periodo).slice(-2))+'</span></div>'
+    +'<div class="am-card-top">'+amCardBadge(d)+'<span class="am-exp-num am-od-num">OD '+esc(d.numero)+'/'+esc(String(d.periodo).slice(-2))+'</span>'+(d.minoria?'<span class="am-minoria-tag">Con minor&iacute;a</span>':'')+'</div>'
     +(d.autor?'<div class="am-autor">'+esc(d.autor)+'</div>':'')
     +'<p class="am-desc">'+esc(d.descripcion)+'</p>'
     +'<div class="am-card-bottom"><span class="am-comision">'+esc(comision)+'</span><span class="am-read-hint">Ver ficha &rarr;</span></div>'
@@ -2893,7 +2895,7 @@ function renderAm(){
     if(amCat!=='Todos'&&d.categoria!==amCat)return false;
     if(amComision&&(d.comisiones||[]).indexOf(amComision)<0)return false;
     if(amAutor&&d.autor!==amAutor)return false;
-    if(amBloque&&!(d.firmantesPorBloque||[]).some(function(g){return g.bloque===amBloque}))return false;
+    if(amBloque&&!(d.firmantesPorBloque||[]).concat(d.minoria&&d.minoria.firmantesPorBloque||[]).some(function(g){return g.bloque===amBloque}))return false;
     if(amSearch){
       var hay=(d.descripcion+' '+(d.autor||'')+' '+(d.expedientes||[]).map(function(e){return e.codigo}).join(' ')).toLowerCase();
       if(hay.indexOf(amSearch)<0)return false;
@@ -2919,6 +2921,7 @@ function amBuildSteps(d){
   });
   var links=[];
   if(d.odLink)links.push('<a class="am-link-btn" href="'+escAttr(d.odLink)+'" target="_blank" rel="noopener">&darr; Descargar Orden del D&iacute;a</a>');
+  if(d.minoria&&d.minoria.odLink)links.push('<a class="am-link-btn" href="'+escAttr(d.minoria.odLink)+'" target="_blank" rel="noopener">&darr; Descargar Anexo (minor&iacute;a)</a>');
   var primerExp=(d.expedientes||[])[0];
   if(primerExp&&primerExp.url)links.push('<a class="am-link-btn" href="'+escAttr(primerExp.url)+'" target="_blank" rel="noopener">&#128196; Ver expediente</a>');
   steps.push({
@@ -2928,12 +2931,15 @@ function amBuildSteps(d){
       ['Expediente(s)', esc((d.expedientes||[]).map(function(e){return e.codigo}).join(' · '))],
       ['Comisi&oacute;n(es)', esc(comLabel(d.comisionCabecera)||(d.comisiones||[]).map(comLabel).join(' · ')||'—')],
       ['Fecha de dictamen', esc(d.fechaDictamen||'—')],
-      ['Orden del D&iacute;a', 'N&ordm; '+esc(d.numero)+' / '+esc(d.periodo)+(d.tipoOD==='ANEXO'?' (anexo)':'')]
+      ['Orden del D&iacute;a', 'N&ordm; '+esc(d.numero)+' / '+esc(d.periodo)+(d.minoria?' (con dictamen en minor&iacute;a)':'')]
     ],
     linksHtml:links.length?'<div class="am-link-row">'+links.join('')+'</div>':''
   });
   if(d.firmantesPorBloque&&d.firmantesPorBloque.length){
     steps.push({label:'Firmantes',title:'Firmantes del dictamen de mayoría',firmantesPorBloque:d.firmantesPorBloque});
+  }
+  if(d.minoria&&d.minoria.firmantesPorBloque&&d.minoria.firmantesPorBloque.length){
+    steps.push({label:'Minoría',title:'Firmantes del dictamen en minoría',firmantesPorBloque:d.minoria.firmantesPorBloque});
   }
   return steps;
 }
@@ -4992,12 +4998,28 @@ def _resolver_firmante(nombre_firmante, bloque_de_senador):
     return (palabras[-1] if palabras else nombre_firmante), ""
 
 
+def _firmantes_por_bloque(firmantes, bloque_de_senador):
+    por_bloque = {}
+    for nombre in firmantes:
+        apellido, bloque = _resolver_firmante(nombre, bloque_de_senador)
+        por_bloque.setdefault(bloque or "Sin bloque identificado", []).append((apellido, nombre))
+    return [
+        {
+            "bloque": bloque,
+            "integrantes": [n for _, n in sorted(nombres, key=lambda x: x[0])],
+        }
+        for bloque, nombres in sorted(por_bloque.items(), key=lambda x: x[0])
+    ]
+
+
 def construir_ayuda_memoria():
     """Carga data/ayuda_memoria.json (generado a mano por
     scripts/parse_ayuda_memoria.py mientras el scraper del sitio del Senado
-    esté bloqueado por el anti-bot) y agrupa los firmantes de cada dictamen
-    por bloque político, ordenados por apellido dentro de cada bloque —
-    misma lógica de matching de nombres que usa construir_comisiones()."""
+    esté bloqueado por el anti-bot), agrupa los firmantes de cada dictamen
+    por bloque político (misma lógica de matching que construir_comisiones())
+    y fusiona en un solo registro el dictamen de mayoría (tipoOD "NORMAL") con
+    su anexo en minoría (tipoOD "ANEXO") cuando comparten número+período —
+    hoy llegan como dos filas separadas del xlsx."""
     items = _cargar("ayuda_memoria.json", [])
     comisiones_oficiales = _cargar("comisiones.json", [])
     bloque_de_senador = construir_bloque_por_senador()
@@ -5012,20 +5034,32 @@ def construir_ayuda_memoria():
             it["comisionCabecera"] = nombres_com_oficiales.get(n, it["comisionCabecera"])
 
         firmantes = it.get("firmantesMayoria") or []
-        if not firmantes:
-            continue
-        por_bloque = {}
-        for nombre in firmantes:
-            apellido, bloque = _resolver_firmante(nombre, bloque_de_senador)
-            por_bloque.setdefault(bloque or "Sin bloque identificado", []).append((apellido, nombre))
-        it["firmantesPorBloque"] = [
-            {
-                "bloque": bloque,
-                "integrantes": [n for _, n in sorted(nombres, key=lambda x: x[0])],
+        if firmantes:
+            it["firmantesPorBloque"] = _firmantes_por_bloque(firmantes, bloque_de_senador)
+
+    grupos = {}
+    orden = []
+    for it in items:
+        clave = (it.get("numero"), it.get("periodo"))
+        grupos.setdefault(clave, []).append(it)
+        if clave not in orden:
+            orden.append(clave)
+
+    resultado = []
+    for clave in orden:
+        grupo = grupos[clave]
+        anexos = [g for g in grupo if g.get("tipoOD") == "ANEXO"]
+        normales = [g for g in grupo if g.get("tipoOD") != "ANEXO"]
+        base = normales[0] if normales else anexos.pop(0)
+        if anexos:
+            a = anexos[0]
+            base["minoria"] = {
+                "odLink": a.get("odLink"),
+                "fechaDictamen": a.get("fechaDictamen"),
+                "firmantesPorBloque": a.get("firmantesPorBloque") or [],
             }
-            for bloque, nombres in sorted(por_bloque.items(), key=lambda x: x[0])
-        ]
-    return items
+        resultado.append(base)
+    return resultado
 
 
 def construir_comisiones(proyectos):
