@@ -1115,12 +1115,21 @@ function comLabel(s){return String(s||'').replace(/^DE\s+/i,'');}
 function escAttr(s){return esc(s).replace(/"/g,'&quot;')}
 
 /* ── Navegación ────────────────────────────────────────────────────── */
-function switchMain(id){
+function activateMain(id){
+  if(!document.getElementById('main-'+id))return false;
   document.querySelectorAll('.mtab-btn').forEach(function(b){b.classList.remove('active')});
   document.querySelectorAll('.mtab-content').forEach(function(c){c.classList.remove('active')});
   document.getElementById('main-'+id).classList.add('active');
   document.querySelector('[data-main="'+id+'"]').classList.add('active');
+  return true;
 }
+function switchMain(id){
+  if(!activateMain(id))return;
+  if(location.hash!=='#'+id)history.pushState({main:id},'','#'+id);
+}
+window.addEventListener('popstate',function(){
+  activateMain((location.hash||'#proyectos').slice(1));
+});
 function switchSub(id){
   document.querySelectorAll('.sub-btn').forEach(function(b){b.classList.remove('active')});
   document.querySelectorAll('.sub-content').forEach(function(c){c.classList.remove('active')});
@@ -4681,6 +4690,7 @@ var FONT_POPPINS_REGULAR = "{font_regular}";
 var FONT_POPPINS_BOLD = "{font_bold}";
 {js}
 init();
+if(location.hash)activateMain(location.hash.slice(1));
 </script>
 </body>
 </html>"""
