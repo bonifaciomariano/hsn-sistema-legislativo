@@ -18893,5 +18893,21 @@
     ],
     "url_pdf": "https://www.senado.gob.ar/parlamentario/parlamentaria/51632/downloadOrdenDia",
     "fecha": null
+  },
+  {
+    "nro_od": 321,
+    "anio_od": 2026,
+    "tipo_od": "N",
+    "expedientes": [
+      {
+        "nro": 1841,
+        "anio": 2025,
+        "tipo": "PD",
+        "origen": "S",
+        "url": "https://www.senado.gob.ar/parlamentario/comisiones/verExp/1841.25/S/PD"
+      }
+    ],
+    "url_pdf": "https://www.senado.gob.ar/parlamentario/parlamentaria/51647/downloadOrdenDia",
+    "fecha": null
   }
 ]
