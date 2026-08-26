@@ -6438,8 +6438,8 @@
         }
       ],
       "tipo": "senadores",
-      "boletin_id": 2343,
-      "boletin_numero": "100/26"
+      "boletin_id": 2346,
+      "boletin_numero": "101/26"
     },
     {
       "seccion": "senadores",
@@ -6459,8 +6459,8 @@
         }
       ],
       "tipo": "senadores",
-      "boletin_id": 2343,
-      "boletin_numero": "100/26"
+      "boletin_id": 2346,
+      "boletin_numero": "101/26"
     },
     {
       "seccion": "senadores",
@@ -6481,8 +6481,8 @@
         }
       ],
       "tipo": "senadores",
-      "boletin_id": 2343,
-      "boletin_numero": "100/26"
+      "boletin_id": 2347,
+      "boletin_numero": "102/26"
     },
     {
       "seccion": "senadores",
@@ -6506,7 +6506,7 @@
         },
         {
           "numero": "OV-234/24",
-          "extracto": "MINISTERIO DE RELACIONES EXTERIORES Y CULTO: REMITE NOTA ENVÍADA POR EL CIUDADANO ARGENTINO RAÚL ENRIQUE BURGOS, QUE SOLICITA AUTORIZACIÓN PARA DESEMPEÑARSE COMO VICECÓNSUL HONORARIO DE ESPAÑA EN LA CIUDAD DE SAN SALVADOR DE JUJUY"
+          "extracto": "MINISTERIO DE RELACIONES EXTERIORES Y CULTO: REMITE NOTA ENVIADA POR EL CIUDADANO ARGENTINO RAÚL ENRIQUE BURGOS, QUE SOLICITA AUTORIZACIÓN PARA DESEMPEÑARSE COMO VICECÓNSUL HONORARIO DE ESPAÑA EN LA CIUDAD DE SAN SALVADOR DE JUJUY"
         },
         {
           "numero": "OV-450/24",
@@ -6550,8 +6550,8 @@
         }
       ],
       "tipo": "senadores",
-      "boletin_id": 2343,
-      "boletin_numero": "100/26"
+      "boletin_id": 2347,
+      "boletin_numero": "102/26"
     },
     {
       "seccion": "senadores",
@@ -6585,8 +6585,8 @@
         }
       ],
       "tipo": "senadores",
-      "boletin_id": 2343,
-      "boletin_numero": "100/26"
+      "boletin_id": 2347,
+      "boletin_numero": "102/26"
     },
     {
       "seccion": "senadores",
@@ -6610,8 +6610,8 @@
         }
       ],
       "tipo": "senadores",
-      "boletin_id": 2343,
-      "boletin_numero": "100/26"
+      "boletin_id": 2347,
+      "boletin_numero": "102/26"
     },
     {
       "seccion": "senadores",
@@ -6633,7 +6633,8 @@
       ],
       "tipo": "bicameral",
       "boletin_id": 2343,
-      "boletin_numero": "100/26"
+      "boletin_numero": "100/26",
+      "suspendida": true
     },
     {
       "seccion": "senadores",
@@ -6655,8 +6656,8 @@
         }
       ],
       "tipo": "senadores",
-      "boletin_id": 2343,
-      "boletin_numero": "100/26"
+      "boletin_id": 2347,
+      "boletin_numero": "102/26"
     },
     {
       "seccion": "senadores",
@@ -6682,8 +6683,8 @@
         }
       ],
       "tipo": "senadores",
-      "boletin_id": 2343,
-      "boletin_numero": "100/26"
+      "boletin_id": 2347,
+      "boletin_numero": "102/26"
     },
     {
       "seccion": "senadores",
@@ -6724,8 +6725,102 @@
         }
       ],
       "tipo": "senadores",
-      "boletin_id": 2343,
-      "boletin_numero": "100/26"
+      "boletin_id": 2347,
+      "boletin_numero": "102/26"
+    },
+    {
+      "seccion": "senadores",
+      "dia": "MIÉRCOLES",
+      "fecha": "26/08",
+      "hora": "13:00",
+      "modalidad": "",
+      "comisiones": [
+        "MINERÍA, ENERGÍA Y COMBUSTIBLES",
+        "PRESUPUESTO Y HACIENDA"
+      ],
+      "salon": "ILLIA",
+      "salon_completo": "ILLIA",
+      "temario": [
+        {
+          "numero": "S-1271/25",
+          "extracto": "AVILA: PROYECTO DE LEY QUE MODIFICA SU SIMILAR 27.640 - BIOCOMBUSTIBLES -, RESPECTO DEL PORCENTAJE OBLIGATORIO DE BIODIESEL Y BIOETANOL EN EL GASOIL Y LA NAFTA"
+        },
+        {
+          "numero": "S-1861/25",
+          "extracto": "CARAMBIA Y GADANO: PROYECTO DE LEY QUE REGULA LAS ACTIVIDADES DE ELABORACIÓN, ALMACENAJE, COMERCIALIZACIÓN, MEZCLA Y AUTOCONSUMO DE BIOCOMBUSTIBLES"
+        },
+        {
+          "numero": "S-3/26",
+          "extracto": "VIGO Y ESPÍNOLA: PROYECTO DE LEY QUE MODIFICA SU SIMILAR 27.640 - BIOCOMBUSTIBLES -, RESPECTO DE NUEVOS CRONOGRAMAS RELATIVOS A LA EXTENSIÓN TEMPORAL DE LAS REGULACIONES Y DE LA IMPLEMENTACIÓN DE LAS CUOTAS DE CORTES DE COMBUSTIBLES FÓSILES"
+        },
+        {
+          "numero": "S-809/26",
+          "extracto": "BULLRICH Y OTROS: PROYECTO DE LEY QUE ESTABLECE MARCO REGULATORIO DE BIOCOMBUSTIBLES EN EL TERRITORIO NACIONAL"
+        },
+        {
+          "numero": "S-916/26",
+          "extracto": "ROYON: PROYECTO DE LEY QUE ESTABLECE EL MARCO REGULATORIO DE LOS BIOCOMBUSTIBLES"
+        },
+        {
+          "numero": "S-1035/26",
+          "extracto": "ARCE Y ROJAS DECUT: PROYECTO DE LEY QUE ESTABLECE EL MARCO REGULATORIO DE LOS BIOCOMBUSTIBLES EN EL TERRITORIO NACIONAL"
+        },
+        {
+          "numero": "S-1246/26",
+          "extracto": "CAPITANICH Y OTROS: PROYECTO DE LEY QUE CREA EL RÉGIMEN DE PROMOCIÓN FEDERAL PARA LA PRODUCCIÓN DE BIOCOMBUSTIBLES"
+        }
+      ],
+      "tipo": "senadores",
+      "boletin_id": 2347,
+      "boletin_numero": "102/26"
+    },
+    {
+      "seccion": "senadores",
+      "dia": "JUEVES",
+      "fecha": "27/08",
+      "hora": "11:00",
+      "modalidad": "",
+      "comisiones": [
+        "SUPERVISIÓN PARLAMENTARIA DE LA OFICINA DE PRESUPUESTO DEL",
+        "CONGRESO (LEY 27.343)"
+      ],
+      "salon": "OFICINA 70 “C” - PALACIO DEL HSN.",
+      "salon_completo": "OFICINA 70 “C” - PALACIO DEL HSN.",
+      "temario": [
+        {
+          "numero": "",
+          "extracto": "1. INCORPORACIÓN DEL SENADOR FERNANDO A. SALINO A LA COMISIÓN DE SUPERVISIÓN PARLAMENTARIA DE LA OFICINA DE PRESUPUESTO DEL CONGRESO EN SU CARÁCTER DE VICEPRESIDENTE DE LA COMISIÓN DE PRESUPUESTO Y HACIENDA DEL HONORABLE SENADO DE LA NACIÓN. 2. INFORME DE AUDITORÍA ELABORADO EN EL MARCO DEL EXAMEN ENCOMENDADO MEDIANTE LA RESOLUCIÓN N° 006-CSP-2026. 3. CONSIDERACIÓN DE LOS HALLAZGOS, OBSERVACIONES Y RECOMENDACIONES FORMULADOS EN LOS INFORMES DE AUDITORÍA. 4. SITUACIÓN DEL SERVICIO ADMINISTRATIVO FINANCIERO DE LA OFICINA DE PRESUPUESTO DEL CONGRESO DE LA NACIÓN. 5. MODIFICACIÓN DEL REGLAMENTO DE LA OFICINA DE PRESUPUESTO DEL CONGRESO DE LA NACIÓN, EN FUNCIÓN DE LAS RECOMENDACIONES FORMULADAS EN LOS INFORMES DE AUDITORÍA. 6. CONSIDERACIÓN DE LA SITUACIÓN Y CONTINUIDAD DE LAS COORDINACIONES QUE INTEGRAN LA ESTRUCTURA ORGÁNICA"
+        }
+      ],
+      "tipo": "senadores",
+      "boletin_id": 2347,
+      "boletin_numero": "102/26"
+    },
+    {
+      "seccion": "senadores",
+      "dia": "MIÉRCOLES",
+      "fecha": "02/09",
+      "hora": "15:00",
+      "modalidad": "",
+      "comisiones": [
+        "DE LA OFICINA DE PRESUPUESTO DEL CONGRESO DE LA NACIÓN JUSTICIA Y ASUNTOS PENALES",
+        "PRESUPUESTO Y HACIENDA"
+      ],
+      "salon": "AZUL",
+      "salon_completo": "AZUL",
+      "temario": [
+        {
+          "numero": "PE-243/26",
+          "extracto": "JEFATURA DE GABINETE: COMUNICA EL \"ACUERDO DE TRANSFERENCIA DE LA FUNCIÓN JUDICIAL EN MATERIA CRIMINAL Y CORRECCIONAL DE MENORES DEL ÁMBITO NACIONAL A LA JUSTICIA DE LA CIUDAD AUTÓNOMA DE BUENOS AIRES\", CELEBRADO EL 3 DE JULIO DE 2026"
+        },
+        {
+          "numero": "PE-244/26",
+          "extracto": "JEFATURA DE GABINETE: COMUNICA EL “CUARTO CONVENIO DE TRANSFERENCIA PROGRESIVA DE COMPETENCIAS PENALES DE LA JUSTICIA NACIONAL AL PODER JUDICIAL DE LA CIUDAD AUTÓNOMA DE BUENOS AIRES\", CELEBRADO EL 3 DE JULIO DE 2026"
+        }
+      ],
+      "tipo": "senadores",
+      "boletin_id": 2347,
+      "boletin_numero": "102/26"
     }
   ]
 }
