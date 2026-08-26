@@ -1013,16 +1013,21 @@ body.print-view-active > *:not(#main-votacion){display:none !important}
     flex-wrap: wrap;
     gap: 0 1.25rem;
     font-size: 0.85rem;
-    margin-bottom: 1.25rem;
+    margin-bottom: 0.85rem;
   }
 #main-votacion .pv-chamber-wrap {
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem;
     break-inside: avoid;
+  }
+#main-votacion .pv-chamber-bg {
+    border-radius: 10px;
+    padding: 10px;
+    background: radial-gradient(120% 95% at 50% 108%, var(--chamber-a) 0%, var(--chamber-b) 70%);
   }
 #main-votacion .pv-chamber {
     display: block;
     width: 100%;
-    max-width: 640px;
+    max-width: 480px;
     margin: 0 auto;
   }
 #main-votacion .pv-legend {
@@ -1032,10 +1037,12 @@ body.print-view-active > *:not(#main-votacion){display:none !important}
     gap: 0 1.25rem;
     font-size: 0.78rem;
     color: #444;
-    margin-top: 0.4rem;
+    margin-top: 0.5rem;
   }
 #main-votacion .pv-legend-item { display: inline-flex; align-items: center; gap: 0.35rem; }
 #main-votacion .pv-legend-dot { width: 10px; height: 10px; border-radius: 50%; display: inline-block; }
+#main-votacion .pv-bloque-table { max-width: 600px; margin: 0 auto; }
+#main-votacion .pv-bloque-table td:not(:first-child), #main-votacion .pv-bloque-table th:not(:first-child) { text-align: center; }
 #main-votacion .print-view table {
     width: 100%;
     border-collapse: collapse;
@@ -1043,7 +1050,7 @@ body.print-view-active > *:not(#main-votacion){display:none !important}
   }
 #main-votacion .print-view th, #main-votacion .print-view td {
     text-align: left;
-    padding: 0.3rem 0.4rem;
+    padding: 0.22rem 0.4rem;
     border-bottom: 1px solid #ccc;
     font-variant-numeric: tabular-nums;
   }
@@ -3658,10 +3665,6 @@ function irASanciones(expediente){
     var now = new Date();
     var fecha = now.toLocaleDateString("es-AR") + " " + now.toLocaleTimeString("es-AR", { hour: "2-digit", minute: "2-digit" });
 
-    var rows = SENATORS.map(function (s) {
-      return { banca: s.banca, nombre: s.nombre, bloque: s.bloque, voto: VOTE_LABEL[votes[s.id - 1]] };
-    });
-
     return {
       fecha: fecha,
       majorityLabel: majorityLabel,
@@ -3670,8 +3673,7 @@ function irASanciones(expediente){
       negative: negative,
       abstention: abstention,
       absent: absent,
-      pending: pending,
-      rows: rows
+      pending: pending
     };
   }
 
@@ -3748,12 +3750,21 @@ function irASanciones(expediente){
       ? '<div class="pv-result">' + escapeHtml(data.resultLine) + "</div>"
       : "";
 
-    var rows = data.rows.map(function (r) {
+    var bloqueSummary = {};
+    SENATORS.forEach(function (s) {
+      var v = votes[s.banca - 1];
+      if (!bloqueSummary[s.bloque]) bloqueSummary[s.bloque] = { positive: 0, negative: 0, abstention: 0, absent: 0, pending: 0 };
+      bloqueSummary[s.bloque][v]++;
+    });
+    var bloqueRows = Object.keys(bloqueSummary).sort(function (a, b) { return a.localeCompare(b, "es"); }).map(function (b) {
+      var c = bloqueSummary[b];
       return "<tr>" +
-        "<td>" + r.banca + "</td>" +
-        "<td>" + escapeHtml(r.nombre) + "</td>" +
-        "<td>" + escapeHtml(r.bloque) + "</td>" +
-        "<td>" + escapeHtml(r.voto) + "</td>" +
+        "<td>" + escapeHtml(b) + "</td>" +
+        "<td>" + c.positive + "</td>" +
+        "<td>" + c.negative + "</td>" +
+        "<td>" + c.abstention + "</td>" +
+        "<td>" + c.absent + "</td>" +
+        "<td>" + c.pending + "</td>" +
         "</tr>";
     }).join("");
 
@@ -3780,22 +3791,35 @@ function irASanciones(expediente){
         "<span>Pendientes: " + data.pending + "</span>" +
       "</div>" +
       '<div class="pv-chamber-wrap">' +
-        '<div id="pvChamberSlot"></div>' +
+        '<div id="pvChamberSlot" class="pv-chamber-bg"></div>' +
         legendHtml +
       "</div>" +
-      "<table>" +
-        "<thead><tr><th>Banca</th><th>Senador/a</th><th>Bloque</th><th>Voto</th></tr></thead>" +
-        "<tbody>" + rows + "</tbody>" +
+      '<table class="pv-bloque-table">' +
+        "<thead><tr><th>Bloque</th><th>Afirm.</th><th>Neg.</th><th>Abst.</th><th>Aus.</th><th>Pend.</th></tr></thead>" +
+        "<tbody>" + bloqueRows + "</tbody>" +
       "</table>";
 
     var chamberSnapshot = chamber.cloneNode(true);
     chamberSnapshot.removeAttribute("id");
     chamberSnapshot.setAttribute("class", "pv-chamber");
+    // clipPath ids se clonan iguales a los del #chamber original (que sigue en
+    // el DOM detrás del printView) -> con el id duplicado en el documento, el
+    // navegador puede no resolver bien url(#clip-seat-N) y la foto queda sin
+    // recortar (se ve el rectángulo completo detrás del círculo). Se renombran
+    // acá, por seat, para que sean únicos.
     Array.prototype.forEach.call(chamberSnapshot.querySelectorAll(".seat"), function (g) {
       g.style.opacity = "1";
       g.removeAttribute("class"); // sin :hover/click en el PDF
       var highlight = g.querySelector(".seat-highlight");
       if (highlight) highlight.setAttribute("stroke", "none");
+      var id = g.getAttribute("data-id");
+      var clipPath = chamberSnapshot.querySelector('clipPath[id="clip-seat-' + id + '"]');
+      var image = g.querySelector("image");
+      if (clipPath && image) {
+        var newClipId = "pv-clip-seat-" + id;
+        clipPath.id = newClipId;
+        image.setAttribute("clip-path", "url(#" + newClipId + ")");
+      }
     });
     document.getElementById("pvChamberSlot").appendChild(chamberSnapshot);
 
