@@ -58,12 +58,12 @@ body{font-family:'Poppins',Calibri,sans-serif;background:#F5F7FA;color:#4A4A4A;f
 .mtab-content.active{display:block}
 
 /* ── Sub-navegación dentro de Proyectos ───────────────────────────────── */
-.sub-nav{display:flex;background:#fff;border-bottom:1px solid #D6E4F0;padding:0 12px;gap:4px;overflow-x:auto;box-shadow:0 1px 3px rgba(0,0,0,0.04)}
-.sub-btn{padding:10px 18px;background:transparent;border:none;color:#888;font-family:inherit;font-size:12px;font-weight:600;cursor:pointer;border-bottom:3px solid transparent;transition:all .2s;white-space:nowrap}
-.sub-btn.active{color:#1B5EA2;border-bottom-color:#1B5EA2}
-.sub-btn:hover{color:#2E75B6}
-.sub-content{display:none}
-.sub-content.active{display:block}
+.sub-nav,.am-sub-nav{display:flex;background:#fff;border-bottom:1px solid #D6E4F0;padding:0 12px;gap:4px;overflow-x:auto;box-shadow:0 1px 3px rgba(0,0,0,0.04)}
+.sub-btn,.am-sub-btn{padding:10px 18px;background:transparent;border:none;color:#888;font-family:inherit;font-size:12px;font-weight:600;cursor:pointer;border-bottom:3px solid transparent;transition:all .2s;white-space:nowrap}
+.sub-btn.active,.am-sub-btn.active{color:#1B5EA2;border-bottom-color:#1B5EA2}
+.sub-btn:hover,.am-sub-btn:hover{color:#2E75B6}
+.sub-content,.am-sub-content{display:none}
+.sub-content.active,.am-sub-content.active{display:block}
 
 /* ── Placeholders ─────────────────────────────────────────────────────── */
 .placeholder{text-align:center;padding:80px 20px;color:#9aacbd}
@@ -1171,6 +1171,8 @@ function init(){
   amInit();
   renderSancChips();
   renderSanciones();
+  renderPrefChips();
+  renderPreferencias();
 }
 function fillSelect(id,values){
   var sel=document.getElementById(id);
@@ -3065,7 +3067,6 @@ function volverAgenda(){
 
 /* ── Sanciones HSN (Boletín de Novedades) ─────────────────────────── */
 var SANC_SECCION_LABEL={ley:'Ley',decreto_res_com_dec:'Decreto/Res/Com/Dec',acuerdo:'Acuerdo',preferencia:'Preferencia'};
-var SANC_VISTA='landing';
 var sancCat='TODOS',sancPrefCat='TODOS';
 var SANC_CATS=['TODOS','LEY','PR','PD','PC','AC','OTROS'];
 var SANC_CAT_LABELS={TODOS:'Todos',LEY:'Ley',PR:'PR',PD:'PD',PC:'PC',AC:'Acuerdos',OTROS:'Otros'};
@@ -3079,7 +3080,7 @@ function sancTipoDe(item){
   return p?p.tipo:null;
 }
 function sancAprobado(item){return item.resultado==='APROBADO'||item.resultado==='APROBADA';}
-/* Categoría para la landing: Ley/Acuerdos salen directo de la sección del
+/* Categoría de Sanciones HSN: Ley/Acuerdos salen directo de la sección del
    Boletín; PR/PD/PC hay que resolverlos cruzando con el tipo real del
    proyecto (la sección "decreto_res_com_dec" del Boletín los mezcla a todos
    con los decretos, que caen en "Otros"). */
@@ -3102,28 +3103,22 @@ function sancPrefCatsDynamic(){
   return ['TODOS'].concat(Object.keys(set).sort());
 }
 function renderSancChips(){
-  var landing=SANC_VISTA==='landing';
-  var cats=landing?SANC_CATS:sancPrefCatsDynamic();
-  var activeCat=landing?sancCat:sancPrefCat;
-  var setter=landing?'setSancCat':'setSancPrefCat';
-  var html=cats.map(function(c){
-    var label=landing?SANC_CAT_LABELS[c]:(c==='TODOS'?'Todos':(c+' · '+(TIPOS[c]||c)));
-    return '<button class="chip'+(c===activeCat?' on':'')+'" onclick="'+setter+'(\''+c+'\')">'+esc(label)+'</button>';
+  var html=SANC_CATS.map(function(c){
+    var label=SANC_CAT_LABELS[c];
+    return '<button class="chip'+(c===sancCat?' on':'')+'" onclick="setSancCat(\''+c+'\')">'+esc(label)+'</button>';
   }).join('');
-  document.getElementById(landing?'sanc-chips':'sanc-pref-chips').innerHTML=html;
+  document.getElementById('sanc-chips').innerHTML=html;
 }
-function setSancVista(id){
-  SANC_VISTA=id;
-  var root=document.getElementById('sanc-root');
-  root.querySelectorAll(':scope > .sub-nav .sub-btn').forEach(function(b){b.classList.remove('active')});
-  root.querySelectorAll(':scope > .sub-content').forEach(function(c){c.classList.remove('active')});
-  root.querySelector('[data-sancvista="'+id+'"]').classList.add('active');
-  document.getElementById('sanc-vista-'+id).classList.add('active');
-  renderSancChips();
-  renderSanciones();
+function renderPrefChips(){
+  var cats=sancPrefCatsDynamic();
+  var html=cats.map(function(c){
+    var label=c==='TODOS'?'Todos':(c+' · '+(TIPOS[c]||c));
+    return '<button class="chip'+(c===sancPrefCat?' on':'')+'" onclick="setSancPrefCat(\''+c+'\')">'+esc(label)+'</button>';
+  }).join('');
+  document.getElementById('sanc-pref-chips').innerHTML=html;
 }
 function setSancCat(c){sancCat=c;renderSancChips();renderSanciones();}
-function setSancPrefCat(c){sancPrefCat=c;renderSancChips();renderSanciones();}
+function setSancPrefCat(c){sancPrefCat=c;renderPrefChips();renderPreferencias();}
 function sancObsHtml(item){
   if(!item.observaciones||item.observaciones==='-')return '';
   var cls='sanc-obs'+(/^Ley N/.test(item.observaciones)?' ley':'');
@@ -3141,18 +3136,12 @@ function buildSancCard(item){
   return '<div class="od-card"><div class="od-card-top">'+linkHtml+seccionHtml+odHtml+leyHtml+'</div>'+extractoHtml+sancObsHtml(item)+'<div class="sanc-card-bottom">'+solicitanteHtml+'<span class="sanc-fecha">'+esc(fechaSesionDisplay(item.fecha_sesion))+'</span></div></div>';
 }
 function renderSanciones(){
-  var landing=SANC_VISTA==='landing';
-  var searchEl=landing?document.getElementById('sanc-search'):null;
+  var searchEl=document.getElementById('sanc-search');
   var q=(searchEl&&searchEl.value||'').toLowerCase().trim();
   var lista=(SANCIONES_DATA||[]).filter(function(it){
-    if(landing){
-      var cat=sancCategoriaLanding(it);
-      if(!cat)return false;
-      if(sancCat!=='TODOS'&&cat!==sancCat)return false;
-    }else{
-      if(it.seccion!=='preferencia')return false;
-      if(sancPrefCat!=='TODOS'&&sancTipoDe(it)!==sancPrefCat)return false;
-    }
+    var cat=sancCategoriaLanding(it);
+    if(!cat)return false;
+    if(sancCat!=='TODOS'&&cat!==sancCat)return false;
     if(!q)return true;
     if(it.expediente.toLowerCase().indexOf(q)>=0)return true;
     var exp=parseExpNumero(it.expediente);
@@ -3160,27 +3149,50 @@ function renderSanciones(){
     return !!(p&&p.extracto&&p.extracto.toLowerCase().indexOf(q)>=0);
   });
   lista=lista.slice().sort(function(a,b){return (b.fecha_sesion||'').localeCompare(a.fecha_sesion||'')});
-  var el=document.getElementById(landing?'sanc-list':'sanc-pref-list');
+  var el=document.getElementById('sanc-list');
   if(!el)return;
   if(!lista.length){el.innerHTML='<div class="no-results">Sin resultados para este filtro.</div>';return}
   var html='';
   lista.forEach(function(it){html+=buildSancCard(it)});
   el.innerHTML=html;
 }
+function renderPreferencias(){
+  var lista=(SANCIONES_DATA||[]).filter(function(it){
+    if(it.seccion!=='preferencia')return false;
+    if(sancPrefCat!=='TODOS'&&sancTipoDe(it)!==sancPrefCat)return false;
+    return true;
+  });
+  lista=lista.slice().sort(function(a,b){return (b.fecha_sesion||'').localeCompare(a.fecha_sesion||'')});
+  var el=document.getElementById('sanc-pref-list');
+  if(!el)return;
+  if(!lista.length){el.innerHTML='<div class="no-results">Sin resultados para este filtro.</div>';return}
+  var html='';
+  lista.forEach(function(it){html+=buildSancCard(it)});
+  el.innerHTML=html;
+}
+function setAmVista(id){
+  var root=document.getElementById('am-root');
+  root.querySelectorAll(':scope > .am-sub-nav .am-sub-btn').forEach(function(b){b.classList.remove('active')});
+  root.querySelectorAll(':scope > .am-sub-content').forEach(function(c){c.classList.remove('active')});
+  root.querySelector('[data-amvista="'+id+'"]').classList.add('active');
+  document.getElementById('am-vista-'+id).classList.add('active');
+}
 function irASanciones(expediente){
-  switchMain('sanciones');
   var it=(SANCIONES_DATA||[]).filter(function(x){return x.expediente===expediente})[0];
   if(it&&it.seccion==='preferencia'){
-    setSancVista('preferencias');
+    switchMain('ayuda');
+    setAmVista('preferencias');
     sancPrefCat='TODOS';
+    renderPrefChips();
+    renderPreferencias();
   }else{
-    setSancVista('landing');
+    switchMain('sanciones');
     sancCat=(it&&sancCategoriaLanding(it))||'TODOS';
     var searchEl=document.getElementById('sanc-search');
     if(searchEl)searchEl.value=expediente;
+    renderSancChips();
+    renderSanciones();
   }
-  renderSancChips();
-  renderSanciones();
   window.scrollTo({top:0,behavior:'smooth'});
 }
 
@@ -4542,36 +4554,58 @@ HTML_TEMPLATE = """<!DOCTYPE html>
 
 <!-- ====================== MAIN: AYUDA MEMORIA ====================== -->
 <div id="main-ayuda" class="mtab-content">
-  <div class="section-block">
-    <div class="section-header">
-      <h2>Ayuda Memoria</h2>
-      <span class="section-hint">&Oacute;rdenes del D&iacute;a del HSN</span>
+  <div id="am-root">
+    <div class="am-sub-nav">
+      <button class="am-sub-btn active" data-amvista="principal" onclick="setAmVista('principal')">Ayuda Memoria</button>
+      <button class="am-sub-btn" data-amvista="preferencias" onclick="setAmVista('preferencias')">Preferencias</button>
     </div>
-    <div class="section-body">
-      <div class="am-controls">
-        <input class="search-box" type="text" id="am-search" placeholder="Buscar por texto, autor o expediente&hellip;">
-        <div class="select-wrapper">
-          <select class="filter-select" id="am-comision-select">
-            <option value="">Todas las comisiones</option>
-          </select>
-          <span class="select-arrow">&#9660;</span>
+
+    <div id="am-vista-principal" class="am-sub-content active">
+      <div class="section-block">
+        <div class="section-header">
+          <h2>Ayuda Memoria</h2>
+          <span class="section-hint">&Oacute;rdenes del D&iacute;a del HSN</span>
         </div>
-        <div class="select-wrapper">
-          <select class="filter-select" id="am-autor-select">
-            <option value="">Todos los autores</option>
-          </select>
-          <span class="select-arrow">&#9660;</span>
-        </div>
-        <div class="select-wrapper">
-          <select class="filter-select" id="am-bloque-select">
-            <option value="">Todos los bloques</option>
-          </select>
-          <span class="select-arrow">&#9660;</span>
+        <div class="section-body">
+          <div class="am-controls">
+            <input class="search-box" type="text" id="am-search" placeholder="Buscar por texto, autor o expediente&hellip;">
+            <div class="select-wrapper">
+              <select class="filter-select" id="am-comision-select">
+                <option value="">Todas las comisiones</option>
+              </select>
+              <span class="select-arrow">&#9660;</span>
+            </div>
+            <div class="select-wrapper">
+              <select class="filter-select" id="am-autor-select">
+                <option value="">Todos los autores</option>
+              </select>
+              <span class="select-arrow">&#9660;</span>
+            </div>
+            <div class="select-wrapper">
+              <select class="filter-select" id="am-bloque-select">
+                <option value="">Todos los bloques</option>
+              </select>
+              <span class="select-arrow">&#9660;</span>
+            </div>
+          </div>
+          <div class="am-chips" id="am-chips"></div>
+          <div class="am-count" id="am-count"></div>
+          <div class="am-grid" id="am-grid"></div>
         </div>
       </div>
-      <div class="am-chips" id="am-chips"></div>
-      <div class="am-count" id="am-count"></div>
-      <div class="am-grid" id="am-grid"></div>
+    </div>
+
+    <div id="am-vista-preferencias" class="am-sub-content">
+      <div class="section-block">
+        <div class="section-header">
+          <h2>Preferencias</h2>
+          <span class="section-hint">Mociones de preferencia aprobadas</span>
+        </div>
+        <div class="section-body">
+          <div class="filter-row" id="sanc-pref-chips"></div>
+          <div id="sanc-pref-list" class="sanc-grid"></div>
+        </div>
+      </div>
     </div>
   </div>
 </div>
@@ -4596,37 +4630,15 @@ HTML_TEMPLATE = """<!DOCTYPE html>
 
 <!-- ====================== MAIN: SANCIONES HSN ====================== -->
 <div id="main-sanciones" class="mtab-content">
-  <div id="sanc-root">
-    <div class="sub-nav">
-      <button class="sub-btn active" data-sancvista="landing" onclick="setSancVista('landing')">Sanciones HSN</button>
-      <button class="sub-btn" data-sancvista="preferencias" onclick="setSancVista('preferencias')">Preferencias</button>
+  <div class="section-block">
+    <div class="section-header">
+      <h2>Sanciones HSN</h2>
+      <span class="section-hint">Bolet&iacute;n de Novedades del HSN</span>
     </div>
-
-    <div id="sanc-vista-landing" class="sub-content active">
-      <div class="section-block">
-        <div class="section-header">
-          <h2>Sanciones HSN</h2>
-          <span class="section-hint">Bolet&iacute;n de Novedades del HSN</span>
-        </div>
-        <div class="section-body">
-          <div class="filter-row" id="sanc-chips"></div>
-          <input class="search-box" type="text" id="sanc-search" placeholder="Buscar por n&uacute;mero de expediente o extracto&hellip;" oninput="renderSanciones()" style="max-width:360px">
-          <div id="sanc-list" class="sanc-grid"></div>
-        </div>
-      </div>
-    </div>
-
-    <div id="sanc-vista-preferencias" class="sub-content">
-      <div class="section-block">
-        <div class="section-header">
-          <h2>Preferencias</h2>
-          <span class="section-hint">Mociones de preferencia aprobadas</span>
-        </div>
-        <div class="section-body">
-          <div class="filter-row" id="sanc-pref-chips"></div>
-          <div id="sanc-pref-list" class="sanc-grid"></div>
-        </div>
-      </div>
+    <div class="section-body">
+      <div class="filter-row" id="sanc-chips"></div>
+      <input class="search-box" type="text" id="sanc-search" placeholder="Buscar por n&uacute;mero de expediente o extracto&hellip;" oninput="renderSanciones()" style="max-width:360px">
+      <div id="sanc-list" class="sanc-grid"></div>
     </div>
   </div>
 </div>
