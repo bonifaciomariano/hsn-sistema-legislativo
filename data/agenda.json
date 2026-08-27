@@ -6794,7 +6794,8 @@
       ],
       "tipo": "senadores",
       "boletin_id": 2347,
-      "boletin_numero": "102/26"
+      "boletin_numero": "102/26",
+      "suspendida": true
     },
     {
       "seccion": "senadores",
@@ -6819,8 +6820,30 @@
         }
       ],
       "tipo": "senadores",
-      "boletin_id": 2347,
-      "boletin_numero": "102/26"
+      "boletin_id": 2348,
+      "boletin_numero": "103/26"
+    },
+    {
+      "seccion": "senadores",
+      "dia": "JUEVES",
+      "fecha": "27/08",
+      "hora": "9:00",
+      "modalidad": "",
+      "comisiones": [
+        "SUPERVISIÓN PARLAMENTARIA DE LA OFICINA DE PRESUPUESTO",
+        "DEL CONGRESO (LEY 27.343)"
+      ],
+      "salon": "OFICINA 70 “C” - PALACIO DEL HSN.",
+      "salon_completo": "OFICINA 70 “C” - PALACIO DEL HSN.",
+      "temario": [
+        {
+          "numero": "",
+          "extracto": "1. INCORPORACIÓN DEL SENADOR FERNANDO A. SALINO A LA COMISIÓN DE SUPERVISIÓN PARLAMENTARIA DE LA OFICINA DE PRESUPUESTO DEL CONGRESO EN SU CARÁCTER DE VICEPRESIDENTE DE LA COMISIÓN DE PRESUPUESTO Y HACIENDA DEL HONORABLE SENADO DE LA NACIÓN. 2. INFORME DE AUDITORÍA ELABORADO EN EL MARCO DEL EXAMEN ENCOMENDADO MEDIANTE LA RESOLUCIÓN N° 006-CSP-2026. 3. CONSIDERACIÓN DE LOS HALLAZGOS, OBSERVACIONES Y RECOMENDACIONES FORMULADOS EN LOS INFORMES DE AUDITORÍA. 4. SITUACIÓN DEL SERVICIO ADMINISTRATIVO FINANCIERO DE LA OFICINA DE PRESUPUESTO DEL CONGRESO DE LA NACIÓN. 5. MODIFICACIÓN DEL REGLAMENTO DE LA OFICINA DE PRESUPUESTO DEL CONGRESO DE LA NACIÓN, EN FUNCIÓN DE LAS RECOMENDACIONES FORMULADAS EN LOS INFORMES DE AUDITORÍA. 6. CONSIDERACIÓN DE LA SITUACIÓN Y CONTINUIDAD DE LAS COORDINACIONES QUE INTEGRAN LA ESTRUCTURA ORGÁNICA"
+        }
+      ],
+      "tipo": "senadores",
+      "boletin_id": 2348,
+      "boletin_numero": "103/26"
     }
   ]
 }
