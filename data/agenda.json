@@ -6821,7 +6821,8 @@
       ],
       "tipo": "senadores",
       "boletin_id": 2348,
-      "boletin_numero": "103/26"
+      "boletin_numero": "103/26",
+      "suspendida": true
     },
     {
       "seccion": "senadores",
@@ -6844,6 +6845,344 @@
       "tipo": "senadores",
       "boletin_id": 2348,
       "boletin_numero": "103/26"
+    },
+    {
+      "seccion": "senadores",
+      "dia": "MIÉRCOLES",
+      "fecha": "02/09",
+      "hora": "15:00",
+      "modalidad": "",
+      "comisiones": [
+        "JUSTICIA Y ASUNTOS PENALES",
+        "PRESUPUESTO Y HACIENDA"
+      ],
+      "salon": "AZUL",
+      "salon_completo": "AZUL",
+      "temario": [
+        {
+          "numero": "PE-243/26",
+          "extracto": "JEFATURA DE GABINETE: COMUNICA EL \"ACUERDO DE TRANSFERENCIA DE LA FUNCIÓN JUDICIAL EN MATERIA CRIMINAL Y CORRECCIONAL DE MENORES DEL ÁMBITO NACIONAL A LA JUSTICIA DE LA CIUDAD AUTÓNOMA DE BUENOS AIRES\", CELEBRADO EL 3 DE JULIO DE 2026"
+        },
+        {
+          "numero": "PE-244/26",
+          "extracto": "JEFATURA DE GABINETE: COMUNICA EL “CUARTO CONVENIO DE TRANSFERENCIA PROGRESIVA DE COMPETENCIAS PENALES DE LA JUSTICIA NACIONAL AL PODER JUDICIAL DE LA CIUDAD AUTÓNOMA DE BUENOS AIRES\", CELEBRADO EL 3 DE JULIO DE 2026"
+        }
+      ],
+      "tipo": "senadores",
+      "boletin_id": 2350,
+      "boletin_numero": "105/26"
+    },
+    {
+      "seccion": "senadores",
+      "dia": "MIÉRCOLES",
+      "fecha": "02/09",
+      "hora": "16:00",
+      "modalidad": "",
+      "comisiones": [
+        "EDUCACIÓN Y CULTURA"
+      ],
+      "salon": "ILLIA",
+      "salon_completo": "ILLIA",
+      "temario": [
+        {
+          "numero": "",
+          "extracto": "PROYECTOS DE LEY: EDUCACIÓN EMOCIONAL"
+        },
+        {
+          "numero": "S-255/26",
+          "extracto": "FAMA: REPRODUCE PROYECTO DE LEY QUE MODIFICA SU SIMILAR 26.206 - EDUCACIÓN NACIONAL- RESPECTO DE PROMOVER EL DESARROLLO DE LA EDUCACIÓN EMOCIONAL. (REF"
+        },
+        {
+          "numero": "S-752/22",
+          "extracto": ") DECLARATORIAS DE MONUMENTOS, DE BIENES Y DE LUGARES HISTÓRICOS"
+        },
+        {
+          "numero": "S-1643/25",
+          "extracto": "VISCHI: REPRODUCE PROYECTO DE LEY QUE DECLARA BIEN HISTÓRICO NACIONAL, EN LOS TÉRMINOS DE LA LEY 12.665 Y S/M., AL INMUEBLE IDENTIFICADO COMO EX \"HOTEL DE INMIGRANTES- EX OFICINAS DE PUENTES Y CAMINOS DE GOYA\", SITO EN LA MANZANA N° 497, ENTRE LAS CALLES CAÁ GUAZÚ Y AV. SARMIENTO DE LA CIUDAD DE GOYA, PROV. DE CORRIENTES. (REF"
+        },
+        {
+          "numero": "S-1422/22",
+          "extracto": ")"
+        },
+        {
+          "numero": "S-124/26",
+          "extracto": "AVILA: PROYECTO DE LEY QUE DECLARA MONUMENTO HISTÓRICO NACIONAL AL CEMENTERIO OESTE DE SAN MIGUEL DE TUCUMÁN, PROV. DE TUCUMÁN. PATRIMONIO INMATERIAL"
+        },
+        {
+          "numero": "S-447/26",
+          "extracto": "CORPACCI Y MENDOZA: REPRODUCE PROYECTO DE LEY QUE DECLARA PATRIMONIO INMATERIAL CULTURAL Y NATURAL DE LA NACIÓN, EN LOS TÉRMINOS DE LA LEY 26.118, AL \"CHAKU\", PRÁCTICA ANCESTRAL INCAICA DE CAPTURA, ESQUILA Y LIBERACIÓN DE VICUÑAS. (REF"
+        },
+        {
+          "numero": "S-830/24",
+          "extracto": "). CONMEMORACIÓN"
+        },
+        {
+          "numero": "S-100/26",
+          "extracto": "ÁLVAREZ RIVERO: PROYECTO DE LEY QUE DECLARA EL 10 DE MARZO DE CADA AÑO, COMO \"DÍA DE ENSEÑAR A LEER, ESCRIBIR Y PENSAR EN PRIMER GRADO\". FIESTA NACIONAL"
+        },
+        {
+          "numero": "S-1040/26",
+          "extracto": "VALENZUELA: PROYECTO DE LEY QUE DECLARA FIESTA NACIONAL AL \"FESTIVAL DEL FOLCLORE CORRENTINO\", A REALIZARSE EN LA CDAD. DE SANTO TOMÉ, PROV. DE CORRIENTES, EN EL MES DE DICIEMBRE DE CADA AÑO"
+        },
+        {
+          "numero": "S-336/25",
+          "extracto": "JUEZ: PROYECTO DE DECLARACIÓN QUE DECLARA DE INTERÉS EL \"PROYECTO INSTITUCIONAL DE CONVIVENCIA, UNA INVITACIÓN A INNOVAR - VALORES EN ACCIÓN -, PARA IMPLEMENTAR EN SUS NIVELES INICIAL, PRIMARIO Y SECUNDARIO, DISEÑADO POR EL COLEGIO \"LA MERCED\" DE LA CDAD. DE RÍO CUARTO, PROV. DE CÓRDOBA"
+        },
+        {
+          "numero": "S-837/25",
+          "extracto": "ROJAS DECUT: PROYECTO DE DECLARACIÓN QUE DECLARA DE INTERÉS EL PROGRAMA DE EDUCACIÓN FINANCIERA \"CUENTAS SANAS\" DE LA FUNDACIÓN MACRO"
+        },
+        {
+          "numero": "S-1266/25",
+          "extracto": "RECALDE Y DURÉ: PROYECTO DE DECLARACIÓN QUE DECLARA DE INTERÉS EL PROYECTO DE INSTALACIÓN DE LA ESCULTURA \"ABRAZO A MALVINAS\", ARTISTA PLÁSTICO ALBERTO MORALES"
+        },
+        {
+          "numero": "S-1469/25",
+          "extracto": "HUALA: PROYECTO DE DECLARACIÓN QUE EXPRESA BENEPLÁCITO Y RECONOCE A LA ESCRITORA OLGA LILIANA REINOSO POR SU TRAYECTORIA Y APORTE A LA CULTURA"
+        },
+        {
+          "numero": "S-1577/25",
+          "extracto": "LEWANDOWSKI: PROYECTO DE DECLARACIÓN QUE EXPRESA BENEPLÁCITO POR LA TRAYECTORIA DEL MÚSICO MIGUEL FIGUEROA Y SU CONJUNTO \"AMANECER CAMPERO\", CON LA DIFUSIÓN DEL CHAMAMÉ EN EL ÁMBITO NACIONAL E INTERNACIONAL"
+        },
+        {
+          "numero": "S-1601/25",
+          "extracto": "FERNÁNDEZ SAGASTI: PROYECTO DE DECLARACIÓN QUE DECLARA DE INTERÉS EL EVENTO \"CONVINART\", RECONOCIENDO SU APORTE A LA DIFUSIÓN DE LA CULTURA, EL ARTE Y LA IDENTIDAD NACIONAL"
+        },
+        {
+          "numero": "S-1799/25",
+          "extracto": "LÓPEZ FLORENCIA: PROYECTO DE DECLARACIÓN QUE RECONOCE COMO VALOR HISTÓRICO Y CULTURAL AL MONOLITO DE LOMA BLANCA, EN LA LOCALIDAD DE OLTA, PROV. DE LA RIOJA"
+        },
+        {
+          "numero": "S-2149/25",
+          "extracto": "CAPITANICH: PROYECTO DE DECLARACIÓN QUE DECLARA DE INTERÉS LA BIENAL INTERNACIONAL DE ESCULTURAS DE CHACO 2026, A REALIZARSE EN LA CDAD. DE RESISTENCIA, DEL 11 AL 19 DE JULIO DE 2026. Y"
+        },
+        {
+          "numero": "S-300/26",
+          "extracto": "SCHNEIDER: PROYECTO DE DECLARACIÓN QUE EXPRESA BENEPLÁCITO POR LA REALIZACIÓN DE LA \"BIENAL INTERNACIONAL DE ESCULTURA DEL CHACO EDICIÓN 2026\", A REALIZARSE EN LA CDAD. DE RESISTENCIA, PROV. DEL CHACO, DEL 17 AL 26 DE JULIO"
+        },
+        {
+          "numero": "S-2204/25",
+          "extracto": "SCHNEIDER: PROYECTO DE DECLARACIÓN QUE EXPRESA BENEPLÁCITO POR LA PRESENTACIÓN OFICIAL DE LA \"BIENAL INTERNACIONAL DE ESCULTURA DEL CHACO EDICIÓN 2026\", A REALIZARSE EN LA CDAD. DE RESISTENCIA, PROV. DEL CHACO, EL 6 DE MARZO"
+        },
+        {
+          "numero": "S-709/26",
+          "extracto": "FERNÁNDEZ SAGASTI: PROYECTO DE DECLARACIÓN QUE EXPRESA BENEPLÁCITO POR EL SUBCAMPEONATO LOGRADO POR ALUMNOS DE LA PROV. DE MENDOZA, EN EL MUNDIAL DE ROBÓTICA \"FIRST TECH CHALLENGE 2026\", ENTRE EL 15 Y 18 DE ABRIL DE 2026"
+        },
+        {
+          "numero": "S-735/26",
+          "extracto": "OLIVERA LUCERO: PROYECTO DE DECLARACIÓN QUE DECLARA DE INTERÉS LA FERIA INTERNACIONAL DE ARTESANÍAS DE SAN JUAN 2026, EN LA LOC. DE CHIMBAS, PROV. DE SAN JUAN, ENTRE EL 30 DE ABRIL Y EL 11 DE MAYO"
+        },
+        {
+          "numero": "S-892/26",
+          "extracto": "ABDALA: PROYECTO DE DECLARACIÓN QUE ADHIERE AL DÍA DEL GRANADERO PUNTANO EN DEDICACIÓN AL \"HÉROE DE CHANCAY\" CON MOTIVO DEL 231º ANIVERSARIO DEL NACIMIENTO DEL CORONEL JUAN PASCUAL PRINGLES"
+        },
+        {
+          "numero": "S-900/26",
+          "extracto": "MORENO: PROYECTO DE DECLARACIÓN QUE DECLARA DE INTERÉS EL \"III CONGRESO INTERNACIONAL DE TRABAJO SOCIAL FORENSE: TSF, CULTURAS DIGITALES Y EMANCIPACIÓN\", ORGANIZADO POR LA UNIVERSIDAD CATÓLICA DE SALTA (UCASAL), EN LA CDAD. HOMÓNIMA, DEL 23 AL 25 DE SEPTIEMBRE DE 2026"
+        },
+        {
+          "numero": "S-934/26",
+          "extracto": "VALENZUELA: PROYECTO DE DECLARACIÓN QUE DECLARA DE INTERÉS LA FIESTA PROVINCIAL DEL LOCRO, EN LA CDAD. DE CURUZÚ CUATIÁ, PROV. DE CORRIENTES, A REALIZARSE DEL 10 AL 12 DE JULIO DE 2026"
+        },
+        {
+          "numero": "S-935/26",
+          "extracto": "VALENZUELA: PROYECTO DE DECLARACIÓN QUE DECLARA DE INTERÉS LA 60° EDICIÓN DEL \"FESTIVAL DEL FOLCLORE CORRENTINO\" EN LA CDAD. DE SANTO TOMÉ, PROV. DE CORRIENTES, A REALIZARSE DEL 4 AL 6 DE DICIEMBRE DE 2026"
+        },
+        {
+          "numero": "S-995/26",
+          "extracto": "LINARES: PROYECTO DE DECLARACIÓN QUE EXPRESA PESAR Y CONMOCIÓN POR EL FALLECIMIENTO DEL MÚSICO, COMPOSITOR Y CANTANTE, CARLOS ALBERTO \"EL INDIO\" SOLARI, EL 5 DE JUNIO DE 2026. Y"
+        },
+        {
+          "numero": "S-1007/26",
+          "extracto": "LÓPEZ C.: PROYECTO DE DECLARACIÓN QUE EXPRESA PESAR POR EL FALLECIMIENTO DE CARLOS ALBERTO \"INDIO\" SOLARI, EL 5 DE JUNIO DE 2026"
+        },
+        {
+          "numero": "S-1006/26",
+          "extracto": "MONTE DE OCA: PROYECTO DE DECLARACIÓN QUE EXPRESA BENEPLÁCITO POR EL 35° ANIVERSARIO DE LA JURA DE LA CONSTITUCIÓN DE LA PROV. DE TIERRA DEL FUEGO, A.I.A.S., EL 1 DE JUNIO DE 2026"
+        },
+        {
+          "numero": "S-1017/26",
+          "extracto": "SCHNEIDER: PROYECTO DE DECLARACIÓN QUE EXPRESA BENEPLÁCITO POR LA SELECCIÓN DE LAS DOCENTES CHAQUEÑAS VANESA ANABEL MEZA Y GLORIA ARGENTINA CISNEROS, COMO SEMIFINALISTAS NACIONALES EN LA EDICIÓN 2026 DEL PREMIO \"DOCENTES QUE INSPIRAN\""
+        },
+        {
+          "numero": "S-1020/26",
+          "extracto": "ALMEIDA Y OTROS: PROYECTO DE DECLARACIÓN QUE DECLARA DE INTERÉS LA COMPOSICIÓN ARTÍSTICA \"MI BANDERA ES ARGENTINA\", DEL CANTAUTOR Y DOCENTE DE MÚSICA DIAMANTINO RUBÉN DARÍO GIMÉNEZ"
+        },
+        {
+          "numero": "S-1029/26",
+          "extracto": "GUZMÁN CORAITA Y OROZCO: PROYECTO DE DECLARACIÓN QUE DECLARA DE INTERÉS AL MUSEO DIDÁCTICO DE LA GESTA GÜEMESIANA Y GAUCHA, EN LA LOC. DE SAN LORENZO, PROV. DE SALTA"
+        },
+        {
+          "numero": "S-1037/26",
+          "extracto": "ROJAS DECUT Y ARCE: PROYECTO DE DECLARACIÓN QUE DECLARA DE INTERÉS LA CUARTA EDICIÓN DEL CONGRESO INTERNACIONAL VETERINARIO DEL IGUAZÚ (CIVI), A REALIZARSE EN LA PROV. DE MISIONES, EL 2 Y 3 DE OCTUBRE DE 2026"
+        },
+        {
+          "numero": "S-1038/26",
+          "extracto": "ROJAS DECUT Y ARCE: PROYECTO DE DECLARACIÓN QUE DECLARA DE INTERÉS LA PROPUESTA DIOCESANA CONMEMORATIVA DE LOS 400 AÑOS DE LA LLEGADA DE LAS MISIONES JESUÍTICAS Y LOS 40 AÑOS DE LA DIÓCESIS DE PUERTO IGUAZÚ"
+        },
+        {
+          "numero": "S-1072/26",
+          "extracto": "GONZÁLEZ Y MAYANS: PROYECTO DE DECLARACIÓN QUE EXPRESA BENEPLÁCITO POR LA CELEBRACIÓN DEL 71° ANIVERSARIO DE LA PROVINCIALIZACIÓN DE FORMOSA, A CELEBRARSE EL 28 DE JUNIO DE 2026"
+        },
+        {
+          "numero": "S-1122/26",
+          "extracto": "AVILA: PROYECTO DE DECLARACIÓN QUE EXPRESA BENEPLÁCITO POR LA PARTICIPACIÓN Y SELECCIÓN DEL DOCENTE VÍCTOR DANIEL ZANOTTA, DE LA LOC. DE DELFÍN GALLO, PROV. DE TUCUMÁN, COMO SEMIFINALISTA NACIONAL EN LA EDICIÓN 2026 DEL PREMIO \"DOCENTES QUE INSPIRAN\""
+        },
+        {
+          "numero": "S-1132/26",
+          "extracto": "GIMÉNEZ NAVARRO: PROYECTO DE DECLARACIÓN QUE EXPRESA BENEPLÁCITO POR EL POSICIONAMIENTO DE LA UNIVERSIDAD DE BUENOS AIRES (UBA) EN EL PUESTO 84 DEL QS WORLD UNIVERSITY RANKING 2027"
+        },
+        {
+          "numero": "S-1154/26",
+          "extracto": "ATAUCHE: PROYECTO DE DECLARACIÓN QUE DECLARA DE INTERÉS EL NUEVO ANIVERSARIO DEL ÉXODO JUJEÑO, EL 23 DE AGOSTO DE 2026. Y"
+        },
+        {
+          "numero": "S-1166/26",
+          "extracto": "MOISÉS Y OTROS: PROYECTO DE DECLARACIÓN QUE DECLARA DE INTERÉS LAS ACTIVIDADES CONMEMORATIVAS EN UN NUEVO ANIVERSARIO DEL ÉXODO JUJEÑO"
+        },
+        {
+          "numero": "S-1165/26",
+          "extracto": "MOISÉS Y OTROS: PROYECTO DE DECLARACIÓN QUE DECLARA DE INTERÉS LA CONMEMORACIÓN DEL 190° ANIVERSARIO DEL NATALICIO DE DOÑA JOSEFA DOMINGA \"PEPA\" BALCARCE Y SAN MARTÍN, EL 14 DE JULIO DE 2026"
+        },
+        {
+          "numero": "S-1987/25",
+          "extracto": "GALARETTO Y OTROS: PROYECTO DE DECLARACIÓN QUE DECLARA DE INTERÉS CULTURAL Y EDUCATIVO LA OBRA \"DANZAS, BAILES Y COSTUMBRES DEL LITORAL ARGENTINO\" DE LOS AUTORES CLAUDIA L. GARCÍA Y ENRIQUE A. PIÑEYRO PUBLICADA POR EDITORIAL AUTORES ARGENTINOS EN 2025"
+        },
+        {
+          "numero": "S-1104/26",
+          "extracto": "KRONEBERGER: PROYECTO DE DECLARACIÓN QUE DECLARA DE INTERÉS EL LIBRO \"ARGENTINA METROPOLITANA: ANTECEDENTES Y DESAFÍOS HACIA UNA GOBERNANZA REGIONAL\" PUBLICADO POR LA ASOCIACIÓN CIVIL CIUDADANÍA METROPOLITANA"
+        }
+      ],
+      "tipo": "senadores",
+      "boletin_id": 2350,
+      "boletin_numero": "105/26"
+    },
+    {
+      "seccion": "senadores",
+      "dia": "MIÉRCOLES",
+      "fecha": "02/09",
+      "hora": "17:00",
+      "modalidad": "",
+      "comisiones": [
+        "LEGISLACIÓN GENERAL",
+        "AMBIENTE Y DESARROLLO SUSTENTABLE",
+        "PRESUPUESTO Y HACIENDA"
+      ],
+      "salon": "AZUL",
+      "salon_completo": "AZUL",
+      "temario": [
+        {
+          "numero": "",
+          "extracto": "[CONTINUACIÓN DEL CUARTO INTERMEDIO] PROYECTOS DE LEY"
+        },
+        {
+          "numero": "S-808/26",
+          "extracto": "ROYON: PROYECTO DE LEY SOBRE MARCO REGULATORIO DEL MERCADO VOLUNTARIO DE CARBONO"
+        },
+        {
+          "numero": "S-865/26",
+          "extracto": "ROJAS DECUT Y ARCE: PROYECTO DE LEY QUE ESTABLECE LOS PRESUPUESTOS MÍNIMOS DE PROTECCIÓN AMBIENTAL APLICABLE AL DESARROLLO DE LOS MERCADOS DE CARBONO EN LA REP. ARGENTINA Y SU INTEGRACIÓN AL MERCADO DE CAPITALES NACIONAL"
+        },
+        {
+          "numero": "S-718/26",
+          "extracto": "CAPITANICH: PROYECTO DE LEY QUE ESTABLECE UN MARCO REGULATORIO PARA LA EMISIÓN Y DESARROLLO DE ACTIVOS FINANCIEROS AMBIENTALES. (AFA)"
+        }
+      ],
+      "tipo": "senadores",
+      "boletin_id": 2350,
+      "boletin_numero": "105/26"
+    },
+    {
+      "seccion": "senadores",
+      "dia": "MARTES",
+      "fecha": "01/09",
+      "hora": "15:30",
+      "modalidad": "",
+      "comisiones": [
+        "BICAMERAL DE TRÁMITE LEGISLATIVO (LEY 26.122)"
+      ],
+      "salon": "ILLIA",
+      "salon_completo": "ILLIA",
+      "temario": [
+        {
+          "numero": "",
+          "extracto": "DETERMINACIÓN DE PRÓXIMOS DECRETOS A TRATAR Y CONSIDERACIÓN DE LA METODOLOGÍA DE TRABAJO."
+        }
+      ],
+      "tipo": "bicameral",
+      "boletin_id": 2350,
+      "boletin_numero": "105/26"
+    },
+    {
+      "seccion": "senadores",
+      "dia": "MIÉRCOLES",
+      "fecha": "02/09",
+      "hora": "11:00",
+      "modalidad": "",
+      "comisiones": [
+        "PRESUPUESTO Y HACIENDA",
+        "LEGISLACIÓN GENERAL",
+        "ECONOMÍAS REGIONALES, ECONOMÍA SOCIAL, MICRO, PEQUEÑA Y MEDIANA EMPRESA"
+      ],
+      "salon": "AZUL",
+      "salon_completo": "AZUL",
+      "temario": [
+        {
+          "numero": "S-702/26",
+          "extracto": "VISCHI Y OTROS: PROYECTO DE LEY QUE CREA EL RÉGIMEN DE INCENTIVO PARA INVERSIONES RELEVANTES (RIIR)"
+        }
+      ],
+      "tipo": "senadores",
+      "boletin_id": 2350,
+      "boletin_numero": "105/26"
+    },
+    {
+      "seccion": "senadores",
+      "dia": "MIÉRCOLES",
+      "fecha": "02/09",
+      "hora": "13:00",
+      "modalidad": "",
+      "comisiones": [
+        "PRESUPUESTO Y HACIENDA",
+        "ECONOMÍA NACIONAL E INVERSIÓN",
+        "LEGISLACIÓN GENERAL"
+      ],
+      "salon": "AZUL",
+      "salon_completo": "AZUL",
+      "temario": [
+        {
+          "numero": "",
+          "extracto": "[CONTINUACIÓN DEL CUARTO INTERMEDIO]"
+        },
+        {
+          "numero": "CD-6/26",
+          "extracto": "PROYECTO DE LEY EN REVISIÓN SOBRE RÉGIMEN DE INCENTIVO PARA GRANDES INVERSIONES EN NUEVAS INDUSTRIAS (SÚPER RIGI)"
+        }
+      ],
+      "tipo": "senadores",
+      "boletin_id": 2350,
+      "boletin_numero": "105/26"
+    },
+    {
+      "seccion": "senadores",
+      "dia": "JUEVES",
+      "fecha": "03/09",
+      "hora": "14:00",
+      "modalidad": "",
+      "comisiones": [
+        "BICAMERAL DE LA DEFENSORÍA DEL PUEBLO"
+      ],
+      "salon": "FRONDIZI - MORENO",
+      "salon_completo": "FRONDIZI - MORENO",
+      "temario": [
+        {
+          "numero": "",
+          "extracto": "INICIO DEL PROCESO DE SELECCIÓN E INTEGRACIÓN DEL COMITÉ NACIONAL PARA LA PREVENCIÓN DE LA TORTURA Y OTROS TRATOS O PENAS CRUELES, INHUMANOS O DEGRADANTES."
+        }
+      ],
+      "tipo": "bicameral",
+      "boletin_id": 2350,
+      "boletin_numero": "105/26"
     }
   ]
 }
