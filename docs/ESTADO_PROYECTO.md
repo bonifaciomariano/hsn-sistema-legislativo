@@ -261,6 +261,17 @@ uno puntual, correr con `LOTE_REVISION` más alto o filtrar manualmente.
 - `SANCIONES_MIN_ANIO` (env var de `scraper_sanciones.py`, default 2025) limita los
   boletines procesados; el listado completo del endpoint llega hasta 2004 por si en
   algún momento se quiere backfillear años previos.
+- **Ayuda Memoria — actualizar tras cada Boletín de Novedades:** `data/ayuda_memoria.json`
+  no se depura solo. Cuando `scraper_sanciones.py` procesa un boletín nuevo, hay que
+  sacar de `ordenes_dia_2026.xlsx` (y re-correr `parse_ayuda_memoria.py`) los OD que
+  ese boletín trató, o quedan "pendientes" en la web órdenes que ya se votaron.
+  Cruzar por `od_nro` contra `data/sanciones.json` (filtrando por `nro_boletin`) cubre
+  la mayoría, pero **el regex de expedientes de `scraper_sanciones.py` (`RE_EXP`) no
+  reconoce citas combinadas del boletín tipo "S-252 y 308/26"** (dos números
+  compartiendo el "/año" final) — esas filas quedan sin expediente y su OD no se
+  marca como tratado. Hay que revisarlas a mano contra el texto del boletín (buscar
+  " y \d+/\d\d" en el PDF) antes de dar por completo el barrido. Visto por primera vez
+  con el boletín 7/26 (OD 150, 165 y 275 se escapaban así).
 
 ---
 
