@@ -6869,7 +6869,7 @@
         }
       ],
       "tipo": "senadores",
-      "boletin_id": 2350,
+      "boletin_id": 2353,
       "boletin_numero": "105/26"
     },
     {
@@ -7054,7 +7054,7 @@
         }
       ],
       "tipo": "senadores",
-      "boletin_id": 2350,
+      "boletin_id": 2353,
       "boletin_numero": "105/26"
     },
     {
@@ -7089,7 +7089,7 @@
         }
       ],
       "tipo": "senadores",
-      "boletin_id": 2350,
+      "boletin_id": 2353,
       "boletin_numero": "105/26"
     },
     {
@@ -7110,7 +7110,7 @@
         }
       ],
       "tipo": "bicameral",
-      "boletin_id": 2350,
+      "boletin_id": 2353,
       "boletin_numero": "105/26"
     },
     {
@@ -7133,7 +7133,7 @@
         }
       ],
       "tipo": "senadores",
-      "boletin_id": 2350,
+      "boletin_id": 2353,
       "boletin_numero": "105/26"
     },
     {
@@ -7152,7 +7152,7 @@
       "temario": [
         {
           "numero": "",
-          "extracto": "[CONTINUACIÓN DEL CUARTO INTERMEDIO]"
+          "extracto": "[CONTINUACIÓN DEL CUARTO INTERMEDIO] PROYECTO DE LEY"
         },
         {
           "numero": "CD-6/26",
@@ -7160,7 +7160,7 @@
         }
       ],
       "tipo": "senadores",
-      "boletin_id": 2350,
+      "boletin_id": 2353,
       "boletin_numero": "105/26"
     },
     {
@@ -7181,7 +7181,7 @@
         }
       ],
       "tipo": "bicameral",
-      "boletin_id": 2350,
+      "boletin_id": 2353,
       "boletin_numero": "105/26"
     }
   ]
