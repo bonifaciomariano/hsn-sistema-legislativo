@@ -263,6 +263,9 @@ body{font-family:'Poppins',Calibri,sans-serif;background:#F5F7FA;color:#4A4A4A;f
 .bloque-dot{width:10px;height:10px;border-radius:50%;flex-shrink:0}
 .member-name{font-size:13px;font-weight:600;color:#4A4A4A;flex:1;min-width:160px}
 .rol-badge{font-size:9.5px;font-weight:700;padding:2px 7px;border-radius:10px;text-transform:uppercase;letter-spacing:.4px;white-space:nowrap;flex-shrink:0}
+.member-row-vacante{opacity:.65}
+.vacante-dot{border:1.5px dashed #b0bac5;background:transparent}
+.vacante-label{font-style:italic;font-weight:500;color:#9aa1a6}
 .rol-Presidente{background:#1B5EA2;color:#fff}
 .rol-Vicepresidente{background:#D6E4F0;color:#1B5EA2}
 .rol-Secretario{background:#EAF0FA;color:#2E75B6}
@@ -1949,10 +1952,20 @@ function ordenIntegrante(m){
   var bot=COM_ORDEN_BOTTOM.indexOf(nb);if(bot>=0)return 1000+bot;
   return 100;
 }
+/* Integrantes reales + una fila placeholder por cada vacante (cupo - integrantes
+   cargados), para que tanto la vista como el export a PDF muestren cuántos
+   lugares quedan libres en la comisión, no sólo quién ya está. */
+function conVacantes(c){
+  var lista=c.integrantes.slice();
+  var vac=(c.cupo||0)-lista.length;
+  for(var k=0;k<vac;k++)lista.push({nombre:'Vacante',bloque:'',rol:'',vacante:true});
+  return lista;
+}
 function renderIntegrantes(c){
   comisionAbierta=c;
-  var conIdx=c.integrantes.map(function(m,i){return {m:m,i:i};});
+  var conIdx=conVacantes(c).map(function(m,i){return {m:m,i:i};});
   conIdx.sort(function(a,b){
+    if(!!a.m.vacante!==!!b.m.vacante)return a.m.vacante?1:-1;
     var oa=ordenIntegrante(a.m),ob=ordenIntegrante(b.m);
     if(oa!==ob)return oa-ob;
     return (a.m.nombre||'').localeCompare(b.m.nombre||'');
@@ -1960,6 +1973,13 @@ function renderIntegrantes(c){
   var html='';
   conIdx.forEach(function(pair){
     var m=pair.m,i=pair.i;
+    if(m.vacante){
+      html+='<div class="member-row member-row-vacante">'
+        +'<span class="bloque-dot vacante-dot"></span>'
+        +'<span class="member-name vacante-label">Vacante</span>'
+        +'</div>';
+      return;
+    }
     var col=blqColor(m.bloque);
     var rolHtml=(m.rol&&m.rol!=='Vocal')?'<span class="rol-badge rol-'+m.rol+'">'+esc(m.rol)+'</span>':'';
     html+='<div class="member-row">'
@@ -2557,7 +2577,11 @@ function exportarComisionPdf(){
   doc.text(nameLines[0],ML+3,y+8.5);
   doc.setFont('Poppins','normal');doc.setFontSize(8);
   doc.setTextColor(BLUE_LT[0],BLUE_LT[1],BLUE_LT[2]);
-  doc.text(c.integrantes.length+' integrantes',W-MR-3,y+8.5,{align:'right'});
+  var vacantes=Math.max(0,(c.cupo||0)-c.integrantes.length);
+  var totalTxt=vacantes>0
+    ?(c.integrantes.length+' de '+c.cupo+' integrantes · '+vacantes+' vacante'+(vacantes!==1?'s':''))
+    :(c.integrantes.length+' integrantes');
+  doc.text(totalTxt,W-MR-3,y+8.5,{align:'right'});
   y+=14;
 
   doc.setFillColor(BLUE_LT[0],BLUE_LT[1],BLUE_LT[2]);
@@ -2570,9 +2594,20 @@ function exportarComisionPdf(){
   doc.text('DPP',W-MR-3,y+4.5,{align:'right'});
   y+=6.5;
 
-  c.integrantes.forEach(function(m,i){
+  conVacantes(c).forEach(function(m,i){
     checkPage(ROW_H);
     if(i%2===0){doc.setFillColor(248,250,252);doc.rect(ML,y,pageW,ROW_H,'F');}
+    if(m.vacante){
+      doc.setDrawColor(176,186,197);doc.setLineWidth(0.3);
+      doc.circle(ML+4.5,y+ROW_H/2,1.4,'S');
+      doc.setFont('Poppins','normal');doc.setFontSize(8.5);
+      doc.setTextColor(154,161,166);
+      doc.text('Vacante',ML+8,y+ROW_H/2+1.3);
+      doc.setDrawColor(241,245,249);doc.setLineWidth(0.2);
+      doc.line(ML,y+ROW_H,W-MR,y+ROW_H);
+      y+=ROW_H;
+      return;
+    }
     var bc=blqColor(m.bloque);
     var hex=bc.dot.replace('#','');
     doc.setFillColor(parseInt(hex.substring(0,2),16),parseInt(hex.substring(2,4),16),parseInt(hex.substring(4,6),16));
@@ -4718,7 +4753,7 @@ AUTORIDADES = {
     'De Legislación General': {'pres': 'MÁRQUEZ, Nadia Judith', 'vice': 'BENSUSÁN, Daniel Pablo', 'secr': ''},
     'De Minería, Energía y Combustibles': {'pres': 'FAMA, Flavio Sergio', 'vice': '', 'secr': ''},
     'De Población y Desarrollo Humano': {'pres': 'KIRCHNER, Alicia Margarita Antonia', 'vice': 'GODOY, Juan Cruz', 'secr': ''},
-    'De Presupuesto y Hacienda': {'pres': 'MONTEVERDE, Agustín Aníbal', 'vice': '', 'secr': 'SCHNEIDER, Silvana Lorena'},
+    'De Presupuesto y Hacienda': {'pres': 'MONTEVERDE, Agustín Aníbal', 'vice': 'SALINO, Fernando Aldo', 'secr': 'SCHNEIDER, Silvana Lorena'},
     'De Relaciones Exteriores y Culto': {'pres': 'PAOLTRONI, Francisco Manuel', 'vice': '', 'secr': ''},
     'De Salud': {'pres': 'ARRASCAETA, Ivanna Marcela', 'vice': 'ARCE, Carlos Omar', 'secr': ''},
     'De Seguridad Interior y Narcotráfico': {'pres': 'LOSADA, Carolina', 'vice': '', 'secr': ''},
