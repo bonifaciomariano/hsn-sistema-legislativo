@@ -6869,8 +6869,8 @@
         }
       ],
       "tipo": "senadores",
-      "boletin_id": 2353,
-      "boletin_numero": "105/26"
+      "boletin_id": 2356,
+      "boletin_numero": "108/26"
     },
     {
       "seccion": "senadores",
@@ -6918,11 +6918,19 @@
         },
         {
           "numero": "S-100/26",
-          "extracto": "ÁLVAREZ RIVERO: PROYECTO DE LEY QUE DECLARA EL 10 DE MARZO DE CADA AÑO, COMO \"DÍA DE ENSEÑAR A LEER, ESCRIBIR Y PENSAR EN PRIMER GRADO\". FIESTA NACIONAL"
+          "extracto": "ÁLVAREZ RIVERO: PROYECTO DE LEY QUE DECLARA EL 10 DE MARZO DE CADA AÑO, COMO \"DÍA DE ENSEÑAR A LEER, ESCRIBIR Y PENSAR EN PRIMER GRADO\""
+        },
+        {
+          "numero": "S-1239/26",
+          "extracto": "COTO Y OTROS: PROYECTO DE LEY QUE INSTITUYE EL 3 DE MARZO DE CADA AÑO, COMO \"DÍA NACIONAL EN HONOR AL ALMIRANTE GUILLERMO BROWN\" . FIESTA NACIONAL"
         },
         {
           "numero": "S-1040/26",
-          "extracto": "VALENZUELA: PROYECTO DE LEY QUE DECLARA FIESTA NACIONAL AL \"FESTIVAL DEL FOLCLORE CORRENTINO\", A REALIZARSE EN LA CDAD. DE SANTO TOMÉ, PROV. DE CORRIENTES, EN EL MES DE DICIEMBRE DE CADA AÑO"
+          "extracto": "VALENZUELA: PROYECTO DE LEY QUE DECLARA FIESTA NACIONAL AL \"FESTIVAL DEL FOLCLORE CORRENTINO\", A REALIZARSE EN LA CDAD. DE SANTO TOMÉ, PROV. DE CORRIENTES, EN EL MES DE DICIEMBRE DE CADA AÑO. HOMENAJE"
+        },
+        {
+          "numero": "CD-21/25",
+          "extracto": "PROYECTO DE LEY EN REVISIÓN QUE DECLARA HÉROE NACIONAL AL BRIGADIER ESTANISLAO LÓPEZ “PATRIARCA DEL FEDERALISMO ARGENTINO” EN RECONOCIMIENTO A SU ACCIONAR EN DEFENSA DE LOS IDEALES FEDERALES Y REPUBLICANOS"
         },
         {
           "numero": "S-336/25",
@@ -7054,8 +7062,8 @@
         }
       ],
       "tipo": "senadores",
-      "boletin_id": 2353,
-      "boletin_numero": "105/26"
+      "boletin_id": 2356,
+      "boletin_numero": "108/26"
     },
     {
       "seccion": "senadores",
@@ -7089,8 +7097,8 @@
         }
       ],
       "tipo": "senadores",
-      "boletin_id": 2353,
-      "boletin_numero": "105/26"
+      "boletin_id": 2356,
+      "boletin_numero": "108/26"
     },
     {
       "seccion": "senadores",
@@ -7110,8 +7118,8 @@
         }
       ],
       "tipo": "bicameral",
-      "boletin_id": 2353,
-      "boletin_numero": "105/26"
+      "boletin_id": 2354,
+      "boletin_numero": "106/26"
     },
     {
       "seccion": "senadores",
@@ -7133,8 +7141,9 @@
         }
       ],
       "tipo": "senadores",
-      "boletin_id": 2353,
-      "boletin_numero": "105/26"
+      "boletin_id": 2355,
+      "boletin_numero": "107/26",
+      "suspendida": true
     },
     {
       "seccion": "senadores",
@@ -7160,8 +7169,9 @@
         }
       ],
       "tipo": "senadores",
-      "boletin_id": 2353,
-      "boletin_numero": "105/26"
+      "boletin_id": 2355,
+      "boletin_numero": "107/26",
+      "suspendida": true
     },
     {
       "seccion": "senadores",
@@ -7181,8 +7191,169 @@
         }
       ],
       "tipo": "bicameral",
-      "boletin_id": 2353,
-      "boletin_numero": "105/26"
+      "boletin_id": 2356,
+      "boletin_numero": "108/26"
+    },
+    {
+      "seccion": "senadores",
+      "dia": "MIÉRCOLES",
+      "fecha": "02/09",
+      "hora": "12:30",
+      "modalidad": "",
+      "comisiones": [
+        "ADMINISTRADORA DE LA BIBLIOTECA DEL CONGRESO DE LA NACIÓN"
+      ],
+      "salon": "SALA DE REUNIONES DEL 1°PISO DE LA BIBLIOTECA",
+      "salon_completo": "SALA DE REUNIONES DEL 1°PISO DE LA BIBLIOTECA",
+      "temario": [
+        {
+          "numero": "",
+          "extracto": "REUNIÓN CONSTITUTIVA"
+        }
+      ],
+      "tipo": "senadores",
+      "boletin_id": 2354,
+      "boletin_numero": "106/26",
+      "suspendida": true
+    },
+    {
+      "seccion": "senadores",
+      "dia": "JUEVES",
+      "fecha": "03/09",
+      "hora": "11:00",
+      "modalidad": "",
+      "comisiones": [
+        "MINERÍA, ENERGÍA Y COMBUSTIBLES",
+        "PRESUPUESTO Y HACIENDA"
+      ],
+      "salon": "AZUL",
+      "salon_completo": "AZUL",
+      "temario": [
+        {
+          "numero": "S-1271/25",
+          "extracto": "AVILA: PROYECTO DE LEY QUE MODIFICA SU SIMILAR 27.640 - BIOCOMBUSTIBLES-, RESPECTO DEL PORCENTAJE OBLIGATORIO DE BIODIESEL Y BIOETANOL EN EL GASOIL Y LA NAFTA"
+        },
+        {
+          "numero": "S-1861/25",
+          "extracto": "CARAMBIA Y GADANO: PROYECTO DE LEY QUE REGULA LAS ACTIVIDADES DE ELABORACIÓN, ALMACENAJE, COMERCIALIZACIÓN, MEZCLA Y AUTOCONSUMO DE BIOCOMBUSTIBLES"
+        },
+        {
+          "numero": "S-3/26",
+          "extracto": "VIGO Y ESPÍNOLA: PROYECTO DE LEY QUE MODIFICA SU SIMILAR 27.640- BIOCOMBUSTIBLES-, RESPECTO DE NUEVOS CRONOGRAMAS RELATIVOS A LA EXTENSIÓN TEMPORAL DE LAS REGULACIONES Y DE LA IMPLEMENTACIÓN DE LAS CUOTAS DE CORTES DE COMBUSTIBLES FÓSILES"
+        },
+        {
+          "numero": "S-809/26",
+          "extracto": "BULLRICH Y OTROS: PROYECTO DE LEY QUE ESTABLECE MARCO REGULATORIO DE BIOCOMBUSTIBLES EN EL TERRITORIO NACIONAL"
+        },
+        {
+          "numero": "S-916/26",
+          "extracto": "ROYON: PROYECTO DE LEY QUE ESTABLECE EL MARCO REGULATORIO DE LOS BIOCOMBUSTIBLES"
+        },
+        {
+          "numero": "S-1035/26",
+          "extracto": "ARCE Y ROJAS DECUT: PROYECTO DE LEY QUE ESTABLECE EL MARCO REGULATORIO DE LOS BIOCOMBUSTIBLES EN EL TERRITORIO NACIONAL"
+        },
+        {
+          "numero": "S-1246/26",
+          "extracto": "CAPITANICH Y OTROS: PROYECTO DE LEY QUE CREA EL RÉGIMEN DE PROMOCIÓN FEDERAL PARA LA PRODUCCIÓN DE BIOCOMBUSTIBLES"
+        }
+      ],
+      "tipo": "senadores",
+      "boletin_id": 2356,
+      "boletin_numero": "108/26"
+    },
+    {
+      "seccion": "senadores",
+      "dia": "JUEVES",
+      "fecha": "03/09",
+      "hora": "13:00",
+      "modalidad": "",
+      "comisiones": [
+        "ADMINISTRADORA DE LA BIBLIOTECA DEL CONGRESO DE LA NACIÓN"
+      ],
+      "salon": "SALA DE REUNIONES DEL 1°PISO DE LA BIBLIOTECA",
+      "salon_completo": "SALA DE REUNIONES DEL 1°PISO DE LA BIBLIOTECA",
+      "temario": [
+        {
+          "numero": "",
+          "extracto": "REUNIÓN CONSTITUTIVA."
+        }
+      ],
+      "tipo": "senadores",
+      "boletin_id": 2356,
+      "boletin_numero": "108/26"
+    },
+    {
+      "seccion": "senadores",
+      "dia": "MARTES",
+      "fecha": "08/09",
+      "hora": "13:00",
+      "modalidad": "",
+      "comisiones": [
+        "BICAMERAL DE FISCALIZACIÓN DE LOS ÓRGANOS Y ACTIVIDADES DE",
+        "SEGURIDAD INTERIOR"
+      ],
+      "salon": "ILLIA",
+      "salon_completo": "ILLIA",
+      "temario": [
+        {
+          "numero": "",
+          "extracto": "CONSIDERACIÓN DE PLAN DE TRABAJO Y AGENDA DE ACTIVIDADES 2026."
+        }
+      ],
+      "tipo": "bicameral",
+      "boletin_id": 2356,
+      "boletin_numero": "108/26"
+    },
+    {
+      "seccion": "senadores",
+      "dia": "MIÉRCOLES",
+      "fecha": "02/09",
+      "hora": "12:30",
+      "modalidad": "",
+      "comisiones": [
+        "- PRESUPUESTO Y HACIENDA",
+        "LEGISLACIÓN GENERAL",
+        "ECONOMÍAS REGIONALES, ECONOMÍA SOCIAL, MICRO, PEQUEÑA Y MEDIANA EMPRESA"
+      ],
+      "salon": "AZUL",
+      "salon_completo": "AZUL",
+      "temario": [
+        {
+          "numero": "S-702/26",
+          "extracto": "VISCHI Y OTROS: PROYECTO DE LEY QUE CREA EL RÉGIMEN DE INCENTIVO PARA INVERSIONES RELEVANTES (RIIR)"
+        }
+      ],
+      "tipo": "senadores",
+      "boletin_id": 2356,
+      "boletin_numero": "108/26"
+    },
+    {
+      "seccion": "senadores",
+      "dia": "MIÉRCOLES",
+      "fecha": "02/09",
+      "hora": "13:30",
+      "modalidad": "",
+      "comisiones": [
+        "PRESUPUESTO Y HACIENDA",
+        "ECONOMÍA NACIONAL E INVERSIÓN",
+        "LEGISLACIÓN GENERAL"
+      ],
+      "salon": "AZUL",
+      "salon_completo": "AZUL",
+      "temario": [
+        {
+          "numero": "",
+          "extracto": "[CONTINUACIÓN DEL CUARTO INTERMEDIO] PROYECTO DE LEY"
+        },
+        {
+          "numero": "CD-6/26",
+          "extracto": "PROYECTO DE LEY EN REVISIÓN SOBRE RÉGIMEN DE INCENTIVO PARA GRANDES INVERSIONES EN NUEVAS INDUSTRIAS (SÚPER RIGI)"
+        }
+      ],
+      "tipo": "senadores",
+      "boletin_id": 2356,
+      "boletin_numero": "108/26"
     }
   ]
 }
