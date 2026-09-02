@@ -1030,11 +1030,6 @@
         "rol": ""
       },
       {
-        "nombre": "CRISTINA, Andrea Marcela",
-        "bloque": "FRENTE PRO",
-        "rol": ""
-      },
-      {
         "nombre": "ANDRADA, Guillermo Eduardo",
         "bloque": "CONVICCIÓN FEDERAL",
         "rol": ""
@@ -1072,6 +1067,11 @@
       {
         "nombre": "UÑAC, Sergio Mauricio",
         "bloque": "JUSTICIALISTA",
+        "rol": ""
+      },
+      {
+        "nombre": "HUALA, María Victoria",
+        "bloque": "FRENTE PRO",
         "rol": ""
       }
     ]

@@ -406,14 +406,23 @@ def _parece_nombre_comision(linea, comisiones_norm):
     return False
 
 
-def _le_sigue_fecha(lineas, i):
+def _le_sigue_fecha(lineas, i, comisiones_norm):
     """¿La línea en `i` es (el inicio de) un nombre de comisión que termina
     justo antes de una línea de fecha, con a lo sumo 1 línea de continuación
     en el medio y sin que aparezca contenido de temario (token de expediente)
     en el camino? Señal estructural —no depende de reconocer el nombre
     contra comisiones.json— para comisiones ad-hoc que no son ni BICAMERAL
     ni ACUERDOS (p.ej. "ADMINISTRADORA DE LA BIBLIOTECA DEL CONGRESO DE LA
-    NACIÓN", una comisión especial que ni siquiera está en comisiones.json)."""
+    NACIÓN", una comisión especial que ni siquiera está en comisiones.json).
+
+    Si la línea intermedia YA matchea una comisión oficial reconocida
+    (_parece_nombre_comision), esa es la que abre el nombre real -> la línea
+    `i` no puede ser también el inicio (era la cola de un ítem de temario sin
+    puntuación final que, por casualidad, tiene la reunión siguiente 1-2
+    líneas después). Sin este corte, ambas líneas se funden en un solo
+    nombre de comisión corrupto (visto en la práctica: boletín 103/26, un
+    ítem de temario terminaba en "...OFICINA DE PRESUPUESTO DEL CONGRESO DE
+    LA NACIÓN" justo antes de la próxima reunión)."""
     for j in (i + 1, i + 2):
         if j >= len(lineas):
             break
@@ -422,6 +431,8 @@ def _le_sigue_fecha(lineas, i):
             return True
         cu = candidata.upper()
         if RE_EXP_TOKEN.search(candidata) or cu.startswith("TEMARIO") or candidata.startswith("📋"):
+            return False
+        if _parece_nombre_comision(candidata, comisiones_norm):
             return False
     return False
 
@@ -529,7 +540,7 @@ def parsear_reuniones_texto_libre(texto, comisiones_norm):
         parece_nombre_ad_hoc = (
             not RE_EXP_TOKEN.search(linea)
             and not linea.rstrip().endswith((".", ":"))
-            and _le_sigue_fecha(lineas, i)
+            and _le_sigue_fecha(lineas, i, comisiones_norm)
         )
         if reunion is not None and (_parece_nombre_comision(linea, comisiones_norm) or parece_nombre_ad_hoc):
             cerrar()

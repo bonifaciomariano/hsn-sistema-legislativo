@@ -6799,33 +6799,6 @@
     },
     {
       "seccion": "senadores",
-      "dia": "MIÉRCOLES",
-      "fecha": "02/09",
-      "hora": "15:00",
-      "modalidad": "",
-      "comisiones": [
-        "DE LA OFICINA DE PRESUPUESTO DEL CONGRESO DE LA NACIÓN JUSTICIA Y ASUNTOS PENALES",
-        "PRESUPUESTO Y HACIENDA"
-      ],
-      "salon": "AZUL",
-      "salon_completo": "AZUL",
-      "temario": [
-        {
-          "numero": "PE-243/26",
-          "extracto": "JEFATURA DE GABINETE: COMUNICA EL \"ACUERDO DE TRANSFERENCIA DE LA FUNCIÓN JUDICIAL EN MATERIA CRIMINAL Y CORRECCIONAL DE MENORES DEL ÁMBITO NACIONAL A LA JUSTICIA DE LA CIUDAD AUTÓNOMA DE BUENOS AIRES\", CELEBRADO EL 3 DE JULIO DE 2026"
-        },
-        {
-          "numero": "PE-244/26",
-          "extracto": "JEFATURA DE GABINETE: COMUNICA EL “CUARTO CONVENIO DE TRANSFERENCIA PROGRESIVA DE COMPETENCIAS PENALES DE LA JUSTICIA NACIONAL AL PODER JUDICIAL DE LA CIUDAD AUTÓNOMA DE BUENOS AIRES\", CELEBRADO EL 3 DE JULIO DE 2026"
-        }
-      ],
-      "tipo": "senadores",
-      "boletin_id": 2348,
-      "boletin_numero": "103/26",
-      "suspendida": true
-    },
-    {
-      "seccion": "senadores",
       "dia": "JUEVES",
       "fecha": "27/08",
       "hora": "9:00",

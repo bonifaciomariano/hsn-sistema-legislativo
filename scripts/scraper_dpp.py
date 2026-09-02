@@ -173,8 +173,12 @@ def descargar_texto_pdf(url):
 # ─────────────────────────────── Parseo del DPP ──────────────────────────────
 
 _RE_NUM = re.compile(r"DPP[-\s]*(\d+/\d+)", re.IGNORECASE)
-# Artículos: 'Artículo 1°-', 'Artículo 30_', 'Artículo 40' (con ruido OCR)
-_RE_ART = re.compile(r"Art[íi]culo\s+\d+\s*[°ºoO]?\s*[-_.]?", re.IGNORECASE)
+# Artículos: 'Artículo 1°-', 'Artículo 30_', 'Artículo 40' (con ruido OCR).
+# 'la' es un glitch de fuente/glifo confirmado en al menos un DPP real (el
+# "1°" se extrae literalmente como "la") -- sin este caso, el artículo 1
+# (donde casi siempre está la designación) queda huérfano y se pierde
+# entero, porque no hay ningún artículo anterior que abra su segmento.
+_RE_ART = re.compile(r"Art[íi]culo\s+(?:\d+|la)\s*[°ºoO]?\s*[-_.]?", re.IGNORECASE)
 _RE_COMISION = re.compile(r"en\s+la\s+Comisi[óo]n\s+de\s+(.+?)(?:,|\.|$)", re.IGNORECASE | re.DOTALL)
 
 

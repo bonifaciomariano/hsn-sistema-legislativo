@@ -54,7 +54,8 @@
     "61/26": "09/06/2026",
     "63/26": "16/06/2026",
     "65/26": "17/06/2026",
-    "67/26": "05/08/2026"
+    "67/26": "05/08/2026",
+    "72/26": "02/09/2026"
   },
   "cambios": [
     {
@@ -4817,6 +4818,13 @@
       "tipo": "replace",
       "senador": "JUEZ, Luis Alfredo",
       "reemplaza": "ABDALA, Bartolomé Esteban"
+    },
+    {
+      "dpp": "72/26",
+      "comision": "De Economías Regionales, Economía Social, Micro, Pequeña y Mediana Empresa",
+      "tipo": "replace",
+      "senador": "HUALA, María Victoria",
+      "reemplaza": "CRISTINA, Andrea Marcela"
     }
   ]
 }
