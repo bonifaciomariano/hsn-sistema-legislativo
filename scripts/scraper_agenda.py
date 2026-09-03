@@ -442,7 +442,13 @@ def _comisiones_desde_buffer(buffer):
     antes de la fecha. Si en algún punto aparece "|" (reunión conjunta en el
     formato narrativo/agosto-2026), se separa por ese carácter; si no, cada
     línea acumulada es una comisión (formato histórico). Descarta artefactos
-    de extracción: palabras sueltas de 3 letras o menos."""
+    de extracción: palabras sueltas de 3 letras o menos y líneas sin ninguna
+    letra (p.ej. un "-" suelto de un glifo/bullet del PDF que, al unirse con
+    join(), quedaba pegado como prefijo de la primera comisión real -- visto
+    en la práctica en el boletín 109/26: "- MINERÍA, ENERGÍA Y COMBUSTIBLES"
+    en vez de "MINERÍA, ENERGÍA Y COMBUSTIBLES", lo que rompía el matching
+    contra la misma reunión en boletines anteriores/posteriores)."""
+    buffer = [c for c in buffer if re.search(r"[A-ZÁÉÍÓÚÑa-záéíóúñ]", c)]
     texto = " ".join(buffer)
     if "|" in texto:
         partes = [p.strip() for p in texto.split("|") if p.strip()]

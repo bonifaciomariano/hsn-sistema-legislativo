@@ -7148,27 +7148,6 @@
     },
     {
       "seccion": "senadores",
-      "dia": "JUEVES",
-      "fecha": "03/09",
-      "hora": "14:00",
-      "modalidad": "",
-      "comisiones": [
-        "BICAMERAL DE LA DEFENSORÍA DEL PUEBLO"
-      ],
-      "salon": "FRONDIZI - MORENO",
-      "salon_completo": "FRONDIZI - MORENO",
-      "temario": [
-        {
-          "numero": "",
-          "extracto": "INICIO DEL PROCESO DE SELECCIÓN E INTEGRACIÓN DEL COMITÉ NACIONAL PARA LA PREVENCIÓN DE LA TORTURA Y OTROS TRATOS O PENAS CRUELES, INHUMANOS O DEGRADANTES."
-        }
-      ],
-      "tipo": "bicameral",
-      "boletin_id": 2356,
-      "boletin_numero": "108/26"
-    },
-    {
-      "seccion": "senadores",
       "dia": "MIÉRCOLES",
       "fecha": "02/09",
       "hora": "12:30",
@@ -7232,51 +7211,8 @@
         }
       ],
       "tipo": "senadores",
-      "boletin_id": 2356,
-      "boletin_numero": "108/26"
-    },
-    {
-      "seccion": "senadores",
-      "dia": "JUEVES",
-      "fecha": "03/09",
-      "hora": "13:00",
-      "modalidad": "",
-      "comisiones": [
-        "ADMINISTRADORA DE LA BIBLIOTECA DEL CONGRESO DE LA NACIÓN"
-      ],
-      "salon": "SALA DE REUNIONES DEL 1°PISO DE LA BIBLIOTECA",
-      "salon_completo": "SALA DE REUNIONES DEL 1°PISO DE LA BIBLIOTECA",
-      "temario": [
-        {
-          "numero": "",
-          "extracto": "REUNIÓN CONSTITUTIVA."
-        }
-      ],
-      "tipo": "senadores",
-      "boletin_id": 2356,
-      "boletin_numero": "108/26"
-    },
-    {
-      "seccion": "senadores",
-      "dia": "MARTES",
-      "fecha": "08/09",
-      "hora": "13:00",
-      "modalidad": "",
-      "comisiones": [
-        "BICAMERAL DE FISCALIZACIÓN DE LOS ÓRGANOS Y ACTIVIDADES DE",
-        "SEGURIDAD INTERIOR"
-      ],
-      "salon": "ILLIA",
-      "salon_completo": "ILLIA",
-      "temario": [
-        {
-          "numero": "",
-          "extracto": "CONSIDERACIÓN DE PLAN DE TRABAJO Y AGENDA DE ACTIVIDADES 2026."
-        }
-      ],
-      "tipo": "bicameral",
-      "boletin_id": 2356,
-      "boletin_numero": "108/26"
+      "boletin_id": 2357,
+      "boletin_numero": "109/26"
     },
     {
       "seccion": "senadores",
@@ -7327,6 +7263,119 @@
       "tipo": "senadores",
       "boletin_id": 2356,
       "boletin_numero": "108/26"
+    },
+    {
+      "seccion": "senadores",
+      "dia": "JUEVES",
+      "fecha": "03/09",
+      "hora": "13:00",
+      "modalidad": "",
+      "comisiones": [
+        "ADMINISTRADORA DE LA BIBLIOTECA DEL CONGRESO DE LA NACIÓN"
+      ],
+      "salon": "SALA DE REUNIONES DEL 1°PISO DE LA BIBLIOTECA",
+      "salon_completo": "SALA DE REUNIONES DEL 1°PISO DE LA BIBLIOTECA",
+      "temario": [
+        {
+          "numero": "",
+          "extracto": "1. VERIFICACIÓN DE LOS INSTRUMENTOS DE DESIGNACIÓN DE LOS INTEGRANTES DE LA COMISIÓN REMITIDOS POR LA H. CÁMARA DE SENADORES Y POR LA H. CÁMARA DE DIPUTADOS DE LA NACIÓN, E INCORPORACIÓN DE LOS MISMOS AL ACTA. 2. CONSTITUCIÓN DE LA COMISIÓN ADMINISTRADORA DE LA BIBLIOTECA DEL CONGRESO DE LA NACIÓN PARA EL PERÍODO 2026 Y 2027 (ARTÍCULO 13 DEL REGLAMENTO APROBADO POR RESOLUCIÓN N°142/10). 3. ELECCIÓN DE AUTORIDADES DE LA COMISIÓN: PRESIDENCIA (CORRESPONDIENDO LA MISMA A UN INTEGRANTE DE LA H. CÁMARA DE DIPUTADOS, CONFORME LA ROTACIÓN PREVISTA EN EL ARTÍCULO 7° DEL REGLAMENTO), SECRETARÍAS (ARTÍCULO 8°), TESORERÍA Y PROTESORERÍA (ARTÍCULO 9°) Y VOCALÍAS (ARTÍCULO 10). 4. CONSIDERAR LOS ASUNTOS VINCULADOS A LO ESTIPULADO EN LOS ARTÍCULO 15 INC A) Y 17 DEL REGLAMENTO INTERNO DE LA COMISIÓN ADMINISTRADORA."
+        }
+      ],
+      "tipo": "senadores",
+      "boletin_id": 2357,
+      "boletin_numero": "109/26"
+    },
+    {
+      "seccion": "senadores",
+      "dia": "MARTES",
+      "fecha": "08/09",
+      "hora": "13:00",
+      "modalidad": "",
+      "comisiones": [
+        "BICAMERAL DE FISCALIZACIÓN DE LOS ÓRGANOS Y ACTIVIDADES DE",
+        "SEGURIDAD INTERIOR"
+      ],
+      "salon": "ILLIA",
+      "salon_completo": "ILLIA",
+      "temario": [
+        {
+          "numero": "",
+          "extracto": "CONSIDERACIÓN DE PLAN DE TRABAJO Y AGENDA DE ACTIVIDADES 2026."
+        }
+      ],
+      "tipo": "bicameral",
+      "boletin_id": 2357,
+      "boletin_numero": "109/26"
+    },
+    {
+      "seccion": "senadores",
+      "dia": "MIÉRCOLES",
+      "fecha": "09/09",
+      "hora": "13:00",
+      "modalidad": "",
+      "comisiones": [
+        "INFRAESTRUCTURA, VIVIENDA Y TRANSPORTE"
+      ],
+      "salon": "ILLIA",
+      "salon_completo": "ILLIA",
+      "temario": [
+        {
+          "numero": "S-1462/25",
+          "extracto": "OLIVERA LUCERO: PROYECTO DE LEY QUE MODIFICA EL ART. 55 DE SU SIMILAR 24.449 - TRÁNSITO -, RESPECTO DEL TRANSPORTE DE ESCOLARES"
+        },
+        {
+          "numero": "S-1877/25",
+          "extracto": "AVILA: PROYECTO DE LEY QUE MODIFICA EL ART. 55 DE SU SIMILAR 24.449 - TRÁNSITO - RESPECTO DE LAS CONDICIONES DE SEGURIDAD EN TRANSPORTE DE ESCOLARES"
+        },
+        {
+          "numero": "S-200/26",
+          "extracto": "FERNÁNDEZ SAGASTI: REPRODUCE PROYECTO DE LEY QUE MODIFICA SU SIMILAR 24.449 - LEY DE TRÁNSITO -, INCORPORANDO EL ART. 68 BIS - LÍMITES A LA EXCLUSIÓN DE COBERTURA (REF"
+        },
+        {
+          "numero": "S-753/24",
+          "extracto": ")"
+        },
+        {
+          "numero": "S-726/26",
+          "extracto": "FULLONE: PROYECTO DE LEY QUE ESTABLECE UN RÉGIMEN EXCEPCIONAL PARA LA REGULACIÓN DE LA OBRA PÚBLICA NACIONAL"
+        },
+        {
+          "numero": "S-1110/26",
+          "extracto": "PAOLTRONI: PROYECTO DE DECLARACIÓN QUE DECLARA DE INTERÉS EL \"PROYECTO FERROCARRILES DE SUDAMÉRICA, INTEGRACIÓN FERROVIARIA DE LOS ESTADOS DE SUDAMÉRICA\", QUE ABARCA EL NORTE GRANDE DE NUESTRO PAÍS Y LA REGIÓN DEL CENTRO DE AMÉRICA DEL SUR"
+        },
+        {
+          "numero": "S-1149/26",
+          "extracto": "ATAUCHE: PROYECTO DE DECLARACIÓN QUE ADHIERE A LA CONMEMORACIÓN DEL DÍA MUNDIAL EN RECUERDO DE LAS VÍCTIMAS DE ACCIDENTE DE TRÁFICO, EL 15 DE NOVIEMBRE DE 2026"
+        },
+        {
+          "numero": "S-1303/26",
+          "extracto": "GALARETTO: PROYECTO DE DECLARACIÓN QUE DECLARA DE INTERÉS LA \"XXX FIESTA DEL TRANSPORTE\" A REALIZARSE EN LA LOC. DE PUJATO, PROV. DE SANTA FE, DEL 25 AL 27 DE SEPTIEMBRE DE 2026. LA REUNIÓN CONTARÁ CON LA PARTICIPACIÓN DEL ING. MARCELO JORGE CAMPOY, ADMINISTRADOR GENERAL DE VIALIDAD NACIONAL, QUIEN BRINDARÁ INFORMACIÓN SOBRE LA SITUACIÓN DE LAS RUTAS NACIONALES Y EL ESTADO DE LAS CONCESIONES VIALES"
+        }
+      ],
+      "tipo": "senadores",
+      "boletin_id": 2357,
+      "boletin_numero": "109/26"
+    },
+    {
+      "seccion": "senadores",
+      "dia": "JUEVES",
+      "fecha": "03/09",
+      "hora": "14:00",
+      "modalidad": "",
+      "comisiones": [
+        "BICAMERAL DE LA DEFENSORÍA DEL PUEBLO"
+      ],
+      "salon": "FRONDIZI - MORENO",
+      "salon_completo": "FRONDIZI - MORENO",
+      "temario": [
+        {
+          "numero": "",
+          "extracto": "INICIO DEL PROCESO DE SELECCIÓN E INTEGRACIÓN DEL COMITÉ NACIONAL PARA LA PREVENCIÓN DE LA TORTURA Y OTROS TRATOS O PENAS CRUELES, INHUMANOS O DEGRADANTES."
+        }
+      ],
+      "tipo": "bicameral",
+      "boletin_id": 2357,
+      "boletin_numero": "109/26"
     }
   ]
 }
