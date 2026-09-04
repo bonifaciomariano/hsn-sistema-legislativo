@@ -7304,8 +7304,8 @@
         }
       ],
       "tipo": "bicameral",
-      "boletin_id": 2357,
-      "boletin_numero": "109/26"
+      "boletin_id": 2358,
+      "boletin_numero": "110/26"
     },
     {
       "seccion": "senadores",
@@ -7354,7 +7354,8 @@
       ],
       "tipo": "senadores",
       "boletin_id": 2357,
-      "boletin_numero": "109/26"
+      "boletin_numero": "109/26",
+      "suspendida": true
     },
     {
       "seccion": "senadores",
@@ -7376,6 +7377,77 @@
       "tipo": "bicameral",
       "boletin_id": 2357,
       "boletin_numero": "109/26"
+    },
+    {
+      "seccion": "senadores",
+      "dia": "MIÉRCOLES",
+      "fecha": "09/09",
+      "hora": "11:30",
+      "modalidad": "",
+      "comisiones": [
+        "INFRAESTRUCTURA, VIVIENDA Y TRANSPORTE"
+      ],
+      "salon": "AZUL",
+      "salon_completo": "AZUL",
+      "temario": [
+        {
+          "numero": "S-1462/25",
+          "extracto": "OLIVERA LUCERO: PROYECTO DE LEY QUE MODIFICA EL ART. 55 DE SU SIMILAR 24.449 - TRÁNSITO -, RESPECTO DEL TRANSPORTE DE ESCOLARES"
+        },
+        {
+          "numero": "S-1877/25",
+          "extracto": "AVILA: PROYECTO DE LEY QUE MODIFICA EL ART. 55 DE SU SIMILAR 24.449 - TRÁNSITO - RESPECTO DE LAS CONDICIONES DE SEGURIDAD EN TRANSPORTE DE ESCOLARES"
+        },
+        {
+          "numero": "S-200/26",
+          "extracto": "FERNÁNDEZ SAGASTI: REPRODUCE PROYECTO DE LEY QUE MODIFICA SU SIMILAR 24.449 - LEY DE TRÁNSITO -, INCORPORANDO EL ART. 68 BIS - LÍMITES A LA EXCLUSIÓN DE COBERTURA (REF"
+        },
+        {
+          "numero": "S-753/24",
+          "extracto": ")"
+        },
+        {
+          "numero": "S-726/26",
+          "extracto": "FULLONE: PROYECTO DE LEY QUE ESTABLECE UN RÉGIMEN EXCEPCIONAL PARA LA REGULACIÓN DE LA OBRA PÚBLICA NACIONAL"
+        },
+        {
+          "numero": "S-1110/26",
+          "extracto": "PAOLTRONI: PROYECTO DE DECLARACIÓN QUE DECLARA DE INTERÉS EL \"PROYECTO FERROCARRILES DE SUDAMÉRICA, INTEGRACIÓN FERROVIARIA DE LOS ESTADOS DE SUDAMÉRICA\", QUE ABARCA EL NORTE GRANDE DE NUESTRO PAÍS Y LA REGIÓN DEL CENTRO DE AMÉRICA DEL SUR"
+        },
+        {
+          "numero": "S-1149/26",
+          "extracto": "ATAUCHE: PROYECTO DE DECLARACIÓN QUE ADHIERE A LA CONMEMORACIÓN DEL DÍA MUNDIAL EN RECUERDO DE LAS VÍCTIMAS DE ACCIDENTE DE TRÁFICO, EL 15 DE NOVIEMBRE DE 2026"
+        },
+        {
+          "numero": "S-1303/26",
+          "extracto": "GALARETTO: PROYECTO DE DECLARACIÓN QUE DECLARA DE INTERÉS LA \"XXX FIESTA DEL TRANSPORTE\" A REALIZARSE EN LA LOC. DE PUJATO, PROV. DE SANTA FE, DEL 25 AL 27 DE SEPTIEMBRE DE 2026. LA REUNIÓN CONTARÁ CON LA PARTICIPACIÓN DEL ING. MARCELO JORGE CAMPOY, ADMINISTRADOR GENERAL DE VIALIDAD NACIONAL, QUIEN BRINDARÁ INFORMACIÓN SOBRE LA SITUACIÓN DE LAS RUTAS NACIONALES Y EL ESTADO DE LAS CONCESIONES VIALES"
+        }
+      ],
+      "tipo": "senadores",
+      "boletin_id": 2358,
+      "boletin_numero": "110/26"
+    },
+    {
+      "seccion": "senadores",
+      "dia": "MIÉRCOLES",
+      "fecha": "09/09",
+      "hora": "15:00",
+      "modalidad": "",
+      "comisiones": [
+        "SALUD",
+        "LEGISLACIÓN GENERAL"
+      ],
+      "salon": "AZUL",
+      "salon_completo": "AZUL",
+      "temario": [
+        {
+          "numero": "PE-99/26",
+          "extracto": "MENSAJE N° 108/26 Y PROYECTO DE LEY SOBRE MODIFICACIONES A LA LEY DE SALUD MENTAL N° 26.657"
+        }
+      ],
+      "tipo": "senadores",
+      "boletin_id": 2358,
+      "boletin_numero": "110/26"
     }
   ]
 }
