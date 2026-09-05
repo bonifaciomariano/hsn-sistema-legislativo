@@ -7304,8 +7304,8 @@
         }
       ],
       "tipo": "bicameral",
-      "boletin_id": 2358,
-      "boletin_numero": "110/26"
+      "boletin_id": 2359,
+      "boletin_numero": "111/26"
     },
     {
       "seccion": "senadores",
@@ -7424,8 +7424,8 @@
         }
       ],
       "tipo": "senadores",
-      "boletin_id": 2358,
-      "boletin_numero": "110/26"
+      "boletin_id": 2359,
+      "boletin_numero": "111/26"
     },
     {
       "seccion": "senadores",
@@ -7446,8 +7446,137 @@
         }
       ],
       "tipo": "senadores",
-      "boletin_id": 2358,
-      "boletin_numero": "110/26"
+      "boletin_id": 2359,
+      "boletin_numero": "111/26"
+    },
+    {
+      "seccion": "senadores",
+      "dia": "MIÉRCOLES",
+      "fecha": "09/09",
+      "hora": "10:00",
+      "modalidad": "",
+      "comisiones": [
+        "BICAMERAL DE LA DEFENSORÍA DEL PUEBLO"
+      ],
+      "salon": "ILLIA",
+      "salon_completo": "ILLIA",
+      "temario": [
+        {
+          "numero": "",
+          "extracto": "INICIO DEL PROCESO DE SELECCIÓN E INTEGRACIÓN DEL COMITÉ NACIONAL PARA LA PREVENCIÓN DE LA TORTURA Y OTROS TRATOS O PENAS CRUELES, INHUMANOS O DEGRADANTES. LEY 26.827"
+        }
+      ],
+      "tipo": "bicameral",
+      "boletin_id": 2359,
+      "boletin_numero": "111/26"
+    },
+    {
+      "seccion": "senadores",
+      "dia": "MARTES",
+      "fecha": "15/09",
+      "hora": "15:30",
+      "modalidad": "",
+      "comisiones": [
+        "ASUNTOS CONSTITUCIONALES"
+      ],
+      "salon": "ILLIA",
+      "salon_completo": "ILLIA",
+      "temario": [
+        {
+          "numero": "",
+          "extracto": "[CONTINUACIÓN DEL CUARTO INTERMEDIO] PROYECTO DE LEY"
+        },
+        {
+          "numero": "PE-102/26",
+          "extracto": "MENSAJE N° 110/26 Y PROYECTO DE LEY DE REFORMA ELECTORAL INTEGRAL"
+        }
+      ],
+      "tipo": "senadores",
+      "boletin_id": 2359,
+      "boletin_numero": "111/26"
+    },
+    {
+      "seccion": "senadores",
+      "dia": "MARTES",
+      "fecha": "08/09",
+      "hora": "12:00",
+      "modalidad": "",
+      "comisiones": [
+        "POBLACIÓN Y DESARROLLO HUMANO"
+      ],
+      "salon": "MAYA",
+      "salon_completo": "MAYA",
+      "temario": [
+        {
+          "numero": "S-197/25",
+          "extracto": "DOÑATE: PROYECTO DE LEY DE PROMOCIÓN DEL BUEN TRATO Y PROTECCIÓN INTEGRAL PARA PREVENIR, SANCIONAR Y ERRADICAR LA VIOLENCIA CONTRA LAS PERSONAS MAYORES"
+        },
+        {
+          "numero": "S-945/25",
+          "extracto": "FERNÁNDEZ SAGASTI: REPRODUCE PROYECTO DE LEY QUE CREA EL PROGRAMA NACIONAL ADULTOS MAYORES QUE CUIDAN. (REF. S.515/23)"
+        },
+        {
+          "numero": "S-1516/25",
+          "extracto": "UÑAC: PROYECTO DE LEY QUE DECLARA DE INTERÉS NACIONAL LA PREVENCIÓN, EL TRATAMIENTO Y EL ESTUDIO DE LA SOLEDAD NO DESEADA DE LAS PERSONAS MAYORES"
+        },
+        {
+          "numero": "S-1509/25",
+          "extracto": "BENSUSÁN: PROYECTO DE LEY DE PROTECCIÓN INTEGRAL PARA PREVENIR, SANCIONAR Y ERRADICAR LA VIOLENCIA CONTRA LAS PERSONAS MAYORES"
+        },
+        {
+          "numero": "S-989/25",
+          "extracto": "BLANCO: PROYECTO DE DECLARACIÓN QUE ADHIERE A LA CONMEMORACIÓN DEL DÍA MUNDIAL DE TOMA DE CONCIENCIA DEL ABUSO Y MALTRATO EN LA VEJEZ, EL 15 DE JUNIO DE CADA AÑO"
+        },
+        {
+          "numero": "S-1088/25",
+          "extracto": "DURÉ: PROYECTO DE DECLARACIÓN QUE ADHIERE AL DÍA MUNDIAL DE LA TOMA DE CONCIENCIA DEL ABUSO Y MALTRATO EN LA VEJEZ, EL 15 DE JUNIO DE CADA AÑO"
+        },
+        {
+          "numero": "S-972/26",
+          "extracto": "MENDOZA: PROYECTO DE DECLARACIÓN QUE ADHIERE AL DÍA MUNDIAL DE LA TOMA DE CONCIENCIA DEL ABUSO Y MALTRATO EN LA VEJEZ, A CELEBRARSE EL 15 DE JUNIO DE CADA AÑO"
+        },
+        {
+          "numero": "S-1191/25",
+          "extracto": "OLALLA: PROYECTO DE DECLARACIÓN QUE DECLARA DE INTERÉS LA INICIATIVA \"CAMINO COMPARTIDO\" DESARROLLADA POR LA ASOCIACIÓN MUTUAL ISRAELITA (AMIA)"
+        },
+        {
+          "numero": "S-1409/25",
+          "extracto": "KIRCHNER: PROYECTO DE DECLARACIÓN QUE ADHIERE A LA CONMEMORACIÓN DEL \"DÍA NACIONAL DE LA ANCIANIDAD\", EL 28 DE AGOSTO DE CADA AÑO"
+        },
+        {
+          "numero": "S-1297/26",
+          "extracto": "MENDOZA: PROYECTO DE DECLARACIÓN QUE DECLARA DE INTERÉS LA COLONIA RECREATIVA \"RENACIMIENTO\" PARA JUBILADOS Y PERSONAS MAYORES DE LA CDAD. DE FAMAILLÁ, PROV. DE TUCUMÁN"
+        },
+        {
+          "numero": "S-80/25",
+          "extracto": "GALARETTO: PROYECTO DE RESOLUCIÓN QUE ADHIERE A LA CONMEMORACIÓN DEL DÍA MUNDIAL DE CONCIENTIZACIÓN SOBRE EL ABUSO DE LOS ANCIANOS, EL 15 DE JUNIO DE CADA AÑO"
+        }
+      ],
+      "tipo": "senadores",
+      "boletin_id": 2359,
+      "boletin_numero": "111/26"
+    },
+    {
+      "seccion": "senadores",
+      "dia": "MARTES",
+      "fecha": "08/09",
+      "hora": "14:00",
+      "modalidad": "",
+      "comisiones": [
+        "BICAMERAL DE REFORMA DEL ESTADO Y SEGUIMIENTO DE LAS",
+        "PRIVATIZACIONES"
+      ],
+      "salon": "MAYA",
+      "salon_completo": "MAYA",
+      "temario": [
+        {
+          "numero": "",
+          "extracto": "AGN - REMISIÓN DE INFORMES DE EMPRESAS PRIVATIZADAS."
+        }
+      ],
+      "tipo": "bicameral",
+      "boletin_id": 2359,
+      "boletin_numero": "111/26"
     }
   ]
 }
