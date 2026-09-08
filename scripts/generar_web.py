@@ -205,6 +205,8 @@ body.ficha-activa>*:not(.ficha-overlay){display:none!important}
 .ficha-toolbar button{padding:9px 16px;border-radius:8px;font-family:inherit;font-size:13px;font-weight:600;cursor:pointer;border:1.5px solid #1B5EA2}
 .ficha-toolbar .btn-brass{background:#1B5EA2;color:#fff}
 .ficha-toolbar .btn-neutral{background:#fff;color:#1B5EA2}
+.ficha-buscar{padding:8px 12px;border-radius:8px;border:1.5px solid #D6E4F0;font-family:inherit;font-size:13px;min-width:200px;flex:1;max-width:280px}
+.ficha-hint{font-size:11px;color:#9aa1a6;flex-basis:100%}
 .ficha-view h1{font-size:19px;color:#1B5EA2;margin:0 0 14px;text-transform:uppercase;letter-spacing:.03em}
 .ficha-meta{font-size:13px;color:#4A4A4A;line-height:1.7;margin-bottom:18px}
 .ficha-meta strong{color:#1B5EA2}
@@ -212,13 +214,15 @@ body.ficha-activa>*:not(.ficha-overlay){display:none!important}
 .ficha-temario{font-size:13px;color:#4A4A4A;line-height:1.55}
 .ficha-tema{margin-bottom:8px}
 .ficha-tema strong{color:#1B5EA2}
-.ficha-comision{margin-bottom:22px;break-inside:avoid}
-.ficha-comision-head{display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:6px;background:#1B5EA2;color:#fff;padding:8px 12px;border-radius:8px 8px 0 0}
+.ficha-comision{margin-bottom:22px}
+.ficha-comision-head{display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:6px;background:#1B5EA2;color:#fff;padding:8px 12px;border-radius:8px 8px 0 0;break-after:avoid;break-inside:avoid}
 .ficha-comision-head h3{font-size:14px;margin:0;font-weight:700}
 .ficha-comision-meta{font-size:11px;color:#D6E4F0}
 .ficha-table{width:100%;border-collapse:collapse;font-size:12.5px}
+.ficha-table thead{display:table-header-group}
 .ficha-table th{text-align:left;font-size:10px;text-transform:uppercase;letter-spacing:.04em;color:#9aa1a6;padding:6px 8px;border-bottom:1.5px solid #D6E4F0;background:#F5F8FC}
 .ficha-table td{padding:6px 8px;border-bottom:1px solid #EEF3F8;vertical-align:middle}
+.ficha-table tr{break-inside:avoid}
 .ficha-check{width:26px}
 .ficha-checkbox{display:inline-block;width:14px;height:14px;border:1.5px solid #9aa1a6;border-radius:3px}
 .ficha-apellido{font-weight:600;color:#4A4A4A;white-space:nowrap}
@@ -231,6 +235,13 @@ body.ficha-activa>*:not(.ficha-overlay){display:none!important}
 .ficha-repetido-marca{color:#1B5EA2;font-weight:700}
 .ficha-repetido-nota{font-size:10.5px;color:#9aa1a6;padding:6px 8px;font-style:italic}
 .ficha-expositores{margin-top:10px;padding-top:8px;border-top:1px dashed #EEF3F8;font-size:12.5px}
+.ficha-row-clickable{cursor:pointer;user-select:none}
+.ficha-row-clickable:hover{background:#F5F8FC}
+.ficha-checked .ficha-checkbox{background:#1B5EA2;border-color:#1B5EA2;position:relative}
+.ficha-checked .ficha-checkbox::after{content:'';position:absolute;left:4px;top:1px;width:4px;height:8px;border:solid #fff;border-width:0 2px 2px 0;transform:rotate(45deg)}
+.ficha-checked .ficha-apellido{color:#1B5EA2}
+.ficha-presentes-count{font-size:11px;color:#D6E4F0;font-weight:600}
+.ficha-quorum-ok{color:#8DE38F}
 @media print{
   .no-print{display:none!important}
   .ficha-overlay{position:static;padding:0}
@@ -3204,6 +3215,54 @@ function comisionesDeReunion(r){
   return resultado;
 }
 var FICHA_CARGO_LABEL={Presidente:'Presidente/a',Vicepresidente:'Vicepresidente/a',Secretario:'Secretario/a',Vocal:''};
+/* Estado de "presente" por senador, sólo para la ficha actualmente abierta.
+   Persiste en localStorage por reunión (fecha+hora+comisiones), para no
+   perder las marcas si se cierra la pestaña a mitad de la reunión. Es por
+   dispositivo -- no se sincroniza entre dos personas marcando a la vez. */
+var fichaEstado={},fichaStorageKey=null;
+function _fichaClave(comId,nombre){return comId+'||'+nombre;}
+function _fichaCargarEstado(key){
+  try{
+    var raw=window.localStorage.getItem(key);
+    return raw?JSON.parse(raw):{};
+  }catch(e){return {};}
+}
+function _fichaGuardarEstado(){
+  if(!fichaStorageKey)return;
+  try{window.localStorage.setItem(fichaStorageKey,JSON.stringify(fichaEstado));}catch(e){}
+}
+function toggleFichaPresente(tr){
+  var key=tr.getAttribute('data-key');
+  if(!key)return;
+  var checked=!fichaEstado[key];
+  if(checked)fichaEstado[key]=true;else delete fichaEstado[key];
+  tr.classList.toggle('ficha-checked',checked);
+  var box=tr.querySelector('.ficha-checkbox');
+  if(box)box.classList.toggle('checked',checked);
+  _fichaGuardarEstado();
+  var comId=tr.getAttribute('data-com');
+  fichaActualizarContador(comId);
+}
+function fichaActualizarContador(comId){
+  var wrap=document.querySelector('.ficha-comision[data-com="'+comId.replace(/"/g,'')+'"]');
+  if(!wrap)return;
+  var total=wrap.querySelectorAll('tbody tr:not(.ficha-row-vacante)').length;
+  var presentes=wrap.querySelectorAll('tbody tr.ficha-checked').length;
+  var mayoria=parseInt(wrap.getAttribute('data-mayoria'),10)||0;
+  var el=wrap.querySelector('.ficha-presentes-count');
+  if(el){
+    el.textContent='Presentes: '+presentes+' de '+total+' (quórum '+mayoria+')';
+    el.classList.toggle('ficha-quorum-ok',presentes>=mayoria);
+  }
+}
+function fichaFiltrar(){
+  var q=(document.getElementById('fichaBuscar').value||'').toLowerCase().trim();
+  document.querySelectorAll('.ficha-table tbody tr').forEach(function(tr){
+    if(!q){tr.style.display='';return}
+    var texto=tr.textContent.toLowerCase();
+    tr.style.display=texto.indexOf(q)>=0?'':'none';
+  });
+}
 /* nombresRepetidos: Set (o null) de nombres que integran más de una de las
    comisiones de la plenaria -- esas filas se resaltan (rayado diagonal,
    no sólo color: tiene que leerse igual en una impresión en blanco y
@@ -3217,6 +3276,7 @@ function fichaTablaComision(c,nombresRepetidos){
     if(oa!==ob)return oa-ob;
     return (a.nombre||'').localeCompare(b.nombre||'');
   });
+  var comId=comLabel(c.nombre);
   var mayoria=Math.floor((c.cupo||0)/2)+1;
   var hayRepetidos=false;
   var filas=lista.map(function(m){
@@ -3228,24 +3288,30 @@ function fichaTablaComision(c,nombresRepetidos){
     var dppHtml=m.dpp?'<span class="ficha-dpp">DPP-'+esc(m.dpp)+'</span>':'';
     var repetido=!!(nombresRepetidos&&nombresRepetidos[m.nombre]);
     if(repetido)hayRepetidos=true;
-    return '<tr'+(repetido?' class="ficha-row-repetido"':'')+'><td class="ficha-check"><span class="ficha-checkbox"></span></td>'
-      +'<td class="ficha-apellido">'+esc(apellidoFicha(m.nombre))+(repetido?' <span class="ficha-repetido-marca" title="Integra más de una comisión de esta plenaria">&#8224;</span>':'')+'</td>'
+    var key=_fichaClave(comId,m.nombre);
+    var checked=!!fichaEstado[key];
+    return '<tr class="ficha-row-clickable'+(repetido?' ficha-row-repetido':'')+(checked?' ficha-checked':'')+'" data-key="'+escAttr(key)+'" data-com="'+escAttr(comId)+'" onclick="toggleFichaPresente(this)">'
+      +'<td class="ficha-check"><span class="ficha-checkbox'+(checked?' checked':'')+'"></span></td>'
+      +'<td class="ficha-apellido">'+esc(apellidoFicha(m.nombre))+(repetido?' <span class="ficha-repetido-marca" title="Integra más de una comisión de esta plenaria">*</span>':'')+'</td>'
       +'<td class="ficha-cargo">'+esc(FICHA_CARGO_LABEL[m.rol]!=null?FICHA_CARGO_LABEL[m.rol]:(m.rol||''))+'</td>'
       +'<td class="ficha-provincia">'+esc(m.provincia||'')+'</td>'
       +'<td><span class="btag" style="background:'+col.bg+';color:'+col.badge+'">'+esc(m.bloque||'')+'</span></td>'
       +'<td>'+dppHtml+'</td></tr>';
   }).join('');
-  return '<div class="ficha-comision">'
-    +'<div class="ficha-comision-head"><h3>'+esc(comLabel(c.nombre))+'</h3>'
-    +'<span class="ficha-comision-meta">'+c.integrantes.length+' de '+c.cupo+' integrantes &middot; mayor&iacute;a: '+mayoria+'</span></div>'
+  return '<div class="ficha-comision" data-com="'+escAttr(comId)+'" data-mayoria="'+mayoria+'">'
+    +'<div class="ficha-comision-head"><h3>'+esc(comId)+'</h3>'
+    +'<span class="ficha-comision-meta">'+c.integrantes.length+' de '+c.cupo+' integrantes'
+    +' <span class="ficha-presentes-count no-print"></span></span></div>'
     +'<table class="ficha-table"><thead><tr><th></th><th>Senador/a</th><th>Cargo</th><th>Provincia</th><th>Bloque</th><th>DPP</th></tr></thead>'
     +'<tbody>'+filas+'</tbody></table>'
-    +(hayRepetidos?'<div class="ficha-repetido-nota">&#8224; Integra también otra comisión de esta plenaria</div>':'')
+    +(hayRepetidos?'<div class="ficha-repetido-nota">* Integra también otra comisión de esta plenaria</div>':'')
     +'</div>';
 }
 function abrirFichaReunion(){
   var r=agendaReunionActual;
   if(!r)return;
+  fichaStorageKey='ficha_'+(r.fecha||'')+'_'+(r.hora||'')+'_'+(r.comisiones||[]).join(',');
+  fichaEstado=_fichaCargarEstado(fichaStorageKey);
   var comisiones=comisionesDeReunion(r);
   var titulo=comisiones.length?comisiones.map(function(c){return comLabel(c.nombre)}).join(' · '):(r.comisiones||[]).join(' · ');
   var temarioHtml=(r.temario||[]).map(function(it){
@@ -3270,6 +3336,8 @@ function abrirFichaReunion(){
   var html='<div class="ficha-toolbar no-print">'
     +'<button class="btn-brass" onclick="window.print()">Imprimir / Guardar como PDF</button>'
     +'<button class="btn-neutral" onclick="cerrarFichaReunion()">Volver</button>'
+    +(comisiones.length?'<input type="text" id="fichaBuscar" class="ficha-buscar" placeholder="Buscar por apellido…" oninput="fichaFiltrar()">':'')
+    +'<span class="ficha-hint">Toc&aacute; una fila para marcar presente. Se guarda solo en este celular/navegador.</span>'
     +'</div>'
     +'<h1>Ficha de reuni&oacute;n de comisi&oacute;n</h1>'
     +'<div class="ficha-meta">'
@@ -3282,6 +3350,7 @@ function abrirFichaReunion(){
     +'<div class="ficha-section-label">Integrantes</div>'
     +tablasHtml;
   document.getElementById('fichaReunionView').innerHTML=html;
+  comisiones.forEach(function(c){fichaActualizarContador(comLabel(c.nombre));});
   document.body.classList.add('ficha-activa');
   document.getElementById('fichaReunionOverlay').hidden=false;
   window.scrollTo({top:0});
