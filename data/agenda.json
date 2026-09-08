@@ -7387,8 +7387,8 @@
       "comisiones": [
         "INFRAESTRUCTURA, VIVIENDA Y TRANSPORTE"
       ],
-      "salon": "AZUL",
-      "salon_completo": "AZUL",
+      "salon": "ILLIA",
+      "salon_completo": "ILLIA",
       "temario": [
         {
           "numero": "S-1462/25",
@@ -7423,9 +7423,10 @@
           "extracto": "GALARETTO: PROYECTO DE DECLARACIÓN QUE DECLARA DE INTERÉS LA \"XXX FIESTA DEL TRANSPORTE\" A REALIZARSE EN LA LOC. DE PUJATO, PROV. DE SANTA FE, DEL 25 AL 27 DE SEPTIEMBRE DE 2026. LA REUNIÓN CONTARÁ CON LA PARTICIPACIÓN DEL ING. MARCELO JORGE CAMPOY, ADMINISTRADOR GENERAL DE VIALIDAD NACIONAL, QUIEN BRINDARÁ INFORMACIÓN SOBRE LA SITUACIÓN DE LAS RUTAS NACIONALES Y EL ESTADO DE LAS CONCESIONES VIALES"
         }
       ],
+      "expositores": null,
       "tipo": "senadores",
-      "boletin_id": 2359,
-      "boletin_numero": "111/26"
+      "boletin_id": 2363,
+      "boletin_numero": "112/26"
     },
     {
       "seccion": "senadores",
@@ -7442,12 +7443,13 @@
       "temario": [
         {
           "numero": "PE-99/26",
-          "extracto": "MENSAJE N° 108/26 Y PROYECTO DE LEY SOBRE MODIFICACIONES A LA LEY DE SALUD MENTAL N° 26.657"
+          "extracto": "MENSAJE N° 108/26 Y PROYECTO DE LEY SOBRE MODIFICACIONES A LA LEY DE SALUD MENTAL 26.657"
         }
       ],
+      "expositores": null,
       "tipo": "senadores",
-      "boletin_id": 2359,
-      "boletin_numero": "111/26"
+      "boletin_id": 2363,
+      "boletin_numero": "112/26"
     },
     {
       "seccion": "senadores",
@@ -7463,12 +7465,13 @@
       "temario": [
         {
           "numero": "",
-          "extracto": "INICIO DEL PROCESO DE SELECCIÓN E INTEGRACIÓN DEL COMITÉ NACIONAL PARA LA PREVENCIÓN DE LA TORTURA Y OTROS TRATOS O PENAS CRUELES, INHUMANOS O DEGRADANTES. LEY 26.827"
+          "extracto": "INICIO DEL PROCESO DE SELECCIÓN E INTEGRACIÓN DEL COMITÉ NACIONAL PARA LA PREVENCIÓN DE LA TORTURA Y OTROS TRATOS O PENAS CRUELES, INHUMANOS O DEGRADANTES - LEY 26.827."
         }
       ],
+      "expositores": null,
       "tipo": "bicameral",
-      "boletin_id": 2359,
-      "boletin_numero": "111/26"
+      "boletin_id": 2363,
+      "boletin_numero": "112/26"
     },
     {
       "seccion": "senadores",
@@ -7491,12 +7494,13 @@
           "extracto": "MENSAJE N° 110/26 Y PROYECTO DE LEY DE REFORMA ELECTORAL INTEGRAL"
         }
       ],
+      "expositores": null,
       "tipo": "senadores",
-      "boletin_id": 2359,
-      "boletin_numero": "111/26"
+      "boletin_id": 2363,
+      "boletin_numero": "112/26"
     },
     {
-      "seccion": "senadores",
+      "seccion": "asesores",
       "dia": "MARTES",
       "fecha": "08/09",
       "hora": "12:00",
@@ -7513,7 +7517,11 @@
         },
         {
           "numero": "S-945/25",
-          "extracto": "FERNÁNDEZ SAGASTI: REPRODUCE PROYECTO DE LEY QUE CREA EL PROGRAMA NACIONAL ADULTOS MAYORES QUE CUIDAN. (REF. S.515/23)"
+          "extracto": "FERNÁNDEZ SAGASTI: REPRODUCE PROYECTO DE LEY QUE CREA EL PROGRAMA NACIONAL ADULTOS MAYORES QUE CUIDAN. (REF"
+        },
+        {
+          "numero": "S-515/23",
+          "extracto": ")"
         },
         {
           "numero": "S-1516/25",
@@ -7552,9 +7560,10 @@
           "extracto": "GALARETTO: PROYECTO DE RESOLUCIÓN QUE ADHIERE A LA CONMEMORACIÓN DEL DÍA MUNDIAL DE CONCIENTIZACIÓN SOBRE EL ABUSO DE LOS ANCIANOS, EL 15 DE JUNIO DE CADA AÑO"
         }
       ],
-      "tipo": "senadores",
-      "boletin_id": 2359,
-      "boletin_numero": "111/26"
+      "expositores": null,
+      "tipo": "asesores",
+      "boletin_id": 2363,
+      "boletin_numero": "112/26"
     },
     {
       "seccion": "senadores",
@@ -7577,6 +7586,152 @@
       "tipo": "bicameral",
       "boletin_id": 2359,
       "boletin_numero": "111/26"
+    },
+    {
+      "seccion": "senadores",
+      "dia": "MARTES",
+      "fecha": "08/09",
+      "hora": "13:00",
+      "modalidad": "",
+      "comisiones": [
+        "BICAMERAL DE FISCALIZACIÓN DE LOS ÓRGANOS Y ACTIVIDADES DE",
+        "SEGURIDAD INTERIOR (LEY 24.059)"
+      ],
+      "salon": "ILLIA",
+      "salon_completo": "ILLIA",
+      "temario": [
+        {
+          "numero": "",
+          "extracto": "CONSIDERACIÓN DE PLAN DE TRABAJO Y AGENDA DE ACTIVIDADES 2026."
+        }
+      ],
+      "expositores": null,
+      "tipo": "bicameral",
+      "boletin_id": 2363,
+      "boletin_numero": "112/26"
+    },
+    {
+      "seccion": "senadores",
+      "dia": "MIÉRCOLES",
+      "fecha": "09/09",
+      "hora": "10:30",
+      "modalidad": "",
+      "comisiones": [
+        "ECONOMÍA NACIONAL E INVERSIÓN",
+        "PRESUPUESTO Y HACIENDA"
+      ],
+      "salon": "AZUL",
+      "salon_completo": "AZUL",
+      "temario": [
+        {
+          "numero": "CD-7/26",
+          "extracto": "PROYECTO DE LEY EN REVISIÓN QUE MODIFICA LA CARTA ORGÁNICA DEL BANCO CENTRAL DE LA REPÚBLICA ARGENTINA. ASISTIRÁN: LIC. SANTIAGO BAUSILI, PRESIDENTE DEL BANCO CENTRAL DE LA REPÚBLICA ARGENTINA. LIC. VLADIMIR WERNING, VICEPRESIDENTE DEL BANCO CENTRAL DE LA REPÚBLICA ARGENTINA"
+        }
+      ],
+      "expositores": null,
+      "tipo": "senadores",
+      "boletin_id": 2363,
+      "boletin_numero": "112/26"
+    },
+    {
+      "seccion": "senadores",
+      "dia": "MIÉRCOLES",
+      "fecha": "09/09",
+      "hora": "16:30",
+      "modalidad": "",
+      "comisiones": [
+        "PRESUPUESTO Y HACIENDA",
+        "LEGISLACIÓN GENERAL",
+        "ECONOMÍAS REGIONALES, ECONOMÍA SOCIAL, MICRO, PEQUEÑA Y MEDIANA EMPRESA"
+      ],
+      "salon": "ILLIA",
+      "salon_completo": "ILLIA",
+      "temario": [
+        {
+          "numero": "",
+          "extracto": "[CONTINUACIÓN DEL CUARTO INTERMEDIO] PROYECTO DE LEY"
+        },
+        {
+          "numero": "S-702/26",
+          "extracto": "VISCHI Y OTROS: PROYECTO DE LEY QUE CREA EL RÉGIMEN DE INCENTIVO PARA INVERSIONES RELEVANTES (RIIR)"
+        }
+      ],
+      "expositores": null,
+      "tipo": "senadores",
+      "boletin_id": 2363,
+      "boletin_numero": "112/26"
+    },
+    {
+      "seccion": "senadores",
+      "dia": "MIÉRCOLES",
+      "fecha": "09/09",
+      "hora": "17:30",
+      "modalidad": "",
+      "comisiones": [
+        "JUSTICIA Y ASUNTOS PENALES",
+        "PRESUPUESTO Y HACIENDA"
+      ],
+      "salon": "ILLIA",
+      "salon_completo": "ILLIA",
+      "temario": [
+        {
+          "numero": "CD-8/26",
+          "extracto": "PROYECTO DE LEY EN REVISIÓN QUE MODIFICA LAS LEYES 11.683 Y 27.799 (T.O. 1998 Y S/M) RELATIVAS A LA MODALIDAD SIMPLIFICADA DE DECLARACIÓN JURADA DEL IMPUESTO A LAS GANANCIAS Y EN MATERIA DE PRESCRIPCIÓN TRIBUTARIA, Y 25.191 REFERENTE AL RÉGIMEN SANCIONATORIO"
+        }
+      ],
+      "expositores": "CDOR. MARTIN CARANTA, CONTADOR ESPECIALIZADO EN DERECHO TRIBUTARIO. DR. JUAN MARTÍN JOVANOVICH, ABOGADO ESPECIALIZADO EN DERECHO TRIBUTARIO.",
+      "tipo": "senadores",
+      "boletin_id": 2363,
+      "boletin_numero": "112/26"
+    },
+    {
+      "seccion": "asesores",
+      "dia": "MARTES",
+      "fecha": "08/09",
+      "hora": "14:00",
+      "modalidad": "",
+      "comisiones": [
+        "BICAMERAL DE REFORMA DEL ESTADO Y DEL SEGUIMIENTO DE LAS",
+        "PRIVATIZACIONES (LEY 23.696)"
+      ],
+      "salon": "MAYA",
+      "salon_completo": "MAYA",
+      "temario": [
+        {
+          "numero": "",
+          "extracto": "AGN - REMISIÓN DE INFORMES DE EMPRESAS PRIVATIZADAS."
+        }
+      ],
+      "expositores": null,
+      "tipo": "bicameral",
+      "boletin_id": 2363,
+      "boletin_numero": "112/26"
+    },
+    {
+      "seccion": "asesores",
+      "dia": "MIÉRCOLES",
+      "fecha": "09/09",
+      "hora": "14:00",
+      "modalidad": "",
+      "comisiones": [
+        "MINERÍA, ENERGÍA Y COMBUSTIBLES"
+      ],
+      "salon": "FRONDIZI - MORENO",
+      "salon_completo": "FRONDIZI - MORENO",
+      "temario": [
+        {
+          "numero": "CD-3/26",
+          "extracto": "PROYECTO DE LEY EN REVISIÓN QUE MODIFICA LA LEY 25.565, DE PRESUPUESTO GENERAL DE GASTOS DE LA ADM. NACIONAL PARA EL EJERCICIO 2002 SOBRE READECUACIÓN DEL RÉGIMEN DE SUBSIDIOS A LOS CONSUMOS RESIDENCIALES DE GAS NATURAL EN ZONAS FRÍAS, REGULARIZACIÓN DE DEUDAS ELÉCTRICAS Y DEROGA LOS DECRETOS 277/2022 Y 929/2013"
+        },
+        {
+          "numero": "S-909/26",
+          "extracto": "CARAMBIA: PROYECTO DE LEY QUE INCORPORA INCISO C) AL ART. 75 DE LA LEY 25.565 (PRESUPUESTO GENERAL DE LA ADMINISTRACIÓN NACIONAL), Y EL ART. 3 BIS A LA LEY 27.637 (RÉGIMEN DE ZONA FRÍA), QUE ESTABLECE UNA BONIFICACIÓN ADICIONAL POR ZONA POLAR, EN LAS PROV. DE SANTA CRUZ Y TIERRA DEL FUEGO Y A.I.A.S., Y UNA EXENCIÓN DEL IVA, RESPECTIVAMENTE. FIJAR AGENDA DE TRABAJO"
+        }
+      ],
+      "expositores": null,
+      "tipo": "asesores",
+      "boletin_id": 2363,
+      "boletin_numero": "112/26"
     }
   ]
 }

@@ -66,9 +66,10 @@
     "status": "sin_texto"
   },
   "71/26": {
-    "fecha": "31-08-2026",
+    "fecha": "27-08-2026",
     "tema": "DESIGNANDO REEMPLAZO EN LA COMISIÓN DE LEGISLACIÓN GENERAL",
-    "status": "sin_texto"
+    "articulos": 1,
+    "designaciones": 1
   },
   "72/26": {
     "fecha": "02-09-2026",

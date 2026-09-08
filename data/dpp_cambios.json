@@ -55,7 +55,8 @@
     "63/26": "16/06/2026",
     "65/26": "17/06/2026",
     "67/26": "05/08/2026",
-    "72/26": "02/09/2026"
+    "72/26": "02/09/2026",
+    "71/26": "27/08/2026"
   },
   "cambios": [
     {
@@ -4825,6 +4826,13 @@
       "tipo": "replace",
       "senador": "HUALA, María Victoria",
       "reemplaza": "CRISTINA, Andrea Marcela"
+    },
+    {
+      "dpp": "71/26",
+      "comision": "De Legislación General",
+      "tipo": "replace",
+      "senador": "OROZCO, María Emilia",
+      "reemplaza": "JUEZ, Luis Alfredo"
     }
   ]
 }

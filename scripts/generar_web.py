@@ -5186,6 +5186,7 @@ def construir_agenda(comisiones):
             "salon": r.get("salon", ""),
             "salon_completo": r.get("salon_completo", ""),
             "temario": r.get("temario", []),
+            "expositores": r.get("expositores"),
             "tipo": r.get("tipo", ""),
             "boletin_numero": r.get("boletin_numero", ""),
             "suspendida": r.get("suspendida", False),
