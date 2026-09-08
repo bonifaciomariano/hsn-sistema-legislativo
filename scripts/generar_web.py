@@ -222,10 +222,15 @@ body.ficha-activa>*:not(.ficha-overlay){display:none!important}
 .ficha-check{width:26px}
 .ficha-checkbox{display:inline-block;width:14px;height:14px;border:1.5px solid #9aa1a6;border-radius:3px}
 .ficha-apellido{font-weight:600;color:#4A4A4A;white-space:nowrap}
-.ficha-provincia{font-size:11.5px;color:#4A4A4A}
+.ficha-cargo{font-size:11px;color:#1B5EA2;font-weight:600;white-space:nowrap}
+.ficha-provincia{width:110px;max-width:110px;font-size:10.5px;color:#4A4A4A;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 .ficha-dpp{font-size:9.5px;font-weight:700;padding:2px 7px;border-radius:10px;background:#FFF3CD;color:#7A5200;white-space:nowrap}
 .ficha-row-vacante{opacity:.6}
 .ficha-vacante{font-style:italic;color:#9aa1a6}
+.ficha-row-repetido{background-image:repeating-linear-gradient(45deg,rgba(27,94,162,0.07),rgba(27,94,162,0.07) 4px,transparent 4px,transparent 9px)}
+.ficha-repetido-marca{color:#1B5EA2;font-weight:700}
+.ficha-repetido-nota{font-size:10.5px;color:#9aa1a6;padding:6px 8px;font-style:italic}
+.ficha-expositores{margin-top:10px;padding-top:8px;border-top:1px dashed #EEF3F8;font-size:12.5px}
 @media print{
   .no-print{display:none!important}
   .ficha-overlay{position:static;padding:0}
@@ -3198,18 +3203,34 @@ function comisionesDeReunion(r){
   resolverBuffer();
   return resultado;
 }
-function fichaTablaComision(c){
-  var lista=conVacantes(c);
+var FICHA_CARGO_LABEL={Presidente:'Presidente/a',Vicepresidente:'Vicepresidente/a',Secretario:'Secretario/a',Vocal:''};
+/* nombresRepetidos: Set (o null) de nombres que integran más de una de las
+   comisiones de la plenaria -- esas filas se resaltan (rayado diagonal,
+   no sólo color: tiene que leerse igual en una impresión en blanco y
+   negro), porque en una reunión conjunta ese/a senador/a cuenta para el
+   quórum/firma de cada comisión por separado. */
+function fichaTablaComision(c,nombresRepetidos){
+  var lista=conVacantes(c).slice();
+  lista.sort(function(a,b){
+    if(!!a.vacante!==!!b.vacante)return a.vacante?1:-1;
+    var oa=ordenIntegrante(a),ob=ordenIntegrante(b);
+    if(oa!==ob)return oa-ob;
+    return (a.nombre||'').localeCompare(b.nombre||'');
+  });
   var mayoria=Math.floor((c.cupo||0)/2)+1;
+  var hayRepetidos=false;
   var filas=lista.map(function(m){
     if(m.vacante){
       return '<tr class="ficha-row-vacante"><td class="ficha-check"><span class="ficha-checkbox"></span></td>'
-        +'<td class="ficha-vacante">Vacante</td><td></td><td></td><td></td></tr>';
+        +'<td class="ficha-vacante">Vacante</td><td></td><td></td><td></td><td></td></tr>';
     }
     var col=blqColor(m.bloque);
     var dppHtml=m.dpp?'<span class="ficha-dpp">DPP-'+esc(m.dpp)+'</span>':'';
-    return '<tr><td class="ficha-check"><span class="ficha-checkbox"></span></td>'
-      +'<td class="ficha-apellido">'+esc(apellidoFicha(m.nombre))+'</td>'
+    var repetido=!!(nombresRepetidos&&nombresRepetidos[m.nombre]);
+    if(repetido)hayRepetidos=true;
+    return '<tr'+(repetido?' class="ficha-row-repetido"':'')+'><td class="ficha-check"><span class="ficha-checkbox"></span></td>'
+      +'<td class="ficha-apellido">'+esc(apellidoFicha(m.nombre))+(repetido?' <span class="ficha-repetido-marca" title="Integra más de una comisión de esta plenaria">&#8224;</span>':'')+'</td>'
+      +'<td class="ficha-cargo">'+esc(FICHA_CARGO_LABEL[m.rol]!=null?FICHA_CARGO_LABEL[m.rol]:(m.rol||''))+'</td>'
       +'<td class="ficha-provincia">'+esc(m.provincia||'')+'</td>'
       +'<td><span class="btag" style="background:'+col.bg+';color:'+col.badge+'">'+esc(m.bloque||'')+'</span></td>'
       +'<td>'+dppHtml+'</td></tr>';
@@ -3217,8 +3238,10 @@ function fichaTablaComision(c){
   return '<div class="ficha-comision">'
     +'<div class="ficha-comision-head"><h3>'+esc(comLabel(c.nombre))+'</h3>'
     +'<span class="ficha-comision-meta">'+c.integrantes.length+' de '+c.cupo+' integrantes &middot; mayor&iacute;a: '+mayoria+'</span></div>'
-    +'<table class="ficha-table"><thead><tr><th></th><th>Senador/a</th><th>Provincia</th><th>Bloque</th><th>DPP</th></tr></thead>'
-    +'<tbody>'+filas+'</tbody></table></div>';
+    +'<table class="ficha-table"><thead><tr><th></th><th>Senador/a</th><th>Cargo</th><th>Provincia</th><th>Bloque</th><th>DPP</th></tr></thead>'
+    +'<tbody>'+filas+'</tbody></table>'
+    +(hayRepetidos?'<div class="ficha-repetido-nota">&#8224; Integra también otra comisión de esta plenaria</div>':'')
+    +'</div>';
 }
 function abrirFichaReunion(){
   var r=agendaReunionActual;
@@ -3228,8 +3251,21 @@ function abrirFichaReunion(){
   var temarioHtml=(r.temario||[]).map(function(it){
     return '<div class="ficha-tema">'+(it.numero?'<strong>'+esc(it.numero)+'</strong> ':'')+esc(it.extracto)+'</div>';
   }).join('')||'<div class="com-empty">Sin temario cargado.</div>';
+  if(r.expositores){
+    temarioHtml+='<div class="ficha-expositores"><strong>Expositores / invitados:</strong> '+esc(r.expositores)+'</div>';
+  }
+  // Senadores que integran más de una de las comisiones de la plenaria
+  var conteoNombres={};
+  comisiones.forEach(function(c){
+    c.integrantes.forEach(function(m){conteoNombres[m.nombre]=(conteoNombres[m.nombre]||0)+1;});
+  });
+  var nombresRepetidos=null;
+  if(comisiones.length>1){
+    nombresRepetidos={};
+    Object.keys(conteoNombres).forEach(function(n){if(conteoNombres[n]>1)nombresRepetidos[n]=true;});
+  }
   var tablasHtml=comisiones.length
-    ?comisiones.map(fichaTablaComision).join('')
+    ?comisiones.map(function(c){return fichaTablaComision(c,nombresRepetidos);}).join('')
     :'<div class="com-empty">No se pudo identificar la comisión oficial para armar el checklist de integrantes.</div>';
   var html='<div class="ficha-toolbar no-print">'
     +'<button class="btn-brass" onclick="window.print()">Imprimir / Guardar como PDF</button>'

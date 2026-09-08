@@ -479,6 +479,8 @@ def parsear_reuniones_texto_libre(texto, comisiones_norm):
         if reunion is not None:
             raw = reunion.pop("_temario_raw", "")
             reunion["temario"] = parsear_temario_texto_libre(raw)
+            expositores_raw = re.sub(r"\s+", " ", reunion.pop("_expositores_raw", "")).strip()
+            reunion["expositores"] = expositores_raw or None
             reunion["tipo"] = tipo_reunion(reunion["seccion"], reunion["comisiones"])
             reuniones.append(reunion)
             reunion = None
@@ -531,6 +533,7 @@ def parsear_reuniones_texto_libre(texto, comisiones_norm):
                 "salon": salon,
                 "salon_completo": salon_txt,
                 "_temario_raw": "",
+                "_expositores_raw": "",
                 "temario": [],
             }
             comision_buffer = []
@@ -556,7 +559,9 @@ def parsear_reuniones_texto_libre(texto, comisiones_norm):
 
         if reunion is None:
             comision_buffer.append(linea)
-        elif not en_expositores:
+        elif en_expositores:
+            reunion["_expositores_raw"] += " " + linea
+        else:
             reunion["_temario_raw"] += " " + linea
 
     cerrar()
