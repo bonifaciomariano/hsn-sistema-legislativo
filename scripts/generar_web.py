@@ -198,6 +198,43 @@ body{font-family:'Poppins',Calibri,sans-serif;background:#F5F7FA;color:#4A4A4A;f
 .results-count{font-size:12px;color:#888}
 .btn-export{padding:7px 14px;border-radius:8px;border:1.5px solid #1B5EA2;background:#fff;color:#1B5EA2;font-family:inherit;font-size:11px;font-weight:600;cursor:pointer;transition:all .15s}
 .btn-export:hover{background:#1B5EA2;color:#fff}
+/* ── Ficha de reunión (temario + checklist de integrantes, imprimible) ── */
+.ficha-overlay{position:fixed;inset:0;background:#fff;z-index:300;overflow-y:auto;padding:20px 24px 60px}
+body.ficha-activa>*:not(.ficha-overlay){display:none!important}
+.ficha-toolbar{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-bottom:18px;padding-bottom:14px;border-bottom:1px dashed #D6E4F0}
+.ficha-toolbar button{padding:9px 16px;border-radius:8px;font-family:inherit;font-size:13px;font-weight:600;cursor:pointer;border:1.5px solid #1B5EA2}
+.ficha-toolbar .btn-brass{background:#1B5EA2;color:#fff}
+.ficha-toolbar .btn-neutral{background:#fff;color:#1B5EA2}
+.ficha-view h1{font-size:19px;color:#1B5EA2;margin:0 0 14px;text-transform:uppercase;letter-spacing:.03em}
+.ficha-meta{font-size:13px;color:#4A4A4A;line-height:1.7;margin-bottom:18px}
+.ficha-meta strong{color:#1B5EA2}
+.ficha-section-label{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:#9aa1a6;margin:18px 0 8px;padding-top:10px;border-top:1px solid #EEF3F8}
+.ficha-temario{font-size:13px;color:#4A4A4A;line-height:1.55}
+.ficha-tema{margin-bottom:8px}
+.ficha-tema strong{color:#1B5EA2}
+.ficha-comision{margin-bottom:22px;break-inside:avoid}
+.ficha-comision-head{display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:6px;background:#1B5EA2;color:#fff;padding:8px 12px;border-radius:8px 8px 0 0}
+.ficha-comision-head h3{font-size:14px;margin:0;font-weight:700}
+.ficha-comision-meta{font-size:11px;color:#D6E4F0}
+.ficha-table{width:100%;border-collapse:collapse;font-size:12.5px}
+.ficha-table th{text-align:left;font-size:10px;text-transform:uppercase;letter-spacing:.04em;color:#9aa1a6;padding:6px 8px;border-bottom:1.5px solid #D6E4F0;background:#F5F8FC}
+.ficha-table td{padding:6px 8px;border-bottom:1px solid #EEF3F8;vertical-align:middle}
+.ficha-check{width:26px}
+.ficha-checkbox{display:inline-block;width:14px;height:14px;border:1.5px solid #9aa1a6;border-radius:3px}
+.ficha-apellido{font-weight:600;color:#4A4A4A;white-space:nowrap}
+.ficha-provincia{font-size:11.5px;color:#4A4A4A}
+.ficha-dpp{font-size:9.5px;font-weight:700;padding:2px 7px;border-radius:10px;background:#FFF3CD;color:#7A5200;white-space:nowrap}
+.ficha-row-vacante{opacity:.6}
+.ficha-vacante{font-style:italic;color:#9aa1a6}
+@media print{
+  .no-print{display:none!important}
+  .ficha-overlay{position:static;padding:0}
+}
+@media (max-width:640px){
+  .ficha-overlay{padding:14px}
+  .ficha-comision-head{flex-direction:column;align-items:flex-start}
+  .ficha-table{display:block;overflow-x:auto;white-space:nowrap}
+}
 .select-wrapper{position:relative;display:block;margin-bottom:4px}
 .filter-select{width:100%;padding:8px 32px 8px 11px;border:1.5px solid #D6E4F0;border-radius:8px;font-family:inherit;font-size:12px;color:#4A4A4A;background:#fff;outline:none;cursor:pointer;-webkit-appearance:none;appearance:none;transition:border-color .15s}
 .filter-select:focus,.filter-select.on{border-color:#1B5EA2;background:#EAF0FA;color:#1B5EA2;font-weight:600}
@@ -3079,9 +3116,11 @@ function irAExpediente(numero){
   applyAll();
   window.scrollTo({top:0,behavior:'smooth'});
 }
+var agendaReunionActual=null;
 function abrirReunion(idx){
   var r=AGENDA[idx];
   if(!r)return;
+  agendaReunionActual=r;
   agendaCerrarDia({target:document.getElementById('agenda-dia-overlay')});
   document.getElementById('agenda-nivel1').classList.remove('active');
   document.getElementById('agenda-nivel2').classList.add('active');
@@ -3107,6 +3146,113 @@ function abrirReunion(idx){
 function volverAgenda(){
   document.getElementById('agenda-nivel2').classList.remove('active');
   document.getElementById('agenda-nivel1').classList.add('active');
+}
+
+/* ── Ficha de reunión (temario + checklist de integrantes por comisión) ── */
+/* Único apellido duplicado entre los 72 senadores vigentes: López (Cándida
+   Cristina / María Florencia) -- se desambigua a mano en vez de armar un
+   algoritmo genérico para un caso que hoy es único. */
+function apellidoFicha(nombreCompleto){
+  var partes=String(nombreCompleto||'').split(',');
+  var apellido=(partes[0]||'').trim();
+  if(apellido.toUpperCase()==='LÓPEZ'||apellido.toUpperCase()==='LOPEZ'){
+    var nombre=(partes[1]||'').toUpperCase();
+    if(nombre.indexOf('FLORENCIA')>=0)return 'López, F.';
+    if(nombre.indexOf('NDIDA')>=0)return 'López, C.'; // Cándida (evita el acento en el indexOf)
+  }
+  return apellido.toLowerCase().replace(/(^|\s)\S/g,function(c){return c.toUpperCase()});
+}
+/* Reconstruye la(s) comisión(es) oficiales de una reunión a partir de
+   r.comisiones -- normalmente un nombre limpio por entrada (plenarias
+   separadas por "|" ya vienen partidas en el scraper), pero a veces un
+   nombre largo queda partido en 2 líneas (formato narrativo, sin "|").
+   Cada entrada se prueba primero SOLA (para no confundir "2 comisiones
+   distintas en una plenaria" con "1 nombre partido en 2 líneas"); sólo se
+   acumula en el buffer cuando la entrada no matchea por sí misma. */
+function _normComFicha(s){return normCom(comLabel(s));}
+function comisionesDeReunion(r){
+  var nombres=r.comisiones||[];
+  var norm=_normComFicha;
+  var resultado=[],buffer='';
+  function resolverBuffer(){
+    if(!buffer)return;
+    var nb=norm(buffer);
+    var parcial=COMISIONES.filter(function(c){
+      var nc=norm(c.nombre);
+      return (nc.indexOf(nb)>=0||nb.indexOf(nc)>=0)&&resultado.indexOf(c)<0;
+    })[0];
+    if(parcial)resultado.push(parcial);
+    buffer='';
+  }
+  nombres.forEach(function(n){
+    var directo=COMISIONES.filter(function(c){return norm(c.nombre)===norm(n)})[0];
+    if(directo){
+      resolverBuffer();
+      if(resultado.indexOf(directo)<0)resultado.push(directo);
+      return;
+    }
+    buffer=buffer?(buffer+' '+n):n;
+    var combinado=COMISIONES.filter(function(c){return norm(c.nombre)===norm(buffer)})[0];
+    if(combinado){resultado.push(combinado);buffer='';}
+  });
+  resolverBuffer();
+  return resultado;
+}
+function fichaTablaComision(c){
+  var lista=conVacantes(c);
+  var mayoria=Math.floor((c.cupo||0)/2)+1;
+  var filas=lista.map(function(m){
+    if(m.vacante){
+      return '<tr class="ficha-row-vacante"><td class="ficha-check"><span class="ficha-checkbox"></span></td>'
+        +'<td class="ficha-vacante">Vacante</td><td></td><td></td><td></td></tr>';
+    }
+    var col=blqColor(m.bloque);
+    var dppHtml=m.dpp?'<span class="ficha-dpp">DPP-'+esc(m.dpp)+'</span>':'';
+    return '<tr><td class="ficha-check"><span class="ficha-checkbox"></span></td>'
+      +'<td class="ficha-apellido">'+esc(apellidoFicha(m.nombre))+'</td>'
+      +'<td class="ficha-provincia">'+esc(m.provincia||'')+'</td>'
+      +'<td><span class="btag" style="background:'+col.bg+';color:'+col.badge+'">'+esc(m.bloque||'')+'</span></td>'
+      +'<td>'+dppHtml+'</td></tr>';
+  }).join('');
+  return '<div class="ficha-comision">'
+    +'<div class="ficha-comision-head"><h3>'+esc(comLabel(c.nombre))+'</h3>'
+    +'<span class="ficha-comision-meta">'+c.integrantes.length+' de '+c.cupo+' integrantes &middot; mayor&iacute;a: '+mayoria+'</span></div>'
+    +'<table class="ficha-table"><thead><tr><th></th><th>Senador/a</th><th>Provincia</th><th>Bloque</th><th>DPP</th></tr></thead>'
+    +'<tbody>'+filas+'</tbody></table></div>';
+}
+function abrirFichaReunion(){
+  var r=agendaReunionActual;
+  if(!r)return;
+  var comisiones=comisionesDeReunion(r);
+  var titulo=comisiones.length?comisiones.map(function(c){return comLabel(c.nombre)}).join(' · '):(r.comisiones||[]).join(' · ');
+  var temarioHtml=(r.temario||[]).map(function(it){
+    return '<div class="ficha-tema">'+(it.numero?'<strong>'+esc(it.numero)+'</strong> ':'')+esc(it.extracto)+'</div>';
+  }).join('')||'<div class="com-empty">Sin temario cargado.</div>';
+  var tablasHtml=comisiones.length
+    ?comisiones.map(fichaTablaComision).join('')
+    :'<div class="com-empty">No se pudo identificar la comisión oficial para armar el checklist de integrantes.</div>';
+  var html='<div class="ficha-toolbar no-print">'
+    +'<button class="btn-brass" onclick="window.print()">Imprimir / Guardar como PDF</button>'
+    +'<button class="btn-neutral" onclick="cerrarFichaReunion()">Volver</button>'
+    +'</div>'
+    +'<h1>Ficha de reuni&oacute;n de comisi&oacute;n</h1>'
+    +'<div class="ficha-meta">'
+    +'<div><strong>Comisi&oacute;n'+(comisiones.length>1?'es':'')+':</strong> '+esc(titulo)+'</div>'
+    +'<div><strong>Fecha:</strong> '+esc((r.dia?r.dia+' ':'')+(r.fecha_completa||r.fecha))+' &middot; '+esc(r.hora)+' hs</div>'
+    +'<div><strong>Sal&oacute;n:</strong> '+esc(r.salon_completo||r.salon)+'</div>'
+    +'</div>'
+    +'<div class="ficha-section-label">Temario</div>'
+    +'<div class="ficha-temario">'+temarioHtml+'</div>'
+    +'<div class="ficha-section-label">Integrantes</div>'
+    +tablasHtml;
+  document.getElementById('fichaReunionView').innerHTML=html;
+  document.body.classList.add('ficha-activa');
+  document.getElementById('fichaReunionOverlay').hidden=false;
+  window.scrollTo({top:0});
+}
+function cerrarFichaReunion(){
+  document.body.classList.remove('ficha-activa');
+  document.getElementById('fichaReunionOverlay').hidden=true;
 }
 
 /* ── Sanciones HSN (Boletín de Novedades) ─────────────────────────── */
@@ -4454,6 +4600,7 @@ HTML_TEMPLATE = """<!DOCTYPE html>
       </div>
       <div class="section-body">
         <div id="agenda-detalle-meta"></div>
+        <button class="btn-export" style="margin:10px 0" onclick="abrirFichaReunion()">&#128196; Generar ficha de reuni&oacute;n</button>
         <div class="filter-label" style="margin-top:14px">Temario</div>
         <div id="agenda-temario-list"></div>
       </div>
@@ -4689,6 +4836,10 @@ HTML_TEMPLATE = """<!DOCTYPE html>
 
 <div id="dash-tooltip" class="dash-tooltip"></div>
 
+<div id="fichaReunionOverlay" class="ficha-overlay" hidden>
+  <div id="fichaReunionView" class="ficha-view"></div>
+</div>
+
 <div id="dpp-modal-overlay" class="dpp-modal-overlay" onclick="cerrarDppModal(event)">
   <div class="dpp-modal">
     <div class="dpp-modal-head">
@@ -4882,6 +5033,35 @@ def construir_bloque_por_senador():
         for k, bloque in candidatos:
             if _nombres_coinciden(k, n):
                 return bloque
+        return ""
+
+    return buscar
+
+
+def construir_provincia_por_senador():
+    """Igual que construir_bloque_por_senador() pero para provincia -- se
+    usa en la ficha de reunión (checklist de integrantes por comisión)."""
+    senadores = _cargar("senadores.json", {})
+    directo = {}
+    por_apellido = {}
+    for nombre, datos in senadores.items():
+        n = _norm_nombre(nombre)
+        provincia = datos.get("provincia", "")
+        directo[n] = provincia
+        apellido = n.split(",")[0].strip()
+        por_apellido.setdefault(apellido, []).append((n, provincia))
+
+    def buscar(nombre_buscado):
+        n = _norm_nombre(nombre_buscado)
+        if n in directo:
+            return directo[n]
+        apellido = n.split(",")[0].strip()
+        candidatos = por_apellido.get(apellido, [])
+        if len(candidatos) == 1:
+            return candidatos[0][1]
+        for k, provincia in candidatos:
+            if _nombres_coinciden(k, n):
+                return provincia
         return ""
 
     return buscar
@@ -5194,6 +5374,7 @@ def construir_comisiones(proyectos):
     dpp_fechas = dpp_data.get("fechas", {})
     dpp_state = construir_dpp_state(dpp_cambios)
     bloque_de_senador = construir_bloque_por_senador()
+    provincia_de_senador = construir_provincia_por_senador()
 
     # Fallback de bloque: nombre_norm -> bloque, según el scrape de comisiones.json
     # (por si un senador no aparece en senadores.json).
@@ -5263,6 +5444,7 @@ def construir_comisiones(proyectos):
             integrantes.append({
                 "nombre": e["nombre"],
                 "bloque": bloque,
+                "provincia": provincia_de_senador(e["nombre"]),
                 "rol": _rol_de(nombre, e["nombre"]),
                 "dpp": e["dpp"],
                 "hist": hist,
