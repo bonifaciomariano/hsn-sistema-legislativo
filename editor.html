@@ -140,6 +140,26 @@ h1{font-family:'Poppins',sans-serif;font-size:24px;font-weight:700;color:var(--a
 
 .back-link{display:inline-flex;align-items:center;gap:6px;font-size:12.5px;color:var(--text-muted);text-decoration:none;margin-bottom:10px}
 .back-link:hover{color:var(--accent)}
+
+/* ── Tabs de sección (Agenda / Comisiones) ── */
+.top-tabs{display:flex;gap:6px;margin-bottom:18px;border-bottom:1.5px solid var(--border)}
+.top-tab{font-family:'Poppins',sans-serif;font-size:13px;font-weight:600;color:var(--text-muted);background:none;border:none;border-bottom:2.5px solid transparent;padding:10px 4px;margin-bottom:-1.5px;cursor:pointer}
+.top-tab.active{color:var(--accent);border-bottom-color:var(--accent)}
+
+/* ── Comisiones: roster ── */
+.roster-row{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:9px 16px;border-bottom:1px solid var(--border-soft,var(--border))}
+.roster-row:last-child{border-bottom:none}
+.roster-nombre{font-size:13px;font-weight:600}
+.roster-meta{font-size:11px;color:var(--text-muted)}
+.roster-dpp{font-family:'IBM Plex Mono',monospace;font-size:10.5px;color:var(--text-faint)}
+.roster-actions{display:flex;gap:6px;flex-shrink:0}
+.roster-actions button{font-family:inherit;font-size:11px;font-weight:600;padding:5px 10px;border-radius:6px;border:1.5px solid var(--border);background:var(--surface);color:var(--text-muted);cursor:pointer}
+.roster-actions button:hover{border-color:var(--accent);color:var(--accent)}
+.roster-actions button.danger:hover{border-color:var(--danger);color:var(--danger)}
+.accion-panel{margin:14px 18px;background:var(--surface-2);border:1.5px solid var(--accent);border-radius:10px;padding:16px}
+.accion-panel h3{font-family:'Poppins',sans-serif;font-size:13px;font-weight:600;color:var(--accent);margin:0 0 12px}
+.accion-panel .field{margin-bottom:12px}
+.accion-panel .field:last-of-type{margin-bottom:0}
 </style>
 </head>
 <body>
@@ -147,22 +167,11 @@ h1{font-family:'Poppins',sans-serif;font-size:24px;font-weight:700;color:var(--a
 
   <a class="back-link" href="index.html">&larr; Volver al sitio</a>
 
-  <div class="manual" id="manual">
-    <h2>Cómo usar esto (3 pasos)</h2>
-    <ol class="manual-steps">
-      <li><span class="manual-num">1</span><div><b>Conectate una sola vez.</b> Abajo a la derecha decís "Conectar" y pegás tu clave de acceso. Si todavía no tenés una, tocá "¿Cómo consigo mi clave?" y seguí esos pasos — se hace una sola vez por celular o computadora.</div></li>
-      <li><span class="manual-num">2</span><div><b>Elegí la reunión</b> de la lista de la izquierda y corregí sólo lo que cambió: el horario, el salón, si se agregaron expositores, alguna aclaración, o si se suspendió.</div></li>
-      <li><span class="manual-num">3</span><div><b>Tocá "Guardar y publicar".</b> El sitio se actualiza solo, en menos de un minuto — no hace falta avisarle a nadie.</div></li>
-    </ol>
-    <div class="manual-note">Esto edita <b>solamente</b> la Agenda de reuniones. No toca proyectos, comisiones ni ningún otro dato del sitio.</div>
-    <button class="manual-collapse" id="manual-toggle">Ocultar este manual &uarr;</button>
-  </div>
-
   <div class="topbar">
     <div>
       <p class="brand-eyebrow">Sistema Legislativo · HSN</p>
-      <h1>Editor de Agenda</h1>
-      <p class="subtitle">Correcciones puntuales sobre lo publicado: horario, salón, suspensión, temario ampliado o expositores comunicados después del último boletín.</p>
+      <h1 id="page-h1">Editor de Agenda</h1>
+      <p class="subtitle" id="page-subtitle">Correcciones puntuales sobre lo publicado: horario, salón, suspensión, temario ampliado o expositores comunicados después del último boletín.</p>
     </div>
     <div class="conn-box" id="conn-box">
       <span class="conn-dot" id="conn-dot"></span>
@@ -183,29 +192,91 @@ h1{font-family:'Poppins',sans-serif;font-size:24px;font-weight:700;color:var(--a
     </div>
   </details>
 
-  <div class="board">
+  <div class="top-tabs">
+    <button class="top-tab active" id="tab-btn-agenda" onclick="mostrarVista('agenda')">&#128197; Agenda</button>
+    <button class="top-tab" id="tab-btn-comisiones" onclick="mostrarVista('comisiones')">&#128101; Comisiones</button>
+  </div>
 
-    <div class="panel">
-      <div class="panel-head">
-        <h2>Reuniones</h2>
-        <span class="panel-count" id="rcount">&hellip;</span>
-      </div>
-      <div class="search-row">
-        <input type="text" id="rsearch" placeholder="Buscar comisión…">
-      </div>
-      <div class="rlist" id="rlist"><div class="list-empty">Cargando agenda publicada&hellip;</div></div>
+  <div id="view-agenda">
+
+    <div class="manual" id="manual">
+      <h2>Cómo usar esto (3 pasos)</h2>
+      <ol class="manual-steps">
+        <li><span class="manual-num">1</span><div><b>Conectate una sola vez.</b> Arriba a la derecha decís "Conectar" y pegás tu clave de acceso. Si todavía no tenés una, tocá "¿Cómo consigo mi clave?" y seguí esos pasos — se hace una sola vez por celular o computadora.</div></li>
+        <li><span class="manual-num">2</span><div><b>Elegí la reunión</b> de la lista de la izquierda y corregí sólo lo que cambió: el horario, el salón, si se agregaron expositores, alguna aclaración, o si se suspendió.</div></li>
+        <li><span class="manual-num">3</span><div><b>Tocá "Guardar y publicar".</b> El sitio se actualiza solo, en menos de un minuto — no hace falta avisarle a nadie.</div></li>
+      </ol>
+      <div class="manual-note">Esto edita <b>solamente</b> la Agenda de reuniones. No toca proyectos, comisiones ni ningún otro dato del sitio.</div>
+      <button class="manual-collapse" id="manual-toggle">Ocultar este manual &uarr;</button>
     </div>
 
-    <div class="panel">
-      <div class="panel-head editor-head" id="editor-head">
-        <div>
-          <p class="editor-title">Elegí una reunión</p>
-          <p class="editor-meta">de la lista de la izquierda para corregirla</p>
+    <div class="board">
+
+      <div class="panel">
+        <div class="panel-head">
+          <h2>Reuniones</h2>
+          <span class="panel-count" id="rcount">&hellip;</span>
+        </div>
+        <div class="search-row">
+          <input type="text" id="rsearch" placeholder="Buscar comisión…">
+        </div>
+        <div class="rlist" id="rlist"><div class="list-empty">Cargando agenda publicada&hellip;</div></div>
+      </div>
+
+      <div class="panel">
+        <div class="panel-head editor-head" id="editor-head">
+          <div>
+            <p class="editor-title">Elegí una reunión</p>
+            <p class="editor-meta">de la lista de la izquierda para corregirla</p>
+          </div>
+        </div>
+        <div class="editor-body" id="editor-body">
+          <div class="editor-placeholder">Ninguna reunión seleccionada todavía.</div>
         </div>
       </div>
-      <div class="editor-body" id="editor-body">
-        <div class="editor-placeholder">Ninguna reunión seleccionada todavía.</div>
+
+    </div>
+
+  </div>
+
+  <div id="view-comisiones" style="display:none">
+
+    <div class="manual" id="manual-com">
+      <h2>Cómo usar esto (3 pasos)</h2>
+      <ol class="manual-steps">
+        <li><span class="manual-num">1</span><div><b>Conectate una sola vez</b> (arriba a la derecha) — es la misma clave que para Agenda.</div></li>
+        <li><span class="manual-num">2</span><div><b>Elegí la comisión</b> de la izquierda y, al lado del integrante que cambió, tocá "Reemplazar" o "Dar de baja" — o "Agregar integrante" si es alguien nuevo.</div></li>
+        <li><span class="manual-num">3</span><div><b>Completá el DPP</b> (el decreto/disposición que respalda el cambio, ej. <code>73/26</code>) y su fecha, y guardá. Sin DPP no se puede: es lo que justifica el cambio.</div></li>
+      </ol>
+      <div class="manual-note">Esto edita <b>solamente</b> los integrantes de las comisiones. No toca la Agenda ni ningún otro dato del sitio.</div>
+      <button class="manual-collapse" id="manual-com-toggle">Ocultar este manual &uarr;</button>
+    </div>
+
+    <div class="board">
+
+      <div class="panel">
+        <div class="panel-head">
+          <h2>Comisiones</h2>
+          <span class="panel-count" id="ccount">&hellip;</span>
+        </div>
+        <div class="search-row">
+          <input type="text" id="csearch" placeholder="Buscar comisión…">
+        </div>
+        <div class="rlist" id="clist"><div class="list-empty">Cargando comisiones publicadas&hellip;</div></div>
       </div>
+
+      <div class="panel">
+        <div class="panel-head editor-head" id="com-editor-head">
+          <div>
+            <p class="editor-title">Elegí una comisión</p>
+            <p class="editor-meta">de la lista de la izquierda para corregir sus integrantes</p>
+          </div>
+        </div>
+        <div class="editor-body" id="com-editor-body" style="padding:0">
+          <div class="editor-placeholder">Ninguna comisión seleccionada todavía.</div>
+        </div>
+      </div>
+
     </div>
 
   </div>
@@ -278,12 +349,28 @@ document.getElementById('conn-btn').addEventListener('click', function(){
 refrescarConn();
 if(token())setConn('on','Conectado. Ya podés guardar cambios.');
 
-document.getElementById('manual-toggle').addEventListener('click', function(){
-  var steps = document.querySelectorAll('#manual .manual-steps, #manual .manual-note');
-  var hidden = steps[0].style.display==='none';
-  steps.forEach(function(el){el.style.display = hidden?'':'none';});
-  this.textContent = hidden ? 'Ocultar este manual ↑' : 'Mostrar el manual ↓';
-});
+function armarColapsoManual(manualId, toggleId){
+  document.getElementById(toggleId).addEventListener('click', function(){
+    var steps = document.querySelectorAll('#'+manualId+' .manual-steps, #'+manualId+' .manual-note');
+    var hidden = steps[0].style.display==='none';
+    steps.forEach(function(el){el.style.display = hidden?'':'none';});
+    this.textContent = hidden ? 'Ocultar este manual ↑' : 'Mostrar el manual ↓';
+  });
+}
+armarColapsoManual('manual','manual-toggle');
+armarColapsoManual('manual-com','manual-com-toggle');
+
+function mostrarVista(v){
+  document.getElementById('view-agenda').style.display = v==='agenda'?'':'none';
+  document.getElementById('view-comisiones').style.display = v==='comisiones'?'':'none';
+  document.getElementById('tab-btn-agenda').classList.toggle('active', v==='agenda');
+  document.getElementById('tab-btn-comisiones').classList.toggle('active', v==='comisiones');
+  document.getElementById('page-h1').textContent = v==='agenda' ? 'Editor de Agenda' : 'Editor de Comisiones';
+  document.getElementById('page-subtitle').textContent = v==='agenda'
+    ? 'Correcciones puntuales sobre lo publicado: horario, salón, suspensión, temario ampliado o expositores comunicados después del último boletín.'
+    : 'Actualizá los integrantes de una comisión cuando el sitio todavía no refleja el último DPP.';
+  if(v==='comisiones' && !comisionesCargadas)cargarDatosComisiones();
+}
 
 /* ── Carga de datos publicados (lectura pública, sin token) ── */
 function cargarDatos(){
@@ -543,6 +630,282 @@ function mostrarToast(msg, esError){
   document.getElementById('toast-text').textContent = msg;
   t.className = 'toast show' + (esError?' err':'');
   setTimeout(function(){ t.className = 'toast' + (esError?' err':''); }, 4200);
+}
+
+/* ══════════════════════════ COMISIONES ══════════════════════════════ */
+var comisionesCargadas = false;
+var comisionesBase = [];   // data/comisiones.json crudo
+var dppCambiosData = null; // objeto completo de data/dpp_cambios.json (para reescribir)
+var senadoresData = {};    // data/senadores.json crudo
+var rosterPorComision = {}; // com_norm -> [{nombre,dpp}]
+var comSeleccion = null;    // objeto de comisionesBase seleccionado
+var accionActual = null;    // 'add'|'replace'|'remove'
+
+function normCom2(s){
+  s=(s||'').toUpperCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'');
+  s=s.replace(/^DE\s+/,'');
+  s=s.replace(/[^A-Z0-9, ]/g,'');
+  return s;
+}
+function normNombre2(s){
+  return (s||'').toUpperCase().trim().normalize('NFD').replace(/[\u0300-\u036f]/g,'');
+}
+function construirDppState(cambios){
+  var state={}, rewritesPend={};
+  cambios.forEach(function(c){
+    var com=normCom2(c.comision);
+    var senOrig=c.senador||'';
+    var sen=normNombre2(senOrig);
+    if(!state[com])state[com]={};
+    if(c.tipo==='rewrite'){
+      var pr=rewritesPend[com];
+      if(!pr||pr.dpp!==c.dpp){
+        if(pr)state[com]=pr.members;
+        pr={dpp:c.dpp,members:{}};
+        rewritesPend[com]=pr;
+      }
+      pr.members[sen]={nombre:senOrig,dpp:c.dpp};
+    }else{
+      if(rewritesPend[com]){
+        state[com]=Object.assign({},rewritesPend[com].members);
+        delete rewritesPend[com];
+      }
+      var d=state[com];
+      if(c.tipo==='add'){
+        d[sen]={nombre:senOrig,dpp:c.dpp};
+      }else if(c.tipo==='replace'){
+        var rem=normNombre2(c.reemplaza||'');
+        delete d[rem];
+        d[sen]={nombre:senOrig,dpp:c.dpp};
+      }else if(c.tipo==='remove'){
+        delete d[sen];
+      }
+    }
+  });
+  Object.keys(rewritesPend).forEach(function(com){state[com]=rewritesPend[com].members;});
+  var out={};
+  Object.keys(state).forEach(function(com){
+    out[com]=Object.keys(state[com]).map(function(k){return state[com][k]});
+  });
+  return out;
+}
+
+var comisionesCargaId = 0;
+function cargarDatosComisiones(){
+  document.getElementById('clist').innerHTML = '<div class="list-empty">Cargando comisiones publicadas…</div>';
+  var miCarga = ++comisionesCargaId;
+  Promise.all([
+    fetch(RAW_BASE + 'data/comisiones.json', {cache:'no-store'}).then(function(r){if(!r.ok)throw new Error('comisiones.json '+r.status);return r.json()}),
+    fetch(RAW_BASE + 'data/dpp_cambios.json', {cache:'no-store'}).then(function(r){if(!r.ok)throw new Error('dpp_cambios.json '+r.status);return r.json()}),
+    fetch(RAW_BASE + 'data/senadores.json', {cache:'no-store'}).then(function(r){if(!r.ok)throw new Error('senadores.json '+r.status);return r.json()})
+  ]).then(function(res){
+    if(miCarga!==comisionesCargaId)return; // superada por una carga más nueva
+    comisionesBase = res[0] || [];
+    dppCambiosData = res[1] || {fechas:{},cambios:[]};
+    senadoresData = res[2] || {};
+    rosterPorComision = construirDppState(dppCambiosData.cambios || []);
+    comisionesCargadas = true;
+    renderListaComisiones();
+  }).catch(function(err){
+    if(miCarga!==comisionesCargaId)return;
+    document.getElementById('clist').innerHTML = '<div class="list-empty">No se pudieron cargar las comisiones ('+esc(err.message)+'). Recargá la página.</div>';
+  });
+}
+
+function rosterDe(com){
+  var estado = rosterPorComision[normCom2(com.nombre)];
+  if(estado && estado.length)return estado;
+  // Sin cambios de DPP registrados todavía para esta comisión: se muestra
+  // el roster tal como está publicado en el sitio (sin DPP de respaldo).
+  return (com.miembros||[]).map(function(m){return {nombre:m.nombre, dpp:null};});
+}
+
+function renderListaComisiones(){
+  var q = (document.getElementById('csearch').value||'').toLowerCase();
+  var filtradas = comisionesBase.filter(function(c){
+    return !q || c.nombre.toLowerCase().indexOf(q)>=0;
+  }).slice().sort(function(a,b){return a.nombre.localeCompare(b.nombre)});
+  document.getElementById('ccount').textContent = filtradas.length + ' comisiones';
+  var html = filtradas.length ? '' : '<div class="list-empty">Sin resultados.</div>';
+  filtradas.forEach(function(c){
+    var n = rosterDe(c).length;
+    var activa = comSeleccion && comSeleccion.nombre===c.nombre;
+    html += '<button class="ritem'+(activa?' active':'')+'" data-com="'+esc(c.nombre)+'">'
+      +'<div class="ritem-top"><span class="ritem-hora">'+n+' / '+c.cupo+'</span></div>'
+      +'<div class="ritem-com">'+esc(titleCase(c.nombre))+'</div>'
+      +'</button>';
+  });
+  document.getElementById('clist').innerHTML = html;
+  document.querySelectorAll('#clist .ritem').forEach(function(btn){
+    btn.addEventListener('click', function(){ seleccionarComision(btn.getAttribute('data-com')); });
+  });
+}
+document.getElementById('csearch').addEventListener('input', renderListaComisiones);
+
+function seleccionarComision(nombre){
+  comSeleccion = comisionesBase.find(function(c){return c.nombre===nombre});
+  accionActual = null;
+  renderListaComisiones();
+  renderComEditor();
+}
+
+function senadoresVigentesOrdenados(){
+  return Object.keys(senadoresData)
+    .filter(function(k){return senadoresData[k].vigente})
+    .sort(function(a,b){return a.localeCompare(b)});
+}
+function nombreLindo(nombreMayus){
+  var partes = nombreMayus.split(',');
+  var apellido = (partes[0]||'').trim();
+  var resto = (partes[1]||'').trim();
+  return apellido + (resto ? ', ' + titleCase(resto) : '');
+}
+
+function renderComEditor(){
+  if(!comSeleccion){
+    document.getElementById('com-editor-head').innerHTML = '<div><p class="editor-title">Elegí una comisión</p><p class="editor-meta">de la lista de la izquierda para corregir sus integrantes</p></div>';
+    document.getElementById('com-editor-body').innerHTML = '<div class="editor-placeholder">Ninguna comisión seleccionada todavía.</div>';
+    return;
+  }
+  var c = comSeleccion;
+  var roster = rosterDe(c).slice().sort(function(a,b){return a.nombre.localeCompare(b.nombre)});
+  document.getElementById('com-editor-head').innerHTML =
+    '<div><p class="editor-title">'+esc(titleCase(c.nombre))+'</p>'
+    +'<p class="editor-meta">'+roster.length+' de '+c.cupo+' cupos ocupados</p></div>'
+    +'<button class="btn btn-primary" onclick="abrirAccionCom(\'add\',null)">+ Agregar integrante</button>';
+
+  var filas = roster.map(function(m){
+    return '<div class="roster-row"><div>'
+      +'<div class="roster-nombre">'+esc(nombreLindo(m.nombre))+'</div>'
+      +'<div class="roster-dpp">'+(m.dpp?'DPP-'+esc(m.dpp):'sin DPP registrado')+'</div>'
+      +'</div><div class="roster-actions">'
+      +'<button onclick="abrirAccionCom(\'replace\',\''+esc(m.nombre).replace(/'/g,"\\'")+'\')">Reemplazar</button>'
+      +'<button class="danger" onclick="abrirAccionCom(\'remove\',\''+esc(m.nombre).replace(/'/g,"\\'")+'\')">Dar de baja</button>'
+      +'</div></div>';
+  }).join('') || '<div class="editor-placeholder">Sin integrantes registrados.</div>';
+
+  document.getElementById('com-editor-body').innerHTML = filas + '<div id="accion-panel-wrap"></div>';
+  if(accionActual)renderAccionPanel();
+}
+
+function abrirAccionCom(tipo, nombreSaliente){
+  accionActual = {tipo:tipo, saliente:nombreSaliente};
+  renderAccionPanel();
+  document.getElementById('accion-panel-wrap').scrollIntoView({behavior:'smooth',block:'nearest'});
+}
+
+function renderAccionPanel(){
+  var wrap = document.getElementById('accion-panel-wrap');
+  if(!accionActual){wrap.innerHTML='';return;}
+  var a = accionActual;
+  var yaEnComision = {};
+  rosterDe(comSeleccion).forEach(function(m){yaEnComision[normNombre2(m.nombre)]=true;});
+  var candidatos = senadoresVigentesOrdenados().filter(function(k){
+    return a.tipo==='remove' || !yaEnComision[normNombre2(k)] || k===a.saliente;
+  });
+  var hoy = new Date().toISOString().slice(0,10);
+
+  var titulo = a.tipo==='add' ? 'Agregar integrante' : a.tipo==='replace' ? 'Reemplazar a ' + nombreLindo(a.saliente) : 'Dar de baja a ' + nombreLindo(a.saliente);
+  var html = '<div class="accion-panel"><h3>'+esc(titulo)+'</h3>';
+  if(a.tipo!=='remove'){
+    html += '<div class="field"><label>Senador/a</label><select id="acc-senador">'
+      + candidatos.map(function(k){return '<option value="'+esc(k)+'">'+esc(nombreLindo(k))+'</option>'}).join('')
+      + '</select></div>';
+  }
+  html += '<div class="field-grid" style="margin-bottom:0">'
+    +'<div class="field"><label>DPP que lo respalda</label><input type="text" id="acc-dpp" placeholder="Ej.: 73/26"></div>'
+    +'<div class="field"><label>Fecha del DPP</label><input type="date" id="acc-fecha" value="'+hoy+'"></div>'
+    +'</div>'
+    +'<div class="editor-actions" style="border-top:none;padding-top:14px">'
+    +'<span class="save-status" id="acc-status"></span>'
+    +'<button class="btn btn-ghost" onclick="cerrarAccionCom()">Cancelar</button>'
+    +'<button class="btn btn-primary" onclick="guardarAccionCom()">Guardar cambio</button>'
+    +'</div></div>';
+  wrap.innerHTML = html;
+}
+function cerrarAccionCom(){
+  accionActual = null;
+  renderComEditor();
+}
+
+function fechaDppFormato(iso){
+  // '2026-09-09' -> '09-09-2026', igual a la convención ya usada en dpp_cambios.json
+  var p = (iso||'').split('-');
+  return p.length===3 ? (p[2]+'-'+p[1]+'-'+p[0]) : iso;
+}
+
+function guardarAccionCom(){
+  var a = accionActual;
+  if(!token()){
+    mostrarToast('Conectate primero (arriba a la derecha) para poder guardar.', true);
+    return;
+  }
+  var dpp = (document.getElementById('acc-dpp').value||'').trim();
+  var fechaIso = document.getElementById('acc-fecha').value;
+  if(!dpp || !/^\d+\/\d{2}$/.test(dpp)){
+    document.getElementById('acc-status').textContent = 'Escribí el DPP con el formato número/año, ej. 73/26.';
+    document.getElementById('acc-status').className = 'save-status err';
+    return;
+  }
+  if(!fechaIso){
+    document.getElementById('acc-status').textContent = 'Falta la fecha del DPP.';
+    document.getElementById('acc-status').className = 'save-status err';
+    return;
+  }
+  var senadorKey = a.tipo!=='remove' ? document.getElementById('acc-senador').value : null;
+
+  var statusEl = document.getElementById('acc-status');
+  statusEl.textContent = 'Guardando…';
+  statusEl.className = 'save-status';
+
+  var headers = {Authorization:'Bearer '+token(), Accept:'application/vnd.github+json'};
+
+  fetch(API_BASE + 'data/dpp_cambios.json', {headers:headers, cache:'no-store'})
+    .then(function(resp){
+      if(!resp.ok)throw new Error('No se pudo leer el archivo actual (' + resp.status + ')');
+      return resp.json();
+    })
+    .then(function(file){
+      var actual = JSON.parse(b64DecodeUtf8(file.content.replace(/\n/g,'')));
+      actual.fechas = actual.fechas || {};
+      actual.cambios = actual.cambios || [];
+      actual.fechas[dpp] = fechaDppFormato(fechaIso);
+
+      var cambio = {dpp: dpp, comision: comSeleccion.nombre, tipo: a.tipo};
+      if(a.tipo==='add'){
+        cambio.senador = senadorKey;
+      }else if(a.tipo==='replace'){
+        cambio.senador = senadorKey;
+        cambio.reemplaza = a.saliente;
+      }else if(a.tipo==='remove'){
+        cambio.senador = a.saliente;
+      }
+      actual.cambios.push(cambio);
+
+      var contenido = JSON.stringify(actual, null, 2) + '\n';
+      var autor = localStorage.getItem(AUTOR_KEY) || prompt('¿Tu nombre? (para dejar registro de quién hizo este cambio)') || 'Sin identificar';
+      localStorage.setItem(AUTOR_KEY, autor);
+      return fetch(API_BASE + 'data/dpp_cambios.json', {
+        method:'PUT', headers: Object.assign({'Content-Type':'application/json'}, headers),
+        body: JSON.stringify({
+          message: 'Editor de comisiones (' + autor + '): DPP-' + dpp + ' — ' + a.tipo + ' en ' + comSeleccion.nombre,
+          content: b64EncodeUtf8(contenido),
+          sha: file.sha,
+          branch: 'main'
+        })
+      });
+    })
+    .then(function(resp){
+      if(!resp.ok)return resp.json().then(function(e){throw new Error(e.message||('Error ' + resp.status))});
+      mostrarToast('Guardado — el sitio se actualiza solo en menos de un minuto.', false);
+      accionActual = null;
+      cargarDatosComisiones();
+    })
+    .catch(function(err){
+      statusEl.textContent = 'No se pudo guardar: ' + err.message;
+      statusEl.className = 'save-status err';
+      mostrarToast('No se pudo guardar. ' + err.message, true);
+    });
 }
 
 cargarDatos();
