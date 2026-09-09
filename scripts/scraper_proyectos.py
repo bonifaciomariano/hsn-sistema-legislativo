@@ -679,10 +679,11 @@ def main():
     # 2. Scraping incremental web + revisión de trazabilidad de abiertos
     if SCRAPE:
         session = requests.Session()
+        # Ver nota en scraper_agenda.py: un User-Agent de navegador dispara el
+        # anti-bots del sitio; uno propio y honesto pasa sin problema. NO
+        # cambiarlo por uno de navegador "para disimular".
         session.headers.update({
-            "User-Agent": ("Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
-                           "AppleWebKit/537.36 (KHTML, like Gecko) "
-                           "Chrome/120.0.0.0 Safari/537.36")
+            "User-Agent": "HSN-SistemaLegislativo/1.0 (+https://github.com/bonifaciomariano/hsn-sistema-legislativo)"
         })
         nuevos = scrape_incremental(session, padron, indice, claves, acuerdos_por_clave)
         proyectos.extend(nuevos)

@@ -227,6 +227,7 @@ body.ficha-activa>*:not(.ficha-overlay){display:none!important}
 .ficha-check{width:26px}
 .ficha-checkbox{display:inline-block;width:14px;height:14px;border:1.5px solid #9aa1a6;border-radius:3px}
 .ficha-apellido{font-weight:600;color:#4A4A4A;white-space:nowrap}
+.ficha-apellido .senador-avatar{margin-right:6px}
 .ficha-cargo{font-size:11px;color:#1B5EA2;font-weight:600;white-space:nowrap}
 .ficha-provincia{width:110px;max-width:110px;font-size:10.5px;color:#4A4A4A;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 .ficha-dpp{font-size:9.5px;font-weight:700;padding:2px 7px;border-radius:10px;background:#FFF3CD;color:#7A5200;white-space:nowrap}
@@ -314,6 +315,7 @@ body.ficha-activa>*:not(.ficha-overlay){display:none!important}
 .com-sub-content.active{display:block}
 #com-integrantes-list{max-width:760px;margin:0 auto}
 .member-row{display:flex;align-items:center;gap:8px;padding:8px 4px;border-bottom:1px solid #EEF2F8;flex-wrap:wrap}
+.senador-avatar{border-radius:50%;object-fit:cover;flex-shrink:0;background:#EEF2F8;vertical-align:middle}
 .member-row:last-child{border-bottom:none}
 .bloque-dot{width:10px;height:10px;border-radius:50%;flex-shrink:0}
 .member-name{font-size:13px;font-weight:600;color:#4A4A4A;flex:1;min-width:160px}
@@ -1165,6 +1167,18 @@ var BLOQUE_COLORS={
 };
 var BLOQUE_COLOR_DEFAULT={dot:'#9CA3AF', bg:'#F9FAFB', badge:'#374151'};
 function normBloque(b){return String(b||'').toUpperCase().normalize('NFD').replace(/[̀-ͯ]/g,'').trim()}
+/* ── Fotos de senadores (extraídas del despliegue oficial 2026) ─────── */
+function normNombreFoto(s){return String(s||'').toUpperCase().normalize('NFD').replace(/[̀-ͯ]/g,'').trim()}
+function fotoSenadorUrl(nombre){
+  var f=FOTOS_SENADORES[normNombreFoto(nombre)];
+  return f?'data/fotos/'+f:null;
+}
+function avatarHtml(nombre,size){
+  var url=fotoSenadorUrl(nombre);
+  if(!url)return '';
+  size=size||26;
+  return '<img class="senador-avatar" src="'+escAttr(url)+'" width="'+size+'" height="'+size+'" loading="lazy" alt="" onerror="this.remove()">';
+}
 var BLOQUE_COLORS_NORM={};
 Object.keys(BLOQUE_COLORS).forEach(function(k){BLOQUE_COLORS_NORM[normBloque(k)]=BLOQUE_COLORS[k]});
 var ALL_BLOQUES=[];
@@ -2057,6 +2071,7 @@ function renderIntegrantes(c){
     var col=blqColor(m.bloque);
     var rolHtml=(m.rol&&m.rol!=='Vocal')?'<span class="rol-badge rol-'+m.rol+'">'+esc(m.rol)+'</span>':'';
     html+='<div class="member-row">'
+      +avatarHtml(m.nombre,30)
       +'<span class="bloque-dot" style="background:'+col.dot+'"></span>'
       +'<span class="member-name">'+esc(m.nombre)+'</span>'
       +'<span class="btag" style="background:'+col.bg+';color:'+col.badge+'">'+esc(m.bloque)+'</span>'
@@ -3400,7 +3415,7 @@ function fichaTablaComision(c,nombresRepetidos){
     var checked=!!fichaEstado[key];
     return '<tr class="ficha-row-clickable'+(repetido?' ficha-row-repetido':'')+(checked?' ficha-checked':'')+'" data-key="'+escAttr(key)+'" data-com="'+escAttr(comId)+'" data-nombre="'+escAttr(m.nombre)+'" onclick="toggleFichaPresente(this)">'
       +'<td class="ficha-check"><span class="ficha-checkbox'+(checked?' checked':'')+'"></span></td>'
-      +'<td class="ficha-apellido">'+esc(apellidoFicha(m.nombre))+(repetido?' <span class="ficha-repetido-marca" title="Integra más de una comisión de esta plenaria">*</span>':'')+'</td>'
+      +'<td class="ficha-apellido">'+avatarHtml(m.nombre,22)+esc(apellidoFicha(m.nombre))+(repetido?' <span class="ficha-repetido-marca" title="Integra más de una comisión de esta plenaria">*</span>':'')+'</td>'
       +'<td class="ficha-cargo">'+esc(FICHA_CARGO_LABEL[m.rol]!=null?FICHA_CARGO_LABEL[m.rol]:(m.rol||''))+'</td>'
       +'<td class="ficha-provincia">'+esc(m.provincia||'')+'</td>'
       +'<td><span class="btag" style="background:'+col.bg+';color:'+col.badge+'">'+esc(m.bloque||'')+'</span></td>'
@@ -5111,6 +5126,7 @@ var AGENDA = {agenda};
 var AYUDA_MEMORIA = {ayuda_memoria};
 var SANCIONES_DATA = {sanciones};
 var BLOQUE_TOTALES = {bloque_totales};
+var FOTOS_SENADORES = {fotos_senadores};
 var FONT_POPPINS_REGULAR = "{font_regular}";
 var FONT_POPPINS_BOLD = "{font_bold}";
 {js}
@@ -5825,6 +5841,21 @@ def main():
     ayuda_memoria_js = json.dumps(ayuda_memoria_procesada, ensure_ascii=False)
     sanciones_js = json.dumps(sanciones_procesada, ensure_ascii=False)
     bloque_totales_js = json.dumps(construir_bloque_totales(), ensure_ascii=False)
+    fotos_senadores_raw = _cargar("fotos_senadores.json", {})
+    fotos_por_nombre_norm = {}
+    for k, v in fotos_senadores_raw.items():
+        fotos_por_nombre_norm[_norm_nombre(k)] = v
+        # El roster de comisiones (log de DPP) a veces usa sólo uno de los
+        # nombres de pila y no necesariamente el primero ("REJAL, Fernando"
+        # en vez de "REJAL, Jesús Fernando") -- se indexa también por
+        # apellido + cada palabra individual del nombre para que la foto
+        # igual aparezca.
+        apellido, _, nombre = k.partition(",")
+        for palabra in nombre.strip().split(" "):
+            if palabra:
+                clave_corta = _norm_nombre(f"{apellido}, {palabra}")
+                fotos_por_nombre_norm.setdefault(clave_corta, v)
+    fotos_senadores_js = json.dumps(fotos_por_nombre_norm, ensure_ascii=False)
     fonts = _cargar("fonts_poppins.json", {})
     fecha = datetime.now(timezone.utc).astimezone(timezone(timedelta(hours=-3))).strftime("%d/%m/%Y %H:%M")
 
@@ -5837,6 +5868,7 @@ def main():
         ayuda_memoria=ayuda_memoria_js,
         sanciones=sanciones_js,
         bloque_totales=bloque_totales_js,
+        fotos_senadores=fotos_senadores_js,
         font_regular=fonts.get("regular", ""),
         font_bold=fonts.get("bold", ""),
         fecha=fecha,

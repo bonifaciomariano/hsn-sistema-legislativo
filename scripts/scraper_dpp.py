@@ -48,9 +48,10 @@ BASELINE = os.getenv("BASELINE", "") == "1"
 BASE_URL = "https://www.senado.gob.ar"
 URL_DECRETOS = f"{BASE_URL}/parlamentario/parlamentaria/decreto"
 
-HEADERS = {"User-Agent": ("Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
-                          "AppleWebKit/537.36 (KHTML, like Gecko) "
-                          "Chrome/120.0.0.0 Safari/537.36")}
+# Ver nota en scraper_agenda.py: un User-Agent de navegador dispara el
+# anti-bots del sitio; uno propio y honesto pasa sin problema. NO cambiarlo
+# por uno de navegador.
+HEADERS = {"User-Agent": "HSN-SistemaLegislativo/1.0 (+https://github.com/bonifaciomariano/hsn-sistema-legislativo)"}
 
 logging.basicConfig(
     level=logging.INFO,

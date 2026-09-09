@@ -63,9 +63,12 @@ COMISIONES_JSON = os.path.join(DATA_DIR, "comisiones.json")
 BASE_URL = "https://www.senado.gob.ar"
 URL_BOLETINES = f"{BASE_URL}/parlamentario/boletines/"
 
-HEADERS = {"User-Agent": ("Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
-                          "AppleWebKit/537.36 (KHTML, like Gecko) "
-                          "Chrome/120.0.0.0 Safari/537.36")}
+# El sitio tiene un filtro anti-bots (F5/Imperva, desde ago/2026) que bloquea
+# a quien DICE ser un navegador (User-Agent Mozilla/Chrome/...) sin ejecutar
+# su JavaScript -- un User-Agent propio y honesto pasa sin problema. Verificado
+# en las 6 fuentes que usa la app y desde 3 redes distintas. NO volver a poner
+# un UA de navegador "para disimular": es exactamente lo que se bloquea.
+HEADERS = {"User-Agent": "HSN-SistemaLegislativo/1.0 (+https://github.com/bonifaciomariano/hsn-sistema-legislativo)"}
 
 DIAS_SEMANA = re.compile(
     r"\b(LUNES|MARTES|MI[EÉ]RCOLES|JUEVES|VIERNES|S[AÁ]BADO|DOMINGO)\b", re.IGNORECASE)
