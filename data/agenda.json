@@ -7425,8 +7425,8 @@
       ],
       "expositores": null,
       "tipo": "senadores",
-      "boletin_id": 2363,
-      "boletin_numero": "112/26"
+      "boletin_id": 2364,
+      "boletin_numero": "113/26"
     },
     {
       "seccion": "senadores",
@@ -7470,8 +7470,8 @@
       ],
       "expositores": null,
       "tipo": "bicameral",
-      "boletin_id": 2363,
-      "boletin_numero": "112/26"
+      "boletin_id": 2364,
+      "boletin_numero": "113/26"
     },
     {
       "seccion": "senadores",
@@ -7496,8 +7496,8 @@
       ],
       "expositores": null,
       "tipo": "senadores",
-      "boletin_id": 2363,
-      "boletin_numero": "112/26"
+      "boletin_id": 2364,
+      "boletin_numero": "113/26"
     },
     {
       "seccion": "asesores",
@@ -7630,22 +7630,22 @@
       ],
       "expositores": null,
       "tipo": "senadores",
-      "boletin_id": 2363,
-      "boletin_numero": "112/26"
+      "boletin_id": 2364,
+      "boletin_numero": "113/26"
     },
     {
       "seccion": "senadores",
       "dia": "MIÉRCOLES",
       "fecha": "09/09",
-      "hora": "16:30",
+      "hora": "15:00",
       "modalidad": "",
       "comisiones": [
         "PRESUPUESTO Y HACIENDA",
         "LEGISLACIÓN GENERAL",
         "ECONOMÍAS REGIONALES, ECONOMÍA SOCIAL, MICRO, PEQUEÑA Y MEDIANA EMPRESA"
       ],
-      "salon": "ILLIA",
-      "salon_completo": "ILLIA",
+      "salon": "AZUL",
+      "salon_completo": "AZUL",
       "temario": [
         {
           "numero": "",
@@ -7658,8 +7658,8 @@
       ],
       "expositores": null,
       "tipo": "senadores",
-      "boletin_id": 2363,
-      "boletin_numero": "112/26"
+      "boletin_id": 2364,
+      "boletin_numero": "113/26"
     },
     {
       "seccion": "senadores",
@@ -7681,8 +7681,8 @@
       ],
       "expositores": "CDOR. MARTIN CARANTA, CONTADOR ESPECIALIZADO EN DERECHO TRIBUTARIO. DR. JUAN MARTÍN JOVANOVICH, ABOGADO ESPECIALIZADO EN DERECHO TRIBUTARIO.",
       "tipo": "senadores",
-      "boletin_id": 2363,
-      "boletin_numero": "112/26"
+      "boletin_id": 2364,
+      "boletin_numero": "113/26"
     },
     {
       "seccion": "asesores",
@@ -7730,8 +7730,8 @@
       ],
       "expositores": null,
       "tipo": "asesores",
-      "boletin_id": 2363,
-      "boletin_numero": "112/26"
+      "boletin_id": 2364,
+      "boletin_numero": "113/26"
     }
   ]
 }
