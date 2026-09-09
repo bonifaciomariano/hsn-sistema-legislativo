@@ -494,6 +494,9 @@ table.cross-table tr:last-child td{border-bottom:none}
 .plenaria-badge{display:inline-block;font-size:9.5px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;padding:2px 8px;border-radius:10px;background:#0d3f73;color:#fff}
 .suspendida-badge{display:inline-block;font-size:9.5px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;padding:2px 8px;border-radius:10px;background:#FEE2E2;color:#991B1B}
 .agenda-card.agenda-suspendida{opacity:.75}
+/* ── Agenda: hoy (vista por defecto) ──────────────────────────────────── */
+.agenda-hoy-header{display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap;margin-bottom:12px}
+.agenda-hoy-titulo{font-size:15px;font-weight:700;color:#1B5EA2}
 /* ── Agenda: calendario ──────────────────────────────────────────────── */
 .agenda-cal-controls{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:16px}
 .cal-header{display:flex;align-items:center;justify-content:center;gap:18px;margin:4px 0 10px}
@@ -2849,6 +2852,27 @@ function agendaInit(){
 
   renderAgendaCalendario();
   renderAgendaAsesores();
+  renderAgendaHoy();
+}
+function toggleAgendaVista(vista){
+  document.getElementById('agenda-hoy-wrap').hidden=(vista==='calendario');
+  document.getElementById('agenda-calendario-wrap').hidden=(vista!=='calendario');
+}
+function renderAgendaHoy(){
+  var hoy=new Date();
+  var hoyKey=hoy.getFullYear()+'-'+hoy.getMonth()+'-'+hoy.getDate();
+  var reuniones=AGENDA.filter(function(r){
+    if(!r.fecha_iso||r.suspendida)return false;
+    var d=new Date(r.fecha_iso);
+    return (d.getFullYear()+'-'+d.getMonth()+'-'+d.getDate())===hoyKey;
+  });
+  reuniones.sort(function(a,b){return reunionTime(a)-reunionTime(b)});
+  var diaSemana=DIAS_SEMANA_LARGO[hoy.getDay()];
+  document.getElementById('agenda-hoy-titulo').textContent='Hoy, '+diaSemana+' '+hoy.getDate()+' de '+MESES_LARGO[hoy.getMonth()];
+  var body=document.getElementById('agenda-hoy-body');
+  body.innerHTML=reuniones.length
+    ?reuniones.map(function(r){return buildReunionCard(r,AGENDA.indexOf(r),reunionTime(r)<Date.now());}).join('')
+    :'<div class="com-empty">No hay reuniones programadas para hoy.</div>';
 }
 function agendaOnFiltro(){
   renderAgendaCalendario();
@@ -4558,7 +4582,7 @@ HTML_TEMPLATE = """<!DOCTYPE html>
       <div class="section-block">
         <div class="section-header">
           <h2>Comisiones permanentes</h2>
-          <span class="section-hint">Senado de la Naci&oacute;n</span>
+          <span class="section-hint">{com_hint}</span>
         </div>
         <div class="section-body">
           <div class="stats-bar" id="com-stats-bar"></div>
@@ -4667,31 +4691,44 @@ HTML_TEMPLATE = """<!DOCTYPE html>
     <div class="section-block">
       <div class="section-header">
         <h2>Agenda de reuniones</h2>
-        <span class="section-hint">Boletines de comisiones del HSN</span>
+        <span class="section-hint">{agenda_hint}</span>
       </div>
       <div class="section-body">
-        <div class="agenda-cal-controls">
-          <input class="search-box" type="text" id="agenda-search" placeholder="Buscar palabra exacta (comisi&oacute;n o temario)&hellip;" style="max-width:320px">
-          <div class="select-wrapper">
-            <select class="filter-select" id="agenda-comision-select">
-              <option value="">Todas las comisiones</option>
-            </select>
-            <span class="select-arrow">&#9660;</span>
+
+        <div id="agenda-hoy-wrap">
+          <div class="agenda-hoy-header">
+            <div class="agenda-hoy-titulo" id="agenda-hoy-titulo">Hoy</div>
+            <button class="btn-export" onclick="toggleAgendaVista('calendario')">&#128197; Ver calendario completo</button>
           </div>
+          <div id="agenda-hoy-body"></div>
         </div>
-        <div class="cal-header">
-          <button class="cal-nav" id="cal-prev" onclick="agendaCambiarMes(-1)" aria-label="Mes anterior">&#8249;</button>
-          <div class="cal-mes-label" id="cal-mes-label">&nbsp;</div>
-          <button class="cal-nav" id="cal-next" onclick="agendaCambiarMes(1)" aria-label="Mes siguiente">&#8250;</button>
+
+        <div id="agenda-calendario-wrap" hidden>
+          <button class="btn-export" style="margin-bottom:14px" onclick="toggleAgendaVista('hoy')">&larr; Volver a hoy</button>
+          <div class="agenda-cal-controls">
+            <input class="search-box" type="text" id="agenda-search" placeholder="Buscar palabra exacta (comisi&oacute;n o temario)&hellip;" style="max-width:320px">
+            <div class="select-wrapper">
+              <select class="filter-select" id="agenda-comision-select">
+                <option value="">Todas las comisiones</option>
+              </select>
+              <span class="select-arrow">&#9660;</span>
+            </div>
+          </div>
+          <div class="cal-header">
+            <button class="cal-nav" id="cal-prev" onclick="agendaCambiarMes(-1)" aria-label="Mes anterior">&#8249;</button>
+            <div class="cal-mes-label" id="cal-mes-label">&nbsp;</div>
+            <button class="cal-nav" id="cal-next" onclick="agendaCambiarMes(1)" aria-label="Mes siguiente">&#8250;</button>
+          </div>
+          <div class="cal-dow-row">
+            <div class="cal-dow">Lun</div><div class="cal-dow">Mar</div><div class="cal-dow">Mi&eacute;</div>
+            <div class="cal-dow">Jue</div><div class="cal-dow">Vie</div><div class="cal-dow weekend">S&aacute;b</div>
+            <div class="cal-dow weekend">Dom</div>
+          </div>
+          <div class="cal-grid" id="cal-grid"></div>
+          <div class="no-results" id="cal-empty-msg" style="display:none">Sin reuniones para este filtro en el rango cargado.</div>
+          <div id="agenda-asesores"></div>
         </div>
-        <div class="cal-dow-row">
-          <div class="cal-dow">Lun</div><div class="cal-dow">Mar</div><div class="cal-dow">Mi&eacute;</div>
-          <div class="cal-dow">Jue</div><div class="cal-dow">Vie</div><div class="cal-dow weekend">S&aacute;b</div>
-          <div class="cal-dow weekend">Dom</div>
-        </div>
-        <div class="cal-grid" id="cal-grid"></div>
-        <div class="no-results" id="cal-empty-msg" style="display:none">Sin reuniones para este filtro en el rango cargado.</div>
-        <div id="agenda-asesores"></div>
+
       </div>
     </div>
   </div>
@@ -5583,6 +5620,34 @@ def parse_fecha_sort(fecha_str):
     return "00000000"
 
 
+def _dpp_ultimo_txt(dpp_data):
+    fechas = dpp_data.get("fechas", {})
+    if not fechas:
+        return ""
+    def _clave(item):
+        try:
+            numero, anio = item[0].split("/")
+            return (int(anio), int(numero))
+        except ValueError:
+            return (0, 0)
+    numero, fecha = max(fechas.items(), key=_clave)
+    return f"&Uacute;ltimo DPP: {numero} ({fecha})"
+
+
+def _agenda_ultimo_boletin_txt(agenda):
+    numeros = {r["boletin_numero"] for r in agenda if r.get("boletin_numero")}
+    if not numeros:
+        return ""
+    def _clave(numero):
+        try:
+            n, anio = numero.split("/")
+            return (int(anio), int(n))
+        except ValueError:
+            return (0, 0)
+    ultimo = max(numeros, key=_clave)
+    return f"&Uacute;ltimo bolet&iacute;n: {ultimo}"
+
+
 def main():
     proyectos = _cargar("proyectos.json", [])
     # Orden: fecha ↓, luego año y número (más nuevo a más viejo)
@@ -5612,6 +5677,17 @@ def main():
 
     ayuda_memoria_procesada = construir_ayuda_memoria()
 
+    dpp_data = _cargar("dpp_cambios.json", {})
+    dpp_ultimo_txt = _dpp_ultimo_txt(dpp_data)
+    com_hint = "Senado de la Naci&oacute;n"
+    if dpp_ultimo_txt:
+        com_hint += " &middot; " + dpp_ultimo_txt
+
+    agenda_ultimo_txt = _agenda_ultimo_boletin_txt(agenda_procesada)
+    agenda_hint = "Boletines de comisiones del HSN"
+    if agenda_ultimo_txt:
+        agenda_hint += " &middot; " + agenda_ultimo_txt
+
     datos_js = json.dumps(proyectos, ensure_ascii=False)
     comisiones_js = json.dumps(construir_comisiones(proyectos), ensure_ascii=False)
     agenda_js = json.dumps(agenda_procesada, ensure_ascii=False)
@@ -5633,6 +5709,8 @@ def main():
         font_regular=fonts.get("regular", ""),
         font_bold=fonts.get("bold", ""),
         fecha=fecha,
+        com_hint=com_hint,
+        agenda_hint=agenda_hint,
         total=total,
         pl=tipos_count.get("PL", 0),
         pd=tipos_count.get("PD", 0),
