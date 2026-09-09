@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Editor de Agenda &middot; HSN</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@500&display=swap">
+<style>
+:root{
+  --bg:#F5F7FA;
+  --surface:#FFFFFF;
+  --surface-2:#FAFBFD;
+  --border:#D6E4F0;
+  --text:#2C2C2C;
+  --text-muted:#6b7785;
+  --text-faint:#9aacbd;
+  --accent:#1B5EA2;
+  --accent-soft:#EAF0FA;
+  --accent-strong:#0d3f73;
+  --warn:#C2650C;
+  --warn-soft:#FBEADD;
+  --ok:#0d7a4a;
+  --ok-soft:#DCF0E8;
+  --danger:#b42318;
+  --danger-soft:#FBE7E5;
+  --shadow:0 1px 3px rgba(20,40,70,0.06);
+  --shadow-lift:0 10px 30px -14px rgba(20,50,90,0.28);
+}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--text);font-family:'Inter',system-ui,sans-serif;margin:0}
+.wrap{max-width:1180px;margin:0 auto;padding:22px 20px 60px}
+
+/* ── Manual (MUY sencillo) ── */
+.manual{background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:22px 24px;box-shadow:var(--shadow);margin-bottom:20px}
+.manual h2{font-family:'Poppins',sans-serif;font-size:16px;font-weight:600;color:var(--accent);margin:0 0 14px}
+.manual-steps{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:12px}
+.manual-steps li{display:flex;gap:12px;align-items:flex-start;font-size:14px;line-height:1.55}
+.manual-num{font-family:'Poppins',sans-serif;font-weight:700;font-size:14px;color:#fff;background:var(--accent);width:26px;height:26px;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.manual-steps b{color:var(--text)}
+.manual-steps a{color:var(--accent);font-weight:600}
+.manual-note{margin-top:14px;padding:10px 14px;background:var(--accent-soft);border-radius:8px;font-size:12.5px;color:var(--accent-strong);line-height:1.5}
+.manual-collapse{margin-top:10px;background:none;border:none;color:var(--text-muted);font-size:12px;font-weight:600;cursor:pointer;padding:4px 0}
+
+/* ── Header ── */
+.topbar{display:flex;align-items:flex-start;justify-content:space-between;gap:20px;flex-wrap:wrap;margin-bottom:18px}
+.brand-eyebrow{font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--text-faint);margin:0 0 4px}
+h1{font-family:'Poppins',sans-serif;font-size:24px;font-weight:700;color:var(--accent);margin:0 0 4px}
+.subtitle{font-size:13px;color:var(--text-muted);margin:0;max-width:60ch}
+
+/* ── Conexión ── */
+.conn-box{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:12px 16px;box-shadow:var(--shadow);display:flex;align-items:center;gap:10px;flex-wrap:wrap;min-width:280px}
+.conn-dot{width:9px;height:9px;border-radius:50%;background:var(--text-faint);flex-shrink:0}
+.conn-dot.on{background:var(--ok);box-shadow:0 0 0 3px var(--ok-soft)}
+.conn-dot.err{background:var(--danger);box-shadow:0 0 0 3px var(--danger-soft)}
+.conn-text{font-size:12.5px;color:var(--text-muted);flex:1}
+.conn-text b{color:var(--text)}
+.conn-box input[type=password]{flex:1;min-width:180px;padding:8px 10px;border:1.5px solid var(--border);border-radius:7px;font-family:'IBM Plex Mono',monospace;font-size:12px;background:var(--surface-2);color:var(--text)}
+.conn-box .btn{white-space:nowrap}
+.conn-forget{background:none;border:none;color:var(--text-faint);font-size:11px;text-decoration:underline;cursor:pointer}
+
+/* ── Layout ── */
+.board{display:grid;grid-template-columns:340px 1fr;gap:18px;align-items:start}
+@media(max-width:880px){.board{grid-template-columns:1fr}}
+.panel{background:var(--surface);border:1px solid var(--border);border-radius:14px;box-shadow:var(--shadow);overflow:hidden}
+.panel-head{padding:14px 18px;border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;gap:10px}
+.panel-head h2{font-family:'Poppins',sans-serif;font-size:13px;font-weight:600;color:var(--text);margin:0;text-transform:uppercase;letter-spacing:.04em}
+.panel-count{font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--text-faint)}
+
+.search-row{padding:12px 14px;border-bottom:1px solid var(--border)}
+.search-row input{width:100%;padding:9px 12px;border:1.5px solid var(--border);border-radius:8px;background:var(--surface-2);color:var(--text);font-family:inherit;font-size:12.5px;outline:none}
+.search-row input:focus{border-color:var(--accent)}
+.rlist{max-height:640px;overflow-y:auto}
+.rgroup-label{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--text-faint);padding:12px 16px 6px}
+.ritem{width:100%;text-align:left;background:none;border:none;border-left:3px solid transparent;padding:10px 16px 10px 13px;cursor:pointer;display:flex;flex-direction:column;gap:4px;font-family:inherit;color:var(--text)}
+.ritem:hover{background:var(--surface-2)}
+.ritem.active{background:var(--accent-soft);border-left-color:var(--accent)}
+.ritem-top{display:flex;align-items:center;justify-content:space-between;gap:8px}
+.ritem-hora{font-family:'IBM Plex Mono',monospace;font-size:11.5px;font-weight:500;color:var(--text-muted)}
+.ritem.active .ritem-hora{color:var(--accent)}
+.ritem-com{font-size:12.5px;font-weight:600;line-height:1.3}
+.chip{display:inline-flex;align-items:center;gap:4px;font-size:9.5px;font-weight:700;text-transform:uppercase;letter-spacing:.03em;padding:2px 7px;border-radius:20px;white-space:nowrap;flex-shrink:0}
+.chip-pend{background:var(--warn-soft);color:var(--warn)}
+.chip-ok{background:var(--ok-soft);color:var(--ok)}
+.chip-live{background:var(--accent-soft);color:var(--accent)}
+.chip-dot{width:5px;height:5px;border-radius:50%;background:currentColor}
+.list-empty{padding:24px 16px;text-align:center;font-size:12.5px;color:var(--text-faint)}
+
+.editor-head{display:flex;align-items:flex-start;justify-content:space-between;gap:14px;flex-wrap:wrap}
+.editor-title{font-family:'Poppins',sans-serif;font-size:16px;font-weight:600;color:var(--text);margin:0 0 3px}
+.editor-meta{font-size:12px;color:var(--text-muted)}
+.editor-meta code{font-family:'IBM Plex Mono',monospace;background:var(--surface-2);border:1px solid var(--border);border-radius:5px;padding:1px 6px;font-size:11px}
+.editor-body{padding:18px}
+.editor-placeholder{padding:60px 24px;text-align:center;color:var(--text-faint);font-size:13px}
+.field-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px 16px;margin-bottom:18px}
+@media(max-width:560px){.field-grid{grid-template-columns:1fr}}
+.field{display:flex;flex-direction:column;gap:6px}
+.field.span2{grid-column:1/-1}
+.field label{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.05em;color:var(--text-muted);display:flex;align-items:center;gap:6px}
+.field .was{font-family:'IBM Plex Mono',monospace;font-weight:400;text-transform:none;letter-spacing:0;color:var(--text-faint);font-size:10.5px}
+.field input[type=text],.field input[type=time],.field textarea,.field select{width:100%;padding:9px 11px;border:1.5px solid var(--border);border-radius:8px;background:var(--surface-2);color:var(--text);font-family:inherit;font-size:13px;outline:none;transition:border-color .15s}
+.field input:focus,.field textarea:focus,.field select:focus{border-color:var(--accent)}
+.field textarea{resize:vertical;min-height:64px;line-height:1.5;font-family:inherit}
+.field-hint{font-size:10.5px;color:var(--text-faint)}
+
+.toggle-row{display:flex;align-items:center;justify-content:space-between;background:var(--surface-2);border:1.5px solid var(--border);border-radius:10px;padding:11px 14px}
+.toggle-row.danger-active{background:var(--danger-soft);border-color:var(--danger)}
+.toggle-label{font-size:13px;font-weight:600}
+.toggle-sub{font-size:11px;color:var(--text-muted);margin-top:2px}
+.switch{position:relative;width:38px;height:22px;flex-shrink:0}
+.switch input{opacity:0;width:0;height:0}
+.switch-track{position:absolute;inset:0;background:var(--border);border-radius:20px;cursor:pointer;transition:background .15s}
+.switch-track::after{content:'';position:absolute;width:16px;height:16px;left:3px;top:3px;background:var(--surface);border-radius:50%;transition:transform .15s;box-shadow:0 1px 2px rgba(0,0,0,0.25)}
+.switch input:checked+.switch-track{background:var(--danger)}
+.switch input:checked+.switch-track::after{transform:translateX(16px)}
+
+.diff-box{background:var(--surface-2);border:1px dashed var(--border);border-radius:10px;padding:12px 14px;margin-bottom:16px;font-size:12px}
+.diff-title{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--text-faint);margin-bottom:8px}
+.diff-row{display:flex;gap:8px;align-items:baseline;padding:3px 0;font-family:'IBM Plex Mono',monospace;font-size:11.5px;flex-wrap:wrap}
+.diff-row .k{color:var(--text-muted);min-width:80px;flex-shrink:0}
+.diff-old{color:var(--danger);text-decoration:line-through;opacity:.75}
+.diff-new{color:var(--ok);font-weight:600}
+.diff-empty{color:var(--text-faint);font-style:italic}
+
+.editor-actions{display:flex;align-items:center;gap:10px;justify-content:flex-end;padding-top:14px;border-top:1px solid var(--border);flex-wrap:wrap}
+.save-status{font-size:12px;color:var(--text-muted);margin-right:auto}
+.save-status.err{color:var(--danger);font-weight:600}
+.save-status.ok{color:var(--ok);font-weight:600}
+.btn{font-family:inherit;font-size:12.5px;font-weight:600;padding:9px 18px;border-radius:8px;cursor:pointer;border:1.5px solid transparent;transition:all .15s}
+.btn-ghost{background:none;border-color:var(--border);color:var(--text-muted)}
+.btn-ghost:hover{border-color:var(--text-faint);color:var(--text)}
+.btn-primary{background:var(--accent);color:#fff}
+.btn-primary:hover{background:var(--accent-strong)}
+.btn-primary:disabled{background:var(--border);color:var(--text-faint);cursor:not-allowed}
+
+.toast{position:fixed;left:50%;bottom:26px;transform:translateX(-50%) translateY(20px);background:var(--accent-strong);color:#fff;padding:12px 20px;border-radius:10px;font-size:13px;font-weight:600;box-shadow:var(--shadow-lift);opacity:0;pointer-events:none;transition:all .25s;display:flex;align-items:center;gap:10px;z-index:50;max-width:90vw}
+.toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+.toast.err{background:var(--danger)}
+.toast-dot{width:7px;height:7px;border-radius:50%;background:#8DE38F;flex-shrink:0}
+.toast.err .toast-dot{background:#fff}
+
+.back-link{display:inline-flex;align-items:center;gap:6px;font-size:12.5px;color:var(--text-muted);text-decoration:none;margin-bottom:10px}
+.back-link:hover{color:var(--accent)}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <a class="back-link" href="index.html">&larr; Volver al sitio</a>
+
+  <div class="manual" id="manual">
+    <h2>Cómo usar esto (3 pasos)</h2>
+    <ol class="manual-steps">
+      <li><span class="manual-num">1</span><div><b>Conectate una sola vez.</b> Abajo a la derecha decís "Conectar" y pegás tu clave de acceso. Si todavía no tenés una, tocá "¿Cómo consigo mi clave?" y seguí esos pasos — se hace una sola vez por celular o computadora.</div></li>
+      <li><span class="manual-num">2</span><div><b>Elegí la reunión</b> de la lista de la izquierda y corregí sólo lo que cambió: el horario, el salón, si se agregaron expositores, alguna aclaración, o si se suspendió.</div></li>
+      <li><span class="manual-num">3</span><div><b>Tocá "Guardar y publicar".</b> El sitio se actualiza solo, en menos de un minuto — no hace falta avisarle a nadie.</div></li>
+    </ol>
+    <div class="manual-note">Esto edita <b>solamente</b> la Agenda de reuniones. No toca proyectos, comisiones ni ningún otro dato del sitio.</div>
+    <button class="manual-collapse" id="manual-toggle">Ocultar este manual &uarr;</button>
+  </div>
+
+  <div class="topbar">
+    <div>
+      <p class="brand-eyebrow">Sistema Legislativo · HSN</p>
+      <h1>Editor de Agenda</h1>
+      <p class="subtitle">Correcciones puntuales sobre lo publicado: horario, salón, suspensión, temario ampliado o expositores comunicados después del último boletín.</p>
+    </div>
+    <div class="conn-box" id="conn-box">
+      <span class="conn-dot" id="conn-dot"></span>
+      <span class="conn-text" id="conn-text">Sin conectar &mdash; los cambios no se pueden guardar todavía.</span>
+      <input type="password" id="conn-token" placeholder="Pegá tu clave acá…">
+      <button class="btn btn-primary" id="conn-btn">Conectar</button>
+    </div>
+  </div>
+
+  <details style="margin-bottom:18px">
+    <summary style="cursor:pointer;font-size:12.5px;color:var(--accent);font-weight:600">¿Cómo consigo mi clave? (una sola vez)</summary>
+    <div style="background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:16px 20px;margin-top:8px;font-size:13px;line-height:1.7">
+      <ol style="margin:0;padding-left:18px">
+        <li>Pedile a Mariano el link para crear tu clave de acceso (o que te la genere y te la pase él mismo — es la forma más simple).</li>
+        <li>Si te toca crearla vos: entrá a <a href="https://github.com/settings/personal-access-tokens/new" target="_blank" rel="noopener">github.com/settings/personal-access-tokens/new</a> con la cuenta de GitHub de Mariano, elegí "Only select repositories" &rarr; <code>hsn-sistema-legislativo</code>, y en Permissions &rarr; Contents elegí "Read and write". Generá la clave y copiala.</li>
+        <li>Pegala arriba a la derecha, donde dice "Pegá tu clave acá", y tocá Conectar. Queda guardada sólo en este navegador — no se comparte con nadie ni con Claude.</li>
+      </ol>
+    </div>
+  </details>
+
+  <div class="board">
+
+    <div class="panel">
+      <div class="panel-head">
+        <h2>Reuniones</h2>
+        <span class="panel-count" id="rcount">&hellip;</span>
+      </div>
+      <div class="search-row">
+        <input type="text" id="rsearch" placeholder="Buscar comisión…">
+      </div>
+      <div class="rlist" id="rlist"><div class="list-empty">Cargando agenda publicada&hellip;</div></div>
+    </div>
+
+    <div class="panel">
+      <div class="panel-head editor-head" id="editor-head">
+        <div>
+          <p class="editor-title">Elegí una reunión</p>
+          <p class="editor-meta">de la lista de la izquierda para corregirla</p>
+        </div>
+      </div>
+      <div class="editor-body" id="editor-body">
+        <div class="editor-placeholder">Ninguna reunión seleccionada todavía.</div>
+      </div>
+    </div>
+
+  </div>
+
+</div>
+
+<div class="toast" id="toast"><span class="toast-dot"></span><span id="toast-text"></span></div>
+
+<script>
+var REPO_OWNER = 'bonifaciomariano';
+var REPO_NAME = 'hsn-sistema-legislativo';
+var REPO = REPO_OWNER + '/' + REPO_NAME;
+var RAW_BASE = 'https://raw.githubusercontent.com/' + REPO + '/main/';
+var API_BASE = 'https://api.github.com/repos/' + REPO + '/contents/';
+var TOKEN_KEY = 'hsn_editor_token';
+var AUTOR_KEY = 'hsn_editor_autor';
+
+var reuniones = [];      // crudas, de data/agenda.json
+var overridesData = null; // objeto completo de data/agenda_overrides.json (para reescribir)
+var overridesIdx = {};    // clave -> override
+var seleccion = null;     // reunión cruda seleccionada
+var overridesSha = null;
+
+function claveDe(r){ return (r.fecha||'') + '|' + (r.hora||'') + '|' + (r.comisiones||[]).join(','); }
+
+function esc(s){
+  return String(s==null?'':s).replace(/[&<>"']/g, function(c){
+    return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c];
+  });
+}
+
+/* ── Conexión (token guardado sólo en este navegador) ── */
+function token(){ return localStorage.getItem(TOKEN_KEY) || ''; }
+function setConn(state, text){
+  var dot = document.getElementById('conn-dot');
+  dot.className = 'conn-dot' + (state==='on'?' on':state==='err'?' err':'');
+  document.getElementById('conn-text').textContent = text;
+}
+function refrescarConn(){
+  var box = document.getElementById('conn-box');
+  if(token()){
+    box.querySelector('#conn-token').style.display='none';
+    box.querySelector('#conn-btn').textContent='Olvidar clave';
+    box.querySelector('#conn-btn').className='btn btn-ghost';
+  }else{
+    box.querySelector('#conn-token').style.display='';
+    box.querySelector('#conn-btn').textContent='Conectar';
+    box.querySelector('#conn-btn').className='btn btn-primary';
+    setConn('off','Sin conectar — los cambios no se pueden guardar todavía.');
+  }
+}
+document.getElementById('conn-btn').addEventListener('click', function(){
+  if(token()){
+    localStorage.removeItem(TOKEN_KEY);
+    refrescarConn();
+    return;
+  }
+  var t = document.getElementById('conn-token').value.trim();
+  if(!t)return;
+  setConn('off','Comprobando…');
+  fetch('https://api.github.com/repos/' + REPO, {headers:{Authorization:'Bearer '+t}}).then(function(r){
+    if(!r.ok)throw new Error('bad');
+    localStorage.setItem(TOKEN_KEY, t);
+    refrescarConn();
+    setConn('on','Conectado. Ya podés guardar cambios.');
+  }).catch(function(){
+    setConn('err','Esa clave no funcionó. Revisala e intentá de nuevo.');
+  });
+});
+refrescarConn();
+if(token())setConn('on','Conectado. Ya podés guardar cambios.');
+
+document.getElementById('manual-toggle').addEventListener('click', function(){
+  var steps = document.querySelectorAll('#manual .manual-steps, #manual .manual-note');
+  var hidden = steps[0].style.display==='none';
+  steps.forEach(function(el){el.style.display = hidden?'':'none';});
+  this.textContent = hidden ? 'Ocultar este manual ↑' : 'Mostrar el manual ↓';
+});
+
+/* ── Carga de datos publicados (lectura pública, sin token) ── */
+function cargarDatos(){
+  Promise.all([
+    fetch(RAW_BASE + 'data/agenda.json', {cache:'no-store'}).then(function(r){return r.ok?r.json():{reuniones:[]}}),
+    fetch(RAW_BASE + 'data/agenda_overrides.json', {cache:'no-store'}).then(function(r){return r.ok?r.json():{overrides:[]}})
+  ]).then(function(res){
+    var agenda = res[0];
+    reuniones = (agenda && agenda.reuniones) || [];
+    overridesData = res[1] && res[1].overrides ? res[1] : {overrides:[]};
+    overridesIdx = {};
+    overridesData.overrides.forEach(function(o){
+      overridesIdx[claveDe(o)] = o;
+    });
+    renderLista();
+  }).catch(function(err){
+    document.getElementById('rlist').innerHTML = '<div class="list-empty">No se pudo cargar la agenda publicada. Recargá la página.</div>';
+  });
+}
+
+function parseFechaDDMM(fecha){
+  // 'DD/MM' -> Date del año en curso (suficiente para ordenar/agrupar)
+  var p = (fecha||'').split('/');
+  if(p.length!==2)return null;
+  var d = new Date();
+  d.setMonth(parseInt(p[1],10)-1, parseInt(p[0],10));
+  d.setHours(0,0,0,0);
+  return d;
+}
+
+function renderLista(){
+  var q = (document.getElementById('rsearch').value||'').toLowerCase();
+  var hoy = new Date(); hoy.setHours(0,0,0,0);
+  var filtradas = reuniones.filter(function(r){
+    if(!q)return true;
+    var texto = (r.comisiones||[]).join(' ').toLowerCase();
+    return texto.indexOf(q)>=0;
+  });
+  var futuras = [], pasadas = [];
+  filtradas.forEach(function(r){
+    var d = parseFechaDDMM(r.fecha);
+    (d && d<hoy ? pasadas : futuras).push(r);
+  });
+  futuras.sort(function(a,b){
+    var da = parseFechaDDMM(a.fecha), db = parseFechaDDMM(b.fecha);
+    if(da && db && da.getTime()!==db.getTime())return da-db;
+    return (a.hora||'').localeCompare(b.hora||'');
+  });
+  pasadas.sort(function(a,b){
+    var da = parseFechaDDMM(a.fecha), db = parseFechaDDMM(b.fecha);
+    if(da && db && da.getTime()!==db.getTime())return db-da;
+    return (a.hora||'').localeCompare(b.hora||'');
+  });
+  filtradas = futuras.concat(pasadas);
+  document.getElementById('rcount').textContent = filtradas.length + (overridesData?(' · '+overridesData.overrides.length+' editadas'):'');
+
+  var grupos = {};
+  var orden = [];
+  filtradas.forEach(function(r){
+    var d = parseFechaDDMM(r.fecha);
+    var label = d ? (d.getTime()===hoy.getTime() ? 'Hoy · '+r.fecha : (d<hoy ? 'Pasadas' : r.fecha)) : 'Sin fecha';
+    if(!grupos[label]){grupos[label]=[];orden.push(label);}
+    grupos[label].push(r);
+  });
+
+  var html = '';
+  if(!filtradas.length)html = '<div class="list-empty">Sin resultados.</div>';
+  orden.forEach(function(label){
+    html += '<div class="rgroup-label">'+esc(label)+'</div>';
+    grupos[label].forEach(function(r){
+      var clave = claveDe(r);
+      var o = overridesIdx[clave];
+      var chip = o
+        ? '<span class="chip chip-ok"><span class="chip-dot"></span>Editada</span>'
+        : '<span class="chip chip-live"><span class="chip-dot"></span>Publicada</span>';
+      var activa = seleccion && claveDe(seleccion)===clave;
+      html += '<button class="ritem'+(activa?' active':'')+'" data-clave="'+esc(clave)+'">'
+        +'<div class="ritem-top"><span class="ritem-hora">'+esc(o&&o.hora_nueva?o.hora_nueva:r.hora)+' h</span>'+chip+'</div>'
+        +'<div class="ritem-com">'+esc((r.comisiones||[]).map(function(c){return titleCase(c)}).join(' · '))+'</div>'
+        +'</button>';
+    });
+  });
+  document.getElementById('rlist').innerHTML = html;
+  document.querySelectorAll('.ritem').forEach(function(btn){
+    btn.addEventListener('click', function(){ seleccionar(btn.getAttribute('data-clave')); });
+  });
+}
+document.getElementById('rsearch').addEventListener('input', renderLista);
+
+var TITLECASE_PARTICULAS = {'y':1,'e':1,'de':1,'del':1,'la':1,'las':1,'los':1};
+function titleCase(s){
+  s=(s||'').toLowerCase();
+  return s.split(' ').map(function(w,i){
+    var limpio = w.replace(/[.,;]/g,'');
+    if(i>0 && TITLECASE_PARTICULAS[limpio])return w;
+    return w.charAt(0).toUpperCase()+w.slice(1);
+  }).join(' ');
+}
+
+function seleccionar(clave){
+  seleccion = reuniones.find(function(r){return claveDe(r)===clave});
+  renderLista();
+  renderEditor();
+}
+
+function renderEditor(){
+  if(!seleccion){
+    document.getElementById('editor-head').innerHTML = '<div><p class="editor-title">Elegí una reunión</p><p class="editor-meta">de la lista de la izquierda para corregirla</p></div>';
+    document.getElementById('editor-body').innerHTML = '<div class="editor-placeholder">Ninguna reunión seleccionada todavía.</div>';
+    return;
+  }
+  var r = seleccion;
+  var o = overridesIdx[claveDe(r)] || {};
+  var coms = (r.comisiones||[]).map(titleCase).join(' · ');
+
+  document.getElementById('editor-head').innerHTML =
+    '<div><p class="editor-title">'+esc(coms)+'</p>'
+    +'<p class="editor-meta">'+esc(r.dia||'')+' '+esc(r.fecha)+' &middot; publicada en <code>boletín '+esc(r.boletin_numero||'?')+'</code></p></div>';
+
+  var salones = ['AZUL','ILLIA','FRONDIZI - MORENO','EVA PERÓN','C.P.M.'];
+  if(r.salon && salones.indexOf(r.salon)<0)salones.unshift(r.salon);
+  var salonOpts = '<option value="">(sin cambio — '+esc(r.salon||'?')+')</option>'
+    + salones.map(function(s){return '<option value="'+esc(s)+'"'+(o.salon_nuevo===s?' selected':'')+'>'+esc(titleCase(s))+'</option>'}).join('');
+
+  document.getElementById('editor-body').innerHTML =
+    '<div class="field-grid">'
+    +'<div class="field"><label>Hora <span class="was">— publicada: '+esc(r.hora)+'</span></label>'
+    +'<input type="time" id="f-hora" value="'+esc(o.hora_nueva||'')+'"></div>'
+    +'<div class="field"><label>Salón <span class="was">— publicado: '+esc(titleCase(r.salon||'?'))+'</span></label>'
+    +'<select id="f-salon">'+salonOpts+'</select></div>'
+    +'<div class="field span2"><label>Expositores agregados después del boletín</label>'
+    +'<textarea id="f-exp" placeholder="Ej.: Lic. Nombre Apellido, cargo…">'+esc(o.expositores_extra||'')+'</textarea>'
+    +'<span class="field-hint">Se agrega debajo de lo publicado, no lo reemplaza.</span></div>'
+    +'<div class="field span2"><label>Aclaración / temario ampliado</label>'
+    +'<textarea id="f-nota" placeholder="Texto libre que se muestra como aviso arriba del temario…">'+esc(o.nota||'')+'</textarea></div>'
+    +'<div class="field span2"><div class="toggle-row" id="susp-row">'
+    +'<div><div class="toggle-label">Marcar como suspendida</div>'
+    +'<div class="toggle-sub">Se muestra tachada y no cuenta como reunión del día</div></div>'
+    +'<label class="switch"><input type="checkbox" id="f-susp"'+(o.suspendida?' checked':'')+'><span class="switch-track"></span></label>'
+    +'</div></div>'
+    +'</div>'
+    +'<div class="diff-box"><div class="diff-title">Se va a publicar</div><div id="diff-list"></div></div>'
+    +'<div class="editor-actions">'
+    +'<span class="save-status" id="save-status"></span>'
+    +'<button class="btn btn-ghost" id="btn-cancel">Descartar cambios</button>'
+    +'<button class="btn btn-primary" id="btn-save">Guardar y publicar</button>'
+    +'</div>';
+
+  document.getElementById('susp-row').classList.toggle('danger-active', !!o.suspendida);
+  ['f-hora','f-salon','f-exp','f-nota','f-susp'].forEach(function(id){
+    document.getElementById(id).addEventListener('input', actualizarDiff);
+    document.getElementById(id).addEventListener('change', function(){
+      if(id==='f-susp')document.getElementById('susp-row').classList.toggle('danger-active', this.checked);
+      actualizarDiff();
+    });
+  });
+  document.getElementById('btn-cancel').addEventListener('click', function(){ renderEditor(); });
+  document.getElementById('btn-save').addEventListener('click', guardar);
+  actualizarDiff();
+}
+
+function leerFormulario(){
+  return {
+    hora_nueva: document.getElementById('f-hora').value || null,
+    salon_nuevo: document.getElementById('f-salon').value || null,
+    expositores_extra: document.getElementById('f-exp').value.trim() || null,
+    nota: document.getElementById('f-nota').value.trim() || null,
+    suspendida: document.getElementById('f-susp').checked
+  };
+}
+
+function actualizarDiff(){
+  var r = seleccion, f = leerFormulario();
+  var rows = [];
+  if(f.hora_nueva && f.hora_nueva!==r.hora)rows.push(diffRow('hora', r.hora, f.hora_nueva));
+  if(f.salon_nuevo && f.salon_nuevo!==r.salon)rows.push(diffRow('salón', titleCase(r.salon), titleCase(f.salon_nuevo)));
+  if(f.expositores_extra)rows.push('<div class="diff-row"><span class="k">expositores</span><span class="diff-new">+ texto agregado</span></div>');
+  if(f.nota)rows.push('<div class="diff-row"><span class="k">nota</span><span class="diff-new">+ aclaración agregada</span></div>');
+  if(f.suspendida)rows.push('<div class="diff-row"><span class="k">estado</span><span class="diff-new" style="color:var(--danger)">&rarr; suspendida</span></div>');
+  document.getElementById('diff-list').innerHTML = rows.length ? rows.join('') : '<div class="diff-empty">Sin cambios todavía</div>';
+  document.getElementById('btn-save').disabled = !rows.length;
+}
+function diffRow(k,oldV,newV){
+  return '<div class="diff-row"><span class="k">'+esc(k)+'</span><span class="diff-old">'+esc(oldV)+'</span><span class="diff-new">&rarr; '+esc(newV)+'</span></div>';
+}
+
+function b64EncodeUtf8(str){
+  return btoa(unescape(encodeURIComponent(str)));
+}
+function b64DecodeUtf8(str){
+  return decodeURIComponent(escape(atob(str)));
+}
+
+function guardar(){
+  if(!token()){
+    mostrarToast('Conectate primero (arriba a la derecha) para poder guardar.', true);
+    return;
+  }
+  var r = seleccion, f = leerFormulario();
+  var statusEl = document.getElementById('save-status');
+  var btn = document.getElementById('btn-save');
+  btn.disabled = true;
+  statusEl.textContent = 'Guardando…';
+  statusEl.className = 'save-status';
+
+  var headers = {Authorization:'Bearer '+token(), Accept:'application/vnd.github+json'};
+
+  fetch(API_BASE + 'data/agenda_overrides.json', {headers:headers, cache:'no-store'})
+    .then(function(resp){
+      if(!resp.ok)throw new Error('No se pudo leer el archivo actual (' + resp.status + ')');
+      return resp.json();
+    })
+    .then(function(file){
+      var actual = JSON.parse(b64DecodeUtf8(file.content.replace(/\n/g,'')));
+      var clave = claveDe(r);
+      var nuevos = actual.overrides.filter(function(o){ return claveDe(o)!==clave; });
+      var autor = localStorage.getItem(AUTOR_KEY) || prompt('¿Tu nombre? (para dejar registro de quién corrigió esto)') || 'Sin identificar';
+      localStorage.setItem(AUTOR_KEY, autor);
+      nuevos.push({
+        fecha: r.fecha, hora: r.hora, comisiones: r.comisiones,
+        hora_nueva: f.hora_nueva, salon_nuevo: f.salon_nuevo,
+        expositores_extra: f.expositores_extra, nota: f.nota,
+        suspendida: f.suspendida,
+        actualizado: new Date().toISOString(),
+        actualizado_por: autor
+      });
+      actual.overrides = nuevos;
+      var contenido = JSON.stringify(actual, null, 2) + '\n';
+      var coms = (r.comisiones||[]).map(titleCase).join(' · ');
+      return fetch(API_BASE + 'data/agenda_overrides.json', {
+        method:'PUT', headers: Object.assign({'Content-Type':'application/json'}, headers),
+        body: JSON.stringify({
+          message: 'Editor de agenda: ' + coms + ' (' + r.fecha + ' ' + r.hora + ')',
+          content: b64EncodeUtf8(contenido),
+          sha: file.sha,
+          branch: 'main'
+        })
+      });
+    })
+    .then(function(resp){
+      if(!resp.ok)return resp.json().then(function(e){throw new Error(e.message||('Error ' + resp.status))});
+      statusEl.textContent = 'Guardado.';
+      statusEl.className = 'save-status ok';
+      mostrarToast('Guardado — el sitio se actualiza solo en menos de un minuto.', false);
+      cargarDatos();
+    })
+    .catch(function(err){
+      statusEl.textContent = 'No se pudo guardar: ' + err.message;
+      statusEl.className = 'save-status err';
+      mostrarToast('No se pudo guardar. ' + err.message, true);
+    })
+    .finally(function(){ btn.disabled = false; });
+}
+
+function mostrarToast(msg, esError){
+  var t = document.getElementById('toast');
+  document.getElementById('toast-text').textContent = msg;
+  t.className = 'toast show' + (esError?' err':'');
+  setTimeout(function(){ t.className = 'toast' + (esError?' err':''); }, 4200);
+}
+
+cargarDatos();
+</script>
+</body>
+</html>

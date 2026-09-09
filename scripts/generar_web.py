@@ -495,6 +495,10 @@ table.cross-table tr:last-child td{border-bottom:none}
 .plenaria-badge{display:inline-block;font-size:9.5px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;padding:2px 8px;border-radius:10px;background:#0d3f73;color:#fff}
 .suspendida-badge{display:inline-block;font-size:9.5px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;padding:2px 8px;border-radius:10px;background:#FEE2E2;color:#991B1B}
 .agenda-card.agenda-suspendida{opacity:.75}
+.editada-badge{display:inline-block;font-size:9.5px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;padding:2px 8px;border-radius:10px;background:#FBEADD;color:#C2650C}
+.hora-vieja{text-decoration:line-through;color:#9aacbd;font-weight:400}
+.hora-nueva{color:#C2650C;font-weight:700}
+.agenda-nota{margin-top:8px;padding:8px 12px;background:#FBEADD;border-left:3px solid #C2650C;border-radius:6px;font-size:12.5px;color:#7A4A0F}
 /* ── Agenda: hoy (vista por defecto) ──────────────────────────────────── */
 .agenda-hoy-header{display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap;margin-bottom:12px}
 .agenda-hoy-titulo{font-size:15px;font-weight:700;color:#1B5EA2}
@@ -2726,6 +2730,13 @@ function plenariaBadge(r){
 function suspendidaBadge(r){
   return r.suspendida?'<span class="suspendida-badge" title="Figuraba en un bolet&iacute;n anterior y desapareci&oacute; de la agenda">Suspendida</span>':'';
 }
+function editadaBadge(r){
+  return r.editada?'<span class="editada-badge" title="Corregida a mano despu&eacute;s del bolet&iacute;n, desde el Editor de Agenda">&#9998; Editada</span>':'';
+}
+function horaConCorreccion(r){
+  if(r.hora_boletin)return '<span class="hora-vieja">'+esc(r.hora_boletin)+'</span> &rarr; <span class="hora-nueva">'+esc(r.hora)+'</span>';
+  return esc(r.hora);
+}
 function agendaCardsHtml(arr,isPast){
   var h='';
   arr.forEach(function(r){h+=buildReunionCard(r,AGENDA.indexOf(r),isPast);});
@@ -2750,8 +2761,8 @@ function buildReunionCard(r,idx,isPast){
   var coms=(r.comisiones||[]).map(esc).join(' &middot; ');
   return '<div class="agenda-card'+(isPast?' agenda-pasada':'')+(r.suspendida?' agenda-suspendida':'')+'" onclick="abrirReunion('+idx+')">'
     +'<div class="agenda-card-top">'
-    +'<span class="agenda-fecha">'+esc(r.dia?r.dia+' ':'')+esc(r.fecha_completa||r.fecha)+' &middot; '+esc(r.hora)+' hs</span>'
-    +'<span class="agenda-badges">'+suspendidaBadge(r)+plenariaBadge(r)+'<span class="exp-badge" style="background:'+col.bg+';color:'+col.fg+'">'+esc(tl)+'</span></span>'
+    +'<span class="agenda-fecha">'+esc(r.dia?r.dia+' ':'')+esc(r.fecha_completa||r.fecha)+' &middot; '+horaConCorreccion(r)+' hs</span>'
+    +'<span class="agenda-badges">'+suspendidaBadge(r)+editadaBadge(r)+plenariaBadge(r)+'<span class="exp-badge" style="background:'+col.bg+';color:'+col.fg+'">'+esc(tl)+'</span></span>'
     +'</div>'
     +'<div class="agenda-card-com">'+coms+'</div>'
     +'<div class="agenda-card-salon">'+esc(r.salon_completo||r.salon)+(isPast?' <span class="agenda-pasada-tag">Realizada</span>':'')+'</div>'
@@ -3170,9 +3181,10 @@ function abrirReunion(idx){
   document.getElementById('agenda-detalle-titulo').textContent=(r.comisiones||[]).join(' · ');
   document.getElementById('agenda-detalle-meta').innerHTML='<div class="agenda-detalle-row">'
     +'<span class="exp-badge" style="background:'+col.bg+';color:'+col.fg+'">'+esc(tl)+'</span>'
-    +plenariaBadge(r)
-    +'<span class="agenda-fecha">'+esc(r.dia?r.dia+' ':'')+esc(r.fecha_completa||r.fecha)+' &middot; '+esc(r.hora)+' hs</span>'
-    +'</div><div class="agenda-detalle-salon">&#128205; '+esc(r.salon_completo||r.salon)+'</div>';
+    +suspendidaBadge(r)+editadaBadge(r)+plenariaBadge(r)
+    +'<span class="agenda-fecha">'+esc(r.dia?r.dia+' ':'')+esc(r.fecha_completa||r.fecha)+' &middot; '+horaConCorreccion(r)+' hs</span>'
+    +'</div><div class="agenda-detalle-salon">&#128205; '+esc(r.salon_completo||r.salon)+'</div>'
+    +(r.nota?'<div class="agenda-nota">&#9998; '+esc(r.nota)+'</div>':'');
   var th='';
   (r.temario||[]).forEach(function(it){
     var clickable=!!parseExpNumero(it.numero);
@@ -3181,6 +3193,7 @@ function abrirReunion(idx){
       +'<span class="temario-extracto">'+esc(it.extracto)+'</span>'
       +'</div>';
   });
+  if(r.expositores)th+='<div class="ficha-expositores"><strong>Expositores / invitados:</strong> '+esc(r.expositores).replace(/\n/g,'<br>')+'</div>';
   document.getElementById('agenda-temario-list').innerHTML=th||'<div class="com-empty">Sin temario cargado.</div>';
   window.scrollTo({top:0,behavior:'smooth'});
 }
@@ -3367,9 +3380,10 @@ function abrirFichaReunion(){
     +'<h1>Ficha de reuni&oacute;n de comisi&oacute;n</h1>'
     +'<div class="ficha-meta">'
     +'<div><strong>Comisi&oacute;n'+(comisiones.length>1?'es':'')+':</strong> '+esc(titulo)+'</div>'
-    +'<div><strong>Fecha:</strong> '+esc((r.dia?r.dia+' ':'')+(r.fecha_completa||r.fecha))+' &middot; '+esc(r.hora)+' hs</div>'
+    +'<div><strong>Fecha:</strong> '+esc((r.dia?r.dia+' ':'')+(r.fecha_completa||r.fecha))+' &middot; '+horaConCorreccion(r)+' hs</div>'
     +'<div><strong>Sal&oacute;n:</strong> '+esc(r.salon_completo||r.salon)+'</div>'
     +'</div>'
+    +(r.nota?'<div class="agenda-nota">&#9998; '+esc(r.nota)+'</div>':'')
     +'<div class="ficha-section-label">Temario</div>'
     +'<div class="ficha-temario">'+temarioHtml+'</div>'
     +'<div class="ficha-section-label">Integrantes</div>'
@@ -4699,7 +4713,10 @@ HTML_TEMPLATE = """<!DOCTYPE html>
         <div id="agenda-hoy-wrap">
           <div class="agenda-hoy-header">
             <div class="agenda-hoy-titulo" id="agenda-hoy-titulo">Hoy</div>
-            <button class="btn-export" onclick="toggleAgendaVista('calendario')">&#128197; Ver calendario completo</button>
+            <div style="display:flex;gap:8px;flex-wrap:wrap">
+              <a class="btn-export" href="editor.html" style="text-decoration:none;display:inline-block" title="Corregir horarios, salones, expositores o suspensiones">&#9998; Editar agenda</a>
+              <button class="btn-export" onclick="toggleAgendaVista('calendario')">&#128197; Ver calendario completo</button>
+            </div>
           </div>
           <div id="agenda-hoy-body"></div>
         </div>
@@ -5264,16 +5281,47 @@ def _resolver_comisiones_reunion(raw_lines, comisiones):
     return [texto] if texto else []
 
 
+def _clave_override(fecha, hora, comisiones_raw):
+    """Misma clave que clave_reunion() de scraper_agenda.py (fecha/hora tal
+    como figuran en el boletín, sin resolver nombres) -- así una corrección
+    de horario no rompe el match: el override se busca por el horario
+    ORIGINAL publicado, no por el corregido."""
+    return (fecha or "", hora or "", tuple(comisiones_raw or []))
+
+
+def _cargar_overrides_agenda():
+    data = _cargar("agenda_overrides.json", {})
+    idx = {}
+    for o in data.get("overrides", []):
+        clave = _clave_override(o.get("fecha"), o.get("hora"), o.get("comisiones"))
+        idx[clave] = o
+    return idx
+
+
 def construir_agenda(comisiones):
     """Procesa data/agenda.json para embeber en la web: resuelve nombres de
     comisión y agrega fecha completa (con año) y fecha ISO para ordenar/comparar
-    en el cliente."""
+    en el cliente. Aplica encima data/agenda_overrides.json -- correcciones
+    puntuales (horario, salón, expositores, aclaración, suspensión) cargadas
+    a mano desde editor.html, sin re-scrapear ni pasar por este script."""
     agenda = _cargar("agenda.json", {})
     reuniones = agenda.get("reuniones", []) if isinstance(agenda, dict) else agenda
+    overrides_idx = _cargar_overrides_agenda()
     resultado = []
     for r in reuniones:
+        clave = _clave_override(r.get("fecha"), r.get("hora"), r.get("comisiones"))
+        o = overrides_idx.get(clave)
+
+        hora = (o.get("hora_nueva") if o and o.get("hora_nueva") else None) or r.get("hora", "")
+        salon = (o.get("salon_nuevo") if o and o.get("salon_nuevo") else None) or r.get("salon", "")
+        salon_completo = salon if (o and o.get("salon_nuevo")) else r.get("salon_completo", "")
+        suspendida = o["suspendida"] if (o and "suspendida" in o) else r.get("suspendida", False)
+
+        expositores = r.get("expositores")
+        if o and o.get("expositores_extra"):
+            expositores = (expositores + "\n" if expositores else "") + o["expositores_extra"]
+
         fecha_dt = _parse_fecha_agenda(r.get("fecha", ""), r.get("boletin_numero", ""))
-        hora = r.get("hora", "")
         fecha_completa, fecha_iso = r.get("fecha", ""), ""
         if fecha_dt:
             fecha_completa = fecha_dt.strftime("%d/%m/%Y")
@@ -5288,15 +5336,18 @@ def construir_agenda(comisiones):
             "fecha_completa": fecha_completa,
             "fecha_iso": fecha_iso,
             "hora": hora,
+            "hora_boletin": r.get("hora", "") if (o and o.get("hora_nueva")) else None,
             "modalidad": r.get("modalidad", ""),
             "comisiones": _resolver_comisiones_reunion(r.get("comisiones", []), comisiones),
-            "salon": r.get("salon", ""),
-            "salon_completo": r.get("salon_completo", ""),
+            "salon": salon,
+            "salon_completo": salon_completo,
             "temario": r.get("temario", []),
-            "expositores": r.get("expositores"),
+            "expositores": expositores,
+            "nota": (o.get("nota") or None) if o else None,
             "tipo": r.get("tipo", ""),
             "boletin_numero": r.get("boletin_numero", ""),
-            "suspendida": r.get("suspendida", False),
+            "suspendida": suspendida,
+            "editada": bool(o),
         })
     return resultado
 
