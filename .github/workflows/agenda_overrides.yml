@@ -1,0 +1,49 @@
+name: Publicar correcciones de agenda y comisiones
+
+# Dispara cuando editor.html escribe una corrección directo en
+# data/agenda_overrides.json o data/dpp_cambios.json (vía la API de
+# GitHub, sin pasar por este repo local ni por una sesión de Claude).
+# Sólo regenera index.html -- no vuelve a scrapear nada -- para que el
+# cambio quede publicado en minutos en vez de esperar la próxima
+# corrida programada.
+on:
+  push:
+    branches: [main]
+    paths:
+      - data/agenda_overrides.json
+      - data/dpp_cambios.json
+
+permissions:
+  contents: write
+
+jobs:
+  publicar:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+
+      - name: Instalar dependencias
+        run: pip install -r requirements.txt
+
+      - name: Generar web
+        run: python scripts/generar_web.py
+
+      - name: Commit y push si hay cambios
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add index.html
+          if git diff --cached --quiet; then
+            echo "Sin cambios; nada que commitear."
+          else
+            git commit -m "Publicar corrección de agenda/comisiones (editor.html)"
+            git pull --rebase origin ${GITHUB_REF_NAME}
+            git push origin HEAD:${GITHUB_REF_NAME}
+          fi
