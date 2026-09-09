@@ -1195,6 +1195,10 @@ function switchMain(id){
   if(location.hash!=='#'+id)history.pushState({main:id},'','#'+id);
 }
 window.addEventListener('popstate',function(){
+  if(document.body.classList.contains('ficha-activa')&&location.hash.indexOf('#f/')!==0){
+    document.body.classList.remove('ficha-activa');
+    document.getElementById('fichaReunionOverlay').hidden=true;
+  }
   if(abrirReunionDesdeHash())return;
   var id=(location.hash||'#proyectos').slice(1).split('/')[0];
   activateMain(id);
@@ -3181,13 +3185,20 @@ var agendaReunionActual=null;
 function claveReunionUrl(r){
   return (r.fecha||'')+'|'+(r.hora_boletin||r.hora||'')+'|'+(r.comisiones||[]).join(',');
 }
-var AGENDA_POR_CLAVE=null;
-function reunionPorClaveUrl(clave){
-  if(!AGENDA_POR_CLAVE){
-    AGENDA_POR_CLAVE={};
-    AGENDA.forEach(function(r,i){AGENDA_POR_CLAVE[claveReunionUrl(r)]=i;});
+/* Hash corto y estable (no criptográfico, sólo para acortar el link
+   compartible) -- con ~220 reuniones el riesgo de colisión es despreciable. */
+function hashCorto(str){
+  var h=5381;
+  for(var i=0;i<str.length;i++)h=((h*33)^str.charCodeAt(i))>>>0;
+  return h.toString(36);
+}
+var AGENDA_POR_HASH=null;
+function reunionPorHashUrl(hash){
+  if(!AGENDA_POR_HASH){
+    AGENDA_POR_HASH={};
+    AGENDA.forEach(function(r,i){AGENDA_POR_HASH[hashCorto(claveReunionUrl(r))]=i;});
   }
-  return AGENDA_POR_CLAVE.hasOwnProperty(clave)?AGENDA_POR_CLAVE[clave]:-1;
+  return AGENDA_POR_HASH.hasOwnProperty(hash)?AGENDA_POR_HASH[hash]:-1;
 }
 function abrirReunion(idx,sinHash){
   var r=AGENDA[idx];
@@ -3197,8 +3208,8 @@ function abrirReunion(idx,sinHash){
   document.getElementById('agenda-nivel1').classList.remove('active');
   document.getElementById('agenda-nivel2').classList.add('active');
   if(!sinHash){
-    var hash='#agenda/r/'+encodeURIComponent(claveReunionUrl(r));
-    if(location.hash!==hash)history.pushState({agendaReunion:claveReunionUrl(r)},'',hash);
+    var hash='#agenda/r/'+hashCorto(claveReunionUrl(r));
+    if(location.hash!==hash)history.pushState({},'',hash);
   }
   var tl=REUNION_TIPO_LABEL[r.tipo]||r.tipo;
   var col=REUNION_TIPO_COLOR[r.tipo]||{fg:'#888',bg:'#eee'};
@@ -3207,7 +3218,6 @@ function abrirReunion(idx,sinHash){
     +'<span class="exp-badge" style="background:'+col.bg+';color:'+col.fg+'">'+esc(tl)+'</span>'
     +suspendidaBadge(r)+editadaBadge(r)+plenariaBadge(r)
     +'<span class="agenda-fecha">'+esc(r.dia?r.dia+' ':'')+esc(r.fecha_completa||r.fecha)+' &middot; '+horaConCorreccion(r)+' hs</span>'
-    +'<button class="btn-copiar-link no-print" id="btn-copiar-link" onclick="copiarLinkReunion(this)" title="Copiar enlace directo a esta reuni&oacute;n">&#128279; Copiar enlace</button>'
     +'</div><div class="agenda-detalle-salon">&#128205; '+esc(r.salon_completo||r.salon)+'</div>'
     +(r.nota?'<div class="agenda-nota">&#9998; '+esc(r.nota)+'</div>':'');
   var th='';
@@ -3223,8 +3233,8 @@ function abrirReunion(idx,sinHash){
   window.scrollTo({top:0,behavior:'smooth'});
 }
 function copiarLinkReunion(btn){
-  var url=location.origin+location.pathname+'#agenda/r/'+encodeURIComponent(claveReunionUrl(agendaReunionActual));
-  var listo=function(){var t=btn.textContent;btn.textContent='&#10003; Copiado';btn.innerHTML='&#10003; Copiado';setTimeout(function(){btn.innerHTML='&#128279; Copiar enlace';},1800);};
+  var url=location.origin+location.pathname+'#f/'+hashCorto(claveReunionUrl(agendaReunionActual));
+  var listo=function(){btn.innerHTML='&#10003; Copiado';setTimeout(function(){btn.innerHTML='&#128279; Copiar enlace';},1800);};
   if(navigator.clipboard&&navigator.clipboard.writeText){
     navigator.clipboard.writeText(url).then(listo).catch(function(){prompt('Copiá el enlace:',url)});
   }else{
@@ -3234,15 +3244,19 @@ function copiarLinkReunion(btn){
 function volverAgenda(){
   document.getElementById('agenda-nivel2').classList.remove('active');
   document.getElementById('agenda-nivel1').classList.add('active');
-  if(location.hash.indexOf('#agenda/r/')===0)history.pushState({main:'agenda'},'','#agenda');
+  if(location.hash.indexOf('#agenda/r/')===0)history.pushState({},'','#agenda');
 }
 function abrirReunionDesdeHash(){
-  if(location.hash.indexOf('#agenda/r/')!==0)return false;
-  var clave=decodeURIComponent(location.hash.slice('#agenda/r/'.length));
-  var idx=reunionPorClaveUrl(clave);
+  var h=location.hash;
+  var esFicha=h.indexOf('#f/')===0;
+  var esDetalle=h.indexOf('#agenda/r/')===0;
+  if(!esFicha&&!esDetalle)return false;
+  var hashCorto2=esFicha?h.slice('#f/'.length):h.slice('#agenda/r/'.length);
+  var idx=reunionPorHashUrl(hashCorto2);
   if(idx<0)return false;
   activateMain('agenda');
   abrirReunion(idx,true);
+  if(esFicha)abrirFichaReunion(true);
   return true;
 }
 
@@ -3313,17 +3327,29 @@ function _fichaGuardarEstado(){
   if(!fichaStorageKey)return;
   try{window.localStorage.setItem(fichaStorageKey,JSON.stringify(fichaEstado));}catch(e){}
 }
-function toggleFichaPresente(tr){
+function _fichaAplicarChecked(tr,checked){
   var key=tr.getAttribute('data-key');
-  if(!key)return;
-  var checked=!fichaEstado[key];
   if(checked)fichaEstado[key]=true;else delete fichaEstado[key];
   tr.classList.toggle('ficha-checked',checked);
   var box=tr.querySelector('.ficha-checkbox');
   if(box)box.classList.toggle('checked',checked);
+  fichaActualizarContador(tr.getAttribute('data-com'));
+}
+function toggleFichaPresente(tr){
+  var key=tr.getAttribute('data-key');
+  if(!key)return;
+  var checked=!fichaEstado[key];
+  _fichaAplicarChecked(tr,checked);
+  // Si el/la senador/a integra más de una comisión de esta plenaria, marcarlo
+  // presente en una lo marca presente en todas -- es la misma persona en la
+  // misma reunión, no tiene sentido pedir que se tilde fila por fila.
+  var nombre=tr.getAttribute('data-nombre');
+  if(nombre){
+    document.querySelectorAll('.ficha-table tr[data-nombre]').forEach(function(otro){
+      if(otro!==tr&&otro.getAttribute('data-nombre')===nombre)_fichaAplicarChecked(otro,checked);
+    });
+  }
   _fichaGuardarEstado();
-  var comId=tr.getAttribute('data-com');
-  fichaActualizarContador(comId);
 }
 function fichaActualizarContador(comId){
   var wrap=document.querySelector('.ficha-comision[data-com="'+comId.replace(/"/g,'')+'"]');
@@ -3372,7 +3398,7 @@ function fichaTablaComision(c,nombresRepetidos){
     if(repetido)hayRepetidos=true;
     var key=_fichaClave(comId,m.nombre);
     var checked=!!fichaEstado[key];
-    return '<tr class="ficha-row-clickable'+(repetido?' ficha-row-repetido':'')+(checked?' ficha-checked':'')+'" data-key="'+escAttr(key)+'" data-com="'+escAttr(comId)+'" onclick="toggleFichaPresente(this)">'
+    return '<tr class="ficha-row-clickable'+(repetido?' ficha-row-repetido':'')+(checked?' ficha-checked':'')+'" data-key="'+escAttr(key)+'" data-com="'+escAttr(comId)+'" data-nombre="'+escAttr(m.nombre)+'" onclick="toggleFichaPresente(this)">'
       +'<td class="ficha-check"><span class="ficha-checkbox'+(checked?' checked':'')+'"></span></td>'
       +'<td class="ficha-apellido">'+esc(apellidoFicha(m.nombre))+(repetido?' <span class="ficha-repetido-marca" title="Integra más de una comisión de esta plenaria">*</span>':'')+'</td>'
       +'<td class="ficha-cargo">'+esc(FICHA_CARGO_LABEL[m.rol]!=null?FICHA_CARGO_LABEL[m.rol]:(m.rol||''))+'</td>'
@@ -3389,9 +3415,13 @@ function fichaTablaComision(c,nombresRepetidos){
     +(hayRepetidos?'<div class="ficha-repetido-nota">* Integra también otra comisión de esta plenaria</div>':'')
     +'</div>';
 }
-function abrirFichaReunion(){
+function abrirFichaReunion(sinHash){
   var r=agendaReunionActual;
   if(!r)return;
+  if(!sinHash){
+    var hash='#f/'+hashCorto(claveReunionUrl(r));
+    if(location.hash!==hash)history.pushState({},'',hash);
+  }
   fichaStorageKey='ficha_'+(r.fecha||'')+'_'+(r.hora||'')+'_'+(r.comisiones||[]).join(',');
   fichaEstado=_fichaCargarEstado(fichaStorageKey);
   var comisiones=comisionesDeReunion(r);
@@ -3418,6 +3448,7 @@ function abrirFichaReunion(){
   var html='<div class="ficha-toolbar no-print">'
     +'<button class="btn-brass" onclick="window.print()">Imprimir / Guardar como PDF</button>'
     +'<button class="btn-neutral" onclick="cerrarFichaReunion()">Volver</button>'
+    +'<button class="btn-neutral" onclick="copiarLinkReunion(this)" title="Copiar enlace directo a esta ficha">&#128279; Copiar enlace</button>'
     +(comisiones.length?'<input type="text" id="fichaBuscar" class="ficha-buscar" placeholder="Buscar por apellido…" oninput="fichaFiltrar()">':'')
     +'<span class="ficha-hint">Toc&aacute; una fila para marcar presente. Se guarda solo en este celular/navegador.</span>'
     +'</div>'
@@ -3442,6 +3473,9 @@ function abrirFichaReunion(){
 function cerrarFichaReunion(){
   document.body.classList.remove('ficha-activa');
   document.getElementById('fichaReunionOverlay').hidden=true;
+  if(location.hash.indexOf('#f/')===0&&agendaReunionActual){
+    history.pushState({},'','#agenda/r/'+hashCorto(claveReunionUrl(agendaReunionActual)));
+  }
 }
 
 /* ── Sanciones HSN (Boletín de Novedades) ─────────────────────────── */

@@ -308,6 +308,30 @@ function esc(s){
   });
 }
 
+/* raw.githubusercontent.com a veces devuelve un 503 pasajero ante ráfagas
+   de pedidos simultáneos (como los 2-3 fetch en paralelo de cada pestaña) --
+   reintenta con espera creciente antes de darse por vencido. */
+function fetchJsonConReintento(url, opts){
+  opts = opts || {};
+  var intentos = opts.intentos || 3;
+  var espera = 500;
+  function esperar(ms){ return new Promise(function(res){setTimeout(res, ms)}); }
+  function intentar(n){
+    return fetch(url, {cache:'no-store'})
+      .then(function(r){
+        if(r.ok)return r.json();
+        if(r.status===404 && 'fallback' in opts)return opts.fallback;
+        var err = new Error((url.split('/').pop())+': error '+r.status);
+        throw err;
+      })
+      .catch(function(err){
+        if(n>=intentos)throw err;
+        return esperar(espera*n).then(function(){return intentar(n+1)});
+      });
+  }
+  return intentar(1);
+}
+
 /* ── Conexión (token guardado sólo en este navegador) ── */
 function token(){ return localStorage.getItem(TOKEN_KEY) || ''; }
 function setConn(state, text){
@@ -375,8 +399,8 @@ function mostrarVista(v){
 /* ── Carga de datos publicados (lectura pública, sin token) ── */
 function cargarDatos(){
   Promise.all([
-    fetch(RAW_BASE + 'data/agenda.json', {cache:'no-store'}).then(function(r){return r.ok?r.json():{reuniones:[]}}),
-    fetch(RAW_BASE + 'data/agenda_overrides.json', {cache:'no-store'}).then(function(r){return r.ok?r.json():{overrides:[]}})
+    fetchJsonConReintento(RAW_BASE + 'data/agenda.json', {fallback:{reuniones:[]}}),
+    fetchJsonConReintento(RAW_BASE + 'data/agenda_overrides.json', {fallback:{overrides:[]}})
   ]).then(function(res){
     var agenda = res[0];
     reuniones = (agenda && agenda.reuniones) || [];
@@ -695,9 +719,9 @@ function cargarDatosComisiones(){
   document.getElementById('clist').innerHTML = '<div class="list-empty">Cargando comisiones publicadas…</div>';
   var miCarga = ++comisionesCargaId;
   Promise.all([
-    fetch(RAW_BASE + 'data/comisiones.json', {cache:'no-store'}).then(function(r){if(!r.ok)throw new Error('comisiones.json '+r.status);return r.json()}),
-    fetch(RAW_BASE + 'data/dpp_cambios.json', {cache:'no-store'}).then(function(r){if(!r.ok)throw new Error('dpp_cambios.json '+r.status);return r.json()}),
-    fetch(RAW_BASE + 'data/senadores.json', {cache:'no-store'}).then(function(r){if(!r.ok)throw new Error('senadores.json '+r.status);return r.json()})
+    fetchJsonConReintento(RAW_BASE + 'data/comisiones.json'),
+    fetchJsonConReintento(RAW_BASE + 'data/dpp_cambios.json'),
+    fetchJsonConReintento(RAW_BASE + 'data/senadores.json')
   ]).then(function(res){
     if(miCarga!==comisionesCargaId)return; // superada por una carga más nueva
     comisionesBase = res[0] || [];
