@@ -218,7 +218,7 @@ body.ficha-activa>*:not(.ficha-overlay){display:none!important}
 .ficha-comision-head{display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:6px;background:#1B5EA2;color:#fff;padding:8px 12px;border-radius:8px 8px 0 0;break-after:avoid;break-inside:avoid}
 .ficha-comision-head h3{font-size:14px;margin:0;font-weight:700}
 .ficha-comision-meta{font-size:11px;color:#D6E4F0}
-.ficha-table{width:100%;border-collapse:collapse;font-size:12.5px}
+.ficha-table{width:100%;border-collapse:collapse;font-size:12.5px;break-inside:avoid}
 .ficha-table thead{display:table-header-group}
 .ficha-table th{text-align:left;font-size:10px;text-transform:uppercase;letter-spacing:.04em;color:#9aa1a6;padding:6px 8px;border-bottom:1.5px solid #D6E4F0;background:#F5F8FC}
 .ficha-table td{padding:6px 8px;border-bottom:1px solid #EEF3F8;vertical-align:middle}
@@ -245,6 +245,7 @@ body.ficha-activa>*:not(.ficha-overlay){display:none!important}
 @media print{
   .no-print{display:none!important}
   .ficha-overlay{position:static;padding:0}
+  .ficha-overlay *{-webkit-print-color-adjust:exact;print-color-adjust:exact}
 }
 @media (max-width:640px){
   .ficha-overlay{padding:14px}
