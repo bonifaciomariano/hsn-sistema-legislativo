@@ -203,7 +203,7 @@ h1{font-family:'Poppins',sans-serif;font-size:24px;font-weight:700;color:var(--a
       <h2>Cómo usar esto (3 pasos)</h2>
       <ol class="manual-steps">
         <li><span class="manual-num">1</span><div><b>Conectate una sola vez.</b> Arriba a la derecha decís "Conectar" y pegás tu clave de acceso. Si todavía no tenés una, tocá "¿Cómo consigo mi clave?" y seguí esos pasos — se hace una sola vez por celular o computadora.</div></li>
-        <li><span class="manual-num">2</span><div><b>Elegí la reunión</b> de la lista de la izquierda y corregí sólo lo que cambió: el horario, el salón, si se agregaron expositores, alguna aclaración, o si se suspendió.</div></li>
+        <li><span class="manual-num">2</span><div><b>Elegí la reunión</b> de la lista de la izquierda y corregí sólo lo que cambió: el horario, el salón, si es de senadores o de asesores, si se agregaron expositores, alguna aclaración, o si se suspendió.</div></li>
         <li><span class="manual-num">3</span><div><b>Tocá "Guardar y publicar".</b> El sitio se actualiza solo, en menos de un minuto — no hace falta avisarle a nadie.</div></li>
       </ol>
       <div class="manual-note">Esto edita <b>solamente</b> la Agenda de reuniones. No toca proyectos, comisiones ni ningún otro dato del sitio.</div>
@@ -519,12 +519,19 @@ function renderEditor(){
   var salonOpts = '<option value="">(sin cambio — '+esc(r.salon||'?')+')</option>'
     + salones.map(function(s){return '<option value="'+esc(s)+'"'+(o.salon_nuevo===s?' selected':'')+'>'+esc(titleCase(s))+'</option>'}).join('');
 
+  var TIPO_LABEL = {senadores:'Reunión de senadores', asesores:'Reunión de asesores', bicameral:'Reunión bicameral'};
+  var tipoActual = r.tipo || 'senadores';
+  var tipoOpts = '<option value="">(sin cambio — '+esc(TIPO_LABEL[tipoActual]||tipoActual)+')</option>'
+    + Object.keys(TIPO_LABEL).map(function(t){return '<option value="'+t+'"'+(o.tipo_nuevo===t?' selected':'')+'>'+TIPO_LABEL[t]+'</option>'}).join('');
+
   document.getElementById('editor-body').innerHTML =
     '<div class="field-grid">'
     +'<div class="field"><label>Hora <span class="was">— publicada: '+esc(r.hora)+'</span></label>'
     +'<input type="time" id="f-hora" value="'+esc(o.hora_nueva||'')+'"></div>'
     +'<div class="field"><label>Salón <span class="was">— publicado: '+esc(titleCase(r.salon||'?'))+'</span></label>'
     +'<select id="f-salon">'+salonOpts+'</select></div>'
+    +'<div class="field span2"><label>Tipo de reunión <span class="was">— errores comunes: el boletín a veces mezcla filas y una reunión de asesores queda cargada como de senadores</span></label>'
+    +'<select id="f-tipo">'+tipoOpts+'</select></div>'
     +'<div class="field span2"><label>Expositores agregados después del boletín</label>'
     +'<textarea id="f-exp" placeholder="Ej.: Lic. Nombre Apellido, cargo…">'+esc(o.expositores_extra||'')+'</textarea>'
     +'<span class="field-hint">Se agrega debajo de lo publicado, no lo reemplaza.</span></div>'
@@ -544,7 +551,7 @@ function renderEditor(){
     +'</div>';
 
   document.getElementById('susp-row').classList.toggle('danger-active', !!o.suspendida);
-  ['f-hora','f-salon','f-exp','f-nota','f-susp'].forEach(function(id){
+  ['f-hora','f-salon','f-tipo','f-exp','f-nota','f-susp'].forEach(function(id){
     document.getElementById(id).addEventListener('input', actualizarDiff);
     document.getElementById(id).addEventListener('change', function(){
       if(id==='f-susp')document.getElementById('susp-row').classList.toggle('danger-active', this.checked);
@@ -560,6 +567,7 @@ function leerFormulario(){
   return {
     hora_nueva: document.getElementById('f-hora').value || null,
     salon_nuevo: document.getElementById('f-salon').value || null,
+    tipo_nuevo: document.getElementById('f-tipo').value || null,
     expositores_extra: document.getElementById('f-exp').value.trim() || null,
     nota: document.getElementById('f-nota').value.trim() || null,
     suspendida: document.getElementById('f-susp').checked
@@ -568,9 +576,11 @@ function leerFormulario(){
 
 function actualizarDiff(){
   var r = seleccion, f = leerFormulario();
+  var TIPO_LABEL = {senadores:'Reunión de senadores', asesores:'Reunión de asesores', bicameral:'Reunión bicameral'};
   var rows = [];
   if(f.hora_nueva && f.hora_nueva!==r.hora)rows.push(diffRow('hora', r.hora, f.hora_nueva));
   if(f.salon_nuevo && f.salon_nuevo!==r.salon)rows.push(diffRow('salón', titleCase(r.salon), titleCase(f.salon_nuevo)));
+  if(f.tipo_nuevo && f.tipo_nuevo!==(r.tipo||'senadores'))rows.push(diffRow('tipo', TIPO_LABEL[r.tipo]||r.tipo, TIPO_LABEL[f.tipo_nuevo]));
   if(f.expositores_extra)rows.push('<div class="diff-row"><span class="k">expositores</span><span class="diff-new">+ texto agregado</span></div>');
   if(f.nota)rows.push('<div class="diff-row"><span class="k">nota</span><span class="diff-new">+ aclaración agregada</span></div>');
   if(f.suspendida)rows.push('<div class="diff-row"><span class="k">estado</span><span class="diff-new" style="color:var(--danger)">&rarr; suspendida</span></div>');
@@ -615,7 +625,7 @@ function guardar(){
       localStorage.setItem(AUTOR_KEY, autor);
       nuevos.push({
         fecha: r.fecha, hora: r.hora, comisiones: r.comisiones,
-        hora_nueva: f.hora_nueva, salon_nuevo: f.salon_nuevo,
+        hora_nueva: f.hora_nueva, salon_nuevo: f.salon_nuevo, tipo_nuevo: f.tipo_nuevo,
         expositores_extra: f.expositores_extra, nota: f.nota,
         suspendida: f.suspendida,
         actualizado: new Date().toISOString(),

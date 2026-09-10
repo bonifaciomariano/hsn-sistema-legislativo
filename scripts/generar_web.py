@@ -5397,8 +5397,9 @@ def construir_agenda(comisiones):
     """Procesa data/agenda.json para embeber en la web: resuelve nombres de
     comisión y agrega fecha completa (con año) y fecha ISO para ordenar/comparar
     en el cliente. Aplica encima data/agenda_overrides.json -- correcciones
-    puntuales (horario, salón, expositores, aclaración, suspensión) cargadas
-    a mano desde editor.html, sin re-scrapear ni pasar por este script."""
+    puntuales (horario, salón, expositores, aclaración, suspensión, tipo de
+    reunión) cargadas a mano desde editor.html, sin re-scrapear ni pasar por
+    este script."""
     agenda = _cargar("agenda.json", {})
     reuniones = agenda.get("reuniones", []) if isinstance(agenda, dict) else agenda
     overrides_idx = _cargar_overrides_agenda()
@@ -5415,6 +5416,8 @@ def construir_agenda(comisiones):
         expositores = r.get("expositores")
         if o and o.get("expositores_extra"):
             expositores = (expositores + "\n" if expositores else "") + o["expositores_extra"]
+
+        tipo = (o.get("tipo_nuevo") if o and o.get("tipo_nuevo") else None) or r.get("tipo", "")
 
         fecha_dt = _parse_fecha_agenda(r.get("fecha", ""), r.get("boletin_numero", ""))
         fecha_completa, fecha_iso = r.get("fecha", ""), ""
@@ -5439,7 +5442,7 @@ def construir_agenda(comisiones):
             "temario": r.get("temario", []),
             "expositores": expositores,
             "nota": (o.get("nota") or None) if o else None,
-            "tipo": r.get("tipo", ""),
+            "tipo": tipo,
             "boletin_numero": r.get("boletin_numero", ""),
             "suspendida": suspendida,
             "editada": bool(o),
