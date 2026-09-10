@@ -7511,8 +7511,8 @@
       ],
       "expositores": null,
       "tipo": "senadores",
-      "boletin_id": 2362,
-      "boletin_numero": "113/26"
+      "boletin_id": 2364,
+      "boletin_numero": "114/26"
     },
     {
       "seccion": "senadores",
@@ -7802,6 +7802,72 @@
       "boletin_id": 2360,
       "boletin_numero": "112/26",
       "suspendida": true
+    },
+    {
+      "seccion": "senadores",
+      "dia": "LUNES",
+      "fecha": "14/09",
+      "hora": "14:30",
+      "modalidad": "",
+      "comisiones": [
+        "AMBIENTE Y DESARROLLO SUSTENTABLE"
+      ],
+      "salon": "FRONDIZI - MORENO",
+      "salon_completo": "FRONDIZI - MORENO",
+      "temario": [
+        {
+          "numero": "S-316/25",
+          "extracto": "HUALA: REPRODUCE PROYECTO DE LEY QUE DECLARA MONUMENTO NATURAL, EN LOS TÉRMINOS DEL ART. 8 DE LA LEY 22.351, AL VENADO DE LA PAMPA O CIERVO PAMPEANO. (REF"
+        },
+        {
+          "numero": "S-721/23",
+          "extracto": ")"
+        },
+        {
+          "numero": "S-1353/25",
+          "extracto": "CARAMBIA Y OTROS: PROYECTO DE LEY QUE DECLARA CAPITAL NACIONAL DEL PINGÜINO DE PENACHO AMARILLO A LA CIUDAD DE PUERTO DESEADO, PROV. DE SANTA CRUZ"
+        },
+        {
+          "numero": "S-1659/25",
+          "extracto": "TERENZI: PROYECTO DE LEY QUE DECLARA MONUMENTO NATURAL NACIONAL EN EL MARCO DEL ART. 8° DE LA LEY 22.351, A LA ESPECIE ARBÓREA FITZROYA CUPRESSOIDES, CONOCIDA COMO ALERCE"
+        },
+        {
+          "numero": "S-1923/25",
+          "extracto": "GADANO: PROYECTO DE LEY QUE DECLARA MONUMENTO NATURAL EN LOS TERMINOS DE LA LEY 22.351, AL PINGÜINO DE PENACHO AMARILLO (EUDYPTES CHRYSOCOME)"
+        },
+        {
+          "numero": "S-298/26",
+          "extracto": "TERENZI: REPRODUCE PROYECTO DE LEY QUE DECLARA A LA LOC. DE PUERTO PIRÁMIDES, PROV. DEL CHUBUT, “CAPITAL NACIONAL DE LA BALLENA FRANCA AUSTRAL” (REF"
+        },
+        {
+          "numero": "S-748/24",
+          "extracto": ")"
+        },
+        {
+          "numero": "S-1794/25",
+          "extracto": "GALARETTO: PROYECTO DE RESOLUCIÓN QUE SOLICITA LA IMPLEMENTACIÓN DE CAMPAÑAS DE PREVENCIÓN Y CONCIENTIZACIÓN SOBRE LOS RIESGOS AMBIENTALES PARA LA SALUD PÚBLICA"
+        },
+        {
+          "numero": "S-595/26",
+          "extracto": "GALARETTO: PROYECTO DE COMUNICACIÓN QUE SOLICITA PROMOVER PRÁCTICAS SUSTENTABLES DE CARÁCTER AMBIENTAL EN LA SOCIEDAD"
+        },
+        {
+          "numero": "S-290/26",
+          "extracto": "ROJAS DECUT: PROYECTO DE DECLARACIÓN QUE ADHIERE A LA CONMEMORACIÓN DEL \"DÍA MUNDIAL DEL CLIMA\", EL 26 DE MARZO DE CADA AÑO"
+        },
+        {
+          "numero": "S-1117/26",
+          "extracto": "MARKS: PROYECTO DE DECLARACIÓN QUE DECLARA DE INTERÉS EL PRIMER CONGRESO NACIONAL DE COMBATE, PREVENCIÓN Y RESTAURACIÓN FORESTAL COMUNITARIA, EN LA COMARCA ANDINA DEL PARALELO 42, PROV. DE RÍO NEGRO Y CHUBUT, EL 21 Y 22 DE NOVIEMBRE DE 2026"
+        },
+        {
+          "numero": "S-1271/26",
+          "extracto": "FERNÁNDEZ SAGASTI: PROYECTO DE DECLARACIÓN QUE DECLARA DE INTERÉS LA “CONFERENCIA LOCAL DE LAS JUVENTUDES SOBRE CAMBIO CLIMÁTICO (LCOY ARGENTINA 2026)”, A REALIZARSE EN LA PROV. DE MENDOZA, DEL 14 AL 17 DE AGOSTO DE 2026"
+        }
+      ],
+      "expositores": null,
+      "tipo": "senadores",
+      "boletin_id": 2364,
+      "boletin_numero": "114/26"
     }
   ]
 }
