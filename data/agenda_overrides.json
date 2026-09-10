@@ -9,10 +9,10 @@
       "hora_nueva": null,
       "salon_nuevo": null,
       "tipo_nuevo": "asesores",
-      "expositores_extra": null,
+      "expositores_extra": "kdkdkdk",
       "nota": null,
-      "suspendida": true,
-      "actualizado": "2026-09-10T15:55:29.424Z",
+      "suspendida": false,
+      "actualizado": "2026-09-10T15:56:19.830Z",
       "actualizado_por": "Paulina"
     }
   ]
