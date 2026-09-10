@@ -160,6 +160,30 @@ h1{font-family:'Poppins',sans-serif;font-size:24px;font-weight:700;color:var(--a
 .accion-panel h3{font-family:'Poppins',sans-serif;font-size:13px;font-weight:600;color:var(--accent);margin:0 0 12px}
 .accion-panel .field{margin-bottom:12px}
 .accion-panel .field:last-of-type{margin-bottom:0}
+
+/* ── Temario: lista + buscador de expedientes ── */
+.temario-list{display:flex;flex-direction:column;gap:6px;margin-bottom:8px}
+.temario-item-row{display:flex;align-items:flex-start;gap:8px;background:var(--surface-2);border:1px solid var(--border);border-radius:8px;padding:8px 10px}
+.temario-item-num{font-family:'IBM Plex Mono',monospace;font-size:11px;font-weight:600;color:var(--accent);flex-shrink:0;white-space:nowrap}
+.temario-item-extracto{font-size:12px;color:var(--text);line-height:1.4;flex:1}
+.temario-item-rm{background:none;border:none;color:var(--text-faint);cursor:pointer;font-size:15px;line-height:1;flex-shrink:0;padding:2px 4px}
+.temario-item-rm:hover{color:var(--danger)}
+.temario-empty{font-size:11.5px;color:var(--text-faint);font-style:italic;padding:4px 2px}
+.temario-search-wrap{position:relative}
+.temario-search-results{border:1px solid var(--border);border-radius:8px;margin-top:4px;max-height:220px;overflow-y:auto;background:var(--surface)}
+.temario-result{width:100%;text-align:left;background:none;border:none;border-bottom:1px solid var(--border);padding:8px 10px;cursor:pointer;display:block;font-family:inherit}
+.temario-result:last-child{border-bottom:none}
+.temario-result:hover{background:var(--surface-2)}
+.temario-result .num{font-family:'IBM Plex Mono',monospace;font-size:10.5px;font-weight:600;color:var(--accent)}
+.temario-result .ext{font-size:11.5px;color:var(--text-muted);display:block;margin-top:2px;line-height:1.35;overflow:hidden;text-overflow:ellipsis;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical}
+.temario-manual-row{display:flex;gap:6px;margin-top:8px}
+.temario-manual-row input{flex:1}
+
+/* ── Selector de comisiones (checklist) ── */
+.com-checklist{max-height:200px;overflow-y:auto;border:1.5px solid var(--border);border-radius:8px;background:var(--surface-2)}
+.com-check-item{display:flex;align-items:center;gap:8px;padding:7px 10px;font-size:12.5px;border-bottom:1px solid var(--border)}
+.com-check-item:last-child{border-bottom:none}
+.com-check-item label{cursor:pointer;flex:1}
 </style>
 </head>
 <body>
@@ -203,7 +227,7 @@ h1{font-family:'Poppins',sans-serif;font-size:24px;font-weight:700;color:var(--a
       <h2>Cómo usar esto (3 pasos)</h2>
       <ol class="manual-steps">
         <li><span class="manual-num">1</span><div><b>Conectate una sola vez.</b> Arriba a la derecha decís "Conectar" y pegás tu clave de acceso. Si todavía no tenés una, tocá "¿Cómo consigo mi clave?" y seguí esos pasos — se hace una sola vez por celular o computadora.</div></li>
-        <li><span class="manual-num">2</span><div><b>Elegí la reunión</b> de la lista de la izquierda y corregí sólo lo que cambió: el horario, el salón, si es de senadores o de asesores, si se agregaron expositores, alguna aclaración, o si se suspendió.</div></li>
+        <li><span class="manual-num">2</span><div><b>Elegí la reunión</b> de la lista de la izquierda y corregí sólo lo que cambió: el horario, el salón, si es de senadores o de asesores, si se agregaron expositores, alguna aclaración, o si se suspendió. Si la reunión todavía no figura en ningún boletín, tocá "+ Nueva" para cargarla de cero.</div></li>
         <li><span class="manual-num">3</span><div><b>Tocá "Guardar y publicar".</b> El sitio se actualiza solo, en menos de un minuto — no hace falta avisarle a nadie.</div></li>
       </ol>
       <div class="manual-note">Esto edita <b>solamente</b> la Agenda de reuniones. No toca proyectos, comisiones ni ningún otro dato del sitio.</div>
@@ -217,8 +241,9 @@ h1{font-family:'Poppins',sans-serif;font-size:24px;font-weight:700;color:var(--a
           <h2>Reuniones</h2>
           <span class="panel-count" id="rcount">&hellip;</span>
         </div>
-        <div class="search-row">
-          <input type="text" id="rsearch" placeholder="Buscar comisión…">
+        <div class="search-row" style="display:flex;gap:8px;align-items:center">
+          <input type="text" id="rsearch" placeholder="Buscar comisión…" style="flex:1;margin:0">
+          <button class="btn btn-primary" style="white-space:nowrap" onclick="abrirNuevaReunion()">+ Nueva</button>
         </div>
         <div class="rlist" id="rlist"><div class="list-empty">Cargando agenda publicada&hellip;</div></div>
       </div>
@@ -299,6 +324,9 @@ var overridesData = null; // objeto completo de data/agenda_overrides.json (para
 var overridesIdx = {};    // clave -> override
 var seleccion = null;     // reunión cruda seleccionada
 var overridesSha = null;
+var creandoNueva = false;      // true mientras se completa el formulario de "+ Nueva"
+var temarioItemsActual = [];   // [{numero,extracto}] -- del formulario abierto (editar o crear)
+var PROYECTOS_DATA = null;     // data/proyectos.json, se carga recién al abrir el buscador de expedientes
 
 function claveDe(r){ return (r.fecha||'') + '|' + (r.hora||'') + '|' + (r.comisiones||[]).join(','); }
 
@@ -403,12 +431,22 @@ function cargarDatos(){
     fetchJsonConReintento(RAW_BASE + 'data/agenda_overrides.json', {fallback:{overrides:[]}})
   ]).then(function(res){
     var agenda = res[0];
-    reuniones = (agenda && agenda.reuniones) || [];
+    var base = (agenda && agenda.reuniones) || [];
     overridesData = res[1] && res[1].overrides ? res[1] : {overrides:[]};
     overridesIdx = {};
     overridesData.overrides.forEach(function(o){
-      overridesIdx[claveDe(o)] = o;
+      if(!o.nueva)overridesIdx[claveDe(o)] = o;
     });
+    // Reuniones cargadas enteramente desde el editor (sin boletín de origen)
+    // se muestran también en la lista, para poder encontrarlas y corregirlas.
+    var manuales = overridesData.overrides.filter(function(o){return o.nueva}).map(function(o){
+      return {
+        fecha:o.fecha, hora:o.hora, dia:o.dia, comisiones:o.comisiones,
+        salon:o.salon_nuevo, tipo:o.tipo_nuevo||'senadores',
+        boletin_numero:'Cargada a mano', _manualId:o.id
+      };
+    });
+    reuniones = base.concat(manuales);
     renderLista();
   }).catch(function(err){
     document.getElementById('rlist').innerHTML = '<div class="list-empty">No se pudo cargar la agenda publicada. Recargá la página.</div>';
@@ -467,7 +505,9 @@ function renderLista(){
     grupos[label].forEach(function(r){
       var clave = claveDe(r);
       var o = overridesIdx[clave];
-      var chip = o
+      var chip = r._manualId
+        ? '<span class="chip chip-pend"><span class="chip-dot"></span>Manual</span>'
+        : o
         ? '<span class="chip chip-ok"><span class="chip-dot"></span>Editada</span>'
         : '<span class="chip chip-live"><span class="chip-dot"></span>Publicada</span>';
       var activa = seleccion && claveDe(seleccion)===clave;
@@ -496,7 +536,16 @@ function titleCase(s){
 
 function seleccionar(clave){
   seleccion = reuniones.find(function(r){return claveDe(r)===clave});
+  creandoNueva = false;
   renderLista();
+  if(seleccion && seleccion._manualId){
+    var oManual = overridesData.overrides.find(function(o){return o.id===seleccion._manualId});
+    temarioItemsActual = (oManual && oManual.temario_extra || []).slice();
+    renderEditorNueva(oManual);
+    return;
+  }
+  var o = overridesIdx[claveDe(seleccion)] || {};
+  temarioItemsActual = (o.temario_extra||[]).slice();
   renderEditor();
 }
 
@@ -535,7 +584,10 @@ function renderEditor(){
     +'<div class="field span2"><label>Expositores agregados después del boletín</label>'
     +'<textarea id="f-exp" placeholder="Ej.: Lic. Nombre Apellido, cargo…">'+esc(o.expositores_extra||'')+'</textarea>'
     +'<span class="field-hint">Se agrega debajo de lo publicado, no lo reemplaza.</span></div>'
-    +'<div class="field span2"><label>Aclaración / temario ampliado</label>'
+    +'<div class="field span2"><label>Expedientes agregados al temario</label>'
+    +renderTemarioBuilderHtml()
+    +'<span class="field-hint">Se agregan al temario ya publicado, no lo reemplazan.</span></div>'
+    +'<div class="field span2"><label>Aclaración / otro texto</label>'
     +'<textarea id="f-nota" placeholder="Texto libre que se muestra como aviso arriba del temario…">'+esc(o.nota||'')+'</textarea></div>'
     +'<div class="field span2"><div class="toggle-row" id="susp-row">'
     +'<div><div class="toggle-label">Marcar como suspendida</div>'
@@ -560,6 +612,7 @@ function renderEditor(){
   });
   document.getElementById('btn-cancel').addEventListener('click', function(){ renderEditor(); });
   document.getElementById('btn-save').addEventListener('click', guardar);
+  wireTemarioBuilder(actualizarDiff);
   actualizarDiff();
 }
 
@@ -568,6 +621,7 @@ function leerFormulario(){
     hora_nueva: document.getElementById('f-hora').value || null,
     salon_nuevo: document.getElementById('f-salon').value || null,
     tipo_nuevo: document.getElementById('f-tipo').value || null,
+    temario_extra: temarioItemsActual.length ? temarioItemsActual.slice() : null,
     expositores_extra: document.getElementById('f-exp').value.trim() || null,
     nota: document.getElementById('f-nota').value.trim() || null,
     suspendida: document.getElementById('f-susp').checked
@@ -581,6 +635,7 @@ function actualizarDiff(){
   if(f.hora_nueva && f.hora_nueva!==r.hora)rows.push(diffRow('hora', r.hora, f.hora_nueva));
   if(f.salon_nuevo && f.salon_nuevo!==r.salon)rows.push(diffRow('salón', titleCase(r.salon), titleCase(f.salon_nuevo)));
   if(f.tipo_nuevo && f.tipo_nuevo!==(r.tipo||'senadores'))rows.push(diffRow('tipo', TIPO_LABEL[r.tipo]||r.tipo, TIPO_LABEL[f.tipo_nuevo]));
+  if(f.temario_extra)rows.push('<div class="diff-row"><span class="k">temario</span><span class="diff-new">+ '+f.temario_extra.length+' expediente(s) agregado(s)</span></div>');
   if(f.expositores_extra)rows.push('<div class="diff-row"><span class="k">expositores</span><span class="diff-new">+ texto agregado</span></div>');
   if(f.nota)rows.push('<div class="diff-row"><span class="k">nota</span><span class="diff-new">+ aclaración agregada</span></div>');
   if(f.suspendida)rows.push('<div class="diff-row"><span class="k">estado</span><span class="diff-new" style="color:var(--danger)">&rarr; suspendida</span></div>');
@@ -589,6 +644,118 @@ function actualizarDiff(){
 }
 function diffRow(k,oldV,newV){
   return '<div class="diff-row"><span class="k">'+esc(k)+'</span><span class="diff-old">'+esc(oldV)+'</span><span class="diff-new">&rarr; '+esc(newV)+'</span></div>';
+}
+
+/* ── Temario: buscador de expedientes (compartido entre editar y crear) ── */
+function cargarProyectosLazy(){
+  if(PROYECTOS_DATA)return Promise.resolve(PROYECTOS_DATA);
+  return fetchJsonConReintento(RAW_BASE + 'data/proyectos.json').then(function(d){
+    PROYECTOS_DATA = d;
+    return d;
+  });
+}
+function expNumero(p){ return p.origen + '-' + p.nro + '/' + String(p.anio).slice(-2); }
+function normBuscar(s){
+  return String(s||'').toUpperCase().normalize('NFD').replace(/[̀-ͯ]/g,'');
+}
+function renderTemarioBuilderHtml(){
+  return '<div id="temario-builder">'
+    +'<div class="temario-list" id="temario-list"></div>'
+    +'<div class="temario-search-wrap">'
+    +'<input type="text" id="temario-search" placeholder="Buscar expediente por n&uacute;mero o texto (ej.: S-123/26, o &ldquo;presupuesto&rdquo;)&hellip;">'
+    +'<div class="temario-search-results" id="temario-search-results" hidden></div>'
+    +'</div>'
+    +'<div class="temario-manual-row">'
+    +'<input type="text" id="temario-manual-num" placeholder="N&uacute;mero (opcional)" style="max-width:140px">'
+    +'<input type="text" id="temario-manual-ext" placeholder="Texto libre, para &iacute;tems sin expediente&hellip;">'
+    +'<button class="btn btn-ghost" type="button" id="temario-manual-add">+ Agregar</button>'
+    +'</div>'
+    +'</div>';
+}
+function renderTemarioLista(){
+  var el = document.getElementById('temario-list');
+  if(!el)return;
+  if(!temarioItemsActual.length){
+    el.innerHTML = '<div class="temario-empty">Sin expedientes agregados todavía.</div>';
+    return;
+  }
+  el.innerHTML = temarioItemsActual.map(function(it,i){
+    return '<div class="temario-item-row">'
+      +(it.numero?'<span class="temario-item-num">'+esc(it.numero)+'</span>':'')
+      +'<span class="temario-item-extracto">'+esc(it.extracto||'')+'</span>'
+      +'<button class="temario-item-rm" type="button" data-i="'+i+'" title="Quitar">&times;</button>'
+      +'</div>';
+  }).join('');
+  el.querySelectorAll('.temario-item-rm').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      temarioItemsActual.splice(parseInt(btn.getAttribute('data-i'),10), 1);
+      renderTemarioLista();
+      if(window.__temarioOnChange)window.__temarioOnChange();
+    });
+  });
+}
+function wireTemarioBuilder(onChange){
+  window.__temarioOnChange = onChange || null;
+  renderTemarioLista();
+  var search = document.getElementById('temario-search');
+  var results = document.getElementById('temario-search-results');
+  var buscando = false;
+  search.addEventListener('input', function(){
+    var q = search.value.trim();
+    if(q.length < 2){ results.hidden = true; results.innerHTML = ''; return; }
+    if(!PROYECTOS_DATA){
+      if(!buscando){
+        buscando = true;
+        results.hidden = false;
+        results.innerHTML = '<div class="temario-result">Cargando expedientes&hellip;</div>';
+        cargarProyectosLazy().then(function(){ buscando = false; search.dispatchEvent(new Event('input')); });
+      }
+      return;
+    }
+    var qn = normBuscar(q);
+    var qNum = q.replace(/\s+/g,'').toUpperCase();
+    var out = [];
+    for(var i=0; i<PROYECTOS_DATA.length && out.length<20; i++){
+      var p = PROYECTOS_DATA[i];
+      var num = expNumero(p);
+      if(num.toUpperCase().indexOf(qNum)>=0 || normBuscar(p.extracto).indexOf(qn)>=0)out.push(p);
+    }
+    if(!out.length){
+      results.innerHTML = '<div class="temario-result">Sin resultados.</div>';
+      results.hidden = false;
+      return;
+    }
+    results.innerHTML = out.map(function(p,i){
+      return '<button type="button" class="temario-result" data-i="'+i+'">'
+        +'<span class="num">'+esc(expNumero(p))+'</span>'
+        +'<span class="ext">'+esc(p.extracto||'')+'</span>'
+        +'</button>';
+    }).join('');
+    results.hidden = false;
+    results.querySelectorAll('.temario-result').forEach(function(btn){
+      var p = out[parseInt(btn.getAttribute('data-i'),10)];
+      btn.addEventListener('click', function(){
+        if(!temarioItemsActual.some(function(it){return it.numero===expNumero(p)})){
+          temarioItemsActual.push({numero: expNumero(p), extracto: p.extracto||''});
+          renderTemarioLista();
+          if(window.__temarioOnChange)window.__temarioOnChange();
+        }
+        search.value = '';
+        results.hidden = true;
+        results.innerHTML = '';
+      });
+    });
+  });
+  document.getElementById('temario-manual-add').addEventListener('click', function(){
+    var num = document.getElementById('temario-manual-num').value.trim();
+    var ext = document.getElementById('temario-manual-ext').value.trim();
+    if(!ext)return;
+    temarioItemsActual.push({numero: num || null, extracto: ext});
+    document.getElementById('temario-manual-num').value = '';
+    document.getElementById('temario-manual-ext').value = '';
+    renderTemarioLista();
+    if(window.__temarioOnChange)window.__temarioOnChange();
+  });
 }
 
 function b64EncodeUtf8(str){
@@ -626,6 +793,7 @@ function guardar(){
       nuevos.push({
         fecha: r.fecha, hora: r.hora, comisiones: r.comisiones,
         hora_nueva: f.hora_nueva, salon_nuevo: f.salon_nuevo, tipo_nuevo: f.tipo_nuevo,
+        temario_extra: f.temario_extra,
         expositores_extra: f.expositores_extra, nota: f.nota,
         suspendida: f.suspendida,
         actualizado: new Date().toISOString(),
@@ -664,6 +832,187 @@ function mostrarToast(msg, esError){
   document.getElementById('toast-text').textContent = msg;
   t.className = 'toast show' + (esError?' err':'');
   setTimeout(function(){ t.className = 'toast' + (esError?' err':''); }, 4200);
+}
+
+/* ── Agenda: crear una reunión desde cero (sin boletín de origen) ── */
+var DIAS_SEMANA = ['DOMINGO','LUNES','MARTES','MIÉRCOLES','JUEVES','VIERNES','SÁBADO'];
+function diaDeFecha(fechaIso){
+  var d = new Date(fechaIso+'T12:00:00');
+  return DIAS_SEMANA[d.getDay()];
+}
+function comisionRawFromNombre(n){
+  return String(n||'').toUpperCase().replace(/^DE\s+/,'');
+}
+function abrirNuevaReunion(){
+  seleccion = null;
+  creandoNueva = true;
+  temarioItemsActual = [];
+  renderLista();
+  renderEditorNueva(null);
+}
+function renderEditorNueva(existente){
+  var editandoManual = !!(existente && existente.id);
+  document.getElementById('editor-head').innerHTML = editandoManual
+    ? '<div><p class="editor-title">Editar reunión cargada a mano</p><p class="editor-meta">No tiene boletín de origen</p></div>'
+    : '<div><p class="editor-title">Nueva reunión</p><p class="editor-meta">Se carga a mano, sin boletín de origen -- usalo sólo si la reunión todavía no salió en ningún boletín</p></div>';
+
+  var salones = ['AZUL','ILLIA','FRONDIZI - MORENO','EVA PERÓN','C.P.M.'];
+  var salonActual = existente ? existente.salon_nuevo : null;
+  if(salonActual && salones.indexOf(salonActual)<0)salones.unshift(salonActual);
+  var salonOpts = '<option value="">-- Elegir --</option>' + salones.map(function(s){
+    return '<option value="'+esc(s)+'"'+(salonActual===s?' selected':'')+'>'+esc(titleCase(s))+'</option>';
+  }).join('');
+
+  var TIPO_LABEL = {senadores:'Reunión de senadores', asesores:'Reunión de asesores', bicameral:'Reunión bicameral'};
+  var tipoActual = (existente && existente.tipo_nuevo) || 'senadores';
+  var tipoOpts = Object.keys(TIPO_LABEL).map(function(t){
+    return '<option value="'+t+'"'+(t===tipoActual?' selected':'')+'>'+TIPO_LABEL[t]+'</option>';
+  }).join('');
+
+  var fechaIsoVal = '';
+  if(existente && existente.fecha){
+    var p = existente.fecha.split('/'); // DD/MM
+    var anio = new Date().getFullYear();
+    fechaIsoVal = anio+'-'+p[1]+'-'+p[0];
+  }
+
+  document.getElementById('editor-body').innerHTML =
+    '<div class="field-grid">'
+    +'<div class="field"><label>Fecha</label><input type="date" id="nr-fecha" value="'+esc(fechaIsoVal)+'"></div>'
+    +'<div class="field"><label>Hora</label><input type="time" id="nr-hora" value="'+esc(existente?existente.hora:'')+'"></div>'
+    +'<div class="field"><label>Salón</label><select id="nr-salon">'+salonOpts+'</select></div>'
+    +'<div class="field"><label>Tipo de reunión</label><select id="nr-tipo">'+tipoOpts+'</select></div>'
+    +'<div class="field span2"><label>Comisión / comisiones <span class="was">— varias = reunión plenaria</span></label>'
+    +'<div class="com-checklist" id="nr-com-checklist"><div class="list-empty">Cargando comisiones&hellip;</div></div></div>'
+    +'<div class="field span2"><label>Temario</label>'
+    +renderTemarioBuilderHtml()
+    +'</div>'
+    +'<div class="field span2"><label>Expositores / invitados</label>'
+    +'<textarea id="nr-exp" placeholder="Ej.: Lic. Nombre Apellido, cargo…">'+esc(existente?existente.expositores_extra:'')+'</textarea></div>'
+    +'<div class="field span2"><label>Aclaración</label>'
+    +'<textarea id="nr-nota" placeholder="Texto libre, opcional…">'+esc(existente?existente.nota:'')+'</textarea></div>'
+    +'</div>'
+    +'<div class="editor-actions">'
+    +'<span class="save-status" id="save-status"></span>'
+    +'<button class="btn btn-ghost" id="btn-cancel">Cancelar</button>'
+    +'<button class="btn btn-primary" id="btn-save" disabled>'+(editandoManual?'Guardar cambios':'Crear y publicar')+'</button>'
+    +'</div>';
+
+  wireTemarioBuilder(null);
+  document.getElementById('btn-cancel').addEventListener('click', function(){
+    creandoNueva = false;
+    seleccion = null;
+    renderLista();
+    renderEditor();
+  });
+  document.getElementById('btn-save').addEventListener('click', function(){ guardarNuevaReunion(existente); });
+  ['nr-fecha','nr-hora'].forEach(function(id){
+    document.getElementById(id).addEventListener('input', validarNuevaReunion);
+  });
+
+  if(!comisionesCargadas)cargarDatosComisiones();
+  renderComChecklistNueva(existente ? existente.comisiones : null);
+}
+function renderComChecklistNueva(marcadas){
+  var el = document.getElementById('nr-com-checklist');
+  if(!el)return;
+  if(!comisionesCargadas){ el.innerHTML = '<div class="list-empty">Cargando comisiones&hellip;</div>'; return; }
+  var marcadasSet = {};
+  (marcadas||[]).forEach(function(c){ marcadasSet[String(c).toUpperCase()] = true; });
+  var coms = comisionesBase.slice().sort(function(a,b){return a.nombre.localeCompare(b.nombre)});
+  el.innerHTML = coms.map(function(c,i){
+    var raw = comisionRawFromNombre(c.nombre);
+    var checked = marcadasSet[raw];
+    return '<div class="com-check-item"><input type="checkbox" id="nr-com-'+i+'" value="'+esc(c.nombre)+'"'+(checked?' checked':'')+'>'
+      +'<label for="nr-com-'+i+'">'+esc(titleCase(c.nombre))+'</label></div>';
+  }).join('');
+  el.querySelectorAll('input[type=checkbox]').forEach(function(cb){ cb.addEventListener('change', validarNuevaReunion); });
+  validarNuevaReunion();
+}
+function validarNuevaReunion(){
+  var fechaEl = document.getElementById('nr-fecha'), horaEl = document.getElementById('nr-hora');
+  if(!fechaEl)return;
+  var comChecked = document.querySelectorAll('#nr-com-checklist input:checked').length;
+  document.getElementById('btn-save').disabled = !(fechaEl.value && horaEl.value && comChecked>0);
+}
+function guardarNuevaReunion(existente){
+  if(!token()){
+    mostrarToast('Conectate primero (arriba a la derecha) para poder guardar.', true);
+    return;
+  }
+  var fechaIso = document.getElementById('nr-fecha').value; // YYYY-MM-DD
+  var hora = document.getElementById('nr-hora').value;
+  var salon = document.getElementById('nr-salon').value || null;
+  var tipo = document.getElementById('nr-tipo').value || 'senadores';
+  var comisionesSel = Array.from(document.querySelectorAll('#nr-com-checklist input:checked')).map(function(cb){
+    return comisionRawFromNombre(cb.value);
+  });
+  var expositores = document.getElementById('nr-exp').value.trim() || null;
+  var nota = document.getElementById('nr-nota').value.trim() || null;
+
+  var partes = fechaIso.split('-'); // YYYY-MM-DD
+  var fecha = partes[2]+'/'+partes[1];
+  var anio2 = partes[0].slice(-2);
+  var dia = diaDeFecha(fechaIso);
+
+  var statusEl = document.getElementById('save-status');
+  var btn = document.getElementById('btn-save');
+  btn.disabled = true;
+  statusEl.textContent = 'Guardando…';
+  statusEl.className = 'save-status';
+
+  var headers = {Authorization:'Bearer '+token(), Accept:'application/vnd.github+json'};
+
+  fetch(API_BASE + 'data/agenda_overrides.json', {headers:headers, cache:'no-store'})
+    .then(function(resp){
+      if(!resp.ok)throw new Error('No se pudo leer el archivo actual (' + resp.status + ')');
+      return resp.json();
+    })
+    .then(function(file){
+      var actual = JSON.parse(b64DecodeUtf8(file.content.replace(/\n/g,'')));
+      var autor = localStorage.getItem(AUTOR_KEY) || prompt('¿Tu nombre? (para dejar registro de quién cargó esto)') || 'Sin identificar';
+      localStorage.setItem(AUTOR_KEY, autor);
+      var id = (existente && existente.id) || ('manual_' + Date.now());
+      actual.overrides = (actual.overrides||[]).filter(function(o){ return o.id!==id; });
+      actual.overrides.push({
+        nueva: true,
+        id: id,
+        fecha: fecha, hora: hora, dia: dia,
+        comisiones: comisionesSel,
+        salon_nuevo: salon, tipo_nuevo: tipo,
+        temario_extra: temarioItemsActual.length ? temarioItemsActual.slice() : null,
+        expositores_extra: expositores, nota: nota,
+        suspendida: false,
+        boletin_numero: 'manual/'+anio2,
+        actualizado: new Date().toISOString(),
+        actualizado_por: autor
+      });
+      var contenido = JSON.stringify(actual, null, 2) + '\n';
+      var comsTxt = comisionesSel.map(titleCase).join(' · ');
+      return fetch(API_BASE + 'data/agenda_overrides.json', {
+        method:'PUT', headers: Object.assign({'Content-Type':'application/json'}, headers),
+        body: JSON.stringify({
+          message: 'Editor de agenda: ' + (existente?'edita':'crea') + ' reunión manual ' + comsTxt + ' (' + fecha + ' ' + hora + ')',
+          content: b64EncodeUtf8(contenido),
+          sha: file.sha,
+          branch: 'main'
+        })
+      });
+    })
+    .then(function(resp){
+      if(!resp.ok)return resp.json().then(function(e){throw new Error(e.message||('Error ' + resp.status))});
+      statusEl.textContent = 'Guardado.';
+      statusEl.className = 'save-status ok';
+      mostrarToast('Guardado — el sitio se actualiza solo en menos de un minuto.', false);
+      creandoNueva = false;
+      cargarDatos();
+    })
+    .catch(function(err){
+      statusEl.textContent = 'No se pudo guardar: ' + err.message;
+      statusEl.className = 'save-status err';
+      mostrarToast('No se pudo guardar. ' + err.message, true);
+    })
+    .finally(function(){ btn.disabled = false; });
 }
 
 /* ══════════════════════════ COMISIONES ══════════════════════════════ */
@@ -740,6 +1089,12 @@ function cargarDatosComisiones(){
     rosterPorComision = construirDppState(dppCambiosData.cambios || []);
     comisionesCargadas = true;
     renderListaComisiones();
+    if(document.getElementById('nr-com-checklist')){
+      var marcadas = seleccion && seleccion._manualId
+        ? (overridesData.overrides.find(function(o){return o.id===seleccion._manualId})||{}).comisiones
+        : null;
+      renderComChecklistNueva(marcadas);
+    }
   }).catch(function(err){
     if(miCarga!==comisionesCargaId)return;
     document.getElementById('clist').innerHTML = '<div class="list-empty">No se pudieron cargar las comisiones ('+esc(err.message)+'). Recargá la página.</div>';

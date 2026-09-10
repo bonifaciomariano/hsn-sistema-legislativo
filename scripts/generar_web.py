@@ -2759,6 +2759,7 @@ function suspendidaBadge(r){
   return r.suspendida?'<span class="suspendida-badge" title="Figuraba en un bolet&iacute;n anterior y desapareci&oacute; de la agenda">Suspendida</span>':'';
 }
 function editadaBadge(r){
+  if(r.creada)return '<span class="editada-badge" title="Cargada a mano desde el Editor de Agenda, sin bolet&iacute;n de origen">&#10133; Creada</span>';
   return r.editada?'<span class="editada-badge" title="Corregida a mano despu&eacute;s del bolet&iacute;n, desde el Editor de Agenda">&#9998; Editada</span>':'';
 }
 function horaConCorreccion(r){
@@ -5388,6 +5389,8 @@ def _cargar_overrides_agenda():
     data = _cargar("agenda_overrides.json", {})
     idx = {}
     for o in data.get("overrides", []):
+        if o.get("nueva"):
+            continue
         clave = _clave_override(o.get("fecha"), o.get("hora"), o.get("comisiones"))
         idx[clave] = o
     return idx
@@ -5398,14 +5401,19 @@ def construir_agenda(comisiones):
     comisión y agrega fecha completa (con año) y fecha ISO para ordenar/comparar
     en el cliente. Aplica encima data/agenda_overrides.json -- correcciones
     puntuales (horario, salón, expositores, aclaración, suspensión, tipo de
-    reunión) cargadas a mano desde editor.html, sin re-scrapear ni pasar por
-    este script."""
+    reunión, expedientes agregados al temario) cargadas a mano desde
+    editor.html, sin re-scrapear ni pasar por este script. También agrega ahí
+    mismo las reuniones creadas enteramente a mano (sin boletín de origen)."""
     agenda = _cargar("agenda.json", {})
     reuniones = agenda.get("reuniones", []) if isinstance(agenda, dict) else agenda
+    overrides_data = _cargar("agenda_overrides.json", {})
+    todos_overrides = overrides_data.get("overrides", [])
     overrides_idx = _cargar_overrides_agenda()
     resultado = []
+    claves_existentes = set()
     for r in reuniones:
         clave = _clave_override(r.get("fecha"), r.get("hora"), r.get("comisiones"))
+        claves_existentes.add(clave)
         o = overrides_idx.get(clave)
 
         hora = (o.get("hora_nueva") if o and o.get("hora_nueva") else None) or r.get("hora", "")
@@ -5418,6 +5426,10 @@ def construir_agenda(comisiones):
             expositores = (expositores + "\n" if expositores else "") + o["expositores_extra"]
 
         tipo = (o.get("tipo_nuevo") if o and o.get("tipo_nuevo") else None) or r.get("tipo", "")
+
+        temario = list(r.get("temario", []))
+        if o and o.get("temario_extra"):
+            temario = temario + o["temario_extra"]
 
         fecha_dt = _parse_fecha_agenda(r.get("fecha", ""), r.get("boletin_numero", ""))
         fecha_completa, fecha_iso = r.get("fecha", ""), ""
@@ -5439,13 +5451,54 @@ def construir_agenda(comisiones):
             "comisiones": _resolver_comisiones_reunion(r.get("comisiones", []), comisiones),
             "salon": salon,
             "salon_completo": salon_completo,
-            "temario": r.get("temario", []),
+            "temario": temario,
             "expositores": expositores,
             "nota": (o.get("nota") or None) if o else None,
             "tipo": tipo,
             "boletin_numero": r.get("boletin_numero", ""),
             "suspendida": suspendida,
             "editada": bool(o),
+            "creada": False,
+        })
+
+    # Reuniones creadas enteramente desde editor.html (sin boletín de origen).
+    # Si más adelante el scraper termina trayendo la misma reunión (mismo
+    # clave), gana la del boletín y ésta no se duplica.
+    for o in todos_overrides:
+        if not o.get("nueva"):
+            continue
+        clave = _clave_override(o.get("fecha"), o.get("hora"), o.get("comisiones"))
+        if clave in claves_existentes:
+            continue
+        fecha_dt = _parse_fecha_agenda(o.get("fecha", ""), o.get("boletin_numero", "manual/00"))
+        fecha_completa, fecha_iso = o.get("fecha", ""), ""
+        if fecha_dt:
+            fecha_completa = fecha_dt.strftime("%d/%m/%Y")
+            try:
+                hh, mm = (o.get("hora") or "").split(":")
+                fecha_iso = fecha_dt.replace(hour=int(hh), minute=int(mm)).isoformat()
+            except Exception:
+                fecha_iso = fecha_dt.isoformat()
+        salon = o.get("salon_nuevo") or ""
+        resultado.append({
+            "dia": o.get("dia", ""),
+            "fecha": o.get("fecha", ""),
+            "fecha_completa": fecha_completa,
+            "fecha_iso": fecha_iso,
+            "hora": o.get("hora", ""),
+            "hora_boletin": None,
+            "modalidad": "",
+            "comisiones": _resolver_comisiones_reunion(o.get("comisiones", []), comisiones),
+            "salon": salon,
+            "salon_completo": salon,
+            "temario": o.get("temario_extra") or [],
+            "expositores": o.get("expositores_extra"),
+            "nota": o.get("nota"),
+            "tipo": o.get("tipo_nuevo") or "senadores",
+            "boletin_numero": "Cargada a mano",
+            "suspendida": bool(o.get("suspendida")),
+            "editada": True,
+            "creada": True,
         })
     return resultado
 
