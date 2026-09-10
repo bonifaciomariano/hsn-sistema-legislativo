@@ -3,15 +3,17 @@
     {
       "fecha": "14/09",
       "hora": "14:30",
-      "comisiones": ["AMBIENTE Y DESARROLLO SUSTENTABLE"],
+      "comisiones": [
+        "AMBIENTE Y DESARROLLO SUSTENTABLE"
+      ],
       "hora_nueva": null,
       "salon_nuevo": null,
       "tipo_nuevo": "asesores",
       "expositores_extra": null,
       "nota": null,
-      "suspendida": false,
-      "actualizado": "2026-09-10T00:00:00-03:00",
-      "actualizado_por": "M. Bonifacio"
+      "suspendida": true,
+      "actualizado": "2026-09-10T15:55:29.424Z",
+      "actualizado_por": "Paulina"
     }
   ]
 }
