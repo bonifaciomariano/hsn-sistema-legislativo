@@ -66,6 +66,16 @@ jobs:
         continue-on-error: true
         run: python scripts/scraper_od.py
 
+      # Ayuda Memoria lee de ordenes_dia_2026.xlsx, no de data/od.json
+      # directamente -- sin este paso queda desactualizada aunque el scraper
+      # de arriba sí haya encontrado OD nuevas (pasó con la 366-371).
+      - name: Refrescar Ayuda Memoria desde OD scrapeadas
+        if: github.event_name == 'workflow_dispatch' || github.event.schedule == '0 1 * * *'
+        continue-on-error: true
+        run: |
+          python scripts/generar_ordenes_dia_xlsx.py
+          python scripts/parse_ayuda_memoria.py
+
       - name: Scraper de agenda (boletines) - noche
         if: github.event_name == 'workflow_dispatch' || github.event.schedule == '0 1 * * *'
         continue-on-error: true
