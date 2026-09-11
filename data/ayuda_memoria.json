@@ -1,5 +1,564 @@
 [
   {
+    "numero": "397",
+    "periodo": 2026,
+    "tipoOD": "NORMAL",
+    "origen": "Senado",
+    "categoria": "Proyecto de Declaración",
+    "autor": "Moises",
+    "descripcion": "Proyecto de Declaración que Declara de Interés la Conmemoracion del 190° Aniversario del Natalicio de Doña Josefa Dominga \"Pepa\" Balcarce y San Martin, el 14 de Julio de 2026.",
+    "expedientes": [
+      {
+        "codigo": "S-1165/26-PD",
+        "url": "https://www.senado.gob.ar/parlamentario/comisiones/verExp/1165.26/S/PD"
+      }
+    ],
+    "comisiones": [
+      "De Educación y Cultura"
+    ],
+    "comisionCabecera": null,
+    "fechaDictamen": null,
+    "odLink": "https://www.senado.gob.ar/parlamentario/parlamentaria/51729/downloadOrdenDia",
+    "firmantesMayoria": null
+  },
+  {
+    "numero": "396",
+    "periodo": 2026,
+    "tipoOD": "NORMAL",
+    "origen": "Senado",
+    "categoria": "Proyecto de Declaración",
+    "autor": "Atauche",
+    "descripcion": "Proyecto de Declaración que Declara de Interes el Nuevo Aniversario del Exodo Jujeño, el 23 de Agosto de 2026.",
+    "expedientes": [
+      {
+        "codigo": "S-1154/26-PD",
+        "url": "https://www.senado.gob.ar/parlamentario/comisiones/verExp/1154.26/S/PD"
+      },
+      {
+        "codigo": "S-1166/26-PD",
+        "url": null
+      }
+    ],
+    "comisiones": [
+      "De Educación y Cultura"
+    ],
+    "comisionCabecera": null,
+    "fechaDictamen": null,
+    "odLink": "https://www.senado.gob.ar/parlamentario/parlamentaria/51728/downloadOrdenDia",
+    "firmantesMayoria": null
+  },
+  {
+    "numero": "395",
+    "periodo": 2026,
+    "tipoOD": "NORMAL",
+    "origen": "Senado",
+    "categoria": "Proyecto de Declaración",
+    "autor": "Guzmán Coraita y Otros",
+    "descripcion": "Proyecto de Declaración que Declara de Interes al Museo Didactico de la Gesta Guemesiana y Gaucha, en la Loc. De San Lorenzo, Prov. De Salta.",
+    "expedientes": [
+      {
+        "codigo": "S-1029/26-PD",
+        "url": "https://www.senado.gob.ar/parlamentario/comisiones/verExp/1029.26/S/PD"
+      }
+    ],
+    "comisiones": [
+      "De Educación y Cultura"
+    ],
+    "comisionCabecera": null,
+    "fechaDictamen": null,
+    "odLink": "https://www.senado.gob.ar/parlamentario/parlamentaria/51727/downloadOrdenDia",
+    "firmantesMayoria": null
+  },
+  {
+    "numero": "394",
+    "periodo": 2026,
+    "tipoOD": "NORMAL",
+    "origen": "Senado",
+    "categoria": "Proyecto de Declaración",
+    "autor": "Avila",
+    "descripcion": "Proyecto de Declaración que Expresa Beneplácito por la Participación y Selección del Docente Víctor Daniel Zanotta, de la Loc. De Delfín Gallo, Prov. De Tucumán, como Semifinalista Nacional en la Edición 2026 del Premio \"Docentes que Inspiran\".",
+    "expedientes": [
+      {
+        "codigo": "S-1122/26-PD",
+        "url": "https://www.senado.gob.ar/parlamentario/comisiones/verExp/1122.26/S/PD"
+      }
+    ],
+    "comisiones": [
+      "De Educación y Cultura"
+    ],
+    "comisionCabecera": null,
+    "fechaDictamen": null,
+    "odLink": "https://www.senado.gob.ar/parlamentario/parlamentaria/51726/downloadOrdenDia",
+    "firmantesMayoria": null
+  },
+  {
+    "numero": "393",
+    "periodo": 2026,
+    "tipoOD": "NORMAL",
+    "origen": "Senado",
+    "categoria": "Proyecto de Declaración",
+    "autor": "Kroneberger",
+    "descripcion": "Proyecto de Declaración que Declara de Interés el Libro \"Argentina Metropolitana: Antecedentes y Desafíos Hacia una Gobernanza Regional\" Publicado por la Asociación Civil Cuidadanía Metropolitana.",
+    "expedientes": [
+      {
+        "codigo": "S-1104/26-PD",
+        "url": "https://www.senado.gob.ar/parlamentario/comisiones/verExp/1104.26/S/PD"
+      }
+    ],
+    "comisiones": [
+      "De Educación y Cultura"
+    ],
+    "comisionCabecera": null,
+    "fechaDictamen": null,
+    "odLink": "https://www.senado.gob.ar/parlamentario/parlamentaria/51725/downloadOrdenDia",
+    "firmantesMayoria": null
+  },
+  {
+    "numero": "392",
+    "periodo": 2026,
+    "tipoOD": "NORMAL",
+    "origen": "Senado",
+    "categoria": "Proyecto de Declaración",
+    "autor": "Rojas Decut y Otros",
+    "descripcion": "Proyecto de Declaración que Declara de Interes la Propuesta Diocesana Conmemorativa de los 400 Años de la Llegada de las Misiones Jesuiticas y los 40 Años de la Diocesis de Puerto Iguazu.",
+    "expedientes": [
+      {
+        "codigo": "S-1038/26-PD",
+        "url": "https://www.senado.gob.ar/parlamentario/comisiones/verExp/1038.26/S/PD"
+      }
+    ],
+    "comisiones": [
+      "De Educación y Cultura"
+    ],
+    "comisionCabecera": null,
+    "fechaDictamen": null,
+    "odLink": "https://www.senado.gob.ar/parlamentario/parlamentaria/51724/downloadOrdenDia",
+    "firmantesMayoria": null
+  },
+  {
+    "numero": "391",
+    "periodo": 2026,
+    "tipoOD": "NORMAL",
+    "origen": "Senado",
+    "categoria": "Proyecto de Declaración",
+    "autor": "Arce y Otros",
+    "descripcion": "Proyecto de Declaración que Declara de Interes la Cuarta Edicion del Congreso Internacional Veterinario del Iguazu (Civi), a Realizarse en la Prov. De Misiones, el 2 y 3 de Octubre de 2026.",
+    "expedientes": [
+      {
+        "codigo": "S-1037/26-PD",
+        "url": "https://www.senado.gob.ar/parlamentario/comisiones/verExp/1037.26/S/PD"
+      }
+    ],
+    "comisiones": [
+      "De Educación y Cultura"
+    ],
+    "comisionCabecera": null,
+    "fechaDictamen": null,
+    "odLink": "https://www.senado.gob.ar/parlamentario/parlamentaria/51723/downloadOrdenDia",
+    "firmantesMayoria": null
+  },
+  {
+    "numero": "390",
+    "periodo": 2026,
+    "tipoOD": "NORMAL",
+    "origen": "Senado",
+    "categoria": "Proyecto de Declaración",
+    "autor": "Paoltroni y Otros",
+    "descripcion": "Proyecto de Declaración que Declara de Interes la Composicion Artistica \"Mi Bandera Es Argentina\", del Cantautor y Docente de Musica Diamantino Ruben Dario Gimenez.",
+    "expedientes": [
+      {
+        "codigo": "S-1020/26-PD",
+        "url": "https://www.senado.gob.ar/parlamentario/comisiones/verExp/1020.26/S/PD"
+      }
+    ],
+    "comisiones": [
+      "De Educación y Cultura"
+    ],
+    "comisionCabecera": null,
+    "fechaDictamen": null,
+    "odLink": "https://www.senado.gob.ar/parlamentario/parlamentaria/51722/downloadOrdenDia",
+    "firmantesMayoria": null
+  },
+  {
+    "numero": "389",
+    "periodo": 2026,
+    "tipoOD": "NORMAL",
+    "origen": "Senado",
+    "categoria": "Proyecto de Declaración",
+    "autor": "Schneider",
+    "descripcion": "Proyecto de Declaracion que Expresa Beneplacito por la Selección de las Docentes Chaqueñas Vanesa Anabel Meza y Gloria Argentina Cisneros, como Semifinalistas Nacionales en la Edicion 2026 del Premio \"Docentes que Inspiran\".",
+    "expedientes": [
+      {
+        "codigo": "S-1017/26-PD",
+        "url": "https://www.senado.gob.ar/parlamentario/comisiones/verExp/1017.26/S/PD"
+      }
+    ],
+    "comisiones": [
+      "De Educación y Cultura"
+    ],
+    "comisionCabecera": null,
+    "fechaDictamen": null,
+    "odLink": "https://www.senado.gob.ar/parlamentario/parlamentaria/51721/downloadOrdenDia",
+    "firmantesMayoria": null
+  },
+  {
+    "numero": "388",
+    "periodo": 2026,
+    "tipoOD": "NORMAL",
+    "origen": "Senado",
+    "categoria": "Proyecto de Declaración",
+    "autor": "Monte de Oca",
+    "descripcion": "Proyecto de Declaración que Expresa Beneplacito por el 35° Aniversario de la Jura de la Constitucion de la Prov. De Tierra del Fuego, A.i.a.s., el 1 de Junio de 2026.",
+    "expedientes": [
+      {
+        "codigo": "S-1006/26-PD",
+        "url": "https://www.senado.gob.ar/parlamentario/comisiones/verExp/1006.26/S/PD"
+      }
+    ],
+    "comisiones": [
+      "De Educación y Cultura"
+    ],
+    "comisionCabecera": null,
+    "fechaDictamen": null,
+    "odLink": "https://www.senado.gob.ar/parlamentario/parlamentaria/51719/downloadOrdenDia",
+    "firmantesMayoria": null
+  },
+  {
+    "numero": "387",
+    "periodo": 2026,
+    "tipoOD": "NORMAL",
+    "origen": "Senado",
+    "categoria": "Proyecto de Declaración",
+    "autor": "Valenzuela",
+    "descripcion": "Proyecto de Declaracion que Declara de Interes la 60° Edicion del \"Festival del Folclore Correntino\" en la Cdad. De Santo Tome, Prov. De Corrientes, a Realizarse del 4 al  6 de Diciembre de 2026.",
+    "expedientes": [
+      {
+        "codigo": "S-935/26-PD",
+        "url": "https://www.senado.gob.ar/parlamentario/comisiones/verExp/935.26/S/PD"
+      }
+    ],
+    "comisiones": [
+      "De Educación y Cultura"
+    ],
+    "comisionCabecera": null,
+    "fechaDictamen": null,
+    "odLink": "https://www.senado.gob.ar/parlamentario/parlamentaria/51718/downloadOrdenDia",
+    "firmantesMayoria": null
+  },
+  {
+    "numero": "386",
+    "periodo": 2026,
+    "tipoOD": "NORMAL",
+    "origen": "Senado",
+    "categoria": "Proyecto de Declaración",
+    "autor": "Capitanich",
+    "descripcion": "Proyecto de Declaracion que Declara de Interes la Bienal Internacional de Esculturas de Chaco 2026, a Realizarse en la Cdad. De Resistencia, del 11 al 19 de Julio de 2026.",
+    "expedientes": [
+      {
+        "codigo": "S-2149/25-PD",
+        "url": "https://www.senado.gob.ar/parlamentario/comisiones/verExp/2149.25/S/PD"
+      },
+      {
+        "codigo": "S-300/26-PD",
+        "url": null
+      }
+    ],
+    "comisiones": [
+      "De Educación y Cultura"
+    ],
+    "comisionCabecera": null,
+    "fechaDictamen": null,
+    "odLink": "https://www.senado.gob.ar/parlamentario/parlamentaria/51717/downloadOrdenDia",
+    "firmantesMayoria": null
+  },
+  {
+    "numero": "385",
+    "periodo": 2026,
+    "tipoOD": "NORMAL",
+    "origen": "Senado",
+    "categoria": "Proyecto de Declaración",
+    "autor": "Valenzuela",
+    "descripcion": "Proyecto de Declaracion que Declara de Interes la Fiesta Provincial del Locro, en la Cdad. De Curuzu Cuatia, Prov. De Corrientes, a Realizarse del 10 al 12 de Julio de 2026.",
+    "expedientes": [
+      {
+        "codigo": "S-934/26-PD",
+        "url": "https://www.senado.gob.ar/parlamentario/comisiones/verExp/934.26/S/PD"
+      }
+    ],
+    "comisiones": [
+      "De Educación y Cultura"
+    ],
+    "comisionCabecera": null,
+    "fechaDictamen": null,
+    "odLink": "https://www.senado.gob.ar/parlamentario/parlamentaria/51716/downloadOrdenDia",
+    "firmantesMayoria": null
+  },
+  {
+    "numero": "384",
+    "periodo": 2026,
+    "tipoOD": "NORMAL",
+    "origen": "Senado",
+    "categoria": "Proyecto de Declaración",
+    "autor": "Moreno",
+    "descripcion": "Proyecto de Declaracion que Declara de Interés el \"Iii Congreso Internacional de Trabajo Social Forense: Tsf, Culturas Digitales y Emancipación\", Organizado por la Universidad Católica de Salta (Ucasal), en la Cdad. Homónima, del 23 al 25 de Septiembre de 2026.",
+    "expedientes": [
+      {
+        "codigo": "S-900/26-PD",
+        "url": "https://www.senado.gob.ar/parlamentario/comisiones/verExp/900.26/S/PD"
+      }
+    ],
+    "comisiones": [
+      "De Educación y Cultura"
+    ],
+    "comisionCabecera": null,
+    "fechaDictamen": null,
+    "odLink": "https://www.senado.gob.ar/parlamentario/parlamentaria/51714/downloadOrdenDia",
+    "firmantesMayoria": null
+  },
+  {
+    "numero": "383",
+    "periodo": 2026,
+    "tipoOD": "NORMAL",
+    "origen": "Senado",
+    "categoria": "Proyecto de Declaración",
+    "autor": "Abdala",
+    "descripcion": "Proyecto de Declaracion que Adhiere al Día del Granadero Puntano en Dedicación al \"Héroe de Chancay\" con Motivo del 231º Aniversario del Nacimiento del Coronel Juan Pascual Pringles.",
+    "expedientes": [
+      {
+        "codigo": "S-892/26-PD",
+        "url": "https://www.senado.gob.ar/parlamentario/comisiones/verExp/892.26/S/PD"
+      }
+    ],
+    "comisiones": [
+      "De Educación y Cultura"
+    ],
+    "comisionCabecera": null,
+    "fechaDictamen": null,
+    "odLink": "https://www.senado.gob.ar/parlamentario/parlamentaria/51713/downloadOrdenDia",
+    "firmantesMayoria": null
+  },
+  {
+    "numero": "382",
+    "periodo": 2026,
+    "tipoOD": "NORMAL",
+    "origen": "Senado",
+    "categoria": "Proyecto de Declaración",
+    "autor": "Olivera Lucero",
+    "descripcion": "Proyecto de Declaración que Declara de Interés la Feria Internacional de Artesanias de San Juan 2026, en la Loc. De Chimbas, Prov. De San Juan, entre el 30 de Abril y el 11 de Mayo",
+    "expedientes": [
+      {
+        "codigo": "S-735/26-PD",
+        "url": "https://www.senado.gob.ar/parlamentario/comisiones/verExp/735.26/S/PD"
+      }
+    ],
+    "comisiones": [
+      "De Educación y Cultura"
+    ],
+    "comisionCabecera": null,
+    "fechaDictamen": null,
+    "odLink": "https://www.senado.gob.ar/parlamentario/parlamentaria/51712/downloadOrdenDia",
+    "firmantesMayoria": null
+  },
+  {
+    "numero": "381",
+    "periodo": 2026,
+    "tipoOD": "NORMAL",
+    "origen": "Senado",
+    "categoria": "Proyecto de Declaración",
+    "autor": "Fernández Sagasti",
+    "descripcion": "Proyecto de Declaración que Expresa Beneplacito por el Subcampeonato Logrado por Alumnos de la Prov. De Mendoza, en el Mundial de Robotica \"First Tech Challenge 2026\", entre el 15 y 18 de Abril de 2026.",
+    "expedientes": [
+      {
+        "codigo": "S-709/26-PD",
+        "url": "https://www.senado.gob.ar/parlamentario/comisiones/verExp/709.26/S/PD"
+      }
+    ],
+    "comisiones": [
+      "De Educación y Cultura"
+    ],
+    "comisionCabecera": null,
+    "fechaDictamen": null,
+    "odLink": "https://www.senado.gob.ar/parlamentario/parlamentaria/51711/downloadOrdenDia",
+    "firmantesMayoria": null
+  },
+  {
+    "numero": "379",
+    "periodo": 2026,
+    "tipoOD": "NORMAL",
+    "origen": "Senado",
+    "categoria": "Proyecto de Declaración",
+    "autor": "Galaretto",
+    "descripcion": "Proyecto de Declaracion que Declara de Interes Cultural y Educativo la Obra \"Danzas, Bailes y Costumbres del Litoral Argentino\" de los Autores Claudia L. Garcia y Enrique a. Piñeyro Publicada por Editorial Autores Argentinos en 2025.",
+    "expedientes": [
+      {
+        "codigo": "S-1987/25-PD",
+        "url": "https://www.senado.gob.ar/parlamentario/comisiones/verExp/1987.25/S/PD"
+      }
+    ],
+    "comisiones": [
+      "De Educación y Cultura"
+    ],
+    "comisionCabecera": null,
+    "fechaDictamen": null,
+    "odLink": "https://www.senado.gob.ar/parlamentario/parlamentaria/51709/downloadOrdenDia",
+    "firmantesMayoria": null
+  },
+  {
+    "numero": "378",
+    "periodo": 2026,
+    "tipoOD": "NORMAL",
+    "origen": "Senado",
+    "categoria": "Proyecto de Declaración",
+    "autor": "López",
+    "descripcion": "Proyecto de Declaración que Reconoce como Valor Historico y Cultural al Monolito de Loma Blanca, en la Localidad de Olta, Prov. De la Rioja.",
+    "expedientes": [
+      {
+        "codigo": "S-1799/25-PD",
+        "url": "https://www.senado.gob.ar/parlamentario/comisiones/verExp/1799.25/S/PD"
+      }
+    ],
+    "comisiones": [
+      "De Educación y Cultura"
+    ],
+    "comisionCabecera": null,
+    "fechaDictamen": null,
+    "odLink": "https://www.senado.gob.ar/parlamentario/parlamentaria/51708/downloadOrdenDia",
+    "firmantesMayoria": null
+  },
+  {
+    "numero": "377",
+    "periodo": 2026,
+    "tipoOD": "NORMAL",
+    "origen": "Senado",
+    "categoria": "Proyecto de Declaración",
+    "autor": "Fernández Sagasti",
+    "descripcion": "Proyecto de Declaracion que Declara de Interes el Evento \"Convinart\", Reconociendo su Aporte a la Difusion de la Cultura, el Arte y la Identidad Nacional.",
+    "expedientes": [
+      {
+        "codigo": "S-1601/25-PD",
+        "url": "https://www.senado.gob.ar/parlamentario/comisiones/verExp/1601.25/S/PD"
+      }
+    ],
+    "comisiones": [
+      "De Educación y Cultura"
+    ],
+    "comisionCabecera": null,
+    "fechaDictamen": null,
+    "odLink": "https://www.senado.gob.ar/parlamentario/parlamentaria/51707/downloadOrdenDia",
+    "firmantesMayoria": null
+  },
+  {
+    "numero": "376",
+    "periodo": 2026,
+    "tipoOD": "NORMAL",
+    "origen": "Senado",
+    "categoria": "Proyecto de Declaración",
+    "autor": "Lewandowski",
+    "descripcion": "Proyecto de Declaracion que Expresa Beneplacito por la Trayectoria del Musico Miguel Figueroa y su Conjunto \"Amanecer Campero\", con la Difusion del Chamame en el Ambito Nacional e Internacional.",
+    "expedientes": [
+      {
+        "codigo": "S-1577/25-PD",
+        "url": "https://www.senado.gob.ar/parlamentario/comisiones/verExp/1577.25/S/PD"
+      }
+    ],
+    "comisiones": [
+      "De Educación y Cultura"
+    ],
+    "comisionCabecera": null,
+    "fechaDictamen": null,
+    "odLink": "https://www.senado.gob.ar/parlamentario/parlamentaria/51706/downloadOrdenDia",
+    "firmantesMayoria": null
+  },
+  {
+    "numero": "375",
+    "periodo": 2026,
+    "tipoOD": "NORMAL",
+    "origen": "Senado",
+    "categoria": "Proyecto de Declaración",
+    "autor": "Huala",
+    "descripcion": "Proyecto de Declaración que Expresa Beneplacito y Reconoce a la Escritora Olga Liliana Reinoso por su Trayectoria y Aporte a la Cultura.",
+    "expedientes": [
+      {
+        "codigo": "S-1469/25-PD",
+        "url": "https://www.senado.gob.ar/parlamentario/comisiones/verExp/1469.25/S/PD"
+      }
+    ],
+    "comisiones": [
+      "De Educación y Cultura"
+    ],
+    "comisionCabecera": null,
+    "fechaDictamen": null,
+    "odLink": "https://www.senado.gob.ar/parlamentario/parlamentaria/51705/downloadOrdenDia",
+    "firmantesMayoria": null
+  },
+  {
+    "numero": "374",
+    "periodo": 2026,
+    "tipoOD": "NORMAL",
+    "origen": "Senado",
+    "categoria": "Proyecto de Declaración",
+    "autor": "Rojas Decut",
+    "descripcion": "Proyecto de Declaracion que Declara de Interes el Programa de Educacion Financiera \"Cuentas Sanas\" de la Fundacion Macro.",
+    "expedientes": [
+      {
+        "codigo": "S-837/25-PD",
+        "url": "https://www.senado.gob.ar/parlamentario/comisiones/verExp/837.25/S/PD"
+      }
+    ],
+    "comisiones": [
+      "De Educación y Cultura"
+    ],
+    "comisionCabecera": null,
+    "fechaDictamen": null,
+    "odLink": "https://www.senado.gob.ar/parlamentario/parlamentaria/51704/downloadOrdenDia",
+    "firmantesMayoria": null
+  },
+  {
+    "numero": "373",
+    "periodo": 2026,
+    "tipoOD": "NORMAL",
+    "origen": "Senado",
+    "categoria": "Proyecto de Declaración",
+    "autor": "Juez",
+    "descripcion": "Proyecto de Declaración que Declara de Interés el \"Proyecto Institucional de Convivencia, una Invitación a Innovar- Valores en Acción-\", para Implementar en sus Niveles Inicial, Primario y Secundario, Diseñado por el Colegio \"la Merced\" de la Cdad. De Rio Cuarto, Prov. De Córdoba.",
+    "expedientes": [
+      {
+        "codigo": "S-336/25-PD",
+        "url": "https://www.senado.gob.ar/parlamentario/comisiones/verExp/336.25/S/PD"
+      }
+    ],
+    "comisiones": [
+      "De Educación y Cultura"
+    ],
+    "comisionCabecera": null,
+    "fechaDictamen": null,
+    "odLink": "https://www.senado.gob.ar/parlamentario/parlamentaria/51703/downloadOrdenDia",
+    "firmantesMayoria": null
+  },
+  {
+    "numero": "372",
+    "periodo": 2026,
+    "tipoOD": "NORMAL",
+    "origen": "Cámara de Diputados",
+    "categoria": "Proyecto de Ley",
+    "autor": null,
+    "descripcion": "Proyecto de Ley en Revision que Modifica las Leyes 11683 y 27799 (T.o. 1998 y S/m) Relativas a la Modalidad Simplificada de Declaracion Jurada del Impuesto a las Ganancias y en Materia de Prescripcion Tributaria, y 25.191 Referente al Regimen Sancionatorio.",
+    "expedientes": [
+      {
+        "codigo": "CD-8/26-PL",
+        "url": "https://www.senado.gob.ar/parlamentario/comisiones/verExp/8.26/CD/PL"
+      }
+    ],
+    "comisiones": [
+      "De Justicia y Asuntos Penales",
+      "De Presupuesto y Hacienda"
+    ],
+    "comisionCabecera": null,
+    "fechaDictamen": null,
+    "odLink": "https://www.senado.gob.ar/parlamentario/parlamentaria/51702/downloadOrdenDia",
+    "firmantesMayoria": null
+  },
+  {
     "numero": "371",
     "periodo": 2026,
     "tipoOD": "NORMAL",
@@ -207,6 +766,52 @@
     "comisionCabecera": null,
     "fechaDictamen": null,
     "odLink": "https://www.senado.gob.ar/parlamentario/parlamentaria/51692/downloadOrdenDia",
+    "firmantesMayoria": null
+  },
+  {
+    "numero": "362",
+    "periodo": 2026,
+    "tipoOD": "ANEXO",
+    "origen": "Senado",
+    "categoria": "Proyecto de Ley",
+    "autor": "Avila",
+    "descripcion": "Proyecto de Ley que Modifica su Similar 27.640 - Biocombustibles-, Respecto del Porcentaje Obligatorio de Biodiesel y Bioetanol en el Gasoil y la Nafta.",
+    "expedientes": [
+      {
+        "codigo": "S-1271/25-PL",
+        "url": "https://www.senado.gob.ar/parlamentario/comisiones/verExp/1271.25/S/PL"
+      },
+      {
+        "codigo": "S-1861/25-PL",
+        "url": null
+      },
+      {
+        "codigo": "S-3/26-PL",
+        "url": null
+      },
+      {
+        "codigo": "S-809/26-PL",
+        "url": null
+      },
+      {
+        "codigo": "S-916/26-PL",
+        "url": null
+      },
+      {
+        "codigo": "S-1035/26-PL",
+        "url": null
+      },
+      {
+        "codigo": "S-1246/26-PL",
+        "url": null
+      }
+    ],
+    "comisiones": [
+      "De Minería, Energía y Combustibles"
+    ],
+    "comisionCabecera": null,
+    "fechaDictamen": null,
+    "odLink": "https://www.senado.gob.ar/parlamentario/parlamentaria/51701/downloadOrdenDia",
     "firmantesMayoria": null
   },
   {

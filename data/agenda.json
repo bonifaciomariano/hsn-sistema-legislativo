@@ -7511,8 +7511,8 @@
       ],
       "expositores": null,
       "tipo": "senadores",
-      "boletin_id": 2364,
-      "boletin_numero": "114/26"
+      "boletin_id": 2365,
+      "boletin_numero": "115/26"
     },
     {
       "seccion": "senadores",
@@ -7866,8 +7866,34 @@
       ],
       "expositores": null,
       "tipo": "senadores",
-      "boletin_id": 2364,
-      "boletin_numero": "114/26"
+      "boletin_id": 2365,
+      "boletin_numero": "115/26"
+    },
+    {
+      "seccion": "senadores",
+      "dia": "MIÉRCOLES",
+      "fecha": "16/09",
+      "hora": "13:00",
+      "modalidad": "",
+      "comisiones": [
+        "ACUERDOS"
+      ],
+      "salon": "ILLIA",
+      "salon_completo": "ILLIA",
+      "temario": [
+        {
+          "numero": "PE-10/26",
+          "extracto": "MENSAJE N° 20/26 QUE SOLICITA ACUERDO PARA DESIGNAR DIRECTOR DEL BANCO CENTRAL DE LA REPÚBLICA ARGENTINA, AL LICENCIADO EN ECONOMÍA MARTÍN VAUTHIER"
+        },
+        {
+          "numero": "PE-196/26",
+          "extracto": "MENSAJE N° 189/26 QUE SOLICITA ACUERDO PARA PROMOVER AL GRADO INMEDIATO SUPERIOR, A PERSONAL MILITAR SUPERIOR DE LA FUERZA AÉREA ARGENTINA, AL 31 DE DICIEMBRE DE 2025"
+        }
+      ],
+      "expositores": null,
+      "tipo": "senadores",
+      "boletin_id": 2365,
+      "boletin_numero": "115/26"
     }
   ]
 }
