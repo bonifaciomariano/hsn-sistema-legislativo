@@ -5070,14 +5070,14 @@ function irASanciones(expediente){
     render();
   });
 
-  document.querySelector(".bulk-actions").addEventListener("click", function (e) {
+  document.querySelector("#herr-vista-votacion .bulk-actions").addEventListener("click", function (e) {
     var action = e.target.getAttribute("data-action");
     if (action === "all-positive") bulkAll("positive");
     if (action === "all-negative") bulkAll("negative");
     if (action === "all-clear") bulkAll("pending");
   });
 
-  document.querySelector(".roster-actions").addEventListener("click", function (e) {
+  document.querySelector("#herr-vista-votacion .roster-actions").addEventListener("click", function (e) {
     var action = e.target.getAttribute("data-action");
     if (action === "bloc-positive") bulkFiltered("positive");
     if (action === "bloc-negative") bulkFiltered("negative");
