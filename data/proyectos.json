@@ -27,6 +27,39 @@
     "_ultima_revision": "2026-09-10"
   },
   {
+    "nro": 1599,
+    "anio": 2026,
+    "tipo": "PL",
+    "tipo_label": "Proyecto de Ley",
+    "extracto": "PROYECTO DE LEY QUE MODIFICA SU SIMILAR 27.742 -BASES Y PUNTOS DE PARTIDA PARA LA LIBERTAD DE LOS ARGENTINOS-, RESPECTO DE INCLUIR EN EL RÉGIMEN DE INCENTIVO PARA GRANDES INVERSIONES (RIGI) LAS INVERSIONES DESTINADAS A EXTENDER LA VIDA ÚTIL DE PROYECTOS MINEROS EN PRODUCCIÓN.",
+    "autores": [
+      "FAMA, FLAVIO SERGIO"
+    ],
+    "coautores": [],
+    "bloques": [
+      "UCR - UNIÓN CÍVICA RADICAL"
+    ],
+    "provincias": [
+      "CATAMARCA"
+    ],
+    "comisiones": [
+      "DE MINERÍA, ENERGÍA Y COMBUSTIBLES",
+      "DE PRESUPUESTO Y HACIENDA"
+    ],
+    "fecha": "11/09/2026",
+    "dae": "72/2026",
+    "origen": "S",
+    "url": "https://www.senado.gob.ar/parlamentario/comisiones/verExp/1599.26/S/PL",
+    "sancionado": false,
+    "ley_numero": null,
+    "fecha_ley": null,
+    "archivado": false,
+    "fecha_archivo": null,
+    "caduca": false,
+    "fecha_caduca": null,
+    "_ultima_revision": "2026-09-15"
+  },
+  {
     "nro": 1596,
     "anio": 2026,
     "tipo": "PD",
@@ -19094,7 +19127,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-08-20"
+    "_ultima_revision": "2026-09-15"
   },
   {
     "nro": 1006,
@@ -19126,7 +19159,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-08-20"
+    "_ultima_revision": "2026-09-15"
   },
   {
     "nro": 1005,
@@ -19158,7 +19191,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-08-20"
+    "_ultima_revision": "2026-09-15"
   },
   {
     "nro": 1004,
@@ -19200,7 +19233,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-08-20"
+    "_ultima_revision": "2026-09-15"
   },
   {
     "nro": 1003,
@@ -19232,7 +19265,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-08-20"
+    "_ultima_revision": "2026-09-15"
   },
   {
     "nro": 1002,
@@ -19264,7 +19297,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-08-20"
+    "_ultima_revision": "2026-09-15"
   },
   {
     "nro": 1001,
@@ -19296,7 +19329,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-08-20"
+    "_ultima_revision": "2026-09-15"
   },
   {
     "nro": 1000,
@@ -19328,7 +19361,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-08-20"
+    "_ultima_revision": "2026-09-15"
   },
   {
     "nro": 999,
@@ -19360,7 +19393,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-08-20"
+    "_ultima_revision": "2026-09-15"
   },
   {
     "nro": 998,
@@ -19392,7 +19425,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-08-20"
+    "_ultima_revision": "2026-09-15"
   },
   {
     "nro": 997,
@@ -19425,7 +19458,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-08-20"
+    "_ultima_revision": "2026-09-15"
   },
   {
     "nro": 996,
@@ -19459,7 +19492,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-08-20"
+    "_ultima_revision": "2026-09-15"
   },
   {
     "nro": 995,
@@ -19491,7 +19524,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-08-20"
+    "_ultima_revision": "2026-09-15"
   },
   {
     "nro": 994,
@@ -19523,7 +19556,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-08-20"
+    "_ultima_revision": "2026-09-15"
   },
   {
     "nro": 993,
@@ -19555,7 +19588,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-08-20"
+    "_ultima_revision": "2026-09-15"
   },
   {
     "nro": 992,
@@ -19587,7 +19620,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-08-20"
+    "_ultima_revision": "2026-09-15"
   },
   {
     "nro": 991,
@@ -19619,7 +19652,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-08-20"
+    "_ultima_revision": "2026-09-15"
   },
   {
     "nro": 990,
@@ -19651,7 +19684,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-08-20"
+    "_ultima_revision": "2026-09-15"
   },
   {
     "nro": 989,
@@ -19683,7 +19716,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-08-20"
+    "_ultima_revision": "2026-09-15"
   },
   {
     "nro": 987,
@@ -19715,7 +19748,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-08-20"
+    "_ultima_revision": "2026-09-15"
   },
   {
     "nro": 986,
@@ -19747,7 +19780,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-08-20"
+    "_ultima_revision": "2026-09-15"
   },
   {
     "nro": 983,
@@ -19779,7 +19812,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-08-20"
+    "_ultima_revision": "2026-09-15"
   },
   {
     "nro": 982,
@@ -19811,7 +19844,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-08-20"
+    "_ultima_revision": "2026-09-15"
   },
   {
     "nro": 981,
@@ -19843,7 +19876,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-08-20"
+    "_ultima_revision": "2026-09-15"
   },
   {
     "nro": 980,
@@ -19875,7 +19908,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-08-20"
+    "_ultima_revision": "2026-09-15"
   },
   {
     "nro": 979,
@@ -19907,7 +19940,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-08-20"
+    "_ultima_revision": "2026-09-15"
   },
   {
     "nro": 978,
@@ -19939,7 +19972,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-08-20"
+    "_ultima_revision": "2026-09-15"
   },
   {
     "nro": 977,
@@ -19971,7 +20004,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-08-20"
+    "_ultima_revision": "2026-09-15"
   },
   {
     "nro": 976,
@@ -20003,7 +20036,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-08-20"
+    "_ultima_revision": "2026-09-15"
   },
   {
     "nro": 975,
@@ -20035,7 +20068,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-08-20"
+    "_ultima_revision": "2026-09-15"
   },
   {
     "nro": 974,
@@ -20067,7 +20100,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-08-20"
+    "_ultima_revision": "2026-09-15"
   },
   {
     "nro": 973,
@@ -20099,7 +20132,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-08-20"
+    "_ultima_revision": "2026-09-15"
   },
   {
     "nro": 972,
@@ -20131,7 +20164,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-08-20"
+    "_ultima_revision": "2026-09-15"
   },
   {
     "nro": 971,
@@ -20166,7 +20199,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-08-20"
+    "_ultima_revision": "2026-09-15"
   },
   {
     "nro": 970,
@@ -20188,8 +20221,8 @@
       "CATAMARCA"
     ],
     "comisiones": [
-      "DE PRESUPUESTO Y HACIENDA",
-      "DE SUPERVISIóN PARLAMENTARIA DE LA OFICINA DE PRESUPUESTO DEL CONGRESO (LEY 27.343)"
+      "DE SUPERVISIóN PARLAMENTARIA DE LA OFICINA DE PRESUPUESTO DEL CONGRESO (LEY 27.343) Solo para conocimiento : \n\t\t\t\t\t\t\t\t\t\t2",
+      "DE PRESUPUESTO Y HACIENDA"
     ],
     "fecha": "04/06/2026",
     "dae": "41/2026",
@@ -20202,7 +20235,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-08-20"
+    "_ultima_revision": "2026-09-15"
   },
   {
     "nro": 968,
@@ -20236,7 +20269,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-08-20"
+    "_ultima_revision": "2026-09-15"
   },
   {
     "nro": 966,
@@ -20269,7 +20302,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-08-20"
+    "_ultima_revision": "2026-09-15"
   },
   {
     "nro": 957,
@@ -20301,7 +20334,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-08-20"
+    "_ultima_revision": "2026-09-15"
   },
   {
     "nro": 956,
@@ -20334,7 +20367,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-08-20"
+    "_ultima_revision": "2026-09-15"
   },
   {
     "nro": 955,
@@ -20366,7 +20399,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-08-20"
+    "_ultima_revision": "2026-09-15"
   },
   {
     "nro": 954,
@@ -20398,7 +20431,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-08-20"
+    "_ultima_revision": "2026-09-15"
   },
   {
     "nro": 953,
@@ -20430,7 +20463,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-08-20"
+    "_ultima_revision": "2026-09-15"
   },
   {
     "nro": 951,
@@ -20462,7 +20495,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-08-20"
+    "_ultima_revision": "2026-09-15"
   },
   {
     "nro": 950,
@@ -20502,7 +20535,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-08-20"
+    "_ultima_revision": "2026-09-15"
   },
   {
     "nro": 949,
@@ -20536,7 +20569,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-08-20"
+    "_ultima_revision": "2026-09-15"
   },
   {
     "nro": 948,
@@ -20568,7 +20601,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-08-20"
+    "_ultima_revision": "2026-09-15"
   },
   {
     "nro": 947,
@@ -20600,7 +20633,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-08-20"
+    "_ultima_revision": "2026-09-15"
   },
   {
     "nro": 946,
@@ -20632,7 +20665,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-08-20"
+    "_ultima_revision": "2026-09-15"
   },
   {
     "nro": 945,
@@ -20664,7 +20697,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-08-20"
+    "_ultima_revision": "2026-09-15"
   },
   {
     "nro": 944,
@@ -20696,7 +20729,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-08-20"
+    "_ultima_revision": "2026-09-15"
   },
   {
     "nro": 943,
@@ -20730,7 +20763,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-08-20"
+    "_ultima_revision": "2026-09-15"
   },
   {
     "nro": 942,
@@ -20767,7 +20800,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-08-20"
+    "_ultima_revision": "2026-09-15"
   },
   {
     "nro": 941,
@@ -20812,7 +20845,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-08-20"
+    "_ultima_revision": "2026-09-15"
   },
   {
     "nro": 940,
@@ -20844,7 +20877,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-08-20"
+    "_ultima_revision": "2026-09-15"
   },
   {
     "nro": 938,
@@ -20876,7 +20909,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-08-20"
+    "_ultima_revision": "2026-09-15"
   },
   {
     "nro": 937,
@@ -20908,7 +20941,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-08-20"
+    "_ultima_revision": "2026-09-15"
   },
   {
     "nro": 936,
@@ -20941,7 +20974,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-08-20"
+    "_ultima_revision": "2026-09-15"
   },
   {
     "nro": 935,
@@ -20973,7 +21006,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-08-20"
+    "_ultima_revision": "2026-09-15"
   },
   {
     "nro": 934,
@@ -21005,7 +21038,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-08-20"
+    "_ultima_revision": "2026-09-15"
   },
   {
     "nro": 933,
@@ -21037,7 +21070,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-08-20"
+    "_ultima_revision": "2026-09-15"
   },
   {
     "nro": 931,
@@ -21069,7 +21102,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-08-21"
+    "_ultima_revision": "2026-09-15"
   },
   {
     "nro": 930,
@@ -21101,7 +21134,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-08-21"
+    "_ultima_revision": "2026-09-15"
   },
   {
     "nro": 929,
@@ -21134,7 +21167,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-08-21"
+    "_ultima_revision": "2026-09-15"
   },
   {
     "nro": 928,
@@ -21167,7 +21200,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-08-21"
+    "_ultima_revision": "2026-09-15"
   },
   {
     "nro": 927,
@@ -21199,7 +21232,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-08-21"
+    "_ultima_revision": "2026-09-15"
   },
   {
     "nro": 926,
@@ -21233,7 +21266,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-08-21"
+    "_ultima_revision": "2026-09-15"
   },
   {
     "nro": 925,
@@ -21265,7 +21298,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-08-21"
+    "_ultima_revision": "2026-09-15"
   },
   {
     "nro": 924,
@@ -21297,7 +21330,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-08-21"
+    "_ultima_revision": "2026-09-15"
   },
   {
     "nro": 923,
@@ -21330,7 +21363,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-08-21"
+    "_ultima_revision": "2026-09-15"
   },
   {
     "nro": 922,
@@ -21364,7 +21397,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-08-21"
+    "_ultima_revision": "2026-09-15"
   },
   {
     "nro": 921,
@@ -21396,7 +21429,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-08-21"
+    "_ultima_revision": "2026-09-15"
   },
   {
     "nro": 920,
@@ -21429,7 +21462,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-08-21"
+    "_ultima_revision": "2026-09-15"
   },
   {
     "nro": 919,
@@ -21462,7 +21495,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-08-21"
+    "_ultima_revision": "2026-09-15"
   },
   {
     "nro": 918,
@@ -21495,7 +21528,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-08-21"
+    "_ultima_revision": "2026-09-15"
   },
   {
     "nro": 917,
@@ -21528,7 +21561,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-08-21"
+    "_ultima_revision": "2026-09-15"
   },
   {
     "nro": 916,
@@ -21561,7 +21594,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-08-21"
+    "_ultima_revision": "2026-09-15"
   },
   {
     "nro": 915,
@@ -21593,7 +21626,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-08-21"
+    "_ultima_revision": "2026-09-15"
   },
   {
     "nro": 914,
@@ -21627,7 +21660,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-08-21"
+    "_ultima_revision": "2026-09-15"
   },
   {
     "nro": 913,
@@ -21664,7 +21697,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-08-21"
+    "_ultima_revision": "2026-09-15"
   },
   {
     "nro": 912,
@@ -21697,7 +21730,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-08-21"
+    "_ultima_revision": "2026-09-15"
   },
   {
     "nro": 911,
@@ -21729,7 +21762,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-08-21"
+    "_ultima_revision": "2026-09-15"
   },
   {
     "nro": 910,
@@ -21763,7 +21796,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-08-21"
+    "_ultima_revision": "2026-09-15"
   },
   {
     "nro": 909,
@@ -21797,7 +21830,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-08-21"
+    "_ultima_revision": "2026-09-15"
   },
   {
     "nro": 908,
@@ -21829,7 +21862,6 @@
     ],
     "comisiones": [
       "DE SALUD",
-      "DE LEGISLACIÓN GENERAL",
       "DE PRESUPUESTO Y HACIENDA"
     ],
     "fecha": "26/05/2026",
@@ -21843,7 +21875,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-08-21"
+    "_ultima_revision": "2026-09-15"
   },
   {
     "nro": 906,
@@ -21875,7 +21907,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-08-21"
+    "_ultima_revision": "2026-09-15"
   },
   {
     "nro": 905,
@@ -21907,7 +21939,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-08-21"
+    "_ultima_revision": "2026-09-15"
   },
   {
     "nro": 904,
@@ -21939,7 +21971,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-08-21"
+    "_ultima_revision": "2026-09-15"
   },
   {
     "nro": 903,
@@ -21971,7 +22003,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-08-21"
+    "_ultima_revision": "2026-09-15"
   },
   {
     "nro": 902,
@@ -22003,7 +22035,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-08-21"
+    "_ultima_revision": "2026-09-15"
   },
   {
     "nro": 900,
@@ -22035,7 +22067,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-08-21"
+    "_ultima_revision": "2026-09-15"
   },
   {
     "nro": 899,
@@ -22071,7 +22103,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-08-21"
+    "_ultima_revision": "2026-09-15"
   },
   {
     "nro": 898,
@@ -22103,7 +22135,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-08-21"
+    "_ultima_revision": "2026-09-15"
   },
   {
     "nro": 897,
@@ -22137,11 +22169,11 @@
     "sancionado": false,
     "ley_numero": null,
     "fecha_ley": null,
-    "archivado": false,
-    "fecha_archivo": null,
+    "archivado": true,
+    "fecha_archivo": "11/09/2026",
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-08-21"
+    "_ultima_revision": "2026-09-15"
   },
   {
     "nro": 896,
@@ -22184,7 +22216,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-08-21"
+    "_ultima_revision": "2026-09-15"
   },
   {
     "nro": 895,
@@ -22216,7 +22248,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-08-21"
+    "_ultima_revision": "2026-09-15"
   },
   {
     "nro": 893,
@@ -22249,7 +22281,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-08-21"
+    "_ultima_revision": "2026-09-15"
   },
   {
     "nro": 892,
@@ -22281,7 +22313,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-08-21"
+    "_ultima_revision": "2026-09-15"
   },
   {
     "nro": 891,
@@ -22313,7 +22345,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-08-21"
+    "_ultima_revision": "2026-09-15"
   },
   {
     "nro": 890,
@@ -22345,7 +22377,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-08-21"
+    "_ultima_revision": "2026-09-15"
   },
   {
     "nro": 889,
@@ -22377,7 +22409,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-08-21"
+    "_ultima_revision": "2026-09-15"
   },
   {
     "nro": 888,
@@ -22410,7 +22442,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-08-21"
+    "_ultima_revision": "2026-09-15"
   },
   {
     "nro": 887,
@@ -22442,7 +22474,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-08-21"
+    "_ultima_revision": "2026-09-15"
   },
   {
     "nro": 886,
@@ -22474,7 +22506,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-08-21"
+    "_ultima_revision": "2026-09-15"
   },
   {
     "nro": 885,
@@ -22506,7 +22538,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-08-21"
+    "_ultima_revision": "2026-09-15"
   },
   {
     "nro": 884,
@@ -22539,7 +22571,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-08-21"
+    "_ultima_revision": "2026-09-15"
   },
   {
     "nro": 883,
@@ -22571,7 +22603,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-08-21"
+    "_ultima_revision": "2026-09-15"
   },
   {
     "nro": 881,
@@ -22604,7 +22636,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-08-21"
+    "_ultima_revision": "2026-09-15"
   },
   {
     "nro": 880,
@@ -22636,7 +22668,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-08-21"
+    "_ultima_revision": "2026-09-15"
   },
   {
     "nro": 879,
@@ -22668,7 +22700,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-08-21"
+    "_ultima_revision": "2026-09-15"
   },
   {
     "nro": 878,
@@ -22700,7 +22732,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-08-21"
+    "_ultima_revision": "2026-09-15"
   },
   {
     "nro": 877,
@@ -22732,7 +22764,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-08-21"
+    "_ultima_revision": "2026-09-15"
   },
   {
     "nro": 875,
@@ -22764,7 +22796,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-08-21"
+    "_ultima_revision": "2026-09-15"
   },
   {
     "nro": 874,
@@ -22796,7 +22828,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-08-21"
+    "_ultima_revision": "2026-09-15"
   },
   {
     "nro": 873,
@@ -22831,7 +22863,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-08-21"
+    "_ultima_revision": "2026-09-15"
   },
   {
     "nro": 872,
@@ -22866,7 +22898,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-08-21"
+    "_ultima_revision": "2026-09-15"
   },
   {
     "nro": 871,
@@ -22899,7 +22931,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-08-21"
+    "_ultima_revision": "2026-09-15"
   },
   {
     "nro": 870,
@@ -22931,7 +22963,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-08-21"
+    "_ultima_revision": "2026-09-15"
   },
   {
     "nro": 868,
@@ -22963,7 +22995,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-08-21"
+    "_ultima_revision": "2026-09-15"
   },
   {
     "nro": 867,
@@ -23006,7 +23038,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-08-21"
+    "_ultima_revision": "2026-09-15"
   },
   {
     "nro": 866,
@@ -23039,7 +23071,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-08-21"
+    "_ultima_revision": "2026-09-15"
   },
   {
     "nro": 865,
@@ -23074,7 +23106,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-08-21"
+    "_ultima_revision": "2026-09-15"
   },
   {
     "nro": 861,
@@ -23106,7 +23138,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-08-21"
+    "_ultima_revision": "2026-09-15"
   },
   {
     "nro": 860,
@@ -23138,7 +23170,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-08-21"
+    "_ultima_revision": "2026-09-15"
   },
   {
     "nro": 859,
@@ -23171,7 +23203,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-08-21"
+    "_ultima_revision": "2026-09-15"
   },
   {
     "nro": 858,
@@ -23213,7 +23245,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-08-21"
+    "_ultima_revision": "2026-09-15"
   },
   {
     "nro": 857,
@@ -23255,7 +23287,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-08-21"
+    "_ultima_revision": "2026-09-15"
   },
   {
     "nro": 810,
@@ -23287,7 +23319,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-08-21"
+    "_ultima_revision": "2026-09-15"
   },
   {
     "nro": 809,
@@ -23328,7 +23360,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-08-21"
+    "_ultima_revision": "2026-09-15"
   },
   {
     "nro": 808,
@@ -23368,7 +23400,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-08-21"
+    "_ultima_revision": "2026-09-15"
   },
   {
     "nro": 807,
@@ -23400,7 +23432,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-08-21"
+    "_ultima_revision": "2026-09-15"
   },
   {
     "nro": 748,
@@ -23433,7 +23465,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-08-21"
+    "_ultima_revision": "2026-09-15"
   },
   {
     "nro": 747,
@@ -23466,7 +23498,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-08-21"
+    "_ultima_revision": "2026-09-15"
   },
   {
     "nro": 746,
@@ -23499,7 +23531,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-08-21"
+    "_ultima_revision": "2026-09-15"
   },
   {
     "nro": 745,
@@ -23531,7 +23563,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-08-21"
+    "_ultima_revision": "2026-09-15"
   },
   {
     "nro": 744,
@@ -23563,7 +23595,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-08-21"
+    "_ultima_revision": "2026-09-15"
   },
   {
     "nro": 743,
@@ -23595,7 +23627,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-08-21"
+    "_ultima_revision": "2026-09-15"
   },
   {
     "nro": 742,
@@ -23627,7 +23659,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-08-21"
+    "_ultima_revision": "2026-09-15"
   },
   {
     "nro": 741,
@@ -23659,7 +23691,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-08-21"
+    "_ultima_revision": "2026-09-15"
   },
   {
     "nro": 740,
@@ -23691,7 +23723,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-08-21"
+    "_ultima_revision": "2026-09-15"
   },
   {
     "nro": 739,
@@ -23723,7 +23755,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-08-21"
+    "_ultima_revision": "2026-09-15"
   },
   {
     "nro": 738,
@@ -23755,7 +23787,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-08-21"
+    "_ultima_revision": "2026-09-15"
   },
   {
     "nro": 736,
@@ -23787,7 +23819,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-08-21"
+    "_ultima_revision": "2026-09-15"
   },
   {
     "nro": 735,
@@ -23819,7 +23851,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-08-21"
+    "_ultima_revision": "2026-09-15"
   },
   {
     "nro": 733,
@@ -23851,7 +23883,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-08-21"
+    "_ultima_revision": "2026-09-15"
   },
   {
     "nro": 732,
@@ -23884,7 +23916,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-08-21"
+    "_ultima_revision": "2026-09-15"
   },
   {
     "nro": 729,
@@ -23923,11 +23955,11 @@
     "sancionado": false,
     "ley_numero": null,
     "fecha_ley": null,
-    "archivado": false,
-    "fecha_archivo": null,
+    "archivado": true,
+    "fecha_archivo": "11/09/2026",
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-08-21"
+    "_ultima_revision": "2026-09-15"
   },
   {
     "nro": 728,
@@ -23959,7 +23991,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-08-21"
+    "_ultima_revision": "2026-09-15"
   },
   {
     "nro": 727,
@@ -23996,7 +24028,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-08-21"
+    "_ultima_revision": "2026-09-15"
   },
   {
     "nro": 726,
@@ -24046,7 +24078,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-08-21"
+    "_ultima_revision": "2026-09-15"
   },
   {
     "nro": 724,
@@ -24078,7 +24110,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-08-21"
+    "_ultima_revision": "2026-09-15"
   },
   {
     "nro": 723,
@@ -24111,7 +24143,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-08-21"
+    "_ultima_revision": "2026-09-15"
   },
   {
     "nro": 722,
@@ -24144,7 +24176,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-08-21"
+    "_ultima_revision": "2026-09-15"
   },
   {
     "nro": 720,
@@ -24176,7 +24208,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-08-21"
+    "_ultima_revision": "2026-09-15"
   },
   {
     "nro": 719,
@@ -24211,7 +24243,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-08-21"
+    "_ultima_revision": "2026-09-15"
   },
   {
     "nro": 718,
@@ -24245,7 +24277,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-08-21"
+    "_ultima_revision": "2026-09-15"
   },
   {
     "nro": 717,
@@ -24279,7 +24311,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-08-21"
+    "_ultima_revision": "2026-09-15"
   },
   {
     "nro": 716,
@@ -24313,7 +24345,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-08-21"
+    "_ultima_revision": "2026-09-15"
   },
   {
     "nro": 715,
@@ -24348,7 +24380,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-08-21"
+    "_ultima_revision": "2026-09-15"
   },
   {
     "nro": 714,
@@ -24381,7 +24413,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-08-21"
+    "_ultima_revision": "2026-09-15"
   },
   {
     "nro": 713,
@@ -24413,7 +24445,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-08-21"
+    "_ultima_revision": "2026-09-15"
   },
   {
     "nro": 712,
@@ -24445,7 +24477,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-08-21"
+    "_ultima_revision": "2026-09-15"
   },
   {
     "nro": 711,
@@ -24477,7 +24509,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-08-21"
+    "_ultima_revision": "2026-09-15"
   },
   {
     "nro": 710,
@@ -24509,7 +24541,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-08-21"
+    "_ultima_revision": "2026-09-15"
   },
   {
     "nro": 709,
@@ -24541,7 +24573,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-08-21"
+    "_ultima_revision": "2026-09-15"
   },
   {
     "nro": 708,
@@ -24587,7 +24619,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-08-21"
+    "_ultima_revision": "2026-09-15"
   },
   {
     "nro": 707,
@@ -24619,7 +24651,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-08-21"
+    "_ultima_revision": "2026-09-15"
   },
   {
     "nro": 706,
@@ -24652,7 +24684,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-08-21"
+    "_ultima_revision": "2026-09-15"
   },
   {
     "nro": 705,
@@ -24685,7 +24717,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-08-21"
+    "_ultima_revision": "2026-09-15"
   },
   {
     "nro": 704,
@@ -24718,7 +24750,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-08-21"
+    "_ultima_revision": "2026-09-15"
   },
   {
     "nro": 703,
@@ -24750,7 +24782,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-08-21"
+    "_ultima_revision": "2026-09-15"
   },
   {
     "nro": 702,
@@ -24774,8 +24806,8 @@
       "CORRIENTES"
     ],
     "comisiones": [
-      "DE LEGISLACIÓN GENERAL",
       "DE PRESUPUESTO Y HACIENDA",
+      "DE LEGISLACIÓN GENERAL",
       "DE ECONOMÍAS REGIONALES, ECONOMÍA SOCIAL, MICRO, PEQUEÑA Y MEDIANA EMPRESA"
     ],
     "fecha": "08/05/2026",
@@ -24789,7 +24821,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-08-21"
+    "_ultima_revision": "2026-09-15"
   },
   {
     "nro": 701,
@@ -24827,7 +24859,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-08-21"
+    "_ultima_revision": "2026-09-15"
   },
   {
     "nro": 700,
@@ -24859,7 +24891,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-08-21"
+    "_ultima_revision": "2026-09-15"
   },
   {
     "nro": 699,
@@ -24887,11 +24919,11 @@
     "sancionado": false,
     "ley_numero": null,
     "fecha_ley": null,
-    "archivado": false,
-    "fecha_archivo": null,
+    "archivado": true,
+    "fecha_archivo": "11/09/2026",
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-08-21"
+    "_ultima_revision": "2026-09-15"
   },
   {
     "nro": 698,
@@ -24923,7 +24955,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-08-21"
+    "_ultima_revision": "2026-09-15"
   },
   {
     "nro": 697,
@@ -24955,7 +24987,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-08-21"
+    "_ultima_revision": "2026-09-15"
   },
   {
     "nro": 696,
@@ -24987,7 +25019,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-08-21"
+    "_ultima_revision": "2026-09-15"
   },
   {
     "nro": 695,
@@ -25019,7 +25051,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-08-21"
+    "_ultima_revision": "2026-09-15"
   },
   {
     "nro": 694,
@@ -25040,7 +25072,7 @@
     "comisiones": [
       "DE POBLACIÓN Y DESARROLLO  HUMANO",
       "DE LEGISLACIÓN GENERAL",
-      "BICAMERAL PERMANENTE DEL DEFENSOR DE LOS DERECHOS DE NIÑAS, NIÑOS Y ADOLESCENTES (LEY 26.061)"
+      "BICAMERAL PERMANENTE DEL DEFENSOR DE LOS DERECHOS DE NIÑAS, NIÑOS Y ADOLESCENTES (LEY 26.061) Solo para conocimiento : \n\t\t\t\t\t\t\t\t\t\t3"
     ],
     "fecha": "07/05/2026",
     "dae": "34/2026",
@@ -25053,7 +25085,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-08-21"
+    "_ultima_revision": "2026-09-15"
   },
   {
     "nro": 693,
@@ -25081,11 +25113,11 @@
     "sancionado": false,
     "ley_numero": null,
     "fecha_ley": null,
-    "archivado": false,
-    "fecha_archivo": null,
+    "archivado": true,
+    "fecha_archivo": "11/09/2026",
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-08-21"
+    "_ultima_revision": "2026-09-15"
   },
   {
     "nro": 692,
@@ -25118,7 +25150,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-08-21"
+    "_ultima_revision": "2026-09-15"
   },
   {
     "nro": 691,
@@ -25150,7 +25182,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-08-21"
+    "_ultima_revision": "2026-09-15"
   },
   {
     "nro": 690,
@@ -25182,7 +25214,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-08-21"
+    "_ultima_revision": "2026-09-15"
   },
   {
     "nro": 689,
@@ -25214,7 +25246,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-08-21"
+    "_ultima_revision": "2026-09-15"
   },
   {
     "nro": 688,
@@ -25246,7 +25278,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-08-21"
+    "_ultima_revision": "2026-09-15"
   },
   {
     "nro": 687,
@@ -25278,7 +25310,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-08-21"
+    "_ultima_revision": "2026-09-15"
   },
   {
     "nro": 686,
@@ -25311,7 +25343,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-08-21"
+    "_ultima_revision": "2026-09-15"
   },
   {
     "nro": 685,
@@ -25343,7 +25375,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-08-21"
+    "_ultima_revision": "2026-09-15"
   },
   {
     "nro": 684,
@@ -25384,7 +25416,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-08-21"
+    "_ultima_revision": "2026-09-15"
   },
   {
     "nro": 683,
@@ -25416,7 +25448,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-08-21"
+    "_ultima_revision": "2026-09-15"
   },
   {
     "nro": 682,
@@ -25450,7 +25482,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-08-21"
+    "_ultima_revision": "2026-09-15"
   },
   {
     "nro": 681,
@@ -25484,7 +25516,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-08-21"
+    "_ultima_revision": "2026-09-15"
   },
   {
     "nro": 680,
@@ -25516,7 +25548,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-08-21"
+    "_ultima_revision": "2026-09-15"
   },
   {
     "nro": 679,
@@ -25548,7 +25580,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-08-21"
+    "_ultima_revision": "2026-09-15"
   },
   {
     "nro": 678,
@@ -25580,7 +25612,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-08-21"
+    "_ultima_revision": "2026-09-15"
   },
   {
     "nro": 677,
@@ -25613,7 +25645,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-08-21"
+    "_ultima_revision": "2026-09-15"
   },
   {
     "nro": 676,
@@ -25645,7 +25677,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-08-21"
+    "_ultima_revision": "2026-09-15"
   },
   {
     "nro": 675,
@@ -25677,7 +25709,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-08-21"
+    "_ultima_revision": "2026-09-15"
   },
   {
     "nro": 674,
@@ -25709,7 +25741,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-08-21"
+    "_ultima_revision": "2026-09-15"
   },
   {
     "nro": 672,
@@ -25742,7 +25774,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-08-21"
+    "_ultima_revision": "2026-09-15"
   },
   {
     "nro": 670,
