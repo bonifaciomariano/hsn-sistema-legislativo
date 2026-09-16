@@ -144,9 +144,13 @@ def _origen_de_codigo(codigo):
 
 
 def _categoria_de_codigo(codigo):
+    """Tipos fuera de CATEGORIA_MAP (comunicaciones de ministerios/PEN, CM/CE,
+    etc.) caen en el tratamiento parlamentario de un Proyecto de Ley en vez
+    de quedar con la etiqueta vacía -- a pedido de Mariano, más útil que un
+    badge en blanco."""
     m = RE_EXP_CODIGO.match(codigo.strip().upper())
     tipo = m.group(2) if m and m.group(2) else ""
-    return CATEGORIA_MAP.get(tipo, "")
+    return CATEGORIA_MAP.get(tipo, "Proyecto de Ley")
 
 
 # ── ordenes_dia_AAAA.xlsx (fuente primaria, una por período) ────────────────
