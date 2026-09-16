@@ -549,7 +549,8 @@ table.cross-table tr:last-child td{border-bottom:none}
 .am-controls .search-box{flex:1;min-width:220px;margin-bottom:0}
 .am-controls .select-wrapper{width:auto;min-width:200px;max-width:260px}
 .am-chips{display:flex;flex-wrap:wrap;gap:7px;margin-bottom:10px}
-.am-count{font-size:12px;color:#9aacbd;margin-bottom:12px}
+.am-count{font-size:12px;color:#9aacbd}
+.am-count-row{display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap;margin-bottom:12px}
 .am-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:12px}
 .am-card{background:#fff;border:1px solid #D6E4F0;border-radius:10px;padding:14px 16px 12px;cursor:pointer;transition:all .15s;box-shadow:0 1px 3px rgba(0,0,0,0.05)}
 .am-card:hover{transform:translateY(-2px);box-shadow:0 8px 20px -12px rgba(27,94,162,0.35);border-color:#1B5EA2}
@@ -3231,6 +3232,81 @@ function renderAm(){
   var html='';
   amFiltered.forEach(function(d){html+=buildAmCard(d,data.indexOf(d))});
   grid.innerHTML=html;
+}
+/* ── Exportar Ayuda Memoria (según filtros aplicados) a .xls ──────────
+   Se arma a mano un XML Spreadsheet 2003 (lo que abre Excel nativamente
+   con extensión .xls) en vez de sumar una librería sólo para esto -- el
+   formato admite hipervínculos por celda (ss:HRef) sin depender de nada
+   externo. Una fila por expediente (no por OD): si una OD junta varios
+   expedientes, cada uno necesita su propio link, así que conviene
+   repetirla en vez de perder el hipervínculo de alguno.*/
+function _xmlEsc(s){
+  return String(s==null?'':s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+}
+function _construirXmlAyudaMemoria(){
+  var filas=[];
+  amFiltered.forEach(function(d){
+    var autorContenido=(d.autor?d.autor+': ':'')+(d.descripcion||'');
+    var firmantes=(d.firmantesMayoria||[]).join('; ');
+    var comision=comLabel(d.comisionCabecera||(d.comisiones&&d.comisiones[0])||'');
+    var odNum=d.numero+'/'+String(d.periodo).slice(-2)+(d.tipoOD==='ANEXO'?' (Anexo)':'');
+    var exps=(d.expedientes&&d.expedientes.length)?d.expedientes:[{codigo:'',url:null}];
+    exps.forEach(function(e){
+      filas.push({
+        od:odNum, odUrl:d.odLink||null,
+        exp:e.codigo||'', expUrl:e.url||null,
+        autorContenido:autorContenido, firmantes:firmantes, comision:comision
+      });
+    });
+  });
+
+  var cols=['OD N°','EXPTE N°','AUTORES Y CONTENIDO','FIRMANTES DEL DICTAMEN','COMISIÓN CABECERA'];
+  var xml='<?xml version="1.0" encoding="UTF-8"?>\n'
+    +'<?mso-application progid="Excel.Sheet"?>\n'
+    +'<Workbook xmlns="urn:schemas-microsoft-com:office:spreadsheet" '
+    +'xmlns:o="urn:schemas-microsoft-com:office:office" '
+    +'xmlns:x="urn:schemas-microsoft-com:office:excel" '
+    +'xmlns:ss="urn:schemas-microsoft-com:office:spreadsheet" '
+    +'xmlns:html="http://www.w3.org/TR/REC-html40">\n'
+    +'<Styles>'
+    +'<Style ss:ID="Header"><Font ss:Bold="1" ss:Color="#FFFFFF"/><Interior ss:Color="#1B5EA2" ss:Pattern="Solid"/></Style>'
+    +'<Style ss:ID="Link"><Font ss:Color="#1B5EA2" ss:Underline="Single"/></Style>'
+    +'<Style ss:ID="Wrap"><Alignment ss:Vertical="Top" ss:WrapText="1"/></Style>'
+    +'</Styles>\n'
+    +'<Worksheet ss:Name="Ayuda Memoria">\n<Table>\n'
+    +'<Column ss:Width="70"/><Column ss:Width="90"/><Column ss:Width="340"/><Column ss:Width="220"/><Column ss:Width="160"/>\n';
+
+  xml+='<Row>'+cols.map(function(c){return '<Cell ss:StyleID="Header"><Data ss:Type="String">'+_xmlEsc(c)+'</Data></Cell>';}).join('')+'</Row>\n';
+
+  filas.forEach(function(f){
+    xml+='<Row>';
+    xml+= f.odUrl
+      ? '<Cell ss:HRef="'+_xmlEsc(f.odUrl)+'" ss:StyleID="Link"><Data ss:Type="String">'+_xmlEsc(f.od)+'</Data></Cell>'
+      : '<Cell><Data ss:Type="String">'+_xmlEsc(f.od)+'</Data></Cell>';
+    xml+= f.expUrl
+      ? '<Cell ss:HRef="'+_xmlEsc(f.expUrl)+'" ss:StyleID="Link"><Data ss:Type="String">'+_xmlEsc(f.exp)+'</Data></Cell>'
+      : '<Cell><Data ss:Type="String">'+_xmlEsc(f.exp)+'</Data></Cell>';
+    xml+='<Cell ss:StyleID="Wrap"><Data ss:Type="String">'+_xmlEsc(f.autorContenido)+'</Data></Cell>';
+    xml+='<Cell ss:StyleID="Wrap"><Data ss:Type="String">'+_xmlEsc(f.firmantes)+'</Data></Cell>';
+    xml+='<Cell><Data ss:Type="String">'+_xmlEsc(f.comision)+'</Data></Cell>';
+    xml+='</Row>\n';
+  });
+
+  xml+='</Table></Worksheet></Workbook>';
+  return xml;
+}
+function exportarAyudaMemoria(){
+  if(!amFiltered.length){alert('No hay expedientes para exportar con el filtro actual.');return}
+  var xml=_construirXmlAyudaMemoria();
+  var blob=new Blob([xml],{type:'application/vnd.ms-excel'});
+  var url=URL.createObjectURL(blob);
+  var a=document.createElement('a');
+  a.href=url;
+  a.download='ayuda_memoria_'+new Date().toISOString().slice(0,10)+'.xls';
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+  setTimeout(function(){URL.revokeObjectURL(url);},1000);
 }
 function amBuildSteps(d){
   var steps=[];
@@ -6034,7 +6110,10 @@ HTML_TEMPLATE = """<!DOCTYPE html>
             </div>
           </div>
           <div class="am-chips" id="am-chips"></div>
-          <div class="am-count" id="am-count"></div>
+          <div class="am-count-row">
+            <div class="am-count" id="am-count"></div>
+            <button class="btn-export" onclick="exportarAyudaMemoria()">&#128190; Exportar (seg&uacute;n filtros)</button>
+          </div>
           <div class="am-grid" id="am-grid"></div>
         </div>
       </div>
