@@ -1135,6 +1135,128 @@ body.print-view-active > *:not(#main-votacion){display:none !important}
 #main-votacion .no-print { display: none !important; }
 #main-votacion.print-view-active .print-view { padding: 0; }
 }
+body.print-view-active #main-votacion #herr-root { display: none; }
+#main-votacion .print-view .pv-subheading {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 0.95rem;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    color: var(--brand-deep);
+    margin: 1.25rem 0 0.4rem;
+  }
+
+/* ── Cálculo de 2/3 ───────────────────────────────────────────────────── */
+#main-votacion .dt-page { max-width: 480px; }
+#main-votacion .dt-card {
+    padding: 1.75rem 1.25rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: center;
+  }
+#main-votacion .dt-field { display: flex; flex-direction: column; gap: 0.4rem; width: 100%; max-width: 220px; }
+#main-votacion .dt-field label { font-size: 0.8rem; font-weight: 600; color: var(--ink-muted); }
+#main-votacion .dt-field input[type="number"] {
+    font: inherit;
+    font-size: 1.1rem;
+    text-align: center;
+    color: var(--ink);
+    background: var(--bg-elevated);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 0.6rem;
+    min-height: 44px;
+  }
+#main-votacion .dt-field input[type="number"]:focus-visible { outline: 2px solid var(--brass); outline-offset: 2px; }
+#main-votacion .dt-result { text-align: center; }
+#main-votacion .dt-result-num { font-family: var(--font-display); font-weight: 800; font-size: 3rem; color: var(--brass-strong); line-height: 1; }
+#main-votacion .dt-result-lbl { font-size: 0.9rem; color: var(--ink-muted); margin-top: 0.4rem; }
+#main-votacion .dt-result-lbl strong { color: var(--ink); }
+
+/* ── Cálculo de tiempos ───────────────────────────────────────────────── */
+#main-votacion .tiempos-config {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    align-items: center;
+    padding: 0.85rem 1rem;
+    border-bottom: 1px solid var(--border-soft);
+    background: var(--bg-elevated);
+  }
+#main-votacion .tiempos-config label { display: flex; flex-direction: column; gap: 0.3rem; font-size: 0.78rem; font-weight: 600; color: var(--ink-muted); }
+#main-votacion .tiempos-config input[type="time"] {
+    font: inherit;
+    font-size: 0.9rem;
+    color: var(--ink);
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 0.5rem 0.7rem;
+    min-height: 40px;
+  }
+#main-votacion .tiempos-fin { font-size: 0.85rem; color: var(--ink); }
+#main-votacion .tiempos-fin strong { color: var(--brass-strong); font-variant-numeric: tabular-nums; }
+#main-votacion .tiempos-add { display: flex; flex-wrap: wrap; gap: 0.5rem; padding: 0.85rem 1rem; border-bottom: 1px solid var(--border-soft); }
+#main-votacion .tiempos-add select { flex: 1 1 220px; }
+#main-votacion .tiempos-add input[type="number"] {
+    width: 90px;
+    font: inherit;
+    font-size: 0.9rem;
+    color: var(--ink);
+    background: var(--bg-elevated);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 0.6rem;
+    min-height: 44px;
+    text-align: center;
+  }
+#main-votacion .tiempos-add button { flex: 0 0 auto; }
+#main-votacion .oradores-list { display: flex; flex-direction: column; gap: 0.4rem; padding: 0.85rem 1rem; }
+#main-votacion .orador-row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 0.6rem;
+    background: var(--bg-elevated);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    font-size: 0.82rem;
+  }
+#main-votacion .orador-nombre { flex: 1 1 140px; min-width: 0; }
+#main-votacion .orador-row.dragging { opacity: 0.4; }
+#main-votacion .orador-row.is-hablo { border-color: var(--vote-positive); }
+#main-votacion .orador-row.is-no-habla { opacity: 0.55; }
+#main-votacion .orador-row.is-no-habla .orador-nombre .n { text-decoration: line-through; }
+#main-votacion .orador-drag { cursor: grab; color: var(--ink-faint); font-size: 1rem; }
+#main-votacion .orador-orden { font-weight: 700; color: var(--brass-strong); min-width: 1.4em; text-align: center; }
+#main-votacion .orador-nombre .n { font-weight: 600; color: var(--ink); }
+#main-votacion .orador-nombre .b { font-size: 0.72rem; color: var(--ink-muted); }
+#main-votacion .orador-minutos { display: flex; align-items: center; gap: 0.3rem; font-size: 0.75rem; color: var(--ink-muted); white-space: nowrap; }
+#main-votacion .orador-minutos-input { width: 52px; font: inherit; font-size: 0.82rem; text-align: center; border: 1px solid var(--border); border-radius: 6px; padding: 0.3rem; background: var(--panel); }
+#main-votacion .orador-horario { font-variant-numeric: tabular-nums; color: var(--ink-muted); white-space: nowrap; }
+#main-votacion .orador-estado { display: flex; gap: 0.3rem; }
+#main-votacion .orador-check, #main-votacion .orador-cross {
+    min-height: 32px;
+    min-width: 32px;
+    padding: 0;
+    font-size: 0.85rem;
+    background: var(--panel);
+    color: var(--ink-faint);
+    border: 1px solid var(--border);
+  }
+#main-votacion .orador-check.on { background: var(--vote-positive); color: #fff; border-color: var(--vote-positive); }
+#main-votacion .orador-cross.on { background: var(--vote-negative); color: #fff; border-color: var(--vote-negative); }
+#main-votacion .orador-remove { background: transparent; border: none; color: var(--ink-faint); min-height: 32px; padding: 0.2rem; }
+#main-votacion .orador-remove:hover { color: var(--vote-negative); }
+
+/* ── Reglamento HSN (PDF) ─────────────────────────────────────────────── */
+#main-votacion .reg-toolbar { display: flex; flex-wrap: wrap; gap: 0.5rem; padding: 0.85rem 1rem; border-bottom: 1px solid var(--border-soft); background: var(--bg-elevated); }
+#main-votacion .reg-toolbar a { text-decoration: none; }
+#main-votacion .reg-frame-wrap { padding: 0.75rem; }
+#main-votacion .reg-frame { display: block; width: 100%; height: 75vh; min-height: 420px; border: 1px solid var(--border); border-radius: 8px; background: var(--bg-elevated); }
+#main-votacion .reg-fallback { padding: 0 1rem 1rem; font-size: 0.8rem; color: var(--ink-muted); }
 
 """
 
@@ -2002,6 +2124,13 @@ function abrirComision(idx){
 function volverComisiones(){
   document.getElementById('com-nivel2').classList.remove('active');
   document.getElementById('com-nivel1').classList.add('active');
+}
+function switchHerrVista(id){
+  var root=document.getElementById('herr-root');
+  root.querySelectorAll(':scope > .sub-nav .sub-btn').forEach(function(b){b.classList.remove('active')});
+  root.querySelectorAll(':scope > .sub-content').forEach(function(c){c.classList.remove('active')});
+  root.querySelector('[data-herrvista="'+id+'"]').classList.add('active');
+  document.getElementById('herr-vista-'+id).classList.add('active');
 }
 function switchComVista(id){
   var root=document.getElementById('com-nivel1');
@@ -3780,6 +3909,8 @@ function irASanciones(expediente){
     72: "data:image/jpeg;base64,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"
   };
 
+  window.__SENADO_DATA__ = { SENATORS: SENATORS, PHOTOS: PHOTOS };
+
   var VOTE_ORDER = ["pending", "positive", "negative", "abstention", "absent"];
   var VOTE_FILL = {
     pending: "var(--vote-pending-fill)",
@@ -4156,14 +4287,14 @@ function irASanciones(expediente){
     render();
   });
 
-  document.querySelector(".bulk-actions").addEventListener("click", function (e) {
+  document.querySelector("#herr-vista-votacion .bulk-actions").addEventListener("click", function (e) {
     var action = e.target.getAttribute("data-action");
     if (action === "all-positive") bulkAll("positive");
     if (action === "all-negative") bulkAll("negative");
     if (action === "all-clear") bulkAll("pending");
   });
 
-  document.querySelector(".roster-actions").addEventListener("click", function (e) {
+  document.querySelector("#herr-vista-votacion .roster-actions").addEventListener("click", function (e) {
     var action = e.target.getAttribute("data-action");
     if (action === "bloc-positive") bulkFiltered("positive");
     if (action === "bloc-negative") bulkFiltered("negative");
@@ -4464,6 +4595,676 @@ function irASanciones(expediente){
   renderScenarioSelect();
 
   buildChamber();
+  render();
+})();
+
+/* ── Contador de Quórum (subtab de Herramientas para sesión) ──────────── */
+(function () {
+  "use strict";
+
+  var DATA = window.__SENADO_DATA__ || { SENATORS: [], PHOTOS: {} };
+  var SENATORS = DATA.SENATORS;
+  var PHOTOS = DATA.PHOTOS;
+
+  var Q_ORDER = ["pending", "presente", "ausente"];
+  var Q_FILL = {
+    pending: "var(--vote-pending-fill)",
+    presente: "var(--vote-positive)",
+    ausente: "var(--vote-negative)"
+  };
+
+  var qstates = SENATORS.map(function () { return "pending"; });
+  var qSelectedBloque = "TODOS";
+  var qSearchQuery = "";
+
+  var qBloqueSelect = document.getElementById("qBloqueSelect");
+  var qSearchInput = document.getElementById("qSearchInput");
+  var qResultBox = document.getElementById("qResultBox");
+  var qChamber = document.getElementById("qChamber");
+  var qTooltip = document.getElementById("qTooltip");
+  var qRosterPanel = document.getElementById("qRosterPanel");
+  var qRosterLabel = document.getElementById("qRosterLabel");
+  var qRosterGrid = document.getElementById("qRosterGrid");
+  var qDownloadPdfBtn = document.getElementById("qDownloadPdfBtn");
+  var quorumPrintView = document.getElementById("quorumPrintView");
+  var qUndoBtn = document.getElementById("qUndoBtn");
+
+  var QUORUM_NEEDED = Math.floor(SENATORS.length / 2) + 1;
+  var qNeededEl = document.getElementById("qQuorumNeeded");
+  if (qNeededEl) qNeededEl.textContent = String(QUORUM_NEEDED);
+
+  function qNormalizeText(str) {
+    return String(str).normalize("NFD").replace(/[̀-ͯ]/g, "").toLowerCase();
+  }
+  function qMatchesFilters(sen) {
+    var bloqueOk = qSelectedBloque === "TODOS" || sen.bloque === qSelectedBloque;
+    var q = qSearchQuery.trim();
+    var searchOk = q === "" || qNormalizeText(sen.nombre).indexOf(qNormalizeText(q)) !== -1;
+    return bloqueOk && searchOk;
+  }
+
+  var qBloques = Array.from(new Set(SENATORS.map(function (s) { return s.bloque; })))
+    .sort(function (a, b) { return a.localeCompare(b, "es"); });
+  var qAllOpt = document.createElement("option");
+  qAllOpt.value = "TODOS";
+  qAllOpt.textContent = "Filtrar por bloque (todos)";
+  qBloqueSelect.appendChild(qAllOpt);
+  qBloques.forEach(function (b) {
+    var el = document.createElement("option");
+    el.value = b;
+    el.textContent = b + " (" + SENATORS.filter(function (s) { return s.bloque === b; }).length + ")";
+    qBloqueSelect.appendChild(el);
+  });
+
+  var qSeats = SENATORS.map(function (s) { return { id: s.banca, x: s.x, y: s.y }; });
+  var Q_SEAT_RADIUS = 16;
+  var svgns = "http://www.w3.org/2000/svg";
+
+  function qBuildChamber() {
+    qChamber.innerHTML = "";
+
+    var dais = document.createElementNS(svgns, "rect");
+    dais.setAttribute("x", "355");
+    dais.setAttribute("y", "400");
+    dais.setAttribute("width", "90");
+    dais.setAttribute("height", "34");
+    dais.setAttribute("rx", "4");
+    dais.setAttribute("class", "dais");
+    qChamber.appendChild(dais);
+
+    var daisLabel = document.createElementNS(svgns, "text");
+    daisLabel.setAttribute("x", "400");
+    daisLabel.setAttribute("y", "421");
+    daisLabel.setAttribute("text-anchor", "middle");
+    daisLabel.setAttribute("class", "dais-label");
+    daisLabel.textContent = "PRESIDENCIA";
+    qChamber.appendChild(daisLabel);
+
+    var defs = document.createElementNS(svgns, "defs");
+    qChamber.appendChild(defs);
+
+    qSeats.forEach(function (seat) {
+      var g = document.createElementNS(svgns, "g");
+      g.setAttribute("class", "seat");
+      g.setAttribute("data-id", seat.id);
+
+      var clipId = "q-clip-seat-" + seat.id;
+      var clipPath = document.createElementNS(svgns, "clipPath");
+      clipPath.setAttribute("id", clipId);
+      var clipCircle = document.createElementNS(svgns, "circle");
+      clipCircle.setAttribute("cx", seat.x);
+      clipCircle.setAttribute("cy", seat.y);
+      clipCircle.setAttribute("r", Q_SEAT_RADIUS - 2);
+      clipPath.appendChild(clipCircle);
+      defs.appendChild(clipPath);
+
+      var photoBg = document.createElementNS(svgns, "circle");
+      photoBg.setAttribute("cx", seat.x);
+      photoBg.setAttribute("cy", seat.y);
+      photoBg.setAttribute("r", Q_SEAT_RADIUS - 2);
+      photoBg.setAttribute("fill", "#cfd8e0");
+      g.appendChild(photoBg);
+
+      var photo = document.createElementNS(svgns, "image");
+      photo.setAttributeNS("http://www.w3.org/1999/xlink", "href", PHOTOS[seat.id]);
+      photo.setAttribute("href", PHOTOS[seat.id]);
+      photo.setAttribute("x", seat.x - (Q_SEAT_RADIUS - 2));
+      photo.setAttribute("y", seat.y - (Q_SEAT_RADIUS - 2));
+      photo.setAttribute("width", (Q_SEAT_RADIUS - 2) * 2);
+      photo.setAttribute("height", (Q_SEAT_RADIUS - 2) * 2);
+      photo.setAttribute("clip-path", "url(#" + clipId + ")");
+      photo.setAttribute("preserveAspectRatio", "xMidYMid slice");
+      g.appendChild(photo);
+
+      var highlight = document.createElementNS(svgns, "circle");
+      highlight.setAttribute("cx", seat.x);
+      highlight.setAttribute("cy", seat.y);
+      highlight.setAttribute("r", Q_SEAT_RADIUS + 3.5);
+      highlight.setAttribute("class", "seat-highlight");
+      highlight.setAttribute("fill", "none");
+      g.appendChild(highlight);
+
+      var ring = document.createElementNS(svgns, "circle");
+      ring.setAttribute("cx", seat.x);
+      ring.setAttribute("cy", seat.y);
+      ring.setAttribute("r", Q_SEAT_RADIUS);
+      ring.setAttribute("class", "seat-ring");
+      ring.setAttribute("fill", "none");
+      g.appendChild(ring);
+
+      var badge = document.createElementNS(svgns, "circle");
+      badge.setAttribute("cx", seat.x + Q_SEAT_RADIUS * 0.72);
+      badge.setAttribute("cy", seat.y + Q_SEAT_RADIUS * 0.72);
+      badge.setAttribute("r", 6.5);
+      badge.setAttribute("class", "seat-badge");
+      g.appendChild(badge);
+
+      var badgeText = document.createElementNS(svgns, "text");
+      badgeText.setAttribute("x", seat.x + Q_SEAT_RADIUS * 0.72);
+      badgeText.setAttribute("y", seat.y + Q_SEAT_RADIUS * 0.72 + 0.5);
+      badgeText.setAttribute("text-anchor", "middle");
+      badgeText.setAttribute("dominant-baseline", "middle");
+      badgeText.setAttribute("class", "seat-badge-text");
+      badgeText.textContent = seat.id;
+      g.appendChild(badgeText);
+
+      g.addEventListener("click", function () { qCycle(seat.id); });
+      g.addEventListener("mouseenter", function () { qShowTooltip(seat.id); });
+      g.addEventListener("mouseleave", qHideTooltip);
+
+      qChamber.appendChild(g);
+    });
+  }
+
+  function qShowTooltip(id) {
+    var sen = SENATORS[id - 1];
+    qTooltip.innerHTML =
+      '<div class="name">' + sen.nombre + '</div>' +
+      '<div class="bloque">' + sen.bloque + '</div>' +
+      '<div class="prov">' + sen.provincia + '</div>';
+    qTooltip.hidden = false;
+  }
+  function qHideTooltip() { qTooltip.hidden = true; }
+
+  var Q_HISTORY_LIMIT = 30;
+  var qHistory = [];
+  function qPushHistory() {
+    qHistory.push(qstates.slice());
+    if (qHistory.length > Q_HISTORY_LIMIT) qHistory.shift();
+    qUndoBtn.disabled = false;
+  }
+  function qUndo() {
+    if (qHistory.length === 0) return;
+    qstates = qHistory.pop();
+    qUndoBtn.disabled = qHistory.length === 0;
+    qRender();
+    qSaveState();
+  }
+  function qCycle(id) {
+    qPushHistory();
+    var idx = id - 1;
+    var current = Q_ORDER.indexOf(qstates[idx]);
+    qstates[idx] = Q_ORDER[(current + 1) % Q_ORDER.length];
+    qRender();
+    qSaveState();
+  }
+  function qSetVote(id, value) { qstates[id - 1] = value; }
+  function qBulkAll(value) {
+    qPushHistory();
+    qstates = qstates.map(function () { return value; });
+    qRender();
+    qSaveState();
+  }
+  function qBulkFiltered(value) {
+    qPushHistory();
+    SENATORS.filter(qMatchesFilters).forEach(function (s) { qSetVote(s.banca, value); });
+    qRender();
+    qSaveState();
+  }
+
+  function qRender() {
+    Array.prototype.forEach.call(qChamber.querySelectorAll(".seat"), function (g) {
+      var id = Number(g.getAttribute("data-id"));
+      var sen = SENATORS[id - 1];
+      var v = qstates[id - 1];
+      var matches = qMatchesFilters(sen);
+      var filtersActive = qSelectedBloque !== "TODOS" || qSearchQuery.trim() !== "";
+      g.style.opacity = matches ? "1" : "0.25";
+
+      var ring = g.querySelector(".seat-ring");
+      ring.setAttribute("stroke", Q_FILL[v]);
+      ring.setAttribute("stroke-width", v === "pending" ? "2" : "3.5");
+
+      var highlight = g.querySelector(".seat-highlight");
+      if (filtersActive && matches) {
+        highlight.setAttribute("stroke", "var(--brass-strong)");
+        highlight.setAttribute("stroke-width", "2.5");
+      } else {
+        highlight.setAttribute("stroke", "none");
+      }
+    });
+
+    var presente = qstates.filter(function (v) { return v === "presente"; }).length;
+    var ausente = qstates.filter(function (v) { return v === "ausente"; }).length;
+    var pending = qstates.filter(function (v) { return v === "pending"; }).length;
+    document.getElementById("qTotalPresente").textContent = presente;
+    document.getElementById("qTotalAusente").textContent = ausente;
+    document.getElementById("qTotalPendiente").textContent = pending;
+
+    var alcanzado = presente >= QUORUM_NEEDED;
+    qResultBox.hidden = false;
+    qResultBox.className = "result " + (alcanzado ? "approved" : "rejected");
+    qResultBox.innerHTML = (alcanzado ? "✓ Quórum alcanzado — " : "✗ Quórum no alcanzado — ") +
+      '<span class="detail">' + presente + " de " + QUORUM_NEEDED + " senadores necesarios</span>";
+
+    qRenderRoster();
+  }
+
+  function qRenderRoster() {
+    var filtersActive = qSelectedBloque !== "TODOS" || qSearchQuery.trim() !== "";
+    if (!filtersActive) { qRosterPanel.hidden = true; return; }
+    qRosterPanel.hidden = false;
+    var miembros = SENATORS.filter(qMatchesFilters).sort(function (a, b) { return a.nombre.localeCompare(b.nombre, "es"); });
+    var label = qSelectedBloque !== "TODOS" ? qSelectedBloque : "Resultados de búsqueda";
+    if (miembros.length === 0) label = "Sin resultados";
+    qRosterLabel.innerHTML = label + ' <span class="count">(' + miembros.length + " senadores)</span>";
+    qRosterGrid.innerHTML = "";
+    miembros.forEach(function (s) {
+      var btn = document.createElement("button");
+      btn.className = "roster-item";
+      btn.innerHTML =
+        '<span class="dot" style="background:' + Q_FILL[qstates[s.banca - 1]] + '"></span>' +
+        '<span class="who"><div class="n">' + s.nombre + '</div><div class="p">' + s.provincia + '</div></span>';
+      btn.addEventListener("click", function () { qCycle(s.banca); });
+      btn.addEventListener("mouseenter", function () { qShowTooltip(s.banca); });
+      btn.addEventListener("mouseleave", qHideTooltip);
+      qRosterGrid.appendChild(btn);
+    });
+  }
+
+  function qEscapeHtml(str) {
+    return String(str).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
+  }
+
+  var Q_STATE_KEY = "senadoQuorum.state.v1";
+  var qStorageAvailable = true;
+  try {
+    var qTestKey = "__senadoQuorum_test__";
+    window.localStorage.setItem(qTestKey, "1");
+    window.localStorage.removeItem(qTestKey);
+  } catch (e) { qStorageAvailable = false; }
+
+  function qSaveState() {
+    if (!qStorageAvailable) return;
+    try { window.localStorage.setItem(Q_STATE_KEY, JSON.stringify({ qstates: qstates })); } catch (e) {}
+  }
+  function qLoadState() {
+    if (!qStorageAvailable) return;
+    try {
+      var raw = window.localStorage.getItem(Q_STATE_KEY);
+      if (!raw) return;
+      var saved = JSON.parse(raw);
+      if (saved && Array.isArray(saved.qstates) && saved.qstates.length === SENATORS.length) {
+        qstates = saved.qstates;
+      }
+    } catch (e) {}
+  }
+
+  function qRenderPrintView() {
+    var presente = qstates.filter(function (v) { return v === "presente"; }).length;
+    var ausente = qstates.filter(function (v) { return v === "ausente"; }).length;
+    var pending = qstates.filter(function (v) { return v === "pending"; }).length;
+    var alcanzado = presente >= QUORUM_NEEDED;
+    var now = new Date();
+    var fecha = now.toLocaleDateString("es-AR") + " " + now.toLocaleTimeString("es-AR", { hour: "2-digit", minute: "2-digit" });
+
+    var bloqueSummary = {};
+    SENATORS.forEach(function (s) {
+      var v = qstates[s.banca - 1];
+      if (!bloqueSummary[s.bloque]) bloqueSummary[s.bloque] = { presente: 0, ausente: 0, pending: 0 };
+      bloqueSummary[s.bloque][v]++;
+    });
+    var bloqueRows = Object.keys(bloqueSummary).sort(function (a, b) { return a.localeCompare(b, "es"); }).map(function (b) {
+      var c = bloqueSummary[b];
+      return "<tr><td>" + qEscapeHtml(b) + "</td><td>" + c.presente + "</td><td>" + c.ausente + "</td><td>" + c.pending + "</td></tr>";
+    }).join("");
+
+    var ausentesRows = SENATORS.filter(function (s) { return qstates[s.banca - 1] === "ausente"; })
+      .sort(function (a, b) { return a.nombre.localeCompare(b.nombre, "es"); })
+      .map(function (s) { return "<tr><td>" + qEscapeHtml(s.nombre) + "</td><td>" + qEscapeHtml(s.bloque) + "</td><td>" + qEscapeHtml(s.provincia) + "</td></tr>"; })
+      .join("");
+
+    quorumPrintView.innerHTML =
+      '<div class="pv-toolbar no-print">' +
+        '<button id="qPrintNowBtn" class="btn-brass">Imprimir / Guardar como PDF</button>' +
+        '<button id="qPrintBackBtn" class="btn-neutral">Volver al contador</button>' +
+        '<p class="pv-hint">Se va a abrir el diálogo de impresión del navegador. Elegí <strong>“Guardar como PDF”</strong> como destino.</p>' +
+      "</div>" +
+      "<h1>Registro de Quórum — Senado de la Nación</h1>" +
+      '<div class="pv-meta">Generado el ' + qEscapeHtml(fecha) + "</div>" +
+      '<div class="pv-result">' + (alcanzado ? "QUÓRUM ALCANZADO" : "QUÓRUM NO ALCANZADO") + " (" + presente + " de " + QUORUM_NEEDED + " necesarios)</div>" +
+      '<div class="pv-tally"><span>Presentes: ' + presente + '</span><span>Ausentes: ' + ausente + '</span><span>Pendientes: ' + pending + '</span></div>' +
+      '<div class="pv-chamber-wrap"><div id="qPvChamberSlot" class="pv-chamber-bg"></div></div>' +
+      '<table class="pv-bloque-table"><thead><tr><th>Bloque</th><th>Presentes</th><th>Ausentes</th><th>Pend.</th></tr></thead><tbody>' + bloqueRows + '</tbody></table>' +
+      '<h2 class="pv-subheading">Senadores ausentes</h2>' +
+      '<table class="pv-bloque-table"><thead><tr><th>Senador</th><th>Bloque</th><th>Provincia</th></tr></thead><tbody>' + (ausentesRows || '<tr><td colspan="3">—</td></tr>') + '</tbody></table>';
+
+    var chamberSnapshot = qChamber.cloneNode(true);
+    chamberSnapshot.removeAttribute("id");
+    chamberSnapshot.setAttribute("class", "pv-chamber");
+    Array.prototype.forEach.call(chamberSnapshot.querySelectorAll(".seat"), function (g) {
+      g.style.opacity = "1";
+      g.removeAttribute("class");
+      var highlight = g.querySelector(".seat-highlight");
+      if (highlight) highlight.setAttribute("stroke", "none");
+      var id = g.getAttribute("data-id");
+      var clipPath = chamberSnapshot.querySelector('clipPath[id="q-clip-seat-' + id + '"]');
+      var image = g.querySelector("image");
+      if (clipPath && image) {
+        var newClipId = "q-pv-clip-seat-" + id;
+        clipPath.id = newClipId;
+        image.setAttribute("clip-path", "url(#" + newClipId + ")");
+      }
+    });
+    document.getElementById("qPvChamberSlot").appendChild(chamberSnapshot);
+
+    document.getElementById("qPrintNowBtn").addEventListener("click", function () { window.print(); });
+    document.getElementById("qPrintBackBtn").addEventListener("click", qClosePrintView);
+  }
+
+  function qOpenPrintView() {
+    qRenderPrintView();
+    document.body.classList.add("print-view-active");
+    quorumPrintView.hidden = false;
+    if (quorumPrintView.scrollIntoView) quorumPrintView.scrollIntoView({ block: "start" });
+  }
+  function qClosePrintView() {
+    document.body.classList.remove("print-view-active");
+    quorumPrintView.hidden = true;
+  }
+
+  qDownloadPdfBtn.addEventListener("click", qOpenPrintView);
+  qBloqueSelect.addEventListener("change", function (e) { qSelectedBloque = e.target.value; qRender(); });
+  qSearchInput.addEventListener("input", function (e) { qSearchQuery = e.target.value; qRender(); });
+  document.querySelector("#herr-vista-quorum .bulk-actions").addEventListener("click", function (e) {
+    var action = e.target.getAttribute("data-action");
+    if (action === "all-presente") qBulkAll("presente");
+    if (action === "all-ausente") qBulkAll("ausente");
+    if (action === "all-clear") qBulkAll("pending");
+  });
+  document.querySelector("#herr-vista-quorum .roster-actions").addEventListener("click", function (e) {
+    var action = e.target.getAttribute("data-action");
+    if (action === "bloc-presente") qBulkFiltered("presente");
+    if (action === "bloc-ausente") qBulkFiltered("ausente");
+    if (action === "bloc-clear") qBulkFiltered("pending");
+  });
+  qUndoBtn.addEventListener("click", qUndo);
+
+  qLoadState();
+  qBloqueSelect.value = qSelectedBloque;
+  qBuildChamber();
+  qRender();
+})();
+
+/* ── Cálculo de 2/3 (subtab de Herramientas para sesión) ──────────────── */
+(function () {
+  "use strict";
+  var dtTotal = document.getElementById("dtTotal");
+  var dtResultNum = document.getElementById("dtResultNum");
+  var dtResultTotal = document.getElementById("dtResultTotal");
+  if (!dtTotal) return;
+
+  function dtRecalc() {
+    var raw = parseInt(dtTotal.value, 10);
+    if (isNaN(raw) || raw < 1) raw = 1;
+    if (raw > 72) raw = 72;
+    dtTotal.value = raw;
+    var need = Math.ceil(raw * 2 / 3);
+    dtResultNum.textContent = need;
+    dtResultTotal.textContent = raw;
+  }
+  dtTotal.addEventListener("input", dtRecalc);
+  dtTotal.addEventListener("change", dtRecalc);
+  dtRecalc();
+})();
+
+/* ── Cálculo de Tiempos de oradores (subtab de Herramientas para sesión) */
+(function () {
+  "use strict";
+
+  var DATA = window.__SENADO_DATA__ || { SENATORS: [] };
+  var SENATORS = DATA.SENATORS.slice().sort(function (a, b) { return a.nombre.localeCompare(b.nombre, "es"); });
+
+  var temaSelect = document.getElementById("temaSelect");
+  var newTemaBtn = document.getElementById("newTemaBtn");
+  var renameTemaBtn = document.getElementById("renameTemaBtn");
+  var deleteTemaBtn = document.getElementById("deleteTemaBtn");
+  var horaInicioInput = document.getElementById("horaInicioInput");
+  var horaFinEstimada = document.getElementById("horaFinEstimada");
+  var oradorSelect = document.getElementById("oradorSelect");
+  var oradorMinutos = document.getElementById("oradorMinutos");
+  var addOradorBtn = document.getElementById("addOradorBtn");
+  var oradoresList = document.getElementById("oradoresList");
+  if (!temaSelect) return;
+
+  var TIEMPOS_KEY = "senadoTiempos.state.v1";
+  var temas = [];
+  var activeTemaId = null;
+  var dragIndex = null;
+
+  function uid() { return "t" + Date.now().toString(36) + Math.random().toString(36).slice(2, 7); }
+  function defaultTema(n) { return { id: uid(), nombre: "Tema " + n, horaInicio: "", oradores: [] }; }
+  function getActiveTema() { return temas.filter(function (t) { return t.id === activeTemaId; })[0] || null; }
+
+  function saveState() {
+    try { window.localStorage.setItem(TIEMPOS_KEY, JSON.stringify({ temas: temas, activeTemaId: activeTemaId })); } catch (e) {}
+  }
+  function loadState() {
+    try {
+      var raw = window.localStorage.getItem(TIEMPOS_KEY);
+      if (raw) {
+        var saved = JSON.parse(raw);
+        if (saved && Array.isArray(saved.temas) && saved.temas.length) {
+          temas = saved.temas;
+          activeTemaId = saved.activeTemaId;
+          if (!getActiveTema()) activeTemaId = temas[0].id;
+          return;
+        }
+      }
+    } catch (e) {}
+    temas = [defaultTema(1)];
+    activeTemaId = temas[0].id;
+  }
+
+  function renderTemaSelect() {
+    temaSelect.innerHTML = "";
+    temas.forEach(function (t) {
+      var opt = document.createElement("option");
+      opt.value = t.id;
+      opt.textContent = t.nombre;
+      if (t.id === activeTemaId) opt.selected = true;
+      temaSelect.appendChild(opt);
+    });
+  }
+
+  function fillOradorSelect() {
+    oradorSelect.innerHTML = "";
+    SENATORS.forEach(function (s) {
+      var opt = document.createElement("option");
+      opt.value = s.banca;
+      opt.textContent = s.nombre + " (" + s.bloque + ")";
+      oradorSelect.appendChild(opt);
+    });
+  }
+
+  function parseHora(hhmm) {
+    if (!hhmm) return null;
+    var parts = hhmm.split(":");
+    if (parts.length !== 2) return null;
+    var h = parseInt(parts[0], 10), m = parseInt(parts[1], 10);
+    if (isNaN(h) || isNaN(m)) return null;
+    return h * 60 + m;
+  }
+  function formatHora(mins) {
+    mins = ((mins % 1440) + 1440) % 1440;
+    var h = Math.floor(mins / 60), m = mins % 60;
+    return (h < 10 ? "0" : "") + h + ":" + (m < 10 ? "0" : "") + m;
+  }
+  function escapeHtml(str) {
+    return String(str).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
+  }
+
+  function render() {
+    var tema = getActiveTema();
+    if (!tema) return;
+    horaInicioInput.value = tema.horaInicio || "";
+
+    var startMin = parseHora(tema.horaInicio);
+    var cursor = startMin;
+    oradoresList.innerHTML = "";
+
+    tema.oradores.forEach(function (o, idx) {
+      var inicio = null, fin = null;
+      if (o.estado !== "no_habla" && cursor !== null) {
+        inicio = cursor;
+        fin = cursor + (parseInt(o.minutos, 10) || 0);
+        cursor = fin;
+      }
+      var row = document.createElement("div");
+      row.className = "orador-row" + (o.estado === "hablo" ? " is-hablo" : "") + (o.estado === "no_habla" ? " is-no-habla" : "");
+      row.setAttribute("draggable", "true");
+      row.setAttribute("data-idx", idx);
+
+      row.innerHTML =
+        '<span class="orador-drag" title="Arrastrar para reordenar">⠿</span>' +
+        '<span class="orador-orden">' + (idx + 1) + '</span>' +
+        '<span class="orador-nombre"><div class="n">' + escapeHtml(o.senadorNombre) + '</div><div class="b">' + escapeHtml(o.bloque) + '</div></span>' +
+        '<span class="orador-minutos"><input type="number" min="1" max="120" value="' + o.minutos + '" data-idx="' + idx + '" class="orador-minutos-input"> min</span>' +
+        '<span class="orador-horario">' + (inicio !== null ? formatHora(inicio) + '–' + formatHora(fin) : '—') + '</span>' +
+        '<span class="orador-estado">' +
+          '<button class="orador-check' + (o.estado === "hablo" ? " on" : "") + '" data-idx="' + idx + '" data-action="hablo" title="Ya habló">✓</button>' +
+          '<button class="orador-cross' + (o.estado === "no_habla" ? " on" : "") + '" data-idx="' + idx + '" data-action="no_habla" title="No va a hablar">✕</button>' +
+        '</span>' +
+        '<button class="orador-remove" data-idx="' + idx + '" title="Quitar">🗑</button>';
+
+      oradoresList.appendChild(row);
+    });
+
+    horaFinEstimada.textContent = (startMin !== null && tema.oradores.length) ? formatHora(cursor) : "—";
+  }
+
+  function addOrador() {
+    var tema = getActiveTema();
+    if (!tema) return;
+    var banca = parseInt(oradorSelect.value, 10);
+    var sen = SENATORS.filter(function (s) { return s.banca === banca; })[0];
+    if (!sen) return;
+    var minutos = parseInt(oradorMinutos.value, 10);
+    if (isNaN(minutos) || minutos < 1) minutos = 1;
+    tema.oradores.push({ senadorNombre: sen.nombre, bloque: sen.bloque, minutos: minutos, estado: "pendiente" });
+    render();
+    saveState();
+  }
+
+  addOradorBtn.addEventListener("click", addOrador);
+
+  horaInicioInput.addEventListener("change", function () {
+    var tema = getActiveTema();
+    if (!tema) return;
+    tema.horaInicio = horaInicioInput.value;
+    render();
+    saveState();
+  });
+
+  oradoresList.addEventListener("click", function (e) {
+    var tema = getActiveTema();
+    if (!tema) return;
+    var btn = e.target.closest("button");
+    if (!btn) return;
+    var idx = parseInt(btn.getAttribute("data-idx"), 10);
+    if (btn.classList.contains("orador-remove")) {
+      tema.oradores.splice(idx, 1);
+    } else {
+      var action = btn.getAttribute("data-action");
+      var o = tema.oradores[idx];
+      if (!o) return;
+      o.estado = (o.estado === action) ? "pendiente" : action;
+    }
+    render();
+    saveState();
+  });
+
+  oradoresList.addEventListener("input", function (e) {
+    if (!e.target.classList.contains("orador-minutos-input")) return;
+    var tema = getActiveTema();
+    if (!tema) return;
+    var idx = parseInt(e.target.getAttribute("data-idx"), 10);
+    var v = parseInt(e.target.value, 10);
+    if (isNaN(v) || v < 1) v = 1;
+    tema.oradores[idx].minutos = v;
+    render();
+    saveState();
+  });
+
+  oradoresList.addEventListener("dragstart", function (e) {
+    var row = e.target.closest(".orador-row");
+    if (!row) return;
+    dragIndex = parseInt(row.getAttribute("data-idx"), 10);
+    e.dataTransfer.effectAllowed = "move";
+    row.classList.add("dragging");
+  });
+  oradoresList.addEventListener("dragend", function (e) {
+    var row = e.target.closest(".orador-row");
+    if (row) row.classList.remove("dragging");
+  });
+  oradoresList.addEventListener("dragover", function (e) {
+    e.preventDefault();
+    var row = e.target.closest(".orador-row");
+    if (!row) return;
+    e.dataTransfer.dropEffect = "move";
+  });
+  oradoresList.addEventListener("drop", function (e) {
+    e.preventDefault();
+    var row = e.target.closest(".orador-row");
+    if (!row || dragIndex === null) return;
+    var dropIndex = parseInt(row.getAttribute("data-idx"), 10);
+    if (dropIndex === dragIndex) return;
+    var tema = getActiveTema();
+    if (!tema) return;
+    var moved = tema.oradores.splice(dragIndex, 1)[0];
+    tema.oradores.splice(dropIndex, 0, moved);
+    dragIndex = null;
+    render();
+    saveState();
+  });
+
+  temaSelect.addEventListener("change", function () {
+    activeTemaId = temaSelect.value;
+    render();
+    saveState();
+  });
+
+  newTemaBtn.addEventListener("click", function () {
+    var name = window.prompt("Nombre del nuevo tema:", "Tema " + (temas.length + 1));
+    if (!name || !name.trim()) return;
+    var t = defaultTema(temas.length + 1);
+    t.nombre = name.trim();
+    temas.push(t);
+    activeTemaId = t.id;
+    renderTemaSelect();
+    render();
+    saveState();
+  });
+
+  renameTemaBtn.addEventListener("click", function () {
+    var tema = getActiveTema();
+    if (!tema) return;
+    var name = window.prompt("Nuevo nombre para el tema:", tema.nombre);
+    if (!name || !name.trim()) return;
+    tema.nombre = name.trim();
+    renderTemaSelect();
+    saveState();
+  });
+
+  deleteTemaBtn.addEventListener("click", function () {
+    if (temas.length <= 1) {
+      window.alert("Debe quedar al menos un tema.");
+      return;
+    }
+    var tema = getActiveTema();
+    if (!tema) return;
+    var ok = window.confirm('¿Eliminar el tema "' + tema.nombre + '"? Esta acción no se puede deshacer.');
+    if (!ok) return;
+    temas = temas.filter(function (t) { return t.id !== tema.id; });
+    activeTemaId = temas[0].id;
+    renderTemaSelect();
+    render();
+    saveState();
+  });
+
+  loadState();
+  fillOradorSelect();
+  renderTemaSelect();
   render();
 })();
 
@@ -5158,7 +5959,7 @@ AUTORIDADES = {
     'De Infraestructura, Vivienda y Transporte': {'pres': 'ÁVILA, Beatriz Luisa', 'vice': 'FULLONE, Enzo Paolo', 'secr': 'LEWANDOWSKI, Marcelo Néstor'},
     'De Justicia y Asuntos Penales': {'pres': 'GUZMÁN CORAITA, Gonzalo', 'vice': '', 'secr': ''},
     'De Legislación General': {'pres': 'MÁRQUEZ, Nadia Judith', 'vice': 'BENSUSÁN, Daniel Pablo', 'secr': ''},
-    'De Minería, Energía y Combustibles': {'pres': 'FAMA, Flavio Sergio', 'vice': '', 'secr': ''},
+    'De Minería, Energía y Combustibles': {'pres': 'ROYÓN, Flavia Gabriela', 'vice': 'FAMA, Flavio Sergio', 'secr': 'CERVI, Mario Pablo'},
     'De Población y Desarrollo Humano': {'pres': 'KIRCHNER, Alicia Margarita Antonia', 'vice': 'GODOY, Juan Cruz', 'secr': ''},
     'De Presupuesto y Hacienda': {'pres': 'MONTEVERDE, Agustín Aníbal', 'vice': 'SALINO, Fernando Aldo', 'secr': 'SCHNEIDER, Silvana Lorena'},
     'De Relaciones Exteriores y Culto': {'pres': 'PAOLTRONI, Francisco Manuel', 'vice': '', 'secr': ''},
