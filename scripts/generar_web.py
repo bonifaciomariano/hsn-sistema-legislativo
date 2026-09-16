@@ -5302,7 +5302,7 @@ HTML_TEMPLATE = """<!DOCTYPE html>
     <button class="mtab-btn" data-main="agenda" onclick="switchMain('agenda')">Agenda</button>
     <button class="mtab-btn" data-main="ayuda" onclick="switchMain('ayuda')">Ayuda Memoria</button>
     <button class="mtab-btn" data-main="sanciones" onclick="switchMain('sanciones')">Sanciones HSN</button>
-    <button class="mtab-btn" data-main="votacion" onclick="switchMain('votacion')">Tablero de Votaci&oacute;n</button>
+    <button class="mtab-btn" data-main="votacion" onclick="switchMain('votacion')">Herramientas para sesi&oacute;n</button>
   </div>
 </div>
 
@@ -5676,127 +5676,325 @@ HTML_TEMPLATE = """<!DOCTYPE html>
 </div>
 
 <div id="main-votacion" class="mtab-content">
-<div class="page">
-  <header class="masthead">
-    <svg class="brand-mark" viewBox="0 0 64 38" aria-hidden="true">
-      <circle cx="46.0" cy="32.0" r="1.6" fill="#2668af"/>
-      <circle cx="44.1" cy="25.0" r="1.6" fill="#2668af"/>
-      <circle cx="39.0" cy="19.9" r="1.6" fill="#2668af"/>
-      <circle cx="32.0" cy="18.0" r="1.6" fill="#2668af"/>
-      <circle cx="25.0" cy="19.9" r="1.6" fill="#2668af"/>
-      <circle cx="19.9" cy="25.0" r="1.6" fill="#2668af"/>
-      <circle cx="18.0" cy="32.0" r="1.6" fill="#2668af"/>
-      <circle cx="52.0" cy="32.0" r="1.6" fill="#4e93cc"/>
-      <circle cx="50.8" cy="25.2" r="1.6" fill="#4e93cc"/>
-      <circle cx="47.3" cy="19.1" r="1.6" fill="#4e93cc"/>
-      <circle cx="42.0" cy="14.7" r="1.6" fill="#4e93cc"/>
-      <circle cx="35.5" cy="12.3" r="1.6" fill="#4e93cc"/>
-      <circle cx="28.5" cy="12.3" r="1.6" fill="#4e93cc"/>
-      <circle cx="22.0" cy="14.7" r="1.6" fill="#4e93cc"/>
-      <circle cx="16.7" cy="19.1" r="1.6" fill="#4e93cc"/>
-      <circle cx="13.2" cy="25.2" r="1.6" fill="#4e93cc"/>
-      <circle cx="12.0" cy="32.0" r="1.6" fill="#4e93cc"/>
-      <circle cx="58.0" cy="32.0" r="1.6" fill="#75bee9"/>
-      <circle cx="57.1" cy="25.3" r="1.6" fill="#75bee9"/>
-      <circle cx="54.5" cy="19.0" r="1.6" fill="#75bee9"/>
-      <circle cx="50.4" cy="13.6" r="1.6" fill="#75bee9"/>
-      <circle cx="45.0" cy="9.5" r="1.6" fill="#75bee9"/>
-      <circle cx="38.7" cy="6.9" r="1.6" fill="#75bee9"/>
-      <circle cx="32.0" cy="6.0" r="1.6" fill="#75bee9"/>
-      <circle cx="25.3" cy="6.9" r="1.6" fill="#75bee9"/>
-      <circle cx="19.0" cy="9.5" r="1.6" fill="#75bee9"/>
-      <circle cx="13.6" cy="13.6" r="1.6" fill="#75bee9"/>
-      <circle cx="9.5" cy="19.0" r="1.6" fill="#75bee9"/>
-      <circle cx="6.9" cy="25.3" r="1.6" fill="#75bee9"/>
-      <circle cx="6.0" cy="32.0" r="1.6" fill="#75bee9"/>
-    </svg>
-    <div class="eyebrow">Congreso de la Nación Argentina · Cámara de Senadores</div>
-    <h1>Tablero de Votación</h1>
-    <p class="subhead">Composición vigente de los 72 escaños. Hacé clic en una banca para recorrer los estados de voto, o filtrá por bloque para ubicar senadores más rápido.</p>
-  </header>
+<div id="herr-root">
+  <div class="sub-nav">
+    <button class="sub-btn active" data-herrvista="quorum" onclick="switchHerrVista('quorum')">Contador de qu&oacute;rum</button>
+    <button class="sub-btn" data-herrvista="votacion" onclick="switchHerrVista('votacion')">Tablero de votaci&oacute;n</button>
+    <button class="sub-btn" data-herrvista="dostercios" onclick="switchHerrVista('dostercios')">C&aacute;lculo 2/3</button>
+    <button class="sub-btn" data-herrvista="tiempos" onclick="switchHerrVista('tiempos')">C&aacute;lculo de tiempos</button>
+    <button class="sub-btn" data-herrvista="reglamento" onclick="switchHerrVista('reglamento')">Reglamento HSN</button>
+  </div>
 
-  <div class="card">
-    <div class="scenario-bar">
-      <select id="scenarioSelect" aria-label="Escenario guardado"></select>
-      <div class="scenario-actions">
-        <button id="newScenarioBtn" class="btn-neutral">Nuevo escenario</button>
-        <button id="saveScenarioBtn" class="btn-neutral">Guardar</button>
-        <button id="deleteScenarioBtn" class="btn-neutral">Eliminar</button>
+  <!-- SUB: CONTADOR DE QUÓRUM -->
+  <div id="herr-vista-quorum" class="sub-content active">
+  <div class="page">
+    <header class="masthead">
+      <svg class="brand-mark" viewBox="0 0 64 38" aria-hidden="true">
+        <circle cx="46.0" cy="32.0" r="1.6" fill="#2668af"/>
+        <circle cx="44.1" cy="25.0" r="1.6" fill="#2668af"/>
+        <circle cx="39.0" cy="19.9" r="1.6" fill="#2668af"/>
+        <circle cx="32.0" cy="18.0" r="1.6" fill="#2668af"/>
+        <circle cx="25.0" cy="19.9" r="1.6" fill="#2668af"/>
+        <circle cx="19.9" cy="25.0" r="1.6" fill="#2668af"/>
+        <circle cx="18.0" cy="32.0" r="1.6" fill="#2668af"/>
+        <circle cx="52.0" cy="32.0" r="1.6" fill="#4e93cc"/>
+        <circle cx="50.8" cy="25.2" r="1.6" fill="#4e93cc"/>
+        <circle cx="47.3" cy="19.1" r="1.6" fill="#4e93cc"/>
+        <circle cx="42.0" cy="14.7" r="1.6" fill="#4e93cc"/>
+        <circle cx="35.5" cy="12.3" r="1.6" fill="#4e93cc"/>
+        <circle cx="28.5" cy="12.3" r="1.6" fill="#4e93cc"/>
+        <circle cx="22.0" cy="14.7" r="1.6" fill="#4e93cc"/>
+        <circle cx="16.7" cy="19.1" r="1.6" fill="#4e93cc"/>
+        <circle cx="13.2" cy="25.2" r="1.6" fill="#4e93cc"/>
+        <circle cx="12.0" cy="32.0" r="1.6" fill="#4e93cc"/>
+        <circle cx="58.0" cy="32.0" r="1.6" fill="#75bee9"/>
+        <circle cx="57.1" cy="25.3" r="1.6" fill="#75bee9"/>
+        <circle cx="54.5" cy="19.0" r="1.6" fill="#75bee9"/>
+        <circle cx="50.4" cy="13.6" r="1.6" fill="#75bee9"/>
+        <circle cx="45.0" cy="9.5" r="1.6" fill="#75bee9"/>
+        <circle cx="38.7" cy="6.9" r="1.6" fill="#75bee9"/>
+        <circle cx="32.0" cy="6.0" r="1.6" fill="#75bee9"/>
+        <circle cx="25.3" cy="6.9" r="1.6" fill="#75bee9"/>
+        <circle cx="19.0" cy="9.5" r="1.6" fill="#75bee9"/>
+        <circle cx="13.6" cy="13.6" r="1.6" fill="#75bee9"/>
+        <circle cx="9.5" cy="19.0" r="1.6" fill="#75bee9"/>
+        <circle cx="6.9" cy="25.3" r="1.6" fill="#75bee9"/>
+        <circle cx="6.0" cy="32.0" r="1.6" fill="#75bee9"/>
+      </svg>
+      <div class="eyebrow">Congreso de la Nación Argentina · Cámara de Senadores</div>
+      <h1>Contador de Quórum</h1>
+      <p class="subhead">Marcá presentes y ausentes para llevar el registro del quórum de la sesión. Hacé clic en una banca para alternar el estado, o filtrá por bloque para ubicar senadores más rápido.</p>
+    </header>
+
+    <div class="card">
+      <div class="controls">
+        <div class="controls-left">
+          <select id="qBloqueSelect" aria-label="Filtrar por bloque"></select>
+          <input id="qSearchInput" type="search" placeholder="Buscar senador..." aria-label="Buscar senador">
+        </div>
+        <div id="qResultBox" class="result"></div>
       </div>
-      <span id="scenarioStatus" class="scenario-status"></span>
-    </div>
 
-    <div class="controls">
-      <div class="controls-left">
-        <select id="majoritySelect" aria-label="Tipo de mayoría requerida"></select>
-        <select id="bloqueSelect" aria-label="Filtrar por bloque"></select>
-        <input id="searchInput" type="search" placeholder="Buscar senador..." aria-label="Buscar senador">
+      <div class="history-bar">
+        <button id="qUndoBtn" class="btn-undo" disabled>↺ Deshacer</button>
       </div>
-      <div id="resultBox" class="result" hidden></div>
-    </div>
 
-    <div class="history-bar">
-      <button id="undoBtn" class="btn-undo" disabled>↺ Deshacer</button>
-    </div>
-
-    <div class="bulk-actions">
-      <button class="btn-positive" data-action="all-positive">Todos afirmativos</button>
-      <button class="btn-negative" data-action="all-negative">Todos negativos</button>
-      <button class="btn-neutral" data-action="all-clear">Limpiar todos</button>
-    </div>
-
-    <div class="pdf-bar">
-      <button id="downloadPdfBtn" class="btn-brass">Ver / imprimir resultados (PDF)</button>
-    </div>
-
-    <div class="chamber-wrap">
-      <div id="tooltip" class="tooltip" hidden></div>
-      <div class="chamber-scroll">
-        <svg id="chamber" viewBox="0 0 800 460" role="img" aria-label="Hemiciclo del Senado"></svg>
+      <div class="bulk-actions">
+        <button class="btn-positive" data-action="all-presente">Todos presentes</button>
+        <button class="btn-negative" data-action="all-ausente">Todos ausentes</button>
+        <button class="btn-neutral" data-action="all-clear">Limpiar todos</button>
       </div>
-    </div>
 
-    <div id="rosterPanel" class="roster" hidden>
-      <div class="roster-head">
-        <span class="label" id="rosterLabel"></span>
-        <div class="roster-actions">
-          <button class="btn-positive" data-action="bloc-positive">Bloque afirmativo</button>
-          <button class="btn-negative" data-action="bloc-negative">Bloque negativo</button>
-          <button class="btn-neutral" data-action="bloc-clear">Limpiar bloque</button>
+      <div class="pdf-bar">
+        <button id="qDownloadPdfBtn" class="btn-brass">Ver / imprimir registro de quórum (PDF)</button>
+      </div>
+
+      <div class="chamber-wrap">
+        <div id="qTooltip" class="tooltip" hidden></div>
+        <div class="chamber-scroll">
+          <svg id="qChamber" viewBox="0 0 800 460" role="img" aria-label="Hemiciclo del Senado (quórum)"></svg>
         </div>
       </div>
-      <div id="rosterGrid" class="roster-grid"></div>
+
+      <div id="qRosterPanel" class="roster" hidden>
+        <div class="roster-head">
+          <span class="label" id="qRosterLabel"></span>
+          <div class="roster-actions">
+            <button class="btn-positive" data-action="bloc-presente">Bloque presente</button>
+            <button class="btn-negative" data-action="bloc-ausente">Bloque ausente</button>
+            <button class="btn-neutral" data-action="bloc-clear">Limpiar bloque</button>
+          </div>
+        </div>
+        <div id="qRosterGrid" class="roster-grid"></div>
+      </div>
+
+      <div class="tallies">
+        <div class="tally">
+          <div class="num" id="qTotalPresente">0</div>
+          <div class="lbl"><span class="dot" style="background:var(--vote-positive)"></span>Presentes</div>
+        </div>
+        <div class="tally">
+          <div class="num" id="qTotalAusente">0</div>
+          <div class="lbl"><span class="dot" style="background:var(--vote-negative)"></span>Ausentes</div>
+        </div>
+        <div class="tally">
+          <div class="num" id="qTotalPendiente">0</div>
+          <div class="lbl"><span class="dot" style="background:var(--vote-pending-fill); border:1.5px solid var(--vote-pending-stroke)"></span>Pendientes</div>
+        </div>
+      </div>
     </div>
 
-    <div class="tallies">
-      <div class="tally">
-        <div class="num" id="totalPositive">0</div>
-        <div class="lbl"><span class="dot" style="background:var(--vote-positive)"></span>Afirmativos</div>
+    <footer class="credit">72 bancas · quórum requerido: <strong id="qQuorumNeeded">37</strong> senadores presentes</footer>
+  </div>
+  </div>
+
+  <!-- SUB: TABLERO DE VOTACIÓN -->
+  <div id="herr-vista-votacion" class="sub-content">
+  <div class="page">
+    <header class="masthead">
+      <svg class="brand-mark" viewBox="0 0 64 38" aria-hidden="true">
+        <circle cx="46.0" cy="32.0" r="1.6" fill="#2668af"/>
+        <circle cx="44.1" cy="25.0" r="1.6" fill="#2668af"/>
+        <circle cx="39.0" cy="19.9" r="1.6" fill="#2668af"/>
+        <circle cx="32.0" cy="18.0" r="1.6" fill="#2668af"/>
+        <circle cx="25.0" cy="19.9" r="1.6" fill="#2668af"/>
+        <circle cx="19.9" cy="25.0" r="1.6" fill="#2668af"/>
+        <circle cx="18.0" cy="32.0" r="1.6" fill="#2668af"/>
+        <circle cx="52.0" cy="32.0" r="1.6" fill="#4e93cc"/>
+        <circle cx="50.8" cy="25.2" r="1.6" fill="#4e93cc"/>
+        <circle cx="47.3" cy="19.1" r="1.6" fill="#4e93cc"/>
+        <circle cx="42.0" cy="14.7" r="1.6" fill="#4e93cc"/>
+        <circle cx="35.5" cy="12.3" r="1.6" fill="#4e93cc"/>
+        <circle cx="28.5" cy="12.3" r="1.6" fill="#4e93cc"/>
+        <circle cx="22.0" cy="14.7" r="1.6" fill="#4e93cc"/>
+        <circle cx="16.7" cy="19.1" r="1.6" fill="#4e93cc"/>
+        <circle cx="13.2" cy="25.2" r="1.6" fill="#4e93cc"/>
+        <circle cx="12.0" cy="32.0" r="1.6" fill="#4e93cc"/>
+        <circle cx="58.0" cy="32.0" r="1.6" fill="#75bee9"/>
+        <circle cx="57.1" cy="25.3" r="1.6" fill="#75bee9"/>
+        <circle cx="54.5" cy="19.0" r="1.6" fill="#75bee9"/>
+        <circle cx="50.4" cy="13.6" r="1.6" fill="#75bee9"/>
+        <circle cx="45.0" cy="9.5" r="1.6" fill="#75bee9"/>
+        <circle cx="38.7" cy="6.9" r="1.6" fill="#75bee9"/>
+        <circle cx="32.0" cy="6.0" r="1.6" fill="#75bee9"/>
+        <circle cx="25.3" cy="6.9" r="1.6" fill="#75bee9"/>
+        <circle cx="19.0" cy="9.5" r="1.6" fill="#75bee9"/>
+        <circle cx="13.6" cy="13.6" r="1.6" fill="#75bee9"/>
+        <circle cx="9.5" cy="19.0" r="1.6" fill="#75bee9"/>
+        <circle cx="6.9" cy="25.3" r="1.6" fill="#75bee9"/>
+        <circle cx="6.0" cy="32.0" r="1.6" fill="#75bee9"/>
+      </svg>
+      <div class="eyebrow">Congreso de la Nación Argentina · Cámara de Senadores</div>
+      <h1>Tablero de Votación</h1>
+      <p class="subhead">Composición vigente de los 72 escaños. Hacé clic en una banca para recorrer los estados de voto, o filtrá por bloque para ubicar senadores más rápido.</p>
+    </header>
+
+    <div class="card">
+      <div class="scenario-bar">
+        <select id="scenarioSelect" aria-label="Escenario guardado"></select>
+        <div class="scenario-actions">
+          <button id="newScenarioBtn" class="btn-neutral">Nuevo escenario</button>
+          <button id="saveScenarioBtn" class="btn-neutral">Guardar</button>
+          <button id="deleteScenarioBtn" class="btn-neutral">Eliminar</button>
+        </div>
+        <span id="scenarioStatus" class="scenario-status"></span>
       </div>
-      <div class="tally">
-        <div class="num" id="totalNegative">0</div>
-        <div class="lbl"><span class="dot" style="background:var(--vote-negative)"></span>Negativos</div>
+
+      <div class="controls">
+        <div class="controls-left">
+          <select id="majoritySelect" aria-label="Tipo de mayoría requerida"></select>
+          <select id="bloqueSelect" aria-label="Filtrar por bloque"></select>
+          <input id="searchInput" type="search" placeholder="Buscar senador..." aria-label="Buscar senador">
+        </div>
+        <div id="resultBox" class="result" hidden></div>
       </div>
-      <div class="tally">
-        <div class="num" id="totalAbstention">0</div>
-        <div class="lbl"><span class="dot" style="background:var(--vote-abstention)"></span>Abstenciones</div>
+
+      <div class="history-bar">
+        <button id="undoBtn" class="btn-undo" disabled>↺ Deshacer</button>
       </div>
-      <div class="tally">
-        <div class="num" id="totalAbsent">0</div>
-        <div class="lbl"><span class="dot" style="background:var(--vote-absent)"></span>Ausentes</div>
+
+      <div class="bulk-actions">
+        <button class="btn-positive" data-action="all-positive">Todos afirmativos</button>
+        <button class="btn-negative" data-action="all-negative">Todos negativos</button>
+        <button class="btn-neutral" data-action="all-clear">Limpiar todos</button>
       </div>
-      <div class="tally">
-        <div class="num" id="totalPending">0</div>
-        <div class="lbl"><span class="dot" style="background:var(--vote-pending-fill); border:1.5px solid var(--vote-pending-stroke)"></span>Pendientes</div>
+
+      <div class="pdf-bar">
+        <button id="downloadPdfBtn" class="btn-brass">Ver / imprimir resultados (PDF)</button>
+      </div>
+
+      <div class="chamber-wrap">
+        <div id="tooltip" class="tooltip" hidden></div>
+        <div class="chamber-scroll">
+          <svg id="chamber" viewBox="0 0 800 460" role="img" aria-label="Hemiciclo del Senado"></svg>
+        </div>
+      </div>
+
+      <div id="rosterPanel" class="roster" hidden>
+        <div class="roster-head">
+          <span class="label" id="rosterLabel"></span>
+          <div class="roster-actions">
+            <button class="btn-positive" data-action="bloc-positive">Bloque afirmativo</button>
+            <button class="btn-negative" data-action="bloc-negative">Bloque negativo</button>
+            <button class="btn-neutral" data-action="bloc-clear">Limpiar bloque</button>
+          </div>
+        </div>
+        <div id="rosterGrid" class="roster-grid"></div>
+      </div>
+
+      <div class="tallies">
+        <div class="tally">
+          <div class="num" id="totalPositive">0</div>
+          <div class="lbl"><span class="dot" style="background:var(--vote-positive)"></span>Afirmativos</div>
+        </div>
+        <div class="tally">
+          <div class="num" id="totalNegative">0</div>
+          <div class="lbl"><span class="dot" style="background:var(--vote-negative)"></span>Negativos</div>
+        </div>
+        <div class="tally">
+          <div class="num" id="totalAbstention">0</div>
+          <div class="lbl"><span class="dot" style="background:var(--vote-abstention)"></span>Abstenciones</div>
+        </div>
+        <div class="tally">
+          <div class="num" id="totalAbsent">0</div>
+          <div class="lbl"><span class="dot" style="background:var(--vote-absent)"></span>Ausentes</div>
+        </div>
+        <div class="tally">
+          <div class="num" id="totalPending">0</div>
+          <div class="lbl"><span class="dot" style="background:var(--vote-pending-fill); border:1.5px solid var(--vote-pending-stroke)"></span>Pendientes</div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="credit">72 bancas · fuente: nómina de senadores 2026</footer>
+  </div>
+  </div>
+
+  <!-- SUB: CÁLCULO 2/3 -->
+  <div id="herr-vista-dostercios" class="sub-content">
+  <div class="page dt-page">
+    <header class="masthead">
+      <div class="eyebrow">Congreso de la Nación Argentina · Cámara de Senadores</div>
+      <h1>Cálculo de 2/3</h1>
+      <p class="subhead">Ingresá el total de senadores a considerar (máximo 72) para saber cuántos representan las dos terceras partes.</p>
+    </header>
+
+    <div class="card dt-card">
+      <div class="dt-field">
+        <label for="dtTotal">Total de senadores</label>
+        <input type="number" id="dtTotal" min="1" max="72" step="1" value="72">
+      </div>
+      <div class="dt-result">
+        <div class="dt-result-num" id="dtResultNum">48</div>
+        <div class="dt-result-lbl">senadores hacen los 2/3 de <strong id="dtResultTotal">72</strong></div>
       </div>
     </div>
   </div>
+  </div>
 
-  <footer class="credit">72 bancas · fuente: nómina de senadores 2026</footer>
+  <!-- SUB: CÁLCULO DE TIEMPOS -->
+  <div id="herr-vista-tiempos" class="sub-content">
+  <div class="page">
+    <header class="masthead">
+      <div class="eyebrow">Congreso de la Nación Argentina · Cámara de Senadores</div>
+      <h1>Cálculo de Tiempos</h1>
+      <p class="subhead">Organizá el listado de oradores por tema de debate, asigná tiempos de exposición y obtené la hora estimada de finalización.</p>
+    </header>
+
+    <div class="card">
+      <div class="scenario-bar">
+        <select id="temaSelect" aria-label="Tema de debate"></select>
+        <div class="scenario-actions">
+          <button id="newTemaBtn" class="btn-neutral">Nuevo tema</button>
+          <button id="renameTemaBtn" class="btn-neutral">Renombrar</button>
+          <button id="deleteTemaBtn" class="btn-neutral">Eliminar</button>
+        </div>
+      </div>
+
+      <div class="tiempos-config">
+        <label>Hora de inicio del debate
+          <input type="time" id="horaInicioInput">
+        </label>
+        <div class="tiempos-fin">Hora estimada de finalización: <strong id="horaFinEstimada">—</strong></div>
+      </div>
+
+      <div class="tiempos-add">
+        <select id="oradorSelect" aria-label="Elegir senador"></select>
+        <input type="number" id="oradorMinutos" min="1" max="120" value="5" aria-label="Minutos de exposición">
+        <button id="addOradorBtn" class="btn-brass">Agregar orador</button>
+      </div>
+
+      <div id="oradoresList" class="oradores-list"></div>
+    </div>
+  </div>
+  </div>
+
+  <!-- SUB: REGLAMENTO HSN -->
+  <div id="herr-vista-reglamento" class="sub-content">
+  <div class="page">
+    <header class="masthead">
+      <div class="eyebrow">Congreso de la Nación Argentina · Cámara de Senadores</div>
+      <h1>Reglamento HSN</h1>
+      <p class="subhead">Reglamento del Honorable Senado de la Nación, a mano durante la sesión.</p>
+    </header>
+
+    <div class="card">
+      <div class="reg-toolbar">
+        <a href="Reglamento_HSN.pdf" target="_blank" rel="noopener" class="btn-brass" style="display:inline-flex;align-items:center;justify-content:center;text-decoration:none;">Abrir en pestaña nueva</a>
+        <a href="Reglamento_HSN.pdf" download class="btn-neutral" style="display:inline-flex;align-items:center;justify-content:center;text-decoration:none;">Descargar PDF</a>
+      </div>
+      <div class="reg-frame-wrap">
+        <iframe class="reg-frame" src="Reglamento_HSN.pdf" title="Reglamento HSN"></iframe>
+        <p class="reg-fallback">Si el documento no se visualiza (por ejemplo, en algunos navegadores móviles), usá "Abrir en pestaña nueva" o "Descargar PDF".</p>
+      </div>
+    </div>
+  </div>
+  </div>
 
 </div>
 
 <div id="printView" class="print-view" hidden></div>
+<div id="quorumPrintView" class="print-view" hidden></div>
 </div>
 
 <!-- ====================== MAIN: AYUDA MEMORIA ====================== -->
