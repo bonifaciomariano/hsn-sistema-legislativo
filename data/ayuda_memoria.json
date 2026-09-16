@@ -2387,6 +2387,42 @@
     ]
   },
   {
+    "numero": "113",
+    "periodo": 2026,
+    "tipoOD": "NORMAL",
+    "origen": "Poder Ejecutivo",
+    "categoria": "Proyecto de Ley",
+    "autor": null,
+    "descripcion": "Mensaje N° 111/19 y Proyecto de Ley que Aprueba la Reforma del Convenio Interamericano sobre Permiso Internacional de Radioaficionado, Adoptado en la Cdad. De Washington D.c., Estados Unidos de America, el 4 de Junio de 2018.",
+    "expedientes": [
+      {
+        "codigo": "PE-150/19-PL",
+        "url": "https://www.senado.gob.ar/parlamentario/comisiones/verExp/150.19/PE/PL"
+      }
+    ],
+    "comisiones": [
+      "De Relaciones Exteriores y Culto"
+    ],
+    "comisionCabecera": "Relaciones Exteriores y Culto",
+    "fechaDictamen": "03/06/2026",
+    "odLink": "https://www.senado.gob.ar/parlamentario/parlamentaria/51339/downloadOrdenDia",
+    "firmantesMayoria": [
+      "Francisco M. Paoltroni",
+      "Nadia J. Márquez",
+      "Ivanna M. Arrascaeta",
+      "Carmen Álvarez Rivero",
+      "Gonzalo Guzmán Coraita",
+      "María B. Monte de Oca",
+      "Sonia E. Rojas Decut",
+      "Eduardo A. Vischi",
+      "Carolina Losada",
+      "Rodolfo A. Suárez",
+      "Enrique M. Goerling Lara",
+      "Guillermo Andrada",
+      "Juan L. Manzur"
+    ]
+  },
+  {
     "numero": "111",
     "periodo": 2026,
     "tipoOD": "NORMAL",
