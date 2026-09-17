@@ -1213,6 +1213,8 @@ body.print-view-active #main-votacion #herr-root { display: none; }
     text-align: center;
   }
 #main-votacion .tiempos-add button { flex: 0 0 auto; }
+#main-votacion .tiempos-pdf-import { display: flex; flex-wrap: wrap; align-items: center; gap: 0.6rem; padding: 0 1rem 0.85rem; border-bottom: 1px solid var(--border-soft); }
+#main-votacion .tiempos-pdf-status { font-size: 0.8rem; color: var(--ink-muted); }
 #main-votacion .oradores-list { display: flex; flex-direction: column; gap: 0.4rem; padding: 0.85rem 1rem; }
 #main-votacion .orador-row {
     display: flex;
@@ -5101,6 +5103,9 @@ function irASanciones(expediente){
   var oradorMinutos = document.getElementById("oradorMinutos");
   var addOradorBtn = document.getElementById("addOradorBtn");
   var oradoresList = document.getElementById("oradoresList");
+  var importPdfBtn = document.getElementById("importPdfBtn");
+  var oradoresPdfInput = document.getElementById("oradoresPdfInput");
+  var importPdfStatus = document.getElementById("importPdfStatus");
   if (!temaSelect) return;
 
   var TIEMPOS_KEY = "senadoTiempos.state.v1";
@@ -5338,6 +5343,112 @@ function irASanciones(expediente){
     saveState();
   });
 
+  /* ── Importar lista de oradores desde PDF (planilla de Secretaría) ──── */
+  function stripAccents(str) { return String(str).normalize("NFD").replace(/[̀-ͯ]/g, ""); }
+  function nameTokens(str) {
+    return stripAccents(str).toUpperCase().replace(/[^A-Z\s]/g, " ").split(/\s+/).filter(Boolean);
+  }
+  function findSenatorMatch(rawName) {
+    var t = nameTokens(rawName);
+    if (!t.length) return null;
+    var exact = SENATORS.filter(function (s) {
+      var st = nameTokens(s.nombre);
+      if (st.length !== t.length) return false;
+      return t.every(function (tok) { return st.indexOf(tok) !== -1; });
+    });
+    if (exact.length === 1) return exact[0];
+    var subset = SENATORS.filter(function (s) {
+      var st = nameTokens(s.nombre);
+      return t.every(function (tok) { return st.indexOf(tok) !== -1; });
+    });
+    if (subset.length === 1) return subset[0];
+    return null;
+  }
+
+  function extractPdfRows(file) {
+    if (!window.pdfjsLib) return Promise.reject(new Error("pdf.js no cargó"));
+    window.pdfjsLib.GlobalWorkerOptions.workerSrc = "https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js";
+    return file.arrayBuffer().then(function (buf) {
+      return window.pdfjsLib.getDocument({ data: buf }).promise;
+    }).then(function (pdf) {
+      var pageNums = [];
+      for (var i = 1; i <= pdf.numPages; i++) pageNums.push(i);
+      return pageNums.reduce(function (chain, num) {
+        return chain.then(function (acc) {
+          return pdf.getPage(num).then(function (page) { return page.getTextContent(); }).then(function (content) {
+            var items = content.items.map(function (it) {
+              return { text: (it.str || "").trim(), x: it.transform[4], y: it.transform[5] };
+            }).filter(function (it) { return it.text; });
+            items.sort(function (a, b) { return (b.y - a.y) || (a.x - b.x); });
+            var rowsOnPage = [];
+            var tol = 3;
+            items.forEach(function (it) {
+              var row = rowsOnPage.filter(function (r) { return Math.abs(r.y - it.y) <= tol; })[0];
+              if (!row) { row = { y: it.y, items: [] }; rowsOnPage.push(row); }
+              row.items.push(it);
+            });
+            rowsOnPage.forEach(function (r) { r.items.sort(function (a, b) { return a.x - b.x; }); });
+            rowsOnPage.forEach(function (r) { acc.push(r.items.map(function (it) { return it.text; })); });
+            return acc;
+          });
+        });
+      }, Promise.resolve([]));
+    }).then(function (rows) {
+      var temaNombre = null;
+      rows.forEach(function (texts) {
+        if (temaNombre) return;
+        var joined = texts.join(" ");
+        var m = joined.match(/^TEMA\s*:?\s*(.+)$/i);
+        if (m) temaNombre = m[1].trim();
+      });
+      var oradorRows = rows.filter(function (texts) {
+        return texts.length >= 3 && /^\d+$/.test(texts[0]) && texts[1] !== "-";
+      });
+      return { temaNombre: temaNombre, rows: oradorRows };
+    });
+  }
+
+  function importOradoresPdf(file) {
+    importPdfStatus.textContent = "Leyendo PDF…";
+    extractPdfRows(file).then(function (result) {
+      if (!result.rows.length) {
+        importPdfStatus.textContent = "No se encontraron oradores en el PDF.";
+        return;
+      }
+      var tema = defaultTema(temas.length + 1);
+      tema.nombre = result.temaNombre ? ("Tema: " + result.temaNombre) : tema.nombre;
+      var sinMatch = 0;
+      result.rows.forEach(function (texts) {
+        var nombreRaw = texts[1], bloqueRaw = texts[2];
+        var sen = findSenatorMatch(nombreRaw);
+        if (sen) {
+          tema.oradores.push({ senadorNombre: sen.nombre, bloque: sen.bloque, minutos: 5, estado: "pendiente" });
+        } else {
+          tema.oradores.push({ senadorNombre: nombreRaw, bloque: bloqueRaw, minutos: 5, estado: "pendiente" });
+          sinMatch++;
+        }
+      });
+      temas.push(tema);
+      activeTemaId = tema.id;
+      renderTemaSelect();
+      render();
+      saveState();
+      importPdfStatus.textContent = "Importados " + tema.oradores.length + " oradores en \"" + tema.nombre + "\"" +
+        (sinMatch ? " (" + sinMatch + " sin coincidencia exacta, revisar nombre/bloque)" : "") + ".";
+    }).catch(function (err) {
+      console.error(err);
+      importPdfStatus.textContent = "Error al leer el PDF. Verificá que sea la planilla de lista de oradores.";
+    });
+  }
+
+  importPdfBtn.addEventListener("click", function () { oradoresPdfInput.click(); });
+  oradoresPdfInput.addEventListener("change", function (e) {
+    var file = e.target.files && e.target.files[0];
+    oradoresPdfInput.value = "";
+    if (!file) return;
+    importOradoresPdf(file);
+  });
+
   loadState();
   fillOradorSelect();
   renderTemaSelect();
@@ -5359,6 +5470,7 @@ HTML_TEMPLATE = """<!DOCTYPE html>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 <script src="https://cdn.sheetjs.com/xlsx-0.20.3/package/dist/xlsx.full.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
 <style>{css}</style>
 </head>
 <body>
@@ -6038,6 +6150,12 @@ HTML_TEMPLATE = """<!DOCTYPE html>
         <select id="oradorSelect" aria-label="Elegir senador"></select>
         <input type="number" id="oradorMinutos" min="1" max="120" value="5" aria-label="Minutos de exposición">
         <button id="addOradorBtn" class="btn-brass">Agregar orador</button>
+      </div>
+
+      <div class="tiempos-pdf-import">
+        <input type="file" id="oradoresPdfInput" accept="application/pdf" style="display:none">
+        <button id="importPdfBtn" class="btn-neutral">&#128196; Cargar lista de oradores (PDF)</button>
+        <span id="importPdfStatus" class="tiempos-pdf-status"></span>
       </div>
 
       <div id="oradoresList" class="oradores-list"></div>
