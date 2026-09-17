@@ -1,11 +1,130 @@
 [
   {
+    "numero": "402",
+    "periodo": 2026,
+    "tipoOD": "NORMAL",
+    "origen": "Cámara de Diputados",
+    "categoria": "Proyecto de Ley",
+    "autor": null,
+    "descripcion": "Proyecto de Ley en Revision que Modifica la Ley 25.565, de Presupuesto General de Gastos de la Adm. Nacional para el Ejercicio 2002 sobre Readecuacion del Regimen de Subsidios a los Consumos Residenciales de Gas Natural en Zonas Frias, Regularizacion de Deudas Electricas y Deroga los Decretos 277/2022 y 929/2013.",
+    "expedientes": [
+      {
+        "codigo": "CD-3/26-PL",
+        "url": "https://www.senado.gob.ar/parlamentario/comisiones/verExp/3.26/CD/PL"
+      },
+      {
+        "codigo": "S-909/26-PL",
+        "url": null
+      }
+    ],
+    "comisiones": [
+      "De Minería, Energía y Combustibles",
+      "De Presupuesto y Hacienda"
+    ],
+    "comisionCabecera": null,
+    "fechaDictamen": null,
+    "odLink": "https://www.senado.gob.ar/parlamentario/parlamentaria/51734/downloadOrdenDia",
+    "firmantesMayoria": null
+  },
+  {
+    "numero": "401",
+    "periodo": 2026,
+    "tipoOD": "NORMAL",
+    "origen": "Senado",
+    "categoria": "Proyecto de Declaración",
+    "autor": "Vischi",
+    "descripcion": "Proyecto de Declaración que Adhiere a la Celebración del Dia del Periodista, el 7 de Junio.",
+    "expedientes": [
+      {
+        "codigo": "S-931/25-PD",
+        "url": "https://www.senado.gob.ar/parlamentario/comisiones/verExp/931.25/S/PD"
+      },
+      {
+        "codigo": "S-998/26-PD",
+        "url": null
+      }
+    ],
+    "comisiones": [
+      "De Sistemas, Medios de Comunicación y Libertad de Expresión"
+    ],
+    "comisionCabecera": null,
+    "fechaDictamen": null,
+    "odLink": "https://www.senado.gob.ar/parlamentario/parlamentaria/51733/downloadOrdenDia",
+    "firmantesMayoria": null
+  },
+  {
+    "numero": "400",
+    "periodo": 2026,
+    "tipoOD": "NORMAL",
+    "origen": "Senado",
+    "categoria": "Proyecto de Declaración",
+    "autor": "Leavy",
+    "descripcion": "Proyecto de Declaracion que Declara de Interes el Programa \"Salta Es una Cancion\" que se Emite por la Television Salteña Desde 1997.",
+    "expedientes": [
+      {
+        "codigo": "S-1647/25-PD",
+        "url": "https://www.senado.gob.ar/parlamentario/comisiones/verExp/1647.25/S/PD"
+      }
+    ],
+    "comisiones": [
+      "De Sistemas, Medios de Comunicación y Libertad de Expresión"
+    ],
+    "comisionCabecera": null,
+    "fechaDictamen": null,
+    "odLink": "https://www.senado.gob.ar/parlamentario/parlamentaria/51732/downloadOrdenDia",
+    "firmantesMayoria": null
+  },
+  {
+    "numero": "399",
+    "periodo": 2026,
+    "tipoOD": "NORMAL",
+    "origen": "Senado",
+    "categoria": "Proyecto de Declaración",
+    "autor": "Arce y Otros",
+    "descripcion": "Proyecto de Declaración que Declara de Interes los Premios Prisma 2025, a Realizarse en la Cdad. De Posadas, Prov. De Misiones, el 18 de Octubre.",
+    "expedientes": [
+      {
+        "codigo": "S-1563/25-PD",
+        "url": "https://www.senado.gob.ar/parlamentario/comisiones/verExp/1563.25/S/PD"
+      }
+    ],
+    "comisiones": [
+      "De Sistemas, Medios de Comunicación y Libertad de Expresión"
+    ],
+    "comisionCabecera": null,
+    "fechaDictamen": null,
+    "odLink": "https://www.senado.gob.ar/parlamentario/parlamentaria/51731/downloadOrdenDia",
+    "firmantesMayoria": null
+  },
+  {
+    "numero": "398",
+    "periodo": 2026,
+    "tipoOD": "NORMAL",
+    "origen": "Senado",
+    "categoria": "Proyecto de Declaración",
+    "autor": "Atauche",
+    "descripcion": "Proyecto de Declaracion que Declara de Interes el Programa Radial \"Viajando por Argentina\".",
+    "expedientes": [
+      {
+        "codigo": "S-1152/25-PD",
+        "url": "https://www.senado.gob.ar/parlamentario/comisiones/verExp/1152.25/S/PD"
+      }
+    ],
+    "comisiones": [
+      "De Sistemas, Medios de Comunicación y Libertad de Expresión"
+    ],
+    "comisionCabecera": null,
+    "fechaDictamen": null,
+    "odLink": "https://www.senado.gob.ar/parlamentario/parlamentaria/51730/downloadOrdenDia",
+    "firmantesMayoria": null
+  },
+  {
     "numero": "397",
     "periodo": 2026,
     "tipoOD": "NORMAL",
     "origen": "Senado",
     "categoria": "Proyecto de Declaración",
-    "autor": "Moises y Otros",
+    "autor": "Moises",
     "descripcion": "Proyecto de Declaración que Declara de Interés la Conmemoracion del 190° Aniversario del Natalicio de Doña Josefa Dominga \"Pepa\" Balcarce y San Martin, el 14 de Julio de 2026.",
     "expedientes": [
       {
@@ -17,7 +136,7 @@
       "De Educación y Cultura"
     ],
     "comisionCabecera": "Educación y Cultura",
-    "fechaDictamen": "10/09/2026",
+    "fechaDictamen": null,
     "odLink": "https://www.senado.gob.ar/parlamentario/parlamentaria/51729/downloadOrdenDia",
     "firmantesMayoria": [
       "Sonia E. Rojas Decut",
@@ -53,7 +172,7 @@
       "De Educación y Cultura"
     ],
     "comisionCabecera": "Educación y Cultura",
-    "fechaDictamen": "10/09/2026",
+    "fechaDictamen": null,
     "odLink": "https://www.senado.gob.ar/parlamentario/parlamentaria/51728/downloadOrdenDia",
     "firmantesMayoria": [
       "Sonia E. Rojas Decut",
@@ -73,7 +192,7 @@
     "tipoOD": "NORMAL",
     "origen": "Senado",
     "categoria": "Proyecto de Declaración",
-    "autor": "Guzman Coraita y Orozco",
+    "autor": "Guzmán Coraita y Otros",
     "descripcion": "Proyecto de Declaración que Declara de Interes al Museo Didactico de la Gesta Guemesiana y Gaucha, en la Loc. De San Lorenzo, Prov. De Salta.",
     "expedientes": [
       {
@@ -85,7 +204,7 @@
       "De Educación y Cultura"
     ],
     "comisionCabecera": "Educación y Cultura",
-    "fechaDictamen": "10/09/2026",
+    "fechaDictamen": null,
     "odLink": "https://www.senado.gob.ar/parlamentario/parlamentaria/51727/downloadOrdenDia",
     "firmantesMayoria": [
       "Sonia E. Rojas Decut",
@@ -105,7 +224,7 @@
     "tipoOD": "NORMAL",
     "origen": "Senado",
     "categoria": "Proyecto de Declaración",
-    "autor": "Ávila",
+    "autor": "Avila",
     "descripcion": "Proyecto de Declaración que Expresa Beneplácito por la Participación y Selección del Docente Víctor Daniel Zanotta, de la Loc. De Delfín Gallo, Prov. De Tucumán, como Semifinalista Nacional en la Edición 2026 del Premio \"Docentes que Inspiran\".",
     "expedientes": [
       {
@@ -117,7 +236,7 @@
       "De Educación y Cultura"
     ],
     "comisionCabecera": "Educación y Cultura",
-    "fechaDictamen": "10/09/2026",
+    "fechaDictamen": null,
     "odLink": "https://www.senado.gob.ar/parlamentario/parlamentaria/51726/downloadOrdenDia",
     "firmantesMayoria": [
       "Sonia E. Rojas Decut",
@@ -149,7 +268,7 @@
       "De Educación y Cultura"
     ],
     "comisionCabecera": "Educación y Cultura",
-    "fechaDictamen": "10/09/2026",
+    "fechaDictamen": null,
     "odLink": "https://www.senado.gob.ar/parlamentario/parlamentaria/51725/downloadOrdenDia",
     "firmantesMayoria": [
       "Sonia E. Rojas Decut",
@@ -170,7 +289,7 @@
     "tipoOD": "NORMAL",
     "origen": "Senado",
     "categoria": "Proyecto de Declaración",
-    "autor": "Rojas Decut y Arce",
+    "autor": "Rojas Decut y Otros",
     "descripcion": "Proyecto de Declaración que Declara de Interes la Propuesta Diocesana Conmemorativa de los 400 Años de la Llegada de las Misiones Jesuiticas y los 40 Años de la Diocesis de Puerto Iguazu.",
     "expedientes": [
       {
@@ -182,7 +301,7 @@
       "De Educación y Cultura"
     ],
     "comisionCabecera": "Educación y Cultura",
-    "fechaDictamen": "10/09/2026",
+    "fechaDictamen": null,
     "odLink": "https://www.senado.gob.ar/parlamentario/parlamentaria/51724/downloadOrdenDia",
     "firmantesMayoria": [
       "Sonia E. Rojas Decut",
@@ -202,7 +321,7 @@
     "tipoOD": "NORMAL",
     "origen": "Senado",
     "categoria": "Proyecto de Declaración",
-    "autor": "Rojas Decut y Arce",
+    "autor": "Arce y Otros",
     "descripcion": "Proyecto de Declaración que Declara de Interes la Cuarta Edicion del Congreso Internacional Veterinario del Iguazu (Civi), a Realizarse en la Prov. De Misiones, el 2 y 3 de Octubre de 2026.",
     "expedientes": [
       {
@@ -214,7 +333,7 @@
       "De Educación y Cultura"
     ],
     "comisionCabecera": "Educación y Cultura",
-    "fechaDictamen": "10/09/2026",
+    "fechaDictamen": null,
     "odLink": "https://www.senado.gob.ar/parlamentario/parlamentaria/51723/downloadOrdenDia",
     "firmantesMayoria": [
       "Sonia E. Rojas Decut",
@@ -235,7 +354,7 @@
     "tipoOD": "NORMAL",
     "origen": "Senado",
     "categoria": "Proyecto de Declaración",
-    "autor": "Almeida",
+    "autor": "Paoltroni y Otros",
     "descripcion": "Proyecto de Declaración que Declara de Interes la Composicion Artistica \"Mi Bandera Es Argentina\", del Cantautor y Docente de Musica Diamantino Ruben Dario Gimenez.",
     "expedientes": [
       {
@@ -247,7 +366,7 @@
       "De Educación y Cultura"
     ],
     "comisionCabecera": "Educación y Cultura",
-    "fechaDictamen": "10/09/2026",
+    "fechaDictamen": null,
     "odLink": "https://www.senado.gob.ar/parlamentario/parlamentaria/51722/downloadOrdenDia",
     "firmantesMayoria": [
       "Sonia E. Rojas Decut",
@@ -279,7 +398,7 @@
       "De Educación y Cultura"
     ],
     "comisionCabecera": "Educación y Cultura",
-    "fechaDictamen": "10/09/2026",
+    "fechaDictamen": null,
     "odLink": "https://www.senado.gob.ar/parlamentario/parlamentaria/51721/downloadOrdenDia",
     "firmantesMayoria": [
       "Sonia E. Rojas Decut",
@@ -312,7 +431,7 @@
       "De Educación y Cultura"
     ],
     "comisionCabecera": "Educación y Cultura",
-    "fechaDictamen": "10/09/2026",
+    "fechaDictamen": null,
     "odLink": "https://www.senado.gob.ar/parlamentario/parlamentaria/51719/downloadOrdenDia",
     "firmantesMayoria": [
       "Sonia E. Rojas Decut",
@@ -345,7 +464,7 @@
       "De Educación y Cultura"
     ],
     "comisionCabecera": "Educación y Cultura",
-    "fechaDictamen": "10/09/2026",
+    "fechaDictamen": null,
     "odLink": "https://www.senado.gob.ar/parlamentario/parlamentaria/51718/downloadOrdenDia",
     "firmantesMayoria": [
       "Sonia E. Rojas Decut",
@@ -383,7 +502,7 @@
       "De Educación y Cultura"
     ],
     "comisionCabecera": "Educación y Cultura",
-    "fechaDictamen": "10/09/2026",
+    "fechaDictamen": null,
     "odLink": "https://www.senado.gob.ar/parlamentario/parlamentaria/51717/downloadOrdenDia",
     "firmantesMayoria": [
       "Sonia E. Rojas Decut",
@@ -415,7 +534,7 @@
       "De Educación y Cultura"
     ],
     "comisionCabecera": "Educación y Cultura",
-    "fechaDictamen": "10/09/2026",
+    "fechaDictamen": null,
     "odLink": "https://www.senado.gob.ar/parlamentario/parlamentaria/51716/downloadOrdenDia",
     "firmantesMayoria": [
       "Sonia E. Rojas Decut",
@@ -448,7 +567,7 @@
       "De Educación y Cultura"
     ],
     "comisionCabecera": "Educación y Cultura",
-    "fechaDictamen": "10/09/2026",
+    "fechaDictamen": null,
     "odLink": "https://www.senado.gob.ar/parlamentario/parlamentaria/51714/downloadOrdenDia",
     "firmantesMayoria": [
       "Sonia E. Rojas Decut",
@@ -480,7 +599,7 @@
       "De Educación y Cultura"
     ],
     "comisionCabecera": "Educación y Cultura",
-    "fechaDictamen": "10/09/2026",
+    "fechaDictamen": null,
     "odLink": "https://www.senado.gob.ar/parlamentario/parlamentaria/51713/downloadOrdenDia",
     "firmantesMayoria": [
       "Sonia E. Rojas Decut",
@@ -513,7 +632,7 @@
       "De Educación y Cultura"
     ],
     "comisionCabecera": "Educación y Cultura",
-    "fechaDictamen": "10/09/2026",
+    "fechaDictamen": null,
     "odLink": "https://www.senado.gob.ar/parlamentario/parlamentaria/51712/downloadOrdenDia",
     "firmantesMayoria": [
       "Sonia E. Rojas Decut",
@@ -534,7 +653,7 @@
     "tipoOD": "NORMAL",
     "origen": "Senado",
     "categoria": "Proyecto de Declaración",
-    "autor": "Fernandez Sagasti",
+    "autor": "Fernández Sagasti",
     "descripcion": "Proyecto de Declaración que Expresa Beneplacito por el Subcampeonato Logrado por Alumnos de la Prov. De Mendoza, en el Mundial de Robotica \"First Tech Challenge 2026\", entre el 15 y 18 de Abril de 2026.",
     "expedientes": [
       {
@@ -546,7 +665,7 @@
       "De Educación y Cultura"
     ],
     "comisionCabecera": "Educación y Cultura",
-    "fechaDictamen": "10/09/2026",
+    "fechaDictamen": null,
     "odLink": "https://www.senado.gob.ar/parlamentario/parlamentaria/51711/downloadOrdenDia",
     "firmantesMayoria": [
       "Sonia E. Rojas Decut",
@@ -561,45 +680,12 @@
     ]
   },
   {
-    "numero": "380",
-    "periodo": 2026,
-    "tipoOD": "NORMAL",
-    "origen": "Senado",
-    "categoria": "Proyecto de Declaración",
-    "autor": "Schneider",
-    "descripcion": "Proyecto de Declaración que Expresa Beneplacito por la Presentacion Oficial de la \"Bienal Internacional de Escultura del Chaco Edicion 2026\", a Realizarse en la Cdad. De Resistencia, Prov. Del Chaco, el 6 de Marzo.",
-    "expedientes": [
-      {
-        "codigo": "S-2204/25-PD",
-        "url": "https://www.senado.gob.ar/parlamentario/comisiones/verExp/2204.25/S/PD"
-      }
-    ],
-    "comisiones": [
-      "De Educación y Cultura"
-    ],
-    "comisionCabecera": "Educación y Cultura",
-    "fechaDictamen": "10/09/2026",
-    "odLink": "https://www.senado.gob.ar/parlamentario/parlamentaria/51710/downloadOrdenDia",
-    "firmantesMayoria": [
-      "Sonia E. Rojas Decut",
-      "Mercedes G. Valenzuela",
-      "Ivanna M. Arrascaeta",
-      "Vilma F. Bedia",
-      "María V. Huala",
-      "Flavio S. Fama",
-      "Beatriz L. Ávila",
-      "María C. Moisés",
-      "María T. M. González",
-      "Fernando A. Salino"
-    ]
-  },
-  {
     "numero": "379",
     "periodo": 2026,
     "tipoOD": "NORMAL",
     "origen": "Senado",
     "categoria": "Proyecto de Declaración",
-    "autor": "Galaretto y Otros",
+    "autor": "Galaretto",
     "descripcion": "Proyecto de Declaracion que Declara de Interes Cultural y Educativo la Obra \"Danzas, Bailes y Costumbres del Litoral Argentino\" de los Autores Claudia L. Garcia y Enrique a. Piñeyro Publicada por Editorial Autores Argentinos en 2025.",
     "expedientes": [
       {
@@ -611,7 +697,7 @@
       "De Educación y Cultura"
     ],
     "comisionCabecera": "Educación y Cultura",
-    "fechaDictamen": "10/09/2026",
+    "fechaDictamen": null,
     "odLink": "https://www.senado.gob.ar/parlamentario/parlamentaria/51709/downloadOrdenDia",
     "firmantesMayoria": [
       "Sonia E. Rojas Decut",
@@ -632,7 +718,7 @@
     "tipoOD": "NORMAL",
     "origen": "Senado",
     "categoria": "Proyecto de Declaración",
-    "autor": "Lopez Florencia",
+    "autor": "López",
     "descripcion": "Proyecto de Declaración que Reconoce como Valor Historico y Cultural al Monolito de Loma Blanca, en la Localidad de Olta, Prov. De la Rioja.",
     "expedientes": [
       {
@@ -644,7 +730,7 @@
       "De Educación y Cultura"
     ],
     "comisionCabecera": "Educación y Cultura",
-    "fechaDictamen": "10/09/2026",
+    "fechaDictamen": null,
     "odLink": "https://www.senado.gob.ar/parlamentario/parlamentaria/51708/downloadOrdenDia",
     "firmantesMayoria": [
       "Sonia E. Rojas Decut",
@@ -664,7 +750,7 @@
     "tipoOD": "NORMAL",
     "origen": "Senado",
     "categoria": "Proyecto de Declaración",
-    "autor": "Fernandez Sagasti",
+    "autor": "Fernández Sagasti",
     "descripcion": "Proyecto de Declaracion que Declara de Interes el Evento \"Convinart\", Reconociendo su Aporte a la Difusion de la Cultura, el Arte y la Identidad Nacional.",
     "expedientes": [
       {
@@ -676,7 +762,7 @@
       "De Educación y Cultura"
     ],
     "comisionCabecera": "Educación y Cultura",
-    "fechaDictamen": "10/09/2026",
+    "fechaDictamen": null,
     "odLink": "https://www.senado.gob.ar/parlamentario/parlamentaria/51707/downloadOrdenDia",
     "firmantesMayoria": [
       "Sonia E. Rojas Decut",
@@ -708,7 +794,7 @@
       "De Educación y Cultura"
     ],
     "comisionCabecera": "Educación y Cultura",
-    "fechaDictamen": "10/09/2026",
+    "fechaDictamen": null,
     "odLink": "https://www.senado.gob.ar/parlamentario/parlamentaria/51706/downloadOrdenDia",
     "firmantesMayoria": [
       "Sonia E. Rojas Decut",
@@ -740,7 +826,7 @@
       "De Educación y Cultura"
     ],
     "comisionCabecera": "Educación y Cultura",
-    "fechaDictamen": "10/09/2026",
+    "fechaDictamen": null,
     "odLink": "https://www.senado.gob.ar/parlamentario/parlamentaria/51705/downloadOrdenDia",
     "firmantesMayoria": [
       "Sonia E. Rojas Decut",
@@ -773,7 +859,7 @@
       "De Educación y Cultura"
     ],
     "comisionCabecera": "Educación y Cultura",
-    "fechaDictamen": "10/09/2026",
+    "fechaDictamen": null,
     "odLink": "https://www.senado.gob.ar/parlamentario/parlamentaria/51704/downloadOrdenDia",
     "firmantesMayoria": [
       "Sonia E. Rojas Decut",
@@ -806,7 +892,7 @@
       "De Educación y Cultura"
     ],
     "comisionCabecera": "Educación y Cultura",
-    "fechaDictamen": "10/09/2026",
+    "fechaDictamen": null,
     "odLink": "https://www.senado.gob.ar/parlamentario/parlamentaria/51703/downloadOrdenDia",
     "firmantesMayoria": [
       "Sonia E. Rojas Decut",
@@ -840,7 +926,7 @@
       "De Presupuesto y Hacienda"
     ],
     "comisionCabecera": "Justicia y Asuntos Penales",
-    "fechaDictamen": "10/09/2026",
+    "fechaDictamen": null,
     "odLink": "https://www.senado.gob.ar/parlamentario/parlamentaria/51702/downloadOrdenDia",
     "firmantesMayoria": [
       "Gonzala Guzmán Coraita",
@@ -866,7 +952,7 @@
     "tipoOD": "NORMAL",
     "origen": "Senado",
     "categoria": "Proyecto de Ley",
-    "autor": "Corpacci",
+    "autor": "Mendoza y Otros",
     "descripcion": "Reproduce Proyecto de Ley que Declara Patrimonio Inmaterial Cultural y Natural de la Nacion, en los Terminos de la Ley 26.118, al \"Chaku\", Practica Ancestral Incaica de Captura, Esquila y Liberación de Vicuñas. (Ref. S. 830/24).",
     "expedientes": [
       {
@@ -878,7 +964,7 @@
       "De Educación y Cultura"
     ],
     "comisionCabecera": "Educación y Cultura",
-    "fechaDictamen": "09/09/2026",
+    "fechaDictamen": null,
     "odLink": "https://www.senado.gob.ar/parlamentario/parlamentaria/51700/downloadOrdenDia",
     "firmantesMayoria": [
       "Sonia E. Rojas Decut",
@@ -910,7 +996,7 @@
       "De Educación y Cultura"
     ],
     "comisionCabecera": "Educación y Cultura",
-    "fechaDictamen": "09/09/2026",
+    "fechaDictamen": null,
     "odLink": "https://www.senado.gob.ar/parlamentario/parlamentaria/51699/downloadOrdenDia",
     "firmantesMayoria": [
       "Sonia E. Rojas Decut",
@@ -942,7 +1028,7 @@
       "De Educación y Cultura"
     ],
     "comisionCabecera": "Educación y Cultura",
-    "fechaDictamen": "",
+    "fechaDictamen": null,
     "odLink": "https://www.senado.gob.ar/parlamentario/parlamentaria/51698/downloadOrdenDia",
     "firmantesMayoria": [
       "Sonia E. Rojas Decut",
@@ -963,7 +1049,7 @@
     "origen": "Senado",
     "categoria": "Proyecto de Ley",
     "autor": "Vischi",
-    "descripcion": "Reproduce Proyecto de Ley que Declara Bien Historico Nacional, en los Terminos de la Ley 12.665 y S/m., al Inmueble Identificado como Ex \"Hotel de Inmigrantes- Ex Oficinas de Puentes y Caminos de Goya\", Sito en la Manzana N° 497, entre las Calles Caá Guazu y Av. Sarmiento de la Ciudad de G",
+    "descripcion": "Reproduce Proyecto de Ley que Declara Bien Historico Nacional, en los Terminos de la Ley 12.665 y S/m., al Inmueble Identificado como Ex \"Hotel de Inmigrantes- Ex Oficinas de Puentes y Caminos de Goya\", Sito en la Manzana N° 497, entre las Calles Caá Guazu y Av. Sarmiento de la Ciudad de Goya, Prov. De Corrientes. (Ref. S.1422/22)",
     "expedientes": [
       {
         "codigo": "S-1643/25-PL",
@@ -974,7 +1060,7 @@
       "De Educación y Cultura"
     ],
     "comisionCabecera": "Educación y Cultura",
-    "fechaDictamen": "09/09/2026",
+    "fechaDictamen": null,
     "odLink": "https://www.senado.gob.ar/parlamentario/parlamentaria/51697/downloadOrdenDia",
     "firmantesMayoria": [
       "Sonia E. Rojas Decut",
@@ -1007,7 +1093,7 @@
       "De Presupuesto y Hacienda"
     ],
     "comisionCabecera": "Economía Nacional e Inversión",
-    "fechaDictamen": "09/09/2026",
+    "fechaDictamen": null,
     "odLink": "https://www.senado.gob.ar/parlamentario/parlamentaria/51696/downloadOrdenDia",
     "firmantesMayoria": [
       "Enrique M. Goerling Lara",
@@ -1055,7 +1141,7 @@
       "De Presupuesto y Hacienda"
     ],
     "comisionCabecera": "Legislación General",
-    "fechaDictamen": "08/09/2026",
+    "fechaDictamen": null,
     "odLink": "https://www.senado.gob.ar/parlamentario/parlamentaria/51695/downloadOrdenDia",
     "firmantesMayoria": [
       "Nadia J. Márquez",
@@ -1101,7 +1187,7 @@
       "De Educación y Cultura"
     ],
     "comisionCabecera": "Educación y Cultura",
-    "fechaDictamen": "03/09/2026",
+    "fechaDictamen": null,
     "odLink": "https://www.senado.gob.ar/parlamentario/parlamentaria/51694/downloadOrdenDia",
     "firmantesMayoria": [
       "Sonia E. Rojas Decut",
@@ -1133,7 +1219,7 @@
       "De Educación y Cultura"
     ],
     "comisionCabecera": "Educación y Cultura",
-    "fechaDictamen": "03/09/2026",
+    "fechaDictamen": null,
     "odLink": "https://www.senado.gob.ar/parlamentario/parlamentaria/51693/downloadOrdenDia",
     "firmantesMayoria": [
       "Sonia E. Rojas Decut",
@@ -1162,10 +1248,11 @@
       }
     ],
     "comisiones": [
+      "De Defensa Nacional",
       "De Educación y Cultura"
     ],
     "comisionCabecera": "Educación y Cultura",
-    "fechaDictamen": "03/09/2026",
+    "fechaDictamen": null,
     "odLink": "https://www.senado.gob.ar/parlamentario/parlamentaria/51692/downloadOrdenDia",
     "firmantesMayoria": [
       "Sonia E. Rojas Decut",
@@ -1177,68 +1264,6 @@
       "María C. Moisés",
       "María T. M. González",
       "Fernando A. Salino"
-    ]
-  },
-  {
-    "numero": "362",
-    "periodo": 2026,
-    "tipoOD": "NORMAL",
-    "origen": "Senado",
-    "categoria": "Proyecto de Ley",
-    "autor": "Avila",
-    "descripcion": "Proyecto de Ley que Modifica su Similar 27.640 - Biocombustibles-, Respecto del Porcentaje Obligatorio de Biodiesel y Bioetanol en el Gasoil y la Nafta.",
-    "expedientes": [
-      {
-        "codigo": "S-1271/25-PL",
-        "url": "https://www.senado.gob.ar/parlamentario/comisiones/verExp/1271.25/S/PL"
-      },
-      {
-        "codigo": "S-1861/25-PL",
-        "url": null
-      },
-      {
-        "codigo": "S-3/26-PL",
-        "url": null
-      },
-      {
-        "codigo": "S-809/26-PL",
-        "url": null
-      },
-      {
-        "codigo": "S-916/26-PL",
-        "url": null
-      },
-      {
-        "codigo": "S-1035/26-PL",
-        "url": null
-      },
-      {
-        "codigo": "S-1246/26-PL",
-        "url": null
-      }
-    ],
-    "comisiones": [
-      "De Minería, Energía y Combustibles"
-    ],
-    "comisionCabecera": "Minería, Energía y Combustibles",
-    "fechaDictamen": "03/09/2026",
-    "odLink": "https://www.senado.gob.ar/parlamentario/parlamentaria/51691/downloadOrdenDia",
-    "firmantesMayoria": [
-      "Flavia G. Royón",
-      "Agustín A. Monteverde",
-      "Mario P. Cervi",
-      "Ezequiel Atauche",
-      "Juan C. Godoy",
-      "Bruno A. Olivera Lucero",
-      "Agustín P. Coto",
-      "Bartolomé E. Abdala",
-      "Enzo P. Fullone",
-      "Patricia Bullrich",
-      "Beatriz L. Ávila",
-      "María C. Moisés. “2026",
-      "Año del 120 Aniversario del Palacio Legislativo” En disidencia parcial: Flavio S. Fama",
-      "Alejandra M. Vigo",
-      "Mariana Juri. En disidencia: Carlos M. Espínola"
     ]
   },
   {
@@ -1283,9 +1308,71 @@
       "De Minería, Energía y Combustibles"
     ],
     "comisionCabecera": null,
-    "fechaDictamen": "03/09/2026",
+    "fechaDictamen": null,
     "odLink": "https://www.senado.gob.ar/parlamentario/parlamentaria/51701/downloadOrdenDia",
     "firmantesMayoria": null
+  },
+  {
+    "numero": "362",
+    "periodo": 2026,
+    "tipoOD": "NORMAL",
+    "origen": "Senado",
+    "categoria": "Proyecto de Ley",
+    "autor": "Avila",
+    "descripcion": "Proyecto de Ley que Modifica su Similar 27.640 - Biocombustibles-, Respecto del Porcentaje Obligatorio de Biodiesel y Bioetanol en el Gasoil y la Nafta.",
+    "expedientes": [
+      {
+        "codigo": "S-1271/25-PL",
+        "url": "https://www.senado.gob.ar/parlamentario/comisiones/verExp/1271.25/S/PL"
+      },
+      {
+        "codigo": "S-1861/25-PL",
+        "url": null
+      },
+      {
+        "codigo": "S-3/26-PL",
+        "url": null
+      },
+      {
+        "codigo": "S-809/26-PL",
+        "url": null
+      },
+      {
+        "codigo": "S-916/26-PL",
+        "url": null
+      },
+      {
+        "codigo": "S-1035/26-PL",
+        "url": null
+      },
+      {
+        "codigo": "S-1246/26-PL",
+        "url": null
+      }
+    ],
+    "comisiones": [
+      "De Minería, Energía y Combustibles"
+    ],
+    "comisionCabecera": "Minería, Energía y Combustibles",
+    "fechaDictamen": null,
+    "odLink": "https://www.senado.gob.ar/parlamentario/parlamentaria/51691/downloadOrdenDia",
+    "firmantesMayoria": [
+      "Flavia G. Royón",
+      "Agustín A. Monteverde",
+      "Mario P. Cervi",
+      "Ezequiel Atauche",
+      "Juan C. Godoy",
+      "Bruno A. Olivera Lucero",
+      "Agustín P. Coto",
+      "Bartolomé E. Abdala",
+      "Enzo P. Fullone",
+      "Patricia Bullrich",
+      "Beatriz L. Ávila",
+      "María C. Moisés. “2026",
+      "Año del 120 Aniversario del Palacio Legislativo” En disidencia parcial: Flavio S. Fama",
+      "Alejandra M. Vigo",
+      "Mariana Juri. En disidencia: Carlos M. Espínola"
+    ]
   },
   {
     "numero": "361",
@@ -1306,7 +1393,7 @@
       "De Presupuesto y Hacienda"
     ],
     "comisionCabecera": "Justicia y Asuntos Penales",
-    "fechaDictamen": "02/09/2026",
+    "fechaDictamen": null,
     "odLink": "https://www.senado.gob.ar/parlamentario/parlamentaria/51690/downloadOrdenDia",
     "firmantesMayoria": [
       "Gonzalo Guzmán Coraita",
@@ -1347,7 +1434,7 @@
       "De Presupuesto y Hacienda"
     ],
     "comisionCabecera": "Justicia y Asuntos Penales",
-    "fechaDictamen": "02/09/2026",
+    "fechaDictamen": null,
     "odLink": "https://www.senado.gob.ar/parlamentario/parlamentaria/51688/downloadOrdenDia",
     "firmantesMayoria": [
       "Gonzalo Guzmán Coraita",
@@ -1388,7 +1475,7 @@
       "De Educación y Cultura"
     ],
     "comisionCabecera": "Población y Desarrollo Humano",
-    "fechaDictamen": "02/09/2026",
+    "fechaDictamen": null,
     "odLink": "https://www.senado.gob.ar/parlamentario/parlamentaria/51687/downloadOrdenDia",
     "firmantesMayoria": [
       "Alicia M. A. Kirchner",
@@ -1428,7 +1515,7 @@
       "De Educación y Cultura"
     ],
     "comisionCabecera": "Población y Desarrollo Humano",
-    "fechaDictamen": "02/09/2026",
+    "fechaDictamen": null,
     "odLink": "https://www.senado.gob.ar/parlamentario/parlamentaria/51686/downloadOrdenDia",
     "firmantesMayoria": [
       "Alicia M. A. Kirchner",
@@ -1468,7 +1555,7 @@
       "De Educación y Cultura"
     ],
     "comisionCabecera": "Población y Desarrollo Humano",
-    "fechaDictamen": "02/09/2026",
+    "fechaDictamen": null,
     "odLink": "https://www.senado.gob.ar/parlamentario/parlamentaria/51685/downloadOrdenDia",
     "firmantesMayoria": [
       "Alicia M. A. Kirchner",
@@ -1510,7 +1597,7 @@
       "De Educación y Cultura"
     ],
     "comisionCabecera": "Población y Desarrollo Humano",
-    "fechaDictamen": "02/09/2026",
+    "fechaDictamen": null,
     "odLink": "https://www.senado.gob.ar/parlamentario/parlamentaria/51684/downloadOrdenDia",
     "firmantesMayoria": [
       "Alicia M. A. Kirchner",
@@ -1551,7 +1638,7 @@
       "De Educación y Cultura"
     ],
     "comisionCabecera": "Población y Desarrollo Humano",
-    "fechaDictamen": "02/09/2026",
+    "fechaDictamen": null,
     "odLink": "https://www.senado.gob.ar/parlamentario/parlamentaria/51683/downloadOrdenDia",
     "firmantesMayoria": [
       "Alicia M. A. Kirchner",
@@ -1590,7 +1677,7 @@
       "De Acuerdos"
     ],
     "comisionCabecera": "Acuerdos",
-    "fechaDictamen": "27/08/2026",
+    "fechaDictamen": null,
     "odLink": "https://www.senado.gob.ar/parlamentario/parlamentaria/51682/downloadOrdenDia",
     "firmantesMayoria": [
       "Juan C. Pagotto",
@@ -1627,7 +1714,7 @@
       "De Acuerdos"
     ],
     "comisionCabecera": "Acuerdos",
-    "fechaDictamen": "27/08/2026",
+    "fechaDictamen": null,
     "odLink": "https://www.senado.gob.ar/parlamentario/parlamentaria/51681/downloadOrdenDia",
     "firmantesMayoria": [
       "Juan C. Pagotto",
@@ -1652,8 +1739,8 @@
     "tipoOD": "NORMAL",
     "origen": "Ov",
     "categoria": "Proyecto de Ley",
-    "autor": null,
-    "descripcion": "Ministerio de Relaciones Exteriores, Comercio Internacional y Culto : Remite Nota Enviada por el Ciudadano Argentino Jorge Luis Perez Alati, por la Cual Solicita Autorizacion para Desempeñarse en el Cargo de Consul Honorario de la Republica de Singapur en la Ciudad Autonoma de Buenos Aires.",
+    "autor": "Ministerio de Relaciones Exteriores y Culto",
+    "descripcion": "Remite Nota Enviada por el Ciudadano Argentino Jorge Luis Perez Alati, por la Cual Solicita Autorizacion para Desempeñarse en el Cargo de Consul Honorario de la Republica de Singapur en la Ciudad Autonoma de Buenos Aires.",
     "expedientes": [
       {
         "codigo": "OV-31/26-CM",
@@ -1664,7 +1751,7 @@
       "De Asuntos Constitucionales"
     ],
     "comisionCabecera": "Asuntos Constitucionales",
-    "fechaDictamen": "27/08/2026",
+    "fechaDictamen": null,
     "odLink": "https://www.senado.gob.ar/parlamentario/parlamentaria/51680/downloadOrdenDia",
     "firmantesMayoria": [
       "Agustín P. Coto",
@@ -1687,8 +1774,8 @@
     "tipoOD": "NORMAL",
     "origen": "Ov",
     "categoria": "Proyecto de Ley",
-    "autor": null,
-    "descripcion": "Ministerio de Relaciones Exteriores, Comercio Internacional y Culto: Remite Nota Enviada por la Ciudadana Argentina Oriana Laura Fossati, por la Cual Solicita Autorizacion para Desempeñarse en el Cargo Agente Cónsular Adjunto del Consulado de la Republica Italiana en Mar del Plata, Prov, de Bs.as.",
+    "autor": "Ministerio de Relaciones Exteriores y Culto",
+    "descripcion": "Remite Nota Enviada por la Ciudadana Argentina Oriana Laura Fossati, por la Cual Solicita Autorizacion para Desempeñarse en el Cargo Agente Cónsular Adjunto del Consulado de la Republica Italiana en Mar del Plata, Prov, de Bs.as.",
     "expedientes": [
       {
         "codigo": "OV-32/26-CM",
@@ -1699,7 +1786,7 @@
       "De Asuntos Constitucionales"
     ],
     "comisionCabecera": "Asuntos Constitucionales",
-    "fechaDictamen": "27/08/2026",
+    "fechaDictamen": null,
     "odLink": "https://www.senado.gob.ar/parlamentario/parlamentaria/51679/downloadOrdenDia",
     "firmantesMayoria": [
       "Agustín P. Coto",
@@ -1722,8 +1809,8 @@
     "tipoOD": "NORMAL",
     "origen": "Ov",
     "categoria": "Proyecto de Ley",
-    "autor": null,
-    "descripcion": "Ministerio de Relaciones Exteriores, Comercio Internacional y Culto: Remite Nota Enviada por el Ciudadano Argentino German Enrique Böttger, por la Cual Solicita Autorizacion para Desempeñarse en el Cargo de Consul Honorario de la Rep. Federal de Alemania en la Ciudad de San Miguel de Tucuman, con",
+    "autor": "Ministerio de Relaciones Exteriores y Culto",
+    "descripcion": "Remite Nota Enviada por el Ciudadano Argentino German Enrique Böttger, por la Cual Solicita Autorizacion para Desempeñarse en el Cargo de Consul Honorario de la Rep. Federal de Alemania en la Ciudad de San Miguel de Tucuman, con Circunscripcion en las Provincias de Catamarca, Santiago del Estero y Tucuman.",
     "expedientes": [
       {
         "codigo": "OV-74/26-CM",
@@ -1734,7 +1821,7 @@
       "De Asuntos Constitucionales"
     ],
     "comisionCabecera": "Asuntos Constitucionales",
-    "fechaDictamen": "27/08/2026",
+    "fechaDictamen": null,
     "odLink": "https://www.senado.gob.ar/parlamentario/parlamentaria/51678/downloadOrdenDia",
     "firmantesMayoria": [
       "Agustín P. Coto",
@@ -1769,7 +1856,7 @@
       "De Asuntos Constitucionales"
     ],
     "comisionCabecera": "Asuntos Constitucionales",
-    "fechaDictamen": "27/08/2026",
+    "fechaDictamen": null,
     "odLink": "https://www.senado.gob.ar/parlamentario/parlamentaria/51677/downloadOrdenDia",
     "firmantesMayoria": [
       "Agustín P. Coto",
@@ -1804,7 +1891,7 @@
       "De Asuntos Constitucionales"
     ],
     "comisionCabecera": "Asuntos Constitucionales",
-    "fechaDictamen": "27/08/2026",
+    "fechaDictamen": null,
     "odLink": "https://www.senado.gob.ar/parlamentario/parlamentaria/51676/downloadOrdenDia",
     "firmantesMayoria": [
       "Agustín P. Coto",
@@ -1839,7 +1926,7 @@
       "De Asuntos Constitucionales"
     ],
     "comisionCabecera": "Asuntos Constitucionales",
-    "fechaDictamen": "27/08/2026",
+    "fechaDictamen": null,
     "odLink": "https://www.senado.gob.ar/parlamentario/parlamentaria/51675/downloadOrdenDia",
     "firmantesMayoria": [
       "Agustín P. Coto",
@@ -1863,7 +1950,7 @@
     "origen": "Ov",
     "categoria": "Proyecto de Ley",
     "autor": null,
-    "descripcion": "Ministerio de Relaciones Exteriores, Comercio Internacional y Culto: Remite Nota Enviada por el Ciudadano Argentino Rodolfo Ernesto Caffaro Kramer, por la Cual Solicita Autorizacion para Desempeñarse en el Cargo de Consul Honorario del Reino de Camboya, en la Ciudad Autonóma de Buenos Aires, con C",
+    "descripcion": "Ministerio de Relaciones Exteriores, Comercio Internacional y Culto: Remite Nota Enviada por el Ciudadano Argentino Rodolfo Ernesto Caffaro Kramer, por la Cual Solicita Autorizacion para Desempeñarse en el Cargo de Consul Honorario del Reino de Camboya, en la Ciudad Autonóma de Buenos Aires, con Circunscripción Consular en Todo el Territorio Nacional.",
     "expedientes": [
       {
         "codigo": "OV-300/26-CM",
@@ -1874,7 +1961,7 @@
       "De Asuntos Constitucionales"
     ],
     "comisionCabecera": "Asuntos Constitucionales",
-    "fechaDictamen": "27/08/2026",
+    "fechaDictamen": null,
     "odLink": "https://www.senado.gob.ar/parlamentario/parlamentaria/51674/downloadOrdenDia",
     "firmantesMayoria": [
       "Agustín P. Coto",
@@ -1898,7 +1985,7 @@
     "origen": "Ov",
     "categoria": "Proyecto de Ley",
     "autor": null,
-    "descripcion": "Ministerio de Relaciones Exteriores, Comercio Internacional y Culto: Remite Nota Enviada por el Ciudadano Argentino Javier Jose Calviño, por la Cual Solicita Autorizacion para Desempeñarse en el Cargo de Consul Honorario de la Republica Democratica de Timor-leste, en la Ciudad de San Isidro, Prov.",
+    "descripcion": "Ministerio de Relaciones Exteriores, Comercio Internacional y Culto: Remite Nota Enviada por el Ciudadano Argentino Javier Jose Calviño, por la Cual Solicita Autorizacion para Desempeñarse en el Cargo de Consul Honorario de la Republica Democratica de Timor-leste, en la Ciudad de San Isidro, Prov. De Bs. As., con Circunscripción Consular en Todo el Territorio Nacional.",
     "expedientes": [
       {
         "codigo": "OV-331/26-CM",
@@ -1909,7 +1996,7 @@
       "De Asuntos Constitucionales"
     ],
     "comisionCabecera": "Asuntos Constitucionales",
-    "fechaDictamen": "27/08/2026",
+    "fechaDictamen": null,
     "odLink": "https://www.senado.gob.ar/parlamentario/parlamentaria/51673/downloadOrdenDia",
     "firmantesMayoria": [
       "Agustín P. Coto",
@@ -1932,19 +2019,19 @@
     "tipoOD": "NORMAL",
     "origen": "Ov",
     "categoria": "Proyecto de Ley",
-    "autor": null,
-    "descripcion": "Ministerio de Relaciones Exteriores, Comercio Internacional y Culto: Remite Nota Enviada por el Ciudadano Argentino, Juan Luis Gonzalez Landa, por la Cual Solicita Autorizacion para Desempeñarse en el Cargo Viceconsul Honorario de los Estados Unidos Mexicanos, en la Ciudad de Mendoza, Provincia Hom",
+    "autor": "Ministerio de Relaciones Exteriores y Culto",
+    "descripcion": "Remite Nota Enviada por el Ciudadano Argentino, Juan Luis Gonzalez Landa, por la Cual Solicita Autorizacion para Desempeñarse en el Cargo Viceconsul Honorario de los Estados Unidos Mexicanos, en la Ciudad de Mendoza, Provincia Homonima, con Jurisdiccion en las Provincias de San Juan y San Luis.",
     "expedientes": [
       {
         "codigo": "OV-357/26-CM",
-        "url": "https://www.senado.gob.ar/parlamentario/comisiones/verExp/357.26/OV/CM"
+        "url": "https://www.senado.gob.ar/parlamentario/comisiones/verExp/357.26/OV/CV"
       }
     ],
     "comisiones": [
       "De Asuntos Constitucionales"
     ],
     "comisionCabecera": "Asuntos Constitucionales",
-    "fechaDictamen": "27/08/2026",
+    "fechaDictamen": null,
     "odLink": "https://www.senado.gob.ar/parlamentario/parlamentaria/51672/downloadOrdenDia",
     "firmantesMayoria": [
       "Agustín P. Coto",
@@ -1979,7 +2066,7 @@
       "De Asuntos Constitucionales"
     ],
     "comisionCabecera": "Asuntos Constitucionales",
-    "fechaDictamen": "27/08/2026",
+    "fechaDictamen": null,
     "odLink": "https://www.senado.gob.ar/parlamentario/parlamentaria/51671/downloadOrdenDia",
     "firmantesMayoria": [
       "Agustín P. Coto",
@@ -2014,7 +2101,7 @@
       "De Asuntos Constitucionales"
     ],
     "comisionCabecera": "Asuntos Constitucionales",
-    "fechaDictamen": "27/08/2026",
+    "fechaDictamen": null,
     "odLink": "https://www.senado.gob.ar/parlamentario/parlamentaria/51670/downloadOrdenDia",
     "firmantesMayoria": [
       "Agustín P. Coto",
@@ -2049,7 +2136,7 @@
       "De Asuntos Constitucionales"
     ],
     "comisionCabecera": "Asuntos Constitucionales",
-    "fechaDictamen": "27/08/2026",
+    "fechaDictamen": null,
     "odLink": "https://www.senado.gob.ar/parlamentario/parlamentaria/51669/downloadOrdenDia",
     "firmantesMayoria": [
       "Agustín P. Coto",
@@ -2084,7 +2171,7 @@
       "De Asuntos Constitucionales"
     ],
     "comisionCabecera": "Asuntos Constitucionales",
-    "fechaDictamen": "27/08/2026",
+    "fechaDictamen": null,
     "odLink": "https://www.senado.gob.ar/parlamentario/parlamentaria/51668/downloadOrdenDia",
     "firmantesMayoria": [
       "Agustín P. Coto",
@@ -2120,7 +2207,7 @@
       "De Ambiente y Desarrollo Sustentable"
     ],
     "comisionCabecera": "Asuntos Constitucionales",
-    "fechaDictamen": "27/08/2026",
+    "fechaDictamen": null,
     "odLink": "https://www.senado.gob.ar/parlamentario/parlamentaria/51667/downloadOrdenDia",
     "firmantesMayoria": [
       "Agustín P. Coto",
@@ -2165,7 +2252,7 @@
       "De Acuerdos"
     ],
     "comisionCabecera": "Acuerdos",
-    "fechaDictamen": "26/08/2026",
+    "fechaDictamen": null,
     "odLink": "https://www.senado.gob.ar/parlamentario/parlamentaria/51665/downloadOrdenDia",
     "firmantesMayoria": [
       "Juan C. Pagotto",
@@ -2197,7 +2284,7 @@
       "De Defensa Nacional"
     ],
     "comisionCabecera": "Defensa Nacional",
-    "fechaDictamen": "26/08/2026",
+    "fechaDictamen": null,
     "odLink": "https://www.senado.gob.ar/parlamentario/parlamentaria/51663/downloadOrdenDia",
     "firmantesMayoria": [
       "Luis A. Juez",
@@ -2217,7 +2304,7 @@
     "tipoOD": "NORMAL",
     "origen": "Senado",
     "categoria": "Proyecto de Declaración",
-    "autor": "Guzman Coraita y Orozco",
+    "autor": "Guzmán Coraita y Otros",
     "descripcion": "Proyecto de Declaracion que Declara de Interes la Conmemoracion del 40° Aniversario de la Constitucion de la Provincia de Salta, el 2 de Junio de 2026.",
     "expedientes": [
       {
@@ -2229,7 +2316,7 @@
       "De Educación y Cultura"
     ],
     "comisionCabecera": "Educación y Cultura",
-    "fechaDictamen": "25/08/2026",
+    "fechaDictamen": null,
     "odLink": "https://www.senado.gob.ar/parlamentario/parlamentaria/51662/downloadOrdenDia",
     "firmantesMayoria": [
       "Sonia E. Rojas Decut",
@@ -2261,7 +2348,7 @@
       "De Educación y Cultura"
     ],
     "comisionCabecera": "Educación y Cultura",
-    "fechaDictamen": "25/08/2026",
+    "fechaDictamen": null,
     "odLink": "https://www.senado.gob.ar/parlamentario/parlamentaria/51661/downloadOrdenDia",
     "firmantesMayoria": [
       "Sonia E. Rojas Decut",
@@ -2293,7 +2380,7 @@
       "De Educación y Cultura"
     ],
     "comisionCabecera": "Educación y Cultura",
-    "fechaDictamen": "25/08/2026",
+    "fechaDictamen": null,
     "odLink": "https://www.senado.gob.ar/parlamentario/parlamentaria/51660/downloadOrdenDia",
     "firmantesMayoria": [
       "Sonia E. Rojas Decut",
@@ -2328,7 +2415,7 @@
       "De Educación y Cultura"
     ],
     "comisionCabecera": "Educación y Cultura",
-    "fechaDictamen": "25/08/2026",
+    "fechaDictamen": null,
     "odLink": "https://www.senado.gob.ar/parlamentario/parlamentaria/51658/downloadOrdenDia",
     "firmantesMayoria": [
       "Sonia E. Rojas Decut",
@@ -2364,7 +2451,7 @@
       "De Educación y Cultura"
     ],
     "comisionCabecera": "Educación y Cultura",
-    "fechaDictamen": "25/08/2026",
+    "fechaDictamen": null,
     "odLink": "https://www.senado.gob.ar/parlamentario/parlamentaria/51659/downloadOrdenDia",
     "firmantesMayoria": [
       "Sonia E. Rojas Decut",
@@ -2384,7 +2471,7 @@
     "tipoOD": "NORMAL",
     "origen": "Senado",
     "categoria": "Proyecto de Declaración",
-    "autor": "Carambia",
+    "autor": "Carambia y Otros",
     "descripcion": "Proyecto de Declaracion que Declara de Interes el Libro \"a Orillas del Rio Fenix\" de los Autores Graciela Ciselli y Marcelo Hernandez.",
     "expedientes": [
       {
@@ -2396,7 +2483,7 @@
       "De Educación y Cultura"
     ],
     "comisionCabecera": "Educación y Cultura",
-    "fechaDictamen": "25/08/2026",
+    "fechaDictamen": null,
     "odLink": "https://www.senado.gob.ar/parlamentario/parlamentaria/51657/downloadOrdenDia",
     "firmantesMayoria": [
       "Sonia E. Rojas Decut",
@@ -2416,7 +2503,7 @@
     "tipoOD": "NORMAL",
     "origen": "Senado",
     "categoria": "Proyecto de Declaración",
-    "autor": "Guzman Coraita y Otros",
+    "autor": "Guzmán Coraita",
     "descripcion": "Proyecto de Declaración que Expresa Pesar por el Fallecimiento del Historiador Rosarino Miguel Angel de Marco.",
     "expedientes": [
       {
@@ -2428,7 +2515,7 @@
       "De Educación y Cultura"
     ],
     "comisionCabecera": "Educación y Cultura",
-    "fechaDictamen": "25/08/2026",
+    "fechaDictamen": null,
     "odLink": "https://www.senado.gob.ar/parlamentario/parlamentaria/51656/downloadOrdenDia",
     "firmantesMayoria": [
       "Sonia E. Rojas Decut",
@@ -2448,7 +2535,7 @@
     "tipoOD": "NORMAL",
     "origen": "Senado",
     "categoria": "Proyecto de Declaración",
-    "autor": "Fernandez Sagasti",
+    "autor": "Fernández Sagasti",
     "descripcion": "Proyecto de Declaración que Declara de Interés la Publicación y Presentación del Libro de Investigación \"Zamba de Mi Esperanza. La que Sabemos Todos\", de Roberto Mercado.",
     "expedientes": [
       {
@@ -2460,7 +2547,7 @@
       "De Educación y Cultura"
     ],
     "comisionCabecera": "Educación y Cultura",
-    "fechaDictamen": "25/08/2026",
+    "fechaDictamen": null,
     "odLink": "https://www.senado.gob.ar/parlamentario/parlamentaria/51655/downloadOrdenDia",
     "firmantesMayoria": [
       "Sonia E. Rojas Decut",
@@ -2480,7 +2567,7 @@
     "tipoOD": "NORMAL",
     "origen": "Senado",
     "categoria": "Proyecto de Declaración",
-    "autor": "Fullone y Juez",
+    "autor": "Almeida y Otros",
     "descripcion": "Proyecto de Declaración que Declara de Interes la Labor Educativa, Tecnologica y de Innovacion Desarrollada por la Escuela Prodigy, con Sedes en Diversas Localidades de las Provincias de Rio Negro y Neuquen.",
     "expedientes": [
       {
@@ -2492,7 +2579,7 @@
       "De Educación y Cultura"
     ],
     "comisionCabecera": "Educación y Cultura",
-    "fechaDictamen": "25/08/2026",
+    "fechaDictamen": null,
     "odLink": "https://www.senado.gob.ar/parlamentario/parlamentaria/51654/downloadOrdenDia",
     "firmantesMayoria": [
       "Sonia E. Rojas Decut",
@@ -2512,7 +2599,7 @@
     "tipoOD": "NORMAL",
     "origen": "Senado",
     "categoria": "Proyecto de Declaración",
-    "autor": "Rojas Decut",
+    "autor": "Valenzuela y Otros",
     "descripcion": "Proyecto de Declaracion que Declara de Interes el Primer \"Mundial de la Yerba Mate\", a Realizarse en el Museo del Mate, Caba, del 5 al 7 de Junio de 2026.",
     "expedientes": [
       {
@@ -2524,7 +2611,7 @@
       "De Educación y Cultura"
     ],
     "comisionCabecera": "Educación y Cultura",
-    "fechaDictamen": "25/08/2026",
+    "fechaDictamen": null,
     "odLink": "https://www.senado.gob.ar/parlamentario/parlamentaria/51653/downloadOrdenDia",
     "firmantesMayoria": [
       "Sonia E. Rojas Decut",
@@ -2556,7 +2643,7 @@
       "De Educación y Cultura"
     ],
     "comisionCabecera": "Educación y Cultura",
-    "fechaDictamen": "25/08/2026",
+    "fechaDictamen": null,
     "odLink": "https://www.senado.gob.ar/parlamentario/parlamentaria/51652/downloadOrdenDia",
     "firmantesMayoria": [
       "Sonia E. Rojas Decut",
@@ -2576,7 +2663,7 @@
     "tipoOD": "NORMAL",
     "origen": "Senado",
     "categoria": "Proyecto de Declaración",
-    "autor": "Lopez Florencia",
+    "autor": "López",
     "descripcion": "Proyecto de Declaración que Expresa Beneplacito por la Labor del Equipo Riojano, Ganador en el Programa Federal de Formacion \"Gestion para el Desarrollo\".",
     "expedientes": [
       {
@@ -2588,7 +2675,7 @@
       "De Educación y Cultura"
     ],
     "comisionCabecera": "Educación y Cultura",
-    "fechaDictamen": "25/08/2026",
+    "fechaDictamen": null,
     "odLink": "https://www.senado.gob.ar/parlamentario/parlamentaria/51651/downloadOrdenDia",
     "firmantesMayoria": [
       "Sonia E. Rojas Decut",
@@ -2624,7 +2711,7 @@
       "De Educación y Cultura"
     ],
     "comisionCabecera": "Educación y Cultura",
-    "fechaDictamen": "25/08/2026",
+    "fechaDictamen": null,
     "odLink": "https://www.senado.gob.ar/parlamentario/parlamentaria/51650/downloadOrdenDia",
     "firmantesMayoria": [
       "Sonia E. Rojas Decut",
@@ -2660,7 +2747,7 @@
       "De Educación y Cultura"
     ],
     "comisionCabecera": "Educación y Cultura",
-    "fechaDictamen": "25/08/2026",
+    "fechaDictamen": null,
     "odLink": "https://www.senado.gob.ar/parlamentario/parlamentaria/51649/downloadOrdenDia",
     "firmantesMayoria": [
       "Sonia E. Rojas Decut",
@@ -2680,7 +2767,7 @@
     "tipoOD": "NORMAL",
     "origen": "Senado",
     "categoria": "Proyecto de Declaración",
-    "autor": "Arce y Rojas Decut",
+    "autor": "Arce y Otros",
     "descripcion": "Proyecto de Declaración que Declara de Interes las \"Charlas Antarticas\", que Realiza la Biblioteca Popular 2 de Abril, de la Cdad. De Posadas, Prov. De Misiones.",
     "expedientes": [
       {
@@ -2692,7 +2779,7 @@
       "De Educación y Cultura"
     ],
     "comisionCabecera": "Educación y Cultura",
-    "fechaDictamen": "25/08/2026",
+    "fechaDictamen": null,
     "odLink": "https://www.senado.gob.ar/parlamentario/parlamentaria/51648/downloadOrdenDia",
     "firmantesMayoria": [
       "Sonia E. Rojas Decut",
@@ -2724,7 +2811,7 @@
       "De Defensa Nacional"
     ],
     "comisionCabecera": "Defensa Nacional",
-    "fechaDictamen": "25/08/2026",
+    "fechaDictamen": null,
     "odLink": "https://www.senado.gob.ar/parlamentario/parlamentaria/51647/downloadOrdenDia",
     "firmantesMayoria": [
       "Luis A. Juez",
@@ -2737,6 +2824,32 @@
       "Enrique M. Goerling Lara",
       "Jorge M. Capitanich"
     ]
+  },
+  {
+    "numero": "275",
+    "periodo": 2026,
+    "tipoOD": "NORMAL",
+    "origen": "Senado",
+    "categoria": "Proyecto de Ley",
+    "autor": "Mendoza y Otros",
+    "descripcion": "Proyecto de Ley que Declara Heroe Nacional a Don Bernabe Araoz.",
+    "expedientes": [
+      {
+        "codigo": "S-252/26-PL",
+        "url": "https://www.senado.gob.ar/parlamentario/comisiones/verExp/252.26/S/PL"
+      },
+      {
+        "codigo": "S-308/26-PL",
+        "url": null
+      }
+    ],
+    "comisiones": [
+      "De Defensa Nacional"
+    ],
+    "comisionCabecera": null,
+    "fechaDictamen": null,
+    "odLink": "https://www.senado.gob.ar/parlamentario/parlamentaria/51600/downloadOrdenDia",
+    "firmantesMayoria": null
   },
   {
     "numero": "272",
@@ -2756,7 +2869,7 @@
       "De Defensa Nacional"
     ],
     "comisionCabecera": "Defensa Nacional",
-    "fechaDictamen": "06/08/2026",
+    "fechaDictamen": null,
     "odLink": "https://www.senado.gob.ar/parlamentario/parlamentaria/51597/downloadOrdenDia",
     "firmantesMayoria": [
       "Luis A. Juez",
@@ -2788,7 +2901,7 @@
       "De Defensa Nacional"
     ],
     "comisionCabecera": "Defensa Nacional",
-    "fechaDictamen": "06/08/2026",
+    "fechaDictamen": null,
     "odLink": "https://www.senado.gob.ar/parlamentario/parlamentaria/51596/downloadOrdenDia",
     "firmantesMayoria": [
       "Luis A. Juez",
@@ -2808,7 +2921,7 @@
     "tipoOD": "NORMAL",
     "origen": "Senado",
     "categoria": "Proyecto de Ley",
-    "autor": "Terenzi y Otros",
+    "autor": "Terenzi",
     "descripcion": "Proyecto de Ley que Dispone la Obligatoriedad de Comercios del Rubro Gastronomico a Incluir Cartas Adaptadas con Pictogramas.",
     "expedientes": [
       {
@@ -2821,7 +2934,7 @@
       "De Industria y Comercio"
     ],
     "comisionCabecera": "Población y Desarrollo Humano",
-    "fechaDictamen": "05/08/2026",
+    "fechaDictamen": null,
     "odLink": "https://www.senado.gob.ar/parlamentario/parlamentaria/51566/downloadOrdenDia",
     "firmantesMayoria": [
       "Alicia M. A. Kirchner",
@@ -2862,7 +2975,7 @@
       "De Infraestructura, Vivienda y Transporte"
     ],
     "comisionCabecera": "Infraestructura, Vivienda y Transporte",
-    "fechaDictamen": "02/07/2026",
+    "fechaDictamen": null,
     "odLink": "https://www.senado.gob.ar/parlamentario/parlamentaria/51549/downloadOrdenDia",
     "firmantesMayoria": [
       "Beatriz L. Ávila",
@@ -2882,7 +2995,7 @@
     "tipoOD": "NORMAL",
     "origen": "Senado",
     "categoria": "Proyecto de Comunicación",
-    "autor": "Álvarez Rivero",
+    "autor": "Alvarez Rivero",
     "descripcion": "Proyecto de Comunicación que Solicita se Identifique a la R.n. N° 158 como Corredor Logístico Prioritario en el Marco de los Acuerdos Comerciales Celebrados con la Unión Europea, y los Estados Unidos de America.",
     "expedientes": [
       {
@@ -2894,7 +3007,7 @@
       "De Infraestructura, Vivienda y Transporte"
     ],
     "comisionCabecera": "Infraestructura, Vivienda y Transporte",
-    "fechaDictamen": "02/07/2026",
+    "fechaDictamen": null,
     "odLink": "https://www.senado.gob.ar/parlamentario/parlamentaria/51548/downloadOrdenDia",
     "firmantesMayoria": [
       "Beatriz L. Ávila",
@@ -2909,12 +3022,64 @@
     ]
   },
   {
+    "numero": "165",
+    "periodo": 2026,
+    "tipoOD": "NORMAL",
+    "origen": "Senado",
+    "categoria": "Proyecto de Declaración",
+    "autor": "Juez",
+    "descripcion": "Proyecto de Declaracion que Expresa Beneplacito por la Obtencion del Bicampeonato Mundial por Parte de la Selección Argentina Femenina de Futbol para Personas Ciegas, \"las Murcielagas\", en el Ibsa Women´s Blind Football World Championship, Celebrado en India.",
+    "expedientes": [
+      {
+        "codigo": "S-1801/25-PD",
+        "url": "https://www.senado.gob.ar/parlamentario/comisiones/verExp/1801.25/S/PD"
+      },
+      {
+        "codigo": "S-1817/25-PD",
+        "url": null
+      }
+    ],
+    "comisiones": [
+      "De Deporte"
+    ],
+    "comisionCabecera": null,
+    "fechaDictamen": null,
+    "odLink": "https://www.senado.gob.ar/parlamentario/parlamentaria/51490/downloadOrdenDia",
+    "firmantesMayoria": null
+  },
+  {
+    "numero": "150",
+    "periodo": 2026,
+    "tipoOD": "NORMAL",
+    "origen": "Senado",
+    "categoria": "Proyecto de Declaración",
+    "autor": "Zimmermann",
+    "descripcion": "Proyecto de Declaracion que Expresa Pesar por el Fallecimiento de la Deportista Alejandra \"Locomotora\" Oliveras, el 28 de Julio de 2025.",
+    "expedientes": [
+      {
+        "codigo": "S-1391/25-PD",
+        "url": "https://www.senado.gob.ar/parlamentario/comisiones/verExp/1391.25/S/PD"
+      },
+      {
+        "codigo": "S-1453/25-PD",
+        "url": null
+      }
+    ],
+    "comisiones": [
+      "De Deporte"
+    ],
+    "comisionCabecera": null,
+    "fechaDictamen": null,
+    "odLink": "https://www.senado.gob.ar/parlamentario/parlamentaria/51475/downloadOrdenDia",
+    "firmantesMayoria": null
+  },
+  {
     "numero": "138",
     "periodo": 2026,
     "tipoOD": "NORMAL",
     "origen": "Senado",
     "categoria": "Proyecto de Ley",
-    "autor": "De Pedro y Huala",
+    "autor": "De Pedro y Otros",
     "descripcion": "Proyecto de Ley que Establece la Realizacion de la Jornada \"Argentina Contra el Bullying: por una Escuela Libre de Acoso y Discriminacion\", en Todos los Establecimientos Educativos, Publicos y Privados, en los Niveles Obligatorios.",
     "expedientes": [
       {
@@ -2926,7 +3091,7 @@
       "De Educación y Cultura"
     ],
     "comisionCabecera": "Educación y Cultura",
-    "fechaDictamen": "23/06/2026",
+    "fechaDictamen": null,
     "odLink": "https://www.senado.gob.ar/parlamentario/parlamentaria/51463/downloadOrdenDia",
     "firmantesMayoria": [
       "Sonia E. Rojas Decut",
@@ -2946,7 +3111,7 @@
     "tipoOD": "NORMAL",
     "origen": "Senado",
     "categoria": "Proyecto de Ley",
-    "autor": "Bensusan",
+    "autor": "Bensusán",
     "descripcion": "Reproduce Proyecto de Ley que Declara Fiesta Nacional a la \"Fiesta del Ternero, la Yerra y el Pial\", en la Localidad de Gral. Acha, Prov. De la Pampa. (Ref. S. 1868/22)",
     "expedientes": [
       {
@@ -2962,7 +3127,7 @@
       "De Educación y Cultura"
     ],
     "comisionCabecera": "Educación y Cultura",
-    "fechaDictamen": "18/06/2026",
+    "fechaDictamen": null,
     "odLink": "https://www.senado.gob.ar/parlamentario/parlamentaria/51461/downloadOrdenDia",
     "firmantesMayoria": [
       "Sonia E. Rojas Decut",
@@ -2974,39 +3139,6 @@
       "Anabel Fernández Sagasti",
       "María T. M. González",
       "Fernando A. Salino. ANTECEDENTES (I) PROYECTO DE LEY El Senado y Cámara de Diputados,… Artículo 1°-. Declárese fiesta nacional a la"
-    ]
-  },
-  {
-    "numero": "135",
-    "periodo": 2026,
-    "tipoOD": "NORMAL",
-    "origen": "Cámara de Diputados",
-    "categoria": "Proyecto de Ley",
-    "autor": null,
-    "descripcion": "Proyecto de Ley en Revision que Deroga la Legislacion Obsoleta  - \" Ley de Hojarasca\" -.",
-    "expedientes": [
-      {
-        "codigo": "CD-1/26-PL",
-        "url": "https://www.senado.gob.ar/parlamentario/comisiones/verExp/1.26/CD/PL"
-      }
-    ],
-    "comisiones": [
-      "De Asuntos Constitucionales",
-      "De Legislación General"
-    ],
-    "comisionCabecera": "Asuntos Constitucionales",
-    "fechaDictamen": "17/06/2026",
-    "odLink": "https://www.senado.gob.ar/parlamentario/parlamentaria/51414/downloadOrdenDia",
-    "firmantesMayoria": [
-      "Agustín P. Coto",
-      "Nadia J. Marquéz",
-      "Carmen Álvarez Rivero",
-      "Bartolomé E. Abdala",
-      "Juan C. Pagotto",
-      "Patricia Bullrich",
-      "Mariana Juri",
-      "Eduardo H. Galaretto",
-      "Enrique M. Goerling Lara"
     ]
   },
   {
@@ -3028,9 +3160,42 @@
       "De Legislación General"
     ],
     "comisionCabecera": null,
-    "fechaDictamen": "17/06/2026",
+    "fechaDictamen": null,
     "odLink": "https://www.senado.gob.ar/parlamentario/parlamentaria/51664/downloadOrdenDia",
     "firmantesMayoria": null
+  },
+  {
+    "numero": "135",
+    "periodo": 2026,
+    "tipoOD": "NORMAL",
+    "origen": "Cámara de Diputados",
+    "categoria": "Proyecto de Ley",
+    "autor": null,
+    "descripcion": "Proyecto de Ley en Revision que Deroga la Legislacion Obsoleta  - \" Ley de Hojarasca\" -.",
+    "expedientes": [
+      {
+        "codigo": "CD-1/26-PL",
+        "url": "https://www.senado.gob.ar/parlamentario/comisiones/verExp/1.26/CD/PL"
+      }
+    ],
+    "comisiones": [
+      "De Asuntos Constitucionales",
+      "De Legislación General"
+    ],
+    "comisionCabecera": "Asuntos Constitucionales",
+    "fechaDictamen": null,
+    "odLink": "https://www.senado.gob.ar/parlamentario/parlamentaria/51414/downloadOrdenDia",
+    "firmantesMayoria": [
+      "Agustín P. Coto",
+      "Nadia J. Marquéz",
+      "Carmen Álvarez Rivero",
+      "Bartolomé E. Abdala",
+      "Juan C. Pagotto",
+      "Patricia Bullrich",
+      "Mariana Juri",
+      "Eduardo H. Galaretto",
+      "Enrique M. Goerling Lara"
+    ]
   },
   {
     "numero": "134",
@@ -3038,7 +3203,7 @@
     "tipoOD": "NORMAL",
     "origen": "Senado",
     "categoria": "Proyecto de Ley",
-    "autor": "Marks y Soria",
+    "autor": "Marks y Otros",
     "descripcion": "Proyecto de Ley que Transfiere a Título Gratuito a Favor de la Asociación Civil Club Deportivo y Social Villa los Coihues, un Inmueble Propiedad del Estado Nacional Sito en la Loc. De San Carlos de Bariloche, Prov. De Rio Negro.",
     "expedientes": [
       {
@@ -3050,7 +3215,7 @@
       "De Asuntos Administrativos y Municipales"
     ],
     "comisionCabecera": "Asuntos Administrativos y Municipales",
-    "fechaDictamen": "17/06/2026",
+    "fechaDictamen": null,
     "odLink": "https://www.senado.gob.ar/parlamentario/parlamentaria/51413/downloadOrdenDia",
     "firmantesMayoria": [
       "Daniel R. Kroneberger",
@@ -3082,7 +3247,7 @@
       "De Asuntos Administrativos y Municipales"
     ],
     "comisionCabecera": "Asuntos Administrativos y Municipales",
-    "fechaDictamen": "17/06/2026",
+    "fechaDictamen": null,
     "odLink": "https://www.senado.gob.ar/parlamentario/parlamentaria/51412/downloadOrdenDia",
     "firmantesMayoria": [
       "Daniel R. Kroneberger",
@@ -3118,7 +3283,7 @@
       "De Asuntos Administrativos y Municipales"
     ],
     "comisionCabecera": "Asuntos Administrativos y Municipales",
-    "fechaDictamen": "17/06/2026",
+    "fechaDictamen": null,
     "odLink": "https://www.senado.gob.ar/parlamentario/parlamentaria/51411/downloadOrdenDia",
     "firmantesMayoria": [
       "Daniel R. Kroneberger",
@@ -3138,7 +3303,7 @@
     "tipoOD": "NORMAL",
     "origen": "Senado",
     "categoria": "Proyecto de Ley",
-    "autor": "Galaretto y Otros",
+    "autor": "Galaretto",
     "descripcion": "Proyecto de Ley que Transfiere a Titulo Gratuito a Favor de la Municipalidad de San Javier Diversos Inmuebles Propiedad del Estado Nacional Sitos en la Prov. De Santa Fe",
     "expedientes": [
       {
@@ -3150,7 +3315,7 @@
       "De Asuntos Administrativos y Municipales"
     ],
     "comisionCabecera": "Asuntos Administrativos y Municipales",
-    "fechaDictamen": "17/06/2026",
+    "fechaDictamen": null,
     "odLink": "https://www.senado.gob.ar/parlamentario/parlamentaria/51410/downloadOrdenDia",
     "firmantesMayoria": [
       "Daniel R. Kroneberger",
@@ -3170,7 +3335,7 @@
     "tipoOD": "NORMAL",
     "origen": "Senado",
     "categoria": "Proyecto de Ley",
-    "autor": "Ledesma Abdala",
+    "autor": "Ledesma Abdala de Zamora",
     "descripcion": "Proyecto de Ley que Transfiere a Titulo Gratuito a Favor de la Universidad Nacional de Santiago del Estero un Inmueble Propiedad del Estado Nacional Ubicado en la Av. Belgrano (S) N° 2180 de la Ciudad Capital de la Provincia de Santiago del Estero.",
     "expedientes": [
       {
@@ -3186,7 +3351,7 @@
       "De Asuntos Administrativos y Municipales"
     ],
     "comisionCabecera": "Asuntos Administrativos y Municipales",
-    "fechaDictamen": "17/06/2026",
+    "fechaDictamen": null,
     "odLink": "https://www.senado.gob.ar/parlamentario/parlamentaria/51409/downloadOrdenDia",
     "firmantesMayoria": [
       "Daniel R. Kroneberger",
@@ -3219,7 +3384,7 @@
       "De Ambiente y Desarrollo Sustentable"
     ],
     "comisionCabecera": "Justicia y Asuntos Penales",
-    "fechaDictamen": "09/06/2026",
+    "fechaDictamen": null,
     "odLink": "https://www.senado.gob.ar/parlamentario/parlamentaria/51351/downloadOrdenDia",
     "firmantesMayoria": [
       "Gonzalo Guzmán Coraita",
@@ -3239,74 +3404,12 @@
     ]
   },
   {
-    "numero": "113",
-    "periodo": 2026,
-    "tipoOD": "NORMAL",
-    "origen": "Poder Ejecutivo",
-    "categoria": "Proyecto de Ley",
-    "autor": null,
-    "descripcion": "Mensaje N° 111/19 y Proyecto de Ley que Aprueba la Reforma del Convenio Interamericano sobre Permiso Internacional de Radioaficionado, Adoptado en la Cdad. De Washington D.c., Estados Unidos de America, el 4 de Junio de 2018.",
-    "expedientes": [
-      {
-        "codigo": "PE-150/19-PL",
-        "url": "https://www.senado.gob.ar/parlamentario/comisiones/verExp/150.19/PE/PL"
-      }
-    ],
-    "comisiones": [
-      "De Relaciones Exteriores y Culto"
-    ],
-    "comisionCabecera": "Relaciones Exteriores y Culto",
-    "fechaDictamen": "03/06/2026",
-    "odLink": "https://www.senado.gob.ar/parlamentario/parlamentaria/51339/downloadOrdenDia",
-    "firmantesMayoria": [
-      "Francisco M. Paoltroni",
-      "Nadia J. Márquez",
-      "Ivanna M. Arrascaeta",
-      "Carmen Álvarez Rivero",
-      "Gonzalo Guzmán Coraita",
-      "María B. Monte de Oca",
-      "Sonia E. Rojas Decut",
-      "Eduardo A. Vischi",
-      "Carolina Losada",
-      "Rodolfo A. Suárez",
-      "Enrique M. Goerling Lara",
-      "Guillermo Andrada",
-      "Juan L. Manzur"
-    ]
-  },
-  {
-    "numero": "113",
-    "periodo": 2026,
-    "tipoOD": "ANEXO",
-    "origen": "Poder Ejecutivo",
-    "categoria": "Proyecto de Ley",
-    "autor": null,
-    "descripcion": "Mensaje N° 111/19 y Proyecto de Ley que Aprueba la Reforma del Convenio Interamericano sobre Permiso Internacional de Radioaficionado, Adoptado en la Cdad. De Washington D.c., Estados Unidos de America, el 4 de Junio de 2018.",
-    "expedientes": [
-      {
-        "codigo": "PE-150/19-PL",
-        "url": "https://www.senado.gob.ar/parlamentario/comisiones/verExp/150.19/PE/PL"
-      }
-    ],
-    "comisiones": [
-      "De Relaciones Exteriores y Culto"
-    ],
-    "comisionCabecera": "Relaciones Exteriores y Culto",
-    "fechaDictamen": "03/06/2026",
-    "odLink": "https://www.senado.gob.ar/parlamentario/parlamentaria/51359/downloadOrdenDia",
-    "firmantesMayoria": [
-      "Marcelo N. Lewandowski",
-      "Jorge M. Capitanich",
-      "Adán H. Bahl"
-    ]
-  },
-  {
     "numero": "111",
     "periodo": 2026,
     "tipoOD": "NORMAL",
     "origen": "Senado",
     "categoria": "Proyecto de Comunicación",
-    "autor": "Capitanich y Otros",
+    "autor": "Capitanich",
     "descripcion": "Proyecto de Comunicación que Solicita Instruir al Consejo Nacional de Calidad para la Adopcion del Simbolo de Accesibilidad Universal.",
     "expedientes": [
       {
@@ -3318,7 +3421,7 @@
       "De Población y Desarrollo Humano"
     ],
     "comisionCabecera": "Población y Desarrollo Humano",
-    "fechaDictamen": "03/06/2026",
+    "fechaDictamen": null,
     "odLink": "https://www.senado.gob.ar/parlamentario/parlamentaria/51336/downloadOrdenDia",
     "firmantesMayoria": [
       "Alicia M. A. Kirchner",
@@ -3351,7 +3454,7 @@
       "De Población y Desarrollo Humano"
     ],
     "comisionCabecera": "Población y Desarrollo Humano",
-    "fechaDictamen": "02/06/2026",
+    "fechaDictamen": null,
     "odLink": "https://www.senado.gob.ar/parlamentario/parlamentaria/51335/downloadOrdenDia",
     "firmantesMayoria": [
       "Alicia M. A. Kirchner",
@@ -3384,7 +3487,7 @@
       "De Población y Desarrollo Humano"
     ],
     "comisionCabecera": "Población y Desarrollo Humano",
-    "fechaDictamen": "02/06/2026",
+    "fechaDictamen": null,
     "odLink": "https://www.senado.gob.ar/parlamentario/parlamentaria/51334/downloadOrdenDia",
     "firmantesMayoria": [
       "Alicia M. A. Kirchner",
@@ -3427,7 +3530,7 @@
       "De Población y Desarrollo Humano"
     ],
     "comisionCabecera": "Población y Desarrollo Humano",
-    "fechaDictamen": "02/06/2026",
+    "fechaDictamen": null,
     "odLink": "https://www.senado.gob.ar/parlamentario/parlamentaria/51333/downloadOrdenDia",
     "firmantesMayoria": [
       "Alicia M. A. Kirchner",
@@ -3454,7 +3557,7 @@
     "tipoOD": "NORMAL",
     "origen": "Senado",
     "categoria": "Proyecto de Comunicación",
-    "autor": "Kirchner y Otros",
+    "autor": "Kirchner",
     "descripcion": "Proyecto de Comunicación que Solicita Informes sobre el Estado de los Programas Sociales Volver al Trabajo y de Acompañamiento Social.",
     "expedientes": [
       {
@@ -3474,7 +3577,7 @@
       "De Población y Desarrollo Humano"
     ],
     "comisionCabecera": "Población y Desarrollo Humano",
-    "fechaDictamen": "02/06/2026",
+    "fechaDictamen": null,
     "odLink": "https://www.senado.gob.ar/parlamentario/parlamentaria/51332/downloadOrdenDia",
     "firmantesMayoria": [
       "Kirchner",
@@ -3495,7 +3598,7 @@
     "tipoOD": "NORMAL",
     "origen": "Senado",
     "categoria": "Proyecto de Ley",
-    "autor": "Losada y Otros",
+    "autor": "Losada",
     "descripcion": "Proyecto de Ley que Modifica el Codigo Penal de la Nacion, sobre Falsas Denuncias.",
     "expedientes": [
       {
@@ -3507,7 +3610,7 @@
       "De Justicia y Asuntos Penales"
     ],
     "comisionCabecera": "Justicia y Asuntos Penales",
-    "fechaDictamen": "08/04/2026",
+    "fechaDictamen": null,
     "odLink": "https://www.senado.gob.ar/parlamentario/parlamentaria/51221/downloadOrdenDia",
     "firmantesMayoria": [
       "Carolina Losada",
@@ -3517,71 +3620,6 @@
       "Pablo D. Blanco",
       "Flavio S. Fama",
       "Mariana Juri"
-    ]
-  },
-  {
-    "numero": "5",
-    "periodo": 2026,
-    "tipoOD": "NORMAL",
-    "origen": "Poder Ejecutivo",
-    "categoria": "Acuerdo",
-    "autor": null,
-    "descripcion": "Mensaje Nº 69/24 que Solicita Acuerdo para Promover al Grado Inmediato Superior, con Fecha 31 de Diciembre de 2024, a Personal Militar Superior de la Fuerza Aèrea Argentina.",
-    "expedientes": [
-      {
-        "codigo": "PE-145/24-AC",
-        "url": "https://www.senado.gob.ar/parlamentario/comisiones/verExp/145.24/PE/AC"
-      }
-    ],
-    "comisiones": [
-      "De Acuerdos"
-    ],
-    "comisionCabecera": "Acuerdos",
-    "fechaDictamen": "27/03/2026",
-    "odLink": "https://www.senado.gob.ar/parlamentario/parlamentaria/51210/downloadOrdenDia",
-    "firmantesMayoria": [
-      "Juan C. Pagotto",
-      "Carlos O. Arce",
-      "Beatriz L. Ávila",
-      "Patricia Bullrich",
-      "Agustín P. Coto",
-      "Carlos M. Espínola",
-      "Juan C. Godoy",
-      "Enrique M. Goerling Lara",
-      "Nadia J. Márquez",
-      "Mercedes G. Valenzuela"
-    ]
-  },
-  {
-    "numero": "4",
-    "periodo": 2026,
-    "tipoOD": "NORMAL",
-    "origen": "Poder Ejecutivo",
-    "categoria": "Acuerdo",
-    "autor": null,
-    "descripcion": "Mensaje N° 75/22 que Solicita Acuerdo para Promover al Grado Inmediato Superior al Personal Militar Superior de la Fuerza Aérea Argentina, con Fecha 31 de Diciembre de 2021",
-    "expedientes": [
-      {
-        "codigo": "PE-96/22-AC",
-        "url": "https://www.senado.gob.ar/parlamentario/comisiones/verExp/96.22/PE/AC"
-      }
-    ],
-    "comisiones": [
-      "De Acuerdos"
-    ],
-    "comisionCabecera": "Acuerdos",
-    "fechaDictamen": "27/03/2026",
-    "odLink": "https://www.senado.gob.ar/parlamentario/parlamentaria/51209/downloadOrdenDia",
-    "firmantesMayoria": [
-      "Juan C. Pagotto",
-      "Carlos O. Arce",
-      "Beatriz L. Ávila",
-      "Agustín P. Coto",
-      "Carlos M. Espínola",
-      "Juan C. Godoy",
-      "Enrique M. Goerling Lara",
-      "Nadia  J. Márquez",
-      "Mercedes G. Valenzuela"
     ]
   }
 ]
