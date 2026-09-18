@@ -2,6 +2,33 @@
   {
     "numero": "402",
     "periodo": 2026,
+    "tipoOD": "ANEXO",
+    "origen": "Cámara de Diputados",
+    "categoria": "Proyecto de Ley",
+    "autor": null,
+    "descripcion": "Proyecto de Ley en Revision que Modifica la Ley 25.565, de Presupuesto General de Gastos de la Adm. Nacional para el Ejercicio 2002 sobre Readecuacion del Regimen de Subsidios a los Consumos Residenciales de Gas Natural en Zonas Frias, Regularizacion de Deudas Electricas y Deroga los Decretos 277/2022 y 929/2013.",
+    "expedientes": [
+      {
+        "codigo": "CD-3/26-PL",
+        "url": "https://www.senado.gob.ar/parlamentario/comisiones/verExp/3.26/CD/PL"
+      },
+      {
+        "codigo": "S-909/26-PL",
+        "url": null
+      }
+    ],
+    "comisiones": [
+      "De Minería, Energía y Combustibles",
+      "De Presupuesto y Hacienda"
+    ],
+    "comisionCabecera": null,
+    "fechaDictamen": null,
+    "odLink": "https://www.senado.gob.ar/parlamentario/parlamentaria/51736/downloadOrdenDia",
+    "firmantesMayoria": null
+  },
+  {
+    "numero": "402",
+    "periodo": 2026,
     "tipoOD": "NORMAL",
     "origen": "Cámara de Diputados",
     "categoria": "Proyecto de Ley",
@@ -906,6 +933,29 @@
       "María T. M. González",
       "Fernando A. Salino"
     ]
+  },
+  {
+    "numero": "372",
+    "periodo": 2026,
+    "tipoOD": "ANEXO",
+    "origen": "Cámara de Diputados",
+    "categoria": "Proyecto de Ley",
+    "autor": null,
+    "descripcion": "Proyecto de Ley en Revision que Modifica las Leyes 11683 y 27799 (T.o. 1998 y S/m) Relativas a la Modalidad Simplificada de Declaracion Jurada del Impuesto a las Ganancias y en Materia de Prescripcion Tributaria, y 25.191 Referente al Regimen Sancionatorio.",
+    "expedientes": [
+      {
+        "codigo": "CD-8/26-PL",
+        "url": "https://www.senado.gob.ar/parlamentario/comisiones/verExp/8.26/CD/PL"
+      }
+    ],
+    "comisiones": [
+      "De Justicia y Asuntos Penales",
+      "De Presupuesto y Hacienda"
+    ],
+    "comisionCabecera": null,
+    "fechaDictamen": null,
+    "odLink": "https://www.senado.gob.ar/parlamentario/parlamentaria/51735/downloadOrdenDia",
+    "firmantesMayoria": null
   },
   {
     "numero": "372",
