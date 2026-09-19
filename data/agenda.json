@@ -7977,8 +7977,8 @@
       ],
       "expositores": null,
       "tipo": "bicameral",
-      "boletin_id": 2371,
-      "boletin_numero": "120/26"
+      "boletin_id": 2373,
+      "boletin_numero": "121/26"
     },
     {
       "seccion": "senadores",
@@ -8003,8 +8003,8 @@
       ],
       "expositores": null,
       "tipo": "senadores",
-      "boletin_id": 2371,
-      "boletin_numero": "120/26"
+      "boletin_id": 2373,
+      "boletin_numero": "121/26"
     },
     {
       "seccion": "senadores",
@@ -8225,8 +8225,191 @@
       ],
       "expositores": null,
       "tipo": "senadores",
-      "boletin_id": 2371,
-      "boletin_numero": "120/26"
+      "boletin_id": 2373,
+      "boletin_numero": "121/26"
+    },
+    {
+      "seccion": "senadores",
+      "dia": "MIÉRCOLES",
+      "fecha": "23/09",
+      "hora": "11:30",
+      "modalidad": "",
+      "comisiones": [
+        "RELACIONES EXTERIORES Y CULTO",
+        "INDUSTRIA Y COMERCIO"
+      ],
+      "salon": "ILLIA",
+      "salon_completo": "ILLIA",
+      "temario": [
+        {
+          "numero": "PE-854/97",
+          "extracto": "MENSAJE N° 1451/97 Y PROYECTO DE LEY APROBANDO EL TRATADO DE COOPERACIÓN EN MATERIA DE PATENTES (PCT) ELABORADO EN WASHINGTON EL 19 DE JUNIO DE 1970, ENMENDADO EL 28 DE SETIEMBRE DE 1979 Y MODIFICADO EL 3 DE FEBRERO DE 1984 Y EL REGLAMENTO DEL TRATADO DE COOPERACIÓN EN MATERIA DE PATENTES (PCT) QUE ENTRÓ EN VIGOR EL 1 DE ENERO DE 1993"
+        }
+      ],
+      "expositores": null,
+      "tipo": "senadores",
+      "boletin_id": 2373,
+      "boletin_numero": "121/26"
+    },
+    {
+      "seccion": "senadores",
+      "dia": "MIÉRCOLES",
+      "fecha": "23/09",
+      "hora": "16:00",
+      "modalidad": "",
+      "comisiones": [
+        "ASUNTOS CONSTITUCIONALES",
+        "RELACIONES EXTERIORES Y CULTO"
+      ],
+      "salon": "ILLIA",
+      "salon_completo": "ILLIA",
+      "temario": [
+        {
+          "numero": "S-1563/26",
+          "extracto": "MOISÉS Y OTROS: PROYECTO DE LEY QUE CREA LA COMISIÓN BICAMERAL PERMANENTE SOBRE LA CUESTIÓN MALVINAS Y EL ATLÁNTICO SUR"
+        }
+      ],
+      "expositores": null,
+      "tipo": "senadores",
+      "boletin_id": 2373,
+      "boletin_numero": "121/26"
+    },
+    {
+      "seccion": "senadores",
+      "dia": "MARTES",
+      "fecha": "22/09",
+      "hora": "11:30",
+      "modalidad": "",
+      "comisiones": [
+        "POBLACIÓN Y DESARROLLO HUMANO"
+      ],
+      "salon": "FRONDIZI - MORENO",
+      "salon_completo": "FRONDIZI - MORENO",
+      "temario": [
+        {
+          "numero": "S-954/26",
+          "extracto": "CORPACCI: REPRODUCE PROYECTO DE LEY DE ACCESO A LA INFORMACIÓN, EN PERSONAS CON DISCAPACIDAD QUE MANIFIESTAN DIFICULTADES EN LA COMUNICACIÓN Y EL LENGUAJE VERBAL. (REF"
+        },
+        {
+          "numero": "S-30/24",
+          "extracto": ")"
+        },
+        {
+          "numero": "S-1250/26",
+          "extracto": "BEDIA: PROYECTO DE LEY QUE INSTITUYE EL MES DE AGOSTO DE CADA AÑO COMO EL \"MES DE LA VIDA Y LA FAMILIA\""
+        },
+        {
+          "numero": "S-1424/26",
+          "extracto": "MENDOZA Y OTROS: PROYECTO DE LEY QUE CREA EL PROGRAMA NACIONAL DE INCLUSIÓN Y ASISTENCIA DIGITAL PARA PERSONAS MAYORES"
+        },
+        {
+          "numero": "S-334/25",
+          "extracto": "OLIVERA LUCERO: PROYECTO DE DECLARACIÓN QUE ADHIERE AL \"DÍA MUNDIAL DEL SÍNDROME DE DOWN\", EL 21 DE MARZO"
+        },
+        {
+          "numero": "S-589/25",
+          "extracto": "DURÉ: PROYECTO DE DECLARACIÓN QUE ADHIERE AL DÍA INTERNACIONAL DE LA LUCHA CONTRA EL MALTRATO INFANTIL, EL 25 DE ABRIL DE CADA AÑO"
+        },
+        {
+          "numero": "S-1187/25",
+          "extracto": "LÓPEZ: PROYECTO DE DECLARACIÓN QUE DECLARA DE INTERÉS LA LABOR DE LA ONG CILSA POR SU PROGRAMA NACIONAL DE BECAS Y OPORTUNIDADES Y LA CAMPAÑA \"MÁS LEJOS PARA LLEGAR A MÁS\""
+        },
+        {
+          "numero": "S-1223/25",
+          "extracto": "ZIMMERMANN: PROYECTO DE DECLARACIÓN QUE ADHIERE AL \"DÍA MUNDIAL DE LA POBLACIÓN\" EL 11 DE JULIO DE 2025"
+        },
+        {
+          "numero": "S-1259/25",
+          "extracto": "ZIMMERMANN: PROYECTO DE DECLARACIÓN QUE ADHIERE AL \"DÍA DE LA MEMORIA DE LOS PUEBLOS INDÍGENAS Y REAFIRMACIÓN DE SUS DERECHOS\", QUE SE CONMEMORA EN LA PROVINCIA DEL CHACO, EL 19 DE JULIO"
+        },
+        {
+          "numero": "S-1342/25",
+          "extracto": "KIRCHNER: PROYECTO DE DECLARACIÓN QUE ADHIERE AL \"DÍA INTERNACIONAL DE LOS PUEBLOS INDÍGENAS\", EL 9 DE AGOSTO DE CADA AÑO"
+        },
+        {
+          "numero": "S-1349/25",
+          "extracto": "ZIMMERMANN: PROYECTO DE DECLARACIÓN QUE ADHIERE AL \"DÍA INTERNACIONAL DE LOS PUEBLOS INDÍGENAS\", A CONMEMORARSE EL 9 DE AGOSTO DE 2025"
+        },
+        {
+          "numero": "S-1343/25",
+          "extracto": "KIRCHNER: PROYECTO DE DECLARACIÓN QUE ADHIERE A LA CONMEMORACIÓN DEL \"DÍA PROVINCIAL DE LA DISCAPACIDAD EN SANTA CRUZ\", EL 8 DE AGOSTO DE CADA AÑO"
+        },
+        {
+          "numero": "S-1536/25",
+          "extracto": "ROJAS DECUT Y ARCE: PROYECTO DE DECLARACIÓN QUE DECLARA DE INTERÉS LA REALIZACIÓN DE LA 45° EDICIÓN DE LA \"FIESTA NACIONAL DEL INMIGRANTE\", A DESARROLLARSE EN EL PARQUE DE LAS NACIONES DE LA CDAD. DE OBERÁ, PROV.. DE MISIONES, DEL 4 AL 14 DE SEPTIEMBRE DE 2025"
+        },
+        {
+          "numero": "S-1773/25",
+          "extracto": "ZIMMERMANN: PROYECTO DE DECLARACIÓN QUE ADHIERE AL DÍA INTERNACIONAL PARA LA ERRADICACIÓN DE LA POBREZA, QUE SE CONMEMORA EL 17 DE OCTUBRE DE CADA AÑO"
+        },
+        {
+          "numero": "S-1116/26",
+          "extracto": "MARKS: PROYECTO DE DECLARACIÓN QUE DECLARA DE INTERÉS LA 4° SEMANA DE VISIBILIZACIÓN DE LOS DERECHOS DE LAS PERSONAS EN SITUACIÓN DE CALLE, EN LA CDAD. DE SAN CARLOS DE BARILOCHE, PROV. DE RIO NEGRO, DEL 18 AL 22 DE AGOSTO DE 2026"
+        },
+        {
+          "numero": "S-1426/26",
+          "extracto": "ARCE Y ROJAS DECUT: PROYECTO DE DECLARACIÓN QUE DECLARA DE INTERÉS LA 46° EDICIÓN DE LA \"FIESTA NACIONAL DEL INMIGRANTE\", EN LA CDAD. DE OBERÁ, PROV. DE MISIONES, DEL 3 AL 13 DE SEPTIEMBRE DE 2026"
+        },
+        {
+          "numero": "S-1589/26",
+          "extracto": "CORROZA: PROYECTO DE DECLARACIÓN QUE DECLARA DE INTERÉS LA REALIZACIÓN DEL I CONGRESO INTEGRAL DE ADOLESCENCIAS Y JUVENTUDES - CIAJ 2026, A REALIZARSE EN LA PROV. DEL NEUQUÉN, EL 9 DE OCTUBRE"
+        }
+      ],
+      "expositores": null,
+      "tipo": "senadores",
+      "boletin_id": 2373,
+      "boletin_numero": "121/26"
+    },
+    {
+      "seccion": "senadores",
+      "dia": "MARTES",
+      "fecha": "22/09",
+      "hora": "13:30",
+      "modalidad": "",
+      "comisiones": [
+        "LEGISLACIÓN GENERAL",
+        "POBLACIÓN Y DESARROLLO HUMANO"
+      ],
+      "salon": "FRONDIZI - MORENO",
+      "salon_completo": "FRONDIZI - MORENO",
+      "temario": [
+        {
+          "numero": "S-528/25",
+          "extracto": "CRISTINA: PROYECTO DE LEY DE PROMOCIÓN DE LOS DERECHOS DE LAS NIÑAS, NIÑOS Y ADOLESCENTES A LA DIGNIDAD, A LA INTEGRIDAD PERSONAL Y UNA VIDA LIBRE DE VIOLENCIAS, A TRAVÉS DE PROTOCOLOS PARA LA PREVENCIÓN, DETECCIÓN Y ACTUACIÓN ANTE SITUACIONES DE VIOLENCIA"
+        },
+        {
+          "numero": "S-1566/25",
+          "extracto": "VISCHI Y OTROS: REPRODUCE PROYECTO DE LEY DE ERRADICACIÓN DE LA VIOLENCIA EN LA INFANCIA Y ADOLESCENCIA. (REF"
+        },
+        {
+          "numero": "S-1455/23",
+          "extracto": ")"
+        },
+        {
+          "numero": "S-190/25",
+          "extracto": "BENSUSÁN: REPRODUCE PROYECTO DE LEY QUE CREA EL REGISTRO NACIONAL DE PERSONAS DEUDORAS ALIMENTARIAS EN MORA. (REF"
+        },
+        {
+          "numero": "S-9/23",
+          "extracto": ")"
+        },
+        {
+          "numero": "S-53/25",
+          "extracto": "GARCÍA LARRABURU: PROYECTO DE LEY QUE CREA EL REGISTRO NACIONAL DE DEUDORES ALIMENTARIOS MOROSOS. (RENDAM)"
+        },
+        {
+          "numero": "S-205/26",
+          "extracto": "FERNÁNDEZ SAGASTI: REPRODUCE PROYECTO DE LEY INTEGRAL PARA ASEGURAR EL DERECHO ALIMENTARIO DE NIÑAS, NIÑOS Y ADOLESCENTES. (REF"
+        },
+        {
+          "numero": "S-2182/24",
+          "extracto": ")"
+        }
+      ],
+      "expositores": null,
+      "tipo": "senadores",
+      "boletin_id": 2373,
+      "boletin_numero": "121/26"
     }
   ]
 }
