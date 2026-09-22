@@ -31,6 +31,23 @@
       "suspendida": true,
       "actualizado": "2026-09-22T15:43:39.715Z",
       "actualizado_por": "Paulina"
+    },
+    {
+      "fecha": "23/09",
+      "hora": "16:00",
+      "comisiones": [
+        "ASUNTOS CONSTITUCIONALES",
+        "RELACIONES EXTERIORES Y CULTO"
+      ],
+      "hora_nueva": "11:30",
+      "salon_nuevo": null,
+      "tipo_nuevo": null,
+      "temario_extra": null,
+      "expositores_extra": null,
+      "nota": null,
+      "suspendida": false,
+      "actualizado": "2026-09-22T15:46:21.091Z",
+      "actualizado_por": "Paulina"
     }
   ]
 }
