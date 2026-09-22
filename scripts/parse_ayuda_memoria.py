@@ -65,6 +65,13 @@ OVERRIDES_MINORIA_SIN_FIRMANTES = {
     (135, 2026): "https://www.senado.gob.ar/parlamentario/parlamentaria/51664/downloadOrdenDia",
 }
 
+# (numero, periodo) -> autor correcto, para los casos en que RE_AUTOR no
+# reconoce a todos los firmantes por un typo en el texto de la planilla
+# (ej. "señora senado Huala" en vez de "señora senadora Huala").
+OVERRIDES_AUTOR = {
+    (138, 2026): "de Pedro y Huala",
+}
+
 RE_URL_ORIGEN_TIPO = re.compile(r"/([A-Z]+)/([A-Z]+)$")
 RE_AUTOR = re.compile(
     r"se\w*or\w*\s+senador\w*\s+"
@@ -182,7 +189,7 @@ def leer_hoja(ws, tiene_cabecera):
         origen, categoria = _origen_y_categoria(exp_url)
 
         contenido = re.sub(r"\s+", " ", ws.cell(row=r, column=3).value or "").strip()
-        autor = _extraer_autor(contenido)
+        autor = OVERRIDES_AUTOR.get((nro, anio), _extraer_autor(contenido))
 
         firmantes_txt = ws.cell(row=r, column=4).value or ""
         comision = ws.cell(row=r, column=5).value if tiene_cabecera else None
