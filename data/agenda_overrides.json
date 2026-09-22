@@ -14,6 +14,23 @@
       "suspendida": false,
       "actualizado": "2026-09-10T15:59:44.331Z",
       "actualizado_por": "Paulina"
+    },
+    {
+      "fecha": "23/09",
+      "hora": "11:30",
+      "comisiones": [
+        "RELACIONES EXTERIORES Y CULTO",
+        "INDUSTRIA Y COMERCIO"
+      ],
+      "hora_nueva": null,
+      "salon_nuevo": null,
+      "tipo_nuevo": null,
+      "temario_extra": null,
+      "expositores_extra": null,
+      "nota": null,
+      "suspendida": true,
+      "actualizado": "2026-09-22T15:43:39.715Z",
+      "actualizado_por": "Paulina"
     }
   ]
 }
