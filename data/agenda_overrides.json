@@ -64,6 +64,23 @@
       "suspendida": false,
       "actualizado": "2026-09-22T16:05:29.581Z",
       "actualizado_por": "Paulina"
+    },
+    {
+      "fecha": "22/09",
+      "hora": "13:30",
+      "comisiones": [
+        "LEGISLACIÓN GENERAL",
+        "POBLACIÓN Y DESARROLLO HUMANO"
+      ],
+      "hora_nueva": null,
+      "salon_nuevo": null,
+      "tipo_nuevo": "asesores",
+      "temario_extra": null,
+      "expositores_extra": null,
+      "nota": null,
+      "suspendida": false,
+      "actualizado": "2026-09-22T16:06:49.570Z",
+      "actualizado_por": "Paulina"
     }
   ]
 }
