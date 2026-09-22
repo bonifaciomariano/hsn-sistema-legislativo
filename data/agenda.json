@@ -7977,8 +7977,8 @@
       ],
       "expositores": null,
       "tipo": "bicameral",
-      "boletin_id": 2374,
-      "boletin_numero": "121/26"
+      "boletin_id": 2375,
+      "boletin_numero": "122/26"
     },
     {
       "seccion": "senadores",
@@ -8003,8 +8003,8 @@
       ],
       "expositores": null,
       "tipo": "senadores",
-      "boletin_id": 2374,
-      "boletin_numero": "121/26"
+      "boletin_id": 2375,
+      "boletin_numero": "122/26"
     },
     {
       "seccion": "senadores",
@@ -8019,8 +8019,8 @@
       "salon_completo": "FRONDIZI - MORENO",
       "temario": [
         {
-          "numero": "",
-          "extracto": "PROYECTOS DE LEY: INSTITUTO FEDERAL DE EVALUACIÓN Y MEJORA EDUCATIVA"
+          "numero": "CD-14/26",
+          "extracto": "PROYECTO DE LEY EN REVISIÓN QUE DECLARA CAPITAL NACIONAL DEL ECOTURISMO A LA PROV. DE TUCUMÁN. INSTITUTO FEDERAL DE EVALUACIÓN Y MEJORA EDUCATIVA"
         },
         {
           "numero": "S-1073/26",
@@ -8221,12 +8221,20 @@
         {
           "numero": "S-1596/26",
           "extracto": "BEDIA: PROYECTO DE DECLARACIÓN QUE EXPRESA BENEPLÁCITO POR LA CONMEMORACIÓN DEL \"DÍA DE LA FLOR PROVINCIAL DE JUJUY\" QUE SE CELEBRA EN LA PROV. DE JUJUY, EL 1° DE SEPTIEMBRE DE CADA AÑO"
+        },
+        {
+          "numero": "S-1202/26",
+          "extracto": "SALINO: PROYECTO DE DECLARACIÓN QUE EXPRESA BENEPLÁCITO POR EL 100° ANIVERSARIO DE LA ESCUELA TÉCNICA N° 15 \"INGENIERO AGUSTÍN MERCAU\", DE LA CDAD. DE VILLA MERCEDES, PROV. DE SAN LUIS, EL 9 DE AGOSTO DE 2026"
+        },
+        {
+          "numero": "S-1272/26",
+          "extracto": "FERNÁNDEZ SAGASTI: PROYECTO DE DECLARACIÓN QUE DECLARA DE INTERÉS LA OBRA JURÍDICA \"CONSTITUCIONALISMO DELIBERATIVO: OBJECIONES A LA JURISDICCIÓN CONSTITUCIONAL Y DEMOCRACIA DELIBERATIVA\", DE AUTORÍA DEL JURISTA MENDOCINO DR. IGNACIO GIUFFRE"
         }
       ],
       "expositores": null,
       "tipo": "senadores",
-      "boletin_id": 2374,
-      "boletin_numero": "121/26"
+      "boletin_id": 2375,
+      "boletin_numero": "122/26"
     },
     {
       "seccion": "senadores",
@@ -8248,8 +8256,8 @@
       ],
       "expositores": null,
       "tipo": "senadores",
-      "boletin_id": 2374,
-      "boletin_numero": "121/26"
+      "boletin_id": 2375,
+      "boletin_numero": "122/26"
     },
     {
       "seccion": "senadores",
@@ -8267,12 +8275,20 @@
         {
           "numero": "S-1563/26",
           "extracto": "MOISÉS Y OTROS: PROYECTO DE LEY QUE CREA LA COMISIÓN BICAMERAL PERMANENTE SOBRE LA CUESTIÓN MALVINAS Y EL ATLÁNTICO SUR"
+        },
+        {
+          "numero": "S-1603/26",
+          "extracto": "CAPITANICH: PROYECTO DE LEY QUE CREA LA COMISIÓN BICAMERAL PERMANENTE DE LA CUESTIÓN MALVINAS Y ESPACIOS ESTRATÉGICOS DEL ATLÁNTICO SUR, ANTÁRTIDA Y PASAJES INTEROCEÁNICOS"
+        },
+        {
+          "numero": "S-1619/26",
+          "extracto": "CAPITANICH: PROYECTO DE RESOLUCIÓN QUE CREA LA COMISIÓN PERMANENTE DE CONTROL, SEGUIMIENTO Y ESTRATEGIA SOBRE LA CUESTIÓN MALVINAS, ANTÁRTIDA Y ATLÁNTICO SUR"
         }
       ],
       "expositores": null,
       "tipo": "senadores",
-      "boletin_id": 2374,
-      "boletin_numero": "121/26"
+      "boletin_id": 2375,
+      "boletin_numero": "122/26"
     },
     {
       "seccion": "senadores",
@@ -8357,8 +8373,8 @@
       ],
       "expositores": null,
       "tipo": "senadores",
-      "boletin_id": 2374,
-      "boletin_numero": "121/26"
+      "boletin_id": 2375,
+      "boletin_numero": "122/26"
     },
     {
       "seccion": "senadores",
@@ -8408,8 +8424,8 @@
       ],
       "expositores": null,
       "tipo": "senadores",
-      "boletin_id": 2374,
-      "boletin_numero": "121/26"
+      "boletin_id": 2375,
+      "boletin_numero": "122/26"
     }
   ]
 }
