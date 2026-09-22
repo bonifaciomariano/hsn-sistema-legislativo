@@ -97,6 +97,23 @@
       "suspendida": false,
       "actualizado": "2026-09-22T16:07:46.541Z",
       "actualizado_por": "Paulina"
+    },
+    {
+      "fecha": "23/09",
+      "hora": "14:00",
+      "comisiones": [
+        "BICAMERAL DE REFORMA DEL ESTADO Y DEL SEGUIMIENTO DE LAS",
+        "PRIVATIZACIONES (LEY 23.696)"
+      ],
+      "hora_nueva": null,
+      "salon_nuevo": null,
+      "tipo_nuevo": "asesores",
+      "temario_extra": null,
+      "expositores_extra": null,
+      "nota": null,
+      "suspendida": false,
+      "actualizado": "2026-09-22T16:08:57.931Z",
+      "actualizado_por": "Paulina"
     }
   ]
 }
