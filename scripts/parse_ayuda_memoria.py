@@ -23,6 +23,10 @@ Un OD "N y ANEXO" (dictamen de mayoría + dictamen de minoría adjunto) se
 desdobla en dos filas de salida: tipoOD NORMAL con los firmantes de
 mayoría y tipoOD ANEXO con los firmantes de minoría (el texto que sigue a
 "ANEXO:" en la columna de firmantes) — mismo expediente y descripción.
+Si la planilla no trae "ANEXO:" (no cargaron los firmantes de minoría)
+pero el anexo existe igual, hay que agregarlo a mano en
+OVERRIDES_MINORIA_SIN_FIRMANTES (link de descarga provisto por Mariano,
+sin firmantes porque la planilla no los tiene).
 
 No hay columna de fecha de dictamen en esta planilla; fechaDictamen queda
 siempre en null (ya lo estaba en la práctica con la fuente vieja). Tampoco
@@ -54,6 +58,13 @@ CATEGORIA_MAP = {
 
 HOJAS = ["OD LEY", "ANEXO I", "OD ACUERDOS"]
 
+# (numero, periodo) -> odLink del anexo en minoría, para OD "N y ANEXO" cuya
+# planilla no trae "ANEXO:" con los firmantes (el anexo existe en el sitio
+# del Senado igual, sólo que no se cargaron los firmantes a mano).
+OVERRIDES_MINORIA_SIN_FIRMANTES = {
+    (135, 2026): "https://www.senado.gob.ar/parlamentario/parlamentaria/51664/downloadOrdenDia",
+}
+
 RE_URL_ORIGEN_TIPO = re.compile(r"/([A-Z]+)/([A-Z]+)$")
 RE_AUTOR = re.compile(
     r"se\w*or\w*\s+senador\w*\s+"
@@ -82,10 +93,19 @@ def _parsear_od_numero(valor):
     return nro, anio, y_anexo
 
 
+RE_SPLIT_FIRMANTES = re.compile(
+    r"\s+–\s+|\s+-\s+|\.\s*en\s+disidencia(?:\s+parcial)?:\s*", re.IGNORECASE
+)
+
+
 def _parsear_firmantes(texto):
+    """Separa firmantes por guion/raya. Los que firmaron 'en disidencia
+    (parcial)' vienen con un '. En disidencia: <nombre>' pegado en vez de
+    guion — se corta ahí también y se pierde la nota de disidencia (queda
+    sólo como firmante más, no se distingue de los demás)."""
     if not texto:
         return []
-    partes = re.split(r"\s+–\s+|\s+-\s+", re.sub(r"\s+", " ", texto.strip()))
+    partes = RE_SPLIT_FIRMANTES.split(re.sub(r"\s+", " ", texto.strip()))
     out = []
     for p in partes:
         p = p.strip().rstrip(".").strip()
@@ -190,6 +210,13 @@ def leer_hoja(ws, tiene_cabecera):
             filas.append(normal)
             if anexo.strip():
                 minoria = dict(base, tipoOD="ANEXO", firmantesMayoria=_parsear_firmantes(anexo))
+                filas.append(minoria)
+        elif y_anexo:
+            normal = dict(base, tipoOD="NORMAL", firmantesMayoria=_parsear_firmantes(firmantes_txt))
+            filas.append(normal)
+            override_link = OVERRIDES_MINORIA_SIN_FIRMANTES.get((nro, anio))
+            if override_link:
+                minoria = dict(base, tipoOD="ANEXO", firmantesMayoria=[], odLink=override_link)
                 filas.append(minoria)
         else:
             base["tipoOD"] = "NORMAL"

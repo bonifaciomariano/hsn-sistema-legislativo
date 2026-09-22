@@ -37,7 +37,9 @@
       "Julieta Corroza",
       "Carlos M. Espínola",
       "María C. Moisés",
-      "Guillermo E. Andrada. En disidencia: Flavia G. Royón. En disidencia parcial: Flavio S. Fama"
+      "Guillermo E. Andrada",
+      "Flavia G. Royón",
+      "Flavio S. Fama"
     ]
   },
   {
@@ -1185,7 +1187,8 @@
       "Andrea M. Cristina",
       "Daniel R. Kroneberger",
       "Beatriz L . Ávila",
-      "Eduardo H. Galaretto. En Disidencia Parcial: Flavio S. Fama"
+      "Eduardo H. Galaretto",
+      "Flavio S. Fama"
     ]
   },
   {
@@ -1228,7 +1231,8 @@
       "Flavia G. Royón",
       "Alejandra M. Vigo",
       "María V. Huala",
-      "Carlos M. Espínola. En Disidencia Parcial: Daniel R. Kroneberger",
+      "Carlos M. Espínola",
+      "Daniel R. Kroneberger",
       "Sonia E. Rojas Decut",
       "Eduardo A. Vischi",
       "Silvana L. Schneider"
@@ -2296,6 +2300,28 @@
     ]
   },
   {
+    "numero": "135",
+    "periodo": 2026,
+    "origen": "Cámara de Diputados",
+    "categoria": "Proyecto de Ley",
+    "autor": null,
+    "descripcion": "Dictamen en el proyecto de ley venido en revisión que deroga la legislación obsoleta - “Ley de Hojarasca”. (CD-1/26)",
+    "expedientes": [
+      {
+        "codigo": "CD-1/26",
+        "url": "https://www.senado.gob.ar/parlamentario/comisiones/verExp/1.26/CD/PL"
+      }
+    ],
+    "comisionCabecera": "Asuntos Constitucionales",
+    "fechaDictamen": null,
+    "odLink": "https://www.senado.gob.ar/parlamentario/parlamentaria/51664/downloadOrdenDia",
+    "comisiones": [
+      "Asuntos Constitucionales"
+    ],
+    "tipoOD": "ANEXO",
+    "firmantesMayoria": []
+  },
+  {
     "numero": "134",
     "periodo": 2026,
     "origen": "Senado",
@@ -2495,7 +2521,9 @@
       "Carlos O. Arce",
       "Flavio S. Fama",
       "Beatriz L. Ávila",
-      "Flavia G. Royón. En disidencia parcial: Eduardo A. Vischi. En disidencia: Carolina Losada",
+      "Flavia G. Royón",
+      "Eduardo A. Vischi",
+      "Carolina Losada",
       "Nadia J. Marquéz",
       "Maximiliano Abad"
     ]
