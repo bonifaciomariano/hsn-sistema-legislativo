@@ -21,10 +21,12 @@
       "De Minería, Energía y Combustibles",
       "De Presupuesto y Hacienda"
     ],
-    "comisionCabecera": null,
+    "comisionCabecera": "Minería, Energía y Combustibles",
     "fechaDictamen": null,
     "odLink": "https://www.senado.gob.ar/parlamentario/parlamentaria/51736/downloadOrdenDia",
-    "firmantesMayoria": null
+    "firmantesMayoria": [
+      "José M. Carambia"
+    ]
   },
   {
     "numero": "402",
@@ -48,10 +50,25 @@
       "De Minería, Energía y Combustibles",
       "De Presupuesto y Hacienda"
     ],
-    "comisionCabecera": null,
+    "comisionCabecera": "Minería, Energía y Combustibles",
     "fechaDictamen": null,
     "odLink": "https://www.senado.gob.ar/parlamentario/parlamentaria/51734/downloadOrdenDia",
-    "firmantesMayoria": null
+    "firmantesMayoria": [
+      "Mario P. Cervi",
+      "Agustín A. Monteverde",
+      "Juan C. Godoy",
+      "Silvana L. Schneider",
+      "Bruno A. Olivera Lucero",
+      "Ezequiel Atauche",
+      "Agustín P. Coto",
+      "Patricia Bullrich",
+      "Enzo P. Fullone",
+      "Andrea M. Cristina",
+      "Julieta Corroza",
+      "Carlos M. Espínola",
+      "María C. Moisés",
+      "Guillermo E. Andrada. En disidencia: Flavia G. Royón. En disidencia parcial: Flavio S. Fama"
+    ]
   },
   {
     "numero": "401",
@@ -74,10 +91,20 @@
     "comisiones": [
       "De Sistemas, Medios de Comunicación y Libertad de Expresión"
     ],
-    "comisionCabecera": null,
+    "comisionCabecera": "Sistemas, Medios Comunicación y Libertad Expresión",
     "fechaDictamen": null,
     "odLink": "https://www.senado.gob.ar/parlamentario/parlamentaria/51733/downloadOrdenDia",
-    "firmantesMayoria": null
+    "firmantesMayoria": [
+      "María C. Moisés",
+      "Juan C. Godoy",
+      "Mario P. Cervi",
+      "Carolina Losada",
+      "Enzo P. Fullone",
+      "Vilma F. Bedia",
+      "Guillermo E. Andrada",
+      "Fernando A. Salino",
+      "Elia Esther del Carmen Moreno"
+    ]
   },
   {
     "numero": "400",
@@ -96,10 +123,20 @@
     "comisiones": [
       "De Sistemas, Medios de Comunicación y Libertad de Expresión"
     ],
-    "comisionCabecera": null,
+    "comisionCabecera": "Sistemas, Medios De Comunicación y Libertad De Expresión",
     "fechaDictamen": null,
     "odLink": "https://www.senado.gob.ar/parlamentario/parlamentaria/51732/downloadOrdenDia",
-    "firmantesMayoria": null
+    "firmantesMayoria": [
+      "María C. Moisés",
+      "Juan C. Godoy",
+      "Mario P. Cervi",
+      "Carolina Losada",
+      "Enzo P. Fullone",
+      "Vilma F. Bedia",
+      "Guillermo E. Andrada",
+      "Fernando A. Salino",
+      "Elia Esther del Carmen Moreno"
+    ]
   },
   {
     "numero": "399",
@@ -118,10 +155,20 @@
     "comisiones": [
       "De Sistemas, Medios de Comunicación y Libertad de Expresión"
     ],
-    "comisionCabecera": null,
+    "comisionCabecera": "Sistemas, Medios De Comunicación y Libertad De Expresión",
     "fechaDictamen": null,
     "odLink": "https://www.senado.gob.ar/parlamentario/parlamentaria/51731/downloadOrdenDia",
-    "firmantesMayoria": null
+    "firmantesMayoria": [
+      "María C. Moisés",
+      "Juan C. Godoy",
+      "Mario P. Cervi",
+      "Carolina Losada",
+      "Enzo P. Fullone",
+      "Vilma F. Bedia",
+      "Guillermo E. Andrada",
+      "Fernando A. Salino",
+      "Elia Esther del Carmen Moreno"
+    ]
   },
   {
     "numero": "398",
@@ -140,10 +187,20 @@
     "comisiones": [
       "De Sistemas, Medios de Comunicación y Libertad de Expresión"
     ],
-    "comisionCabecera": null,
+    "comisionCabecera": "Sistemas, Medios De Comunicación y Libertad De Expresión",
     "fechaDictamen": null,
     "odLink": "https://www.senado.gob.ar/parlamentario/parlamentaria/51730/downloadOrdenDia",
-    "firmantesMayoria": null
+    "firmantesMayoria": [
+      "María C. Moisés",
+      "Juan C. Godoy",
+      "Mario P. Cervi",
+      "Carolina Losada",
+      "Enzo P. Fullone",
+      "Vilma F. Bedia",
+      "Guillermo E. Andrada",
+      "Fernando A. Salino",
+      "Elia Esther del Carmen Moreno"
+    ]
   },
   {
     "numero": "397",
@@ -975,26 +1032,10 @@
       "De Justicia y Asuntos Penales",
       "De Presupuesto y Hacienda"
     ],
-    "comisionCabecera": "Justicia y Asuntos Penales",
+    "comisionCabecera": null,
     "fechaDictamen": null,
     "odLink": "https://www.senado.gob.ar/parlamentario/parlamentaria/51702/downloadOrdenDia",
-    "firmantesMayoria": [
-      "Gonzala Guzmán Coraita",
-      "Agustin A. Monteverde",
-      "Juan C. Pagotto",
-      "Silvana M. Schneider",
-      "Patricia Bullrich",
-      "Ezequiel Atauche",
-      "Maria B. Monte de Oca",
-      "Bruno A. Olivera Lucero",
-      "Luis A. Juez",
-      "Bartolomé E. Abdala",
-      "Maria V. Huala",
-      "Mariana Juri",
-      "Carlos O. Arce",
-      "Andrea M. Cristina. En disidencia parcial: Eduardo A. Vischi",
-      "Carolina Losada"
-    ]
+    "firmantesMayoria": null
   },
   {
     "numero": "371",
@@ -1236,20 +1277,10 @@
     "comisiones": [
       "De Educación y Cultura"
     ],
-    "comisionCabecera": "Educación y Cultura",
+    "comisionCabecera": null,
     "fechaDictamen": null,
     "odLink": "https://www.senado.gob.ar/parlamentario/parlamentaria/51694/downloadOrdenDia",
-    "firmantesMayoria": [
-      "Sonia E. Rojas Decut",
-      "Mercedes G. Valenzuela",
-      "Ivanna M. Arrascaeta",
-      "Vilma F. Bedia",
-      "Flavio S. Fama",
-      "Beatriz L. Ávila",
-      "María C. Moisés",
-      "María T. M. González",
-      "Fernando A. Salino"
-    ]
+    "firmantesMayoria": null
   },
   {
     "numero": "364",
@@ -1301,20 +1332,10 @@
       "De Defensa Nacional",
       "De Educación y Cultura"
     ],
-    "comisionCabecera": "Educación y Cultura",
+    "comisionCabecera": null,
     "fechaDictamen": null,
     "odLink": "https://www.senado.gob.ar/parlamentario/parlamentaria/51692/downloadOrdenDia",
-    "firmantesMayoria": [
-      "Sonia E. Rojas Decut",
-      "Mercedes G. Valenzuela",
-      "Ivanna M. Arrascaeta",
-      "Vilma F. Bedia",
-      "Flavio S. Fama",
-      "Beatriz L. Ávila",
-      "María C. Moisés",
-      "María T. M. González",
-      "Fernando A. Salino"
-    ]
+    "firmantesMayoria": null
   },
   {
     "numero": "362",
@@ -1403,26 +1424,10 @@
     "comisiones": [
       "De Minería, Energía y Combustibles"
     ],
-    "comisionCabecera": "Minería, Energía y Combustibles",
+    "comisionCabecera": null,
     "fechaDictamen": null,
     "odLink": "https://www.senado.gob.ar/parlamentario/parlamentaria/51691/downloadOrdenDia",
-    "firmantesMayoria": [
-      "Flavia G. Royón",
-      "Agustín A. Monteverde",
-      "Mario P. Cervi",
-      "Ezequiel Atauche",
-      "Juan C. Godoy",
-      "Bruno A. Olivera Lucero",
-      "Agustín P. Coto",
-      "Bartolomé E. Abdala",
-      "Enzo P. Fullone",
-      "Patricia Bullrich",
-      "Beatriz L. Ávila",
-      "María C. Moisés. “2026",
-      "Año del 120 Aniversario del Palacio Legislativo” En disidencia parcial: Flavio S. Fama",
-      "Alejandra M. Vigo",
-      "Mariana Juri. En disidencia: Carlos M. Espínola"
-    ]
+    "firmantesMayoria": null
   },
   {
     "numero": "361",
@@ -1442,28 +1447,10 @@
       "De Justicia y Asuntos Penales",
       "De Presupuesto y Hacienda"
     ],
-    "comisionCabecera": "Justicia y Asuntos Penales",
+    "comisionCabecera": null,
     "fechaDictamen": null,
     "odLink": "https://www.senado.gob.ar/parlamentario/parlamentaria/51690/downloadOrdenDia",
-    "firmantesMayoria": [
-      "Gonzalo Guzmán Coraita",
-      "Agustín A. Monteverde",
-      "Juan C. Pagotto",
-      "Silvana L. Schneider",
-      "Patricia Bullrich",
-      "Ezequiel Atauche",
-      "María B. Monte de Oca",
-      "Bruno A. Olivera Lucero",
-      "Eduardo A. Vischi",
-      "Bartolomé E. Abdala",
-      "Carolina Losada",
-      "Mariana Juri",
-      "Maximiliano Abad",
-      "Carlos M. Espínola",
-      "María V. Huala",
-      "Beatriz L. Ávila",
-      "Carlos O. Arce. En disidencia parcial: Flavio S. Fama"
-    ]
+    "firmantesMayoria": null
   },
   {
     "numero": "360",
@@ -1483,28 +1470,10 @@
       "De Justicia y Asuntos Penales",
       "De Presupuesto y Hacienda"
     ],
-    "comisionCabecera": "Justicia y Asuntos Penales",
+    "comisionCabecera": null,
     "fechaDictamen": null,
     "odLink": "https://www.senado.gob.ar/parlamentario/parlamentaria/51688/downloadOrdenDia",
-    "firmantesMayoria": [
-      "Gonzalo Guzmán Coraita",
-      "Agustín A. Monteverde",
-      "Juan C. Pagotto",
-      "Silvana L. Schneider",
-      "Patricia Bullrich",
-      "Ezequiel Atauche",
-      "María B. Monte de Oca",
-      "Bruno A. Olivera Lucero",
-      "Eduardo A. Vischi",
-      "Bartolomé E. Abdala",
-      "Carolina Losada",
-      "Mariana Juri",
-      "Maximiliano Abad",
-      "Carlos M. Espínola",
-      "María V. Huala",
-      "Beatriz L. Ávila",
-      "Carlos O. Arce. En disidencia parcial: Flavio S. Fama"
-    ]
+    "firmantesMayoria": null
   },
   {
     "numero": "359",
@@ -1729,22 +1698,7 @@
     "comisionCabecera": "Acuerdos",
     "fechaDictamen": null,
     "odLink": "https://www.senado.gob.ar/parlamentario/parlamentaria/51682/downloadOrdenDia",
-    "firmantesMayoria": [
-      "Juan C. Pagotto",
-      "Maximiliano Abad",
-      "Martín E. Goerling Lara",
-      "Beatriz L. Ávila",
-      "Patricia Bullrich",
-      "Agustín P. Coto",
-      "Carlos M. Espínola",
-      "Juan C. Godoy",
-      "Mariana Juri",
-      "Carolina Losada",
-      "Nadia J. Márquez",
-      "Sandra M. Mendoza",
-      "Sonia E. Rojas Decut",
-      "Flavia G. Royón"
-    ]
+    "firmantesMayoria": null
   },
   {
     "numero": "353",
@@ -1766,22 +1720,7 @@
     "comisionCabecera": "Acuerdos",
     "fechaDictamen": null,
     "odLink": "https://www.senado.gob.ar/parlamentario/parlamentaria/51681/downloadOrdenDia",
-    "firmantesMayoria": [
-      "Juan C. Pagotto",
-      "Maximiliano Abad",
-      "Martín E. Goerling Lara",
-      "Beatriz L. Ávila",
-      "Patricia Bullrich",
-      "Agustín P. Coto",
-      "Carlos M. Espínola",
-      "Juan C. Godoy",
-      "Mariana Juri",
-      "Carolina Losada",
-      "Nadia J. Márquez",
-      "Sandra M. Mendoza",
-      "Sonia E. Rojas Decut",
-      "Flavia G. Royón"
-    ]
+    "firmantesMayoria": null
   },
   {
     "numero": "352",
@@ -1800,23 +1739,10 @@
     "comisiones": [
       "De Asuntos Constitucionales"
     ],
-    "comisionCabecera": "Asuntos Constitucionales",
+    "comisionCabecera": null,
     "fechaDictamen": null,
     "odLink": "https://www.senado.gob.ar/parlamentario/parlamentaria/51680/downloadOrdenDia",
-    "firmantesMayoria": [
-      "Agustín P. Coto",
-      "María B. Monte de Oca",
-      "Juan C. Pagotto",
-      "Patricia Bullrich",
-      "Carlos M. Espínola",
-      "Flavio S. Fama",
-      "Rodolfo A. Suárez",
-      "Eduardo A. Vischi",
-      "Beatriz L. Ávila",
-      "María C. Moisés",
-      "José E. Neder",
-      "Daniel P. Bensusán"
-    ]
+    "firmantesMayoria": null
   },
   {
     "numero": "351",
@@ -1835,23 +1761,10 @@
     "comisiones": [
       "De Asuntos Constitucionales"
     ],
-    "comisionCabecera": "Asuntos Constitucionales",
+    "comisionCabecera": null,
     "fechaDictamen": null,
     "odLink": "https://www.senado.gob.ar/parlamentario/parlamentaria/51679/downloadOrdenDia",
-    "firmantesMayoria": [
-      "Agustín P. Coto",
-      "María B. Monte de Oca",
-      "Juan C. Pagotto",
-      "Patricia Bullrich",
-      "Carlos M. Espínola",
-      "Flavio S. Fama",
-      "Rodolfo A. Suárez",
-      "Eduardo A. Vischi",
-      "Beatriz L. Ávila",
-      "María C. Moisés",
-      "José E. Neder",
-      "Daniel P. Bensusán"
-    ]
+    "firmantesMayoria": null
   },
   {
     "numero": "350",
@@ -1870,23 +1783,10 @@
     "comisiones": [
       "De Asuntos Constitucionales"
     ],
-    "comisionCabecera": "Asuntos Constitucionales",
+    "comisionCabecera": null,
     "fechaDictamen": null,
     "odLink": "https://www.senado.gob.ar/parlamentario/parlamentaria/51678/downloadOrdenDia",
-    "firmantesMayoria": [
-      "Agustín P. Coto",
-      "María B. Monte de Oca",
-      "Juan C. Pagotto",
-      "Patricia Bullrich",
-      "Carlos M. Espínola",
-      "Flavio S. Fama",
-      "Rodolfo A. Suárez",
-      "Eduardo A. Vischi",
-      "Beatriz L. Ávila",
-      "María C. Moisés",
-      "José E. Neder",
-      "Daniel P. Bensusán"
-    ]
+    "firmantesMayoria": null
   },
   {
     "numero": "349",
@@ -1905,23 +1805,10 @@
     "comisiones": [
       "De Asuntos Constitucionales"
     ],
-    "comisionCabecera": "Asuntos Constitucionales",
+    "comisionCabecera": null,
     "fechaDictamen": null,
     "odLink": "https://www.senado.gob.ar/parlamentario/parlamentaria/51677/downloadOrdenDia",
-    "firmantesMayoria": [
-      "Agustín P. Coto",
-      "María B. Monte de Oca",
-      "Juan C. Pagotto",
-      "Patricia Bullrich",
-      "Carlos M. Espínola",
-      "Flavio S. Fama",
-      "Rodolfo A. Suárez",
-      "Eduardo A. Vischi",
-      "Beatriz L. Ávila",
-      "María C. Moisés",
-      "José E. Neder",
-      "Daniel P. Bensusán"
-    ]
+    "firmantesMayoria": null
   },
   {
     "numero": "348",
@@ -1940,23 +1827,10 @@
     "comisiones": [
       "De Asuntos Constitucionales"
     ],
-    "comisionCabecera": "Asuntos Constitucionales",
+    "comisionCabecera": null,
     "fechaDictamen": null,
     "odLink": "https://www.senado.gob.ar/parlamentario/parlamentaria/51676/downloadOrdenDia",
-    "firmantesMayoria": [
-      "Agustín P. Coto",
-      "María B. Monte de Oca",
-      "Juan C. Pagotto",
-      "Patricia Bullrich",
-      "Carlos M. Espínola",
-      "Flavio S. Fama",
-      "Rodolfo A. Suárez",
-      "Eduardo A. Vischi",
-      "Beatriz L. Ávila",
-      "María C. Moisés",
-      "José E. Neder",
-      "Daniel P. Bensusán"
-    ]
+    "firmantesMayoria": null
   },
   {
     "numero": "347",
@@ -1975,23 +1849,10 @@
     "comisiones": [
       "De Asuntos Constitucionales"
     ],
-    "comisionCabecera": "Asuntos Constitucionales",
+    "comisionCabecera": null,
     "fechaDictamen": null,
     "odLink": "https://www.senado.gob.ar/parlamentario/parlamentaria/51675/downloadOrdenDia",
-    "firmantesMayoria": [
-      "Agustín P. Coto",
-      "María B. Monte de Oca",
-      "Juan C. Pagotto",
-      "Patricia Bullrich",
-      "Carlos M. Espínola",
-      "Flavio S. Fama",
-      "Rodolfo A. Suárez",
-      "Eduardo A. Vischi",
-      "Beatriz L. Ávila",
-      "María C. Moisés",
-      "José E. Neder",
-      "Daniel P. Bensusán"
-    ]
+    "firmantesMayoria": null
   },
   {
     "numero": "346",
@@ -2010,23 +1871,10 @@
     "comisiones": [
       "De Asuntos Constitucionales"
     ],
-    "comisionCabecera": "Asuntos Constitucionales",
+    "comisionCabecera": null,
     "fechaDictamen": null,
     "odLink": "https://www.senado.gob.ar/parlamentario/parlamentaria/51674/downloadOrdenDia",
-    "firmantesMayoria": [
-      "Agustín P. Coto",
-      "María B. Monte de Oca",
-      "Juan C. Pagotto",
-      "Patricia Bullrich",
-      "Carlos M. Espínola",
-      "Flavio S. Fama",
-      "Rodolfo A. Suárez",
-      "Eduardo A. Vischi",
-      "Beatriz L. Ávila",
-      "María C. Moisés",
-      "José E. Neder",
-      "Daniel P. Bensusán"
-    ]
+    "firmantesMayoria": null
   },
   {
     "numero": "345",
@@ -2045,23 +1893,10 @@
     "comisiones": [
       "De Asuntos Constitucionales"
     ],
-    "comisionCabecera": "Asuntos Constitucionales",
+    "comisionCabecera": null,
     "fechaDictamen": null,
     "odLink": "https://www.senado.gob.ar/parlamentario/parlamentaria/51673/downloadOrdenDia",
-    "firmantesMayoria": [
-      "Agustín P. Coto",
-      "María B. Monte de Oca",
-      "Juan C. Pagotto",
-      "Patricia Bullrich",
-      "Carlos M. Espínola",
-      "Flavio S. Fama",
-      "Rodolfo A. Suárez",
-      "Eduardo A. Vischi",
-      "Beatriz L. Ávila",
-      "María C. Moisés",
-      "José E. Neder",
-      "Daniel P. Bensusán"
-    ]
+    "firmantesMayoria": null
   },
   {
     "numero": "344",
@@ -2080,23 +1915,10 @@
     "comisiones": [
       "De Asuntos Constitucionales"
     ],
-    "comisionCabecera": "Asuntos Constitucionales",
+    "comisionCabecera": null,
     "fechaDictamen": null,
     "odLink": "https://www.senado.gob.ar/parlamentario/parlamentaria/51672/downloadOrdenDia",
-    "firmantesMayoria": [
-      "Agustín P. Coto",
-      "María B. Monte de Oca",
-      "Juan C. Pagotto",
-      "Patricia Bullrich",
-      "Carlos M. Espínola",
-      "Flavio S. Fama",
-      "Rodolfo A. Suárez",
-      "Eduardo A. Vischi",
-      "Beatriz L. Ávila",
-      "María C. Moisés",
-      "José E. Neder",
-      "Daniel P. Bensusán"
-    ]
+    "firmantesMayoria": null
   },
   {
     "numero": "343",
@@ -2150,23 +1972,10 @@
     "comisiones": [
       "De Asuntos Constitucionales"
     ],
-    "comisionCabecera": "Asuntos Constitucionales",
+    "comisionCabecera": null,
     "fechaDictamen": null,
     "odLink": "https://www.senado.gob.ar/parlamentario/parlamentaria/51670/downloadOrdenDia",
-    "firmantesMayoria": [
-      "Agustín P. Coto",
-      "María B. Monte de Oca",
-      "Juan C. Pagotto",
-      "Patricia Bullrich",
-      "Carlos M. Espínola",
-      "Flavio S. Fama",
-      "Rodolfo A. Suárez",
-      "Eduardo A. Vischi",
-      "Beatriz L. Ávila",
-      "María C. Moisés",
-      "José E. Neder",
-      "Daniel P. Bensusán"
-    ]
+    "firmantesMayoria": null
   },
   {
     "numero": "341",
@@ -2185,23 +1994,10 @@
     "comisiones": [
       "De Asuntos Constitucionales"
     ],
-    "comisionCabecera": "Asuntos Constitucionales",
+    "comisionCabecera": null,
     "fechaDictamen": null,
     "odLink": "https://www.senado.gob.ar/parlamentario/parlamentaria/51669/downloadOrdenDia",
-    "firmantesMayoria": [
-      "Agustín P. Coto",
-      "María B. Monte de Oca",
-      "Juan C. Pagotto",
-      "Patricia Bullrich",
-      "Carlos M. Espínola",
-      "Flavio S. Fama",
-      "Rodolfo A. Suárez",
-      "Eduardo A. Vischi",
-      "Beatriz L. Ávila",
-      "María C. Moisés",
-      "José E. Neder",
-      "Daniel P. Bensusán"
-    ]
+    "firmantesMayoria": null
   },
   {
     "numero": "340",
@@ -2220,23 +2016,10 @@
     "comisiones": [
       "De Asuntos Constitucionales"
     ],
-    "comisionCabecera": "Asuntos Constitucionales",
+    "comisionCabecera": null,
     "fechaDictamen": null,
     "odLink": "https://www.senado.gob.ar/parlamentario/parlamentaria/51668/downloadOrdenDia",
-    "firmantesMayoria": [
-      "Agustín P. Coto",
-      "María B. Monte de Oca",
-      "Juan C. Pagotto",
-      "Patricia Bullrich",
-      "Carlos M. Espínola",
-      "Flavio S. Fama",
-      "Rodolfo A. Suárez",
-      "Eduardo A. Vischi",
-      "Beatriz L. Ávila",
-      "María C. Moisés",
-      "José E. Neder",
-      "Daniel P. Bensusán"
-    ]
+    "firmantesMayoria": null
   },
   {
     "numero": "339",
@@ -2256,33 +2039,10 @@
       "De Asuntos Constitucionales",
       "De Ambiente y Desarrollo Sustentable"
     ],
-    "comisionCabecera": "Asuntos Constitucionales",
+    "comisionCabecera": null,
     "fechaDictamen": null,
     "odLink": "https://www.senado.gob.ar/parlamentario/parlamentaria/51667/downloadOrdenDia",
-    "firmantesMayoria": [
-      "Agustín P. Coto",
-      "Edith E. Terenzi",
-      "María B. Monte de Oca",
-      "Romina M. Almeida",
-      "Juan C. Pagotto",
-      "Ivanna M. Arrascaeta",
-      "Patricia Bullrich",
-      "Natalia E. Gadano",
-      "Carlos M. Espínola",
-      "Enrique M. Goerling Lara",
-      "Flavio S. Fama",
-      "Daniel R. Kroneberger",
-      "Rodolfo A. Suárez",
-      "Sandra M. Mendoza",
-      "Eduardo A. Vischi",
-      "Sonia E. Rojas Decut",
-      "Beatriz L. Ávila",
-      "Flavia G. Royón",
-      "María C. Moisés",
-      "José E. Neder",
-      "Mariano Recalde",
-      "Daniel P. Bensusán"
-    ]
+    "firmantesMayoria": null
   },
   {
     "numero": "338",
@@ -2304,17 +2064,7 @@
     "comisionCabecera": "Acuerdos",
     "fechaDictamen": null,
     "odLink": "https://www.senado.gob.ar/parlamentario/parlamentaria/51665/downloadOrdenDia",
-    "firmantesMayoria": [
-      "Juan C. Pagotto",
-      "Sandra M. Mendoza",
-      "Carlos O. Arce",
-      "Patricia Bullrich",
-      "Agustín P. Coto",
-      "Juan C. Godoy",
-      "Enrique M. Goerling Lara",
-      "Carolina Losada",
-      "Nadia J. Márquez"
-    ]
+    "firmantesMayoria": null
   },
   {
     "numero": "337",
@@ -2333,20 +2083,10 @@
     "comisiones": [
       "De Defensa Nacional"
     ],
-    "comisionCabecera": "Defensa Nacional",
+    "comisionCabecera": null,
     "fechaDictamen": null,
     "odLink": "https://www.senado.gob.ar/parlamentario/parlamentaria/51663/downloadOrdenDia",
-    "firmantesMayoria": [
-      "Luis A. Juez",
-      "María B. Monte de Oca",
-      "Juan C. Pagotto",
-      "Bruno A. Olivera Lucero",
-      "Carolina Losada",
-      "Eduardo A. Vischi",
-      "Bartolomé E. Abdala",
-      "Enrique M. Goerling Lara",
-      "Jorge M. Capitanich"
-    ]
+    "firmantesMayoria": null
   },
   {
     "numero": "336",
