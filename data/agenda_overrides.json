@@ -67,22 +67,6 @@
       "actualizado_por": "Paulina"
     },
     {
-      "fecha": "22/09",
-      "hora": "15:00",
-      "comisiones": [
-        "EDUCACIÓN Y CULTURA"
-      ],
-      "hora_nueva": null,
-      "salon_nuevo": null,
-      "tipo_nuevo": "asesores",
-      "temario_extra": null,
-      "expositores_extra": null,
-      "nota": null,
-      "suspendida": false,
-      "actualizado": "2026-09-22T16:07:15.473Z",
-      "actualizado_por": "Paulina"
-    },
-    {
       "fecha": "23/09",
       "hora": "14:00",
       "comisiones": [
@@ -113,6 +97,22 @@
       "nota": null,
       "suspendida": false,
       "actualizado": "2026-09-22T16:09:08.205Z",
+      "actualizado_por": "Paulina"
+    },
+    {
+      "fecha": "22/09",
+      "hora": "15:00",
+      "comisiones": [
+        "EDUCACIÓN Y CULTURA"
+      ],
+      "hora_nueva": null,
+      "salon_nuevo": null,
+      "tipo_nuevo": "asesores",
+      "temario_extra": null,
+      "expositores_extra": null,
+      "nota": null,
+      "suspendida": false,
+      "actualizado": "2026-09-22T16:09:17.270Z",
       "actualizado_por": "Paulina"
     }
   ]
