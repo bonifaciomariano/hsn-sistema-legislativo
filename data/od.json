@@ -20407,5 +20407,53 @@
     ],
     "url_pdf": "https://www.senado.gob.ar/parlamentario/parlamentaria/51735/downloadOrdenDia",
     "fecha": null
+  },
+  {
+    "nro_od": 405,
+    "anio_od": 2026,
+    "tipo_od": "N",
+    "expedientes": [
+      {
+        "nro": 68,
+        "anio": 2026,
+        "tipo": "PC",
+        "origen": "S",
+        "url": "https://www.senado.gob.ar/parlamentario/comisiones/verExp/68.26/S/PC"
+      }
+    ],
+    "url_pdf": "https://www.senado.gob.ar/parlamentario/parlamentaria/51739/downloadOrdenDia",
+    "fecha": null
+  },
+  {
+    "nro_od": 404,
+    "anio_od": 2026,
+    "tipo_od": "N",
+    "expedientes": [
+      {
+        "nro": 1254,
+        "anio": 2025,
+        "tipo": "PC",
+        "origen": "S",
+        "url": "https://www.senado.gob.ar/parlamentario/comisiones/verExp/1254.25/S/PC"
+      }
+    ],
+    "url_pdf": "https://www.senado.gob.ar/parlamentario/parlamentaria/51738/downloadOrdenDia",
+    "fecha": null
+  },
+  {
+    "nro_od": 403,
+    "anio_od": 2026,
+    "tipo_od": "N",
+    "expedientes": [
+      {
+        "nro": 229,
+        "anio": 2025,
+        "tipo": "PC",
+        "origen": "S",
+        "url": "https://www.senado.gob.ar/parlamentario/comisiones/verExp/229.25/S/PC"
+      }
+    ],
+    "url_pdf": "https://www.senado.gob.ar/parlamentario/parlamentaria/51737/downloadOrdenDia",
+    "fecha": null
   }
 ]
