@@ -20487,5 +20487,21 @@
     ],
     "url_pdf": "https://www.senado.gob.ar/parlamentario/parlamentaria/51740/downloadOrdenDia",
     "fecha": null
+  },
+  {
+    "nro_od": 367,
+    "anio_od": 2026,
+    "tipo_od": "A",
+    "expedientes": [
+      {
+        "nro": 7,
+        "anio": 2026,
+        "tipo": "PL",
+        "origen": "CD",
+        "url": "https://www.senado.gob.ar/parlamentario/comisiones/verExp/7.26/CD/PL"
+      }
+    ],
+    "url_pdf": "https://www.senado.gob.ar/parlamentario/parlamentaria/51742/downloadOrdenDia",
+    "fecha": null
   }
 ]
