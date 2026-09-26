@@ -8645,6 +8645,28 @@
       "tipo": "bicameral",
       "boletin_id": 2377,
       "boletin_numero": "124/26"
+    },
+    {
+      "seccion": "senadores",
+      "dia": "MIÉRCOLES",
+      "fecha": "30/09",
+      "hora": "10:00",
+      "modalidad": "",
+      "comisiones": [
+        "BICAMERAL DE LA DEFENSORÍA DEL PUEBLO"
+      ],
+      "salon": "ILLIA",
+      "salon_completo": "ILLIA",
+      "temario": [
+        {
+          "numero": "",
+          "extracto": "PROCESO DE SELECCIÓN E INTEGRACIÓN DEL COMITÉ NACIONAL PARA LA PREVENCIÓN DE LA TORTURA Y OTROS TRATOS O PENAS CRUELES, INHUMANOS O DEGRADANTES, DE LOS TRES (3) REPRESENTANTES DE LAS ORGANIZACIONES NO GUBERNAMENTALES, ARTÍCULO 11 INC. C, LEY 26.827."
+        }
+      ],
+      "expositores": null,
+      "tipo": "bicameral",
+      "boletin_id": 2381,
+      "boletin_numero": "126/26"
     }
   ]
 }
