@@ -114,6 +114,22 @@
       "suspendida": false,
       "actualizado": "2026-09-23T03:35:15.756Z",
       "actualizado_por": "Mariano"
+    },
+    {
+      "fecha": "29/09",
+      "hora": "16:00",
+      "comisiones": [
+        "BICAMERAL MIXTA REVISORA DE CUENTAS"
+      ],
+      "hora_nueva": null,
+      "salon_nuevo": null,
+      "tipo_nuevo": null,
+      "temario_extra": null,
+      "expositores_extra": null,
+      "nota": null,
+      "suspendida": true,
+      "actualizado": "2026-09-28T15:26:16.970Z",
+      "actualizado_por": "Paulina"
     }
   ]
 }
