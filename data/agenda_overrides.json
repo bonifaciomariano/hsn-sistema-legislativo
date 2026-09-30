@@ -130,6 +130,22 @@
       "suspendida": true,
       "actualizado": "2026-09-28T15:42:41.313Z",
       "actualizado_por": "Paulina"
+    },
+    {
+      "fecha": "30/09",
+      "hora": "10:00",
+      "comisiones": [
+        "BICAMERAL DE LA DEFENSORÍA DEL PUEBLO"
+      ],
+      "hora_nueva": null,
+      "salon_nuevo": null,
+      "tipo_nuevo": null,
+      "temario_extra": null,
+      "expositores_extra": null,
+      "nota": null,
+      "suspendida": true,
+      "actualizado": "2026-09-30T10:26:43.746Z",
+      "actualizado_por": "Paulina"
     }
   ]
 }
