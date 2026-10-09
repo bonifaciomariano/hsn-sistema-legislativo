@@ -8984,8 +8984,8 @@
       ],
       "expositores": null,
       "tipo": "bicameral",
-      "boletin_id": 2389,
-      "boletin_numero": "132/26"
+      "boletin_id": 2390,
+      "boletin_numero": "133/26"
     },
     {
       "seccion": "senadores",
@@ -9008,7 +9008,53 @@
       "expositores": null,
       "tipo": "senadores",
       "boletin_id": 2389,
-      "boletin_numero": "132/26"
+      "boletin_numero": "132/26",
+      "suspendida": true
+    },
+    {
+      "seccion": "senadores",
+      "dia": "MIÉRCOLES",
+      "fecha": "14/10",
+      "hora": "13:00",
+      "modalidad": "",
+      "comisiones": [
+        "ADMINISTRADORA DE LA BIBLIOTECA DEL CONGRESO DE LA NACIÓN"
+      ],
+      "salon": "SALA DE REUNIONES DEL 1° PISO DE LA BIBLIOTECA",
+      "salon_completo": "SALA DE REUNIONES DEL 1° PISO DE LA BIBLIOTECA",
+      "temario": [
+        {
+          "numero": "",
+          "extracto": "1. COBERTURA DE LOS CARGOS DE LA COMISIÓN ADMINISTRADORA, RESERVADOS EN LA REUNIÓN DE FECHA 3 DE SEPTIEMBRE DE 2026. 2. RENOVACIÓN DE LAS PÓLIZAS DE SEGURO VIGENTES O CONTRATACIÓN NUEVA. 3. TRATAMIENTO SOBRE EL ESTADO DE LA FLOTA AUTOMOTOR DE LA BIBLIOTECA DEL CONGRESO DE LA NACIÓN. 4. REPARACIÓN DE UN ASCENSOR DEL EDIFICIO DE A. ALSINA 1835."
+        }
+      ],
+      "expositores": null,
+      "tipo": "senadores",
+      "boletin_id": 2390,
+      "boletin_numero": "133/26"
+    },
+    {
+      "seccion": "senadores",
+      "dia": "JUEVES",
+      "fecha": "15/10",
+      "hora": "14:00",
+      "modalidad": "",
+      "comisiones": [
+        "RELACIONES EXTERIORES Y CULTO",
+        "INDUSTRIA Y COMERCIO"
+      ],
+      "salon": "ILLIA",
+      "salon_completo": "SALÓN ILLIA",
+      "temario": [
+        {
+          "numero": "PE-854/97",
+          "extracto": "MENSAJE N° 1451/97 Y PROYECTO DE LEY APROBANDO EL TRATADO DE COOPERACIÓN EN MATERIA DE PATENTES (PCT) ELABORADO EN WASHINGTON EL 19 DE JUNIO DE 1970, ENMENDADO EL 28 DE SETIEMBRE DE 1979 Y MODIFICADO EL 3 DE FEBRERO DE 1984 Y EL REGLAMENTO DEL TRATADO DE COOPERACIÓN EN MATERIA DE PATENTES (PCT) QUE ENTRÓ EN VIGOR EL 1 DE ENERO DE 1993"
+        }
+      ],
+      "expositores": null,
+      "tipo": "senadores",
+      "boletin_id": 2390,
+      "boletin_numero": "133/26"
     }
   ]
 }
