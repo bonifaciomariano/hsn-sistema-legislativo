@@ -8984,8 +8984,8 @@
       ],
       "expositores": null,
       "tipo": "bicameral",
-      "boletin_id": 2390,
-      "boletin_numero": "133/26"
+      "boletin_id": 2392,
+      "boletin_numero": "134/26"
     },
     {
       "seccion": "senadores",
@@ -9030,8 +9030,8 @@
       ],
       "expositores": null,
       "tipo": "senadores",
-      "boletin_id": 2390,
-      "boletin_numero": "133/26"
+      "boletin_id": 2392,
+      "boletin_numero": "134/26"
     },
     {
       "seccion": "senadores",
@@ -9053,8 +9053,30 @@
       ],
       "expositores": null,
       "tipo": "senadores",
-      "boletin_id": 2390,
-      "boletin_numero": "133/26"
+      "boletin_id": 2392,
+      "boletin_numero": "134/26"
+    },
+    {
+      "seccion": "senadores",
+      "dia": "MIÉRCOLES",
+      "fecha": "14/10",
+      "hora": "10:00",
+      "modalidad": "",
+      "comisiones": [
+        "BICAMERAL DE LA DEFENSORÍA DEL PUEBLO"
+      ],
+      "salon": "ILLIA",
+      "salon_completo": "SALÓN ILLIA",
+      "temario": [
+        {
+          "numero": "",
+          "extracto": "CONTINUACIÓN DEL PROCESO DE SELECCIÓN E INTEGRACIÓN DEL COMITÉ NACIONAL PARA LA PREVENCIÓN DE LA TORTURA Y OTROS TRATOS O PENAS CRUELES, INHUMANOS O DEGRADANTES - LEY 26.827."
+        }
+      ],
+      "expositores": null,
+      "tipo": "bicameral",
+      "boletin_id": 2392,
+      "boletin_numero": "134/26"
     }
   ]
 }
