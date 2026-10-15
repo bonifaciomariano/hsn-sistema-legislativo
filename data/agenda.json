@@ -9053,8 +9053,8 @@
       ],
       "expositores": null,
       "tipo": "senadores",
-      "boletin_id": 2393,
-      "boletin_numero": "135/26"
+      "boletin_id": 2395,
+      "boletin_numero": "136/26"
     },
     {
       "seccion": "senadores",
@@ -9077,6 +9077,51 @@
       "tipo": "bicameral",
       "boletin_id": 2393,
       "boletin_numero": "135/26"
+    },
+    {
+      "seccion": "senadores",
+      "dia": "JUEVES",
+      "fecha": "15/10",
+      "hora": "15:30",
+      "modalidad": "",
+      "comisiones": [
+        "SALUD",
+        "LEGISLACIÓN GENERAL"
+      ],
+      "salon": "AZUL",
+      "salon_completo": "SALÓN AZUL",
+      "temario": [
+        {
+          "numero": "PE-99/26",
+          "extracto": "MENSAJE N° 108/26 Y PROYECTO DE LEY SOBRE MODIFICACIONES A LA LEY NACIONAL DE SALUD MENTAL N° 26.657"
+        }
+      ],
+      "expositores": null,
+      "tipo": "senadores",
+      "boletin_id": 2395,
+      "boletin_numero": "136/26"
+    },
+    {
+      "seccion": "senadores",
+      "dia": "MARTES",
+      "fecha": "20/10",
+      "hora": "16:00",
+      "modalidad": "",
+      "comisiones": [
+        "COPARTICIPACIÓN FEDERAL DE IMPUESTOS"
+      ],
+      "salon": "AZUL",
+      "salon_completo": "SALÓN AZUL",
+      "temario": [
+        {
+          "numero": "",
+          "extracto": "REUNIÓN INFORMATIVA: “REPENSAR LA COPARTICIPACIÓN: DEL DISEÑO FEDERAL A LA REALIDAD DE LAS PROVINCIAS”."
+        }
+      ],
+      "expositores": "CDOR. ROBERTO DIB ASHUR, MINISTRO DE ECONOMÍA DE LA PROVINCIA DE SALTA. DR. GUIDO ZACK, DIRECTOR DE ECONOMÍA DE FUNDAR. LIC. LISANDRO NIERI, DIPUTADO NACIONAL. LIC. LUCIANO LASPINA, DIRECTOR EJECUTIVO DE CIPPEC.",
+      "tipo": "senadores",
+      "boletin_id": 2395,
+      "boletin_numero": "136/26"
     }
   ]
 }
