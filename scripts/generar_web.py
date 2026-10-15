@@ -3328,7 +3328,7 @@ function amBuildSteps(d){
     title:'Datos del expediente',
     kv:[
       ['Expediente(s)', esc((d.expedientes||[]).map(function(e){return e.codigo}).join(' · '))],
-      ['Comisi&oacute;n(es)', esc(comLabel(d.comisionCabecera)||(d.comisiones||[]).map(comLabel).join(' · ')||'—')],
+      ['Comisi&oacute;n(es)', esc(((d.comisiones&&d.comisiones.length)?d.comisiones:[d.comisionCabecera]).filter(Boolean).map(comLabel).join(' · ')||'—')],
       ['Fecha de dictamen', esc(d.fechaDictamen||'—')],
       ['Orden del D&iacute;a', 'N&ordm; '+esc(d.numero)+' / '+esc(d.periodo)+(d.minoria?' (con dictamen en minor&iacute;a)':'')]
     ],
@@ -6910,7 +6910,7 @@ def construir_ayuda_memoria(proyectos=None):
         for e in it.get("expedientes") or []:
             if not e.get("url"):
                 e["url"] = urls_por_exp.get(_clave_exp_am(e.get("codigo")))
-        it["comisiones"] = [_com_oficial(c) for c in (it.get("comisiones") or [])]
+        it["comisiones"] = list(dict.fromkeys(_com_oficial(c) for c in (it.get("comisiones") or [])))
         if it.get("comisionCabecera") and it["comisionCabecera"] != "Acuerdos":
             it["comisionCabecera"] = _com_oficial(it["comisionCabecera"])
 

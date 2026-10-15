@@ -28,11 +28,16 @@ pero el anexo existe igual, hay que agregarlo a mano en
 OVERRIDES_MINORIA_SIN_FIRMANTES (link de descarga provisto por Mariano,
 sin firmantes porque la planilla no los tiene).
 
-No hay columna de fecha de dictamen en esta planilla; fechaDictamen queda
-siempre en null (ya lo estaba en la práctica con la fuente vieja). Tampoco
-hay una lista de comisiones de giro completa, sólo la comisión cabecera:
-"comisiones" queda como lista de un solo elemento (o vacía si no hay
-cabecera, caso de OD ACUERDOS antes de aplicar el default).
+La planilla no trae fecha de dictamen ni la lista completa de comisiones de
+giro (sólo la cabecera). Eso se completa cruzando con
+ordenes_dia_oficial_2026.xlsx, el export "Órdenes del Día" del sitio del
+Senado (columnas Giros y Fecha Dictamen), por (número, período, tipo de OD).
+La planilla sigue siendo la única que decide QUÉ OD aparecen; el export sólo
+enriquece las que ya están. Se llama distinto de ordenes_dia_2026.xlsx a
+propósito: ése lo regenera solo generar_ordenes_dia_xlsx.py desde od.json
+(sin fechas) y pisaría el oficial. Si una OD nueva de la planilla no está en
+el export, queda sin fecha y con la cabecera como única comisión: hay que
+volver a bajar el export.
 
 Ejecutar con: py scripts/parse_ayuda_memoria.py
 """
@@ -46,6 +51,7 @@ import openpyxl
 BASE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 AYUDA_MEMORIA_PATH = os.path.join(BASE, "AYUDA_MEMORIA_2026.xlsx")
 JSON_PATH = os.path.join(BASE, "data", "ayuda_memoria.json")
+ORDENES_DIA_OFICIAL_PATH = os.path.join(BASE, "ordenes_dia_oficial_2026.xlsx")
 
 ORIGEN_MAP = {"PE": "Poder Ejecutivo", "S": "Senado", "CD": "Cámara de Diputados"}
 CATEGORIA_MAP = {
@@ -232,6 +238,60 @@ def leer_hoja(ws, tiene_cabecera):
     return filas
 
 
+def _fecha_str(v):
+    if isinstance(v, datetime):
+        return v.strftime("%d/%m/%Y")
+    v = str(v or "").strip()
+    return v or None
+
+
+def _parsear_giros(texto):
+    """'DE A - DE B -' -> ['DE A', 'DE B'] (sin repetidos, orden estable,
+    espacios colapsados: el sitio a veces mete dobles espacios)."""
+    out = []
+    for p in re.split(r"\s+-\s*", re.sub(r"\s+", " ", str(texto or "")).strip(" -")):
+        p = p.strip(" -")
+        if p and p not in out:
+            out.append(p)
+    return out
+
+
+def leer_oficial(path):
+    """-> {(numero, periodo, tipoOD): {"fecha": str|None, "giros": [str]}}"""
+    if not os.path.exists(path):
+        return {}
+    ws = openpyxl.load_workbook(path, data_only=True).active
+    res = {}
+    for r in range(2, ws.max_row + 1):
+        nro, per = ws.cell(row=r, column=2).value, ws.cell(row=r, column=1).value
+        if nro is None or per is None:
+            continue
+        tipo = "ANEXO" if str(ws.cell(row=r, column=3).value or "").strip().upper().startswith("ANEXO") else "NORMAL"
+        res[(int(nro), int(per), tipo)] = {
+            "fecha": _fecha_str(ws.cell(row=r, column=7).value),
+            "giros": _parsear_giros(ws.cell(row=r, column=6).value),
+        }
+    return res
+
+
+def enriquecer_con_oficial(filas, oficial):
+    sin_oficial, sin_fecha = [], []
+    for f in filas:
+        o = oficial.get((int(f["numero"]), f["periodo"], f["tipoOD"]))
+        if not o:
+            sin_oficial.append((f["numero"], f["tipoOD"]))
+            continue
+        f["fechaDictamen"] = o["fecha"]
+        if not o["fecha"]:
+            sin_fecha.append((f["numero"], f["tipoOD"]))
+        # cabecera primero (la manda la planilla), después los demás giros;
+        # los repetidos con otra grafía se unifican al resolver nombres
+        # oficiales en generar_web.construir_ayuda_memoria.
+        if o["giros"]:
+            f["comisiones"] = ([f["comisionCabecera"]] if f["comisionCabecera"] else []) + o["giros"]
+    return sin_oficial, sin_fecha
+
+
 def main():
     wb = openpyxl.load_workbook(AYUDA_MEMORIA_PATH, data_only=True)
     filas = []
@@ -250,6 +310,9 @@ def main():
             f["comisionCabecera"] = "Acuerdos"
             f["comisiones"] = ["Acuerdos"]
 
+    oficial = leer_oficial(ORDENES_DIA_OFICIAL_PATH)
+    sin_oficial, sin_fecha = enriquecer_con_oficial(filas, oficial)
+
     filas.sort(key=lambda f: (f["periodo"], int(f["numero"])), reverse=True)
 
     os.makedirs(os.path.dirname(JSON_PATH), exist_ok=True)
@@ -263,6 +326,12 @@ def main():
     print("  esperado para mensajes del PEN, PL venidos en revisión de Diputados,")
     print("  notas de particulares y proyectos de 'varios señores/as senadores/as')")
     print(f"Con comisión cabecera: {con_cabecera}")
+    print(f"Con fecha de dictamen: {sum(1 for f in filas if f['fechaDictamen'])} de {len(filas)}")
+    if sin_oficial:
+        print(f"AVISO: {len(sin_oficial)} OD de la planilla no están en {os.path.basename(ORDENES_DIA_OFICIAL_PATH)} "
+              f"(sin fecha ni giros; bajar el export de nuevo): {sin_oficial}")
+    if sin_fecha:
+        print(f"AVISO: el export oficial trae la fecha vacía en: {sin_fecha}")
 
 
 if __name__ == "__main__":
