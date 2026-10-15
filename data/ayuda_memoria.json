@@ -1,73 +1,162 @@
 [
   {
-    "numero": "402",
+    "numero": "407",
     "periodo": 2026,
-    "origen": "Cámara de Diputados",
-    "categoria": "Proyecto de Ley",
+    "origen": "Poder Ejecutivo",
+    "categoria": "Acuerdo",
     "autor": null,
-    "descripcion": "Dictamen en el proyecto de ley venido en revisión, por el que se modifica la Ley 25.565, de Presupuesto General de Gastos de la Administración Nacional para el ejercicio 2002, sobre readecuación del Régimen de subsidios a los consumos residenciales de gas natural en zonas frías, regularización de deudas eléctricas y derogación de los decretos 277/2022 y 929/2013. (CD-3/26; tenido a la vista S-909/26)",
+    "descripcion": "Dictamen en el mensaje del Poder Ejecutivo Nacional, por el que se solicita acuerdo para promover al grado inmediato superior al General de Brigada Sebastián Ignacio Ibañez. (PE-133/26)",
     "expedientes": [
       {
-        "codigo": "CD-3/26",
-        "url": "https://www.senado.gob.ar/parlamentario/comisiones/verExp/3.26/CD/PL"
-      },
-      {
-        "codigo": "S-909/26",
-        "url": null
+        "codigo": "PE-133/26",
+        "url": "https://www.senado.gob.ar/parlamentario/comisiones/verExp/133.26/PE/AC"
       }
     ],
-    "comisionCabecera": "Minería, Energía y Combustibles",
+    "comisionCabecera": "Acuerdos",
     "fechaDictamen": null,
-    "odLink": "https://www.senado.gob.ar/parlamentario/parlamentaria/51734/downloadOrdenDia",
+    "odLink": "https://www.senado.gob.ar/parlamentario/parlamentaria/51741/downloadOrdenDia",
     "comisiones": [
-      "Minería, Energía y Combustibles"
+      "Acuerdos"
     ],
     "tipoOD": "NORMAL",
     "firmantesMayoria": [
-      "Mario P. Cervi",
-      "Agustín A. Monteverde",
-      "Juan C. Godoy",
-      "Silvana L. Schneider",
-      "Bruno A. Olivera Lucero",
-      "Ezequiel Atauche",
-      "Agustín P. Coto",
+      "Juan C. Pagotto",
+      "Carlos O. Arce",
       "Patricia Bullrich",
-      "Enzo P. Fullone",
-      "Andrea M. Cristina",
-      "Julieta Corroza",
+      "Agustín P. Coto",
       "Carlos M. Espínola",
-      "María C. Moisés",
-      "Guillermo E. Andrada",
-      "Flavia G. Royón",
-      "Flavio S. Fama"
+      "Juan C. Godoy",
+      "Enrique M. Goerling Lara",
+      "Carolina Losada",
+      "Nadia J. Márquez"
     ]
   },
   {
-    "numero": "402",
+    "numero": "406",
     "periodo": 2026,
-    "origen": "Cámara de Diputados",
-    "categoria": "Proyecto de Ley",
-    "autor": null,
-    "descripcion": "Dictamen en el proyecto de ley venido en revisión, por el que se modifica la Ley 25.565, de Presupuesto General de Gastos de la Administración Nacional para el ejercicio 2002, sobre readecuación del Régimen de subsidios a los consumos residenciales de gas natural en zonas frías, regularización de deudas eléctricas y derogación de los decretos 277/2022 y 929/2013. (CD-3/26; tenido a la vista S-909/26)",
+    "origen": "Senado",
+    "categoria": "Proyecto de Declaración",
+    "autor": "Arce y Rojas Decut",
+    "descripcion": "Dictamen en el proyecto de declaración del señor senador Arce y de la señora senadora Rojas Decut, declarando de interés un nuevo aniversario del programa \"Fórmula Tuerca y todos los deportes\", emitido por LT4 radiodifusora Misiones. (S-881/26)",
     "expedientes": [
       {
-        "codigo": "CD-3/26",
-        "url": "https://www.senado.gob.ar/parlamentario/comisiones/verExp/3.26/CD/PL"
-      },
-      {
-        "codigo": "S-909/26",
-        "url": null
+        "codigo": "S-881/26",
+        "url": "https://www.senado.gob.ar/parlamentario/comisiones/verExp/881.26/S/PD"
       }
     ],
-    "comisionCabecera": "Minería, Energía y Combustibles",
+    "comisionCabecera": "Sistemas, Medios Comunicación y Libertad Expresión",
     "fechaDictamen": null,
-    "odLink": "https://www.senado.gob.ar/parlamentario/parlamentaria/51734/downloadOrdenDia",
+    "odLink": "https://www.senado.gob.ar/parlamentario/parlamentaria/51740/downloadOrdenDia",
     "comisiones": [
-      "Minería, Energía y Combustibles"
+      "Sistemas, Medios Comunicación y Libertad Expresión"
     ],
-    "tipoOD": "ANEXO",
+    "tipoOD": "NORMAL",
     "firmantesMayoria": [
-      "José M. Carambia"
+      "María C. Moisés",
+      "Juan C. Godoy",
+      "Mario P. Cervi",
+      "Carolina Losada",
+      "Enzo P. Fullone",
+      "Vilma F. Bedia",
+      "Guillermo E. Andrada",
+      "Fernando A. Salino",
+      "Elia Esther del Carmen Moreno"
+    ]
+  },
+  {
+    "numero": "405",
+    "periodo": 2026,
+    "origen": "Senado",
+    "categoria": "Proyecto de Comunicación",
+    "autor": "Losada",
+    "descripcion": "Dictamen en el proyecto de comunicación de la señora senadora Losada, solicitando una campaña de comunicación orientada a la prevención y concientización de la ludopatía infantil y de la autodependencia a dispositivos móviles, videojuegos y redes sociales. (S-68/26)",
+    "expedientes": [
+      {
+        "codigo": "S-68/26",
+        "url": "https://www.senado.gob.ar/parlamentario/comisiones/verExp/68.26/S/PC"
+      }
+    ],
+    "comisionCabecera": "Sistemas, Medios De Comunicación y Libertad De Expresión",
+    "fechaDictamen": null,
+    "odLink": "https://www.senado.gob.ar/parlamentario/parlamentaria/51739/downloadOrdenDia",
+    "comisiones": [
+      "Sistemas, Medios De Comunicación y Libertad De Expresión"
+    ],
+    "tipoOD": "NORMAL",
+    "firmantesMayoria": [
+      "María C. Moisés",
+      "Juan C. Godoy",
+      "Mario P. Cervi",
+      "Carolina Losada",
+      "Enzo P. Fullone",
+      "Vilma F. Bedia",
+      "Guillermo E. Andrada",
+      "Fernando A. Salino",
+      "Elia Esther del Carmen Moreno"
+    ]
+  },
+  {
+    "numero": "404",
+    "periodo": 2026,
+    "origen": "Senado",
+    "categoria": "Proyecto de Comunicación",
+    "autor": "Carolina Losada y Otras",
+    "descripcion": "Dictamen en el proyecto de comunicación de la señora senadora Carolina Losada y Otras, solicitando una campaña de prevención y concientización sobre la violencia en entornos digitales. (S-1254/25)",
+    "expedientes": [
+      {
+        "codigo": "S-1254/25",
+        "url": "https://www.senado.gob.ar/parlamentario/comisiones/verExp/1254.25/S/PC"
+      }
+    ],
+    "comisionCabecera": "Sistemas, Medios De Comunicación y Libertad De Expresión",
+    "fechaDictamen": null,
+    "odLink": "https://www.senado.gob.ar/parlamentario/parlamentaria/51738/downloadOrdenDia",
+    "comisiones": [
+      "Sistemas, Medios De Comunicación y Libertad De Expresión"
+    ],
+    "tipoOD": "NORMAL",
+    "firmantesMayoria": [
+      "María C. Moisés",
+      "Juan C. Godoy",
+      "Mario P. Cervi",
+      "Carolina Losada",
+      "Enzo P. Fullone",
+      "Vilma F. Bedia",
+      "Guillermo E. Andrada",
+      "Fernando A. Salino",
+      "Elia Esther del Carmen Moreno"
+    ]
+  },
+  {
+    "numero": "403",
+    "periodo": 2026,
+    "origen": "Senado",
+    "categoria": "Proyecto de Comunicación",
+    "autor": "Carolina Losada y Otros",
+    "descripcion": "Dictamen en el proyecto de comunicación de la señora senadora Carolina Losada y Otros, solicitando una campaña masiva de comunicación orientada a la prevención y concientización sobre el \"phishing\". (S-229/25)",
+    "expedientes": [
+      {
+        "codigo": "S-229/25",
+        "url": "https://www.senado.gob.ar/parlamentario/comisiones/verExp/229.25/S/PC"
+      }
+    ],
+    "comisionCabecera": "Sistemas, Medios De Comunicación y Libertad De Expresión",
+    "fechaDictamen": null,
+    "odLink": "https://www.senado.gob.ar/parlamentario/parlamentaria/51737/downloadOrdenDia",
+    "comisiones": [
+      "Sistemas, Medios De Comunicación y Libertad De Expresión"
+    ],
+    "tipoOD": "NORMAL",
+    "firmantesMayoria": [
+      "María C. Moisés",
+      "Juan C. Godoy",
+      "Mario P. Cervi",
+      "Carolina Losada",
+      "Enzo P. Fullone",
+      "Vilma F. Bedia",
+      "Guillermo E. Andrada",
+      "Fernando A. Salino",
+      "Elia Esther del Carmen Moreno"
     ]
   },
   {
@@ -1150,45 +1239,6 @@
       "María C. Moisés",
       "María T. M. González",
       "Fernando A. Salino"
-    ]
-  },
-  {
-    "numero": "367",
-    "periodo": 2026,
-    "origen": "Cámara de Diputados",
-    "categoria": "Proyecto de Ley",
-    "autor": null,
-    "descripcion": "Dictamen en el proyecto de ley venido en revisión, por el que se modifica la Carta Orgánica del Banco Central de la República Argentina. (CD-7/26)",
-    "expedientes": [
-      {
-        "codigo": "CD-7/26",
-        "url": "https://www.senado.gob.ar/parlamentario/comisiones/verExp/7.26/CD/PL"
-      }
-    ],
-    "comisionCabecera": "Economía Nacional e Inversión",
-    "fechaDictamen": null,
-    "odLink": "https://www.senado.gob.ar/parlamentario/parlamentaria/51696/downloadOrdenDia",
-    "comisiones": [
-      "Economía Nacional e Inversión"
-    ],
-    "tipoOD": "NORMAL",
-    "firmantesMayoria": [
-      "Enrique M. Goerling Lara",
-      "Agustín A. Monteverde",
-      "Julieta Corroza",
-      "Silvana L. Schneider",
-      "Bartolomé E. Abdala",
-      "Ezequiel Atauche",
-      "Ivanna M. Arrascaeta",
-      "Bruno A. Olivera Lucero",
-      "Gonzalo Guzmán Coraita",
-      "Patricia Bullrich",
-      "Mariana Juri",
-      "Andrea M. Cristina",
-      "Daniel R. Kroneberger",
-      "Beatriz L . Ávila",
-      "Eduardo H. Galaretto",
-      "Flavio S. Fama"
     ]
   },
   {

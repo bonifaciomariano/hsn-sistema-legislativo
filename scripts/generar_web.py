@@ -6857,7 +6857,29 @@ def _firmantes_por_bloque(firmantes, bloque_de_senador):
     ]
 
 
-def construir_ayuda_memoria():
+_PARTICULAS_COM = {"DE", "DEL", "LA", "LAS", "LOS", "Y", "E"}
+RE_EXP_AM = re.compile(r"^([A-ZÑ.]+)-(\d+)/(\d{2,4})(?:-[A-Z]{2})?$")
+
+
+def _norm_com_flexible(s):
+    """Como _norm_com pero sin partículas (de/del/la/y...): la planilla de
+    Ayuda Memoria a veces trae la comisión abreviada o con typos de
+    partículas ("Medios Comunicación y Libertad Expresión")."""
+    tokens = re.split(r"[ ,]+", _norm_com(s))
+    return " ".join(t for t in tokens if t and t not in _PARTICULAS_COM)
+
+
+def _clave_exp_am(codigo):
+    m = RE_EXP_AM.match((codigo or "").strip().upper())
+    if not m:
+        return None
+    anio = int(m.group(3))
+    if anio < 100:
+        anio += 2000
+    return (m.group(1).replace(".", ""), int(m.group(2)), anio)
+
+
+def construir_ayuda_memoria(proyectos=None):
     """Carga data/ayuda_memoria.json (generado a mano por
     scripts/parse_ayuda_memoria.py mientras el scraper del sitio del Senado
     esté bloqueado por el anti-bot), agrupa los firmantes de cada dictamen
@@ -6869,14 +6891,28 @@ def construir_ayuda_memoria():
     comisiones_oficiales = _cargar("comisiones.json", [])
     bloque_de_senador = construir_bloque_por_senador()
     nombres_com_oficiales = {_norm_com(c["nombre"]): c["nombre"] for c in comisiones_oficiales}
+    nombres_com_flex = {_norm_com_flexible(c["nombre"]): c["nombre"] for c in comisiones_oficiales}
+
+    def _com_oficial(nombre):
+        return (nombres_com_oficiales.get(_norm_com(nombre))
+                or nombres_com_flex.get(_norm_com_flexible(nombre))
+                or nombre)
+
+    # Una celda del xlsx admite un solo hipervínculo: en una OD con varios
+    # expedientes sólo el primero llega con link. Los demás se completan
+    # desde Proyectos (mismo origen/número/año).
+    urls_por_exp = {}
+    for p in (proyectos or []):
+        if p.get("url"):
+            urls_por_exp.setdefault((p.get("origen"), p.get("nro"), p.get("anio")), p["url"])
 
     for it in items:
-        it["comisiones"] = [
-            nombres_com_oficiales.get(_norm_com(c), c) for c in (it.get("comisiones") or [])
-        ]
+        for e in it.get("expedientes") or []:
+            if not e.get("url"):
+                e["url"] = urls_por_exp.get(_clave_exp_am(e.get("codigo")))
+        it["comisiones"] = [_com_oficial(c) for c in (it.get("comisiones") or [])]
         if it.get("comisionCabecera") and it["comisionCabecera"] != "Acuerdos":
-            n = _norm_com(it["comisionCabecera"])
-            it["comisionCabecera"] = nombres_com_oficiales.get(n, it["comisionCabecera"])
+            it["comisionCabecera"] = _com_oficial(it["comisionCabecera"])
 
         firmantes = it.get("firmantesMayoria") or []
         if firmantes:
@@ -7074,7 +7110,7 @@ def main():
     acuerdos_procesados = _cargar("acuerdos.json", [])
     cruzar_proyectos_acuerdos(proyectos, acuerdos_procesados)
 
-    ayuda_memoria_procesada = construir_ayuda_memoria()
+    ayuda_memoria_procesada = construir_ayuda_memoria(proyectos)
 
     dpp_data = _cargar("dpp_cambios.json", {})
     dpp_ultimo_txt = _dpp_ultimo_txt(dpp_data)
