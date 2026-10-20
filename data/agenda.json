@@ -9120,8 +9120,8 @@
       ],
       "expositores": "CDOR. ROBERTO DIB ASHUR, MINISTRO DE ECONOMÍA DE LA PROVINCIA DE SALTA. DR. GUIDO ZACK, DIRECTOR DE ECONOMÍA DE FUNDAR. LIC. LISANDRO NIERI, DIPUTADO NACIONAL. LIC. LUCIANO LASPINA, DIRECTOR EJECUTIVO DE CIPPEC.",
       "tipo": "senadores",
-      "boletin_id": 2397,
-      "boletin_numero": "138/26"
+      "boletin_id": 2398,
+      "boletin_numero": "139/26"
     },
     {
       "seccion": "senadores",
@@ -9158,8 +9158,8 @@
       ],
       "expositores": null,
       "tipo": "senadores",
-      "boletin_id": 2397,
-      "boletin_numero": "138/26"
+      "boletin_id": 2398,
+      "boletin_numero": "139/26"
     },
     {
       "seccion": "senadores",
@@ -9197,8 +9197,8 @@
       ],
       "expositores": null,
       "tipo": "senadores",
-      "boletin_id": 2397,
-      "boletin_numero": "138/26"
+      "boletin_id": 2398,
+      "boletin_numero": "139/26"
     },
     {
       "seccion": "senadores",
@@ -9222,7 +9222,11 @@
         },
         {
           "numero": "S-1668/26",
-          "extracto": "CAPITANICH Y OTROS: PROYECTO DE LEY QUE DECLARA BIEN DE INTERÉS HISTÓRICO NACIONAL, EN LOS TÉRMINOS DE LA LEY 12.665 Y S/M., AL SUBMARINO IKL 209 TIPO 1200 ARA S-32 \"SAN LUIS\", PERTENECIENTE A LA ARMADA ARGENTINA. PATRIMONIO CULTURAL"
+          "extracto": "CAPITANICH Y OTROS: PROYECTO DE LEY QUE DECLARA BIEN DE INTERÉS HISTÓRICO NACIONAL, EN LOS TÉRMINOS DE LA LEY 12.665 Y S/M., AL SUBMARINO IKL 209 TIPO 1200 ARA S-32 \"SAN LUIS\", PERTENECIENTE A LA ARMADA ARGENTINA"
+        },
+        {
+          "numero": "S-1232/26",
+          "extracto": "LOSADA Y GALARETTO: PROYECTO DE LEY QUE DECLARA MONUMENTO HISTÓRICO NACIONAL, AL CONJUNTO PARQUE DE LA CONSTITUCIÓN NACIONAL, SITO EN LA CDAD. DE SANTA FE, PROV. HOMÓNIMA. PATRIMONIO CULTURAL"
         },
         {
           "numero": "S-643/25",
@@ -9250,7 +9254,11 @@
         },
         {
           "numero": "S-1645/26",
-          "extracto": "ROJAS DECUT: PROYECTO DE LEY QUE DECLARA \"FIESTA NACIONAL DEL DOCENTE\", AL FESTIVAL PROVINCIAL QUE SE REALIZA ANUALMENTE, EN LA LOC. DE CAMPO GRANDE, PROV. DE MISIONES. HOMENAJE"
+          "extracto": "ROJAS DECUT: PROYECTO DE LEY QUE DECLARA \"FIESTA NACIONAL DEL DOCENTE\", AL FESTIVAL PROVINCIAL QUE SE REALIZA ANUALMENTE, EN LA LOC. DE CAMPO GRANDE, PROV. DE MISIONES"
+        },
+        {
+          "numero": "S-1701/26",
+          "extracto": "ALMEIDA: PROYECTO DE LEY QUE DECLARA FIESTA NACIONAL A LA \"FIESTA DE LA ARTESANÍA\" QUE SE CELEBRA TODOS LOS AÑOS EN LA CDAD. DE COLÓN, PROV. DE ENTRE RÍOS. HOMENAJE"
         },
         {
           "numero": "S-1445/26",
@@ -9359,12 +9367,183 @@
         {
           "numero": "S-1737/26",
           "extracto": "GODOY Y OTROS: PROYECTO DE DECLARACIÓN QUE DECLARA DE INTERÉS EL XII CONGRESO INTERNACIONAL TRIANUAL DE LA SOCIEDAD INTERNACIONAL PARA LA FÍSICA - QUÍMICA TEÓRICA (ISTCP), A REALIZARSE EN LA CDAD. DE CORRIENTES, PROV. HOMÓNIMA, DEL 29 DE AGOSTO AL 3 DE SEPTIEMBRE DE 2027"
+        },
+        {
+          "numero": "S-895/26",
+          "extracto": "ABAD: PROYECTO DE DECLARACIÓN QUE EXPRESA BENEPLÁCITO POR EL 80° ANIVERSARIO DE LA CREACIÓN DEL CONSEJO PROFESIONAL DE CIENCIAS ECONÓMICAS DE LA PROV. DE BUENOS AIRES, EL 15 DE JUNIO DE 2026"
+        },
+        {
+          "numero": "S-1758/26",
+          "extracto": "AVILA: PROYECTO DE DECLARACIÓN QUE DECLARA DE INTERÉS LA 20° EDICIÓN DE LA BIENAL INTERNACIONAL DE ARQUITECTURA DE BUENOS AIRES, A REALIZARSE EN LA CIUDAD AUTÓNOMA DE BUENOS AIRES, DEL 22 DE SEPTIEMBRE AL 31 DE OCTUBRE DE 2026"
+        },
+        {
+          "numero": "S-1759/26",
+          "extracto": "AVILA: PROYECTO DE DECLARACIÓN QUE EXPRESA BENEPLÁCITO Y ADHIERE A LOS ACTOS CONMEMORATIVOS POR EL 47° ANIVERSARIO DE LA CREACIÓN DEL LICEO MILITAR \"GENERAL ARAOZ LAMADRID\", A CELEBRARSE EN LA CDAD. DE SAN MIGUEL DE TUCUMÁN, PROV. DE TUCUMÁN, EL 2 DE NOVIEMBRE DE 2026"
         }
       ],
       "expositores": null,
       "tipo": "senadores",
-      "boletin_id": 2397,
-      "boletin_numero": "138/26"
+      "boletin_id": 2398,
+      "boletin_numero": "139/26"
+    },
+    {
+      "seccion": "senadores",
+      "dia": "MIÉRCOLES",
+      "fecha": "21/10",
+      "hora": "14:00",
+      "modalidad": "",
+      "comisiones": [
+        "LEGISLACIÓN GENERAL",
+        "POBLACIÓN Y DESARROLLO HUMANO"
+      ],
+      "salon": "ILLIA",
+      "salon_completo": "SALÓN ILLIA",
+      "temario": [
+        {
+          "numero": "S-528/25",
+          "extracto": "CRISTINA: PROYECTO DE LEY DE PROMOCIÓN DE LOS DERECHOS DE LAS NIÑAS, NIÑOS Y ADOLESCENTES A LA DIGNIDAD, A LA INTEGRIDAD PERSONAL Y UNA VIDA LIBRE DE VIOLENCIAS, A TRAVÉS DE PROTOCOLOS PARA LA PREVENCIÓN, DETECCIÓN Y ACTUACIÓN ANTE SITUACIONES DE VIOLENCIA"
+        },
+        {
+          "numero": "S-190/25",
+          "extracto": "BENSUSÁN: REPRODUCE PROYECTO DE LEY QUE CREA EL REGISTRO NACIONAL DE PERSONAS DEUDORAS ALIMENTARIAS EN MORA. (REF"
+        },
+        {
+          "numero": "S-9/23",
+          "extracto": ")"
+        },
+        {
+          "numero": "S-1723/26",
+          "extracto": "TERENZI: PROYECTO DE LEY QUE CREA EL REGISTRO NACIONAL ÚNICO DE ALIMENTANTES MOROSOS (RENUAM)"
+        }
+      ],
+      "expositores": null,
+      "tipo": "senadores",
+      "boletin_id": 2398,
+      "boletin_numero": "139/26"
+    },
+    {
+      "seccion": "senadores",
+      "dia": "MIÉRCOLES",
+      "fecha": "21/10",
+      "hora": "A continuación",
+      "modalidad": "",
+      "comisiones": [
+        "POBLACIÓN Y DESARROLLO HUMANO"
+      ],
+      "salon": "ILLIA",
+      "salon_completo": "SALÓN ILLIA",
+      "temario": [
+        {
+          "numero": "S-954/26",
+          "extracto": "CORPACCI: REPRODUCE PROYECTO DE LEY DE ACCESO A LA INFORMACIÓN, EN PERSONAS CON DISCAPACIDAD QUE MANIFIESTAN DIFICULTADES EN LA COMUNICACIÓN Y EL LENGUAJE VERBAL. (REF. S- 30/24)"
+        },
+        {
+          "numero": "S-1250/26",
+          "extracto": "BEDIA: PROYECTO DE LEY QUE INSTITUYE EL MES DE AGOSTO DE CADA AÑO COMO EL \"MES DE LA VIDA Y LA FAMILIA\""
+        },
+        {
+          "numero": "S-334/25",
+          "extracto": "OLIVERA LUCERO: PROYECTO DE DECLARACIÓN QUE ADHIERE AL \"DÍA MUNDIAL DEL SÍNDROME DE DOWN\", EL 21 DE MARZO"
+        },
+        {
+          "numero": "S-589/25",
+          "extracto": "DURÉ: PROYECTO DE DECLARACIÓN QUE ADHIERE AL DÍA INTERNACIONAL DE LA LUCHA CONTRA EL MALTRATO INFANTIL, EL 25 DE ABRIL DE CADA AÑO"
+        },
+        {
+          "numero": "S-989/25",
+          "extracto": "BLANCO: PROYECTO DE DECLARACIÓN QUE ADHIERE A LA CONMEMORACIÓN DEL DÍA MUNDIAL DE TOMA DE CONCIENCIA DEL ABUSO Y MALTRATO EN LA VEJEZ, EL 15 DE JUNIO DE CADA AÑO"
+        },
+        {
+          "numero": "S-1088/25",
+          "extracto": "DURÉ: PROYECTO DE DECLARACIÓN QUE ADHIERE AL DÍA MUNDIAL DE LA TOMA DE CONCIENCIA DEL ABUSO Y MALTRATO EN LA VEJEZ, EL 15 DE JUNIO DE CADA AÑO"
+        },
+        {
+          "numero": "S-972/26",
+          "extracto": "MENDOZA: PROYECTO DE DECLARACIÓN QUE ADHIERE AL DÍA MUNDIAL DE LA TOMA DE CONCIENCIA DEL ABUSO Y MALTRATO EN LA VEJEZ, A CELEBRARSE EL 15 DE JUNIO DE CADA AÑO"
+        },
+        {
+          "numero": "S-1187/25",
+          "extracto": "LÓPEZ: PROYECTO DE DECLARACIÓN QUE DECLARA DE INTERÉS LA LABOR DE LA ONG CILSA POR SU PROGRAMA NACIONAL DE BECAS Y OPORTUNIDADES Y LA CAMPAÑA \"MÁS LEJOS PARA LLEGAR A MÁS\""
+        },
+        {
+          "numero": "S-1191/25",
+          "extracto": "OLALLA: PROYECTO DE DECLARACIÓN QUE DECLARA DE INTERÉS LA INICIATIVA \"CAMINO COMPARTIDO\" DESARROLLADA POR LA ASOCIACIÓN MUTUAL ISRAELITA (AMIA)"
+        },
+        {
+          "numero": "S-1223/25",
+          "extracto": "ZIMMERMANN: PROYECTO DE DECLARACIÓN QUE ADHIERE AL \"DÍA MUNDIAL DE LA POBLACIÓN\" EL 11 DE JULIO DE 2025"
+        },
+        {
+          "numero": "S-1259/25",
+          "extracto": "ZIMMERMANN: PROYECTO DE DECLARACIÓN QUE ADHIERE AL \"DÍA DE LA MEMORIA DE LOS PUEBLOS INDÍGENAS Y REAFIRMACIÓN DE SUS DERECHOS\", QUE SE CONMEMORA EN LA PROVINCIA DEL CHACO, EL 19 DE JULIO"
+        },
+        {
+          "numero": "S-1342/25",
+          "extracto": "KIRCHNER: PROYECTO DE DECLARACIÓN QUE ADHIERE AL \"DÍA INTERNACIONAL DE LOS PUEBLOS INDÍGENAS\", EL 9 DE AGOSTO DE CADA AÑO"
+        },
+        {
+          "numero": "S-1349/25",
+          "extracto": "ZIMMERMANN: PROYECTO DE DECLARACIÓN QUE ADHIERE AL \"DÍA INTERNACIONAL DE LOS PUEBLOS INDÍGENAS\", A CONMEMORARSE EL 9 DE AGOSTO DE 2025"
+        },
+        {
+          "numero": "S-1343/25",
+          "extracto": "KIRCHNER: PROYECTO DE DECLARACIÓN QUE ADHIERE A LA CONMEMORACIÓN DEL \"DÍA PROVINCIAL DE LA DISCAPACIDAD EN SANTA CRUZ\", EL 8 DE AGOSTO DE CADA AÑO"
+        },
+        {
+          "numero": "S-1409/25",
+          "extracto": "KIRCHNER: PROYECTO DE DECLARACIÓN QUE ADHIERE A LA CONMEMORACIÓN DEL \"DÍA NACIONAL DE LA ANCIANIDAD\", EL 28 DE AGOSTO DE CADA AÑO"
+        },
+        {
+          "numero": "S-1773/25",
+          "extracto": "ZIMMERMANN: PROYECTO DE DECLARACIÓN QUE ADHIERE AL DÍA INTERNACIONAL PARA LA ERRADICACIÓN DE LA POBREZA, QUE SE CONMEMORA EL 17 DE OCTUBRE DE CADA AÑO"
+        },
+        {
+          "numero": "S-1116/26",
+          "extracto": "MARKS: PROYECTO DE DECLARACIÓN QUE DECLARA DE INTERÉS LA 4° SEMANA DE VISIBILIZACIÓN DE LOS DERECHOS DE LAS PERSONAS EN SITUACIÓN DE CALLE, EN LA CDAD. DE SAN CARLOS DE BARILOCHE, PROV. DE RÍO NEGRO, DEL 18 AL 22 DE AGOSTO DE 2026"
+        },
+        {
+          "numero": "S-1297/26",
+          "extracto": "MENDOZA: PROYECTO DE DECLARACIÓN QUE DECLARA DE INTERÉS LA COLONIA RECREATIVA \"RENACIMIENTO\" PARA JUBILADOS Y PERSONAS MAYORES DE LA CDAD. DE FAMAILLÁ, PROV. DE TUCUMÁN"
+        },
+        {
+          "numero": "S-1426/26",
+          "extracto": "ARCE Y ROJAS DECUT: PROYECTO DE DECLARACIÓN QUE DECLARA DE INTERÉS LA 46° EDICIÓN DE LA \"FIESTA NACIONAL DEL INMIGRANTE\", EN LA CDAD. DE OBERÁ, PROV. DE MISIONES, DEL 3 AL 13 DE SEPTIEMBRE DE 2026"
+        },
+        {
+          "numero": "S-1589/26",
+          "extracto": "CORROZA: PROYECTO DE DECLARACIÓN QUE DECLARA DE INTERÉS LA REALIZACIÓN DEL I CONGRESO INTEGRAL DE ADOLESCENCIAS Y JUVENTUDES - CIAJ 2026, A REALIZARSE EN LA PROV. DEL NEUQUÉN, EL 9 DE OCTUBRE"
+        },
+        {
+          "numero": "S-80/25",
+          "extracto": "GALARETTO: PROYECTO DE RESOLUCIÓN QUE ADHIERE A LA CONMEMORACIÓN DEL DÍA MUNDIAL DE CONCIENTIZACIÓN SOBRE EL ABUSO DE LOS ANCIANOS, EL 15 DE JUNIO DE CADA AÑO"
+        }
+      ],
+      "expositores": null,
+      "tipo": "senadores",
+      "boletin_id": 2398,
+      "boletin_numero": "139/26"
+    },
+    {
+      "seccion": "senadores",
+      "dia": "MARTES",
+      "fecha": "27/10",
+      "hora": "10:00",
+      "modalidad": "",
+      "comisiones": [
+        "BICAMERAL DE LA DEFENSORÍA DEL PUEBLO - AUDIENCIA PÚBLICA"
+      ],
+      "salon": "AZUL",
+      "salon_completo": "SALÓN AZUL",
+      "temario": [
+        {
+          "numero": "",
+          "extracto": "TRATAMIENTO DE LAS POSTULACIONES REMITIDAS POR LOS BLOQUES PARLAMENTARIOS Y LA SUBSECRETARÍA DE DERECHOS HUMANOS DEL MINISTERIO DE JUSTICIA DE LA NACIÓN PARA INTEGRAR EL COMITÉ NACIONAL PARA LA PREVENCIÓN DE LA TORTURA, LEY 26.827, ARTÍCULO 11, INCISOS A) Y D)."
+        }
+      ],
+      "expositores": null,
+      "tipo": "bicameral",
+      "boletin_id": 2398,
+      "boletin_numero": "139/26"
     }
   ]
 }
