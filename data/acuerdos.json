@@ -1,5 +1,77 @@
 [
   {
+    "nro": 324,
+    "anio": 2026,
+    "caratula": "MENSAJE N° 286/26 QUE SOLICITA ACUERDO PARA PROMOVER A LA CATEGORIA \"C\" MINISTRO PLENIPOTENCIARIO DE SEGUNDA CLASE A FUNCIONARIOS DE LA CATEGORIA \"D\" CONSEJERO DE EMBAJADA Y CONSUL GENERAL DEL MINISTERIO DE RELACIONES EXTERIORES, COMERCIO INTERNACIONAL Y CULTO.",
+    "origen": "PE",
+    "dae": 32,
+    "dado_cuenta": false,
+    "fecha_dado_cuenta": null,
+    "aprobado": false,
+    "fecha_aprobacion": null,
+    "nro_od": null
+  },
+  {
+    "nro": 323,
+    "anio": 2026,
+    "caratula": "MENSAJE N° 285/26 QUE SOLICITA ACUERDO PARA PROMOVER A LA CATEGORIA \"C\" MINISTRO PLENIPOTENCIARIO DE SEGUNDA CLASE A FUNCIONARIOS DE LA CATEGORIA \"D\" CONSEJERO DE EMBAJADA Y CONSUL GENERAL DEL MINISTERIO DE RELACIONES EXTERIORES, COMERCIO INTERNACIONAL Y CULTO.",
+    "origen": "PE",
+    "dae": 32,
+    "dado_cuenta": false,
+    "fecha_dado_cuenta": null,
+    "aprobado": false,
+    "fecha_aprobacion": null,
+    "nro_od": null
+  },
+  {
+    "nro": 322,
+    "anio": 2026,
+    "caratula": "MENSAJE N° 284/26 QUE SOLICITA ACUERDO PARA PROMOVER A LA CATEGORIA \"B\" MINISTRO PLENIPOTENCIARIO DE PRIMERA CLASE A FUNCIONARIOS DE LA CATEGORIA \"C\" MINISTRO PLENIPOTENCIARIO DE SEGUNDA CLASE DEL MINISTERIO DE RELACIONES EXTERIORES, COMERCIO INTERNACIONAL Y CULTO.",
+    "origen": "PE",
+    "dae": 32,
+    "dado_cuenta": false,
+    "fecha_dado_cuenta": null,
+    "aprobado": false,
+    "fecha_aprobacion": null,
+    "nro_od": null
+  },
+  {
+    "nro": 321,
+    "anio": 2026,
+    "caratula": "MENSAJE N° 283/26 QUE SOLICITA ACUERDO PARA PROMOVER A LA CATEGORIA \"B\" MINISTRO PLENIPOTENCIARIO DE PRIMERA CLASE A FUNCIONARIOS DE LA CATEGORIA \"C\" MINISTRO PLENIPOTENCIARIO DE SEGUNDA CLASE DEL MINISTERIO DE RELACIONES EXTERIORES, COMERCIO INTERNACIONAL Y CULTO.",
+    "origen": "PE",
+    "dae": 32,
+    "dado_cuenta": false,
+    "fecha_dado_cuenta": null,
+    "aprobado": false,
+    "fecha_aprobacion": null,
+    "nro_od": null
+  },
+  {
+    "nro": 320,
+    "anio": 2026,
+    "caratula": "MENSAJE N° 282/26 QUE SOLICITA ACUERDO PARA PROMOVER A LA CATEGORIA \"A\" EMBAJADOR EXTRAORDINARIO Y PLENIPOTENCIARIO A FUNCIONARIOS DE LA CATEGORIA \"B\" MINISTRO PLENIPOTENCIARIO DE PRIMERA CLASE DEL MINISTERIO DE RELACIONES EXTERIORES, COMERCIO INTERNACIONAL Y CULTO.",
+    "origen": "PE",
+    "dae": 32,
+    "dado_cuenta": false,
+    "fecha_dado_cuenta": null,
+    "aprobado": false,
+    "fecha_aprobacion": null,
+    "nro_od": null
+  },
+  {
+    "nro": 319,
+    "anio": 2026,
+    "caratula": "MENSAJE N° 281/26 QUE SOLICITA ACUERDO PARA PROMOVER A LA CATEGORIA \"A\" EMBAJADOR EXTRAORDINARIO Y PLENIPOTENCIARIO A FUNCIONARIOS DE LA CATEGORIA \"B\" MINISTRO PLENIPOTENCIARIO DE PRIMERA CLASE DEL MINISTERIO DE RELACIONES EXTERIORES, COMERCIO INTERNACIONAL Y CULTO.",
+    "origen": "PE",
+    "dae": 32,
+    "dado_cuenta": false,
+    "fecha_dado_cuenta": null,
+    "aprobado": false,
+    "fecha_aprobacion": null,
+    "nro_od": null
+  },
+  {
     "nro": 312,
     "anio": 2026,
     "caratula": "MENSAJE N° 280/26 QUE SOLICITA ACUERDO PARA DESIGNAR FISCAL FEDERAL DE LA UNIDAD FISCAL MENDOZA, PROVINCIA DE MENDOZA, AL DR. PABLO GARCIARENA.",
