@@ -29,6 +29,9 @@ import time
 import unicodedata
 from datetime import datetime, timedelta
 
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from autoria_caratula import calcular_autoria  # noqa: E402
+
 try:
     import requests
     from bs4 import BeautifulSoup
@@ -197,7 +200,11 @@ def construir_url_expediente(nro, anio, origen, tipo):
 
 
 def clave_proyecto(p):
-    return (int(p["nro"]), int(p["anio"]), str(p["tipo"]).strip())
+    """Clave de deduplicación. Incluye el ORIGEN: la numeración es independiente por origen
+    (S, PE, CD, OV, P), así que S-94/26 y PE-94/26 son expedientes distintos aunque
+    compartan número, año y tipo. Sin el origen, el segundo en llegar se descartaba en
+    silencio (así se perdieron 21 proyectos de ley de 2026 y 15 de 2025)."""
+    return (int(p["nro"]), int(p["anio"]), str(p["tipo"]).strip(), str(p.get("origen") or "").strip())
 
 
 # ─────────────────────────────── Persistencia JSON ───────────────────────────
@@ -282,7 +289,7 @@ def migrar_desde_tsv(tsv_path, padron, indice, claves_existentes):
             anio = int((row.get("ANIO") or "2025").strip() or "2025")
             tipo = (row.get("TIPO") or "PL").strip()
             origen = (row.get("ORIGEN") or "S").strip()
-            if (nro, anio, tipo) in claves_existentes:
+            if (nro, anio, tipo, origen) in claves_existentes:
                 continue
 
             caratula = (row.get("CARATULA") or "").strip()
@@ -311,6 +318,7 @@ def migrar_desde_tsv(tsv_path, padron, indice, claves_existentes):
                         todos.append(normalizar_autor(a))
 
             autores, coautores = clasificar_autores(caratula, todos)
+            autores_car, bloques_car, _ = calcular_autoria(caratula, todos, padron)
             comisiones = [(row.get(f"COM{i}") or "").strip()
                           for i in range(1, 6) if (row.get(f"COM{i}") or "").strip()]
 
@@ -336,8 +344,9 @@ def migrar_desde_tsv(tsv_path, padron, indice, claves_existentes):
                 "fecha_archivo": None,
                 "caduca": False,
                 "fecha_caduca": None,
+                **({"autores_caratula": autores_car, "bloques_caratula": bloques_car} if autores_car else {}),
             })
-            claves_existentes.add((nro, anio, tipo))
+            claves_existentes.add((nro, anio, tipo, origen))
     log.info(f"  → migración: {len(nuevos)} proyectos nuevos desde TSV")
     return nuevos
 
@@ -567,7 +576,7 @@ def scrape_incremental(session, padron, indice, claves_existentes, acuerdos_por_
 
     # Solo procesar expedientes que no estén ya en la base
     pendientes = [e for e in expedientes
-                  if (e["nro"], e["anio"], e["tipo"]) not in claves_existentes]
+                  if (e["nro"], e["anio"], e["tipo"], e["origen"]) not in claves_existentes]
     log.info(f"  → {len(pendientes)}/{len(expedientes)} expedientes nuevos a procesar")
 
     nuevos = []
@@ -578,6 +587,7 @@ def scrape_incremental(session, padron, indice, claves_existentes, acuerdos_por_
         autores_norm = [normalizar_autor(a) for a in detalle.get("autores_raw", []) if a.strip()]
         caratula = exp.get("caratula", exp["extracto"])
         autores, coautores = clasificar_autores(caratula, autores_norm)
+        autores_car, bloques_car, _ = calcular_autoria(caratula, autores_norm, padron)
         proyecto = {
             "nro": exp["nro"],
             "anio": exp["anio"],
@@ -602,6 +612,10 @@ def scrape_incremental(session, padron, indice, claves_existentes, acuerdos_por_
             "fecha_caduca": detalle.get("fecha_caduca"),
             "_ultima_revision": _hoy_iso(),
         }
+        if autores_car:
+            # Autoría por el prefijo de la carátula (ver autoria_caratula.py)
+            proyecto["autores_caratula"] = autores_car
+            proyecto["bloques_caratula"] = bloques_car
         nuevos.append(proyecto)
         if exp["tipo"] == "AC":
             actualizar_acuerdo(acuerdos_por_clave, proyecto, detalle)
@@ -659,6 +673,28 @@ def revisar_expedientes_abiertos(session, proyectos, acuerdos_por_clave):
     return actualizados
 
 
+# ─────────────────────────────── Chequeo de huecos ────────────────────────────
+
+def chequear_huecos(proyectos, anios=None):
+    """Registra en el log, por año, cuántos expedientes de origen S hay en proyectos.json
+    frente al número más alto visto. La numeración de S es una sola secuencia por año
+    (compartida entre tipos), así que `máx - cantidad` indica cuántos números no están
+    cargados; algunos son normales (tipos que no se guardan), pero un salto repentino entre
+    corridas avisa de que se está perdiendo algo. También lista los números faltantes
+    dentro de los 200 más recientes. Sólo informa: no modifica nada."""
+    anio_actual = datetime.now().year
+    for anio in (anios or (anio_actual, anio_actual - 1)):
+        nros = {int(p["nro"]) for p in proyectos if p.get("origen") == "S" and int(p["anio"]) == anio}
+        if not nros:
+            log.info(f"  [huecos] S/{anio}: sin expedientes")
+            continue
+        maximo = max(nros)
+        recientes = [n for n in range(max(1, maximo - 199), maximo + 1) if n not in nros]
+        log.info(f"  [huecos] S/{anio}: {len(nros)} expedientes, número más alto {maximo}, "
+                 f"sin cargar {maximo - len(nros)}; faltan en los últimos 200: {recientes[:30]}"
+                 f"{'...' if len(recientes) > 30 else ''}")
+
+
 # ─────────────────────────────── Main ─────────────────────────────────────────
 
 def main():
@@ -692,6 +728,7 @@ def main():
         revisar_expedientes_abiertos(session, proyectos, acuerdos_por_clave)
 
     guardar_proyectos(proyectos)
+    chequear_huecos(proyectos)
     guardar_acuerdos(list(acuerdos_por_clave.values()))
     con_bloque = sum(1 for p in proyectos if p["bloques"] and p["bloques"] != ["Sin datos"])
     log.info(f"  → TOTAL en proyectos.json: {len(proyectos)} ({con_bloque} con bloque)")

@@ -7123,7 +7123,12 @@ def main():
     if agenda_ultimo_txt:
         agenda_hint += " &middot; " + agenda_ultimo_txt
 
-    datos_js = json.dumps(proyectos, ensure_ascii=False)
+    # Campos de trazabilidad que usan sólo las páginas por bloque (repo Prosecretaria-
+    # Parlamentaria-HSN): no se embeben acá para no agrandar el HTML principal.
+    solo_bloques = {"autores_caratula", "bloques_caratula", "od_trazabilidad",
+                    "fecha_dictamen", "sanciones_trazabilidad"}
+    datos_js = json.dumps([{k: v for k, v in p.items() if k not in solo_bloques} for p in proyectos],
+                          ensure_ascii=False)
     comisiones_js = json.dumps(construir_comisiones(proyectos), ensure_ascii=False)
     agenda_js = json.dumps(agenda_procesada, ensure_ascii=False)
     ayuda_memoria_js = json.dumps(ayuda_memoria_procesada, ensure_ascii=False)

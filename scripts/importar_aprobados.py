@@ -66,7 +66,8 @@ def leer_filas_aprobados(path):
 def main():
     padron, indice = cargar_padron()
     proyectos = json.load(open(PROYECTOS_JSON, encoding="utf-8"))
-    indice_proyectos = {(p["nro"], p["anio"], p["tipo"]): p for p in proyectos}
+    # La clave incluye el origen: S-94/26 y PE-94/26 son expedientes distintos.
+    indice_proyectos = {(p["nro"], p["anio"], p["tipo"], p["origen"]): p for p in proyectos}
 
     actualizados, insertados, sin_cambios = 0, 0, 0
     for path in APROBADOS_PATHS:
@@ -80,7 +81,7 @@ def main():
             if not tipo:
                 continue
             nuevo = parsear_fila(row, padron, indice)
-            clave = (nuevo["nro"], nuevo["anio"], nuevo["tipo"])
+            clave = (nuevo["nro"], nuevo["anio"], nuevo["tipo"], nuevo["origen"])
             existente = indice_proyectos.get(clave)
             if existente is None:
                 proyectos.append(nuevo)

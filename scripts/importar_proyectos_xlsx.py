@@ -230,7 +230,8 @@ def main():
             if tipo not in TIPOS:
                 continue
             p = parsear_fila(row, padron, indice)
-            clave = (p["nro"], p["anio"], p["tipo"])
+            # con el origen: la numeración es independiente por origen (S, PE, CD, OV, P)
+            clave = (p["nro"], p["anio"], p["tipo"], p["origen"])
             if clave in claves_vistas:
                 continue  # el mismo expediente puede aparecer en ambos archivos
             claves_vistas.add(clave)
