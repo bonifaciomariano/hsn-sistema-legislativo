@@ -1,5 +1,49 @@
 [
   {
+    "numero": "408",
+    "periodo": 2026,
+    "origen": "Poder Ejecutivo",
+    "categoria": "Proyecto de Ley",
+    "autor": null,
+    "descripcion": "Dictamen aceptando las modificaciones introducidas por la Honorable Cámara de Diputados al Tratado de Cooperación en materia de Patentes (PCT) y su reglamento. (PE-854/97)",
+    "expedientes": [
+      {
+        "codigo": "PE-854/97",
+        "url": "https://www.senado.gob.ar/parlamentario/comisiones/verExp/854.97/PE/PL"
+      }
+    ],
+    "comisionCabecera": "Relaciones Exteriores y Culto",
+    "comisiones": [
+      "Relaciones Exteriores y Culto",
+      "Industria y Comercio"
+    ],
+    "fechaDictamen": "15/10/2026",
+    "odLink": null,
+    "tipoOD": "NORMAL",
+    "firmantesMayoria": [
+      "Francisco M. Paoltroni",
+      "Romina M. Almeida",
+      "Ivanna M. Arrascaeta",
+      "Joaquín A. Benegas Lynch",
+      "Agustín A. Monteverde",
+      "Mario P. Cervi",
+      "Gonzalo Guzmán Coraita",
+      "Agustín P. Coto",
+      "María B. Monte de Oca",
+      "Carlos M. Espínola",
+      "Sonia E. Rojas Decut",
+      "Silvana L. Schneider",
+      "Eduardo A. Vischi",
+      "Mercedes G. Valenzuela",
+      "Carolina Losada",
+      "Maximiliano Abad",
+      "Rodolfo A. Suárez",
+      "Enrique M. Goerling Lara",
+      "Guillermo E. Andrada",
+      "Sandra M. Mendoza"
+    ]
+  },
+  {
     "numero": "407",
     "periodo": 2026,
     "origen": "Poder Ejecutivo",

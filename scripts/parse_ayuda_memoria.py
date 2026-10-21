@@ -78,6 +78,38 @@ OVERRIDES_AUTOR = {
     (138, 2026): "de Pedro y Huala",
 }
 
+# OD que todavía no están en la planilla ni en el export oficial y se cargan a
+# mano desde el PDF de la OD (a pedido de Mariano). Cuando aparezcan en la
+# planilla, borrar la entrada de acá. odLink None: el ID del sitio no se conoce.
+OD_MANUALES = [
+    {
+        "numero": "408",
+        "periodo": 2026,
+        "origen": "Poder Ejecutivo",
+        "categoria": "Proyecto de Ley",
+        "autor": None,
+        "descripcion": "Dictamen aceptando las modificaciones introducidas por la Honorable Cámara de Diputados al Tratado de Cooperación en materia de Patentes (PCT) y su reglamento. (PE-854/97)",
+        "expedientes": [{
+            "codigo": "PE-854/97",
+            "url": "https://www.senado.gob.ar/parlamentario/comisiones/verExp/854.97/PE/PL",
+        }],
+        "comisionCabecera": "Relaciones Exteriores y Culto",
+        "comisiones": ["Relaciones Exteriores y Culto", "Industria y Comercio"],
+        "fechaDictamen": "15/10/2026",
+        "odLink": None,
+        "tipoOD": "NORMAL",
+        "firmantesTxt": (
+            "Francisco M. Paoltroni – Romina M. Almeida – Ivanna M. Arrascaeta – "
+            "Joaquín A. Benegas Lynch – Agustín A. Monteverde – Mario P. Cervi – "
+            "Gonzalo Guzmán Coraita – Agustín P. Coto – María B. Monte de Oca – "
+            "Carlos M. Espínola – Sonia E. Rojas Decut – Silvana L. Schneider – "
+            "Eduardo A. Vischi – Mercedes G. Valenzuela – Carolina Losada – "
+            "Maximiliano Abad – Rodolfo A. Suárez – Enrique M. Goerling Lara. "
+            "En disidencia: Guillermo E. Andrada – Sandra M. Mendoza."
+        ),
+    },
+]
+
 RE_URL_ORIGEN_TIPO = re.compile(r"/([A-Z]+)/([A-Z]+)$")
 RE_AUTOR = re.compile(
     r"se\w*or\w*\s+senador\w*\s+"
@@ -312,6 +344,15 @@ def main():
 
     oficial = leer_oficial(ORDENES_DIA_OFICIAL_PATH)
     sin_oficial, sin_fecha = enriquecer_con_oficial(filas, oficial)
+
+    claves = {(f["numero"], f["periodo"], f["tipoOD"]) for f in filas}
+    for m in OD_MANUALES:
+        if (m["numero"], m["periodo"], m["tipoOD"]) in claves:
+            print(f"AVISO: OD {m['numero']}/{m['periodo']} ya está en la planilla; sacarla de OD_MANUALES")
+            continue
+        f = {k: v for k, v in m.items() if k != "firmantesTxt"}
+        f["firmantesMayoria"] = _parsear_firmantes(m["firmantesTxt"])
+        filas.append(f)
 
     filas.sort(key=lambda f: (f["periodo"], int(f["numero"])), reverse=True)
 
