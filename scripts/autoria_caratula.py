@@ -145,6 +145,14 @@ def bloque_actual(autor, padron):
     return SIN_DATOS
 
 
+def es_vigente(autor, padron):
+    """¿El senador figura como vigente en el padrón? (nombre exacto o sin tildes)"""
+    if autor in padron:
+        return bool(padron[autor].get("vigente"))
+    clave = _clave(autor)
+    return any(_clave(n) == clave and info.get("vigente") for n, info in padron.items())
+
+
 def _bloque_registrado(autor, autores_registro, bloques_registro, padron):
     """Bloque registrado al presentar el proyecto, o None si no se puede asociar sin ambigüedad.
     `bloques_registro` es la lista deduplicada que guardó el sistema (no está alineada con

@@ -7126,7 +7126,7 @@ def main():
     # Campos de trazabilidad que usan sólo las páginas por bloque (repo Prosecretaria-
     # Parlamentaria-HSN): no se embeben acá para no agrandar el HTML principal.
     solo_bloques = {"autores_caratula", "bloques_caratula", "od_trazabilidad",
-                    "fecha_dictamen", "sanciones_trazabilidad"}
+                    "fecha_dictamen", "sanciones_trazabilidad", "firmantes_trazabilidad"}
     datos_js = json.dumps([{k: v for k, v in p.items() if k not in solo_bloques} for p in proyectos],
                           ensure_ascii=False)
     comisiones_js = json.dumps(construir_comisiones(proyectos), ensure_ascii=False)

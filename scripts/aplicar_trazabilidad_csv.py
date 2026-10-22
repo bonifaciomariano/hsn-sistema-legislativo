@@ -31,7 +31,7 @@ import sys
 from collections import Counter
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from autoria_caratula import calcular_autoria, parsear_prefijo, sin_tildes  # noqa: E402
+from autoria_caratula import calcular_autoria, es_vigente, parsear_prefijo, sin_tildes  # noqa: E402
 from scraper_proyectos import (  # noqa: E402
     TIPOS,
     cargar_padron,
@@ -255,6 +255,13 @@ def main():
                 if p.get("autores_caratula") != aut_car or p.get("bloques_caratula") != blo_car:
                     informe["autoria_cambiada" if "autores_caratula" in p else "autoria_nueva"] += 1
                     p["autores_caratula"], p["bloques_caratula"] = aut_car, blo_car
+            # Si ningún autor del prefijo sigue en el Senado, las páginas por bloque atribuyen el
+            # proyecto a los demás firmantes vigentes; el registro puede traer sólo a los autores
+            # principales, así que se guardan todos los firmantes de la planilla.
+            if aut_car and not any(es_vigente(a, padron) for a in aut_car):
+                f_csv = firmantes(row)
+                if f_csv and p.get("firmantes_trazabilidad") != f_csv:
+                    p["firmantes_trazabilidad"] = f_csv
             for campo in ("od_trazabilidad", "fecha_dictamen", "sanciones_trazabilidad"):
                 if d[campo] and p.get(campo) != d[campo]:
                     p[campo] = d[campo]
