@@ -66,15 +66,25 @@ jobs:
         continue-on-error: true
         run: python scripts/scraper_od.py
 
-      # Ayuda Memoria lee de ordenes_dia_2026.xlsx, no de data/od.json
-      # directamente -- sin este paso queda desactualizada aunque el scraper
-      # de arriba sí haya encontrado OD nuevas (pasó con la 366-371).
-      - name: Refrescar Ayuda Memoria desde OD scrapeadas
+      # Ayuda Memoria automática: toma las OD de data/od.json, consulta su ESTADO en
+      # el Senado (solo las PENDIENTES entran), baja los PDF y arma data/ayuda_memoria.json.
+      # Los PDF van a /tmp (no se suben al repo) y se guardan en caché entre corridas.
+      - name: Cache de PDF de OD
+        if: github.event_name == 'workflow_dispatch' || github.event.schedule == '0 1 * * *'
+        uses: actions/cache@v4
+        with:
+          path: /tmp/pdfs_od
+          key: pdfs-od-${{ github.run_id }}
+          restore-keys: pdfs-od-
+
+      - name: Ayuda Memoria automática (desde el Senado)
         if: github.event_name == 'workflow_dispatch' || github.event.schedule == '0 1 * * *'
         continue-on-error: true
+        env:
+          PYTHONUNBUFFERED: "1"
         run: |
-          python scripts/generar_ordenes_dia_xlsx.py
-          python scripts/parse_ayuda_memoria.py
+          python -u scripts/actualizar_ayuda_memoria.py --pdfs /tmp/pdfs_od --comparar data/ayuda_memoria.json
+          cp data/ayuda_memoria_auto.json data/ayuda_memoria.json
 
       - name: Scraper de agenda (boletines) - noche
         if: github.event_name == 'workflow_dispatch' || github.event.schedule == '0 1 * * *'
