@@ -238,8 +238,7 @@ def main():
                     p["bloques"] = get_bloques(autores, padron, indice)
                     p["provincias"] = get_provincias(autores, padron, indice)
                     informe["completados"].append({"id": idp, "autores": autores, "bloques": p["bloques"]})
-                aut_car, blo_car, info = calcular_autoria(
-                    caratula, todos, padron, p.get("autores"), p.get("bloques"))
+                aut_car, blo_car, info = calcular_autoria(caratula, todos, padron)
                 conciliar(p, d, informe["cambios_estado"])
 
             if info["varios"]:

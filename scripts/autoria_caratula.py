@@ -17,9 +17,10 @@ aparte, en dos campos nuevos que no reemplazan a los existentes:
     autores_caratula  lista de senadores nombrados en el prefijo (mismo formato que `autores`)
     bloques_caratula  lista alineada: bloque de cada uno (no deduplicada)
 
-Bloque de cada autor: el registrado al presentar el proyecto (campo `bloques` del
-registro existente) cuando se lo puede asociar sin ambigüedad; si no, el bloque
-actual en data/senadores.json; si el senador no figura, "Sin datos".
+Bloque de cada autor: el bloque ACTUAL según data/senadores.json (el proyecto sigue a
+su senador: si cambia de bloque, sus proyectos pasan al nuevo). Si el senador no figura,
+"Sin datos". Las páginas por bloque no dependen de este valor guardado: recalculan el
+bloque de cada autor al generarse; `bloques_caratula` se mantiene por compatibilidad.
 
 Sin dependencias externas (no importa el scraper) para poder usarse desde ambos lados.
 """
@@ -153,31 +154,12 @@ def es_vigente(autor, padron):
     return any(_clave(n) == clave and info.get("vigente") for n, info in padron.items())
 
 
-def _bloque_registrado(autor, autores_registro, bloques_registro, padron):
-    """Bloque registrado al presentar el proyecto, o None si no se puede asociar sin ambigüedad.
-    `bloques_registro` es la lista deduplicada que guardó el sistema (no está alineada con
-    los autores), así que se asocia así: si el bloque actual del autor está entre los
-    registrados, ese es; si no, el único registrado que no explica a ningún otro autor."""
-    if not bloques_registro:
-        return None
-    actual = bloque_actual(autor, padron)
-    if actual in bloques_registro:
-        return actual
-    if not any(_clave(a) == _clave(autor) for a in autores_registro):
-        return None
-    explicados = {bloque_actual(a, padron) for a in autores_registro if _clave(a) != _clave(autor)}
-    libres = [b for b in bloques_registro if b not in explicados]
-    return libres[0] if len(libres) == 1 else None
-
-
-def calcular_autoria(caratula, autores_firmantes, padron, autores_registro=None, bloques_registro=None):
+def calcular_autoria(caratula, autores_firmantes, padron):
     """Calcula (autores_caratula, bloques_caratula, info) para un expediente.
 
     caratula            texto completo de la carátula (con prefijo)
     autores_firmantes   todos los firmantes ('APELLIDO, NOMBRE'), ya normalizados
     padron              data/senadores.json (dict nombre -> {bloque, provincia, vigente})
-    autores_registro / bloques_registro   campos `autores` y `bloques` del registro ya
-                        existente en proyectos.json (para recuperar el bloque registrado)
 
     Si el prefijo no nombra a ningún senador (o es 'VARIOS SENADORES'), devuelve
     ([], [], info) y el llamador no debe guardar los campos nuevos.
@@ -189,7 +171,6 @@ def calcular_autoria(caratula, autores_firmantes, padron, autores_registro=None,
     if pref["varios"]:
         info["varios"] = True
         return [], [], info
-    autores_registro = autores_registro or []
     autores, bloques = [], []
     vistos = set()
     tokens = _unir_nombres_de_pila(pref["apellidos"], autores_firmantes)
@@ -204,8 +185,7 @@ def calcular_autoria(caratula, autores_firmantes, padron, autores_registro=None,
             continue
         vistos.add(_clave(nombre))
         autores.append(nombre)
-        reg = _bloque_registrado(nombre, autores_registro, bloques_registro, padron)
-        bloques.append(reg or bloque_actual(nombre, padron))
+        bloques.append(bloque_actual(nombre, padron))
     if len(autores) != len(tokens):
         # El prefijo nombra a alguien que no es senador/a identificable: la carátula
         # no es del tipo 'AUTOR: ...'; se descarta lo calculado sólo si no hay ninguno.
