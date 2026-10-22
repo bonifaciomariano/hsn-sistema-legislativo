@@ -1,5 +1,84 @@
 [
   {
+    "numero": "409",
+    "periodo": 2026,
+    "origen": "Poder Ejecutivo",
+    "categoria": "Proyecto de Ley",
+    "autor": null,
+    "descripcion": "Dictamen en el mensaje y proyecto de ley del Poder Ejecutivo Nacional, sobre modificaciones a la Ley de Salud Mental N° 26.657. (PE-99/26)",
+    "expedientes": [
+      {
+        "codigo": "PE-99/26",
+        "url": "https://www.senado.gob.ar/parlamentario/comisiones/verExp/99.26/PE/PL"
+      }
+    ],
+    "comisionCabecera": "Salud",
+    "fechaDictamen": "15/10/2026",
+    "odLink": "https://www.senado.gob.ar/parlamentario/parlamentaria/51749/downloadOrdenDia",
+    "comisiones": [
+      "Salud",
+      "DE SALUD",
+      "DE LEGISLACIÓN GENERAL"
+    ],
+    "tipoOD": "ANEXO",
+    "firmantesMayoria": [
+      "Guillermo E. Andrada",
+      "María C. Moisés",
+      "Sandra M. Mendoza"
+    ]
+  },
+  {
+    "numero": "409",
+    "periodo": 2026,
+    "origen": "Poder Ejecutivo",
+    "categoria": "Proyecto de Ley",
+    "autor": null,
+    "descripcion": "Dictamen en el mensaje y proyecto de ley del Poder Ejecutivo Nacional, sobre modificaciones a la Ley de Salud Mental N° 26.657. (PE-99/26)",
+    "expedientes": [
+      {
+        "codigo": "PE-99/26",
+        "url": "https://www.senado.gob.ar/parlamentario/comisiones/verExp/99.26/PE/PL"
+      }
+    ],
+    "comisionCabecera": "Salud",
+    "fechaDictamen": "21/10/2026",
+    "odLink": "https://www.senado.gob.ar/parlamentario/parlamentaria/51750/downloadOrdenDia",
+    "comisiones": [
+      "Salud",
+      "DE SALUD",
+      "DE LEGISLACIÓN GENERAL"
+    ],
+    "tipoOD": "NORMAL",
+    "firmantesMayoria": [
+      "Ivanna M. Arrascaeta",
+      "Nadia J. Márquez",
+      "Carmen Álvarez Rivero",
+      "María B. Monte de Oca",
+      "Mario P. Cervi",
+      "Gonzalo Guzmán Coraita",
+      "Patricia Bullrich",
+      "María E. Orozco",
+      "Rodolfo A. Suárez"
+    ],
+    "disidencias": [
+      {
+        "tipo": "sin aclarar",
+        "firmantes": [
+          "María V. Huala",
+          "Mercedes G. Valenzuela",
+          "Carlos M. Espínola"
+        ]
+      },
+      {
+        "tipo": "parcial",
+        "firmantes": [
+          "Carlos O. Arce",
+          "Eduardo H Galaretto"
+        ]
+      }
+    ]
+  },
+  {
     "numero": "408",
     "periodo": 2026,
     "origen": "Poder Ejecutivo",
@@ -13,12 +92,13 @@
       }
     ],
     "comisionCabecera": "Relaciones Exteriores y Culto",
+    "fechaDictamen": "15/10/2026",
+    "odLink": "https://www.senado.gob.ar/parlamentario/parlamentaria/51747/downloadOrdenDia",
     "comisiones": [
       "Relaciones Exteriores y Culto",
-      "Industria y Comercio"
+      "DE RELACIONES EXTERIORES Y CULTO",
+      "DE INDUSTRIA Y COMERCIO"
     ],
-    "fechaDictamen": "15/10/2026",
-    "odLink": null,
     "tipoOD": "NORMAL",
     "firmantesMayoria": [
       "Francisco M. Paoltroni",
@@ -38,9 +118,16 @@
       "Carolina Losada",
       "Maximiliano Abad",
       "Rodolfo A. Suárez",
-      "Enrique M. Goerling Lara",
-      "Guillermo E. Andrada",
-      "Sandra M. Mendoza"
+      "Enrique M. Goerling Lara"
+    ],
+    "disidencias": [
+      {
+        "tipo": "sin aclarar",
+        "firmantes": [
+          "Guillermo E. Andrada",
+          "Sandra M. Mendoza"
+        ]
+      }
     ]
   },
   {
@@ -89,11 +176,11 @@
         "url": "https://www.senado.gob.ar/parlamentario/comisiones/verExp/881.26/S/PD"
       }
     ],
-    "comisionCabecera": "Sistemas, Medios Comunicación y Libertad Expresión",
+    "comisionCabecera": "Sistemas, Medios de Comunicación y Libertad de Expresión",
     "fechaDictamen": "23/09/2026",
     "odLink": "https://www.senado.gob.ar/parlamentario/parlamentaria/51740/downloadOrdenDia",
     "comisiones": [
-      "Sistemas, Medios Comunicación y Libertad Expresión",
+      "Sistemas, Medios de Comunicación y Libertad de Expresión",
       "DE SISTEMAS, MEDIOS DE COMUNICACIÓN Y LIBERTAD DE EXPRESIÓN"
     ],
     "tipoOD": "NORMAL",
@@ -122,11 +209,11 @@
         "url": "https://www.senado.gob.ar/parlamentario/comisiones/verExp/68.26/S/PC"
       }
     ],
-    "comisionCabecera": "Sistemas, Medios De Comunicación y Libertad De Expresión",
+    "comisionCabecera": "Sistemas, Medios de Comunicación y Libertad de Expresión",
     "fechaDictamen": "22/09/2026",
     "odLink": "https://www.senado.gob.ar/parlamentario/parlamentaria/51739/downloadOrdenDia",
     "comisiones": [
-      "Sistemas, Medios De Comunicación y Libertad De Expresión",
+      "Sistemas, Medios de Comunicación y Libertad de Expresión",
       "DE SISTEMAS, MEDIOS DE COMUNICACIÓN Y LIBERTAD DE EXPRESIÓN"
     ],
     "tipoOD": "NORMAL",
@@ -147,19 +234,19 @@
     "periodo": 2026,
     "origen": "Senado",
     "categoria": "Proyecto de Comunicación",
-    "autor": "Carolina Losada y Otras",
-    "descripcion": "Dictamen en el proyecto de comunicación de la señora senadora Carolina Losada y Otras, solicitando una campaña de prevención y concientización sobre la violencia en entornos digitales. (S-1254/25)",
+    "autor": "Losada y Otras",
+    "descripcion": "Dictamen en el proyecto de comunicación de la señora senadora Losada y Otras, solicitando una campaña de prevención y concientización sobre la violencia en entornos digitales. (S-1254/25)",
     "expedientes": [
       {
         "codigo": "S-1254/25",
         "url": "https://www.senado.gob.ar/parlamentario/comisiones/verExp/1254.25/S/PC"
       }
     ],
-    "comisionCabecera": "Sistemas, Medios De Comunicación y Libertad De Expresión",
+    "comisionCabecera": "Sistemas, Medios de Comunicación y Libertad de Expresión",
     "fechaDictamen": "22/09/2026",
     "odLink": "https://www.senado.gob.ar/parlamentario/parlamentaria/51738/downloadOrdenDia",
     "comisiones": [
-      "Sistemas, Medios De Comunicación y Libertad De Expresión",
+      "Sistemas, Medios de Comunicación y Libertad de Expresión",
       "DE SISTEMAS, MEDIOS DE COMUNICACIÓN Y LIBERTAD DE EXPRESIÓN"
     ],
     "tipoOD": "NORMAL",
@@ -188,11 +275,11 @@
         "url": "https://www.senado.gob.ar/parlamentario/comisiones/verExp/229.25/S/PC"
       }
     ],
-    "comisionCabecera": "Sistemas, Medios De Comunicación y Libertad De Expresión",
+    "comisionCabecera": "Sistemas, Medios de Comunicación y Libertad de Expresión",
     "fechaDictamen": "22/09/2026",
     "odLink": "https://www.senado.gob.ar/parlamentario/parlamentaria/51737/downloadOrdenDia",
     "comisiones": [
-      "Sistemas, Medios De Comunicación y Libertad De Expresión",
+      "Sistemas, Medios de Comunicación y Libertad de Expresión",
       "DE SISTEMAS, MEDIOS DE COMUNICACIÓN Y LIBERTAD DE EXPRESIÓN"
     ],
     "tipoOD": "NORMAL",
@@ -222,14 +309,14 @@
       },
       {
         "codigo": "S-998/26",
-        "url": null
+        "url": "https://www.senado.gob.ar/parlamentario/comisiones/verExp/998.26/S/PD"
       }
     ],
-    "comisionCabecera": "Sistemas, Medios Comunicación y Libertad Expresión",
+    "comisionCabecera": "Sistemas, Medios de Comunicación y Libertad de Expresión",
     "fechaDictamen": "16/09/2026",
     "odLink": "https://www.senado.gob.ar/parlamentario/parlamentaria/51733/downloadOrdenDia",
     "comisiones": [
-      "Sistemas, Medios Comunicación y Libertad Expresión",
+      "Sistemas, Medios de Comunicación y Libertad de Expresión",
       "DE SISTEMAS, MEDIOS DE COMUNICACIÓN Y LIBERTAD DE EXPRESIÓN"
     ],
     "tipoOD": "NORMAL",
@@ -258,11 +345,11 @@
         "url": "https://www.senado.gob.ar/parlamentario/comisiones/verExp/1647.25/S/PD"
       }
     ],
-    "comisionCabecera": "Sistemas, Medios De Comunicación y Libertad De Expresión",
+    "comisionCabecera": "Sistemas, Medios de Comunicación y Libertad de Expresión",
     "fechaDictamen": "16/09/2026",
     "odLink": "https://www.senado.gob.ar/parlamentario/parlamentaria/51732/downloadOrdenDia",
     "comisiones": [
-      "Sistemas, Medios De Comunicación y Libertad De Expresión",
+      "Sistemas, Medios de Comunicación y Libertad de Expresión",
       "DE SISTEMAS, MEDIOS DE COMUNICACIÓN Y LIBERTAD DE EXPRESIÓN"
     ],
     "tipoOD": "NORMAL",
@@ -291,11 +378,11 @@
         "url": "https://www.senado.gob.ar/parlamentario/comisiones/verExp/1563.25/S/PD"
       }
     ],
-    "comisionCabecera": "Sistemas, Medios De Comunicación y Libertad De Expresión",
+    "comisionCabecera": "Sistemas, Medios de Comunicación y Libertad de Expresión",
     "fechaDictamen": "16/09/2026",
     "odLink": "https://www.senado.gob.ar/parlamentario/parlamentaria/51731/downloadOrdenDia",
     "comisiones": [
-      "Sistemas, Medios De Comunicación y Libertad De Expresión",
+      "Sistemas, Medios de Comunicación y Libertad de Expresión",
       "DE SISTEMAS, MEDIOS DE COMUNICACIÓN Y LIBERTAD DE EXPRESIÓN"
     ],
     "tipoOD": "NORMAL",
@@ -324,11 +411,11 @@
         "url": "https://www.senado.gob.ar/parlamentario/comisiones/verExp/1152.25/S/PD"
       }
     ],
-    "comisionCabecera": "Sistemas, Medios De Comunicación y Libertad De Expresión",
+    "comisionCabecera": "Sistemas, Medios de Comunicación y Libertad de Expresión",
     "fechaDictamen": "16/09/2026",
     "odLink": "https://www.senado.gob.ar/parlamentario/parlamentaria/51730/downloadOrdenDia",
     "comisiones": [
-      "Sistemas, Medios De Comunicación y Libertad De Expresión",
+      "Sistemas, Medios de Comunicación y Libertad de Expresión",
       "DE SISTEMAS, MEDIOS DE COMUNICACIÓN Y LIBERTAD DE EXPRESIÓN"
     ],
     "tipoOD": "NORMAL",
@@ -349,8 +436,8 @@
     "periodo": 2026,
     "origen": "Senado",
     "categoria": "Proyecto de Declaración",
-    "autor": "Moisés y otros",
-    "descripcion": "Dictamen en el proyecto de declaración de la señora senadora Moisés y otros, declarando de interés un nuevo aniversario del natalicio de doña Josefa Dominga \"Pepa\" Balcarce y San Martín. (S-1165/26)",
+    "autor": "Moisés y Otros",
+    "descripcion": "Dictamen en el proyecto de declaración de la señora senadora Moisés y Otros, declarando de interés un nuevo aniversario del natalicio de doña Josefa Dominga \"Pepa\" Balcarce y San Martín. (S-1165/26)",
     "expedientes": [
       {
         "codigo": "S-1165/26",
@@ -382,8 +469,8 @@
     "periodo": 2026,
     "origen": "Senado",
     "categoria": "Proyecto de Declaración",
-    "autor": "Atauche y Moisés y otros",
-    "descripcion": "Dictamen en el proyecto de declaración del señor senador Atauche y de la señora senadora Moisés y otros, declarando de interés las actividades conmemorativas en un nuevo aniversario del Éxodo Jujeño. (S-1154 y 1166/26)",
+    "autor": "Atauche y Moisés y Otros",
+    "descripcion": "Dictamen en el proyecto de declaración del señor senador Atauche y en el de la señora senadora Moisés y Otros, declarando de interés el nuevo aniversario del Éxodo Jujeño. (S-1154 y 1166/26)",
     "expedientes": [
       {
         "codigo": "S-1154/26",
@@ -391,7 +478,7 @@
       },
       {
         "codigo": "S-1166/26",
-        "url": null
+        "url": "https://www.senado.gob.ar/parlamentario/comisiones/verExp/1166.26/S/PD"
       }
     ],
     "comisionCabecera": "Educación y Cultura",
@@ -453,7 +540,7 @@
     "origen": "Senado",
     "categoria": "Proyecto de Declaración",
     "autor": "Ávila",
-    "descripcion": "Dictamen en el proyecto de declaración de la señora senadora Ávila, expresando beneplácito por la participación y selección del docente Víctor Daniel Zanotta, de la localidad de Delfín Gallo, provincia de Tucumán. (S-1122/26)",
+    "descripcion": "Dictamen en el proyecto de declaración de la señora senadora Ávila, expresando beneplácito por la participación y selección del docente Víctor Daniel Zanotta, de la localidad de Delfín Gallo, provincia de Tucumán, como semifinalista nacional en la edición 2026 del premio \"Docentes que Inspiran\". (S-1122/26)",
     "expedientes": [
       {
         "codigo": "S-1122/26",
@@ -486,7 +573,7 @@
     "origen": "Senado",
     "categoria": "Proyecto de Declaración",
     "autor": "Kroneberger",
-    "descripcion": "Dictamen en el proyecto de declaración del señor senador Kroneberger, declarando de interés el libro \"Argentina metropolitana: antecedentes y desafíos hacia una gobernanza regional\". (S-1104/26)",
+    "descripcion": "Dictamen en el proyecto de declaración del señor senador Kroneberger, declarando de interés el libro \"Argentina metropolitana: antecedentes y desafíos hacia una gobernanza regional\", publicado por la Asociación Civil Ciudadanía Metropolitana. (S-1104/26)",
     "expedientes": [
       {
         "codigo": "S-1104/26",
@@ -553,7 +640,7 @@
     "origen": "Senado",
     "categoria": "Proyecto de Declaración",
     "autor": "Rojas Decut y Arce",
-    "descripcion": "Dictamen en el proyecto de declaración de la señora senadora Rojas Decut y del señor senador Arce, declarando de interés la cuarta edición del Congreso Internacional Veterinario del Iguazú (CIVI). (S-1037/26)",
+    "descripcion": "Dictamen en el proyecto de declaración de la señora senadora Rojas Decut y del señor senador Arce, declarando de interés la cuarta edición del Congreso Internacional Veterinario del Iguazú – CIVI, en la provincia de Misiones. (S-1037/26)",
     "expedientes": [
       {
         "codigo": "S-1037/26",
@@ -586,8 +673,8 @@
     "periodo": 2026,
     "origen": "Senado",
     "categoria": "Proyecto de Declaración",
-    "autor": "Almeida y otros",
-    "descripcion": "Dictamen en el proyecto de declaración de la señora senadora Almeida y otros, declarando de interés la composición artística \"Mi Bandera es Argentina\", del cantautor y docente de música diamantino Rubén Darío Giménez. (S-1020/26)",
+    "autor": "Almeida y Otros",
+    "descripcion": "Dictamen en el proyecto de declaración de la señora senadora Almeida y Otros, declarando de interés la composición artística \"Mi Bandera es Argentina\", del cantautor y docente de música diamantino Rubén Darío Giménez. (S-1020/26)",
     "expedientes": [
       {
         "codigo": "S-1020/26",
@@ -620,7 +707,7 @@
     "origen": "Senado",
     "categoria": "Proyecto de Declaración",
     "autor": "Schneider",
-    "descripcion": "Dictamen en el proyecto de declaración de la señora senadora Schneider, expresando beneplácito por la selección de las docentes chaqueñas Vanesa Anabel Meza y Gloria Argentina Cisneros. (S-1017/26)",
+    "descripcion": "Dictamen en el proyecto de declaración de la señora senadora Schneider, expresando beneplácito por la selección de las docentes chaqueñas Vanesa Anabel Meza y Gloria Argentina Cisneros, semifinalistas nacionales en la edición 2026 del premio “Docentes que Inspiran”. (S-1017/26)",
     "expedientes": [
       {
         "codigo": "S-1017/26",
@@ -639,7 +726,6 @@
       "Sonia E. Rojas Decut",
       "Mercedes G. Valenzuela",
       "Ivanna M. Arrascaeta",
-      "Vilma F. Bedia",
       "María V. Huala",
       "Flavio S. Fama",
       "Beatriz L. Ávila",
@@ -654,7 +740,7 @@
     "origen": "Senado",
     "categoria": "Proyecto de Declaración",
     "autor": "Monte de Oca",
-    "descripcion": "Dictamen en el proyecto de declaración de la señora senadora Monte de Oca, expresando beneplácito por un nuevo aniversario de la jura de la Constitución de la provincia de Tierra del Fuego, A.I.A.S. (S-1006/26)",
+    "descripcion": "Dictamen en el proyecto de declaración de la señora senadora Monte de Oca, expresando beneplácito por un nuevo aniversario de la jura de la Constitución de la provincia de Tierra del Fuego, Antártida e Islas del Atlántico Sur. (S-1006/26)",
     "expedientes": [
       {
         "codigo": "S-1006/26",
@@ -688,7 +774,7 @@
     "origen": "Senado",
     "categoria": "Proyecto de Declaración",
     "autor": "Valenzuela",
-    "descripcion": "Dictamen en el proyecto de declaración de la señora senadora Valenzuela, declarando de interés una nueva edición del \"Festival del Folclore Correntino\". (S-935/26)",
+    "descripcion": "Dictamen en el proyecto de declaración de la señora senadora Valenzuela, declarando de interés una nueva edición del \"Festival del Folclore Correntino\", en la ciudad de Santo Tomé, provincia de Corrientes. (S-935/26)",
     "expedientes": [
       {
         "codigo": "S-935/26",
@@ -713,8 +799,7 @@
       "Beatriz L. Ávila",
       "María C. Moisés",
       "María T. M. González",
-      "Fernando A. Salino. “2026",
-      "Año del 120 Aniversario del Palacio Legislativo” PROYECTO DE DECLARACIÓN El Senado de la Nación DECLARA De interés de esta Honorable Cámara de Senadores de la Nación, la 60° edición del “Festival del Folclore Correntino”, a realizarse en la ciudad de Santo Tomé, provincia de Corrientes, los días 4, 5 y 6 de diciembre del 2026. Mercedes G. Valenzuela"
+      "Fernando A. Salino"
     ]
   },
   {
@@ -723,7 +808,7 @@
     "origen": "Senado",
     "categoria": "Proyecto de Declaración",
     "autor": "Capitanich y Schneider",
-    "descripcion": "Dictamen en el proyecto de declaración del señor senador Capitanich y el de la señora senadora Schneider, declarando de interés la Bienal Internacional de Esculturas de Chaco 2026. (S-2149/25 y 300/26)",
+    "descripcion": "Dictamen en el proyecto de declaración del señor senador Capitanich y en el de la señora senadora Schneider, declarando de interés la Bienal Internacional de Esculturas de Chaco 2026, en la ciudad de Resistencia, provincia del Chaco. (S-2149/25 y 300/26)",
     "expedientes": [
       {
         "codigo": "S-2149/25",
@@ -731,7 +816,7 @@
       },
       {
         "codigo": "S-300/26",
-        "url": null
+        "url": "https://www.senado.gob.ar/parlamentario/comisiones/verExp/300.26/S/PD"
       }
     ],
     "comisionCabecera": "Educación y Cultura",
@@ -760,7 +845,7 @@
     "origen": "Senado",
     "categoria": "Proyecto de Declaración",
     "autor": "Valenzuela",
-    "descripcion": "Dictamen en el proyecto de declaración de la señora senador Valenzuela, declarando de interés la Fiesta Provincial del Locro, en la ciudad de Curuzú, provincia de Corrientes,.(S- 934/26)",
+    "descripcion": "Dictamen en el proyecto de declaración de la señora senadora Valenzuela, declarando de interés la Fiesta Provincial del Locro, en la ciudad de Curuzú Cuatiá, provincia de Corrientes,.(S- 934/26)",
     "expedientes": [
       {
         "codigo": "S-934/26",
@@ -794,7 +879,7 @@
     "origen": "Senado",
     "categoria": "Proyecto de Declaración",
     "autor": "Moreno",
-    "descripcion": "Dictamen en el proyecto de declaración de la señora senadora Moreno, declarando de interés el \"III Congreso Internacional de Trabajo Social Forense: TSF, Culturas Digitales y Emancipación\". (S-900/26)",
+    "descripcion": "Dictamen en el proyecto de declaración de la señora senadora Moreno, declarando de interés el \"III Congreso Internacional de Trabajo Social Forense: TSF, Culturas Digitales y Emancipación\", organizado por la Universidad Católica de Salta – UCASAL. (S-900/26)",
     "expedientes": [
       {
         "codigo": "S-900/26",
@@ -827,7 +912,7 @@
     "origen": "Senado",
     "categoria": "Proyecto de Declaración",
     "autor": "Abdala",
-    "descripcion": "Dictamen en el proyecto de declaración del señor senador Abdala, adhiriendo al Día del Granadero Puntano en dedicación al “Héroe de Chancay” (S-892/26)",
+    "descripcion": "Dictamen en el proyecto de declaración del señor senador Abdala, adhiriendo al Día del Granadero Puntano, dedicado al “Héroe de Chancay”, con motivo de un nuevo aniversario del nacimiento del coronel Juan Pascual Pringles. (S-892/26)",
     "expedientes": [
       {
         "codigo": "S-892/26",
@@ -895,7 +980,7 @@
     "origen": "Senado",
     "categoria": "Proyecto de Declaración",
     "autor": "Fernández Sagasti",
-    "descripcion": "Dictamen en el proyecto de declaración de la señora senadora Fernández Sagasti, expresando beneplácito por el subcampeonato logrado por los alumnos de la provincia de Mendoza en el mundial de robótica “ First Tech Challenge 2026”.( S-709/26)",
+    "descripcion": "Dictamen en el proyecto de declaración de la señora senadora Fernández Sagasti, expresando beneplácito por el subcampeonato logrado por los alumnos de la provincia de Mendoza en el mundial de robótica “First Tech Challenge 2026”. (S-709/26)",
     "expedientes": [
       {
         "codigo": "S-709/26",
@@ -928,7 +1013,7 @@
     "origen": "Senado",
     "categoria": "Proyecto de Declaración",
     "autor": "Schneider",
-    "descripcion": "Dictamen en el proyecto de declaración de la señora senadora Schneider, expresando beneplácito por la presentación oficial de la “Bienal Internacional de Escultura del Chaco edición 2026”.(S-2204/25)",
+    "descripcion": "Dictamen en el proyecto de declaración de la señora senadora Schneider, expresando beneplácito por la presentación oficial de la “Bienal Internacional de Escultura del Chaco edición 2026”, en la ciudad de Resistencia, provincia del Chaco. (S-2204/25)",
     "expedientes": [
       {
         "codigo": "S-2204/25",
@@ -962,7 +1047,7 @@
     "origen": "Senado",
     "categoria": "Proyecto de Declaración",
     "autor": "Galaretto",
-    "descripcion": "Dictamen en el proyecto de declaración del señor senador Galaretto, declarando de interés cultural y educativo a la obra “Danzas, bailes y costumbres del litoral argentino”. (S-1987/25)",
+    "descripcion": "Dictamen en el proyecto de declaración del señor senador Galaretto, declarando de interés cultural y educativo a la obra “Danzas, bailes y costumbres del litoral argentino”, de los autores Claudia L. García y Enrique A. Piñeyro. (S-1987/25)",
     "expedientes": [
       {
         "codigo": "S-1987/25",
@@ -1029,7 +1114,7 @@
     "origen": "Senado",
     "categoria": "Proyecto de Declaración",
     "autor": "Fernández Sagasti",
-    "descripcion": "Dictamen en el proyecto de declaración de la señora senadora Fernández Sagasti, declarando de interés el evento “CONVINART”. (S-1601/25)",
+    "descripcion": "Dictamen en el proyecto de declaración de la señora senadora Fernández Sagasti, declarando de interés el evento “CONVINART”, por su aporte a la difusión de la cultura, el arte y la identidad nacional. (S-1601/25)",
     "expedientes": [
       {
         "codigo": "S-1601/25",
@@ -1062,7 +1147,7 @@
     "origen": "Senado",
     "categoria": "Proyecto de Declaración",
     "autor": "Lewandowski",
-    "descripcion": "Dictamen en el proyecto de declaración del señor senador Lewandowski, expresando beneplácito por la trayectoria del músico Miguel Figueroa y su conjunto “Amanecer Campero”. (S-1577/25)",
+    "descripcion": "Dictamen en el proyecto de declaración del señor senador Lewandowski expresando beneplácito por su trayectoria y por difundir el chamamé en el ámbito nacional e internacional al músico Miguel Figueroa y su conjunto “Amanecer Campero”. (S-1577/25)",
     "expedientes": [
       {
         "codigo": "S-1577/25",
@@ -1163,7 +1248,7 @@
     "origen": "Senado",
     "categoria": "Proyecto de Declaración",
     "autor": "Juez",
-    "descripcion": "Dictamen en el proyecto de declaración del señor senador Juez, declarando de interés el “Proyecto Institucional de Convivencia, una invitación a innovar – Valores en Acción”. (S-336/25)",
+    "descripcion": "Dictamen en el proyecto de declaración del señor senador Juez, declarando de interés el “Proyecto Institucional de Convivencia, una invitación a innovar – Valores en Acción”, diseñado por el Colegio “La Merced” de la ciudad de Río Cuarto, provincia de Córdoba. (S-336/25)",
     "expedientes": [
       {
         "codigo": "S-336/25",
@@ -1271,7 +1356,7 @@
       }
     ],
     "comisionCabecera": "Educación y Cultura",
-    "fechaDictamen": null,
+    "fechaDictamen": "09/09/2026",
     "odLink": "https://www.senado.gob.ar/parlamentario/parlamentaria/51698/downloadOrdenDia",
     "comisiones": [
       "Educación y Cultura",
@@ -1329,11 +1414,19 @@
     "origen": "Senado",
     "categoria": "Proyecto de Ley",
     "autor": null,
-    "descripcion": "Dictamen en el proyecto de ley de varios señores/as senadores/as, por el que se establece Presupuestos Mínimos de Protección Ambiental aplicable al Desarrollo de los Mercados de Carbono en la República Argentina y su integración al Mercado de Capitales Nacional. (S-808, 865 y 718/26)",
+    "descripcion": "Dictamen en el proyecto de ley de varios señores senadores, sobre Marco Regulatorio del Mercado de Carbono. (S-718, 808 y 865/26)",
     "expedientes": [
       {
-        "codigo": "S-718/26   S-808/26  S-865/26",
+        "codigo": "S-718/26",
         "url": "https://www.senado.gob.ar/parlamentario/comisiones/verExp/718.26/S/PL"
+      },
+      {
+        "codigo": "S-808/26",
+        "url": "https://www.senado.gob.ar/parlamentario/comisiones/verExp/808.26/S/PL"
+      },
+      {
+        "codigo": "S-865/26",
+        "url": "https://www.senado.gob.ar/parlamentario/comisiones/verExp/865.26/S/PL"
       }
     ],
     "comisionCabecera": "Legislación General",
@@ -1366,11 +1459,18 @@
       "Flavia G. Royón",
       "Alejandra M. Vigo",
       "María V. Huala",
-      "Carlos M. Espínola",
-      "Daniel R. Kroneberger",
-      "Sonia E. Rojas Decut",
-      "Eduardo A. Vischi",
-      "Silvana L. Schneider"
+      "Carlos M. Espínola"
+    ],
+    "disidencias": [
+      {
+        "tipo": "parcial",
+        "firmantes": [
+          "Daniel R. Kroneberger",
+          "Sonia E. Rojas Decut",
+          "Eduardo A. Vischi",
+          "Silvana L. Schneider"
+        ]
+      }
     ]
   },
   {
@@ -1424,7 +1524,7 @@
     "odLink": "https://www.senado.gob.ar/parlamentario/parlamentaria/51687/downloadOrdenDia",
     "comisiones": [
       "Población y Desarrollo Humano",
-      "DE POBLACIÓN Y DESARROLLO HUMANO",
+      "DE POBLACIÓN Y DESARROLLO  HUMANO",
       "DE EDUCACIÓN Y CULTURA"
     ],
     "tipoOD": "NORMAL",
@@ -1465,7 +1565,7 @@
     "odLink": "https://www.senado.gob.ar/parlamentario/parlamentaria/51686/downloadOrdenDia",
     "comisiones": [
       "Población y Desarrollo Humano",
-      "DE POBLACIÓN Y DESARROLLO HUMANO",
+      "DE POBLACIÓN Y DESARROLLO  HUMANO",
       "DE EDUCACIÓN Y CULTURA"
     ],
     "tipoOD": "NORMAL",
@@ -1506,7 +1606,7 @@
     "odLink": "https://www.senado.gob.ar/parlamentario/parlamentaria/51685/downloadOrdenDia",
     "comisiones": [
       "Población y Desarrollo Humano",
-      "DE POBLACIÓN Y DESARROLLO HUMANO",
+      "DE POBLACIÓN Y DESARROLLO  HUMANO",
       "DE EDUCACIÓN Y CULTURA"
     ],
     "tipoOD": "NORMAL",
@@ -1549,7 +1649,7 @@
     "odLink": "https://www.senado.gob.ar/parlamentario/parlamentaria/51684/downloadOrdenDia",
     "comisiones": [
       "Población y Desarrollo Humano",
-      "DE POBLACIÓN Y DESARROLLO HUMANO",
+      "DE POBLACIÓN Y DESARROLLO  HUMANO",
       "DE EDUCACIÓN Y CULTURA"
     ],
     "tipoOD": "NORMAL",
@@ -1564,8 +1664,7 @@
       "Carolina Losada",
       "María C. Moisés",
       "Natalia E. Gadano",
-      "“2026",
-      "Año del 120 Aniversario del Palacio Legislativo” Eduardo E. de Pedro",
+      "Eduardo E. de Pedro",
       "Sandra M. Mendoza",
       "María T. M. González",
       "María C. Giménez Navarro",
@@ -1591,7 +1690,7 @@
     "odLink": "https://www.senado.gob.ar/parlamentario/parlamentaria/51683/downloadOrdenDia",
     "comisiones": [
       "Población y Desarrollo Humano",
-      "DE POBLACIÓN Y DESARROLLO HUMANO",
+      "DE POBLACIÓN Y DESARROLLO  HUMANO",
       "DE EDUCACIÓN Y CULTURA"
     ],
     "tipoOD": "NORMAL",
@@ -1659,7 +1758,7 @@
     "descripcion": "Dictamen en el proyecto de declaración del señor senador Coraita y la señora senadora Orozco, declarando de interés la conmemoración del 40° aniversario de la constitución de la provincia de Salta. (S-620/26)",
     "expedientes": [
       {
-        "codigo": "S-620/26-PD",
+        "codigo": "S-620/26",
         "url": "https://www.senado.gob.ar/parlamentario/comisiones/verExp/620.26/S/PD"
       }
     ],
@@ -1744,6 +1843,7 @@
       "Ivanna M. Arrascaeta",
       "Vilma F. Bedia",
       "Romina M. Almeida",
+      "Flavio S. Fama",
       "Anabel Fernández Sagasti",
       "María T. M. González"
     ]
@@ -1753,8 +1853,8 @@
     "periodo": 2026,
     "origen": "Senado",
     "categoria": "Proyecto de Declaración",
-    "autor": "Moises",
-    "descripcion": "Dictamen en el proyecto de declaración de la señora senadora Moises, expresando beneplácito por un nuevo aniversario de la escuela normal “Gral. José de San Martín” de la ciudad de San Pedro de Jujuy. (S-560 y 623/26)",
+    "autor": "Moisés",
+    "descripcion": "Dictamen en el proyecto de declaración de la señora senadora Moisés, expresando beneplácito por un nuevo aniversario de la escuela normal “Gral. José de San Martín” de la ciudad de San Pedro de Jujuy. (S-560 y 623/26)",
     "expedientes": [
       {
         "codigo": "S-560/26",
@@ -1762,7 +1862,7 @@
       },
       {
         "codigo": "S-623/26",
-        "url": null
+        "url": "https://www.senado.gob.ar/parlamentario/comisiones/verExp/623.26/S/CO"
       }
     ],
     "comisionCabecera": "Educación y Cultura",
@@ -1799,7 +1899,7 @@
       },
       {
         "codigo": "S-613/26",
-        "url": null
+        "url": "https://www.senado.gob.ar/parlamentario/comisiones/verExp/613.26/S/PD"
       }
     ],
     "comisionCabecera": "Educación y Cultura",
@@ -2067,7 +2167,7 @@
       },
       {
         "codigo": "S-2178/25",
-        "url": null
+        "url": "https://www.senado.gob.ar/parlamentario/comisiones/verExp/2178.25/S/PD"
       }
     ],
     "comisionCabecera": "Educación y Cultura",
@@ -2104,7 +2204,7 @@
       },
       {
         "codigo": "S-457/26",
-        "url": null
+        "url": "https://www.senado.gob.ar/parlamentario/comisiones/verExp/457.26/S/PD"
       }
     ],
     "comisionCabecera": "Educación y Cultura",
@@ -2166,7 +2266,7 @@
     "origen": "Senado",
     "categoria": "Proyecto de Declaración",
     "autor": "Juez",
-    "descripcion": "Dictamen en el proyecto de declaración del señor senador Juez, declarando de interés un nuevo aniversario por la desaparición de tripulantes y pasajeros del avión Douglas C-54 de la Fuerza Aérea Argentina. (S-1841/25)",
+    "descripcion": "Dictamen en el proyecto de declaración del señor senador Juez, rindiendo homenaje a los tripulantes y pasajeros del avión Douglas C-54 de la Fuerza Aérea Argentina, en el 60º aniversario de su desaparición. (S-1841/25)",
     "expedientes": [
       {
         "codigo": "S-1841/25",
@@ -2277,7 +2377,7 @@
     "odLink": "https://www.senado.gob.ar/parlamentario/parlamentaria/51566/downloadOrdenDia",
     "comisiones": [
       "Población y Desarrollo Humano",
-      "DE POBLACIÓN Y DESARROLLO HUMANO",
+      "DE POBLACIÓN Y DESARROLLO  HUMANO",
       "DE INDUSTRIA Y COMERCIO"
     ],
     "tipoOD": "NORMAL",
@@ -2374,7 +2474,7 @@
     "origen": "Senado",
     "categoria": "Proyecto de Ley",
     "autor": "de Pedro y Huala",
-    "descripcion": "Dictamen en el proyecto de ley del señor senador de Pedro y de la señora senado Huala, por el cual se establece la realización de la jornada “Argentina contra el Bullying: por una escuela libre de acoso y discriminación” en los nivelos obligatorios de todos los establecimientos educativos públicos y privados. (S-596/26)",
+    "descripcion": "Dictamen en el proyecto de ley del señor senador de Pedro y de la señora senado Huala, por el cual se establece la realización de la jornada “Argentina contra el Bullying: por una escuela libre de acoso y discriminación” en los niveles obligatorios de todos los establecimientos educativos públicos y privados. (S-596/26)",
     "expedientes": [
       {
         "codigo": "S-596/26",
@@ -2415,7 +2515,7 @@
       },
       {
         "codigo": "S-465/26",
-        "url": null
+        "url": "https://www.senado.gob.ar/parlamentario/comisiones/verExp/465.26/S/PL"
       }
     ],
     "comisionCabecera": "Educación y Cultura",
@@ -2435,7 +2535,34 @@
       "Beatriz L. Ávila",
       "Anabel Fernández Sagasti",
       "María T. M. González",
-      "Fernando A. Salino. ANTECEDENTES (I) PROYECTO DE LEY El Senado y Cámara de Diputados,… Artículo 1°-. Declárese fiesta nacional a la"
+      "Fernando A. Salino"
+    ]
+  },
+  {
+    "numero": "135",
+    "periodo": 2026,
+    "origen": "Cámara de Diputados",
+    "categoria": "Proyecto de Ley",
+    "autor": null,
+    "descripcion": "Dictamen en el proyecto de ley venido en revisión que deroga la legislación obsoleta - “Ley de Hojarasca”. (CD-1/26)",
+    "expedientes": [
+      {
+        "codigo": "CD-1/26",
+        "url": "https://www.senado.gob.ar/parlamentario/comisiones/verExp/1.26/CD/PL"
+      }
+    ],
+    "comisionCabecera": "Asuntos Constitucionales",
+    "fechaDictamen": "17/06/2026",
+    "odLink": "https://www.senado.gob.ar/parlamentario/parlamentaria/51664/downloadOrdenDia",
+    "comisiones": [
+      "Asuntos Constitucionales",
+      "DE ASUNTOS CONSTITUCIONALES",
+      "DE LEGISLACIÓN GENERAL"
+    ],
+    "tipoOD": "ANEXO",
+    "firmantesMayoria": [
+      "María C. Moisés",
+      "Sandra M. Mendoza"
     ]
   },
   {
@@ -2470,31 +2597,22 @@
       "Mariana Juri",
       "Eduardo H. Galaretto",
       "Enrique M. Goerling Lara"
-    ]
-  },
-  {
-    "numero": "135",
-    "periodo": 2026,
-    "origen": "Cámara de Diputados",
-    "categoria": "Proyecto de Ley",
-    "autor": null,
-    "descripcion": "Dictamen en el proyecto de ley venido en revisión que deroga la legislación obsoleta - “Ley de Hojarasca”. (CD-1/26)",
-    "expedientes": [
+    ],
+    "disidencias": [
       {
-        "codigo": "CD-1/26",
-        "url": "https://www.senado.gob.ar/parlamentario/comisiones/verExp/1.26/CD/PL"
+        "tipo": "sin aclarar",
+        "firmantes": [
+          "Carlos M. Espínola"
+        ]
+      },
+      {
+        "tipo": "parcial",
+        "firmantes": [
+          "Flavio S. Fama",
+          "Eduardo A. Vischi"
+        ]
       }
-    ],
-    "comisionCabecera": "Asuntos Constitucionales",
-    "fechaDictamen": "17/06/2026",
-    "odLink": "https://www.senado.gob.ar/parlamentario/parlamentaria/51664/downloadOrdenDia",
-    "comisiones": [
-      "Asuntos Constitucionales",
-      "DE ASUNTOS CONSTITUCIONALES",
-      "DE LEGISLACIÓN GENERAL"
-    ],
-    "tipoOD": "ANEXO",
-    "firmantesMayoria": []
+    ]
   },
   {
     "numero": "134",
@@ -2575,8 +2693,8 @@
         "url": "https://www.senado.gob.ar/parlamentario/comisiones/verExp/695.26/S/PL"
       },
       {
-        "codigo": "S-700/26-CO",
-        "url": null
+        "codigo": "S-700/26",
+        "url": "https://www.senado.gob.ar/parlamentario/comisiones/verExp/700.26/S/CO"
       }
     ],
     "comisionCabecera": "Asuntos Administrativos y Municipales",
@@ -2646,7 +2764,7 @@
       },
       {
         "codigo": "S-342/26",
-        "url": null
+        "url": "https://www.senado.gob.ar/parlamentario/comisiones/verExp/342.26/S/PL"
       }
     ],
     "comisionCabecera": "Asuntos Administrativos y Municipales",
@@ -2703,11 +2821,50 @@
       "Carlos O. Arce",
       "Flavio S. Fama",
       "Beatriz L. Ávila",
-      "Flavia G. Royón",
-      "Eduardo A. Vischi",
-      "Carolina Losada",
-      "Nadia J. Marquéz",
-      "Maximiliano Abad"
+      "Flavia G. Royón"
+    ],
+    "disidencias": [
+      {
+        "tipo": "parcial",
+        "firmantes": [
+          "Eduardo A. Vischi"
+        ]
+      },
+      {
+        "tipo": "sin aclarar",
+        "firmantes": [
+          "Carolina Losada",
+          "Nadia J. Marquéz",
+          "Maximiliano Abad"
+        ]
+      }
+    ]
+  },
+  {
+    "numero": "113",
+    "periodo": 2026,
+    "origen": "Poder Ejecutivo",
+    "categoria": "Proyecto de Ley",
+    "autor": null,
+    "descripcion": "Dictamen en el mensaje y proyecto de ley del Poder Ejecutivo Nacional, por el que se aprueba la Reforma del Convenio Interamericano sobre Permiso Internacional de Radioaficionado, adoptado en la ciudad de Washington D.C., Estados Unidos de América. (PE-150/19)",
+    "expedientes": [
+      {
+        "codigo": "PE-150/19",
+        "url": "https://www.senado.gob.ar/parlamentario/comisiones/verExp/150.19/PE/PL"
+      }
+    ],
+    "comisionCabecera": "Relaciones Exteriores y Culto",
+    "fechaDictamen": "03/06/2026",
+    "odLink": "https://www.senado.gob.ar/parlamentario/parlamentaria/51359/downloadOrdenDia",
+    "comisiones": [
+      "Relaciones Exteriores y Culto",
+      "DE RELACIONES EXTERIORES Y CULTO"
+    ],
+    "tipoOD": "ANEXO",
+    "firmantesMayoria": [
+      "Marcelo N. Lewandowski",
+      "Jorge M. Capitanich",
+      "Adán H. Bahl"
     ]
   },
   {
@@ -2748,33 +2905,6 @@
     ]
   },
   {
-    "numero": "113",
-    "periodo": 2026,
-    "origen": "Poder Ejecutivo",
-    "categoria": "Proyecto de Ley",
-    "autor": null,
-    "descripcion": "Dictamen en el mensaje y proyecto de ley del Poder Ejecutivo Nacional, por el que se aprueba la Reforma del Convenio Interamericano sobre Permiso Internacional de Radioaficionado, adoptado en la ciudad de Washington D.C., Estados Unidos de América. (PE-150/19)",
-    "expedientes": [
-      {
-        "codigo": "PE-150/19",
-        "url": "https://www.senado.gob.ar/parlamentario/comisiones/verExp/150.19/PE/PL"
-      }
-    ],
-    "comisionCabecera": "Relaciones Exteriores y Culto",
-    "fechaDictamen": "03/06/2026",
-    "odLink": "https://www.senado.gob.ar/parlamentario/parlamentaria/51339/downloadOrdenDia",
-    "comisiones": [
-      "Relaciones Exteriores y Culto",
-      "DE RELACIONES EXTERIORES Y CULTO"
-    ],
-    "tipoOD": "ANEXO",
-    "firmantesMayoria": [
-      "Marcelo N. Lewandowski",
-      "Jorge M. Capitanich",
-      "Adán H. Bahl"
-    ]
-  },
-  {
     "numero": "111",
     "periodo": 2026,
     "origen": "Senado",
@@ -2792,7 +2922,7 @@
     "odLink": "https://www.senado.gob.ar/parlamentario/parlamentaria/51336/downloadOrdenDia",
     "comisiones": [
       "Población y Desarrollo Humano",
-      "DE POBLACIÓN Y DESARROLLO HUMANO"
+      "DE POBLACIÓN Y DESARROLLO  HUMANO"
     ],
     "tipoOD": "NORMAL",
     "firmantesMayoria": [
@@ -2826,7 +2956,7 @@
     "odLink": "https://www.senado.gob.ar/parlamentario/parlamentaria/51335/downloadOrdenDia",
     "comisiones": [
       "Población y Desarrollo Humano",
-      "DE POBLACIÓN Y DESARROLLO HUMANO"
+      "DE POBLACIÓN Y DESARROLLO  HUMANO"
     ],
     "tipoOD": "NORMAL",
     "firmantesMayoria": [
@@ -2860,7 +2990,7 @@
     "odLink": "https://www.senado.gob.ar/parlamentario/parlamentaria/51334/downloadOrdenDia",
     "comisiones": [
       "Población y Desarrollo Humano",
-      "DE POBLACIÓN Y DESARROLLO HUMANO"
+      "DE POBLACIÓN Y DESARROLLO  HUMANO"
     ],
     "tipoOD": "NORMAL",
     "firmantesMayoria": [
@@ -2896,7 +3026,7 @@
       },
       {
         "codigo": "S-405/26",
-        "url": null
+        "url": "https://www.senado.gob.ar/parlamentario/comisiones/verExp/405.26/S/PL"
       }
     ],
     "comisionCabecera": "Población y Desarrollo Humano",
@@ -2904,7 +3034,7 @@
     "odLink": "https://www.senado.gob.ar/parlamentario/parlamentaria/51333/downloadOrdenDia",
     "comisiones": [
       "Población y Desarrollo Humano",
-      "DE POBLACIÓN Y DESARROLLO HUMANO"
+      "DE POBLACIÓN Y DESARROLLO  HUMANO"
     ],
     "tipoOD": "NORMAL",
     "firmantesMayoria": [
@@ -2940,11 +3070,11 @@
       },
       {
         "codigo": "S-288/26",
-        "url": null
+        "url": "https://www.senado.gob.ar/parlamentario/comisiones/verExp/288.26/S/PC"
       },
       {
         "codigo": "S-514/26",
-        "url": null
+        "url": "https://www.senado.gob.ar/parlamentario/comisiones/verExp/514.26/S/PC"
       }
     ],
     "comisionCabecera": "Población y Desarrollo Humano",
@@ -2952,20 +3082,20 @@
     "odLink": "https://www.senado.gob.ar/parlamentario/parlamentaria/51332/downloadOrdenDia",
     "comisiones": [
       "Población y Desarrollo Humano",
-      "DE POBLACIÓN Y DESARROLLO HUMANO"
+      "DE POBLACIÓN Y DESARROLLO  HUMANO"
     ],
     "tipoOD": "NORMAL",
     "firmantesMayoria": [
-      "Kirchner",
-      "Kroneberger",
-      "Vischi",
-      "Valenzuela",
-      "Huala",
-      "Gadano",
-      "Mendoza",
-      "González",
-      "Giménez Navarro",
-      "Marks"
+      "Alicia M. A. Kirchner",
+      "Daniel R. Kroneberger",
+      "Eduardo A. Vischi",
+      "Mercedes G. Valenzuela",
+      "María V. Huala",
+      "Natalia E. Gadano",
+      "Sandra M. Mendoza",
+      "María T. M. González",
+      "María C. Giménez Navarro",
+      "Ana I. Marks"
     ]
   },
   {
@@ -2990,13 +3120,19 @@
     ],
     "tipoOD": "NORMAL",
     "firmantesMayoria": [
+      "Gonzalo Guzmán Coraita",
+      "Juan C. Pagotto",
+      "Patricia Bullrich",
+      "María B. Monte de Oca",
+      "Luis A. Juez",
+      "Eduardo A. Vischi",
       "Carolina Losada",
-      "Mercedes G. Valenzuela",
-      "Víctor Zimmermann",
-      "Rodolfo A. Suárez",
-      "Pablo D. Blanco",
+      "Carlos O. Arce",
+      "Natalia E. Gadano",
+      "Sandra M. Mendoza",
       "Flavio S. Fama",
-      "Mariana Juri"
+      "María V. Huala",
+      "Beatriz L. Ávila"
     ]
   },
   {
@@ -3005,7 +3141,7 @@
     "origen": "Poder Ejecutivo",
     "categoria": "Acuerdo",
     "autor": null,
-    "descripcion": "Dictamen en el mensaje del Poder Ejecutivo Nacional solicitando acuerdo para promover al grado inmediato superior al Personal Militar Superior de la Fuerza Aérea Argentina.",
+    "descripcion": "Dictamen en el mensaje del Poder Ejecutivo Nacional solicitando acuerdo para promover al grado inmediato superior al Personal Militar Superior de la Fuerza Aérea Argentina. (PE-145/24)",
     "expedientes": [
       {
         "codigo": "PE-145/24",
@@ -3039,7 +3175,7 @@
     "origen": "Poder Ejecutivo",
     "categoria": "Acuerdo",
     "autor": null,
-    "descripcion": "Dictamen en el mensaje del Poder Ejecutivo Nacional solicitando acuerdo para promover al grado inmediato superior al Personal Militar Superior de la Fuerza Aérea Argentina.",
+    "descripcion": "Dictamen en el mensaje del Poder Ejecutivo Nacional solicitando acuerdo para promover al grado inmediato superior al Personal Militar Superior de la Fuerza Aérea Argentina. (PE-96/22)",
     "expedientes": [
       {
         "codigo": "PE-96/22",
