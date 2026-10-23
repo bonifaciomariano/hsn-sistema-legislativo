@@ -1,5 +1,162 @@
 [
   {
+    "numero": "413",
+    "periodo": 2026,
+    "origen": "Senado",
+    "categoria": "Proyecto de Ley",
+    "autor": "Vischi y Otros",
+    "descripcion": "Dictamen en el proyecto de ley del señor senador Vischi y Otros, por el que se crea el Régimen de Incentivo para Inversiones Relevantes (RIIR). (S-702/26)",
+    "expedientes": [
+      {
+        "codigo": "S-702/26",
+        "url": "https://www.senado.gob.ar/parlamentario/comisiones/verExp/702.26/S/PL"
+      }
+    ],
+    "comisionCabecera": "Presupuesto y Hacienda",
+    "fechaDictamen": "22/10/2026",
+    "odLink": "https://www.senado.gob.ar/parlamentario/parlamentaria/51754/downloadOrdenDia",
+    "comisiones": [
+      "Presupuesto y Hacienda",
+      "DE PRESUPUESTO Y HACIENDA",
+      "DE LEGISLACIÓN GENERAL",
+      "DE ECONOMÍAS REGIONALES, ECONOMÍA SOCIAL, MICRO, PEQUEÑA Y MEDIANA EMPRESA"
+    ],
+    "tipoOD": "NORMAL",
+    "firmantesMayoria": [
+      "Agustín A. Monteverde",
+      "Nadia J. Márquez",
+      "Romina M. Almeida",
+      "Ezequiel Atauche",
+      "Bartolomé E. Abdala",
+      "Carlos O. Arce",
+      "Bruno A. Olivera Lucero",
+      "Gonzalo Guzmán Coraita",
+      "Vilma F. Bedia",
+      "Patricia Bullrich",
+      "María E. Orozco",
+      "Joaquín A. Benegas Lynch",
+      "Flavio S. Fama",
+      "Maximiliano Abad",
+      "Juan C. Godoy",
+      "Mariana Juri",
+      "Rodolfo A. Suárez",
+      "Daniel R. Kroneberger",
+      "Andrea M. Cristina",
+      "Carlos M. Espínola",
+      "Mercedes G. Valenzuela"
+    ],
+    "disidencias": [
+      {
+        "tipo": "parcial",
+        "firmantes": [
+          "María V. Huala"
+        ]
+      }
+    ]
+  },
+  {
+    "numero": "412",
+    "periodo": 2026,
+    "origen": "Poder Ejecutivo",
+    "categoria": "Proyecto de Ley",
+    "autor": null,
+    "descripcion": "Dictamen en el mensaje y proyecto de ley del Poder Ejecutivo Nacional, aprobando el Acuerdo sobre Servicios Aéreos con la República de Finlandia, suscripto en la Ciudad Autónoma de Buenos Aires. (PE-271/26)",
+    "expedientes": [
+      {
+        "codigo": "PE-271/26",
+        "url": "https://www.senado.gob.ar/parlamentario/comisiones/verExp/271.26/PE/PL"
+      }
+    ],
+    "comisionCabecera": "Relaciones Exteriores y Culto",
+    "fechaDictamen": "22/10/2026",
+    "odLink": "https://www.senado.gob.ar/parlamentario/parlamentaria/51753/downloadOrdenDia",
+    "comisiones": [
+      "Relaciones Exteriores y Culto",
+      "DE RELACIONES EXTERIORES Y CULTO"
+    ],
+    "tipoOD": "NORMAL",
+    "firmantesMayoria": [
+      "Francisco M. Paoltroni",
+      "Ivanna M. Arrascaeta",
+      "Agustín A. Monteverde",
+      "Gonzalo Guzmán Coraita",
+      "María B. Monte de Oca",
+      "Sonia E. Rojas Decut",
+      "Eduardo A. Vischi",
+      "Maximiliano Abad",
+      "Enrique M. Goerling Lara",
+      "Guillermo E. Andrada"
+    ]
+  },
+  {
+    "numero": "411",
+    "periodo": 2026,
+    "origen": "Poder Ejecutivo",
+    "categoria": "Proyecto de Ley",
+    "autor": null,
+    "descripcion": "Dictamen en el mensaje y proyecto de ley del Poder Ejecutivo Nacional, aprobando las Enmiendas al Convenio Constitutivo de la Organización Marítima Internacional, en la ciudad de Londres - Reino Unido de Gran Bretaña e Irlanda del Norte. (PE-235/26)",
+    "expedientes": [
+      {
+        "codigo": "PE-235/26",
+        "url": "https://www.senado.gob.ar/parlamentario/comisiones/verExp/235.26/PE/PL"
+      }
+    ],
+    "comisionCabecera": "Relaciones Exteriores y Culto",
+    "fechaDictamen": "22/10/2026",
+    "odLink": "https://www.senado.gob.ar/parlamentario/parlamentaria/51752/downloadOrdenDia",
+    "comisiones": [
+      "Relaciones Exteriores y Culto",
+      "DE RELACIONES EXTERIORES Y CULTO"
+    ],
+    "tipoOD": "NORMAL",
+    "firmantesMayoria": [
+      "Francisco M. Paoltroni",
+      "Ivanna M. Arrascaeta",
+      "Agustín A. Monteverde",
+      "Gonzalo Guzmán Coraita",
+      "María B. Monte de Oca",
+      "Sonia E. Rojas Decut",
+      "Eduardo A. Vischi",
+      "Maximiliano Abad",
+      "Enrique M. Goerling Lara",
+      "Guillermo E. Andrada"
+    ]
+  },
+  {
+    "numero": "410",
+    "periodo": 2026,
+    "origen": "Poder Ejecutivo",
+    "categoria": "Proyecto de Ley",
+    "autor": null,
+    "descripcion": "Dictamen en el mensaje y proyecto de ley del Poder Ejecutivo Nacional, aprobando el Convenio Relativo a la Importación Temporal, celebrado en Estambul - República de Türkiye. (PE-234/26)",
+    "expedientes": [
+      {
+        "codigo": "PE-234/26",
+        "url": "https://www.senado.gob.ar/parlamentario/comisiones/verExp/234.26/PE/PL"
+      }
+    ],
+    "comisionCabecera": "Relaciones Exteriores y Culto",
+    "fechaDictamen": "22/10/2026",
+    "odLink": "https://www.senado.gob.ar/parlamentario/parlamentaria/51751/downloadOrdenDia",
+    "comisiones": [
+      "Relaciones Exteriores y Culto",
+      "DE RELACIONES EXTERIORES Y CULTO"
+    ],
+    "tipoOD": "NORMAL",
+    "firmantesMayoria": [
+      "Francisco M. Paoltroni",
+      "Ivanna M. Arrascaeta",
+      "Agustín A. Monteverde",
+      "Gonzalo Guzmán Coraita",
+      "María B. Monte de Oca",
+      "Sonia E. Rojas Decut",
+      "Eduardo A. Vischi",
+      "Maximiliano Abad",
+      "Enrique M. Goerling Lara",
+      "Guillermo E. Andrada"
+    ]
+  },
+  {
     "numero": "409",
     "periodo": 2026,
     "origen": "Poder Ejecutivo",

@@ -9542,8 +9542,104 @@
       ],
       "expositores": null,
       "tipo": "bicameral",
-      "boletin_id": 2401,
-      "boletin_numero": "141/26"
+      "boletin_id": 2402,
+      "boletin_numero": "142/26"
+    },
+    {
+      "seccion": "senadores",
+      "dia": "MIÉRCOLES",
+      "fecha": "28/10",
+      "hora": "16:00",
+      "modalidad": "",
+      "comisiones": [
+        "LEGISLACIÓN GENERAL",
+        "POBLACIÓN Y DESARROLLO HUMANO"
+      ],
+      "salon": "ILLIA",
+      "salon_completo": "SALÓN ILLIA",
+      "temario": [
+        {
+          "numero": "",
+          "extracto": "[CONTINUACIÓN DEL CUARTO INTERMEDIO] PROYECTOS DE LEY"
+        },
+        {
+          "numero": "S-528/25",
+          "extracto": "CRISTINA: PROYECTO DE LEY DE PROMOCIÓN DE LOS DERECHOS DE LAS NIÑAS, NIÑOS Y ADOLESCENTES A LA DIGNIDAD, A LA INTEGRIDAD PERSONAL Y UNA VIDA LIBRE DE VIOLENCIAS, A TRAVÉS DE PROTOCOLOS PARA LA PREVENCIÓN, DETECCIÓN Y ACTUACIÓN ANTE SITUACIONES DE VIOLENCIA"
+        },
+        {
+          "numero": "S-190/25",
+          "extracto": "BENSUSÁN: REPRODUCE PROYECTO DE LEY QUE CREA EL REGISTRO NACIONAL DE PERSONAS DEUDORAS ALIMENTARIAS EN MORA. (REF"
+        },
+        {
+          "numero": "S-9/23",
+          "extracto": ")"
+        },
+        {
+          "numero": "S-1723/26",
+          "extracto": "TERENZI: PROYECTO DE LEY QUE CREA EL REGISTRO NACIONAL ÚNICO DE ALIMENTANTES MOROSOS (RENUAM)"
+        }
+      ],
+      "expositores": null,
+      "tipo": "senadores",
+      "boletin_id": 2402,
+      "boletin_numero": "142/26"
+    },
+    {
+      "seccion": "senadores",
+      "dia": "LUNES",
+      "fecha": "26/10",
+      "hora": "13:00",
+      "modalidad": "",
+      "comisiones": [
+        "RELACIONES EXTERIORES Y CULTO"
+      ],
+      "salon": "FRONDIZI - MORENO",
+      "salon_completo": "SALÓN FRONDIZI - MORENO",
+      "temario": [
+        {
+          "numero": "PE-294/26",
+          "extracto": "MENSAJE N° 268/26 Y PROYECTO DE LEY QUE APRUEBA EL ACUERDO EN EL MARCO DE LA CONVENCIÓN DE LAS NACIONES UNIDAS SOBRE EL DERECHO DEL MAR RELATIVO A LA CONSERVACIÓN Y EL USO SOSTENIBLE DE LA DIVERSIDAD BIOLÓGICA MARINA DE LAS ZONAS SITUADAS FUERA DE LA JURISDICCIÓN NACIONAL, CELEBRADO EN LA CDAD. DE NUEVA YORK - ESTADOS UNIDOS DE AMÉRICA - EL 19 DE JUNIO DE 2023"
+        },
+        {
+          "numero": "PE-378/19",
+          "extracto": "MENSAJE N° 208/19 Y PROYECTO DE LEY QUE APRUEBA EL PROTOCOLO ADICIONAL AL PROTOCOLO CONSTITUTIVO DEL PARLAMENTO DEL MERCOSUR, CELEBRADO DEL 14 AL 16 DE ABRIL DE 2019"
+        }
+      ],
+      "expositores": null,
+      "tipo": "senadores",
+      "boletin_id": 2402,
+      "boletin_numero": "142/26"
+    },
+    {
+      "seccion": "senadores",
+      "dia": "MIÉRCOLES",
+      "fecha": "28/10",
+      "hora": "15:00",
+      "modalidad": "",
+      "comisiones": [
+        "ASUNTOS CONSTITUCIONALES",
+        "RELACIONES EXTERIORES Y CULTO"
+      ],
+      "salon": "FRONDIZI - MORENO",
+      "salon_completo": "SALÓN FRONDIZI - MORENO",
+      "temario": [
+        {
+          "numero": "S-1563/26",
+          "extracto": "MOISÉS Y OTROS: PROYECTO DE LEY QUE CREA LA COMISIÓN BICAMERAL PERMANENTE SOBRE LA CUESTIÓN MALVINAS Y EL ATLÁNTICO SUR"
+        },
+        {
+          "numero": "S-1603/26",
+          "extracto": "CAPITANICH: PROYECTO DE LEY QUE CREA LA COMISIÓN BICAMERAL PERMANENTE DE LA CUESTIÓN MALVINAS Y ESPACIOS ESTRATÉGICOS DEL ATLÁNTICO SUR, ANTÁRTIDA Y PASAJES INTEROCEÁNICOS"
+        },
+        {
+          "numero": "S-1619/26",
+          "extracto": "CAPITANICH: PROYECTO DE RESOLUCIÓN QUE CREA LA COMISIÓN PERMANENTE DE CONTROL, SEGUIMIENTO Y ESTRATEGIA SOBRE LA CUESTIÓN MALVINAS, ANTÁRTIDA Y ATLÁNTICO SUR"
+        }
+      ],
+      "expositores": null,
+      "tipo": "senadores",
+      "boletin_id": 2402,
+      "boletin_numero": "142/26"
     }
   ]
 }
