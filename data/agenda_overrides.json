@@ -179,6 +179,22 @@
       "suspendida": false,
       "actualizado": "2026-10-13T14:44:45.978Z",
       "actualizado_por": "Paulina"
+    },
+    {
+      "fecha": "26/10",
+      "hora": "13:00",
+      "comisiones": [
+        "RELACIONES EXTERIORES Y CULTO"
+      ],
+      "hora_nueva": null,
+      "salon_nuevo": null,
+      "tipo_nuevo": "asesores",
+      "temario_extra": null,
+      "expositores_extra": null,
+      "nota": null,
+      "suspendida": false,
+      "actualizado": "2026-10-26T13:24:52.555Z",
+      "actualizado_por": "Mariano"
     }
   ]
 }
