@@ -9542,8 +9542,8 @@
       ],
       "expositores": null,
       "tipo": "bicameral",
-      "boletin_id": 2403,
-      "boletin_numero": "143/26"
+      "boletin_id": 2404,
+      "boletin_numero": "144/26"
     },
     {
       "seccion": "senadores",
@@ -9560,7 +9560,7 @@
       "temario": [
         {
           "numero": "",
-          "extracto": "[CONTINUACIÓN DEL CUARTO INTERMEDIO] PROYECTOS DE LEY"
+          "extracto": "[CUARTO INTERMEDIO] PROYECTOS DE LEY"
         },
         {
           "numero": "S-528/25",
@@ -9581,8 +9581,8 @@
       ],
       "expositores": null,
       "tipo": "senadores",
-      "boletin_id": 2403,
-      "boletin_numero": "143/26"
+      "boletin_id": 2404,
+      "boletin_numero": "144/26"
     },
     {
       "seccion": "senadores",
@@ -9638,8 +9638,8 @@
       ],
       "expositores": null,
       "tipo": "senadores",
-      "boletin_id": 2403,
-      "boletin_numero": "143/26"
+      "boletin_id": 2404,
+      "boletin_numero": "144/26"
     },
     {
       "seccion": "senadores",
@@ -9671,7 +9671,7 @@
         },
         {
           "numero": "S-1225/25",
-          "extracto": "DURÉ: PROYECTO DE DECLARACIÓN QUE ADHIERE A LA CONMEMORACIÓN DEL NACIMIENTO DE MICAELA GARCÍA, DESTACANDO SU MEMORIA Y LA TRASCENDENCIA DE LA LEY 27499 (LEY MICAELA), EL 9 DE AGOSTO"
+          "extracto": "DURÉ: PROYECTO DE DECLARACIÓN QUE ADHIERE A LA CONMEMORACIÓN DEL NACIMIENTO DE MICAELA GARCÍA, DESTACANDO SU MEMORIA Y LA TRASCENDENCIA DE LA LEY 27.499 (LEY MICAELA), EL 9 DE AGOSTO"
         },
         {
           "numero": "S-1578/25",
@@ -9699,7 +9699,7 @@
         },
         {
           "numero": "S-1755/25",
-          "extracto": "DURÉ: PROYECTO DE DECLARACIÓN QUE DECLARA DE INTERÉS LA CONMEMORACIÓN DEL ANIVERSARIO DE LA SANCIÓN DE LA LEY 24012, DE CUPO FEMENINO, EL 6 DE OCTUBRE DE 2025"
+          "extracto": "DURÉ: PROYECTO DE DECLARACIÓN QUE DECLARA DE INTERÉS LA CONMEMORACIÓN DEL ANIVERSARIO DE LA SANCIÓN DE LA LEY 24.012, DE CUPO FEMENINO, EL 6 DE OCTUBRE DE 2025"
         },
         {
           "numero": "S-1758/25",
@@ -9715,7 +9715,7 @@
         },
         {
           "numero": "S-2001/25",
-          "extracto": "DURÉ: PROYECTO DE DECLARACIÓN QUE ADHIERE AL DIA INTERNACIONAL PARA LA ELIMINACION DE LA VIOLENCIA CONTRA LAS MUJERES, EL 25 DE NOVIEMBRE DE CADA AÑO"
+          "extracto": "DURÉ: PROYECTO DE DECLARACIÓN QUE ADHIERE AL DIA INTERNACIONAL PARA LA ELIMINACIÓN DE LA VIOLENCIA CONTRA LAS MUJERES, EL 25 DE NOVIEMBRE DE CADA AÑO"
         },
         {
           "numero": "S-2119/25",
@@ -9780,8 +9780,8 @@
       ],
       "expositores": null,
       "tipo": "senadores",
-      "boletin_id": 2403,
-      "boletin_numero": "143/26"
+      "boletin_id": 2404,
+      "boletin_numero": "144/26"
     },
     {
       "seccion": "senadores",
@@ -9804,7 +9804,8 @@
       "expositores": null,
       "tipo": "senadores",
       "boletin_id": 2403,
-      "boletin_numero": "143/26"
+      "boletin_numero": "143/26",
+      "suspendida": true
     },
     {
       "seccion": "senadores",
@@ -9824,13 +9825,17 @@
         },
         {
           "numero": "PE-378/19",
-          "extracto": "MENSAJE N° 208/19 Y PROYECTO DE LEY QUE APRUEBA EL PROTOCOLO ADICIONAL AL PROTOCOLO CONSTITUTIVO DEL PARLAMENTO DEL MERCOSUR, CELEBRADO DEL 14 AL 16 DE ABRIL DE 2019. PE 273/26, MENSAJE N° 237/26 Y PROYECTO DE LEY QUE APRUEBA EL ACUERDO CON LA REPÚBLICA DEL PARAGUAY SOBRE SERVICIOS AÉREOS, SUSCRIPTO EN LA CDAD. DE BUENOS AIRES - REP. ARGENTINA, EL 27 DE NOVIEMBRE DE 2025"
+          "extracto": "MENSAJE N° 208/19 Y PROYECTO DE LEY QUE APRUEBA EL PROTOCOLO ADICIONAL AL PROTOCOLO CONSTITUTIVO DEL PARLAMENTO DEL MERCOSUR, CELEBRADO DEL 14 AL 16 DE ABRIL DE 2019"
+        },
+        {
+          "numero": "PE-273/26",
+          "extracto": "MENSAJE N° 237/26 Y PROYECTO DE LEY QUE APRUEBA EL ACUERDO CON LA REPÚBLICA DEL PARAGUAY SOBRE SERVICIOS AÉREOS, SUSCRIPTO EN LA CDAD. DE BUENOS AIRES - REP. ARGENTINA, EL 27 DE NOVIEMBRE DE 2025"
         }
       ],
       "expositores": null,
       "tipo": "senadores",
-      "boletin_id": 2403,
-      "boletin_numero": "143/26"
+      "boletin_id": 2404,
+      "boletin_numero": "144/26"
     },
     {
       "seccion": "senadores",
@@ -9910,7 +9915,7 @@
         },
         {
           "numero": "S-1612/25",
-          "extracto": "KIRCHNER Y DURE: PROYECTO DE DECLARACIÓN QUE DECLARA DE INTERÉS LA PUBLICACIÓN \"UN FUEGO DESCONOCIDO: MUJERES EN MALVINAS\", DE AUTORÍA DE PABLO BACA, PUBLICADO POR EL INSTITUTO ELSA BARBERÍA, DEPENDIENTE DEL CONSEJO PROVINCIAL DE EDUCACIÓN DE LA PROV. DE SANTA CRUZ"
+          "extracto": "KIRCHNER Y DURÉ: PROYECTO DE DECLARACIÓN QUE DECLARA DE INTERÉS LA PUBLICACIÓN \"UN FUEGO DESCONOCIDO: MUJERES EN MALVINAS\", DE AUTORÍA DE PABLO BACA, PUBLICADO POR EL INSTITUTO ELSA BARBERÍA, DEPENDIENTE DEL CONSEJO PROVINCIAL DE EDUCACIÓN DE LA PROV. DE SANTA CRUZ"
         },
         {
           "numero": "S-1838/25",
@@ -9918,7 +9923,7 @@
         },
         {
           "numero": "S-311/26",
-          "extracto": "SORIA Y MARKS: PROYECTO DE DECLARACIÓN QUE DECLARA DE INTERÉS EL DOCUMENTAL \"LA MONTAÑA DESDE LA VENTANA\" REALIZADO EN EL MARCO DEL PROYECTO SOCIAL DE LA FUNDACIÓN SAN JOSÉ OBRERO, EN LA CDAD. DE SAN CARLOS DE BARILOCHE, PROV. DE RIO NEGRO, EL 25 DE MARZO DE 2026"
+          "extracto": "SORIA Y MARKS: PROYECTO DE DECLARACIÓN QUE DECLARA DE INTERÉS EL DOCUMENTAL \"LA MONTAÑA DESDE LA VENTANA\" REALIZADO EN EL MARCO DEL PROYECTO SOCIAL DE LA FUNDACIÓN SAN JOSÉ OBRERO, EN LA CDAD. DE SAN CARLOS DE BARILOCHE, PROV. DE RÍO NEGRO, EL 25 DE MARZO DE 2026"
         },
         {
           "numero": "S-553/26",
@@ -9934,7 +9939,7 @@
         },
         {
           "numero": "S-1036/26",
-          "extracto": "ROJAS DECUT Y ARCE: PROYECTO DE DECLARACIÓN QUE DECLARA DE INTERÉS LA PUBLICACIÓN DEL LIBRO \"RED CIDIR: 20 AÑOS DE INTEGRACIÓN Y COOPERACIÓN\" Y LA REALIZACIÓN DE LA CÁTEDRA DOCTORAL INTERNACIONAL RED CIDIR 2026. (S/D)"
+          "extracto": "ROJAS DECUT Y ARCE: PROYECTO DE DECLARACIÓN QUE DECLARA DE INTERÉS LA PUBLICACIÓN DEL LIBRO \"RED CIDIR: 20 AÑOS DE INTEGRACIÓN Y COOPERACIÓN\" Y LA REALIZACIÓN DE LA CÁTEDRA DOCTORAL INTERNACIONAL RED CIDIR 2026"
         },
         {
           "numero": "S-1042/26",
@@ -9950,7 +9955,7 @@
         },
         {
           "numero": "S-1115/26",
-          "extracto": "MARKS: PROYECTO DE DECLARACIÓN QUE DECLARA DE INTERÉS EL 2° CURSO DE RESTAURADOR Y RESTAURADORA FORESTAL A REALIZARSE EN LA MICRORREGIÓN DE LA COMARCA ANDINA DEL PARALELO 42, PROV. DE RIO NEGRO Y CHUBUT, EN LOS MESES DE AGOSTO Y SEPTIEMBRE DE 2026"
+          "extracto": "MARKS: PROYECTO DE DECLARACIÓN QUE DECLARA DE INTERÉS EL 2° CURSO DE RESTAURADOR Y RESTAURADORA FORESTAL A REALIZARSE EN LA MICRORREGIÓN DE LA COMARCA ANDINA DEL PARALELO 42, PROV. DE RÍO NEGRO Y CHUBUT, EN LOS MESES DE AGOSTO Y SEPTIEMBRE DE 2026"
         },
         {
           "numero": "S-1131/26",
@@ -9982,7 +9987,7 @@
         },
         {
           "numero": "S-1213/26",
-          "extracto": "REJAL: PROYECTO DE DECLARACIÓN QUE EXPRESA BENEPLÁCITO Y RESPALDA LA POSTULACIÓN DEL CABLE CARRIL CHILECITO - LA MEJICANA -INAUGURADO EN EL AÑO 1904 EN LA PROV. DE LA RIOJA - ANTE LA UNESCO COMO PATRIMONIO HISTÓRICO Y CULTURAL DE LA HUMANIDAD"
+          "extracto": "REJAL: PROYECTO DE DECLARACIÓN QUE EXPRESA BENEPLÁCITO Y RESPALDA LA POSTULACIÓN DEL CABLE CARRIL CHILECITO-LA MEJICANA - INAUGURADO EN EL AÑO 1904 EN LA PROV. DE LA RIOJA - ANTE LA UNESCO COMO PATRIMONIO HISTÓRICO Y CULTURAL DE LA HUMANIDAD"
         },
         {
           "numero": "S-1260/26",
@@ -10018,7 +10023,7 @@
         },
         {
           "numero": "S-1326/26",
-          "extracto": "MARKS Y SORIA: PROYECTO DE DECLARACIÓN QUE EXPRESA BENEPLÁCITO POR LA CREACIÓN DEL CENTRO REGIONAL DE ESTUDIO SUPERIOR (C.R.E.S.U.) IMPULSADO POR LA MUNIC. DE CATRIEL, PROV. DE RIO NEGRO"
+          "extracto": "MARKS Y SORIA: PROYECTO DE DECLARACIÓN QUE EXPRESA BENEPLÁCITO POR LA CREACIÓN DEL CENTRO REGIONAL DE ESTUDIO SUPERIOR (C.R.E.S.U.) IMPULSADO POR LA MUNIC. DE CATRIEL, PROV. DE RÍO NEGRO"
         },
         {
           "numero": "S-1342/26",
@@ -10098,7 +10103,7 @@
         },
         {
           "numero": "S-1532/26",
-          "extracto": "MORENO Y OTROS: PROYECTO DE DECLARACIÓN QUE DECLARA DE INTERÉS AL ESPACIO CULTURAL \"LA CASA DE LA CHACARERA ITINERANTE-MÓVIL\", IMPULSADO POR LA ASOCIACIÓN CIVIL LA CASA DE LA CHACARERA, DE LA PROV. DE SANTIAGO DEL ESTERO"
+          "extracto": "MORENO Y OTROS: PROYECTO DE DECLARACIÓN QUE DECLARA DE INTERÉS AL ESPACIO CULTURAL \"LA CASA DE LA CHACARERA ITINERANTE - MÓVIL\", IMPULSADO POR LA ASOCIACIÓN CIVIL LA CASA DE LA CHACARERA, DE LA PROV. DE SANTIAGO DEL ESTERO"
         },
         {
           "numero": "S-1536/26",
@@ -10126,7 +10131,7 @@
         },
         {
           "numero": "S-1581/26",
-          "extracto": "SCHNEIDER: PROYECTO DE DECLARACIÓN QUE EXPRESA BENEPLÁCITO POR EL 75° ANIVERSARIO DE LA ESCUELA DE EDUCACIÓN PRIMARIA N° 398 \"CEFERINO JUAN INVERNIZZI\" DPTO. LIBERTADOR GRAL. SAN MARTIN, PROV. DEL CHACO, EL 11 DE SEPTIEMBRE DE 2026"
+          "extracto": "SCHNEIDER: PROYECTO DE DECLARACIÓN QUE EXPRESA BENEPLÁCITO POR EL 75° ANIVERSARIO DE LA ESCUELA DE EDUCACIÓN PRIMARIA N° 398 \"CEFERINO JUAN INVERNIZZI\" DPTO. LIBERTADOR GRAL. SAN MARTÍN, PROV. DEL CHACO, EL 11 DE SEPTIEMBRE DE 2026"
         },
         {
           "numero": "S-1584/26",
@@ -10166,7 +10171,7 @@
         },
         {
           "numero": "S-1702/26",
-          "extracto": "ALMEIDA: PROYECTO DE DECLARACIÓN QUE EXPRESA BENEPLÁCITO Y RECONOCE LA REALIZACIÓN DE LA \"FERIA DE CIENCIAS Y ENCUENTRO DEPORTIVO 360° DE LA EDUCACIÓN ADVENTISTA\" EN LA UNIVERSIDAD ADVENTISTA DE LA LOC. LIBERTADOR SAN MARTIN, PROV. DE ENTRE RÍOS, ENTRE EL 29 DE SEPTIEMBRE Y 1 DE OCTUBRE DE 2026"
+          "extracto": "ALMEIDA: PROYECTO DE DECLARACIÓN QUE EXPRESA BENEPLÁCITO Y RECONOCE LA REALIZACIÓN DE LA \"FERIA DE CIENCIAS Y ENCUENTRO DEPORTIVO 360° DE LA EDUCACIÓN ADVENTISTA\" EN LA UNIVERSIDAD ADVENTISTA DE LA LOC. LIBERTADOR SAN MARTÍN, PROV. DE ENTRE RÍOS, ENTRE EL 29 DE SEPTIEMBRE Y 1 DE OCTUBRE DE 2026"
         },
         {
           "numero": "S-1712/26",
@@ -10182,7 +10187,7 @@
         },
         {
           "numero": "S-1737/26",
-          "extracto": "GODOY Y OTROS: PROYECTO DE DECLARACIÓN QUE DECLARA DE INTERÉS EL XII CONGRESO INTERNACIONAL TRIANUAL DE LA SOCIEDAD INTERNACIONAL PARA LA FÍSICA-QUÍMICA TEÓRICA (ISTCP), A REALIZARSE EN LA CDAD. DE CORRIENTES, PROV. HOMÓNIMA, DEL 29 DE AGOSTO AL 3 DE SEPTIEMBRE DE 2027"
+          "extracto": "GODOY Y OTROS: PROYECTO DE DECLARACIÓN QUE DECLARA DE INTERÉS EL XII CONGRESO INTERNACIONAL TRIANUAL DE LA SOCIEDAD INTERNACIONAL PARA LA FÍSICA - QUÍMICA TEÓRICA (ISTCP), A REALIZARSE EN LA CDAD. DE CORRIENTES, PROV. HOMÓNIMA, DEL 29 DE AGOSTO AL 3 DE SEPTIEMBRE DE 2027"
         },
         {
           "numero": "S-1741/26",
@@ -10199,8 +10204,77 @@
       ],
       "expositores": null,
       "tipo": "senadores",
-      "boletin_id": 2403,
-      "boletin_numero": "143/26"
+      "boletin_id": 2404,
+      "boletin_numero": "144/26"
+    },
+    {
+      "seccion": "senadores",
+      "dia": "MARTES",
+      "fecha": "27/10",
+      "hora": "17:00",
+      "modalidad": "",
+      "comisiones": [
+        "COMISIÓN DE SUPERVISIÓN PARLAMENTARIA DE LA OFICINA DE",
+        "PRESUPUESTO DEL CONGRESO - LEY 27.343"
+      ],
+      "salon": "MUJERES PARLAMENTARIAS",
+      "salon_completo": "SALÓN MUJERES PARLAMENTARIAS",
+      "temario": [
+        {
+          "numero": "",
+          "extracto": "1. RENUNCIA DEL DIRECTOR DE ANÁLISIS Y SOSTENIBILIDAD DE LA DEUDA PÚBLICA DE LA OFICINA DE PRESUPUESTO DEL CONGRESO DE LA NACIÓN (OPC), A PARTIR DEL DÍA 20 DE OCTUBRE DE 2026. 2. PEDIDO DE ADSCRIPCIÓN DE AGENTE DE LA OFICINA NACIONAL DE CRÉDITO PÚBLICO, PRESENTADO POR LA DIRECCIÓN GENERAL DE LA OFICINA DE PRESUPUESTO DEL CONGRESO (OPC). 3. APROBACIÓN DEL PLAN DE TRABAJO ÚLTIMO CUATRIMESTRE DEL AÑO 2026. 4. SOLICITUD DE RECATEGORIZACIÓN Y ADICIONALES AL CUERPO DE ANALISTAS PROFESIONALES DE LA OFICINA DE PRESUPUESTO DEL CONGRESO ELEVADO POR LA DIRECCIÓN GENERAL DE LA OPC. 5. AUTORIZACIÓN DE APERTURA DE CUENTA DE SOBRANTES Y COLOCACIÓN EN PLAZO FIJO DEL FONDO DE RESERVA DE LA OPC. 6. ESTABLECIMIENTO DE UN REGLAMENTO DE USO DEL FONDO ROTATORIO DE LA OPC. 7. MODIFICACIÓN AL REGLAMENTO DE FUNCIONAMIENTO DE LA OFICINA DE PRESUPUESTO DEL CONGRESO EN RELACIÓN A LA GESTIÓN DEL SERVICIO ADMINISTRATIVO FINANCIERO 369."
+        }
+      ],
+      "expositores": null,
+      "tipo": "senadores",
+      "boletin_id": 2404,
+      "boletin_numero": "144/26"
+    },
+    {
+      "seccion": "senadores",
+      "dia": "MIÉRCOLES",
+      "fecha": "28/10",
+      "hora": "17:00",
+      "modalidad": "",
+      "comisiones": [
+        "INFRAESTRUCTURA, VIVIENDA Y TRANSPORTE",
+        "PRESUPUESTO Y HACIENDA"
+      ],
+      "salon": "AZUL",
+      "salon_completo": "SALÓN AZUL",
+      "temario": [
+        {
+          "numero": "S-1844/26",
+          "extracto": "MOISÉS Y OTROS: PROYECTO DE LEY QUE CREA EL RÉGIMEN DE CABOTAJE, MARINA MERCANTE Y ADMISIÓN TEMPORARIA"
+        }
+      ],
+      "expositores": null,
+      "tipo": "senadores",
+      "boletin_id": 2404,
+      "boletin_numero": "144/26"
+    },
+    {
+      "seccion": "senadores",
+      "dia": "MIÉRCOLES",
+      "fecha": "28/10",
+      "hora": "18:00",
+      "modalidad": "",
+      "comisiones": [
+        "ASUNTOS CONSTITUCIONALES",
+        "LEGISLACIÓN GENERAL"
+      ],
+      "salon": "ILLIA",
+      "salon_completo": "SALÓN ILLIA",
+      "temario": [
+        {
+          "numero": "PE-13/26",
+          "extracto": "MENSAJE N° 22/26 Y PROYECTO DE LEY SOBRE INVIOLABILIDAD DE LA PROPIEDAD PRIVADA"
+        }
+      ],
+      "expositores": null,
+      "tipo": "senadores",
+      "boletin_id": 2404,
+      "boletin_numero": "144/26"
     }
   ]
 }
