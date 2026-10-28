@@ -9581,8 +9581,8 @@
       ],
       "expositores": null,
       "tipo": "senadores",
-      "boletin_id": 2404,
-      "boletin_numero": "144/26"
+      "boletin_id": 2405,
+      "boletin_numero": "145/26"
     },
     {
       "seccion": "senadores",
@@ -9638,8 +9638,8 @@
       ],
       "expositores": null,
       "tipo": "senadores",
-      "boletin_id": 2404,
-      "boletin_numero": "144/26"
+      "boletin_id": 2405,
+      "boletin_numero": "145/26"
     },
     {
       "seccion": "senadores",
@@ -9834,8 +9834,8 @@
       ],
       "expositores": null,
       "tipo": "senadores",
-      "boletin_id": 2404,
-      "boletin_numero": "144/26"
+      "boletin_id": 2405,
+      "boletin_numero": "145/26"
     },
     {
       "seccion": "senadores",
@@ -10204,8 +10204,8 @@
       ],
       "expositores": null,
       "tipo": "senadores",
-      "boletin_id": 2404,
-      "boletin_numero": "144/26"
+      "boletin_id": 2405,
+      "boletin_numero": "145/26"
     },
     {
       "seccion": "senadores",
@@ -10246,12 +10246,16 @@
         {
           "numero": "S-1844/26",
           "extracto": "MOISÉS Y OTROS: PROYECTO DE LEY QUE CREA EL RÉGIMEN DE CABOTAJE, MARINA MERCANTE Y ADMISIÓN TEMPORARIA"
+        },
+        {
+          "numero": "S-1247/26",
+          "extracto": "CAPITANICH Y OTROS: PROYECTO DE LEY QUE CREA EL RÉGIMEN ESPECIAL TEMPORAL PARA EL FORTALECIMIENTO DEL CABOTAJE NACIONAL Y DE LA MARINA MERCANTE ARGENTINA (RETCAN)"
         }
       ],
       "expositores": null,
       "tipo": "senadores",
-      "boletin_id": 2404,
-      "boletin_numero": "144/26"
+      "boletin_id": 2405,
+      "boletin_numero": "145/26"
     },
     {
       "seccion": "senadores",
@@ -10273,8 +10277,8 @@
       ],
       "expositores": null,
       "tipo": "senadores",
-      "boletin_id": 2404,
-      "boletin_numero": "144/26"
+      "boletin_id": 2405,
+      "boletin_numero": "145/26"
     }
   ]
 }
