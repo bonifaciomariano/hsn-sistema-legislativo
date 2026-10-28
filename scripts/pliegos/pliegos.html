@@ -1,0 +1,71 @@
+<!-- ====================== MAIN: PLIEGOS JUDICIALES ====================== -->
+<div id="main-pliegos" class="mtab-content">
+  <div class="section-block">
+    <div class="section-header">
+      <h2>Pliegos judiciales</h2>
+      <span class="section-hint" id="pj-hint">Pliegos del Poder Judicial en tr&aacute;mite</span>
+    </div>
+    <div class="section-body">
+      <div class="pj-tabs" id="pj-tabs" role="tablist" aria-label="Categor&iacute;a"></div>
+      <div class="pj-filter-row" id="pj-filter-row">
+        <div class="pj-search-wrap">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
+          <input class="search-box" type="search" id="pj-search" placeholder="Buscar nombre, cargo, expediente u OD&hellip;" aria-label="Buscar">
+        </div>
+        <div class="select-wrapper">
+          <select class="filter-select" id="pj-provincia" aria-label="Filtrar por jurisdicci&oacute;n"><option value="">Todas las jurisdicciones</option></select>
+          <span class="select-arrow">&#9660;</span>
+        </div>
+        <div class="select-wrapper">
+          <select class="filter-select" id="pj-rango" aria-label="Filtrar por rango"><option value="">Todos los rangos</option></select>
+          <span class="select-arrow">&#9660;</span>
+        </div>
+        <div class="select-wrapper">
+          <select class="filter-select" id="pj-fuero" aria-label="Filtrar por fuero"><option value="">Todos los fueros</option></select>
+          <span class="select-arrow">&#9660;</span>
+        </div>
+        <label class="pj-toggle" id="pj-toggle-wrap">
+          <input type="checkbox" id="pj-toggle-programada">
+          <span class="pj-switch" aria-hidden="true"></span>
+          Solo con audiencia programada
+        </label>
+        <button class="pj-btn-clear" id="pj-btn-clear" type="button">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6 6 18M6 6l12 12"/></svg>
+          Limpiar filtros
+        </button>
+      </div>
+      <p class="pj-result-count" id="pj-result-count"></p>
+      <div class="pj-grid" id="pj-grid"></div>
+      <div class="pj-empty" id="pj-empty" style="display:none">
+        <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
+        <p id="pj-empty-msg">No hay pliegos que coincidan con estos filtros.</p>
+      </div>
+      <div id="pj-stats-panel" style="display:none"></div>
+      <p class="pj-fuente">Fuente: planilla de Acuerdos del Senado (TIPO = AC), ayuda memoria de Prosecretar&iacute;a Parlamentaria, actas de audiencias p&uacute;blicas y bolet&iacute;n de reuniones de comisiones. Los datos se mantienen en el repositorio <a href="https://github.com/bonifaciomariano/Pliegos-Poder-Judicial" target="_blank" rel="noopener">Pliegos-Poder-Judicial</a> y se sincronizan solos al actualizar este sitio.</p>
+    </div>
+  </div>
+
+  <div class="pj-modal-overlay" id="pj-modal-overlay">
+    <div class="pj-modal" role="dialog" aria-modal="true" aria-labelledby="pj-modal-title">
+      <div class="pj-modal-head">
+        <div>
+          <div class="pj-expediente" id="pj-modal-expediente"></div>
+          <h2 id="pj-modal-title"></h2>
+          <div class="pj-cargo-full" id="pj-modal-cargo"></div>
+        </div>
+        <button class="pj-modal-close" id="pj-modal-close" aria-label="Cerrar">&#10005;</button>
+      </div>
+      <div class="pj-modal-body">
+        <div class="pj-modal-badge" id="pj-modal-badge" style="display:none"></div>
+        <ul class="pj-timeline" id="pj-modal-timeline"></ul>
+        <div class="pj-modal-actions">
+          <a class="pj-btn-primary" id="pj-modal-link" href="#" target="_blank" rel="noopener">
+            Ver expediente en el Senado
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17 17 7M7 7h10v10"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+

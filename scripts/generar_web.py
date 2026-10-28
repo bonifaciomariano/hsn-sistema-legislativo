@@ -19,6 +19,7 @@ import json
 import os
 import re
 import unicodedata
+import urllib.request
 from datetime import datetime, timezone, timedelta
 
 REPO_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -1326,7 +1327,13 @@ function activateMain(id){
   document.querySelectorAll('.mtab-btn').forEach(function(b){b.classList.remove('active')});
   document.querySelectorAll('.mtab-content').forEach(function(c){c.classList.remove('active')});
   document.getElementById('main-'+id).classList.add('active');
-  document.querySelector('[data-main="'+id+'"]').classList.add('active');
+  var btnNav=document.querySelector('[data-main="'+id+'"]');
+  btnNav.classList.add('active');
+  /* con 7 pestañas la barra desborda en el celular: centrar la activa */
+  var nav=btnNav.parentNode;
+  if(nav&&nav.scrollWidth>nav.clientWidth){
+    nav.scrollLeft=btnNav.getBoundingClientRect().left-nav.getBoundingClientRect().left+nav.scrollLeft-(nav.clientWidth-btnNav.offsetWidth)/2;
+  }
   return true;
 }
 function switchMain(id){
@@ -1338,6 +1345,7 @@ window.addEventListener('popstate',function(){
     document.body.classList.remove('ficha-activa');
     document.getElementById('fichaReunionOverlay').hidden=true;
   }
+  if(window.pjSyncHash&&window.pjSyncHash())return;
   if(abrirReunionDesdeHash())return;
   var id=(location.hash||'#proyectos').slice(1).split('/')[0];
   activateMain(id);
@@ -5490,6 +5498,7 @@ HTML_TEMPLATE = """<!DOCTYPE html>
     <button class="mtab-btn" data-main="agenda" onclick="switchMain('agenda')">Agenda</button>
     <button class="mtab-btn" data-main="ayuda" onclick="switchMain('ayuda')">Ayuda Memoria</button>
     <button class="mtab-btn" data-main="sanciones" onclick="switchMain('sanciones')">Sanciones HSN</button>
+    <button class="mtab-btn" data-main="pliegos" onclick="switchMain('pliegos')">Pliegos judiciales</button>
     <button class="mtab-btn" data-main="votacion" onclick="switchMain('votacion')">Herramientas para sesi&oacute;n</button>
   </div>
 </div>
@@ -5863,6 +5872,7 @@ HTML_TEMPLATE = """<!DOCTYPE html>
   </div>
 </div>
 
+{pliegos_html}
 <div id="main-votacion" class="mtab-content">
 <div id="herr-root">
   <div class="sub-nav">
@@ -6324,11 +6334,12 @@ var AYUDA_MEMORIA = {ayuda_memoria};
 var SANCIONES_DATA = {sanciones};
 var BLOQUE_TOTALES = {bloque_totales};
 var FOTOS_SENADORES = {fotos_senadores};
+var PLIEGOS_DATA = {pliegos_data};
 var FONT_POPPINS_REGULAR = "{font_regular}";
 var FONT_POPPINS_BOLD = "{font_bold}";
 {js}
 init();
-if(location.hash&&!abrirReunionDesdeHash())activateMain(location.hash.slice(1).split('/')[0]);
+if(location.hash&&!window.pjSyncHash()&&!abrirReunionDesdeHash())activateMain(location.hash.slice(1).split('/')[0]);
 </script>
 </body>
 </html>"""
@@ -7083,6 +7094,46 @@ def _agenda_ultimo_boletin_txt(agenda):
     return f"&Uacute;ltimo bolet&iacute;n: {ultimo}"
 
 
+PLIEGOS_URL = "https://raw.githubusercontent.com/bonifaciomariano/Pliegos-Poder-Judicial/main/pliegos_data.json"
+PLIEGOS_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "pliegos")
+
+
+def cargar_pliegos():
+    """Datos de la pestaña "Pliegos judiciales".
+
+    Se mantienen en el repo Pliegos-Poder-Judicial (su pipeline arma
+    pliegos_data.json); acá NO se edita nada a mano. En cada build se baja la
+    última versión y se guarda como data/pliegos_data.json -- copia exacta
+    del original, para que el sitio se pueda construir igual si GitHub no
+    responde (y para ver en el historial qué cambió). PLIEGOS_OFFLINE=1 saltea
+    la descarga (desarrollo sin red)."""
+    cache = os.path.join(DATA_DIR, "pliegos_data.json")
+    if os.getenv("PLIEGOS_OFFLINE") != "1":
+        try:
+            req = urllib.request.Request(PLIEGOS_URL, headers={
+                "User-Agent": "HSN-SistemaLegislativo/1.0 (+https://github.com/bonifaciomariano/hsn-sistema-legislativo)"})
+            with urllib.request.urlopen(req, timeout=30) as r:
+                crudo = r.read()
+            data = json.loads(crudo.decode("utf-8"))
+            if isinstance(data.get("pliegos"), list) and data["pliegos"]:
+                with open(cache, "wb") as f:
+                    f.write(crudo)
+                print(f"  pliegos: {len(data['pliegos'])} bajados del repo de origen (datos al {data.get('generado_al')})")
+                return data
+            print("  AVISO pliegos: el JSON de origen vino sin pliegos; uso la ultima copia")
+        except Exception as e:
+            print(f"  AVISO pliegos: no se pudo bajar ({e}); uso la ultima copia")
+    data = _cargar("pliegos_data.json", None)
+    if data and data.get("pliegos"):
+        return data
+    return {"generado_al": "", "total": 0, "provincias": [], "pliegos": []}
+
+
+def _leer_asset_pliegos(nombre):
+    with open(os.path.join(PLIEGOS_DIR, nombre), encoding="utf-8") as f:
+        return f.read()
+
+
 def main():
     proyectos = _cargar("proyectos.json", [])
     # Orden: fecha ↓, luego año y número (más nuevo a más viejo)
@@ -7149,12 +7200,16 @@ def main():
                 clave_corta = _norm_nombre(f"{apellido}, {palabra}")
                 fotos_por_nombre_norm.setdefault(clave_corta, v)
     fotos_senadores_js = json.dumps(fotos_por_nombre_norm, ensure_ascii=False)
+    pliegos = cargar_pliegos()
+    pliegos_js = json.dumps(pliegos, ensure_ascii=False, separators=(",", ":")).replace("</", "<\\/")
     fonts = _cargar("fonts_poppins.json", {})
     fecha = datetime.now(timezone.utc).astimezone(timezone(timedelta(hours=-3))).strftime("%d/%m/%Y %H:%M")
 
     html = HTML_TEMPLATE.format(
-        css=CSS,
-        js=JS,
+        css=CSS + _leer_asset_pliegos("pliegos.css"),
+        js=JS + _leer_asset_pliegos("pliegos.js"),
+        pliegos_html=_leer_asset_pliegos("pliegos.html"),
+        pliegos_data=pliegos_js,
         datos=datos_js,
         comisiones=comisiones_js,
         agenda=agenda_js,
