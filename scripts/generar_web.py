@@ -3157,13 +3157,13 @@ function proyectoDeExp(exp){
   }
   return PROYECTOS_POR_CLAVE[claveExp(exp.origen,exp.nro,exp.anio)]||null;
 }
-var AM_CATS=['Todos','Acuerdo','Proyecto de Ley','Proyecto de Declaración','Proyecto de Comunicación','Proyecto de Resolución'];
-var AM_CAT_LABELS={'Todos':'Todos','Acuerdo':'Acuerdos','Proyecto de Ley':'Proyectos de Ley','Proyecto de Declaración':'Declaraciones','Proyecto de Comunicación':'Comunicaciones','Proyecto de Resolución':'Resoluciones'};
-var AM_CAT_CODE={'Acuerdo':'AC','Proyecto de Ley':'PL','Proyecto de Declaración':'PD','Proyecto de Comunicación':'PC','Proyecto de Resolución':'PR'};
+var AM_CATS=['Todos','Acuerdo','Acuerdo para dar cuenta','Proyecto de Ley','Proyecto de Declaración','Proyecto de Comunicación','Proyecto de Resolución'];
+var AM_CAT_LABELS={'Todos':'Todos','Acuerdo':'Acuerdos','Acuerdo para dar cuenta':'Acuerdos para dar cuenta','Proyecto de Ley':'Proyectos de Ley','Proyecto de Declaración':'Declaraciones','Proyecto de Comunicación':'Comunicaciones','Proyecto de Resolución':'Resoluciones'};
+var AM_CAT_CODE={'Acuerdo':'AC','Acuerdo para dar cuenta':'DC','Proyecto de Ley':'PL','Proyecto de Declaración':'PD','Proyecto de Comunicación':'PC','Proyecto de Resolución':'PR'};
 /* Paleta propia de Ayuda Memoria (no la de Proyectos: ahí PL/PD son dos tonos
    de azul casi iguales, acá conviene que se distingan de un vistazo). */
-var AM_TIPO_FG={PL:'#1B5EA2',PD:'#7C3AED',PC:'#0d7a4a',PR:'#C2650C',AC:'#7a5c1a'};
-var AM_TIPO_BG={PL:'#D6E4F0',PD:'#EDE4FB',PC:'#DCF0E8',PR:'#FBEADD',AC:'#F9F0DA'};
+var AM_TIPO_FG={PL:'#1B5EA2',PD:'#7C3AED',PC:'#0d7a4a',PR:'#C2650C',AC:'#7a5c1a',DC:'#8a5a00'};
+var AM_TIPO_BG={PL:'#D6E4F0',PD:'#EDE4FB',PC:'#DCF0E8',PR:'#FBEADD',AC:'#F9F0DA',DC:'#FFE8B3'};
 var amCat='Todos',amComision='',amAutor='',amBloque='',amSearch='',amCurrent=null,amStep=0,amFiltered=[];
 /* Todos los bloques con alguien que firmó la OD: mayoría, minoría y quienes
    firmaron en disidencia (total o parcial) de cualquiera de las dos. */
@@ -3225,7 +3225,7 @@ function amCardBadge(d){
 function buildAmCard(d,idx){
   var comision=comLabel(d.comisionCabecera||(d.comisiones&&d.comisiones[0])||'');
   return '<div class="am-card" onclick="amOpenStory('+idx+')">'
-    +'<div class="am-card-top">'+amCardBadge(d)+'<span class="am-exp-num am-od-num">OD '+esc(d.numero)+'/'+esc(String(d.periodo).slice(-2))+'</span>'+(d.minoria?'<span class="am-minoria-tag">Con minor&iacute;a</span>':'')+'</div>'
+    +'<div class="am-card-top">'+amCardBadge(d)+'<span class="am-exp-num am-od-num">'+(d.pendienteCuenta?esc(d.expedientes[0].codigo):'OD '+esc(d.numero)+'/'+esc(String(d.periodo).slice(-2)))+'</span>'+(d.minoria?'<span class="am-minoria-tag">Con minor&iacute;a</span>':'')+'</div>'
     +(d.autor?'<div class="am-autor">'+esc(d.autor)+'</div>':'')
     +'<p class="am-desc">'+esc(d.descripcion)+'</p>'
     +'<div class="am-card-bottom"><span class="am-comision">'+esc(comision)+'</span><span class="am-read-hint">Ver ficha &rarr;</span></div>'
@@ -3274,7 +3274,7 @@ function _construirXmlAyudaMemoria(){
       firmantes+=(firmantes?'\n':'')+lab+': '+ds.firmantes.join('; ');
     });
     var comision=comLabel(d.comisionCabecera||(d.comisiones&&d.comisiones[0])||'');
-    var odNum=d.numero+'/'+String(d.periodo).slice(-2)+(d.tipoOD==='ANEXO'?' (Anexo)':'');
+    var odNum=d.pendienteCuenta?'Para dar cuenta':d.numero+'/'+String(d.periodo).slice(-2)+(d.tipoOD==='ANEXO'?' (Anexo)':'');
     var exps=(d.expedientes&&d.expedientes.length)?d.expedientes:[{codigo:'',url:null}];
     exps.forEach(function(e){
       filas.push({
@@ -3333,7 +3333,24 @@ function exportarAyudaMemoria(){
   document.body.removeChild(a);
   setTimeout(function(){URL.revokeObjectURL(url);},1000);
 }
+function amBuildPendiente(d){
+  var exp=d.expedientes[0];
+  var links=[];
+  if(exp.url)links.push('<a class="am-link-btn" href="'+escAttr(exp.url)+'" target="_blank" rel="noopener">&#128196; Ver expediente</a>');
+  if(d.pliegoSlug)links.push('<a class="am-link-btn" href="#pliegos/'+escAttr(d.pliegoSlug)+'" onclick="amCloseStory()">&#9878; Ver en Pliegos judiciales</a>');
+  return [
+    {label:'Qué es',title:d.candidato||'Mensaje del Poder Ejecutivo',badges:[d.categoria,d.origen],body:d.descripcion},
+    {label:'Trámite',title:'Pendiente de dar cuenta',kv:[
+      ['Expediente', esc(exp.codigo)],
+      ['Comisi&oacute;n', esc(comLabel(d.comisionCabecera))],
+      ['Ingreso', esc(d.fechaIngreso||'—')],
+      ['DAE', d.dae?'N&ordm; '+esc(d.dae)+' / '+esc(d.periodo):'—'],
+      ['Estado', 'Ingresó al Senado; todavía no se dio cuenta en el recinto']
+    ],linksHtml:links.length?'<div class="am-link-row">'+links.join('')+'</div>':''}
+  ];
+}
 function amBuildSteps(d){
+  if(d.pendienteCuenta)return amBuildPendiente(d);
   var steps=[];
   steps.push({
     label:'Qué es',
@@ -3369,7 +3386,7 @@ function amOpenStory(idx){
   amCurrent=idx;amStep=0;
   var d=(AYUDA_MEMORIA||[])[idx];
   if(!d)return;
-  document.getElementById('am-story-id').textContent='OD '+d.numero+'/'+String(d.periodo).slice(-2);
+  document.getElementById('am-story-id').textContent=d.pendienteCuenta?d.expedientes[0].codigo:'OD '+d.numero+'/'+String(d.periodo).slice(-2);
   var steps=amBuildSteps(d);
   document.getElementById('am-progress').innerHTML=steps.map(function(){return '<div class="bar"><div class="fill"></div></div>'}).join('');
   document.getElementById('am-dots').innerHTML=steps.map(function(s,i){return '<div class="am-dot" data-i="'+i+'"></div>'}).join('');
@@ -6982,7 +6999,50 @@ def construir_ayuda_memoria(proyectos=None):
                 "disidenciasPorBloque": a.get("disidenciasPorBloque") or [],
             }
         resultado.append(base)
+    resultado.extend(_acuerdos_para_dar_cuenta(proyectos))
     return resultado
+
+
+def _acuerdos_para_dar_cuenta(proyectos):
+    """Pliegos/acuerdos que ingresaron pero todavía no se dieron cuenta en el
+    recinto (data/acuerdos.json, dado_cuenta == False). No tienen OD ni
+    dictamen: se muestran en Ayuda Memoria como categoría propia."""
+    acuerdos = _cargar("acuerdos.json", [])
+    pliegos = (_cargar("pliegos_data.json", {}) or {}).get("pliegos") or []
+    pliego_de = {p.get("expediente"): p for p in pliegos}
+    por_clave = {(p.get("origen"), p.get("nro"), p.get("anio")): p for p in (proyectos or [])}
+    out = []
+    for a in acuerdos:
+        if a.get("dado_cuenta"):
+            continue
+        pr = por_clave.get((a.get("origen"), a.get("nro"), a.get("anio"))) or {}
+        if pr.get("archivado"):
+            continue
+        anio2 = str(a["anio"])[-2:]
+        codigo = "%s-%s/%s" % (a["origen"], a["nro"], anio2)
+        texto = (pr.get("extracto") or a.get("caratula") or "").strip()
+        if texto.isupper():
+            texto = texto[:1] + texto[1:].lower()
+        pl = pliego_de.get(codigo)
+        out.append({
+            "numero": "",
+            "periodo": a["anio"],
+            "origen": "Poder Ejecutivo",
+            "categoria": "Acuerdo para dar cuenta",
+            "pendienteCuenta": True,
+            "autor": None,
+            "descripcion": texto,
+            "candidato": (pl.get("candidato") or "").title() or None if pl else None,
+            "pliegoSlug": codigo.replace("/", "-") if pl else None,
+            "expedientes": [{"codigo": codigo, "url": pr.get("url")}],
+            "comisionCabecera": "De Acuerdos",
+            "comisiones": ["DE ACUERDOS"],
+            "fechaIngreso": pr.get("fecha"),
+            "dae": a.get("dae"),
+            "tipoOD": "NORMAL",
+        })
+    out.sort(key=lambda x: (x["periodo"], x["expedientes"][0]["codigo"]), reverse=True)
+    return out
 
 
 def construir_comisiones(proyectos):
