@@ -3165,13 +3165,21 @@ var AM_CAT_CODE={'Acuerdo':'AC','Proyecto de Ley':'PL','Proyecto de Declaración
 var AM_TIPO_FG={PL:'#1B5EA2',PD:'#7C3AED',PC:'#0d7a4a',PR:'#C2650C',AC:'#7a5c1a'};
 var AM_TIPO_BG={PL:'#D6E4F0',PD:'#EDE4FB',PC:'#DCF0E8',PR:'#FBEADD',AC:'#F9F0DA'};
 var amCat='Todos',amComision='',amAutor='',amBloque='',amSearch='',amCurrent=null,amStep=0,amFiltered=[];
+/* Todos los bloques con alguien que firmó la OD: mayoría, minoría y quienes
+   firmaron en disidencia (total o parcial) de cualquiera de las dos. */
+function amGruposBloque(d){
+  var grupos=(d.firmantesPorBloque||[]).concat((d.minoria&&d.minoria.firmantesPorBloque)||[]);
+  (d.disidenciasPorBloque||[]).concat((d.minoria&&d.minoria.disidenciasPorBloque)||[]).forEach(function(ds){
+    grupos=grupos.concat(ds.firmantesPorBloque||[]);
+  });
+  return grupos;
+}
 function amInit(){
   var comSet={},autorSet={},bloqueSet={};
   (AYUDA_MEMORIA||[]).forEach(function(d){
     (d.comisiones||[]).forEach(function(c){if(c)comSet[c]=1});
     if(d.autor)autorSet[d.autor]=1;
-    (d.firmantesPorBloque||[]).forEach(function(g){if(g.bloque)bloqueSet[g.bloque]=1});
-    (d.minoria&&d.minoria.firmantesPorBloque||[]).forEach(function(g){if(g.bloque)bloqueSet[g.bloque]=1});
+    amGruposBloque(d).forEach(function(g){if(g.bloque)bloqueSet[g.bloque]=1});
   });
   fillSelectLabeled('am-comision-select',Object.keys(comSet).sort(),comLabel);
   document.getElementById('am-comision-select').addEventListener('change',function(e){amComision=e.target.value;renderAm()});
@@ -3229,7 +3237,7 @@ function renderAm(){
     if(amCat!=='Todos'&&d.categoria!==amCat)return false;
     if(amComision&&(d.comisiones||[]).indexOf(amComision)<0)return false;
     if(amAutor&&d.autor!==amAutor)return false;
-    if(amBloque&&!(d.firmantesPorBloque||[]).concat(d.minoria&&d.minoria.firmantesPorBloque||[]).some(function(g){return g.bloque===amBloque}))return false;
+    if(amBloque&&!amGruposBloque(d).some(function(g){return g.bloque===amBloque}))return false;
     if(amSearch){
       var hay=(d.descripcion+' '+(d.autor||'')+' '+(d.expedientes||[]).map(function(e){return e.codigo}).join(' ')).toLowerCase();
       if(hay.indexOf(amSearch)<0)return false;
