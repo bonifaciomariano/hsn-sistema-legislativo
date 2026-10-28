@@ -593,6 +593,8 @@ table.cross-table tr:last-child td{border-bottom:none}
 .am-firmantes-bloque{margin-bottom:14px}
 .am-firmantes-bloque .bl-name{font-size:11px;font-weight:700;padding:2px 8px;border-radius:5px;display:inline-block;margin-bottom:6px}
 .am-firmantes-bloque .bl-list{font-size:13px;color:#4A4A4A;line-height:1.6}
+.am-disidencia{margin-top:18px;padding-top:12px;border-top:1px dashed #D6E4F0}
+.am-disid-title{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.05em;color:#C2650C;margin-bottom:8px}
 .am-story-foot{display:flex;justify-content:space-between;align-items:center;padding:14px 18px;border-top:1px solid #D6E4F0}
 .am-story-foot button{font-size:12.5px;font-weight:600;color:#1B5EA2;background:#fff;border:1.5px solid #D6E4F0;padding:8px 14px;border-radius:8px;cursor:pointer}
 .am-story-foot button:disabled{opacity:.35;cursor:default}
@@ -3258,6 +3260,11 @@ function _construirXmlAyudaMemoria(){
   amFiltered.forEach(function(d){
     var autorContenido=(d.autor?d.autor+': ':'')+(d.descripcion||'');
     var firmantes=(d.firmantesMayoria||[]).join('; ');
+    (d.disidencias||[]).forEach(function(ds){
+      if(!ds.firmantes||!ds.firmantes.length)return;
+      var lab=ds.tipo==='parcial'?'En disidencia parcial':ds.tipo==='total'?'En disidencia total':'En disidencia';
+      firmantes+=(firmantes?'\n':'')+lab+': '+ds.firmantes.join('; ');
+    });
     var comision=comLabel(d.comisionCabecera||(d.comisiones&&d.comisiones[0])||'');
     var odNum=d.numero+'/'+String(d.periodo).slice(-2)+(d.tipoOD==='ANEXO'?' (Anexo)':'');
     var exps=(d.expedientes&&d.expedientes.length)?d.expedientes:[{codigo:'',url:null}];
@@ -3297,7 +3304,7 @@ function _construirXmlAyudaMemoria(){
       ? '<Cell ss:HRef="'+_xmlEsc(f.expUrl)+'" ss:StyleID="Link"><Data ss:Type="String">'+_xmlEsc(f.exp)+'</Data></Cell>'
       : '<Cell><Data ss:Type="String">'+_xmlEsc(f.exp)+'</Data></Cell>';
     xml+='<Cell ss:StyleID="Wrap"><Data ss:Type="String">'+_xmlEsc(f.autorContenido)+'</Data></Cell>';
-    xml+='<Cell ss:StyleID="Wrap"><Data ss:Type="String">'+_xmlEsc(f.firmantes)+'</Data></Cell>';
+    xml+='<Cell ss:StyleID="Wrap"><Data ss:Type="String">'+_xmlEsc(f.firmantes).replace(/\n/g,'&#10;')+'</Data></Cell>';
     xml+='<Cell><Data ss:Type="String">'+_xmlEsc(f.comision)+'</Data></Cell>';
     xml+='</Row>\n';
   });
@@ -3342,11 +3349,11 @@ function amBuildSteps(d){
     ],
     linksHtml:links.length?'<div class="am-link-row">'+links.join('')+'</div>':''
   });
-  if(d.firmantesPorBloque&&d.firmantesPorBloque.length){
-    steps.push({label:'Firmantes',title:'Firmantes del dictamen de mayoría',firmantesPorBloque:d.firmantesPorBloque});
+  if((d.firmantesPorBloque&&d.firmantesPorBloque.length)||(d.disidenciasPorBloque&&d.disidenciasPorBloque.length)){
+    steps.push({label:'Firmantes',title:'Firmantes del dictamen de mayoría',firmantesPorBloque:d.firmantesPorBloque||[],disidencias:d.disidenciasPorBloque||[]});
   }
-  if(d.minoria&&d.minoria.firmantesPorBloque&&d.minoria.firmantesPorBloque.length){
-    steps.push({label:'Minoría',title:'Firmantes del dictamen en minoría',firmantesPorBloque:d.minoria.firmantesPorBloque});
+  if(d.minoria&&((d.minoria.firmantesPorBloque&&d.minoria.firmantesPorBloque.length)||(d.minoria.disidenciasPorBloque&&d.minoria.disidenciasPorBloque.length))){
+    steps.push({label:'Minoría',title:'Firmantes del dictamen en minoría',firmantesPorBloque:d.minoria.firmantesPorBloque||[],disidencias:d.minoria.disidenciasPorBloque||[]});
   }
   return steps;
 }
@@ -3373,13 +3380,17 @@ function amRenderStep(){
   if(s.body)html+='<p>'+esc(s.body)+'</p>';
   if(s.kv)html+='<dl class="am-kv">'+s.kv.map(function(kv){return '<dt>'+kv[0]+'</dt><dd>'+kv[1]+'</dd>'}).join('')+'</dl>';
   if(s.linksHtml)html+=s.linksHtml;
-  if(s.firmantesPorBloque){
-    html+=s.firmantesPorBloque.map(function(g){
+  var gruposHtml=function(grupos){
+    return grupos.map(function(g){
       var col=blqColor(g.bloque);
       return '<div class="am-firmantes-bloque"><span class="bl-name" style="background:'+col.bg+';color:'+col.badge+'">'+esc(g.bloque)+'</span>'
         +'<div class="bl-list">'+esc(g.integrantes.join(' · '))+'</div></div>';
     }).join('');
-  }
+  };
+  if(s.firmantesPorBloque)html+=gruposHtml(s.firmantesPorBloque);
+  (s.disidencias||[]).forEach(function(ds){
+    html+='<div class="am-disidencia"><div class="am-disid-title">'+esc(ds.label)+'</div>'+gruposHtml(ds.firmantesPorBloque)+'</div>';
+  });
   document.getElementById('am-story-body').innerHTML=html;
   document.querySelectorAll('#am-progress .bar').forEach(function(bar,i){
     var fill=bar.querySelector('.fill');
@@ -6868,6 +6879,7 @@ def _firmantes_por_bloque(firmantes, bloque_de_senador):
     ]
 
 
+_LABEL_DISIDENCIA = {"parcial": "En disidencia parcial", "total": "En disidencia total"}
 _PARTICULAS_COM = {"DE", "DEL", "LA", "LAS", "LOS", "Y", "E"}
 RE_EXP_AM = re.compile(r"^([A-ZÑ.]+)-(\d+)/(\d{2,4})(?:-[A-Z]{2})?$")
 
@@ -6928,6 +6940,16 @@ def construir_ayuda_memoria(proyectos=None):
         firmantes = it.get("firmantesMayoria") or []
         if firmantes:
             it["firmantesPorBloque"] = _firmantes_por_bloque(firmantes, bloque_de_senador)
+        # Quienes firmaron "en disidencia" (total/parcial/sin aclarar) vienen
+        # aparte de los firmantes de mayoría; se agrupan por bloque igual.
+        if it.get("disidencias"):
+            it["disidenciasPorBloque"] = [
+                {
+                    "label": _LABEL_DISIDENCIA.get(d.get("tipo"), "En disidencia"),
+                    "firmantesPorBloque": _firmantes_por_bloque(d.get("firmantes") or [], bloque_de_senador),
+                }
+                for d in it["disidencias"] if d.get("firmantes")
+            ]
 
     grupos = {}
     orden = []
@@ -6949,6 +6971,7 @@ def construir_ayuda_memoria(proyectos=None):
                 "odLink": a.get("odLink"),
                 "fechaDictamen": a.get("fechaDictamen"),
                 "firmantesPorBloque": a.get("firmantesPorBloque") or [],
+                "disidenciasPorBloque": a.get("disidenciasPorBloque") or [],
             }
         resultado.append(base)
     return resultado
