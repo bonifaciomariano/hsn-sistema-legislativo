@@ -1,5 +1,257 @@
 [
   {
+    "numero": "418",
+    "periodo": 2026,
+    "origen": "Senado",
+    "categoria": "Proyecto de Ley",
+    "autor": "Cristina",
+    "descripcion": "Dictamen en el proyecto de ley de la señora senadora Cristina, sobre Promoción de los Derechos de las niñas, niños y adolescentes a la dignidad, a la integridad personal y a una vida libre de violencias, a través de protocolos para la prevención, detección y actuación ante situaciones de violencia. (S-528/25)",
+    "expedientes": [
+      {
+        "codigo": "S-528/25",
+        "url": "https://www.senado.gob.ar/parlamentario/comisiones/verExp/528.25/S/PL"
+      }
+    ],
+    "comisionCabecera": "Legislación General",
+    "fechaDictamen": "28/10/2026",
+    "odLink": "https://www.senado.gob.ar/parlamentario/parlamentaria/51762/downloadOrdenDia",
+    "comisiones": [
+      "Legislación General",
+      "DE LEGISLACIÓN GENERAL",
+      "DE POBLACIÓN Y DESARROLLO  HUMANO"
+    ],
+    "tipoOD": "NORMAL",
+    "firmantesMayoria": [
+      "Nadia J. Márquez",
+      "Alicia M. A. Kirchner",
+      "Daniel P. Bensusán",
+      "Juan C. Godoy",
+      "Gonzalo Guzmán Coraita",
+      "Carmen Álvarez Rivero",
+      "Patricia Bullrich",
+      "Enzo P. Fullone",
+      "María E. Orozco",
+      "Bruno A. Olivera Lucero",
+      "Rodolfo A. Suárez",
+      "Carolina Losada",
+      "Carlos M. Espínola",
+      "Mercedes G. Valenzuela",
+      "Sandra M. Mendoza",
+      "María T. M. González",
+      "Mariano Recalde",
+      "Ana I. Marks",
+      "Jorge M. Capitanich",
+      "Martín I. Soria",
+      "Fernando A. Salino"
+    ],
+    "disidencias": [
+      {
+        "tipo": "parcial",
+        "firmantes": [
+          "Maria V. Huala",
+          "Daniel R. Kroneberger"
+        ]
+      }
+    ]
+  },
+  {
+    "numero": "417",
+    "periodo": 2026,
+    "origen": "Senado",
+    "categoria": "Proyecto de Ley",
+    "autor": "Bensusán y Terenzi",
+    "descripcion": "Dictamen en el proyecto de ley del señor senador Bensusán y en el de la señora senadora Terenzi, que crea el Registro Nacional Único de Alimentantes Morosos – ReNUAM. (S-190/25 y 1723/26)",
+    "expedientes": [
+      {
+        "codigo": "S-190/25",
+        "url": "https://www.senado.gob.ar/parlamentario/comisiones/verExp/190.25/S/PL"
+      },
+      {
+        "codigo": "S-1723/26",
+        "url": "https://www.senado.gob.ar/parlamentario/comisiones/verExp/1723.26/S/PL"
+      }
+    ],
+    "comisionCabecera": "Legislación General",
+    "fechaDictamen": "28/10/2026",
+    "odLink": "https://www.senado.gob.ar/parlamentario/parlamentaria/51761/downloadOrdenDia",
+    "comisiones": [
+      "Legislación General",
+      "DE LEGISLACIÓN GENERAL",
+      "DE POBLACIÓN Y DESARROLLO  HUMANO"
+    ],
+    "tipoOD": "NORMAL",
+    "firmantesMayoria": [
+      "Alicia M. A. Kirchner",
+      "Daniel P. Bensusán",
+      "Enzo P. Fullone",
+      "Patricia Bullrich",
+      "Daniel R. Kroneberger",
+      "Carlos M. Espínola",
+      "Mercedes G. Valenzuela",
+      "Sandra M. Mendoza",
+      "María T. M. González",
+      "Mariano Recalde",
+      "María C. Giménez Navarro",
+      "Jorge M. Capitanich",
+      "Ana I. Marks",
+      "Martín I. Soria",
+      "Fernando A. Salino"
+    ],
+    "disidencias": [
+      {
+        "tipo": "sin aclarar",
+        "firmantes": [
+          "Nadia J. Márquez",
+          "Juan C. Godoy",
+          "Bruno A. Olivera Lucero"
+        ]
+      },
+      {
+        "tipo": "parcial",
+        "firmantes": [
+          "Bartolomé E. Abdala",
+          "Carmen Álvarez Rivero",
+          "Gonzalo Guzmán Coraita",
+          "María E. Orozco",
+          "María V. Huala",
+          "Carolina Losada"
+        ]
+      }
+    ]
+  },
+  {
+    "numero": "416",
+    "periodo": 2026,
+    "origen": "Poder Ejecutivo",
+    "categoria": "Proyecto de Ley",
+    "autor": null,
+    "descripcion": "Dictamen en el mensaje y proyecto de ley del Poder Ejecutivo, por el que se aprueba el Acuerdo en el marco de la Convención de las Naciones Unidas sobre el Derecho del Mar relativo a la Conservación y el Uso Sostenible de la Diversidad Biológica Marina de las Zonas Situadas Fuera de la Jurisdicción Nacional, celebrado en la Ciudad de Nueva York, Estados Unidos de América. (PE-294/26)",
+    "expedientes": [
+      {
+        "codigo": "PE-294/26",
+        "url": "https://www.senado.gob.ar/parlamentario/comisiones/verExp/294.26/PE/PL"
+      }
+    ],
+    "comisionCabecera": "Relaciones Exteriores y Culto",
+    "fechaDictamen": "28/10/2026",
+    "odLink": "https://www.senado.gob.ar/parlamentario/parlamentaria/51758/downloadOrdenDia",
+    "comisiones": [
+      "Relaciones Exteriores y Culto",
+      "DE RELACIONES EXTERIORES Y CULTO"
+    ],
+    "tipoOD": "NORMAL",
+    "firmantesMayoria": [
+      "Francisco M. Paoltroni",
+      "Luis A. Juez",
+      "Ivanna M. Arrascaeta",
+      "Agustín A. Monteverde",
+      "Gonzalo Guzmán Coraita",
+      "María B. Monte de Oca",
+      "Sonia E. Rojas Decut",
+      "Eduardo A. Vischi",
+      "Carolina Losada",
+      "Rodolfo A. Suárez"
+    ]
+  },
+  {
+    "numero": "415",
+    "periodo": 2026,
+    "origen": "Poder Ejecutivo",
+    "categoria": "Proyecto de Ley",
+    "autor": null,
+    "descripcion": "Dictamen en el mensaje y proyecto de ley del Poder Ejecutivo, por el que se aprueba el Acuerdo con la República del Paraguay sobre Servicios Aéreos, suscripto en la Ciudad de Buenos Aires, República Argentina. (PE-273/26)",
+    "expedientes": [
+      {
+        "codigo": "PE-273/26",
+        "url": "https://www.senado.gob.ar/parlamentario/comisiones/verExp/273.26/PE/PL"
+      }
+    ],
+    "comisionCabecera": "Relaciones Exteriores y Culto",
+    "fechaDictamen": "28/10/2026",
+    "odLink": "https://www.senado.gob.ar/parlamentario/parlamentaria/51757/downloadOrdenDia",
+    "comisiones": [
+      "Relaciones Exteriores y Culto",
+      "DE RELACIONES EXTERIORES Y CULTO"
+    ],
+    "tipoOD": "NORMAL",
+    "firmantesMayoria": [
+      "Francisco M. Paoltroni",
+      "Luis A. Juez",
+      "Ivanna M. Arrascaeta",
+      "Agustín A. Monteverde",
+      "Gonzalo Guzmán Coraita",
+      "María B. Monte de Oca",
+      "Sonia E. Rojas Decut",
+      "Eduardo A. Vischi",
+      "Carolina Losada",
+      "Rodolfo A. Suárez",
+      "Guillermo E. Andrada"
+    ]
+  },
+  {
+    "numero": "414",
+    "periodo": 2026,
+    "origen": "Poder Ejecutivo",
+    "categoria": "Proyecto de Ley",
+    "autor": null,
+    "descripcion": "Dictamen en el mensaje y proyecto de ley del Poder Ejecutivo, por el que se aprueba el Protocolo Adicional al Protocolo Constitutivo del Parlamento del MERCOSUR. (PE-378/19)",
+    "expedientes": [
+      {
+        "codigo": "PE-378/19",
+        "url": "https://www.senado.gob.ar/parlamentario/comisiones/verExp/378.19/PE/PL"
+      }
+    ],
+    "comisionCabecera": "Relaciones Exteriores y Culto",
+    "fechaDictamen": "28/10/2026",
+    "odLink": "https://www.senado.gob.ar/parlamentario/parlamentaria/51756/downloadOrdenDia",
+    "comisiones": [
+      "Relaciones Exteriores y Culto",
+      "DE RELACIONES EXTERIORES Y CULTO"
+    ],
+    "tipoOD": "NORMAL",
+    "firmantesMayoria": [
+      "Francisco M. Paoltroni",
+      "Luis A. Juez",
+      "Ivanna M. Arrascaeta",
+      "Agustín A. Monteverde",
+      "Gonzalo Guzmán Coraita",
+      "María B. Monte de Oca",
+      "Sonia E. Rojas Decut",
+      "Eduardo A. Vischi",
+      "Carolina Losada",
+      "Maximiliano Abad",
+      "Rodolfo A. Suárez",
+      "Guillermo E. Andrada"
+    ]
+  },
+  {
+    "numero": "413",
+    "periodo": 2026,
+    "origen": "Senado",
+    "categoria": "Proyecto de Ley",
+    "autor": "Vischi y Otros",
+    "descripcion": "Dictamen en el proyecto de ley del señor senador Vischi y Otros, por el que se crea el Régimen de Incentivo para Inversiones Relevantes (RIIR). (S-702/26)",
+    "expedientes": [
+      {
+        "codigo": "S-702/26",
+        "url": "https://www.senado.gob.ar/parlamentario/comisiones/verExp/702.26/S/PL"
+      }
+    ],
+    "comisionCabecera": "Presupuesto y Hacienda",
+    "fechaDictamen": "09/09/2026",
+    "odLink": "https://www.senado.gob.ar/parlamentario/parlamentaria/51759/downloadOrdenDia",
+    "comisiones": [
+      "Presupuesto y Hacienda",
+      "DE PRESUPUESTO Y HACIENDA",
+      "DE LEGISLACIÓN GENERAL",
+      "DE ECONOMÍAS REGIONALES, ECONOMÍA SOCIAL, MICRO, PEQUEÑA Y MEDIANA EMPRESA"
+    ],
+    "tipoOD": "ANEXO",
+    "firmantesMayoria": [
+      "Jorge M. Capitanich"
+    ]
+  },
+  {
     "numero": "413",
     "periodo": 2026,
     "origen": "Senado",
@@ -1563,6 +1815,41 @@
       "María C. Moisés",
       "María T. M. González",
       "Fernando A. Salino"
+    ]
+  },
+  {
+    "numero": "366",
+    "periodo": 2026,
+    "origen": "Senado",
+    "categoria": "Proyecto de Ley",
+    "autor": null,
+    "descripcion": "Dictamen en el proyecto de ley de varios señores senadores, sobre Marco Regulatorio del Mercado de Carbono. (S-718, 808 y 865/26)",
+    "expedientes": [
+      {
+        "codigo": "S-718/26",
+        "url": "https://www.senado.gob.ar/parlamentario/comisiones/verExp/718.26/S/PL"
+      },
+      {
+        "codigo": "S-808/26",
+        "url": "https://www.senado.gob.ar/parlamentario/comisiones/verExp/808.26/S/PL"
+      },
+      {
+        "codigo": "S-865/26",
+        "url": "https://www.senado.gob.ar/parlamentario/comisiones/verExp/865.26/S/PL"
+      }
+    ],
+    "comisionCabecera": "Legislación General",
+    "fechaDictamen": "02/09/2026",
+    "odLink": "https://www.senado.gob.ar/parlamentario/parlamentaria/51760/downloadOrdenDia",
+    "comisiones": [
+      "Legislación General",
+      "DE LEGISLACIÓN GENERAL",
+      "DE AMBIENTE Y DESARROLLO SUSTENTABLE",
+      "DE PRESUPUESTO Y HACIENDA"
+    ],
+    "tipoOD": "ANEXO",
+    "firmantesMayoria": [
+      "Jorge M. Capitanich"
     ]
   },
   {

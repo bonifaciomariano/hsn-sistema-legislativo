@@ -1,6 +1,6 @@
 {
   "1": {
-    "estado": "PENDIENTE",
+    "estado": "APROBADA",
     "fecha": "10-03-2026",
     "expedientes_probados": 1
   },
@@ -2062,6 +2062,31 @@
   "413": {
     "estado": "PENDIENTE",
     "fecha": "22-10-2026",
+    "expedientes_probados": 1
+  },
+  "414": {
+    "estado": "PENDIENTE",
+    "fecha": "28-10-2026",
+    "expedientes_probados": 1
+  },
+  "415": {
+    "estado": "PENDIENTE",
+    "fecha": "28-10-2026",
+    "expedientes_probados": 1
+  },
+  "416": {
+    "estado": "PENDIENTE",
+    "fecha": "28-10-2026",
+    "expedientes_probados": 1
+  },
+  "417": {
+    "estado": "PENDIENTE",
+    "fecha": "28-10-2026",
+    "expedientes_probados": 1
+  },
+  "418": {
+    "estado": "PENDIENTE",
+    "fecha": "28-10-2026",
     "expedientes_probados": 1
   }
 }
