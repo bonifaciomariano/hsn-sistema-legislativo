@@ -10299,8 +10299,86 @@
       ],
       "expositores": null,
       "tipo": "bicameral",
-      "boletin_id": 2407,
-      "boletin_numero": "146/26"
+      "boletin_id": 2408,
+      "boletin_numero": "147/26"
+    },
+    {
+      "seccion": "senadores",
+      "dia": "MIÉRCOLES",
+      "fecha": "04/11",
+      "hora": "14:00",
+      "modalidad": "",
+      "comisiones": [
+        "TURISMO"
+      ],
+      "salon": "MAYA",
+      "salon_completo": "SALÓN MAYA",
+      "temario": [
+        {
+          "numero": "S-720/25",
+          "extracto": "LÓPEZ M. F.: PROYECTO DE DECLARACIÓN QUE DECLARA DE INTERÉS A LA \"RUTA DEL VINO RIOJANO\" INICIATIVA PRODUCTIVA PÚBLICA - PRIVADA PARA PROMOVER LA CULTURA Y TRADICIÓN VITIVINÍCOLA DE LA REGIÓN"
+        },
+        {
+          "numero": "S-1522/25",
+          "extracto": "ATAUCHE: PROYECTO DE DECLARACIÓN QUE DECLARA DE INTERÉS LA INICIATIVA DENOMINADA \"PASAPORTE RUTA 40\", EMPRENDIDA POR EL GUÍA DE TURISMO FEDERICO NORTE Y EL INGENIERO DANIEL LERIDA"
+        },
+        {
+          "numero": "S-1589/25",
+          "extracto": "LÓPEZ M. F.: PROYECTO DE DECLARACIÓN QUE DECLARA DE INTERÉS TURÍSTICO Y CULTURAL A LA LOC. DE FAMATINA, PROV. DE LA RIOJA"
+        },
+        {
+          "numero": "S-1590/25",
+          "extracto": "LÓPEZ M. F.: PROYECTO DE DECLARACIÓN QUE EXPRESA BENEPLÁCITO POR LA NOMINACIÓN DE LA LOC. DE FAMATINA, PROV. DE LA RIOJA, AL PROGRAMA BEST TOURISM VILLAGES IMPULSADO POR ONU TURISMO"
+        },
+        {
+          "numero": "S-1826/25",
+          "extracto": "VALENZUELA Y VISCHI: PROYECTO DE DECLARACIÓN QUE EXPRESA BENEPLÁCITO POR LA DISTINCIÓN OTORGADA A LA LOC. DE COLONIA CARLOS PELLEGRINI, PROV. DE CORRIENTES, EN LA EDICIÓN 2025 DEL PROGRAMA \"BEST TOURISM VILLAGES\" DE ONU TURISMO"
+        },
+        {
+          "numero": "S-1853/25",
+          "extracto": "JURI: PROYECTO DE DECLARACIÓN QUE EXPRESA BENEPLÁCITO POR LA PUBLICACIÓN DE LA NUEVA EDICIÓN DE LA GUÍA TURÍSTICA DE LA R.N 40"
+        },
+        {
+          "numero": "S-1943/25",
+          "extracto": "MOISÉS Y OTROS: PROYECTO DE DECLARACIÓN QUE EXPRESA BENEPLÁCITO POR LA DISTINCIÓN AL \"MEJOR PUEBLO TURÍSTICO DEL MUNDO 2025\", OTORGADO POR LA ORGANIZACIÓN DE LAS NACIONES UNIDAS PARA EL TURISMO, A LA LOC. DE MAIMARÁ, PROV. DE JUJUY"
+        },
+        {
+          "numero": "S-629/26",
+          "extracto": "BEDIA: PROYECTO DE DECLARACIÓN QUE EXPRESA BENEPLÁCITO POR LA REALIZACIÓN DEL FESTIVAL NACIONAL DE LA PACHAMAMA QUE SE LLEVA A CABO ANUALMENTE EN EL MES DE AGOSTO, EN LA PROV. DE JUJUY"
+        },
+        {
+          "numero": "S-1010/26",
+          "extracto": "LÓPEZ C.: PROYECTO DE DECLARACIÓN QUE DECLARA DE INTERÉS LA XIX EDICIÓN DEL ENCUENTRO INTERNACIONAL DE MOTOVIAJEROS EN EL FIN DEL MUNDO, EN LA CDAD. DE USHUAIA, PROV. DE TIERRA DEL FUEGO, A.I.A.S., DEL 20 AL 22 DE NOVIEMBRE DE 2026"
+        },
+        {
+          "numero": "S-1046/26",
+          "extracto": "SCHNEIDER: PROYECTO DE DECLARACIÓN QUE DECLARA DE INTERÉS A LA LOCALIDAD DE MESÓN DE FIERRO POR SU VALOR CULTURAL Y TURÍSTICO, EN EL DPTO. 12 DE OCTUBRE, PROV. DEL CHACO"
+        },
+        {
+          "numero": "S-1095/26",
+          "extracto": "ATAUCHE: PROYECTO DE DECLARACIÓN QUE DECLARA DE INTERÉS LA INICIATIVA DENOMINADA \"PASAPORTE RUTA 40\", EMPRENDIDA POR EL GUÍA DE TURISMO FEDERICO NORTE Y EL INGENIERO DANIEL LERIDA"
+        },
+        {
+          "numero": "S-1135/26",
+          "extracto": "ROJAS DECUT Y ARCE: PROYECTO DE DECLARACIÓN QUE DECLARA DE INTERÉS LA 10° EDICIÓN DE \"ODA AL VINO\", EN PUERTO IGUAZÚ, PROV. DE MISIONES, EL 4 Y 5 DE SEPTIEMBRE DE 2026"
+        },
+        {
+          "numero": "S-1360/26",
+          "extracto": "VISCHI Y VALENZUELA: PROYECTO DE DECLARACIÓN QUE DECLARA DE INTERÉS EL 4° CONGRESO ECOTURÍSTICO DE LA REGIÓN LITORAL, EN LA CDAD. DE CORRIENTES, PROV. HOMÓNIMA, EL 3 Y 4 DE SEPTIEMBRE DE 2026"
+        },
+        {
+          "numero": "S-1607/26",
+          "extracto": "LÓPEZ M. F.: PROYECTO DE DECLARACIÓN QUE RECONOCE A LAS TERMAS DE SANTA TERESITA, DPTO. DE ARAUCO, PROV. DE LA RIOJA COMO DESTINO DE TURISMO TERMAL Y DE BIENESTAR"
+        },
+        {
+          "numero": "S-1729/26",
+          "extracto": "ROJAS DECUT: PROYECTO DE DECLARACIÓN QUE ADHIERE A LA SEMANA PROVINCIAL DE CONCIENTIZACIÓN TURÍSTICA, A CELEBRARSE DEL 1 AL 7 DE NOVIEMBRE DE CADA AÑO"
+        }
+      ],
+      "expositores": null,
+      "tipo": "senadores",
+      "boletin_id": 2408,
+      "boletin_numero": "147/26"
     }
   ]
 }
