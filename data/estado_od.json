@@ -655,7 +655,7 @@
     "expedientes_probados": 1
   },
   "132": {
-    "estado": "PENDIENTE",
+    "estado": "APROBADA",
     "fecha": "17-06-2026",
     "expedientes_probados": 1
   },
@@ -1200,7 +1200,7 @@
     "expedientes_probados": 1
   },
   "241": {
-    "estado": "PENDIENTE",
+    "estado": "APROBADA",
     "fecha": "05-08-2026",
     "expedientes_probados": 1
   },
@@ -1825,7 +1825,7 @@
     "expedientes_probados": 1
   },
   "366": {
-    "estado": "PENDIENTE",
+    "estado": "APROBADA",
     "fecha": "08-09-2026",
     "expedientes_probados": 1
   },
@@ -1845,7 +1845,7 @@
     "expedientes_probados": 1
   },
   "370": {
-    "estado": "PENDIENTE",
+    "estado": "APROBADA",
     "fecha": "09-09-2026",
     "expedientes_probados": 1
   },
@@ -2040,7 +2040,7 @@
     "expedientes_probados": 1
   },
   "409": {
-    "estado": "PENDIENTE",
+    "estado": "APROBADA",
     "fecha": "21-10-2026",
     "expedientes_probados": 1
   },
@@ -2060,7 +2060,7 @@
     "expedientes_probados": 1
   },
   "413": {
-    "estado": "PENDIENTE",
+    "estado": "APROBADA",
     "fecha": "22-10-2026",
     "expedientes_probados": 1
   },

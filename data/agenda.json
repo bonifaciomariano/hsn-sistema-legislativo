@@ -10299,8 +10299,8 @@
       ],
       "expositores": null,
       "tipo": "bicameral",
-      "boletin_id": 2408,
-      "boletin_numero": "147/26"
+      "boletin_id": 2409,
+      "boletin_numero": "148/26"
     },
     {
       "seccion": "senadores",
@@ -10377,8 +10377,39 @@
       ],
       "expositores": null,
       "tipo": "senadores",
-      "boletin_id": 2408,
-      "boletin_numero": "147/26"
+      "boletin_id": 2409,
+      "boletin_numero": "148/26"
+    },
+    {
+      "seccion": "senadores",
+      "dia": "MIÉRCOLES",
+      "fecha": "04/11",
+      "hora": "16:00",
+      "modalidad": "",
+      "comisiones": [
+        "PRESUPUESTO Y HACIENDA",
+        "POBLACIÓN Y DESARROLLO HUMANO"
+      ],
+      "salon": "AZUL",
+      "salon_completo": "SALÓN AZUL",
+      "temario": [
+        {
+          "numero": "CD-18/26",
+          "extracto": "PROYECTO DE LEY EN REVISIÓN QUE PRORROGA HASTA EL 31 DE DICIEMBRE DE 2027, LA EMERGENCIA NACIONAL EN DISCAPACIDAD - LEY 27.793"
+        },
+        {
+          "numero": "S-1431/26",
+          "extracto": "FERNÁNDEZ SAGASTI: PROYECTO DE LEY QUE PRORROGA LA VIGENCIA DE SU SIMILAR 27.793 - EMERGENCIA NACIONAL EN DISCAPACIDAD"
+        },
+        {
+          "numero": "S-1484/26",
+          "extracto": "LINARES: PROYECTO DE LEY QUE PRORROGA LA EMERGENCIA NACIONAL EN DISCAPACIDAD - DECLARADA POR LEY 27.793 - EN TODO EL TERRITORIO NACIONAL HASTA EL 31 DE DICIEMBRE DE 2027- INCLUSIVE"
+        }
+      ],
+      "expositores": null,
+      "tipo": "senadores",
+      "boletin_id": 2409,
+      "boletin_numero": "148/26"
     }
   ]
 }

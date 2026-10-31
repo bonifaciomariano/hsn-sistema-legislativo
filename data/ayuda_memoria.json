@@ -225,88 +225,6 @@
     ]
   },
   {
-    "numero": "413",
-    "periodo": 2026,
-    "origen": "Senado",
-    "categoria": "Proyecto de Ley",
-    "autor": "Vischi y Otros",
-    "descripcion": "Dictamen en el proyecto de ley del señor senador Vischi y Otros, por el que se crea el Régimen de Incentivo para Inversiones Relevantes (RIIR). (S-702/26)",
-    "expedientes": [
-      {
-        "codigo": "S-702/26",
-        "url": "https://www.senado.gob.ar/parlamentario/comisiones/verExp/702.26/S/PL"
-      }
-    ],
-    "comisionCabecera": "Presupuesto y Hacienda",
-    "fechaDictamen": "09/09/2026",
-    "odLink": "https://www.senado.gob.ar/parlamentario/parlamentaria/51759/downloadOrdenDia",
-    "comisiones": [
-      "Presupuesto y Hacienda",
-      "DE PRESUPUESTO Y HACIENDA",
-      "DE LEGISLACIÓN GENERAL",
-      "DE ECONOMÍAS REGIONALES, ECONOMÍA SOCIAL, MICRO, PEQUEÑA Y MEDIANA EMPRESA"
-    ],
-    "tipoOD": "ANEXO",
-    "firmantesMayoria": [
-      "Jorge M. Capitanich"
-    ]
-  },
-  {
-    "numero": "413",
-    "periodo": 2026,
-    "origen": "Senado",
-    "categoria": "Proyecto de Ley",
-    "autor": "Vischi y Otros",
-    "descripcion": "Dictamen en el proyecto de ley del señor senador Vischi y Otros, por el que se crea el Régimen de Incentivo para Inversiones Relevantes (RIIR). (S-702/26)",
-    "expedientes": [
-      {
-        "codigo": "S-702/26",
-        "url": "https://www.senado.gob.ar/parlamentario/comisiones/verExp/702.26/S/PL"
-      }
-    ],
-    "comisionCabecera": "Presupuesto y Hacienda",
-    "fechaDictamen": "22/10/2026",
-    "odLink": "https://www.senado.gob.ar/parlamentario/parlamentaria/51754/downloadOrdenDia",
-    "comisiones": [
-      "Presupuesto y Hacienda",
-      "DE PRESUPUESTO Y HACIENDA",
-      "DE LEGISLACIÓN GENERAL",
-      "DE ECONOMÍAS REGIONALES, ECONOMÍA SOCIAL, MICRO, PEQUEÑA Y MEDIANA EMPRESA"
-    ],
-    "tipoOD": "NORMAL",
-    "firmantesMayoria": [
-      "Agustín A. Monteverde",
-      "Nadia J. Márquez",
-      "Romina M. Almeida",
-      "Ezequiel Atauche",
-      "Bartolomé E. Abdala",
-      "Carlos O. Arce",
-      "Bruno A. Olivera Lucero",
-      "Gonzalo Guzmán Coraita",
-      "Vilma F. Bedia",
-      "Patricia Bullrich",
-      "María E. Orozco",
-      "Joaquín A. Benegas Lynch",
-      "Flavio S. Fama",
-      "Maximiliano Abad",
-      "Juan C. Godoy",
-      "Mariana Juri",
-      "Rodolfo A. Suárez",
-      "Daniel R. Kroneberger",
-      "Andrea M. Cristina",
-      "Carlos M. Espínola",
-      "Mercedes G. Valenzuela"
-    ],
-    "disidencias": [
-      {
-        "tipo": "parcial",
-        "firmantes": [
-          "María V. Huala"
-        ]
-      }
-    ]
-  },
-  {
     "numero": "412",
     "periodo": 2026,
     "origen": "Poder Ejecutivo",
@@ -406,85 +324,6 @@
       "Maximiliano Abad",
       "Enrique M. Goerling Lara",
       "Guillermo E. Andrada"
-    ]
-  },
-  {
-    "numero": "409",
-    "periodo": 2026,
-    "origen": "Poder Ejecutivo",
-    "categoria": "Proyecto de Ley",
-    "autor": null,
-    "descripcion": "Dictamen en el mensaje y proyecto de ley del Poder Ejecutivo Nacional, sobre modificaciones a la Ley de Salud Mental N° 26.657. (PE-99/26)",
-    "expedientes": [
-      {
-        "codigo": "PE-99/26",
-        "url": "https://www.senado.gob.ar/parlamentario/comisiones/verExp/99.26/PE/PL"
-      }
-    ],
-    "comisionCabecera": "Salud",
-    "fechaDictamen": "15/10/2026",
-    "odLink": "https://www.senado.gob.ar/parlamentario/parlamentaria/51749/downloadOrdenDia",
-    "comisiones": [
-      "Salud",
-      "DE SALUD",
-      "DE LEGISLACIÓN GENERAL"
-    ],
-    "tipoOD": "ANEXO",
-    "firmantesMayoria": [
-      "Guillermo E. Andrada",
-      "María C. Moisés",
-      "Sandra M. Mendoza"
-    ]
-  },
-  {
-    "numero": "409",
-    "periodo": 2026,
-    "origen": "Poder Ejecutivo",
-    "categoria": "Proyecto de Ley",
-    "autor": null,
-    "descripcion": "Dictamen en el mensaje y proyecto de ley del Poder Ejecutivo Nacional, sobre modificaciones a la Ley de Salud Mental N° 26.657. (PE-99/26)",
-    "expedientes": [
-      {
-        "codigo": "PE-99/26",
-        "url": "https://www.senado.gob.ar/parlamentario/comisiones/verExp/99.26/PE/PL"
-      }
-    ],
-    "comisionCabecera": "Salud",
-    "fechaDictamen": "21/10/2026",
-    "odLink": "https://www.senado.gob.ar/parlamentario/parlamentaria/51750/downloadOrdenDia",
-    "comisiones": [
-      "Salud",
-      "DE SALUD",
-      "DE LEGISLACIÓN GENERAL"
-    ],
-    "tipoOD": "NORMAL",
-    "firmantesMayoria": [
-      "Ivanna M. Arrascaeta",
-      "Nadia J. Márquez",
-      "Carmen Álvarez Rivero",
-      "María B. Monte de Oca",
-      "Mario P. Cervi",
-      "Gonzalo Guzmán Coraita",
-      "Patricia Bullrich",
-      "María E. Orozco",
-      "Rodolfo A. Suárez"
-    ],
-    "disidencias": [
-      {
-        "tipo": "sin aclarar",
-        "firmantes": [
-          "María V. Huala",
-          "Mercedes G. Valenzuela",
-          "Carlos M. Espínola"
-        ]
-      },
-      {
-        "tipo": "parcial",
-        "firmantes": [
-          "Carlos O. Arce",
-          "Eduardo H Galaretto"
-        ]
-      }
     ]
   },
   {
@@ -1719,39 +1558,6 @@
     ]
   },
   {
-    "numero": "370",
-    "periodo": 2026,
-    "origen": "Senado",
-    "categoria": "Proyecto de Ley",
-    "autor": "Fama",
-    "descripcion": "Dictamen en el proyecto de ley del señor senador Fama, por el que se modifica la Ley de Educación Nacional respecto de promover el desarrollo de la educación emocional. (S-255/26)",
-    "expedientes": [
-      {
-        "codigo": "S-255/26",
-        "url": "https://www.senado.gob.ar/parlamentario/comisiones/verExp/255.26/S/PL"
-      }
-    ],
-    "comisionCabecera": "Educación y Cultura",
-    "fechaDictamen": "09/09/2026",
-    "odLink": "https://www.senado.gob.ar/parlamentario/parlamentaria/51699/downloadOrdenDia",
-    "comisiones": [
-      "Educación y Cultura",
-      "DE EDUCACIÓN Y CULTURA"
-    ],
-    "tipoOD": "NORMAL",
-    "firmantesMayoria": [
-      "Sonia E. Rojas Decut",
-      "Mercedes G. Valenzuela",
-      "Ivanna M. Arrascaeta",
-      "María V. Huala",
-      "Flavio S. Fama",
-      "Beatriz L. Ávila",
-      "María C. Moisés",
-      "María T. M. González",
-      "Fernando A. Salino"
-    ]
-  },
-  {
     "numero": "369",
     "periodo": 2026,
     "origen": "Senado",
@@ -1815,106 +1621,6 @@
       "María C. Moisés",
       "María T. M. González",
       "Fernando A. Salino"
-    ]
-  },
-  {
-    "numero": "366",
-    "periodo": 2026,
-    "origen": "Senado",
-    "categoria": "Proyecto de Ley",
-    "autor": null,
-    "descripcion": "Dictamen en el proyecto de ley de varios señores senadores, sobre Marco Regulatorio del Mercado de Carbono. (S-718, 808 y 865/26)",
-    "expedientes": [
-      {
-        "codigo": "S-718/26",
-        "url": "https://www.senado.gob.ar/parlamentario/comisiones/verExp/718.26/S/PL"
-      },
-      {
-        "codigo": "S-808/26",
-        "url": "https://www.senado.gob.ar/parlamentario/comisiones/verExp/808.26/S/PL"
-      },
-      {
-        "codigo": "S-865/26",
-        "url": "https://www.senado.gob.ar/parlamentario/comisiones/verExp/865.26/S/PL"
-      }
-    ],
-    "comisionCabecera": "Legislación General",
-    "fechaDictamen": "02/09/2026",
-    "odLink": "https://www.senado.gob.ar/parlamentario/parlamentaria/51760/downloadOrdenDia",
-    "comisiones": [
-      "Legislación General",
-      "DE LEGISLACIÓN GENERAL",
-      "DE AMBIENTE Y DESARROLLO SUSTENTABLE",
-      "DE PRESUPUESTO Y HACIENDA"
-    ],
-    "tipoOD": "ANEXO",
-    "firmantesMayoria": [
-      "Jorge M. Capitanich"
-    ]
-  },
-  {
-    "numero": "366",
-    "periodo": 2026,
-    "origen": "Senado",
-    "categoria": "Proyecto de Ley",
-    "autor": null,
-    "descripcion": "Dictamen en el proyecto de ley de varios señores senadores, sobre Marco Regulatorio del Mercado de Carbono. (S-718, 808 y 865/26)",
-    "expedientes": [
-      {
-        "codigo": "S-718/26",
-        "url": "https://www.senado.gob.ar/parlamentario/comisiones/verExp/718.26/S/PL"
-      },
-      {
-        "codigo": "S-808/26",
-        "url": "https://www.senado.gob.ar/parlamentario/comisiones/verExp/808.26/S/PL"
-      },
-      {
-        "codigo": "S-865/26",
-        "url": "https://www.senado.gob.ar/parlamentario/comisiones/verExp/865.26/S/PL"
-      }
-    ],
-    "comisionCabecera": "Legislación General",
-    "fechaDictamen": "08/09/2026",
-    "odLink": "https://www.senado.gob.ar/parlamentario/parlamentaria/51695/downloadOrdenDia",
-    "comisiones": [
-      "Legislación General",
-      "DE LEGISLACIÓN GENERAL",
-      "DE AMBIENTE Y DESARROLLO SUSTENTABLE",
-      "DE PRESUPUESTO Y HACIENDA"
-    ],
-    "tipoOD": "NORMAL",
-    "firmantesMayoria": [
-      "Nadia J. Márquez",
-      "Edith E. Terenzi",
-      "Agustín A. Monteverde",
-      "Bartolomé E. Abdala",
-      "Ezequiel Atauche",
-      "Bruno A. Olivera Lucero",
-      "Gonzalo Guzmán Coraita",
-      "Romina M. Almeida",
-      "Patricia Bullrich",
-      "María E. Orozco",
-      "Ivanna M. Arrascaeta",
-      "Flavio S. Fama",
-      "Maximiliano Abad",
-      "Enrique M. Goerling Lara",
-      "Mariana Juri",
-      "Rodolfo A. Suárez",
-      "Flavia G. Royón",
-      "Alejandra M. Vigo",
-      "María V. Huala",
-      "Carlos M. Espínola"
-    ],
-    "disidencias": [
-      {
-        "tipo": "parcial",
-        "firmantes": [
-          "Daniel R. Kroneberger",
-          "Sonia E. Rojas Decut",
-          "Eduardo A. Vischi",
-          "Silvana L. Schneider"
-        ]
-      }
     ]
   },
   {
@@ -2804,49 +2510,6 @@
     ]
   },
   {
-    "numero": "241",
-    "periodo": 2026,
-    "origen": "Senado",
-    "categoria": "Proyecto de Ley",
-    "autor": "Terenzi y Otros",
-    "descripcion": "Dictamen en el proyecto de ley de la señora senadora Terenzi y Otros, solicitando que todos los establecimientos de servicios gastronómicos, deben disponer de cartas adaptadas con pictogramas en soporte papel y formato digital. (S-645/26)",
-    "expedientes": [
-      {
-        "codigo": "S-645/26",
-        "url": "https://www.senado.gob.ar/parlamentario/comisiones/verExp/645.26/S/PL"
-      }
-    ],
-    "comisionCabecera": "Población y Desarrollo Humano",
-    "fechaDictamen": "05/08/2026",
-    "odLink": "https://www.senado.gob.ar/parlamentario/parlamentaria/51566/downloadOrdenDia",
-    "comisiones": [
-      "Población y Desarrollo Humano",
-      "DE POBLACIÓN Y DESARROLLO  HUMANO",
-      "DE INDUSTRIA Y COMERCIO"
-    ],
-    "tipoOD": "NORMAL",
-    "firmantesMayoria": [
-      "Alicia M. A. Kirchner",
-      "Marcelo N. Lewandowski",
-      "Daniel R. Kroneberger",
-      "Natalia E. Gadano",
-      "Carolina Losada",
-      "Daniel P. Bensusán",
-      "Mercedes G. Valenzuela",
-      "Lucía B. Corpacci",
-      "María V. Huala",
-      "Eduardo E. de Pedro",
-      "Sandra M. Mendoza",
-      "María Florencia López",
-      "María T. M. González",
-      "Fernando A. Salino",
-      "María C. Giménez Navarro",
-      "Silvana L. Schneider",
-      "Ana I. Marks",
-      "Alejandra M. Vigo"
-    ]
-  },
-  {
     "numero": "224",
     "periodo": 2026,
     "origen": "Senado",
@@ -3118,43 +2781,6 @@
       "Mercedes G. Valenzuela",
       "Sonia E. Rojas Decut",
       "Sandra M. Mendoza",
-      "José E. Neder",
-      "Eduardo E. de Pedro",
-      "Cándida C. López",
-      "Gerardo Zamora"
-    ]
-  },
-  {
-    "numero": "132",
-    "periodo": 2026,
-    "origen": "Senado",
-    "categoria": "Proyecto de Ley",
-    "autor": "Terenzi",
-    "descripcion": "Dictamen en el proyecto de ley de la señora senadora Terenzi, por el que se transfieren inmuebles a favor de la Municipalidad de Puerto Madryn, Provincia del Chubut. (S-695 y 700/26)",
-    "expedientes": [
-      {
-        "codigo": "S-695/26",
-        "url": "https://www.senado.gob.ar/parlamentario/comisiones/verExp/695.26/S/PL"
-      },
-      {
-        "codigo": "S-700/26",
-        "url": "https://www.senado.gob.ar/parlamentario/comisiones/verExp/700.26/S/CO"
-      }
-    ],
-    "comisionCabecera": "Asuntos Administrativos y Municipales",
-    "fechaDictamen": "17/06/2026",
-    "odLink": "https://www.senado.gob.ar/parlamentario/parlamentaria/51411/downloadOrdenDia",
-    "comisiones": [
-      "Asuntos Administrativos y Municipales",
-      "DE ASUNTOS ADMINISTRATIVOS Y MUNICIPALES"
-    ],
-    "tipoOD": "NORMAL",
-    "firmantesMayoria": [
-      "Daniel R. Kroneberger",
-      "Ana I. Marks",
-      "Mercedes G. Valenzuela",
-      "Bruno A. Olivera Lucero",
-      "Sonia E. Rojas Decut",
       "José E. Neder",
       "Eduardo E. de Pedro",
       "Cándida C. López",
