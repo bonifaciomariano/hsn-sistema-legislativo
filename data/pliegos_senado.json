@@ -1,0 +1,3429 @@
+{
+ "generado": "2026-11-03 15:10",
+ "pliegos": {
+  "PE-103/26": {
+   "archivo": "11/09/2026",
+   "dado_cuenta": "14/05/2026",
+   "dae": "11/26",
+   "ingreso": "24/04/2026",
+   "od": {
+    "anio": "2026",
+    "estado": "APROBADA",
+    "fecha": "06/08/2026",
+    "numero": "258"
+   },
+   "sancion": "aprobada",
+   "sancion_fecha": "27/08/2026"
+  },
+  "PE-104/26": {
+   "archivo": "11/09/2026",
+   "dado_cuenta": "14/05/2026",
+   "dae": "11/26",
+   "ingreso": "24/04/2026",
+   "od": {
+    "anio": "2026",
+    "estado": "APROBADA",
+    "fecha": "05/08/2026",
+    "numero": "243"
+   },
+   "sancion": "aprobada",
+   "sancion_fecha": "27/08/2026"
+  },
+  "PE-105/26": {
+   "archivo": "04/08/2026",
+   "dado_cuenta": "14/05/2026",
+   "dae": "11/26",
+   "ingreso": "24/04/2026",
+   "od": {
+    "anio": "2026",
+    "estado": "APROBADA",
+    "fecha": "01/07/2026",
+    "numero": "209"
+   },
+   "sancion": "aprobada",
+   "sancion_fecha": "16/07/2026"
+  },
+  "PE-106/26": {
+   "archivo": "11/09/2026",
+   "dado_cuenta": "14/05/2026",
+   "dae": "11/26",
+   "ingreso": "24/04/2026",
+   "od": {
+    "anio": "2026",
+    "estado": "APROBADA",
+    "fecha": "06/08/2026",
+    "numero": "259"
+   },
+   "sancion": "aprobada",
+   "sancion_fecha": "27/08/2026"
+  },
+  "PE-107/26": {
+   "archivo": "11/09/2026",
+   "dado_cuenta": "14/05/2026",
+   "dae": "11/26",
+   "ingreso": "24/04/2026",
+   "od": {
+    "anio": "2026",
+    "estado": "APROBADA",
+    "fecha": "05/08/2026",
+    "numero": "244"
+   },
+   "sancion": "aprobada",
+   "sancion_fecha": "27/08/2026"
+  },
+  "PE-108/26": {
+   "archivo": "11/09/2026",
+   "dado_cuenta": "14/05/2026",
+   "dae": "11/26",
+   "ingreso": "24/04/2026",
+   "od": {
+    "anio": "2026",
+    "estado": "APROBADA",
+    "fecha": "05/08/2026",
+    "numero": "245"
+   },
+   "sancion": "aprobada",
+   "sancion_fecha": "27/08/2026"
+  },
+  "PE-109/26": {
+   "archivo": "11/09/2026",
+   "dado_cuenta": "14/05/2026",
+   "dae": "11/26",
+   "ingreso": "24/04/2026",
+   "od": {
+    "anio": "2026",
+    "estado": "APROBADA",
+    "fecha": "12/08/2026",
+    "numero": "279"
+   },
+   "sancion": "aprobada",
+   "sancion_fecha": "27/08/2026"
+  },
+  "PE-110/26": {
+   "archivo": "11/09/2026",
+   "dado_cuenta": "14/05/2026",
+   "dae": "11/26",
+   "ingreso": "24/04/2026",
+   "od": {
+    "anio": "2026",
+    "estado": "APROBADA",
+    "fecha": "19/08/2026",
+    "numero": "307"
+   },
+   "sancion": "aprobada",
+   "sancion_fecha": "27/08/2026"
+  },
+  "PE-111/26": {
+   "archivo": "11/09/2026",
+   "dado_cuenta": "14/05/2026",
+   "dae": "11/26",
+   "ingreso": "24/04/2026",
+   "od": {
+    "anio": "2026",
+    "estado": "APROBADA",
+    "fecha": "12/08/2026",
+    "numero": "280"
+   },
+   "sancion": "aprobada",
+   "sancion_fecha": "27/08/2026"
+  },
+  "PE-112/26": {
+   "archivo": "11/09/2026",
+   "dado_cuenta": "14/05/2026",
+   "dae": "11/26",
+   "ingreso": "24/04/2026",
+   "od": {
+    "anio": "2026",
+    "estado": "APROBADA",
+    "fecha": "12/08/2026",
+    "numero": "281"
+   },
+   "sancion": "aprobada",
+   "sancion_fecha": "27/08/2026"
+  },
+  "PE-113/26": {
+   "archivo": "11/09/2026",
+   "dado_cuenta": "14/05/2026",
+   "dae": "11/26",
+   "ingreso": "24/04/2026",
+   "od": {
+    "anio": "2026",
+    "estado": "APROBADA",
+    "fecha": "06/08/2026",
+    "numero": "260"
+   },
+   "sancion": "aprobada",
+   "sancion_fecha": "27/08/2026"
+  },
+  "PE-114/25": {
+   "archivo": "09/10/2025",
+   "dado_cuenta": "04/09/2025",
+   "dae": "4/25",
+   "ingreso": "26/08/2025",
+   "od": {
+    "anio": "2025",
+    "estado": "APROBADA",
+    "fecha": "25/09/2025",
+    "numero": "575"
+   },
+   "sancion": "aprobada",
+   "sancion_fecha": "02/10/2025"
+  },
+  "PE-114/26": {
+   "archivo": "11/09/2026",
+   "dado_cuenta": "14/05/2026",
+   "dae": "11/26",
+   "ingreso": "24/04/2026",
+   "od": {
+    "anio": "2026",
+    "estado": "APROBADA",
+    "fecha": "06/08/2026",
+    "numero": "261"
+   },
+   "sancion": "aprobada",
+   "sancion_fecha": "27/08/2026"
+  },
+  "PE-115/26": {
+   "archivo": "11/09/2026",
+   "dado_cuenta": "14/05/2026",
+   "dae": "11/26",
+   "ingreso": "24/04/2026",
+   "od": {
+    "anio": "2026",
+    "estado": "APROBADA",
+    "fecha": "05/08/2026",
+    "numero": "246"
+   },
+   "sancion": "aprobada",
+   "sancion_fecha": "27/08/2026"
+  },
+  "PE-116/26": {
+   "archivo": "11/09/2026",
+   "dado_cuenta": "14/05/2026",
+   "dae": "11/26",
+   "ingreso": "24/04/2026",
+   "od": {
+    "anio": "2026",
+    "estado": "APROBADA",
+    "fecha": "12/08/2026",
+    "numero": "282"
+   },
+   "sancion": "aprobada",
+   "sancion_fecha": "27/08/2026"
+  },
+  "PE-117/26": {
+   "archivo": "11/09/2026",
+   "dado_cuenta": "14/05/2026",
+   "dae": "11/26",
+   "ingreso": "24/04/2026",
+   "od": {
+    "anio": "2026",
+    "estado": "APROBADA",
+    "fecha": "06/08/2026",
+    "numero": "262"
+   },
+   "sancion": "aprobada",
+   "sancion_fecha": "27/08/2026"
+  },
+  "PE-118/26": {
+   "archivo": "11/09/2026",
+   "dado_cuenta": "14/05/2026",
+   "dae": "11/26",
+   "ingreso": "24/04/2026",
+   "od": {
+    "anio": "2026",
+    "estado": "APROBADA",
+    "fecha": "12/08/2026",
+    "numero": "283"
+   },
+   "sancion": "aprobada",
+   "sancion_fecha": "27/08/2026"
+  },
+  "PE-119/26": {
+   "archivo": "11/09/2026",
+   "dado_cuenta": "14/05/2026",
+   "dae": "11/26",
+   "ingreso": "24/04/2026",
+   "od": {
+    "anio": "2026",
+    "estado": "APROBADA",
+    "fecha": "12/08/2026",
+    "numero": "284"
+   },
+   "sancion": "aprobada",
+   "sancion_fecha": "27/08/2026"
+  },
+  "PE-120/26": {
+   "archivo": "11/09/2026",
+   "dado_cuenta": "14/05/2026",
+   "dae": "11/26",
+   "ingreso": "24/04/2026",
+   "od": {
+    "anio": "2026",
+    "estado": "APROBADA",
+    "fecha": "05/08/2026",
+    "numero": "247"
+   },
+   "sancion": "aprobada",
+   "sancion_fecha": "27/08/2026"
+  },
+  "PE-121/26": {
+   "archivo": "04/08/2026",
+   "dado_cuenta": "14/05/2026",
+   "dae": "11/26",
+   "ingreso": "24/04/2026",
+   "od": {
+    "anio": "2026",
+    "estado": "APROBADA",
+    "fecha": "01/07/2026",
+    "numero": "198"
+   },
+   "sancion": "aprobada",
+   "sancion_fecha": "16/07/2026"
+  },
+  "PE-122/26": {
+   "archivo": "11/09/2026",
+   "dado_cuenta": "14/05/2026",
+   "dae": "11/26",
+   "ingreso": "24/04/2026",
+   "od": {
+    "anio": "2026",
+    "estado": "APROBADA",
+    "fecha": "06/08/2026",
+    "numero": "263"
+   },
+   "sancion": "aprobada",
+   "sancion_fecha": "27/08/2026"
+  },
+  "PE-123/26": {
+   "archivo": "11/09/2026",
+   "dado_cuenta": "14/05/2026",
+   "dae": "11/26",
+   "ingreso": "24/04/2026",
+   "od": {
+    "anio": "2026",
+    "estado": "APROBADA",
+    "fecha": "06/08/2026",
+    "numero": "264"
+   },
+   "sancion": "aprobada",
+   "sancion_fecha": "27/08/2026"
+  },
+  "PE-124/24": {
+   "archivo": null,
+   "dado_cuenta": "20/02/2025",
+   "dae": "16/24",
+   "ingreso": "14/11/2024",
+   "od": null,
+   "sancion": "",
+   "sancion_fecha": null
+  },
+  "PE-124/26": {
+   "archivo": "11/09/2026",
+   "dado_cuenta": "14/05/2026",
+   "dae": "11/26",
+   "ingreso": "24/04/2026",
+   "od": {
+    "anio": "2026",
+    "estado": "APROBADA",
+    "fecha": "06/08/2026",
+    "numero": "265"
+   },
+   "sancion": "aprobada",
+   "sancion_fecha": "27/08/2026"
+  },
+  "PE-125/26": {
+   "archivo": "11/09/2026",
+   "dado_cuenta": "14/05/2026",
+   "dae": "11/26",
+   "ingreso": "24/04/2026",
+   "od": {
+    "anio": "2026",
+    "estado": "APROBADA",
+    "fecha": "12/08/2026",
+    "numero": "285"
+   },
+   "sancion": "aprobada",
+   "sancion_fecha": "27/08/2026"
+  },
+  "PE-126/26": {
+   "archivo": "11/09/2026",
+   "dado_cuenta": "14/05/2026",
+   "dae": "11/26",
+   "ingreso": "24/04/2026",
+   "od": {
+    "anio": "2026",
+    "estado": "APROBADA",
+    "fecha": "05/08/2026",
+    "numero": "248"
+   },
+   "sancion": "aprobada",
+   "sancion_fecha": "27/08/2026"
+  },
+  "PE-127/26": {
+   "archivo": "11/09/2026",
+   "dado_cuenta": "14/05/2026",
+   "dae": "11/26",
+   "ingreso": "24/04/2026",
+   "od": {
+    "anio": "2026",
+    "estado": "APROBADA",
+    "fecha": "05/08/2026",
+    "numero": "249"
+   },
+   "sancion": "aprobada",
+   "sancion_fecha": "27/08/2026"
+  },
+  "PE-128/26": {
+   "archivo": "04/08/2026",
+   "dado_cuenta": "14/05/2026",
+   "dae": "11/26",
+   "ingreso": "24/04/2026",
+   "od": {
+    "anio": "2026",
+    "estado": "APROBADA",
+    "fecha": "01/07/2026",
+    "numero": "199"
+   },
+   "sancion": "aprobada",
+   "sancion_fecha": "16/07/2026"
+  },
+  "PE-129/24": {
+   "archivo": null,
+   "dado_cuenta": "24/04/2025",
+   "dae": "16/24",
+   "ingreso": "22/11/2024",
+   "od": null,
+   "sancion": "",
+   "sancion_fecha": null
+  },
+  "PE-136/26": {
+   "archivo": "04/08/2026",
+   "dado_cuenta": "14/05/2026",
+   "dae": "13/26",
+   "ingreso": "11/05/2026",
+   "od": {
+    "anio": "2026",
+    "estado": "APROBADA",
+    "fecha": "09/06/2026",
+    "numero": "123"
+   },
+   "sancion": "aprobada",
+   "sancion_fecha": "16/07/2026"
+  },
+  "PE-137/26": {
+   "archivo": "04/08/2026",
+   "dado_cuenta": "14/05/2026",
+   "dae": "14/26",
+   "ingreso": "11/05/2026",
+   "od": {
+    "anio": "2026",
+    "estado": "APROBADA",
+    "fecha": "09/06/2026",
+    "numero": "124"
+   },
+   "sancion": "aprobada",
+   "sancion_fecha": "16/07/2026"
+  },
+  "PE-138/26": {
+   "archivo": "04/08/2026",
+   "dado_cuenta": "14/05/2026",
+   "dae": "14/26",
+   "ingreso": "11/05/2026",
+   "od": {
+    "anio": "2026",
+    "estado": "APROBADA",
+    "fecha": "09/06/2026",
+    "numero": "125"
+   },
+   "sancion": "aprobada",
+   "sancion_fecha": "16/07/2026"
+  },
+  "PE-139/26": {
+   "archivo": "04/08/2026",
+   "dado_cuenta": "14/05/2026",
+   "dae": "14/26",
+   "ingreso": "11/05/2026",
+   "od": {
+    "anio": "2026",
+    "estado": "APROBADA",
+    "fecha": "09/06/2026",
+    "numero": "126"
+   },
+   "sancion": "aprobada",
+   "sancion_fecha": "16/07/2026"
+  },
+  "PE-140/26": {
+   "archivo": "04/08/2026",
+   "dado_cuenta": "14/05/2026",
+   "dae": "14/26",
+   "ingreso": "11/05/2026",
+   "od": {
+    "anio": "2026",
+    "estado": "APROBADA",
+    "fecha": "09/06/2026",
+    "numero": "127"
+   },
+   "sancion": "aprobada",
+   "sancion_fecha": "16/07/2026"
+  },
+  "PE-141/26": {
+   "archivo": "04/08/2026",
+   "dado_cuenta": "14/05/2026",
+   "dae": "14/26",
+   "ingreso": "11/05/2026",
+   "od": {
+    "anio": "2026",
+    "estado": "APROBADA",
+    "fecha": "09/06/2026",
+    "numero": "128"
+   },
+   "sancion": "aprobada",
+   "sancion_fecha": "16/07/2026"
+  },
+  "PE-142/26": {
+   "archivo": "04/08/2026",
+   "dado_cuenta": "14/05/2026",
+   "dae": "14/26",
+   "ingreso": "11/05/2026",
+   "od": {
+    "anio": "2026",
+    "estado": "APROBADA",
+    "fecha": "09/06/2026",
+    "numero": "129"
+   },
+   "sancion": "aprobada",
+   "sancion_fecha": "16/07/2026"
+  },
+  "PE-143/26": {
+   "archivo": "04/08/2026",
+   "dado_cuenta": "14/05/2026",
+   "dae": "14/26",
+   "ingreso": "11/05/2026",
+   "od": {
+    "anio": "2026",
+    "estado": "APROBADA",
+    "fecha": "01/07/2026",
+    "numero": "200"
+   },
+   "sancion": "aprobada",
+   "sancion_fecha": "16/07/2026"
+  },
+  "PE-144/26": {
+   "archivo": "04/08/2026",
+   "dado_cuenta": "14/05/2026",
+   "dae": "14/26",
+   "ingreso": "11/05/2026",
+   "od": {
+    "anio": "2026",
+    "estado": "APROBADA",
+    "fecha": "01/07/2026",
+    "numero": "201"
+   },
+   "sancion": "aprobada",
+   "sancion_fecha": "16/07/2026"
+  },
+  "PE-145/26": {
+   "archivo": "04/08/2026",
+   "dado_cuenta": "14/05/2026",
+   "dae": "14/26",
+   "ingreso": "11/05/2026",
+   "od": {
+    "anio": "2026",
+    "estado": "APROBADA",
+    "fecha": "01/07/2026",
+    "numero": "202"
+   },
+   "sancion": "aprobada",
+   "sancion_fecha": "16/07/2026"
+  },
+  "PE-146/26": {
+   "archivo": "04/08/2026",
+   "dado_cuenta": "14/05/2026",
+   "dae": "14/26",
+   "ingreso": "11/05/2026",
+   "od": {
+    "anio": "2026",
+    "estado": "APROBADA",
+    "fecha": "01/07/2026",
+    "numero": "203"
+   },
+   "sancion": "aprobada",
+   "sancion_fecha": "16/07/2026"
+  },
+  "PE-147/26": {
+   "archivo": "04/08/2026",
+   "dado_cuenta": "14/05/2026",
+   "dae": "14/26",
+   "ingreso": "11/05/2026",
+   "od": {
+    "anio": "2026",
+    "estado": "APROBADA",
+    "fecha": "01/07/2026",
+    "numero": "204"
+   },
+   "sancion": "aprobada",
+   "sancion_fecha": "16/07/2026"
+  },
+  "PE-148/26": {
+   "archivo": "04/08/2026",
+   "dado_cuenta": "14/05/2026",
+   "dae": "15/26",
+   "ingreso": "12/05/2026",
+   "od": {
+    "anio": "2026",
+    "estado": "APROBADA",
+    "fecha": "01/07/2026",
+    "numero": "205"
+   },
+   "sancion": "aprobada",
+   "sancion_fecha": "16/07/2026"
+  },
+  "PE-149/26": {
+   "archivo": "11/09/2026",
+   "dado_cuenta": "14/05/2026",
+   "dae": "15/26",
+   "ingreso": "12/05/2026",
+   "od": {
+    "anio": "2026",
+    "estado": "APROBADA",
+    "fecha": "06/08/2026",
+    "numero": "266"
+   },
+   "sancion": "aprobada",
+   "sancion_fecha": "27/08/2026"
+  },
+  "PE-15/26": {
+   "archivo": "16/06/2026",
+   "dado_cuenta": "09/04/2026",
+   "dae": "4/26",
+   "ingreso": "30/03/2026",
+   "od": {
+    "anio": "2026",
+    "estado": "APROBADA",
+    "fecha": "13/05/2026",
+    "numero": "29"
+   },
+   "sancion": "aprobada",
+   "sancion_fecha": "04/06/2026"
+  },
+  "PE-150/26": {
+   "archivo": "04/08/2026",
+   "dado_cuenta": "14/05/2026",
+   "dae": "15/26",
+   "ingreso": "12/05/2026",
+   "od": {
+    "anio": "2026",
+    "estado": "APROBADA",
+    "fecha": "01/07/2026",
+    "numero": "206"
+   },
+   "sancion": "aprobada",
+   "sancion_fecha": "16/07/2026"
+  },
+  "PE-151/26": {
+   "archivo": "11/09/2026",
+   "dado_cuenta": "14/05/2026",
+   "dae": "15/26",
+   "ingreso": "12/05/2026",
+   "od": {
+    "anio": "2026",
+    "estado": "APROBADA",
+    "fecha": "06/08/2026",
+    "numero": "267"
+   },
+   "sancion": "aprobada",
+   "sancion_fecha": "27/08/2026"
+  },
+  "PE-152/26": {
+   "archivo": "04/08/2026",
+   "dado_cuenta": "14/05/2026",
+   "dae": "15/26",
+   "ingreso": "12/05/2026",
+   "od": {
+    "anio": "2026",
+    "estado": "APROBADA",
+    "fecha": "01/07/2026",
+    "numero": "207"
+   },
+   "sancion": "aprobada",
+   "sancion_fecha": "16/07/2026"
+  },
+  "PE-153/26": {
+   "archivo": "04/08/2026",
+   "dado_cuenta": "14/05/2026",
+   "dae": "15/26",
+   "ingreso": "12/05/2026",
+   "od": {
+    "anio": "2026",
+    "estado": "APROBADA",
+    "fecha": "01/07/2026",
+    "numero": "208"
+   },
+   "sancion": "aprobada",
+   "sancion_fecha": "16/07/2026"
+  },
+  "PE-154/26": {
+   "archivo": "11/09/2026",
+   "dado_cuenta": "14/05/2026",
+   "dae": "15/26",
+   "ingreso": "12/05/2026",
+   "od": {
+    "anio": "2026",
+    "estado": "APROBADA",
+    "fecha": "06/08/2026",
+    "numero": "268"
+   },
+   "sancion": "aprobada",
+   "sancion_fecha": "27/08/2026"
+  },
+  "PE-155/26": {
+   "archivo": "11/09/2026",
+   "dado_cuenta": "14/05/2026",
+   "dae": "15/26",
+   "ingreso": "12/05/2026",
+   "od": {
+    "anio": "2026",
+    "estado": "APROBADA",
+    "fecha": "06/08/2026",
+    "numero": "269"
+   },
+   "sancion": "aprobada",
+   "sancion_fecha": "27/08/2026"
+  },
+  "PE-157/26": {
+   "archivo": "11/09/2026",
+   "dado_cuenta": "14/05/2026",
+   "dae": "16/26",
+   "ingreso": "13/05/2026",
+   "od": {
+    "anio": "2026",
+    "estado": "APROBADA",
+    "fecha": "12/08/2026",
+    "numero": "286"
+   },
+   "sancion": "aprobada",
+   "sancion_fecha": "27/08/2026"
+  },
+  "PE-158/26": {
+   "archivo": "04/08/2026",
+   "dado_cuenta": "14/05/2026",
+   "dae": "16/26",
+   "ingreso": "13/05/2026",
+   "od": {
+    "anio": "2026",
+    "estado": "APROBADA",
+    "fecha": "01/07/2026",
+    "numero": "210"
+   },
+   "sancion": "aprobada",
+   "sancion_fecha": "16/07/2026"
+  },
+  "PE-159/26": {
+   "archivo": "04/08/2026",
+   "dado_cuenta": "14/05/2026",
+   "dae": "16/26",
+   "ingreso": "13/05/2026",
+   "od": {
+    "anio": "2026",
+    "estado": "APROBADA",
+    "fecha": "01/07/2026",
+    "numero": "211"
+   },
+   "sancion": "aprobada",
+   "sancion_fecha": "16/07/2026"
+  },
+  "PE-16/26": {
+   "archivo": "16/06/2026",
+   "dado_cuenta": "09/04/2026",
+   "dae": "4/26",
+   "ingreso": "30/03/2026",
+   "od": {
+    "anio": "2026",
+    "estado": "APROBADA",
+    "fecha": "14/05/2026",
+    "numero": "59"
+   },
+   "sancion": "aprobada",
+   "sancion_fecha": "04/06/2026"
+  },
+  "PE-160/26": {
+   "archivo": "04/08/2026",
+   "dado_cuenta": "14/05/2026",
+   "dae": "16/26",
+   "ingreso": "13/05/2026",
+   "od": {
+    "anio": "2026",
+    "estado": "APROBADA",
+    "fecha": "01/07/2026",
+    "numero": "212"
+   },
+   "sancion": "aprobada",
+   "sancion_fecha": "16/07/2026"
+  },
+  "PE-161/26": {
+   "archivo": "04/08/2026",
+   "dado_cuenta": "14/05/2026",
+   "dae": "16/26",
+   "ingreso": "13/05/2026",
+   "od": {
+    "anio": "2026",
+    "estado": "APROBADA",
+    "fecha": "01/07/2026",
+    "numero": "213"
+   },
+   "sancion": "aprobada",
+   "sancion_fecha": "16/07/2026"
+  },
+  "PE-162/26": {
+   "archivo": "11/09/2026",
+   "dado_cuenta": "14/05/2026",
+   "dae": "16/26",
+   "ingreso": "13/05/2026",
+   "od": {
+    "anio": "2026",
+    "estado": "APROBADA",
+    "fecha": "12/08/2026",
+    "numero": "287"
+   },
+   "sancion": "aprobada",
+   "sancion_fecha": "27/08/2026"
+  },
+  "PE-163/26": {
+   "archivo": "04/08/2026",
+   "dado_cuenta": "14/05/2026",
+   "dae": "16/26",
+   "ingreso": "13/05/2026",
+   "od": {
+    "anio": "2026",
+    "estado": "APROBADA",
+    "fecha": "01/07/2026",
+    "numero": "214"
+   },
+   "sancion": "aprobada",
+   "sancion_fecha": "16/07/2026"
+  },
+  "PE-164/26": {
+   "archivo": "11/09/2026",
+   "dado_cuenta": "14/05/2026",
+   "dae": "16/26",
+   "ingreso": "13/05/2026",
+   "od": {
+    "anio": "2026",
+    "estado": "APROBADA",
+    "fecha": "06/08/2026",
+    "numero": "270"
+   },
+   "sancion": "aprobada",
+   "sancion_fecha": "27/08/2026"
+  },
+  "PE-165/26": {
+   "archivo": "11/09/2026",
+   "dado_cuenta": "14/05/2026",
+   "dae": "16/26",
+   "ingreso": "13/05/2026",
+   "od": {
+    "anio": "2026",
+    "estado": "APROBADA",
+    "fecha": "12/08/2026",
+    "numero": "288"
+   },
+   "sancion": "aprobada",
+   "sancion_fecha": "27/08/2026"
+  },
+  "PE-166/26": {
+   "archivo": "11/09/2026",
+   "dado_cuenta": "14/05/2026",
+   "dae": "16/26",
+   "ingreso": "13/05/2026",
+   "od": {
+    "anio": "2026",
+    "estado": "APROBADA",
+    "fecha": "12/08/2026",
+    "numero": "289"
+   },
+   "sancion": "aprobada",
+   "sancion_fecha": "27/08/2026"
+  },
+  "PE-167/26": {
+   "archivo": "11/09/2026",
+   "dado_cuenta": "14/05/2026",
+   "dae": "16/26",
+   "ingreso": "13/05/2026",
+   "od": {
+    "anio": "2026",
+    "estado": "APROBADA",
+    "fecha": "12/08/2026",
+    "numero": "290"
+   },
+   "sancion": "aprobada",
+   "sancion_fecha": "27/08/2026"
+  },
+  "PE-168/26": {
+   "archivo": "04/08/2026",
+   "dado_cuenta": "14/05/2026",
+   "dae": "16/26",
+   "ingreso": "13/05/2026",
+   "od": {
+    "anio": "2026",
+    "estado": "APROBADA",
+    "fecha": "01/07/2026",
+    "numero": "215"
+   },
+   "sancion": "aprobada",
+   "sancion_fecha": "16/07/2026"
+  },
+  "PE-17/26": {
+   "archivo": "16/06/2026",
+   "dado_cuenta": "09/04/2026",
+   "dae": "4/26",
+   "ingreso": "30/03/2026",
+   "od": {
+    "anio": "2026",
+    "estado": "APROBADA",
+    "fecha": "13/05/2026",
+    "numero": "30"
+   },
+   "sancion": "aprobada",
+   "sancion_fecha": "04/06/2026"
+  },
+  "PE-170/26": {
+   "archivo": "11/09/2026",
+   "dado_cuenta": "14/05/2026",
+   "dae": "17/26",
+   "ingreso": "14/05/2026",
+   "od": {
+    "anio": "2026",
+    "estado": "APROBADA",
+    "fecha": "05/08/2026",
+    "numero": "250"
+   },
+   "sancion": "aprobada",
+   "sancion_fecha": "27/08/2026"
+  },
+  "PE-171/26": {
+   "archivo": "11/09/2026",
+   "dado_cuenta": "14/05/2026",
+   "dae": "17/26",
+   "ingreso": "14/05/2026",
+   "od": {
+    "anio": "2026",
+    "estado": "APROBADA",
+    "fecha": "05/08/2026",
+    "numero": "251"
+   },
+   "sancion": "aprobada",
+   "sancion_fecha": "27/08/2026"
+  },
+  "PE-172/26": {
+   "archivo": "11/09/2026",
+   "dado_cuenta": "04/06/2026",
+   "dae": "18/26",
+   "ingreso": "15/05/2026",
+   "od": {
+    "anio": "2026",
+    "estado": "APROBADA",
+    "fecha": "05/08/2026",
+    "numero": "252"
+   },
+   "sancion": "aprobada",
+   "sancion_fecha": "27/08/2026"
+  },
+  "PE-173/26": {
+   "archivo": "04/08/2026",
+   "dado_cuenta": "04/06/2026",
+   "dae": "18/26",
+   "ingreso": "15/05/2026",
+   "od": {
+    "anio": "2026",
+    "estado": "APROBADA",
+    "fecha": "01/07/2026",
+    "numero": "216"
+   },
+   "sancion": "aprobada",
+   "sancion_fecha": "16/07/2026"
+  },
+  "PE-176/25": {
+   "archivo": null,
+   "dado_cuenta": "18/03/2026",
+   "dae": "9/25",
+   "ingreso": "04/02/2026",
+   "od": {
+    "anio": "2026",
+    "estado": "APROBADA",
+    "fecha": "16/04/2026",
+    "numero": "17"
+   },
+   "sancion": "aprobada",
+   "sancion_fecha": "14/05/2026"
+  },
+  "PE-18/26": {
+   "archivo": "16/06/2026",
+   "dado_cuenta": "09/04/2026",
+   "dae": "4/26",
+   "ingreso": "30/03/2026",
+   "od": {
+    "anio": "2026",
+    "estado": "APROBADA",
+    "fecha": "13/05/2026",
+    "numero": "31"
+   },
+   "sancion": "aprobada",
+   "sancion_fecha": "04/06/2026"
+  },
+  "PE-181/26": {
+   "archivo": "11/09/2026",
+   "dado_cuenta": "04/06/2026",
+   "dae": "19/26",
+   "ingreso": "19/05/2026",
+   "od": {
+    "anio": "2026",
+    "estado": "APROBADA",
+    "fecha": "05/08/2026",
+    "numero": "253"
+   },
+   "sancion": "aprobada",
+   "sancion_fecha": "27/08/2026"
+  },
+  "PE-182/26": {
+   "archivo": "11/09/2026",
+   "dado_cuenta": "04/06/2026",
+   "dae": "19/26",
+   "ingreso": "19/05/2026",
+   "od": {
+    "anio": "2026",
+    "estado": "APROBADA",
+    "fecha": "05/08/2026",
+    "numero": "254"
+   },
+   "sancion": "aprobada",
+   "sancion_fecha": "27/08/2026"
+  },
+  "PE-183/26": {
+   "archivo": "04/08/2026",
+   "dado_cuenta": "04/06/2026",
+   "dae": "19/26",
+   "ingreso": "19/05/2026",
+   "od": {
+    "anio": "2026",
+    "estado": "APROBADA",
+    "fecha": "01/07/2026",
+    "numero": "217"
+   },
+   "sancion": "aprobada",
+   "sancion_fecha": "16/07/2026"
+  },
+  "PE-188/26": {
+   "archivo": "04/08/2026",
+   "dado_cuenta": "04/06/2026",
+   "dae": "20/26",
+   "ingreso": "27/05/2026",
+   "od": {
+    "anio": "2026",
+    "estado": "APROBADA",
+    "fecha": "01/07/2026",
+    "numero": "218"
+   },
+   "sancion": "aprobada",
+   "sancion_fecha": "16/07/2026"
+  },
+  "PE-189/26": {
+   "archivo": "11/09/2026",
+   "dado_cuenta": "04/06/2026",
+   "dae": "20/26",
+   "ingreso": "27/05/2026",
+   "od": {
+    "anio": "2026",
+    "estado": "APROBADA",
+    "fecha": "12/08/2026",
+    "numero": "291"
+   },
+   "sancion": "aprobada",
+   "sancion_fecha": "27/08/2026"
+  },
+  "PE-19/26": {
+   "archivo": "16/06/2026",
+   "dado_cuenta": "09/04/2026",
+   "dae": "4/26",
+   "ingreso": "30/03/2026",
+   "od": {
+    "anio": "2026",
+    "estado": "APROBADA",
+    "fecha": "13/05/2026",
+    "numero": "32"
+   },
+   "sancion": "aprobada",
+   "sancion_fecha": "04/06/2026"
+  },
+  "PE-190/26": {
+   "archivo": "04/08/2026",
+   "dado_cuenta": "04/06/2026",
+   "dae": "20/26",
+   "ingreso": "27/05/2026",
+   "od": {
+    "anio": "2026",
+    "estado": "APROBADA",
+    "fecha": "01/07/2026",
+    "numero": "219"
+   },
+   "sancion": "aprobada",
+   "sancion_fecha": "16/07/2026"
+  },
+  "PE-191/26": {
+   "archivo": "11/09/2026",
+   "dado_cuenta": "04/06/2026",
+   "dae": "20/26",
+   "ingreso": "27/05/2026",
+   "od": {
+    "anio": "2026",
+    "estado": "APROBADA",
+    "fecha": "13/08/2026",
+    "numero": "294"
+   },
+   "sancion": "aprobada",
+   "sancion_fecha": "27/08/2026"
+  },
+  "PE-192/26": {
+   "archivo": null,
+   "dado_cuenta": "04/06/2026",
+   "dae": "20/26",
+   "ingreso": "27/05/2026",
+   "od": null,
+   "sancion": "",
+   "sancion_fecha": null
+  },
+  "PE-194/26": {
+   "archivo": "11/09/2026",
+   "dado_cuenta": "16/07/2026",
+   "dae": "21/26",
+   "ingreso": "04/06/2026",
+   "od": {
+    "anio": "2026",
+    "estado": "APROBADA",
+    "fecha": "13/08/2026",
+    "numero": "295"
+   },
+   "sancion": "aprobada",
+   "sancion_fecha": "27/08/2026"
+  },
+  "PE-195/26": {
+   "archivo": "11/09/2026",
+   "dado_cuenta": "16/07/2026",
+   "dae": "21/26",
+   "ingreso": "04/06/2026",
+   "od": {
+    "anio": "2026",
+    "estado": "APROBADA",
+    "fecha": "19/08/2026",
+    "numero": "308"
+   },
+   "sancion": "aprobada",
+   "sancion_fecha": "27/08/2026"
+  },
+  "PE-20/26": {
+   "archivo": "16/06/2026",
+   "dado_cuenta": "09/04/2026",
+   "dae": "4/26",
+   "ingreso": "30/03/2026",
+   "od": {
+    "anio": "2026",
+    "estado": "APROBADA",
+    "fecha": "13/05/2026",
+    "numero": "33"
+   },
+   "sancion": "aprobada",
+   "sancion_fecha": "04/06/2026"
+  },
+  "PE-202/26": {
+   "archivo": "11/09/2026",
+   "dado_cuenta": "16/07/2026",
+   "dae": "23/26",
+   "ingreso": "25/06/2026",
+   "od": {
+    "anio": "2026",
+    "estado": "APROBADA",
+    "fecha": "13/08/2026",
+    "numero": "296"
+   },
+   "sancion": "aprobada",
+   "sancion_fecha": "27/08/2026"
+  },
+  "PE-203/26": {
+   "archivo": "11/09/2026",
+   "dado_cuenta": "16/07/2026",
+   "dae": "23/26",
+   "ingreso": "25/06/2026",
+   "od": {
+    "anio": "2026",
+    "estado": "APROBADA",
+    "fecha": "13/08/2026",
+    "numero": "297"
+   },
+   "sancion": "aprobada",
+   "sancion_fecha": "27/08/2026"
+  },
+  "PE-204/26": {
+   "archivo": "11/09/2026",
+   "dado_cuenta": "16/07/2026",
+   "dae": "23/26",
+   "ingreso": "25/06/2026",
+   "od": {
+    "anio": "2026",
+    "estado": "APROBADA",
+    "fecha": "13/08/2026",
+    "numero": "298"
+   },
+   "sancion": "aprobada",
+   "sancion_fecha": "27/08/2026"
+  },
+  "PE-205/26": {
+   "archivo": "11/09/2026",
+   "dado_cuenta": "16/07/2026",
+   "dae": "23/26",
+   "ingreso": "25/06/2026",
+   "od": {
+    "anio": "2026",
+    "estado": "APROBADA",
+    "fecha": "19/08/2026",
+    "numero": "309"
+   },
+   "sancion": "aprobada",
+   "sancion_fecha": "27/08/2026"
+  },
+  "PE-206/26": {
+   "archivo": "11/09/2026",
+   "dado_cuenta": "16/07/2026",
+   "dae": "23/26",
+   "ingreso": "25/06/2026",
+   "od": {
+    "anio": "2026",
+    "estado": "APROBADA",
+    "fecha": "19/08/2026",
+    "numero": "310"
+   },
+   "sancion": "aprobada",
+   "sancion_fecha": "27/08/2026"
+  },
+  "PE-207/26": {
+   "archivo": "11/09/2026",
+   "dado_cuenta": "16/07/2026",
+   "dae": "23/26",
+   "ingreso": "25/06/2026",
+   "od": {
+    "anio": "2026",
+    "estado": "APROBADA",
+    "fecha": "19/08/2026",
+    "numero": "311"
+   },
+   "sancion": "aprobada",
+   "sancion_fecha": "27/08/2026"
+  },
+  "PE-208/26": {
+   "archivo": null,
+   "dado_cuenta": "16/07/2026",
+   "dae": "23/26",
+   "ingreso": "25/06/2026",
+   "od": null,
+   "sancion": "",
+   "sancion_fecha": null
+  },
+  "PE-209/26": {
+   "archivo": "11/09/2026",
+   "dado_cuenta": "16/07/2026",
+   "dae": "23/26",
+   "ingreso": "25/06/2026",
+   "od": {
+    "anio": "2026",
+    "estado": "APROBADA",
+    "fecha": "13/08/2026",
+    "numero": "299"
+   },
+   "sancion": "aprobada",
+   "sancion_fecha": "27/08/2026"
+  },
+  "PE-21/26": {
+   "archivo": "16/06/2026",
+   "dado_cuenta": "09/04/2026",
+   "dae": "4/26",
+   "ingreso": "30/03/2026",
+   "od": {
+    "anio": "2026",
+    "estado": "APROBADA",
+    "fecha": "13/05/2026",
+    "numero": "34"
+   },
+   "sancion": "aprobada",
+   "sancion_fecha": "04/06/2026"
+  },
+  "PE-210/26": {
+   "archivo": "11/09/2026",
+   "dado_cuenta": "16/07/2026",
+   "dae": "23/26",
+   "ingreso": "25/06/2026",
+   "od": {
+    "anio": "2026",
+    "estado": "APROBADA",
+    "fecha": "13/08/2026",
+    "numero": "300"
+   },
+   "sancion": "aprobada",
+   "sancion_fecha": "27/08/2026"
+  },
+  "PE-211/26": {
+   "archivo": "11/09/2026",
+   "dado_cuenta": "16/07/2026",
+   "dae": "23/26",
+   "ingreso": "25/06/2026",
+   "od": {
+    "anio": "2026",
+    "estado": "APROBADA",
+    "fecha": "13/08/2026",
+    "numero": "301"
+   },
+   "sancion": "aprobada",
+   "sancion_fecha": "27/08/2026"
+  },
+  "PE-212/26": {
+   "archivo": "11/09/2026",
+   "dado_cuenta": "16/07/2026",
+   "dae": "23/26",
+   "ingreso": "25/06/2026",
+   "od": {
+    "anio": "2026",
+    "estado": "APROBADA",
+    "fecha": "13/08/2026",
+    "numero": "302"
+   },
+   "sancion": "aprobada",
+   "sancion_fecha": "27/08/2026"
+  },
+  "PE-213/26": {
+   "archivo": "11/09/2026",
+   "dado_cuenta": "16/07/2026",
+   "dae": "23/26",
+   "ingreso": "25/06/2026",
+   "od": {
+    "anio": "2026",
+    "estado": "APROBADA",
+    "fecha": "19/08/2026",
+    "numero": "312"
+   },
+   "sancion": "aprobada",
+   "sancion_fecha": "27/08/2026"
+  },
+  "PE-214/26": {
+   "archivo": "11/09/2026",
+   "dado_cuenta": "16/07/2026",
+   "dae": "23/26",
+   "ingreso": "25/06/2026",
+   "od": {
+    "anio": "2026",
+    "estado": "APROBADA",
+    "fecha": "19/08/2026",
+    "numero": "313"
+   },
+   "sancion": "aprobada",
+   "sancion_fecha": "27/08/2026"
+  },
+  "PE-215/26": {
+   "archivo": "11/09/2026",
+   "dado_cuenta": "16/07/2026",
+   "dae": "23/26",
+   "ingreso": "25/06/2026",
+   "od": {
+    "anio": "2026",
+    "estado": "APROBADA",
+    "fecha": "19/08/2026",
+    "numero": "314"
+   },
+   "sancion": "aprobada",
+   "sancion_fecha": "27/08/2026"
+  },
+  "PE-216/26": {
+   "archivo": "11/09/2026",
+   "dado_cuenta": "16/07/2026",
+   "dae": "23/26",
+   "ingreso": "25/06/2026",
+   "od": {
+    "anio": "2026",
+    "estado": "APROBADA",
+    "fecha": "13/08/2026",
+    "numero": "303"
+   },
+   "sancion": "aprobada",
+   "sancion_fecha": "27/08/2026"
+  },
+  "PE-217/26": {
+   "archivo": "11/09/2026",
+   "dado_cuenta": "16/07/2026",
+   "dae": "23/26",
+   "ingreso": "25/06/2026",
+   "od": {
+    "anio": "2026",
+    "estado": "APROBADA",
+    "fecha": "13/08/2026",
+    "numero": "304"
+   },
+   "sancion": "aprobada",
+   "sancion_fecha": "27/08/2026"
+  },
+  "PE-218/23": {
+   "archivo": null,
+   "dado_cuenta": "14/03/2024",
+   "dae": "15/23",
+   "ingreso": "31/01/2024",
+   "od": null,
+   "sancion": "",
+   "sancion_fecha": null
+  },
+  "PE-218/26": {
+   "archivo": "11/09/2026",
+   "dado_cuenta": "16/07/2026",
+   "dae": "23/26",
+   "ingreso": "25/06/2026",
+   "od": {
+    "anio": "2026",
+    "estado": "APROBADA",
+    "fecha": "13/08/2026",
+    "numero": "305"
+   },
+   "sancion": "aprobada",
+   "sancion_fecha": "27/08/2026"
+  },
+  "PE-219/26": {
+   "archivo": "11/09/2026",
+   "dado_cuenta": "16/07/2026",
+   "dae": "23/26",
+   "ingreso": "25/06/2026",
+   "od": {
+    "anio": "2026",
+    "estado": "APROBADA",
+    "fecha": "13/08/2026",
+    "numero": "306"
+   },
+   "sancion": "aprobada",
+   "sancion_fecha": "27/08/2026"
+  },
+  "PE-22/26": {
+   "archivo": "16/06/2026",
+   "dado_cuenta": "09/04/2026",
+   "dae": "4/26",
+   "ingreso": "30/03/2026",
+   "od": {
+    "anio": "2026",
+    "estado": "APROBADA",
+    "fecha": "13/05/2026",
+    "numero": "35"
+   },
+   "sancion": "aprobada",
+   "sancion_fecha": "04/06/2026"
+  },
+  "PE-220/26": {
+   "archivo": null,
+   "dado_cuenta": "16/07/2026",
+   "dae": "23/26",
+   "ingreso": "25/06/2026",
+   "od": null,
+   "sancion": "",
+   "sancion_fecha": null
+  },
+  "PE-221/26": {
+   "archivo": "11/09/2026",
+   "dado_cuenta": "16/07/2026",
+   "dae": "23/26",
+   "ingreso": "25/06/2026",
+   "od": {
+    "anio": "2026",
+    "estado": "APROBADA",
+    "fecha": "19/08/2026",
+    "numero": "315"
+   },
+   "sancion": "aprobada",
+   "sancion_fecha": "27/08/2026"
+  },
+  "PE-222/26": {
+   "archivo": "11/09/2026",
+   "dado_cuenta": "16/07/2026",
+   "dae": "23/26",
+   "ingreso": "25/06/2026",
+   "od": {
+    "anio": "2026",
+    "estado": "APROBADA",
+    "fecha": "19/08/2026",
+    "numero": "316"
+   },
+   "sancion": "aprobada",
+   "sancion_fecha": "27/08/2026"
+  },
+  "PE-228/26": {
+   "archivo": "11/09/2026",
+   "dado_cuenta": "16/07/2026",
+   "dae": "24/26",
+   "ingreso": "13/07/2026",
+   "od": {
+    "anio": "2026",
+    "estado": "APROBADA",
+    "fecha": "19/08/2026",
+    "numero": "317"
+   },
+   "sancion": "aprobada",
+   "sancion_fecha": "27/08/2026"
+  },
+  "PE-229/26": {
+   "archivo": "11/09/2026",
+   "dado_cuenta": "16/07/2026",
+   "dae": "24/26",
+   "ingreso": "13/07/2026",
+   "od": {
+    "anio": "2026",
+    "estado": "APROBADA",
+    "fecha": "12/08/2026",
+    "numero": "292"
+   },
+   "sancion": "aprobada",
+   "sancion_fecha": "27/08/2026"
+  },
+  "PE-23/26": {
+   "archivo": "16/06/2026",
+   "dado_cuenta": "09/04/2026",
+   "dae": "4/26",
+   "ingreso": "30/03/2026",
+   "od": {
+    "anio": "2026",
+    "estado": "APROBADA",
+    "fecha": "13/05/2026",
+    "numero": "36"
+   },
+   "sancion": "aprobada",
+   "sancion_fecha": "04/06/2026"
+  },
+  "PE-230/26": {
+   "archivo": "11/09/2026",
+   "dado_cuenta": "16/07/2026",
+   "dae": "24/26",
+   "ingreso": "13/07/2026",
+   "od": {
+    "anio": "2026",
+    "estado": "APROBADA",
+    "fecha": "19/08/2026",
+    "numero": "318"
+   },
+   "sancion": "aprobada",
+   "sancion_fecha": "27/08/2026"
+  },
+  "PE-231/26": {
+   "archivo": "11/09/2026",
+   "dado_cuenta": "16/07/2026",
+   "dae": "24/26",
+   "ingreso": "13/07/2026",
+   "od": {
+    "anio": "2026",
+    "estado": "APROBADA",
+    "fecha": "12/08/2026",
+    "numero": "293"
+   },
+   "sancion": "aprobada",
+   "sancion_fecha": "27/08/2026"
+  },
+  "PE-232/26": {
+   "archivo": "11/09/2026",
+   "dado_cuenta": "16/07/2026",
+   "dae": "24/26",
+   "ingreso": "13/07/2026",
+   "od": {
+    "anio": "2026",
+    "estado": "APROBADA",
+    "fecha": "19/08/2026",
+    "numero": "319"
+   },
+   "sancion": "aprobada",
+   "sancion_fecha": "27/08/2026"
+  },
+  "PE-233/26": {
+   "archivo": "11/09/2026",
+   "dado_cuenta": "16/07/2026",
+   "dae": "24/26",
+   "ingreso": "13/07/2026",
+   "od": {
+    "anio": "2026",
+    "estado": "APROBADA",
+    "fecha": "19/08/2026",
+    "numero": "320"
+   },
+   "sancion": "aprobada",
+   "sancion_fecha": "27/08/2026"
+  },
+  "PE-236/26": {
+   "archivo": null,
+   "dado_cuenta": "27/08/2026",
+   "dae": "25/26",
+   "ingreso": "17/07/2026",
+   "od": null,
+   "sancion": "",
+   "sancion_fecha": null
+  },
+  "PE-237/26": {
+   "archivo": null,
+   "dado_cuenta": "27/08/2026",
+   "dae": "25/26",
+   "ingreso": "17/07/2026",
+   "od": null,
+   "sancion": "",
+   "sancion_fecha": null
+  },
+  "PE-24/26": {
+   "archivo": "16/06/2026",
+   "dado_cuenta": "09/04/2026",
+   "dae": "4/26",
+   "ingreso": "30/03/2026",
+   "od": {
+    "anio": "2026",
+    "estado": "APROBADA",
+    "fecha": "14/05/2026",
+    "numero": "60"
+   },
+   "sancion": "aprobada",
+   "sancion_fecha": "04/06/2026"
+  },
+  "PE-248/26": {
+   "archivo": null,
+   "dado_cuenta": "27/08/2026",
+   "dae": "26/26",
+   "ingreso": "03/08/2026",
+   "od": null,
+   "sancion": "",
+   "sancion_fecha": null
+  },
+  "PE-249/26": {
+   "archivo": null,
+   "dado_cuenta": "27/08/2026",
+   "dae": "26/26",
+   "ingreso": "03/08/2026",
+   "od": null,
+   "sancion": "",
+   "sancion_fecha": null
+  },
+  "PE-25/26": {
+   "archivo": "16/06/2026",
+   "dado_cuenta": "09/04/2026",
+   "dae": "4/26",
+   "ingreso": "30/03/2026",
+   "od": {
+    "anio": "2026",
+    "estado": "APROBADA",
+    "fecha": "13/05/2026",
+    "numero": "37"
+   },
+   "sancion": "aprobada",
+   "sancion_fecha": "04/06/2026"
+  },
+  "PE-250/26": {
+   "archivo": null,
+   "dado_cuenta": "27/08/2026",
+   "dae": "26/26",
+   "ingreso": "03/08/2026",
+   "od": null,
+   "sancion": "",
+   "sancion_fecha": null
+  },
+  "PE-251/26": {
+   "archivo": null,
+   "dado_cuenta": "27/08/2026",
+   "dae": "26/26",
+   "ingreso": "03/08/2026",
+   "od": null,
+   "sancion": "",
+   "sancion_fecha": null
+  },
+  "PE-252/26": {
+   "archivo": null,
+   "dado_cuenta": "27/08/2026",
+   "dae": "26/26",
+   "ingreso": "03/08/2026",
+   "od": null,
+   "sancion": "",
+   "sancion_fecha": null
+  },
+  "PE-253/26": {
+   "archivo": null,
+   "dado_cuenta": "27/08/2026",
+   "dae": "26/26",
+   "ingreso": "03/08/2026",
+   "od": null,
+   "sancion": "",
+   "sancion_fecha": null
+  },
+  "PE-254/26": {
+   "archivo": null,
+   "dado_cuenta": "27/08/2026",
+   "dae": "26/26",
+   "ingreso": "03/08/2026",
+   "od": null,
+   "sancion": "",
+   "sancion_fecha": null
+  },
+  "PE-255/26": {
+   "archivo": null,
+   "dado_cuenta": "27/08/2026",
+   "dae": "26/26",
+   "ingreso": "03/08/2026",
+   "od": null,
+   "sancion": "",
+   "sancion_fecha": null
+  },
+  "PE-256/26": {
+   "archivo": null,
+   "dado_cuenta": "27/08/2026",
+   "dae": "26/26",
+   "ingreso": "03/08/2026",
+   "od": null,
+   "sancion": "",
+   "sancion_fecha": null
+  },
+  "PE-257/26": {
+   "archivo": null,
+   "dado_cuenta": "27/08/2026",
+   "dae": "26/26",
+   "ingreso": "03/08/2026",
+   "od": null,
+   "sancion": "",
+   "sancion_fecha": null
+  },
+  "PE-258/26": {
+   "archivo": null,
+   "dado_cuenta": "27/08/2026",
+   "dae": "26/26",
+   "ingreso": "03/08/2026",
+   "od": null,
+   "sancion": "",
+   "sancion_fecha": null
+  },
+  "PE-259/26": {
+   "archivo": null,
+   "dado_cuenta": "27/08/2026",
+   "dae": "26/26",
+   "ingreso": "03/08/2026",
+   "od": null,
+   "sancion": "",
+   "sancion_fecha": null
+  },
+  "PE-26/26": {
+   "archivo": "16/06/2026",
+   "dado_cuenta": "09/04/2026",
+   "dae": "4/26",
+   "ingreso": "30/03/2026",
+   "od": {
+    "anio": "2026",
+    "estado": "APROBADA",
+    "fecha": "13/05/2026",
+    "numero": "38"
+   },
+   "sancion": "aprobada",
+   "sancion_fecha": "04/06/2026"
+  },
+  "PE-260/26": {
+   "archivo": null,
+   "dado_cuenta": "27/08/2026",
+   "dae": "26/26",
+   "ingreso": "03/08/2026",
+   "od": null,
+   "sancion": "",
+   "sancion_fecha": null
+  },
+  "PE-261/26": {
+   "archivo": null,
+   "dado_cuenta": "27/08/2026",
+   "dae": "26/26",
+   "ingreso": "03/08/2026",
+   "od": null,
+   "sancion": "",
+   "sancion_fecha": null
+  },
+  "PE-262/26": {
+   "archivo": null,
+   "dado_cuenta": "27/08/2026",
+   "dae": "26/26",
+   "ingreso": "03/08/2026",
+   "od": null,
+   "sancion": "",
+   "sancion_fecha": null
+  },
+  "PE-263/26": {
+   "archivo": null,
+   "dado_cuenta": "27/08/2026",
+   "dae": "27/26",
+   "ingreso": "05/08/2026",
+   "od": null,
+   "sancion": "",
+   "sancion_fecha": null
+  },
+  "PE-264/26": {
+   "archivo": null,
+   "dado_cuenta": "27/08/2026",
+   "dae": "27/26",
+   "ingreso": "05/08/2026",
+   "od": null,
+   "sancion": "",
+   "sancion_fecha": null
+  },
+  "PE-265/26": {
+   "archivo": null,
+   "dado_cuenta": "27/08/2026",
+   "dae": "27/26",
+   "ingreso": "05/08/2026",
+   "od": null,
+   "sancion": "",
+   "sancion_fecha": null
+  },
+  "PE-266/26": {
+   "archivo": null,
+   "dado_cuenta": "27/08/2026",
+   "dae": "27/26",
+   "ingreso": "05/08/2026",
+   "od": null,
+   "sancion": "",
+   "sancion_fecha": null
+  },
+  "PE-267/26": {
+   "archivo": null,
+   "dado_cuenta": "27/08/2026",
+   "dae": "27/26",
+   "ingreso": "05/08/2026",
+   "od": null,
+   "sancion": "",
+   "sancion_fecha": null
+  },
+  "PE-268/26": {
+   "archivo": null,
+   "dado_cuenta": "27/08/2026",
+   "dae": "27/26",
+   "ingreso": "05/08/2026",
+   "od": null,
+   "sancion": "",
+   "sancion_fecha": null
+  },
+  "PE-269/26": {
+   "archivo": null,
+   "dado_cuenta": "27/08/2026",
+   "dae": "27/26",
+   "ingreso": "05/08/2026",
+   "od": null,
+   "sancion": "",
+   "sancion_fecha": null
+  },
+  "PE-27/26": {
+   "archivo": "16/06/2026",
+   "dado_cuenta": "09/04/2026",
+   "dae": "4/26",
+   "ingreso": "30/03/2026",
+   "od": {
+    "anio": "2026",
+    "estado": "APROBADA",
+    "fecha": "14/05/2026",
+    "numero": "61"
+   },
+   "sancion": "aprobada",
+   "sancion_fecha": "04/06/2026"
+  },
+  "PE-277/26": {
+   "archivo": null,
+   "dado_cuenta": "17/09/2026",
+   "dae": "28/26",
+   "ingreso": "27/08/2026",
+   "od": null,
+   "sancion": "",
+   "sancion_fecha": null
+  },
+  "PE-278/26": {
+   "archivo": null,
+   "dado_cuenta": "17/09/2026",
+   "dae": "28/26",
+   "ingreso": "27/08/2026",
+   "od": null,
+   "sancion": "",
+   "sancion_fecha": null
+  },
+  "PE-279/26": {
+   "archivo": null,
+   "dado_cuenta": "17/09/2026",
+   "dae": "28/26",
+   "ingreso": "27/08/2026",
+   "od": null,
+   "sancion": "",
+   "sancion_fecha": null
+  },
+  "PE-28/26": {
+   "archivo": "16/06/2026",
+   "dado_cuenta": "09/04/2026",
+   "dae": "4/26",
+   "ingreso": "30/03/2026",
+   "od": {
+    "anio": "2026",
+    "estado": "APROBADA",
+    "fecha": "13/05/2026",
+    "numero": "39"
+   },
+   "sancion": "aprobada",
+   "sancion_fecha": "04/06/2026"
+  },
+  "PE-282/26": {
+   "archivo": null,
+   "dado_cuenta": "17/09/2026",
+   "dae": "29/26",
+   "ingreso": "28/08/2026",
+   "od": null,
+   "sancion": "",
+   "sancion_fecha": null
+  },
+  "PE-283/26": {
+   "archivo": null,
+   "dado_cuenta": "17/09/2026",
+   "dae": "29/26",
+   "ingreso": "28/08/2026",
+   "od": null,
+   "sancion": "",
+   "sancion_fecha": null
+  },
+  "PE-284/26": {
+   "archivo": null,
+   "dado_cuenta": "17/09/2026",
+   "dae": "29/26",
+   "ingreso": "28/08/2026",
+   "od": null,
+   "sancion": "",
+   "sancion_fecha": null
+  },
+  "PE-285/26": {
+   "archivo": null,
+   "dado_cuenta": "17/09/2026",
+   "dae": "29/26",
+   "ingreso": "28/08/2026",
+   "od": null,
+   "sancion": "",
+   "sancion_fecha": null
+  },
+  "PE-286/26": {
+   "archivo": null,
+   "dado_cuenta": "17/09/2026",
+   "dae": "29/26",
+   "ingreso": "28/08/2026",
+   "od": null,
+   "sancion": "",
+   "sancion_fecha": null
+  },
+  "PE-287/26": {
+   "archivo": null,
+   "dado_cuenta": "17/09/2026",
+   "dae": "29/26",
+   "ingreso": "28/08/2026",
+   "od": null,
+   "sancion": "",
+   "sancion_fecha": null
+  },
+  "PE-288/26": {
+   "archivo": null,
+   "dado_cuenta": "17/09/2026",
+   "dae": "29/26",
+   "ingreso": "28/08/2026",
+   "od": null,
+   "sancion": "",
+   "sancion_fecha": null
+  },
+  "PE-289/26": {
+   "archivo": null,
+   "dado_cuenta": "17/09/2026",
+   "dae": "29/26",
+   "ingreso": "28/08/2026",
+   "od": null,
+   "sancion": "",
+   "sancion_fecha": null
+  },
+  "PE-29/26": {
+   "archivo": "16/06/2026",
+   "dado_cuenta": "09/04/2026",
+   "dae": "4/26",
+   "ingreso": "30/03/2026",
+   "od": {
+    "anio": "2026",
+    "estado": "APROBADA",
+    "fecha": "13/05/2026",
+    "numero": "40"
+   },
+   "sancion": "aprobada",
+   "sancion_fecha": "04/06/2026"
+  },
+  "PE-290/26": {
+   "archivo": null,
+   "dado_cuenta": "17/09/2026",
+   "dae": "29/26",
+   "ingreso": "28/08/2026",
+   "od": null,
+   "sancion": "",
+   "sancion_fecha": null
+  },
+  "PE-291/26": {
+   "archivo": null,
+   "dado_cuenta": "17/09/2026",
+   "dae": "29/26",
+   "ingreso": "28/08/2026",
+   "od": null,
+   "sancion": "",
+   "sancion_fecha": null
+  },
+  "PE-292/26": {
+   "archivo": null,
+   "dado_cuenta": "17/09/2026",
+   "dae": "29/26",
+   "ingreso": "28/08/2026",
+   "od": null,
+   "sancion": "",
+   "sancion_fecha": null
+  },
+  "PE-293/26": {
+   "archivo": null,
+   "dado_cuenta": "17/09/2026",
+   "dae": "29/26",
+   "ingreso": "28/08/2026",
+   "od": null,
+   "sancion": "",
+   "sancion_fecha": null
+  },
+  "PE-30/26": {
+   "archivo": "16/06/2026",
+   "dado_cuenta": "09/04/2026",
+   "dae": "4/26",
+   "ingreso": "30/03/2026",
+   "od": {
+    "anio": "2026",
+    "estado": "APROBADA",
+    "fecha": "14/05/2026",
+    "numero": "62"
+   },
+   "sancion": "aprobada",
+   "sancion_fecha": "04/06/2026"
+  },
+  "PE-300/26": {
+   "archivo": null,
+   "dado_cuenta": "17/09/2026",
+   "dae": "30/26",
+   "ingreso": "11/09/2026",
+   "od": null,
+   "sancion": "",
+   "sancion_fecha": null
+  },
+  "PE-301/26": {
+   "archivo": null,
+   "dado_cuenta": "17/09/2026",
+   "dae": "30/26",
+   "ingreso": "11/09/2026",
+   "od": null,
+   "sancion": "",
+   "sancion_fecha": null
+  },
+  "PE-302/26": {
+   "archivo": null,
+   "dado_cuenta": "17/09/2026",
+   "dae": "30/26",
+   "ingreso": "11/09/2026",
+   "od": null,
+   "sancion": "",
+   "sancion_fecha": null
+  },
+  "PE-303/26": {
+   "archivo": null,
+   "dado_cuenta": "17/09/2026",
+   "dae": "30/26",
+   "ingreso": "11/09/2026",
+   "od": null,
+   "sancion": "",
+   "sancion_fecha": null
+  },
+  "PE-304/26": {
+   "archivo": null,
+   "dado_cuenta": "17/09/2026",
+   "dae": "30/26",
+   "ingreso": "11/09/2026",
+   "od": null,
+   "sancion": "",
+   "sancion_fecha": null
+  },
+  "PE-308/26": {
+   "archivo": null,
+   "dado_cuenta": "29/10/2026",
+   "dae": "31/26",
+   "ingreso": "28/09/2026",
+   "od": null,
+   "sancion": "",
+   "sancion_fecha": null
+  },
+  "PE-309/26": {
+   "archivo": null,
+   "dado_cuenta": "29/10/2026",
+   "dae": "31/26",
+   "ingreso": "28/09/2026",
+   "od": null,
+   "sancion": "",
+   "sancion_fecha": null
+  },
+  "PE-31/26": {
+   "archivo": "16/06/2026",
+   "dado_cuenta": "09/04/2026",
+   "dae": "4/26",
+   "ingreso": "30/03/2026",
+   "od": {
+    "anio": "2026",
+    "estado": "APROBADA",
+    "fecha": "03/06/2026",
+    "numero": "112"
+   },
+   "sancion": "aprobada",
+   "sancion_fecha": "04/06/2026"
+  },
+  "PE-310/26": {
+   "archivo": null,
+   "dado_cuenta": "29/10/2026",
+   "dae": "31/26",
+   "ingreso": "28/09/2026",
+   "od": null,
+   "sancion": "",
+   "sancion_fecha": null
+  },
+  "PE-311/26": {
+   "archivo": null,
+   "dado_cuenta": "29/10/2026",
+   "dae": "31/26",
+   "ingreso": "28/09/2026",
+   "od": null,
+   "sancion": "",
+   "sancion_fecha": null
+  },
+  "PE-312/26": {
+   "archivo": null,
+   "dado_cuenta": "29/10/2026",
+   "dae": "31/26",
+   "ingreso": "28/09/2026",
+   "od": null,
+   "sancion": "",
+   "sancion_fecha": null
+  },
+  "PE-32/26": {
+   "archivo": "16/06/2026",
+   "dado_cuenta": "09/04/2026",
+   "dae": "4/26",
+   "ingreso": "30/03/2026",
+   "od": {
+    "anio": "2026",
+    "estado": "APROBADA",
+    "fecha": "13/05/2026",
+    "numero": "41"
+   },
+   "sancion": "aprobada",
+   "sancion_fecha": "04/06/2026"
+  },
+  "PE-33/26": {
+   "archivo": "16/06/2026",
+   "dado_cuenta": "09/04/2026",
+   "dae": "4/26",
+   "ingreso": "30/03/2026",
+   "od": {
+    "anio": "2026",
+    "estado": "APROBADA",
+    "fecha": "13/05/2026",
+    "numero": "42"
+   },
+   "sancion": "aprobada",
+   "sancion_fecha": "04/06/2026"
+  },
+  "PE-331/26": {
+   "archivo": null,
+   "dado_cuenta": null,
+   "dae": "33/26",
+   "ingreso": "29/10/2026",
+   "nuevo": {
+    "candidato": "RICARDO FABIÁN ROJAS",
+    "cargo": "JUEZ DEL JUZGADO FEDERAL DE PRIMERA INSTANCIA DE CLORINDA, PROVINCIA DE FORMOSA",
+    "fuero": "Otros",
+    "provincia": "Formosa",
+    "rango": "Juez/a (primera instancia)",
+    "url": "https://www.senado.gob.ar/parlamentario/comisiones/verExp/331.26/PE/AC"
+   },
+   "od": null,
+   "sancion": "",
+   "sancion_fecha": null
+  },
+  "PE-332/26": {
+   "archivo": null,
+   "dado_cuenta": null,
+   "dae": "33/26",
+   "ingreso": "29/10/2026",
+   "nuevo": {
+    "candidato": "GABRIEL GONZALO REY",
+    "cargo": "VOCAL DE LA CÁMARA NACIONAL DE APELACIONES EN LO CRIMINAL Y CORRECCIONAL DE LA CAPITAL FEDERAL, VOCALÍA N° 9",
+    "fuero": "Penal",
+    "provincia": "CABA",
+    "rango": "Camarista / Vocal de Cámara",
+    "url": "https://www.senado.gob.ar/parlamentario/comisiones/verExp/332.26/PE/AC"
+   },
+   "od": null,
+   "sancion": "",
+   "sancion_fecha": null
+  },
+  "PE-333/26": {
+   "archivo": null,
+   "dado_cuenta": null,
+   "dae": "33/26",
+   "ingreso": "29/10/2026",
+   "nuevo": {
+    "candidato": "MARIA GABRIELA ALCOLUMBRE",
+    "cargo": "VOCAL DE LA CÁMARA NACIONAL DE APELACIONES DEL TRABAJO DE LA CAPITAL FEDERAL, SALA X",
+    "fuero": "Laboral",
+    "provincia": "CABA",
+    "rango": "Camarista / Vocal de Cámara",
+    "url": "https://www.senado.gob.ar/parlamentario/comisiones/verExp/333.26/PE/AC"
+   },
+   "od": null,
+   "sancion": "",
+   "sancion_fecha": null
+  },
+  "PE-334/26": {
+   "archivo": null,
+   "dado_cuenta": null,
+   "dae": "33/26",
+   "ingreso": "29/10/2026",
+   "nuevo": {
+    "candidato": "MATIAS ALEJANDRO LATINO",
+    "cargo": "JUEZ DEL JUZGADO NACIONAL DE PRIMERA INSTANCIA EN LO PENAL ECONOMICO N° 10 DE LA CAPITAL FEDERAL",
+    "fuero": "Penal Económico",
+    "provincia": "CABA",
+    "rango": "Juez/a (primera instancia)",
+    "url": "https://www.senado.gob.ar/parlamentario/comisiones/verExp/334.26/PE/AC"
+   },
+   "od": null,
+   "sancion": "",
+   "sancion_fecha": null
+  },
+  "PE-335/26": {
+   "archivo": null,
+   "dado_cuenta": null,
+   "dae": "33/26",
+   "ingreso": "29/10/2026",
+   "nuevo": {
+    "candidato": "MARIA VALERIA ROSITO PERALTA URQUIZA",
+    "cargo": "JUEZA DE CAMARA DEL TRIBUNAL ORAL EN LO PENAL ECONOMICO N° 1 DE LA CAPITAL FEDERAL",
+    "fuero": "Penal Económico",
+    "provincia": "CABA",
+    "rango": "Camarista / Vocal de Cámara",
+    "url": "https://www.senado.gob.ar/parlamentario/comisiones/verExp/335.26/PE/AC"
+   },
+   "od": null,
+   "sancion": "",
+   "sancion_fecha": null
+  },
+  "PE-336/26": {
+   "archivo": null,
+   "dado_cuenta": null,
+   "dae": "33/26",
+   "ingreso": "29/10/2026",
+   "nuevo": {
+    "candidato": "CARLOS FEDERICO COCIANCICH",
+    "cargo": "JUEZ DE CAMARA DEL TRIBUNAL ORAL EN LO CRIMINAL Y CORRECCIONAL N° 19 DE LA CAPITAL FEDERAL",
+    "fuero": "Penal",
+    "provincia": "CABA",
+    "rango": "Camarista / Vocal de Cámara",
+    "url": "https://www.senado.gob.ar/parlamentario/comisiones/verExp/336.26/PE/AC"
+   },
+   "od": null,
+   "sancion": "",
+   "sancion_fecha": null
+  },
+  "PE-337/26": {
+   "archivo": null,
+   "dado_cuenta": null,
+   "dae": "33/26",
+   "ingreso": "29/10/2026",
+   "nuevo": {
+    "candidato": "ARIEL DI GIURA KALTENEGGER",
+    "cargo": "JUEZ PENAL FEDERAL DEL JUZGADO FEDERAL DE GARANTIAS CON ASIENTO EN LA CDAD. DE RECONQUISTA, PROV. DE SANTA FE",
+    "fuero": "Penal",
+    "provincia": "Santa Fe",
+    "rango": "Juez/a (primera instancia)",
+    "url": "https://www.senado.gob.ar/parlamentario/comisiones/verExp/337.26/PE/AC"
+   },
+   "od": null,
+   "sancion": "",
+   "sancion_fecha": null
+  },
+  "PE-338/26": {
+   "archivo": null,
+   "dado_cuenta": null,
+   "dae": "33/26",
+   "ingreso": "29/10/2026",
+   "nuevo": {
+    "candidato": "FERNANDO BUJAN",
+    "cargo": "DEFENSOR PUBLICO OFICIAL ANTE LA CAMARA FEDERAL DE CASACION PENAL, DEFENSORIA N° 4",
+    "fuero": "Casación Penal",
+    "provincia": "Nacional / Federal",
+    "rango": "Defensor/a",
+    "url": "https://www.senado.gob.ar/parlamentario/comisiones/verExp/338.26/PE/AC"
+   },
+   "od": null,
+   "sancion": "",
+   "sancion_fecha": null
+  },
+  "PE-339/26": {
+   "archivo": null,
+   "dado_cuenta": null,
+   "dae": "33/26",
+   "ingreso": "29/10/2026",
+   "nuevo": {
+    "candidato": "HERNAN HUGO RE",
+    "cargo": "JUEZ DE CAMARA DEL TRIBUNAL ORAL EN LO CRIMINAL FEDERAL N° 4 DE SAN MARTIN, PROV. DE BUENOS AIRES",
+    "fuero": "Penal",
+    "provincia": "Buenos Aires",
+    "rango": "Camarista / Vocal de Cámara",
+    "url": "https://www.senado.gob.ar/parlamentario/comisiones/verExp/339.26/PE/AC"
+   },
+   "od": null,
+   "sancion": "",
+   "sancion_fecha": null
+  },
+  "PE-34/26": {
+   "archivo": null,
+   "dado_cuenta": "09/04/2026",
+   "dae": "4/26",
+   "ingreso": "30/03/2026",
+   "od": {
+    "anio": "2026",
+    "estado": "APROBADA",
+    "fecha": "15/05/2026",
+    "numero": "88"
+   },
+   "sancion": "aprobada",
+   "sancion_fecha": "04/06/2026"
+  },
+  "PE-340/26": {
+   "archivo": null,
+   "dado_cuenta": null,
+   "dae": "33/26",
+   "ingreso": "29/10/2026",
+   "nuevo": {
+    "candidato": "BRIAN EZEQUIEL GALLO",
+    "cargo": "DEFENSOR PUBLICO OFICIAL FEDERAL CON JURISDICCION EN EL DISTRITO FEDERAL DE ROSARIO, CON ASIENTO EN LA CDAD. DE SAN LORENZO, PROV. DE SANTA FE",
+    "fuero": "Otros",
+    "provincia": "Santa Fe",
+    "rango": "Defensor/a",
+    "url": "https://www.senado.gob.ar/parlamentario/comisiones/verExp/340.26/PE/AC"
+   },
+   "od": null,
+   "sancion": "",
+   "sancion_fecha": null
+  },
+  "PE-341/26": {
+   "archivo": null,
+   "dado_cuenta": null,
+   "dae": "33/26",
+   "ingreso": "29/10/2026",
+   "nuevo": {
+    "candidato": "GABRIEL ADRIAN JAIME",
+    "cargo": "DEFENSOR PUBLICO OFICIAL ANTE EL JUZGADO FEDERAL DE PRIMERA INSTANCIA N° 2 DE CATAMARCA, PROV. DE CATAMARCA",
+    "fuero": "Otros",
+    "provincia": "Catamarca",
+    "rango": "Defensor/a",
+    "url": "https://www.senado.gob.ar/parlamentario/comisiones/verExp/341.26/PE/AC"
+   },
+   "od": null,
+   "sancion": "",
+   "sancion_fecha": null
+  },
+  "PE-342/26": {
+   "archivo": null,
+   "dado_cuenta": null,
+   "dae": "33/26",
+   "ingreso": "29/10/2026",
+   "nuevo": {
+    "candidato": "GASTON RODRIGO ETCHEBASTER",
+    "cargo": "FISCAL DE LA PROCURADURIA DE INVESTIGACIONES ADMINISTRATIVAS",
+    "fuero": "Otros",
+    "provincia": "Nacional / Federal",
+    "rango": "Fiscal",
+    "url": "https://www.senado.gob.ar/parlamentario/comisiones/verExp/342.26/PE/AC"
+   },
+   "od": null,
+   "sancion": "",
+   "sancion_fecha": null
+  },
+  "PE-343/26": {
+   "archivo": null,
+   "dado_cuenta": null,
+   "dae": "33/26",
+   "ingreso": "29/10/2026",
+   "nuevo": {
+    "candidato": "JUAN PABLO FERNANDEZ",
+    "cargo": "JUEZ DEL TRIBUNAL FEDERAL DE JUICIO DE BAHIA BLANCA, PROV. DE BUENOS AIRES",
+    "fuero": "Otros",
+    "provincia": "Buenos Aires",
+    "rango": "Juez/a (primera instancia)",
+    "url": "https://www.senado.gob.ar/parlamentario/comisiones/verExp/343.26/PE/AC"
+   },
+   "od": null,
+   "sancion": "",
+   "sancion_fecha": null
+  },
+  "PE-344/26": {
+   "archivo": null,
+   "dado_cuenta": null,
+   "dae": "33/26",
+   "ingreso": "29/10/2026",
+   "nuevo": {
+    "candidato": "ADRIAN ESTEBAN MACERI",
+    "cargo": "DEFENSOR PUBLICO OFICIAL FEDERAL DEL INTERIOR DEL PAIS, CON ASIENTO EN LA CDAD. DE GOYA, PROV. DE CORRIENTES",
+    "fuero": "Otros",
+    "provincia": "Corrientes",
+    "rango": "Defensor/a",
+    "url": "https://www.senado.gob.ar/parlamentario/comisiones/verExp/344.26/PE/AC"
+   },
+   "od": null,
+   "sancion": "",
+   "sancion_fecha": null
+  },
+  "PE-345/26": {
+   "archivo": null,
+   "dado_cuenta": null,
+   "dae": "33/26",
+   "ingreso": "29/10/2026",
+   "nuevo": {
+    "candidato": "IGNACIO MARTIN REBAUDI BASAVILBASO",
+    "cargo": "VOCAL DE LA CAMARA NACIONAL DE APELACIONES EN LO CIVIL Y COMERCIAL FEDERAL DE LA CAPITAL FEDERAL, SALA III",
+    "fuero": "Comercial",
+    "provincia": "CABA",
+    "rango": "Camarista / Vocal de Cámara",
+    "url": "https://www.senado.gob.ar/parlamentario/comisiones/verExp/345.26/PE/AC"
+   },
+   "od": null,
+   "sancion": "",
+   "sancion_fecha": null
+  },
+  "PE-346/26": {
+   "archivo": null,
+   "dado_cuenta": null,
+   "dae": "33/26",
+   "ingreso": "29/10/2026",
+   "nuevo": {
+    "candidato": "MARIANO ROMERO",
+    "cargo": "DEFENSOR PUBLICO OFICIAL ANTE EL TRIBUNAL ORAL EN LO CRIMINAL FEDERAL DE SANTIAGO DEL ESTERO, PROV. DE SANTIAGO DEL ESTERO",
+    "fuero": "Penal",
+    "provincia": "Santiago del Estero",
+    "rango": "Defensor/a",
+    "url": "https://www.senado.gob.ar/parlamentario/comisiones/verExp/346.26/PE/AC"
+   },
+   "od": null,
+   "sancion": "",
+   "sancion_fecha": null
+  },
+  "PE-347/26": {
+   "archivo": null,
+   "dado_cuenta": null,
+   "dae": "33/26",
+   "ingreso": "30/10/2026",
+   "nuevo": {
+    "candidato": "VALERIA CRISTINA PEREYRA",
+    "cargo": "JUEZA DEL JUZGADO NACIONAL DE PRIMERA INSTANCIA EN LO COMERCIAL N° 26 DE LA CAPITAL FEDERAL",
+    "fuero": "Comercial",
+    "provincia": "CABA",
+    "rango": "Juez/a (primera instancia)",
+    "url": "https://www.senado.gob.ar/parlamentario/comisiones/verExp/347.26/PE/AC"
+   },
+   "od": null,
+   "sancion": "",
+   "sancion_fecha": null
+  },
+  "PE-348/26": {
+   "archivo": null,
+   "dado_cuenta": null,
+   "dae": "33/26",
+   "ingreso": "30/10/2026",
+   "nuevo": {
+    "candidato": "FERNANDO JULIAN OLTRA SANTA CRUZ",
+    "cargo": "VOCAL DE LA CAMARA NACIONAL DE APELACIONES EN LO CIVIL DE LA CAPITAL FEDERAL, SALA M",
+    "fuero": "Civil",
+    "provincia": "CABA",
+    "rango": "Camarista / Vocal de Cámara",
+    "url": "https://www.senado.gob.ar/parlamentario/comisiones/verExp/348.26/PE/AC"
+   },
+   "od": null,
+   "sancion": "",
+   "sancion_fecha": null
+  },
+  "PE-349/26": {
+   "archivo": null,
+   "dado_cuenta": null,
+   "dae": "33/26",
+   "ingreso": "30/10/2026",
+   "nuevo": {
+    "candidato": "MIRTA GRACIELA MARTINEZ",
+    "cargo": "JUEZA DEL JUZGADO FEDERAL DE PRIMERA INSTANCIA N° 2 DE LA PLATA, PROVINCIA DE BUENOS AIRES",
+    "fuero": "Otros",
+    "provincia": "Buenos Aires",
+    "rango": "Juez/a (primera instancia)",
+    "url": "https://www.senado.gob.ar/parlamentario/comisiones/verExp/349.26/PE/AC"
+   },
+   "od": null,
+   "sancion": "",
+   "sancion_fecha": null
+  },
+  "PE-35/26": {
+   "archivo": "25/09/2026",
+   "dado_cuenta": "09/04/2026",
+   "dae": "4/26",
+   "ingreso": "30/03/2026",
+   "od": {
+    "anio": "2026",
+    "estado": "APROBADA",
+    "fecha": "27/08/2026",
+    "numero": "353"
+   },
+   "sancion": "aprobada",
+   "sancion_fecha": "17/09/2026"
+  },
+  "PE-350/26": {
+   "archivo": null,
+   "dado_cuenta": null,
+   "dae": "33/26",
+   "ingreso": "30/10/2026",
+   "nuevo": {
+    "candidato": "GERMAN DIEGO HIRALDE VEGA",
+    "cargo": "JUEZ DEL JUZGADO NACIONAL DE PRIMERA INSTANCIA EN LO CIVIL N° 72 DE LA CAPITAL FEDERAL",
+    "fuero": "Civil",
+    "provincia": "CABA",
+    "rango": "Juez/a (primera instancia)",
+    "url": "https://www.senado.gob.ar/parlamentario/comisiones/verExp/350.26/PE/AC"
+   },
+   "od": null,
+   "sancion": "",
+   "sancion_fecha": null
+  },
+  "PE-351/26": {
+   "archivo": null,
+   "dado_cuenta": null,
+   "dae": "33/26",
+   "ingreso": "30/10/2026",
+   "nuevo": {
+    "candidato": "JAVIER ANIBAL IBARRA",
+    "cargo": "DEFENSOR PUBLICO OFICIAL ANTE LOS TRIBUNALES ORALES EN LO CRIMINAL Y CORRECCIONAL DE LA CAPITAL FEDERAL, DEFENSORIA N° 4",
+    "fuero": "Penal",
+    "provincia": "CABA",
+    "rango": "Defensor/a",
+    "url": "https://www.senado.gob.ar/parlamentario/comisiones/verExp/351.26/PE/AC"
+   },
+   "od": null,
+   "sancion": "",
+   "sancion_fecha": null
+  },
+  "PE-352/26": {
+   "archivo": null,
+   "dado_cuenta": null,
+   "dae": "33/26",
+   "ingreso": "30/10/2026",
+   "nuevo": {
+    "candidato": "GERARDO DAMIAN SANTICCHIA",
+    "cargo": "VOCAL DE LA CAMARA NACIONAL DE APELACIONES EN LO COMERCIAL DE LA CAPITAL FEDERAL, SALA E",
+    "fuero": "Comercial",
+    "provincia": "CABA",
+    "rango": "Camarista / Vocal de Cámara",
+    "url": "https://www.senado.gob.ar/parlamentario/comisiones/verExp/352.26/PE/AC"
+   },
+   "od": null,
+   "sancion": "",
+   "sancion_fecha": null
+  },
+  "PE-353/26": {
+   "archivo": null,
+   "dado_cuenta": null,
+   "dae": "33/26",
+   "ingreso": "30/10/2026",
+   "nuevo": {
+    "candidato": "HUMBERTO CARLOS GUARDIA MENDONCA",
+    "cargo": "VOCAL DE LA CAMARA NACIONAL DE APELACIONES EN LO CIVIL Y COMERCIAL FEDERAL DE LA CAPITAL FEDERAL, SALA ESPECIALIZADA EN DEFENSA DE LA COMPETENCIA",
+    "fuero": "Comercial",
+    "provincia": "CABA",
+    "rango": "Camarista / Vocal de Cámara",
+    "url": "https://www.senado.gob.ar/parlamentario/comisiones/verExp/353.26/PE/AC"
+   },
+   "od": null,
+   "sancion": "",
+   "sancion_fecha": null
+  },
+  "PE-354/26": {
+   "archivo": null,
+   "dado_cuenta": null,
+   "dae": "33/26",
+   "ingreso": "30/10/2026",
+   "nuevo": {
+    "candidato": "SANTIAGO ROCA",
+    "cargo": "VOCAL DE LA CAMARA NACIONAL DE APELACIONES EN LO CIVIL Y COMERCIAL FEDERAL DE LA CAPITAL FEDERAL, SALA ESPECIALIZADA EN DEFENSA DE LA COMPETENCIA",
+    "fuero": "Comercial",
+    "provincia": "CABA",
+    "rango": "Camarista / Vocal de Cámara",
+    "url": "https://www.senado.gob.ar/parlamentario/comisiones/verExp/354.26/PE/AC"
+   },
+   "od": null,
+   "sancion": "",
+   "sancion_fecha": null
+  },
+  "PE-355/26": {
+   "archivo": null,
+   "dado_cuenta": null,
+   "dae": "33/26",
+   "ingreso": "30/10/2026",
+   "nuevo": {
+    "candidato": "SILVIA BEATRIZ PFARHERR",
+    "cargo": "VOCAL DE LA CAMARA NACIONAL DE APELACIONES EN LO CIVIL Y COMERCIAL FEDERAL DE LA CAPITAL FEDERAL, SALA ESPECIALIZADA EN DEFENSA DE LA COMPETENCIA",
+    "fuero": "Comercial",
+    "provincia": "CABA",
+    "rango": "Camarista / Vocal de Cámara",
+    "url": "https://www.senado.gob.ar/parlamentario/comisiones/verExp/355.26/PE/AC"
+   },
+   "od": null,
+   "sancion": "",
+   "sancion_fecha": null
+  },
+  "PE-356/26": {
+   "archivo": null,
+   "dado_cuenta": null,
+   "dae": "33/26",
+   "ingreso": "30/10/2026",
+   "nuevo": {
+    "candidato": "RAFAEL FRANCISCO CAPUTO",
+    "cargo": "VOCAL DE LA CAMARA NACIONAL DE APELACIONES EN LO PENAL ECONOMICO, SALA A",
+    "fuero": "Penal Económico",
+    "provincia": "Nacional / Federal",
+    "rango": "Camarista / Vocal de Cámara",
+    "url": "https://www.senado.gob.ar/parlamentario/comisiones/verExp/356.26/PE/AC"
+   },
+   "od": null,
+   "sancion": "",
+   "sancion_fecha": null
+  },
+  "PE-36/26": {
+   "archivo": "16/06/2026",
+   "dado_cuenta": "09/04/2026",
+   "dae": "4/26",
+   "ingreso": "30/03/2026",
+   "od": {
+    "anio": "2026",
+    "estado": "APROBADA",
+    "fecha": "14/05/2026",
+    "numero": "63"
+   },
+   "sancion": "aprobada",
+   "sancion_fecha": "04/06/2026"
+  },
+  "PE-37/26": {
+   "archivo": "25/09/2026",
+   "dado_cuenta": "09/04/2026",
+   "dae": "4/26",
+   "ingreso": "30/03/2026",
+   "od": {
+    "anio": "2026",
+    "estado": "APROBADA",
+    "fecha": "27/08/2026",
+    "numero": "354"
+   },
+   "sancion": "aprobada",
+   "sancion_fecha": "17/09/2026"
+  },
+  "PE-38/26": {
+   "archivo": "16/06/2026",
+   "dado_cuenta": "09/04/2026",
+   "dae": "4/26",
+   "ingreso": "30/03/2026",
+   "od": {
+    "anio": "2026",
+    "estado": "APROBADA",
+    "fecha": "13/05/2026",
+    "numero": "43"
+   },
+   "sancion": "aprobada",
+   "sancion_fecha": "04/06/2026"
+  },
+  "PE-39/26": {
+   "archivo": "16/06/2026",
+   "dado_cuenta": "09/04/2026",
+   "dae": "4/26",
+   "ingreso": "30/03/2026",
+   "od": {
+    "anio": "2026",
+    "estado": "APROBADA",
+    "fecha": "13/05/2026",
+    "numero": "44"
+   },
+   "sancion": "aprobada",
+   "sancion_fecha": "04/06/2026"
+  },
+  "PE-40/26": {
+   "archivo": "16/06/2026",
+   "dado_cuenta": "09/04/2026",
+   "dae": "4/26",
+   "ingreso": "30/03/2026",
+   "od": {
+    "anio": "2026",
+    "estado": "APROBADA",
+    "fecha": "13/05/2026",
+    "numero": "45"
+   },
+   "sancion": "aprobada",
+   "sancion_fecha": "04/06/2026"
+  },
+  "PE-41/26": {
+   "archivo": "16/06/2026",
+   "dado_cuenta": "09/04/2026",
+   "dae": "4/26",
+   "ingreso": "30/03/2026",
+   "od": {
+    "anio": "2026",
+    "estado": "APROBADA",
+    "fecha": "13/05/2026",
+    "numero": "46"
+   },
+   "sancion": "aprobada",
+   "sancion_fecha": "04/06/2026"
+  },
+  "PE-42/26": {
+   "archivo": "16/06/2026",
+   "dado_cuenta": "09/04/2026",
+   "dae": "4/26",
+   "ingreso": "30/03/2026",
+   "od": {
+    "anio": "2026",
+    "estado": "APROBADA",
+    "fecha": "13/05/2026",
+    "numero": "47"
+   },
+   "sancion": "aprobada",
+   "sancion_fecha": "04/06/2026"
+  },
+  "PE-43/26": {
+   "archivo": "16/06/2026",
+   "dado_cuenta": "09/04/2026",
+   "dae": "4/26",
+   "ingreso": "30/03/2026",
+   "od": {
+    "anio": "2026",
+    "estado": "APROBADA",
+    "fecha": "13/05/2026",
+    "numero": "48"
+   },
+   "sancion": "aprobada",
+   "sancion_fecha": "04/06/2026"
+  },
+  "PE-44/26": {
+   "archivo": "16/06/2026",
+   "dado_cuenta": "09/04/2026",
+   "dae": "4/26",
+   "ingreso": "30/03/2026",
+   "od": {
+    "anio": "2026",
+    "estado": "APROBADA",
+    "fecha": "13/05/2026",
+    "numero": "49"
+   },
+   "sancion": "aprobada",
+   "sancion_fecha": "04/06/2026"
+  },
+  "PE-45/26": {
+   "archivo": "16/06/2026",
+   "dado_cuenta": "09/04/2026",
+   "dae": "4/26",
+   "ingreso": "30/03/2026",
+   "od": {
+    "anio": "2026",
+    "estado": "APROBADA",
+    "fecha": "15/05/2026",
+    "numero": "89"
+   },
+   "sancion": "aprobada",
+   "sancion_fecha": "04/06/2026"
+  },
+  "PE-46/26": {
+   "archivo": "16/06/2026",
+   "dado_cuenta": "09/04/2026",
+   "dae": "4/26",
+   "ingreso": "30/03/2026",
+   "od": {
+    "anio": "2026",
+    "estado": "APROBADA",
+    "fecha": "13/05/2026",
+    "numero": "50"
+   },
+   "sancion": "aprobada",
+   "sancion_fecha": "04/06/2026"
+  },
+  "PE-47/26": {
+   "archivo": "16/06/2026",
+   "dado_cuenta": "09/04/2026",
+   "dae": "4/26",
+   "ingreso": "30/03/2026",
+   "od": {
+    "anio": "2026",
+    "estado": "APROBADA",
+    "fecha": "13/05/2026",
+    "numero": "51"
+   },
+   "sancion": "aprobada",
+   "sancion_fecha": "04/06/2026"
+  },
+  "PE-48/26": {
+   "archivo": "16/06/2026",
+   "dado_cuenta": "09/04/2026",
+   "dae": "4/26",
+   "ingreso": "30/03/2026",
+   "od": {
+    "anio": "2026",
+    "estado": "APROBADA",
+    "fecha": "13/05/2026",
+    "numero": "52"
+   },
+   "sancion": "aprobada",
+   "sancion_fecha": "04/06/2026"
+  },
+  "PE-49/26": {
+   "archivo": "16/06/2026",
+   "dado_cuenta": "09/04/2026",
+   "dae": "4/26",
+   "ingreso": "30/03/2026",
+   "od": {
+    "anio": "2026",
+    "estado": "APROBADA",
+    "fecha": "13/05/2026",
+    "numero": "53"
+   },
+   "sancion": "aprobada",
+   "sancion_fecha": "04/06/2026"
+  },
+  "PE-50/26": {
+   "archivo": "16/06/2026",
+   "dado_cuenta": "09/04/2026",
+   "dae": "4/26",
+   "ingreso": "30/03/2026",
+   "od": {
+    "anio": "2026",
+    "estado": "APROBADA",
+    "fecha": "13/05/2026",
+    "numero": "54"
+   },
+   "sancion": "aprobada",
+   "sancion_fecha": "04/06/2026"
+  },
+  "PE-51/26": {
+   "archivo": "16/06/2026",
+   "dado_cuenta": "09/04/2026",
+   "dae": "4/26",
+   "ingreso": "30/03/2026",
+   "od": {
+    "anio": "2026",
+    "estado": "APROBADA",
+    "fecha": "13/05/2026",
+    "numero": "55"
+   },
+   "sancion": "aprobada",
+   "sancion_fecha": "04/06/2026"
+  },
+  "PE-52/26": {
+   "archivo": "16/06/2026",
+   "dado_cuenta": "09/04/2026",
+   "dae": "4/26",
+   "ingreso": "30/03/2026",
+   "od": {
+    "anio": "2026",
+    "estado": "APROBADA",
+    "fecha": "14/05/2026",
+    "numero": "64"
+   },
+   "sancion": "aprobada",
+   "sancion_fecha": "04/06/2026"
+  },
+  "PE-53/26": {
+   "archivo": "16/06/2026",
+   "dado_cuenta": "09/04/2026",
+   "dae": "4/26",
+   "ingreso": "30/03/2026",
+   "od": {
+    "anio": "2026",
+    "estado": "APROBADA",
+    "fecha": "14/05/2026",
+    "numero": "65"
+   },
+   "sancion": "aprobada",
+   "sancion_fecha": "04/06/2026"
+  },
+  "PE-54/26": {
+   "archivo": "16/06/2026",
+   "dado_cuenta": "09/04/2026",
+   "dae": "4/26",
+   "ingreso": "30/03/2026",
+   "od": {
+    "anio": "2026",
+    "estado": "APROBADA",
+    "fecha": "14/05/2026",
+    "numero": "66"
+   },
+   "sancion": "aprobada",
+   "sancion_fecha": "04/06/2026"
+  },
+  "PE-55/26": {
+   "archivo": "16/06/2026",
+   "dado_cuenta": "09/04/2026",
+   "dae": "4/26",
+   "ingreso": "30/03/2026",
+   "od": {
+    "anio": "2026",
+    "estado": "APROBADA",
+    "fecha": "13/05/2026",
+    "numero": "56"
+   },
+   "sancion": "aprobada",
+   "sancion_fecha": "04/06/2026"
+  },
+  "PE-56/26": {
+   "archivo": "16/06/2026",
+   "dado_cuenta": "09/04/2026",
+   "dae": "4/26",
+   "ingreso": "30/03/2026",
+   "od": {
+    "anio": "2026",
+    "estado": "APROBADA",
+    "fecha": "14/05/2026",
+    "numero": "67"
+   },
+   "sancion": "aprobada",
+   "sancion_fecha": "04/06/2026"
+  },
+  "PE-57/26": {
+   "archivo": "16/06/2026",
+   "dado_cuenta": "09/04/2026",
+   "dae": "4/26",
+   "ingreso": "30/03/2026",
+   "od": {
+    "anio": "2026",
+    "estado": "APROBADA",
+    "fecha": "14/05/2026",
+    "numero": "68"
+   },
+   "sancion": "aprobada",
+   "sancion_fecha": "04/06/2026"
+  },
+  "PE-58/26": {
+   "archivo": "16/06/2026",
+   "dado_cuenta": "09/04/2026",
+   "dae": "4/26",
+   "ingreso": "30/03/2026",
+   "od": {
+    "anio": "2026",
+    "estado": "APROBADA",
+    "fecha": "15/05/2026",
+    "numero": "90"
+   },
+   "sancion": "aprobada",
+   "sancion_fecha": "04/06/2026"
+  },
+  "PE-59/26": {
+   "archivo": "16/06/2026",
+   "dado_cuenta": "09/04/2026",
+   "dae": "4/26",
+   "ingreso": "30/03/2026",
+   "od": {
+    "anio": "2026",
+    "estado": "APROBADA",
+    "fecha": "14/05/2026",
+    "numero": "69"
+   },
+   "sancion": "aprobada",
+   "sancion_fecha": "04/06/2026"
+  },
+  "PE-60/26": {
+   "archivo": "16/06/2026",
+   "dado_cuenta": "09/04/2026",
+   "dae": "5/26",
+   "ingreso": "31/03/2026",
+   "od": {
+    "anio": "2026",
+    "estado": "APROBADA",
+    "fecha": "14/05/2026",
+    "numero": "70"
+   },
+   "sancion": "aprobada",
+   "sancion_fecha": "04/06/2026"
+  },
+  "PE-61/26": {
+   "archivo": "16/06/2026",
+   "dado_cuenta": "09/04/2026",
+   "dae": "5/26",
+   "ingreso": "31/03/2026",
+   "od": {
+    "anio": "2026",
+    "estado": "APROBADA",
+    "fecha": "14/05/2026",
+    "numero": "71"
+   },
+   "sancion": "aprobada",
+   "sancion_fecha": "04/06/2026"
+  },
+  "PE-62/26": {
+   "archivo": "16/06/2026",
+   "dado_cuenta": "09/04/2026",
+   "dae": "5/26",
+   "ingreso": "31/03/2026",
+   "od": {
+    "anio": "2026",
+    "estado": "APROBADA",
+    "fecha": "14/05/2026",
+    "numero": "72"
+   },
+   "sancion": "aprobada",
+   "sancion_fecha": "04/06/2026"
+  },
+  "PE-63/26": {
+   "archivo": "16/06/2026",
+   "dado_cuenta": "09/04/2026",
+   "dae": "5/26",
+   "ingreso": "31/03/2026",
+   "od": {
+    "anio": "2026",
+    "estado": "APROBADA",
+    "fecha": "14/05/2026",
+    "numero": "73"
+   },
+   "sancion": "aprobada",
+   "sancion_fecha": "04/06/2026"
+  },
+  "PE-64/26": {
+   "archivo": "16/06/2026",
+   "dado_cuenta": "09/04/2026",
+   "dae": "5/26",
+   "ingreso": "31/03/2026",
+   "od": {
+    "anio": "2026",
+    "estado": "APROBADA",
+    "fecha": "14/05/2026",
+    "numero": "74"
+   },
+   "sancion": "aprobada",
+   "sancion_fecha": "04/06/2026"
+  },
+  "PE-65/26": {
+   "archivo": "16/06/2026",
+   "dado_cuenta": "09/04/2026",
+   "dae": "5/26",
+   "ingreso": "31/03/2026",
+   "od": {
+    "anio": "2026",
+    "estado": "APROBADA",
+    "fecha": "14/05/2026",
+    "numero": "75"
+   },
+   "sancion": "aprobada",
+   "sancion_fecha": "04/06/2026"
+  },
+  "PE-66/26": {
+   "archivo": "16/06/2026",
+   "dado_cuenta": "09/04/2026",
+   "dae": "5/26",
+   "ingreso": "31/03/2026",
+   "od": {
+    "anio": "2026",
+    "estado": "APROBADA",
+    "fecha": "15/05/2026",
+    "numero": "91"
+   },
+   "sancion": "aprobada",
+   "sancion_fecha": "04/06/2026"
+  },
+  "PE-67/26": {
+   "archivo": "16/06/2026",
+   "dado_cuenta": "09/04/2026",
+   "dae": "5/26",
+   "ingreso": "31/03/2026",
+   "od": {
+    "anio": "2026",
+    "estado": "APROBADA",
+    "fecha": "14/05/2026",
+    "numero": "76"
+   },
+   "sancion": "aprobada",
+   "sancion_fecha": "04/06/2026"
+  },
+  "PE-68/26": {
+   "archivo": "16/06/2026",
+   "dado_cuenta": "09/04/2026",
+   "dae": "5/26",
+   "ingreso": "31/03/2026",
+   "od": {
+    "anio": "2026",
+    "estado": "APROBADA",
+    "fecha": "14/05/2026",
+    "numero": "77"
+   },
+   "sancion": "aprobada",
+   "sancion_fecha": "04/06/2026"
+  },
+  "PE-69/26": {
+   "archivo": "16/06/2026",
+   "dado_cuenta": "09/04/2026",
+   "dae": "5/26",
+   "ingreso": "31/03/2026",
+   "od": {
+    "anio": "2026",
+    "estado": "APROBADA",
+    "fecha": "14/05/2026",
+    "numero": "78"
+   },
+   "sancion": "aprobada",
+   "sancion_fecha": "04/06/2026"
+  },
+  "PE-70/26": {
+   "archivo": "16/06/2026",
+   "dado_cuenta": "09/04/2026",
+   "dae": "5/26",
+   "ingreso": "31/03/2026",
+   "od": {
+    "anio": "2026",
+    "estado": "APROBADA",
+    "fecha": "14/05/2026",
+    "numero": "79"
+   },
+   "sancion": "aprobada",
+   "sancion_fecha": "04/06/2026"
+  },
+  "PE-71/26": {
+   "archivo": "16/06/2026",
+   "dado_cuenta": "09/04/2026",
+   "dae": "5/26",
+   "ingreso": "31/03/2026",
+   "od": {
+    "anio": "2026",
+    "estado": "APROBADA",
+    "fecha": "14/05/2026",
+    "numero": "80"
+   },
+   "sancion": "aprobada",
+   "sancion_fecha": "04/06/2026"
+  },
+  "PE-72/26": {
+   "archivo": "16/06/2026",
+   "dado_cuenta": "09/04/2026",
+   "dae": "6/26",
+   "ingreso": "01/04/2026",
+   "od": {
+    "anio": "2026",
+    "estado": "APROBADA",
+    "fecha": "15/05/2026",
+    "numero": "92"
+   },
+   "sancion": "aprobada",
+   "sancion_fecha": "04/06/2026"
+  },
+  "PE-73/26": {
+   "archivo": "16/06/2026",
+   "dado_cuenta": "09/04/2026",
+   "dae": "6/26",
+   "ingreso": "01/04/2026",
+   "od": {
+    "anio": "2026",
+    "estado": "APROBADA",
+    "fecha": "13/05/2026",
+    "numero": "57"
+   },
+   "sancion": "aprobada",
+   "sancion_fecha": "04/06/2026"
+  },
+  "PE-75/26": {
+   "archivo": "16/06/2026",
+   "dado_cuenta": "09/04/2026",
+   "dae": "7/26",
+   "ingreso": "06/04/2026",
+   "od": {
+    "anio": "2026",
+    "estado": "APROBADA",
+    "fecha": "14/05/2026",
+    "numero": "81"
+   },
+   "sancion": "aprobada",
+   "sancion_fecha": "04/06/2026"
+  },
+  "PE-76/26": {
+   "archivo": "16/06/2026",
+   "dado_cuenta": "09/04/2026",
+   "dae": "8/26",
+   "ingreso": "07/04/2026",
+   "od": {
+    "anio": "2026",
+    "estado": "APROBADA",
+    "fecha": "13/05/2026",
+    "numero": "58"
+   },
+   "sancion": "aprobada",
+   "sancion_fecha": "04/06/2026"
+  },
+  "PE-77/24": {
+   "archivo": "02/10/2024",
+   "dado_cuenta": "22/08/2024",
+   "dae": "13/24",
+   "ingreso": "02/08/2024",
+   "od": {
+    "anio": "2024",
+    "estado": "APROBADA",
+    "fecha": "18/09/2024",
+    "numero": "151"
+   },
+   "sancion": "aprobada",
+   "sancion_fecha": "26/09/2024"
+  },
+  "PE-77/26": {
+   "archivo": "16/06/2026",
+   "dado_cuenta": "09/04/2026",
+   "dae": "8/26",
+   "ingreso": "07/04/2026",
+   "od": {
+    "anio": "2026",
+    "estado": "APROBADA",
+    "fecha": "14/05/2026",
+    "numero": "82"
+   },
+   "sancion": "aprobada",
+   "sancion_fecha": "04/06/2026"
+  },
+  "PE-78/24": {
+   "archivo": "02/10/2024",
+   "dado_cuenta": "22/08/2024",
+   "dae": "13/24",
+   "ingreso": "02/08/2024",
+   "od": {
+    "anio": "2024",
+    "estado": "APROBADA",
+    "fecha": "18/09/2024",
+    "numero": "152"
+   },
+   "sancion": "aprobada",
+   "sancion_fecha": "26/09/2024"
+  },
+  "PE-78/26": {
+   "archivo": "16/06/2026",
+   "dado_cuenta": "09/04/2026",
+   "dae": "8/26",
+   "ingreso": "07/04/2026",
+   "od": {
+    "anio": "2026",
+    "estado": "APROBADA",
+    "fecha": "14/05/2026",
+    "numero": "83"
+   },
+   "sancion": "aprobada",
+   "sancion_fecha": "04/06/2026"
+  },
+  "PE-79/26": {
+   "archivo": "16/06/2026",
+   "dado_cuenta": "09/04/2026",
+   "dae": "8/26",
+   "ingreso": "07/04/2026",
+   "od": {
+    "anio": "2026",
+    "estado": "APROBADA",
+    "fecha": "15/05/2026",
+    "numero": "93"
+   },
+   "sancion": "aprobada",
+   "sancion_fecha": "04/06/2026"
+  },
+  "PE-80/26": {
+   "archivo": "16/06/2026",
+   "dado_cuenta": "09/04/2026",
+   "dae": "8/26",
+   "ingreso": "07/04/2026",
+   "od": {
+    "anio": "2026",
+    "estado": "APROBADA",
+    "fecha": "15/05/2026",
+    "numero": "94"
+   },
+   "sancion": "aprobada",
+   "sancion_fecha": "04/06/2026"
+  },
+  "PE-81/26": {
+   "archivo": "16/06/2026",
+   "dado_cuenta": "09/04/2026",
+   "dae": "8/26",
+   "ingreso": "07/04/2026",
+   "od": {
+    "anio": "2026",
+    "estado": "APROBADA",
+    "fecha": "14/05/2026",
+    "numero": "84"
+   },
+   "sancion": "aprobada",
+   "sancion_fecha": "04/06/2026"
+  },
+  "PE-82/26": {
+   "archivo": "16/06/2026",
+   "dado_cuenta": "09/04/2026",
+   "dae": "8/26",
+   "ingreso": "07/04/2026",
+   "od": {
+    "anio": "2026",
+    "estado": "APROBADA",
+    "fecha": "14/05/2026",
+    "numero": "85"
+   },
+   "sancion": "aprobada",
+   "sancion_fecha": "04/06/2026"
+  },
+  "PE-83/26": {
+   "archivo": "16/06/2026",
+   "dado_cuenta": "09/04/2026",
+   "dae": "8/26",
+   "ingreso": "07/04/2026",
+   "od": {
+    "anio": "2026",
+    "estado": "APROBADA",
+    "fecha": "14/05/2026",
+    "numero": "86"
+   },
+   "sancion": "aprobada",
+   "sancion_fecha": "04/06/2026"
+  },
+  "PE-84/26": {
+   "archivo": null,
+   "dado_cuenta": "09/04/2026",
+   "dae": "8/26",
+   "ingreso": "07/04/2026",
+   "od": {
+    "anio": "2026",
+    "estado": "APROBADA",
+    "fecha": "14/05/2026",
+    "numero": "87"
+   },
+   "sancion": "aprobada",
+   "sancion_fecha": "04/06/2026"
+  },
+  "PE-85/26": {
+   "archivo": "16/06/2026",
+   "dado_cuenta": "09/04/2026",
+   "dae": "8/26",
+   "ingreso": "07/04/2026",
+   "od": {
+    "anio": "2026",
+    "estado": "APROBADA",
+    "fecha": "15/05/2026",
+    "numero": "95"
+   },
+   "sancion": "aprobada",
+   "sancion_fecha": "04/06/2026"
+  },
+  "PE-86/26": {
+   "archivo": "16/06/2026",
+   "dado_cuenta": "09/04/2026",
+   "dae": "9/26",
+   "ingreso": "08/04/2026",
+   "od": {
+    "anio": "2026",
+    "estado": "APROBADA",
+    "fecha": "15/05/2026",
+    "numero": "96"
+   },
+   "sancion": "aprobada",
+   "sancion_fecha": "04/06/2026"
+  },
+  "PE-87/26": {
+   "archivo": "16/06/2026",
+   "dado_cuenta": "09/04/2026",
+   "dae": "9/26",
+   "ingreso": "08/04/2026",
+   "od": {
+    "anio": "2026",
+    "estado": "APROBADA",
+    "fecha": "15/05/2026",
+    "numero": "97"
+   },
+   "sancion": "aprobada",
+   "sancion_fecha": "04/06/2026"
+  },
+  "PE-88/26": {
+   "archivo": "16/06/2026",
+   "dado_cuenta": "09/04/2026",
+   "dae": "9/26",
+   "ingreso": "08/04/2026",
+   "od": {
+    "anio": "2026",
+    "estado": "APROBADA",
+    "fecha": "15/05/2026",
+    "numero": "98"
+   },
+   "sancion": "aprobada",
+   "sancion_fecha": "04/06/2026"
+  },
+  "PE-89/26": {
+   "archivo": null,
+   "dado_cuenta": "09/04/2026",
+   "dae": "10/26",
+   "ingreso": "09/04/2026",
+   "od": null,
+   "sancion": "",
+   "sancion_fecha": null
+  },
+  "PE-90/26": {
+   "archivo": "16/06/2026",
+   "dado_cuenta": "09/04/2026",
+   "dae": "10/26",
+   "ingreso": "09/04/2026",
+   "od": {
+    "anio": "2026",
+    "estado": "APROBADA",
+    "fecha": "15/05/2026",
+    "numero": "99"
+   },
+   "sancion": "aprobada",
+   "sancion_fecha": "04/06/2026"
+  },
+  "PE-91/26": {
+   "archivo": "25/09/2026",
+   "dado_cuenta": "09/04/2026",
+   "dae": "10/26",
+   "ingreso": "09/04/2026",
+   "od": {
+    "anio": "2026",
+    "estado": "APROBADA",
+    "fecha": "26/08/2026",
+    "numero": "338"
+   },
+   "sancion": "aprobada",
+   "sancion_fecha": "17/09/2026"
+  },
+  "PE-92/26": {
+   "archivo": "16/06/2026",
+   "dado_cuenta": "09/04/2026",
+   "dae": "10/26",
+   "ingreso": "09/04/2026",
+   "od": {
+    "anio": "2026",
+    "estado": "APROBADA",
+    "fecha": "15/05/2026",
+    "numero": "100"
+   },
+   "sancion": "aprobada",
+   "sancion_fecha": "04/06/2026"
+  },
+  "PE-93/26": {
+   "archivo": "16/06/2026",
+   "dado_cuenta": "09/04/2026",
+   "dae": "10/26",
+   "ingreso": "09/04/2026",
+   "od": {
+    "anio": "2026",
+    "estado": "APROBADA",
+    "fecha": "15/05/2026",
+    "numero": "101"
+   },
+   "sancion": "aprobada",
+   "sancion_fecha": "04/06/2026"
+  }
+ }
+}
