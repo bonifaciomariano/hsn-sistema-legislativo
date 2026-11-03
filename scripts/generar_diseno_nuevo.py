@@ -6,8 +6,15 @@ No modifica index.html ni generar_web.py. Correr DESPUÉS de generar_web.py.
 import os, re, sys
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+# Si NUEVO_POR_DEFECTO es True, el diseño nuevo queda como index.html (lo que se abre al entrar a la
+# página) y el diseño anterior se guarda como index_anterior.html. Con False, queda como antes:
+# index.html = anterior e index_nuevo.html = nuevo.
+NUEVO_POR_DEFECTO = True
 SRC = os.path.join(ROOT, "index.html")
-DST = os.path.join(ROOT, "index_nuevo.html")
+ANTERIOR = os.path.join(ROOT, "index_anterior.html")
+DST = os.path.join(ROOT, "index.html" if NUEVO_POR_DEFECTO else "index_nuevo.html")
+if not NUEVO_POR_DEFECTO:
+    ANTERIOR = SRC
 
 # Colores por tipo: (texto, fondo)
 TIPOS = {
@@ -832,15 +839,24 @@ def aplicar_comunes(s):
 
 
 def main():
-    if not os.path.exists(SRC):
+    fuente = SRC
+    if NUEVO_POR_DEFECTO and os.path.exists(SRC) and "<title>[Nuevo]" in open(SRC, encoding="utf-8").read(3000) \
+            and os.path.exists(ANTERIOR):
+        fuente = ANTERIOR  # index.html ya es el nuevo (corrida rápida): partir del anterior guardado
+    if not os.path.exists(fuente):
         sys.exit("No existe index.html: correr primero generar_web.py")
-    s = open(SRC, encoding="utf-8").read()
+    s = open(fuente, encoding="utf-8").read()
     if "</style>" not in s or "</head>" not in s:
         sys.exit("Estructura inesperada del HTML")
     avisos = []
     # 1) diseño anterior (index.html): recibe las funciones comunes
     s = aplicar_comunes(s)
-    open(SRC, "w", encoding="utf-8").write(s)
+    if NUEVO_POR_DEFECTO:
+        sa = re.sub(r'(<div class="main-nav">.*?</div>)',
+                    r'\1<div style="text-align:right;padding:6px 16px"><a href="index.html" style="font-size:12px;color:#fff;opacity:.85">Ver diseño nuevo &rarr;</a></div>', s, count=1, flags=re.S)
+        open(ANTERIOR, "w", encoding="utf-8").write(sa)
+    else:
+        open(SRC, "w", encoding="utf-8").write(s)
     # 2) diseño nuevo (index_nuevo.html): lo comun + Inicio y el estilo nuevo
     for var, idx in (("TIPO_FG", 0), ("TIPO_BG", 1), ("AM_TIPO_FG", 0), ("AM_TIPO_BG", 1)):
         pat = r"(var %s=\{)([^}]*)(\};)" % var
@@ -862,7 +878,7 @@ def main():
         avisos.append("seccion Inicio (no se encontro el marcador)")
     # link para volver al diseño anterior, al final de la barra lateral
     s = re.sub(r'(<div class="main-nav">.*?</div>)',
-               r'\1<a class="nd-volver" href="index.html">← Ver diseño anterior</a>', s, count=1, flags=re.S)
+               r'\1<a class="nd-volver" href="' + os.path.basename(ANTERIOR) + '">← Ver diseño anterior</a>', s, count=1, flags=re.S)
     s = s.replace("<title>", "<title>[Nuevo] ", 1)
     open(DST, "w", encoding="utf-8").write(s)
     print("index.html (anterior) con funciones comunes; index_nuevo.html generado: %.2f MB" % (len(s.encode()) / 1048576))

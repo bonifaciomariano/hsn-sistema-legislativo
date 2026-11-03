@@ -16,7 +16,7 @@ Qué hace:
      según el Senado). Con TEST=1 no escribe nada.
 
 Variables de entorno:
-    SENADORES_BLOQUES_URL   URL del listado por bloque (obligatoria si no hay HTML local)
+    SENADORES_BLOQUES_URL   URL del listado por bloque (opcional: por defecto la oficial del Senado)
     SENADORES_BLOQUES_HTML  ruta a un HTML guardado (alternativa sin red)
     TEST                    "1" = solo imprime el informe, no escribe archivos
 
@@ -49,7 +49,8 @@ SENADORES_JSON = os.path.join(DATA_DIR, "senadores.json")
 SALIDA_DIFF = os.path.join(DATA_DIR, "senadores_diff.json")
 SALIDA_WEB = os.path.join(DATA_DIR, "senadores_web.json")
 
-URL = os.getenv("SENADORES_BLOQUES_URL", "").strip()
+URL = (os.getenv("SENADORES_BLOQUES_URL", "").strip()
+       or "https://www.senado.gob.ar/senadores/listados/agrupados-por-bloques")
 HTML_LOCAL = os.getenv("SENADORES_BLOQUES_HTML", "").strip()
 TEST = os.getenv("TEST", "") == "1"
 ACTUALIZAR = os.getenv("ACTUALIZAR", "") == "1"
