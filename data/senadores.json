@@ -282,7 +282,7 @@
   "PAGOTTO, JUAN CARLOS": {
     "bloque": "LA LIBERTAD AVANZA",
     "provincia": "LA RIOJA",
-    "vigente": true
+    "vigente": false
   },
   "PAOLTRONI, FRANCISCO MANUEL": {
     "bloque": "LA LIBERTAD AVANZA",
@@ -295,7 +295,7 @@
     "vigente": true
   },
   "REJAL, JESÚS FERNANDO": {
-    "bloque": "JUSTICIA SOCIAL FEDERAL",
+    "bloque": "JUSTICIALISTA",
     "provincia": "LA RIOJA",
     "vigente": true
   },
@@ -468,5 +468,10 @@
     "bloque": "UCR - UNIÓN CÍVICA RADICAL",
     "provincia": "CHACO",
     "vigente": false
+  },
+  "LOPEZ, CLAUDIA CECILIA": {
+    "bloque": "LA LIBERTAD AVANZA",
+    "provincia": "",
+    "vigente": true
   }
 }
