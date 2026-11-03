@@ -1,5 +1,12 @@
 [
  {
+  "id": 24592,
+  "url": "https://www.senado.gob.ar/prensa/24592/noticias",
+  "fecha": "2026-11-03",
+  "titulo": "\"EL SENADO VA A ESCUELA\" VISITÓ LA PROVINCIA DE CHUBUT",
+  "comisiones": []
+ },
+ {
   "id": 24590,
   "url": "https://www.senado.gob.ar/prensa/24590/noticias",
   "fecha": "2026-11-02",
@@ -619,12 +626,5 @@
   "comisiones": [
    "ASUNTOS CONSTITUCIONALES"
   ]
- },
- {
-  "id": 24372,
-  "url": "https://www.senado.gob.ar/prensa/24372/noticias",
-  "fecha": "2026-09-15",
-  "titulo": "INAUGURACIÓN DE LA MUESTRA \"CERDEÑA, UN MISMO PUEBLO A AMBOS LADOS DEL ATLÁNTICO\"",
-  "comisiones": []
  }
 ]
