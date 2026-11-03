@@ -50,6 +50,23 @@ jobs:
         run: pip install -r requirements.txt
 
       # ── Franja 9:00 ART: DPP + agenda (livianos) ─────────────────────────
+      # ── Padrón de senadores (bloques/vigencia) desde el Senado: va ANTES de DPP ──
+      - name: Actualizar padrón de senadores (Senado)
+        if: github.event_name == 'workflow_dispatch' || github.event.schedule == '0 12 * * *'
+        continue-on-error: true
+        env:
+          ACTUALIZAR: "1"
+          SENADORES_BLOQUES_URL: ${{ vars.SENADORES_BLOQUES_URL }}
+        run: python scripts/scraper_senadores.py
+
+      # Integrantes y cargos de cada comisión desde el Senado (después del padrón, antes de DPP)
+      - name: Actualizar comisiones (integrantes y cargos, Senado)
+        if: github.event_name == 'workflow_dispatch' || github.event.schedule == '0 12 * * *'
+        continue-on-error: true
+        env:
+          ACTUALIZAR: "1"
+        run: python scripts/scraper_comisiones.py
+
       - name: Scraper de DPP (comisiones)
         if: github.event_name == 'workflow_dispatch' || github.event.schedule == '0 12 * * *'
         continue-on-error: true
@@ -95,8 +112,22 @@ jobs:
         if: github.event_name == 'workflow_dispatch' || github.event.schedule == '0 1 * * *'
         run: python scripts/scraper_proyectos.py
 
+      - name: Actualizar pliegos judiciales (fichas del Senado)
+        if: github.event_name == 'workflow_dispatch' || github.event.schedule == '0 12 * * *'
+        continue-on-error: true
+        env:
+          ACTUALIZAR: "1"
+        run: python scripts/scraper_pliegos.py
+
+      - name: Noticias del Senado (para la Agenda)
+        continue-on-error: true
+        run: python scripts/scraper_noticias.py
+
       - name: Generar web
         run: python scripts/generar_web.py
+
+      - name: Generar diseño nuevo
+        run: python scripts/generar_diseno_nuevo.py
 
       - name: Commit y push si hay cambios
         run: |
