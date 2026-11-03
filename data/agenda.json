@@ -10299,8 +10299,8 @@
       ],
       "expositores": null,
       "tipo": "bicameral",
-      "boletin_id": 2409,
-      "boletin_numero": "148/26"
+      "boletin_id": 2410,
+      "boletin_numero": "149/26"
     },
     {
       "seccion": "senadores",
@@ -10377,8 +10377,8 @@
       ],
       "expositores": null,
       "tipo": "senadores",
-      "boletin_id": 2409,
-      "boletin_numero": "148/26"
+      "boletin_id": 2410,
+      "boletin_numero": "149/26"
     },
     {
       "seccion": "senadores",
@@ -10408,8 +10408,30 @@
       ],
       "expositores": null,
       "tipo": "senadores",
-      "boletin_id": 2409,
-      "boletin_numero": "148/26"
+      "boletin_id": 2410,
+      "boletin_numero": "149/26"
+    },
+    {
+      "seccion": "senadores",
+      "dia": "JUEVES",
+      "fecha": "05/11",
+      "hora": "14:30",
+      "modalidad": "",
+      "comisiones": [
+        "BICAMERAL MIXTA REVISORA DE CUENTAS"
+      ],
+      "salon": "FRONDIZI - MORENO",
+      "salon_completo": "SALÓN FRONDIZI - MORENO",
+      "temario": [
+        {
+          "numero": "OV-525/26",
+          "extracto": "AUDITORÍA GENERAL DE LA NACIÓN: COMUNICA RESOLUCIÓN N° 213/26 QUE APRUEBA EL PROGRAMA DE ACCIÓN ANUAL CORRESPONDIENTE AL EJERCICIO 2027"
+        }
+      ],
+      "expositores": null,
+      "tipo": "bicameral",
+      "boletin_id": 2410,
+      "boletin_numero": "149/26"
     }
   ]
 }
