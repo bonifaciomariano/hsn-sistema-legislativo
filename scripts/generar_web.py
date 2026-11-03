@@ -2218,7 +2218,7 @@ function renderIntegrantes(c){
       +'<span class="member-name">'+esc(m.nombre)+'</span>'
       +'<span class="btag" style="background:'+col.bg+';color:'+col.badge+'">'+esc(m.bloque)+'</span>'
       +rolHtml
-      +'<button class="dpp-badge" onclick="mostrarDppHist('+i+')" title="Ver historial de DPP">DPP-'+esc(m.dpp)+'</button>'
+      +(m.dpp?'<button class="dpp-badge" onclick="mostrarDppHist('+i+')" title="Ver historial de DPP">DPP-'+esc(m.dpp)+'</button>':'')
       +'</div>';
   });
   document.getElementById('com-integrantes-list').innerHTML=html||'<div class="com-empty">Sin integrantes cargados.</div>';
@@ -7105,6 +7105,19 @@ def construir_comisiones(proyectos):
         # scrape de comisiones.json — así todos los integrantes tienen el DPP
         # que los designó y no hay ambigüedad entre fuentes.
         estado_com = dpp_state.get(com_norm, [])
+        # Si comisiones.json fue sincronizado con el Senado (scraper_comisiones.py marca
+        # "fuente": "senado"), el roster y los cargos salen de ahí; del log de DPP se
+        # toma solo el número de decreto (insignia) y el historial de cada integrante.
+        desde_senado = com.get("fuente") == "senado"
+        if desde_senado:
+            estado_com = []
+            for m in com.get("miembros", []):
+                dpp_m = ""
+                for d in dpp_state.get(com_norm, []):
+                    if _nombres_coinciden(d["nombre"], m["nombre"]):
+                        dpp_m = d["dpp"]
+                        break
+                estado_com.append({"nombre": m["nombre"], "dpp": dpp_m, "rol": m.get("rol") or "Vocal"})
         integrantes = []
         for e in estado_com:
             nom_norm = _norm_nombre(e["nombre"])
@@ -7125,7 +7138,7 @@ def construir_comisiones(proyectos):
                 "nombre": e["nombre"],
                 "bloque": bloque,
                 "provincia": provincia_de_senador(e["nombre"]),
-                "rol": _rol_de(nombre, e["nombre"]),
+                "rol": e["rol"] if desde_senado else _rol_de(nombre, e["nombre"]),
                 "dpp": e["dpp"],
                 "hist": hist,
             })
@@ -7189,7 +7202,7 @@ PLIEGOS_URL = "https://raw.githubusercontent.com/bonifaciomariano/Pliegos-Poder-
 PLIEGOS_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "pliegos")
 
 
-def cargar_pliegos():
+def _cargar_pliegos_base():
     """Datos de la pestaña "Pliegos judiciales".
 
     Se mantienen en el repo Pliegos-Poder-Judicial (su pipeline arma
@@ -7220,9 +7233,126 @@ def cargar_pliegos():
     return {"generado_al": "", "total": 0, "provincias": [], "pliegos": []}
 
 
+def _superponer_senado(data):
+    """Corrige la planilla de Pliegos con lo que dice el Senado (data/pliegos_senado.json,
+    lo escribe scripts/scraper_pliegos.py). Solo adelanta etapas, nunca las retrasa:
+      - dado cuenta: si la planilla no tiene fecha y el Senado sí, la completa
+      - orden del día: si la planilla no la tiene y el Senado sí, la completa
+      - sanción / rechazo: si el Senado informa la resolución, la completa
+    Después recalcula la categoría con el mismo orden de prioridad que data_builder.py.
+    La planilla de origen no se modifica; si el archivo no existe, no hace nada."""
+    s = _cargar("pliegos_senado.json", None)
+    if not s or not s.get("pliegos"):
+        return data
+    por_exp = s["pliegos"]
+    cambios = 0
+
+    def _categoria(tl):
+        if not (tl.get("dado_cuenta") or {}).get("fecha"):
+            return "dar_cuenta"
+        if tl.get("sancion"):
+            return "sancionado"
+        if tl.get("rechazo"):
+            return "rechazado"
+        if tl.get("orden_del_dia"):
+            return "con_od"
+        return "sin_audiencia"
+
+    # Pliegos judiciales que el Senado ya recibió y la planilla todavía no tiene (los detecta scraper_pliegos.py)
+    existentes = {p.get("expediente") for p in data.get("pliegos", [])}
+    agregados = []
+    for exp, z in por_exp.items():
+        n = z.get("nuevo")
+        if not n or exp in existentes:
+            continue
+        tl = {
+            "ingreso": z.get("ingreso"),
+            "dado_cuenta": {"sesion": (z.get("dae") or "").split("/")[0], "fecha": z.get("dado_cuenta")},
+            "audiencia": None,
+            "orden_del_dia": ({"numero": z["od"]["numero"], "anio": z["od"].get("anio") or "",
+                               "fecha_dictamen": z["od"].get("fecha"), "firmantes": None} if z.get("od") else None),
+            "sancion": z.get("sancion_fecha") if z.get("sancion") == "aprobada" else None,
+            "rechazo": z.get("sancion_fecha") if z.get("sancion") == "rechazada" else None,
+        }
+        agregados.append({
+            "expediente": exp, "url": n["url"], "candidato": n["candidato"], "cargo": n["cargo"],
+            "provincia": n["provincia"], "rango": n["rango"], "fuero": n["fuero"],
+            "categoria": _categoria(tl), "timeline": tl,
+            "audiencia_programada": None, "audiencia_sin_dictamen": False,
+        })
+        print("  pliegos: NUEVO %s (%s) agregado desde el Senado" % (exp, n["candidato"]))
+    if agregados:
+        def _clave(p):
+            m = re.match(r"PE-(\d+)/(\d{2})", p.get("expediente", ""))
+            return (int(m.group(2)), int(m.group(1))) if m else (0, 0)
+        data["pliegos"] = sorted(list(data.get("pliegos", [])) + agregados, key=_clave, reverse=True)
+        data["total"] = len(data["pliegos"])
+        provs = set(data.get("provincias") or []) | {a["provincia"] for a in agregados}
+        data["provincias"] = sorted(provs, key=lambda x: "".join(c for c in unicodedata.normalize("NFD", x) if unicodedata.category(c) != "Mn"))
+
+    for p in data.get("pliegos", []):
+        z = por_exp.get(p.get("expediente"))
+        if not z:
+            continue
+        tl = p.setdefault("timeline", {})
+        antes = p.get("categoria")
+        dc = tl.get("dado_cuenta") or {}
+        if not dc.get("fecha") and z.get("dado_cuenta"):
+            tl["dado_cuenta"] = {"sesion": dc.get("sesion") or (z.get("dae") or "").split("/")[0], "fecha": z["dado_cuenta"]}
+        if not tl.get("orden_del_dia") and z.get("od"):
+            tl["orden_del_dia"] = {"numero": z["od"]["numero"], "anio": z["od"].get("anio") or "",
+                                   "fecha_dictamen": z["od"].get("fecha"), "firmantes": None}
+        if z.get("sancion") == "aprobada" and not tl.get("sancion"):
+            tl["sancion"] = z.get("sancion_fecha")
+        elif z.get("sancion") == "rechazada" and not tl.get("rechazo"):
+            tl["rechazo"] = z.get("sancion_fecha")
+        cat = _categoria(tl)
+        p["categoria"] = cat
+        if cat != antes:
+            cambios += 1
+            print("  pliegos: %s pasa de %s a %s (según el Senado)" % (p.get("expediente"), antes, cat))
+    if cambios:
+        print("  pliegos: %d actualizados con datos del Senado (%s)" % (cambios, s.get("generado", "")))
+    return data
+
+
+def cargar_pliegos():
+    return _superponer_senado(_cargar_pliegos_base())
+
+
 def _leer_asset_pliegos(nombre):
     with open(os.path.join(PLIEGOS_DIR, nombre), encoding="utf-8") as f:
         return f.read()
+
+
+def aplicar_bloque_actual(proyectos):
+    """El bloque que se muestra en Proyectos es el bloque ACTUAL del autor/a (data/senadores.json),
+    no el que tenía al presentar el proyecto ni el que quedó guardado cuando se leyó el expediente.
+    Si no se puede resolver (p. ej. ex-senadores que ya no están en el padrón), se deja el valor
+    que ya tenía. El bloque anterior queda en "bloques_historico" solo si cambió."""
+    buscar = construir_bloque_por_senador()
+    cambios = 0
+    for p in proyectos:
+        autores = p.get("autores") or []
+        if not autores:
+            continue
+        actuales, vistos = [], set()
+        for a in autores:
+            b = buscar(a)
+            if b and b not in vistos:
+                vistos.add(b)
+                actuales.append(b)
+        if not actuales:
+            continue
+        previo = [b for b in (p.get("bloques") or []) if b]
+        def k(x):
+            return _norm_nombre(x).replace(" POR ", " ")
+        if sorted({k(x) for x in actuales}) != sorted({k(x) for x in previo}):
+            p["bloques_historico"] = previo
+            p["bloques"] = actuales
+            cambios += 1
+    print(f"  -> bloque actual del autor aplicado: {cambios} proyecto(s) cambiaron de bloque")
+    return proyectos
 
 
 def main():
@@ -7269,6 +7399,7 @@ def main():
     # Parlamentaria-HSN): no se embeben acá para no agrandar el HTML principal.
     solo_bloques = {"autores_caratula", "bloques_caratula", "od_trazabilidad",
                     "fecha_dictamen", "sanciones_trazabilidad", "firmantes_trazabilidad"}
+    proyectos = aplicar_bloque_actual(proyectos)
     datos_js = json.dumps([{k: v for k, v in p.items() if k not in solo_bloques} for p in proyectos],
                           ensure_ascii=False)
     comisiones_js = json.dumps(construir_comisiones(proyectos), ensure_ascii=False)
