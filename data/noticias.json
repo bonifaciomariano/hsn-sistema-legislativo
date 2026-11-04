@@ -1,5 +1,12 @@
 [
  {
+  "id": 24594,
+  "url": "https://www.senado.gob.ar/prensa/24594/noticias",
+  "fecha": "2026-11-03",
+  "titulo": "VICTORIA VILLARRUEL RECIBIÓ A LA EMBAJADORA DE ALEMANIA",
+  "comisiones": []
+ },
+ {
   "id": 24592,
   "url": "https://www.senado.gob.ar/prensa/24592/noticias",
   "fecha": "2026-11-03",
@@ -617,14 +624,5 @@
   "fecha": "2026-09-15",
   "titulo": "EL SENADO SE ILUMINA DE VIOLETA POR LA PRIMERA LEY DE ADOPCIÓN",
   "comisiones": []
- },
- {
-  "id": 24374,
-  "url": "https://www.senado.gob.ar/prensa/24374/noticias",
-  "fecha": "2026-09-15",
-  "titulo": "LA COMISIÓN DE ASUNTOS CONSTITUCIONALES CONTINUÓ CON EL TRATAMIENTO DE LA REFORMA ELECTORAL INTEGRAL",
-  "comisiones": [
-   "ASUNTOS CONSTITUCIONALES"
-  ]
  }
 ]
