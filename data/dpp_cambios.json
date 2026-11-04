@@ -56,7 +56,8 @@
     "65/26": "17/06/2026",
     "67/26": "05/08/2026",
     "72/26": "02/09/2026",
-    "71/26": "27/08/2026"
+    "71/26": "27/08/2026",
+    "79/26": "04/11/2026"
   },
   "cambios": [
     {
@@ -4833,6 +4834,13 @@
       "tipo": "replace",
       "senador": "OROZCO, María Emilia",
       "reemplaza": "JUEZ, Luis Alfredo"
+    },
+    {
+      "dpp": "79/26",
+      "comision": "De Población y Desarrollo Humano",
+      "tipo": "replace",
+      "senador": "JURI, Mariana",
+      "reemplaza": "LOSADA, Carolina"
     }
   ]
 }

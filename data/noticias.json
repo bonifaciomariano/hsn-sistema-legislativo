@@ -1,5 +1,28 @@
 [
  {
+  "id": 24600,
+  "url": "https://www.senado.gob.ar/prensa/24600/noticias",
+  "fecha": "2026-11-04",
+  "titulo": "LA COMISIÓN DE DEPORTES DICTAMINÓ EL PROYECTO “LEY JOAQUÍN”",
+  "comisiones": [
+   "DEPORTE"
+  ]
+ },
+ {
+  "id": 24599,
+  "url": "https://www.senado.gob.ar/prensa/24599/noticias",
+  "fecha": "2026-11-04",
+  "titulo": "EL SENADO DISTINGUIÓ AL JOVEN ARGENTINO PREMIADO EN HARVARD POR DESARROLLAR TECNOLOGÍA PARA PERSONAS CIEGAS",
+  "comisiones": []
+ },
+ {
+  "id": 24597,
+  "url": "https://www.senado.gob.ar/prensa/24597/noticias",
+  "fecha": "2026-11-03",
+  "titulo": "SE REALIZÓ UNA JORNADA SOBRE INTERVENCIONES ASISTIDAS CON ANIMALES",
+  "comisiones": []
+ },
+ {
   "id": 24594,
   "url": "https://www.senado.gob.ar/prensa/24594/noticias",
   "fecha": "2026-11-03",
@@ -597,32 +620,6 @@
   "url": "https://www.senado.gob.ar/prensa/24383/noticias",
   "fecha": "2026-09-17",
   "titulo": "POR EL DÍA DEL PROFESOR EL SENADO SE ILUMINA DE AZUL",
-  "comisiones": []
- },
- {
-  "id": 24378,
-  "url": "https://www.senado.gob.ar/prensa/24378/noticias",
-  "fecha": "2026-09-16",
-  "titulo": "CON LA EXPOSICIÓN DE FUNCIONARIOS SE AVANZÓ CON LAS MODIFICACIONES A LOS SUBSIDIOS Y TARIFAS DE ENERGÍA",
-  "comisiones": [
-   "MINERIA ENERGIA Y COMBUSTIBLES",
-   "PRESUPUESTO Y HACIENDA"
-  ]
- },
- {
-  "id": 24376,
-  "url": "https://www.senado.gob.ar/prensa/24376/noticias",
-  "fecha": "2026-09-16",
-  "titulo": "LA COMISIÓN DE SISTEMAS RECIBIÓ A REPRESENTANTES DE FOPEA PARA ANALIZAR EL ESTATUTO DEL PERIODISTA PROFESIONAL",
-  "comisiones": [
-   "SISTEMAS MEDIOS DE COMUNICACION Y LIBERTAD DE EXPRESION"
-  ]
- },
- {
-  "id": 24375,
-  "url": "https://www.senado.gob.ar/prensa/24375/noticias",
-  "fecha": "2026-09-15",
-  "titulo": "EL SENADO SE ILUMINA DE VIOLETA POR LA PRIMERA LEY DE ADOPCIÓN",
   "comisiones": []
  }
 ]

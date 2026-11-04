@@ -1,5 +1,5 @@
 {
- "generado": "2026-11-03 19:07",
+ "generado": "2026-11-04 19:28",
  "pliegos": {
   "PE-103/26": {
    "archivo": "11/09/2026",
@@ -2599,6 +2599,23 @@
     "provincia": "Nacional / Federal",
     "rango": "Camarista / Vocal de Cámara",
     "url": "https://www.senado.gob.ar/parlamentario/comisiones/verExp/356.26/PE/AC"
+   },
+   "od": null,
+   "sancion": "",
+   "sancion_fecha": null
+  },
+  "PE-359/26": {
+   "archivo": null,
+   "dado_cuenta": null,
+   "dae": "34/26",
+   "ingreso": "03/11/2026",
+   "nuevo": {
+    "candidato": "DANIEL EDUARDO RAFECAS",
+    "cargo": "VOCAL DE LA CAMARA NACIONAL DE CASACION EN LO CRIMINAL Y CORRECCIONAL DE LA CAPITAL FEDERAL, VOCALIA N° 7",
+    "fuero": "Casación Penal",
+    "provincia": "CABA",
+    "rango": "Camarista / Vocal de Cámara",
+    "url": "https://www.senado.gob.ar/parlamentario/comisiones/verExp/359.26/PE/AC"
    },
    "od": null,
    "sancion": "",
