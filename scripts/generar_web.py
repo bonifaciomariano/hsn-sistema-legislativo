@@ -3807,7 +3807,12 @@ function sancObsHtml(item){
 function buildSancCard(item){
   var exp=parseExpNumero(item.expediente);
   var p=exp?proyectoDeExp(exp):null;
-  var linkHtml=(p&&p.url)?'<a class="od-nro" href="'+escAttr(p.url)+'" target="_blank">'+esc(item.expediente)+'</a>':'<span class="od-nro">'+esc(item.expediente)+'</span>';
+  var urlExp=(p&&p.url)?p.url:'';
+  if(!urlExp&&exp&&item.seccion==='ley'){
+    /* Ley de un expediente que no está en la base de proyectos (p. ej. de años anteriores): link directo a la ficha del Senado */
+    urlExp='https://www.senado.gob.ar/parlamentario/comisiones/verExp/'+exp.nro+'.'+String(exp.anio).slice(-2)+'/'+exp.origen+'/PL';
+  }
+  var linkHtml=urlExp?'<a class="od-nro" href="'+escAttr(urlExp)+'" target="_blank">'+esc(item.expediente)+'</a>':'<span class="od-nro">'+esc(item.expediente)+'</span>';
   var seccionHtml='<span class="od-tipo-tag">'+esc(SANC_SECCION_LABEL[item.seccion]||item.seccion)+'</span>';
   var odHtml=item.od_nro?'<span class="od-tipo-tag">OD N&ordm; '+esc(item.od_nro)+'</span>':'';
   var leyHtml=(p&&p.sancionado&&p.ley_numero)?'<span class="sanc-ley-badge">Ley N&deg; '+esc(p.ley_numero)+'</span>':'';

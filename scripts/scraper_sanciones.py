@@ -257,6 +257,7 @@ RE_SECCION_TXT = re.compile(r"^\d+\.\s+(.+?)\s*$")
 RE_RESULTADO_TXT = re.compile(r"^(APROBAD|RECHAZAD|RETIRAD|SANCION|ARCHIV|QUEDA)[A-ZÁÉÍÓÚÑ]*\b")
 RE_ENTRADA_OD = re.compile(r"^(?:OD|O\.D\.)\s*(\d+)\s*:\s*(.*)$", re.I)
 RE_ENTRADA_ST = re.compile(r"^S/T\s*:\s*(.*)$", re.I)
+RE_EXP_INICIO = re.compile(r"^[A-ZÑ.]{1,5}-\d+(?:/\d{2}|\s*(?:,|y)\s*\d+/\d{2})")
 RE_PIE_TXT = re.compile(r"^(BOLET[IÍ]N DE NOVEDADES|DIRECCI[OÓ]N GENERAL DE COMISIONES|SE LEVANTA LA SESI[OÓ]N)", re.I)
 # Cita combinada: "S-252 y 308/26" o "S-252, 308 y 310/26"
 RE_EXP_COMBINADA = re.compile(r"\b([A-ZÑ.]{1,5})-(\d+(?:\s*(?:,|y)\s*\d+)+)/(\d{2})\b")
@@ -293,9 +294,11 @@ def expedientes_texto(texto):
 def separar_resultado(linea):
     """'APROBADO con modificaciones - Vuelve a la H. Cámara.' ->
     ('APROBADO con modificaciones', 'Vuelve a la H. Cámara.')"""
-    partes = re.split(r"\s+[-–—]\s+", linea, maxsplit=1)
+    partes = re.split(r"\s*[-–—]\s+", linea, maxsplit=1)
     res = norm_celda(partes[0]).rstrip(".")
     obs = norm_celda(partes[1]) if len(partes) > 1 else ""
+    # "APROBADO S/T." (sin texto / sin orden del día) -> resultado "APROBADO"
+    res = re.sub(r"\s+S/T$", "", res, flags=re.I)
     return res, obs
 
 
@@ -360,7 +363,11 @@ def parsear_boletin_texto(pdf_bytes, nro_boletin, fecha_sesion):
             entrada = {"od": None, "texto": ms.group(1)}
         elif entrada is not None:
             entrada["texto"] += " " + linea
-        elif seccion == "preferencia" and RE_SOLICITANTE.match(linea):
+        elif seccion == "preferencia" and (RE_SOLICITANTE.match(linea) or RE_EXP_INICIO.match(linea)):
+            # "Apellido: S-123/26, ..." o, sin apellido, "S-123/26, proyecto de ..."
+            entrada = {"od": None, "texto": linea}
+        elif seccion == "decreto_res_com_dec" and not linea.endswith(":"):
+            # "Varios señores senadores: Proyecto de resolución que ... (S-1911/26)" + "APROBADO S/T."
             entrada = {"od": None, "texto": linea}
         # líneas sueltas ("Comisiones de X y de Y:") se ignoran
     if entrada is not None:
@@ -396,6 +403,15 @@ def main():
     log.info(f"  -> {len(boletines)} boletines disponibles (anio >= {MIN_ANIO})")
 
     procesados = cargar_procesados()
+    # SANCIONES_REPROCESAR="8/26,9/26": vuelve a leer esos boletines (quita sus ítems anteriores
+    # y los marca como no procesados). Sirve cuando se corrige el lector.
+    reprocesar = {x.strip() for x in os.getenv("SANCIONES_REPROCESAR", "").split(",") if x.strip()}
+    if reprocesar and not TEST:
+        previas = cargar_sanciones()
+        quedan = [it for it in previas if it.get("nro_boletin") not in reprocesar]
+        log.info(f"  -> reprocesando {sorted(reprocesar)}: se descartan {len(previas) - len(quedan)} ítems previos")
+        guardar_sanciones(quedan)
+        procesados -= reprocesar
     pendientes = [b for b in boletines if b["nro_boletin"] not in procesados]
     log.info(f"  -> {len(pendientes)} boletines pendientes de procesar")
 
