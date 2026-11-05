@@ -18,10 +18,10 @@ name: Actualizar datos legislativos
 # (es incremental vía data/boletines_procesados.json, así que repetirlo no
 # tiene costo cuando no hay nada nuevo).
 #
-# Sanciones (Boletín de Novedades) se sacó del todo: ese endpoint
-# (micrositios/DatosAbiertos) devuelve "Request Rejected" de forma mucho más
-# dura que el resto — no parece ser sólo rate-limit. Mariano lo carga a mano
-# por ahora (pendiente: revisar/rediseñar esa sección).
+# Sanciones (Boletín de Novedades) vuelve a correr en la franja de la noche.
+# El endpoint (micrositios/DatosAbiertos) a veces devuelve "Request Rejected":
+# el scraper reintenta 3 veces con espera y el paso es continue-on-error, así
+# que si falla no frena nada y se reintenta en la corrida siguiente.
 on:
   schedule:
     # 9:00 Argentina (UTC-3) = 12:00 UTC, todos los días → DPP + agenda
@@ -108,6 +108,11 @@ jobs:
         continue-on-error: true
         run: python scripts/scraper_agenda.py
 
+      - name: Scraper de sanciones (Boletín de Novedades)
+        if: github.event_name == 'workflow_dispatch' || github.event.schedule == '0 1 * * *'
+        continue-on-error: true
+        run: python scripts/scraper_sanciones.py
+
       - name: Scraper de proyectos
         if: github.event_name == 'workflow_dispatch' || github.event.schedule == '0 1 * * *'
         run: python scripts/scraper_proyectos.py
@@ -140,4 +145,4 @@ jobs:
             git commit -m "Actualización automática $(date -u '+%Y-%m-%d %H:%M UTC')"
             git pull --rebase origin ${GITHUB_REF_NAME}
             git push origin HEAD:${GITHUB_REF_NAME}
-          fi
+          fi
