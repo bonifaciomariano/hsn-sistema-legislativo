@@ -238,6 +238,133 @@ def parsear_boletin(pdf_bytes, nro_boletin, fecha_sesion):
                             errores.append(f"fila en sección {seccion_actual}: {e}")
     except Exception as e:
         errores.append(f"apertura/lectura del PDF falló: {e}")
+    if not items:
+        # Formato nuevo (sin tablas): reintentar leyendo el texto corrido.
+        items_t, errores_t = parsear_boletin_texto(pdf_bytes, nro_boletin, fecha_sesion)
+        if items_t:
+            log.info("    (formato texto: %d ítems)", len(items_t))
+        return items_t, errores + errores_t
+    return items, errores
+
+
+# ── Formato "texto" (boletines nuevos, p.ej. 9/26): sin tablas ─────────────
+# Desde cierto boletín el PDF ya no trae tablas: cada ítem es texto corrido
+#   OD 402: Dictamen en el proyecto de ley ... (CD-3/26)
+#   APROBADO - Ley 27.828.
+# precedido por el encabezado de comisiones ("Comisiones de X y de Y:") y
+# dentro de secciones numeradas ("5. PROYECTOS DE LEY").
+RE_SECCION_TXT = re.compile(r"^\d+\.\s+(.+?)\s*$")
+RE_RESULTADO_TXT = re.compile(r"^(APROBAD|RECHAZAD|RETIRAD|SANCION|ARCHIV|QUEDA)[A-ZÁÉÍÓÚÑ]*\b")
+RE_ENTRADA_OD = re.compile(r"^(?:OD|O\.D\.)\s*(\d+)\s*:\s*(.*)$", re.I)
+RE_ENTRADA_ST = re.compile(r"^S/T\s*:\s*(.*)$", re.I)
+RE_PIE_TXT = re.compile(r"^(BOLET[IÍ]N DE NOVEDADES|DIRECCI[OÓ]N GENERAL DE COMISIONES|SE LEVANTA LA SESI[OÓ]N)", re.I)
+# Cita combinada: "S-252 y 308/26" o "S-252, 308 y 310/26"
+RE_EXP_COMBINADA = re.compile(r"\b([A-ZÑ.]{1,5})-(\d+(?:\s*(?:,|y)\s*\d+)+)/(\d{2})\b")
+
+
+def seccion_desde_titulo(titulo):
+    t = titulo.upper()
+    if t.startswith("PROYECTOS DE LEY"):
+        return "ley"
+    if t.startswith("PROYECTOS DE DECRETO"):
+        return "decreto_res_com_dec"
+    if t.startswith("ACUERDOS CONSIDERADOS") or t.startswith("ACUERDOS"):
+        return "acuerdo"
+    if t.startswith("MOCIONES DE PREFERENCIA"):
+        return "preferencia"
+    return None  # lista de asuntos, diarios, privilegio, etc. -> se ignoran
+
+
+def expedientes_texto(texto):
+    """Como extraer_expedientes pero entiende citas combinadas tipo
+    'S-252 y 308/26' (dos números que comparten el '/año')."""
+    encontrados = []
+    for m in RE_EXP_COMBINADA.finditer(texto or ""):
+        origen = m.group(1).replace(".", "")
+        for n in re.findall(r"\d+", m.group(2)):
+            encontrados.append(f"{origen}-{n}/{m.group(3)}")
+    simples = extraer_expedientes(RE_EXP_COMBINADA.sub(" ", texto or ""))
+    for e in simples:
+        if e not in encontrados:
+            encontrados.append(e)
+    return encontrados
+
+
+def separar_resultado(linea):
+    """'APROBADO con modificaciones - Vuelve a la H. Cámara.' ->
+    ('APROBADO con modificaciones', 'Vuelve a la H. Cámara.')"""
+    partes = re.split(r"\s+[-–—]\s+", linea, maxsplit=1)
+    res = norm_celda(partes[0]).rstrip(".")
+    obs = norm_celda(partes[1]) if len(partes) > 1 else ""
+    return res, obs
+
+
+def parsear_boletin_texto(pdf_bytes, nro_boletin, fecha_sesion):
+    items = []
+    errores = []
+    try:
+        with pdfplumber.open(BytesIO(pdf_bytes)) as pdf:
+            lineas = []
+            for pagina in pdf.pages:
+                txt = pagina.extract_text() or ""
+                lineas.extend(norm_celda(l) for l in txt.splitlines())
+    except Exception as e:
+        return [], [f"texto: apertura/lectura del PDF falló: {e}"]
+
+    seccion = None
+    entrada = None  # {"od": int|None, "texto": str}
+
+    def cerrar(resultado, obs):
+        nonlocal entrada
+        if entrada is None:
+            return
+        texto = entrada["texto"]
+        if seccion == "preferencia":
+            if resultado.upper().startswith("APROBADA"):
+                m = RE_SOLICITANTE.match(texto)
+                solicitante = norm_celda(m.group(1)) if m else None
+                for exp in expedientes_texto(texto):
+                    it = {"expediente": exp, "od_nro": None, "resultado": "APROBADA",
+                          "observaciones": obs, "seccion": seccion,
+                          "fecha_sesion": fecha_sesion, "nro_boletin": nro_boletin}
+                    if solicitante:
+                        it["solicitante"] = solicitante
+                    items.append(it)
+        else:
+            for exp in expedientes_texto(texto):
+                items.append({"expediente": exp, "od_nro": entrada["od"],
+                              "resultado": resultado, "observaciones": obs,
+                              "seccion": seccion, "fecha_sesion": fecha_sesion,
+                              "nro_boletin": nro_boletin})
+        entrada = None
+
+    for linea in lineas:
+        if not linea or RE_PIE_TXT.match(linea):
+            continue
+        m = RE_SECCION_TXT.match(linea)
+        if m and m.group(1).upper() == m.group(1):  # título en mayúsculas
+            entrada = None
+            seccion = seccion_desde_titulo(m.group(1))
+            continue
+        if seccion is None:
+            continue
+        if entrada is not None and RE_RESULTADO_TXT.match(linea):
+            res, obs = separar_resultado(linea)
+            cerrar(res, obs)
+            continue
+        mo = RE_ENTRADA_OD.match(linea)
+        ms = RE_ENTRADA_ST.match(linea)
+        if mo:
+            entrada = {"od": int(mo.group(1)), "texto": mo.group(2)}
+        elif ms:
+            entrada = {"od": None, "texto": ms.group(1)}
+        elif entrada is not None:
+            entrada["texto"] += " " + linea
+        elif seccion == "preferencia" and RE_SOLICITANTE.match(linea):
+            entrada = {"od": None, "texto": linea}
+        # líneas sueltas ("Comisiones de X y de Y:") se ignoran
+    if entrada is not None:
+        errores.append("texto: una entrada quedó sin resultado y se descartó")
     return items, errores
 
 
