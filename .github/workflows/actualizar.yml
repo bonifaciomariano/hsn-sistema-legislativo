@@ -29,6 +29,11 @@ on:
     # 22:00 Argentina (UTC-3) = 01:00 UTC del día siguiente, todos los días → OD + agenda + proyectos
     - cron: "0 1 * * *"
   workflow_dispatch:
+    inputs:
+      reprocesar_sanciones:
+        description: "Sanciones: boletines a volver a leer (ej. 8/26,9/26,10/26). Dejar vacío en el uso normal."
+        required: false
+        default: ""
 
 permissions:
   contents: write
@@ -111,6 +116,8 @@ jobs:
       - name: Scraper de sanciones (Boletín de Novedades)
         if: github.event_name == 'workflow_dispatch' || github.event.schedule == '0 1 * * *'
         continue-on-error: true
+        env:
+          SANCIONES_REPROCESAR: ${{ github.event.inputs.reprocesar_sanciones }}
         run: python scripts/scraper_sanciones.py
 
       - name: Scraper de proyectos
