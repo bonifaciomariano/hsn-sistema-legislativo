@@ -6884,8 +6884,8 @@
   {
     "expediente": "PE-99/26",
     "od_nro": 409,
-    "resultado": "APROBADO con modificaciones- Se comunica a la H. Cámara de Diputados",
-    "observaciones": "",
+    "resultado": "APROBADO con modificaciones",
+    "observaciones": "Se comunica a la H. Cámara de Diputados.",
     "seccion": "ley",
     "fecha_sesion": "2026-10-29",
     "nro_boletin": "10/26"
@@ -6927,6 +6927,15 @@
     "nro_boletin": "10/26"
   },
   {
+    "expediente": "S-1911/26",
+    "od_nro": null,
+    "resultado": "APROBADO",
+    "observaciones": "",
+    "seccion": "decreto_res_com_dec",
+    "fecha_sesion": "2026-10-29",
+    "nro_boletin": "10/26"
+  },
+  {
     "expediente": "CD-7/26",
     "od_nro": 367,
     "resultado": "APROBADO con modificaciones",
@@ -6963,6 +6972,33 @@
     "fecha_sesion": "2026-09-17",
     "nro_boletin": "8/26",
     "solicitante": "Corroza"
+  },
+  {
+    "expediente": "S-1563/26",
+    "od_nro": null,
+    "resultado": "APROBADA",
+    "observaciones": "Con dictamen de comisión.",
+    "seccion": "preferencia",
+    "fecha_sesion": "2026-09-17",
+    "nro_boletin": "8/26"
+  },
+  {
+    "expediente": "S-1603/26",
+    "od_nro": null,
+    "resultado": "APROBADA",
+    "observaciones": "Con dictamen de comisión.",
+    "seccion": "preferencia",
+    "fecha_sesion": "2026-09-17",
+    "nro_boletin": "8/26"
+  },
+  {
+    "expediente": "S-1619/26",
+    "od_nro": null,
+    "resultado": "APROBADA",
+    "observaciones": "Con dictamen de comisión.",
+    "seccion": "preferencia",
+    "fecha_sesion": "2026-09-17",
+    "nro_boletin": "8/26"
   },
   {
     "expediente": "PE-91/26",
