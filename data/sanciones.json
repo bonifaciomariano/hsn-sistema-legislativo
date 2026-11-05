@@ -6694,5 +6694,535 @@
     "seccion": "decreto_res_com_dec",
     "fecha_sesion": "2026-08-27",
     "nro_boletin": "7/26"
+  },
+  {
+    "expediente": "CD-26/24",
+    "od_nro": null,
+    "resultado": "APROBADA",
+    "observaciones": "Con dictamen de comisión.",
+    "seccion": "preferencia",
+    "fecha_sesion": "2026-10-29",
+    "nro_boletin": "10/26",
+    "solicitante": "Corpacci"
+  },
+  {
+    "expediente": "CD-18/26",
+    "od_nro": null,
+    "resultado": "APROBADA",
+    "observaciones": "Con dictamen de comisión.",
+    "seccion": "preferencia",
+    "fecha_sesion": "2026-10-29",
+    "nro_boletin": "10/26",
+    "solicitante": "Kirchner"
+  },
+  {
+    "expediente": "CD-17/26",
+    "od_nro": null,
+    "resultado": "APROBADA",
+    "observaciones": "Con dictamen de comisión.",
+    "seccion": "preferencia",
+    "fecha_sesion": "2026-10-29",
+    "nro_boletin": "10/26",
+    "solicitante": "Salino"
+  },
+  {
+    "expediente": "S-1819/26",
+    "od_nro": null,
+    "resultado": "APROBADA",
+    "observaciones": "Con dictamen de comisión.",
+    "seccion": "preferencia",
+    "fecha_sesion": "2026-10-29",
+    "nro_boletin": "10/26",
+    "solicitante": "Royon"
+  },
+  {
+    "expediente": "S-1818/26",
+    "od_nro": null,
+    "resultado": "APROBADA",
+    "observaciones": "Con dictamen de comisión.",
+    "seccion": "preferencia",
+    "fecha_sesion": "2026-10-29",
+    "nro_boletin": "10/26",
+    "solicitante": "Royon"
+  },
+  {
+    "expediente": "S-1140/26",
+    "od_nro": null,
+    "resultado": "APROBADA",
+    "observaciones": "Con dictamen de comisión.",
+    "seccion": "preferencia",
+    "fecha_sesion": "2026-10-29",
+    "nro_boletin": "10/26",
+    "solicitante": "Recalde"
+  },
+  {
+    "expediente": "S-1472/26",
+    "od_nro": null,
+    "resultado": "APROBADA",
+    "observaciones": "Con dictamen de comisión.",
+    "seccion": "preferencia",
+    "fecha_sesion": "2026-10-29",
+    "nro_boletin": "10/26",
+    "solicitante": "Recalde"
+  },
+  {
+    "expediente": "S-284/26",
+    "od_nro": null,
+    "resultado": "APROBADA",
+    "observaciones": "Con dictamen de comisión.",
+    "seccion": "preferencia",
+    "fecha_sesion": "2026-10-29",
+    "nro_boletin": "10/26",
+    "solicitante": "Recalde"
+  },
+  {
+    "expediente": "S-1058/26",
+    "od_nro": null,
+    "resultado": "APROBADA",
+    "observaciones": "Con dictamen de comisión.",
+    "seccion": "preferencia",
+    "fecha_sesion": "2026-10-29",
+    "nro_boletin": "10/26",
+    "solicitante": "Recalde"
+  },
+  {
+    "expediente": "S-1196/26",
+    "od_nro": null,
+    "resultado": "APROBADA",
+    "observaciones": "Con dictamen de comisión.",
+    "seccion": "preferencia",
+    "fecha_sesion": "2026-10-29",
+    "nro_boletin": "10/26",
+    "solicitante": "Recalde"
+  },
+  {
+    "expediente": "S-611/26",
+    "od_nro": null,
+    "resultado": "APROBADA",
+    "observaciones": "Con dictamen de comisión.",
+    "seccion": "preferencia",
+    "fecha_sesion": "2026-10-29",
+    "nro_boletin": "10/26",
+    "solicitante": "Capitanich"
+  },
+  {
+    "expediente": "S-1502/26",
+    "od_nro": null,
+    "resultado": "APROBADA",
+    "observaciones": "Con dictamen de comisión.",
+    "seccion": "preferencia",
+    "fecha_sesion": "2026-10-29",
+    "nro_boletin": "10/26",
+    "solicitante": "Capitanich"
+  },
+  {
+    "expediente": "S-1529/26",
+    "od_nro": null,
+    "resultado": "APROBADA",
+    "observaciones": "Con dictamen de comisión.",
+    "seccion": "preferencia",
+    "fecha_sesion": "2026-10-29",
+    "nro_boletin": "10/26",
+    "solicitante": "Capitanich"
+  },
+  {
+    "expediente": "S-1528/26",
+    "od_nro": null,
+    "resultado": "APROBADA",
+    "observaciones": "Con dictamen de comisión.",
+    "seccion": "preferencia",
+    "fecha_sesion": "2026-10-29",
+    "nro_boletin": "10/26",
+    "solicitante": "Capitanich"
+  },
+  {
+    "expediente": "S-1886/26",
+    "od_nro": null,
+    "resultado": "APROBADA",
+    "observaciones": "Con dictamen de comisión.",
+    "seccion": "preferencia",
+    "fecha_sesion": "2026-10-29",
+    "nro_boletin": "10/26",
+    "solicitante": "Capitanich"
+  },
+  {
+    "expediente": "S-702/26",
+    "od_nro": 413,
+    "resultado": "APROBADO con modificaciones",
+    "observaciones": "Se comunica a la H. Cámara de Diputados.",
+    "seccion": "ley",
+    "fecha_sesion": "2026-10-29",
+    "nro_boletin": "10/26"
+  },
+  {
+    "expediente": "S-718/26",
+    "od_nro": 366,
+    "resultado": "APROBADO con modificaciones",
+    "observaciones": "Se comunica a la H. Cámara de Diputados.",
+    "seccion": "ley",
+    "fecha_sesion": "2026-10-29",
+    "nro_boletin": "10/26"
+  },
+  {
+    "expediente": "S-808/26",
+    "od_nro": 366,
+    "resultado": "APROBADO con modificaciones",
+    "observaciones": "Se comunica a la H. Cámara de Diputados.",
+    "seccion": "ley",
+    "fecha_sesion": "2026-10-29",
+    "nro_boletin": "10/26"
+  },
+  {
+    "expediente": "S-865/26",
+    "od_nro": 366,
+    "resultado": "APROBADO con modificaciones",
+    "observaciones": "Se comunica a la H. Cámara de Diputados.",
+    "seccion": "ley",
+    "fecha_sesion": "2026-10-29",
+    "nro_boletin": "10/26"
+  },
+  {
+    "expediente": "PE-99/26",
+    "od_nro": 409,
+    "resultado": "APROBADO con modificaciones- Se comunica a la H. Cámara de Diputados",
+    "observaciones": "",
+    "seccion": "ley",
+    "fecha_sesion": "2026-10-29",
+    "nro_boletin": "10/26"
+  },
+  {
+    "expediente": "S-645/26",
+    "od_nro": 241,
+    "resultado": "APROBADO",
+    "observaciones": "Se comunica a la H. Cámara de Diputados.",
+    "seccion": "ley",
+    "fecha_sesion": "2026-10-29",
+    "nro_boletin": "10/26"
+  },
+  {
+    "expediente": "S-695/26",
+    "od_nro": 132,
+    "resultado": "APROBADO",
+    "observaciones": "Se comunica a la H. Cámara de Diputados.",
+    "seccion": "ley",
+    "fecha_sesion": "2026-10-29",
+    "nro_boletin": "10/26"
+  },
+  {
+    "expediente": "S-700/26",
+    "od_nro": 132,
+    "resultado": "APROBADO",
+    "observaciones": "Se comunica a la H. Cámara de Diputados.",
+    "seccion": "ley",
+    "fecha_sesion": "2026-10-29",
+    "nro_boletin": "10/26"
+  },
+  {
+    "expediente": "S-255/26",
+    "od_nro": 370,
+    "resultado": "APROBADO",
+    "observaciones": "Se comunica a la H. Cámara de Diputados.",
+    "seccion": "ley",
+    "fecha_sesion": "2026-10-29",
+    "nro_boletin": "10/26"
+  },
+  {
+    "expediente": "CD-7/26",
+    "od_nro": 367,
+    "resultado": "APROBADO con modificaciones",
+    "observaciones": "Vuelve a la H. Cámara de Diputados.",
+    "seccion": "ley",
+    "fecha_sesion": "2026-09-24",
+    "nro_boletin": "9/26"
+  },
+  {
+    "expediente": "CD-3/26",
+    "od_nro": 402,
+    "resultado": "APROBADO",
+    "observaciones": "Ley 27.828.",
+    "seccion": "ley",
+    "fecha_sesion": "2026-09-24",
+    "nro_boletin": "9/26"
+  },
+  {
+    "expediente": "S-908/26",
+    "od_nro": null,
+    "resultado": "APROBADA",
+    "observaciones": "Con dictamen de comisión.",
+    "seccion": "preferencia",
+    "fecha_sesion": "2026-09-17",
+    "nro_boletin": "8/26",
+    "solicitante": "Bahl"
+  },
+  {
+    "expediente": "S-1331/26",
+    "od_nro": null,
+    "resultado": "APROBADA",
+    "observaciones": "Con dictamen de comisión.",
+    "seccion": "preferencia",
+    "fecha_sesion": "2026-09-17",
+    "nro_boletin": "8/26",
+    "solicitante": "Corroza"
+  },
+  {
+    "expediente": "PE-91/26",
+    "od_nro": 338,
+    "resultado": "APROBADO",
+    "observaciones": "Se comunica al Poder Ejecutivo Nacional.",
+    "seccion": "acuerdo",
+    "fecha_sesion": "2026-09-17",
+    "nro_boletin": "8/26"
+  },
+  {
+    "expediente": "PE-35/26",
+    "od_nro": 353,
+    "resultado": "APROBADO",
+    "observaciones": "Se comunica al Poder Ejecutivo Nacional.",
+    "seccion": "acuerdo",
+    "fecha_sesion": "2026-09-17",
+    "nro_boletin": "8/26"
+  },
+  {
+    "expediente": "PE-37/26",
+    "od_nro": 354,
+    "resultado": "APROBADO",
+    "observaciones": "Se comunica al Poder Ejecutivo Nacional.",
+    "seccion": "acuerdo",
+    "fecha_sesion": "2026-09-17",
+    "nro_boletin": "8/26"
+  },
+  {
+    "expediente": "PE-243/26",
+    "od_nro": 360,
+    "resultado": "APROBADO",
+    "observaciones": "Se comunica a la H. Cámara de Diputados.",
+    "seccion": "ley",
+    "fecha_sesion": "2026-09-17",
+    "nro_boletin": "8/26"
+  },
+  {
+    "expediente": "PE-244/26",
+    "od_nro": 361,
+    "resultado": "APROBADO",
+    "observaciones": "Se comunica a la H. Cámara de Diputados.",
+    "seccion": "ley",
+    "fecha_sesion": "2026-09-17",
+    "nro_boletin": "8/26"
+  },
+  {
+    "expediente": "CD-8/26",
+    "od_nro": 372,
+    "resultado": "APROBADO",
+    "observaciones": "Ley 27.826.",
+    "seccion": "ley",
+    "fecha_sesion": "2026-09-17",
+    "nro_boletin": "8/26"
+  },
+  {
+    "expediente": "OV-453/24",
+    "od_nro": 340,
+    "resultado": "APROBADO",
+    "observaciones": "Se comunica a la H. Cámara de Diputados.",
+    "seccion": "ley",
+    "fecha_sesion": "2026-09-17",
+    "nro_boletin": "8/26"
+  },
+  {
+    "expediente": "OV-452/24",
+    "od_nro": 341,
+    "resultado": "APROBADO",
+    "observaciones": "Se comunica a la H. Cámara de Diputados.",
+    "seccion": "ley",
+    "fecha_sesion": "2026-09-17",
+    "nro_boletin": "8/26"
+  },
+  {
+    "expediente": "OV-451/24",
+    "od_nro": 342,
+    "resultado": "APROBADO",
+    "observaciones": "Se comunica a la H. Cámara de Diputados.",
+    "seccion": "ley",
+    "fecha_sesion": "2026-09-17",
+    "nro_boletin": "8/26"
+  },
+  {
+    "expediente": "OV-357/26",
+    "od_nro": 344,
+    "resultado": "APROBADO",
+    "observaciones": "Se comunica a la H. Cámara de Diputados.",
+    "seccion": "ley",
+    "fecha_sesion": "2026-09-17",
+    "nro_boletin": "8/26"
+  },
+  {
+    "expediente": "OV-331/26",
+    "od_nro": 345,
+    "resultado": "APROBADO",
+    "observaciones": "Se comunica a la H. Cámara de Diputados.",
+    "seccion": "ley",
+    "fecha_sesion": "2026-09-17",
+    "nro_boletin": "8/26"
+  },
+  {
+    "expediente": "OV-300/26",
+    "od_nro": 346,
+    "resultado": "APROBADO",
+    "observaciones": "Se comunica a la H. Cámara de Diputados.",
+    "seccion": "ley",
+    "fecha_sesion": "2026-09-17",
+    "nro_boletin": "8/26"
+  },
+  {
+    "expediente": "OV-234/24",
+    "od_nro": 347,
+    "resultado": "APROBADO",
+    "observaciones": "Se comunica a la H. Cámara de Diputados.",
+    "seccion": "ley",
+    "fecha_sesion": "2026-09-17",
+    "nro_boletin": "8/26"
+  },
+  {
+    "expediente": "OV-176/24",
+    "od_nro": 348,
+    "resultado": "APROBADO",
+    "observaciones": "Se comunica a la H. Cámara de Diputados.",
+    "seccion": "ley",
+    "fecha_sesion": "2026-09-17",
+    "nro_boletin": "8/26"
+  },
+  {
+    "expediente": "OV-175/24",
+    "od_nro": 349,
+    "resultado": "APROBADO",
+    "observaciones": "Se comunica a la H. Cámara de Diputados.",
+    "seccion": "ley",
+    "fecha_sesion": "2026-09-17",
+    "nro_boletin": "8/26"
+  },
+  {
+    "expediente": "OV-74/26",
+    "od_nro": 350,
+    "resultado": "APROBADO",
+    "observaciones": "Se comunica a la H. Cámara de Diputados.",
+    "seccion": "ley",
+    "fecha_sesion": "2026-09-17",
+    "nro_boletin": "8/26"
+  },
+  {
+    "expediente": "OV-32/26",
+    "od_nro": 351,
+    "resultado": "APROBADO",
+    "observaciones": "Se comunica a la H. Cámara de Diputados.",
+    "seccion": "ley",
+    "fecha_sesion": "2026-09-17",
+    "nro_boletin": "8/26"
+  },
+  {
+    "expediente": "OV-31/26",
+    "od_nro": 352,
+    "resultado": "APROBADO",
+    "observaciones": "Se comunica a la H. Cámara de Diputados.",
+    "seccion": "ley",
+    "fecha_sesion": "2026-09-17",
+    "nro_boletin": "8/26"
+  },
+  {
+    "expediente": "S-1144/26",
+    "od_nro": 337,
+    "resultado": "APROBADO",
+    "observaciones": "Se comunica a la H. Cámara de Diputados.",
+    "seccion": "ley",
+    "fecha_sesion": "2026-09-17",
+    "nro_boletin": "8/26"
+  },
+  {
+    "expediente": "CD-21/25",
+    "od_nro": 363,
+    "resultado": "APROBADO",
+    "observaciones": "Ley 27.827.",
+    "seccion": "ley",
+    "fecha_sesion": "2026-09-17",
+    "nro_boletin": "8/26"
+  },
+  {
+    "expediente": "S-1239/26",
+    "od_nro": 365,
+    "resultado": "APROBADO",
+    "observaciones": "Se comunica a la H. Cámara de Diputados.",
+    "seccion": "ley",
+    "fecha_sesion": "2026-09-17",
+    "nro_boletin": "8/26"
+  },
+  {
+    "expediente": "S-361/26",
+    "od_nro": 339,
+    "resultado": "APROBADO",
+    "observaciones": "Se comunica a la H. Cámara de Diputados.",
+    "seccion": "ley",
+    "fecha_sesion": "2026-09-17",
+    "nro_boletin": "8/26"
+  },
+  {
+    "expediente": "S-1271/25",
+    "od_nro": 362,
+    "resultado": "APROBADO con modificaciones",
+    "observaciones": "Se comunica a la H. Cámara de Diputados.",
+    "seccion": "ley",
+    "fecha_sesion": "2026-09-17",
+    "nro_boletin": "8/26"
+  },
+  {
+    "expediente": "S-1861/25",
+    "od_nro": 362,
+    "resultado": "APROBADO con modificaciones",
+    "observaciones": "Se comunica a la H. Cámara de Diputados.",
+    "seccion": "ley",
+    "fecha_sesion": "2026-09-17",
+    "nro_boletin": "8/26"
+  },
+  {
+    "expediente": "S-3/26",
+    "od_nro": 362,
+    "resultado": "APROBADO con modificaciones",
+    "observaciones": "Se comunica a la H. Cámara de Diputados.",
+    "seccion": "ley",
+    "fecha_sesion": "2026-09-17",
+    "nro_boletin": "8/26"
+  },
+  {
+    "expediente": "S-809/26",
+    "od_nro": 362,
+    "resultado": "APROBADO con modificaciones",
+    "observaciones": "Se comunica a la H. Cámara de Diputados.",
+    "seccion": "ley",
+    "fecha_sesion": "2026-09-17",
+    "nro_boletin": "8/26"
+  },
+  {
+    "expediente": "S-916/26",
+    "od_nro": 362,
+    "resultado": "APROBADO con modificaciones",
+    "observaciones": "Se comunica a la H. Cámara de Diputados.",
+    "seccion": "ley",
+    "fecha_sesion": "2026-09-17",
+    "nro_boletin": "8/26"
+  },
+  {
+    "expediente": "S-1246/26",
+    "od_nro": 362,
+    "resultado": "APROBADO con modificaciones",
+    "observaciones": "Se comunica a la H. Cámara de Diputados.",
+    "seccion": "ley",
+    "fecha_sesion": "2026-09-17",
+    "nro_boletin": "8/26"
+  },
+  {
+    "expediente": "S-1035/26",
+    "od_nro": 362,
+    "resultado": "APROBADO con modificaciones",
+    "observaciones": "Se comunica a la H. Cámara de Diputados.",
+    "seccion": "ley",
+    "fecha_sesion": "2026-09-17",
+    "nro_boletin": "8/26"
   }
 ]
