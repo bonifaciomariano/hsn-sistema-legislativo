@@ -1,5 +1,29 @@
 [
  {
+  "id": 24603,
+  "url": "https://www.senado.gob.ar/prensa/24603/noticias",
+  "fecha": "2026-11-04",
+  "titulo": "DICTAMEN AL PROYECTO DE LEY DE FORTALECIMIENTO DEL SISTEMA DE DISCAPACIDAD",
+  "comisiones": [
+   "POBLACION Y DESARROLLO HUMANO",
+   "PRESUPUESTO Y HACIENDA"
+  ]
+ },
+ {
+  "id": 24602,
+  "url": "https://www.senado.gob.ar/prensa/24602/noticias",
+  "fecha": "2026-11-04",
+  "titulo": "OBTUVO DICTAMEN LA RENOVACIÓN DEL COMITÉ PARA LA PREVENCIÓN DE LA TORTURA",
+  "comisiones": []
+ },
+ {
+  "id": 24601,
+  "url": "https://www.senado.gob.ar/prensa/24601/noticias",
+  "fecha": "2026-11-04",
+  "titulo": "SENADO TV PRESENTA TRES NUEVOS ESTRENOS ESTA SEMANA",
+  "comisiones": []
+ },
+ {
   "id": 24600,
   "url": "https://www.senado.gob.ar/prensa/24600/noticias",
   "fecha": "2026-11-04",
@@ -597,29 +621,6 @@
   "url": "https://www.senado.gob.ar/prensa/24390/noticias",
   "fecha": "2026-09-19",
   "titulo": "POR EL DÍA DE LAS PERSONAS SORDAS, EL SENADO SE ILUMINA DE AZUL",
-  "comisiones": []
- },
- {
-  "id": 24387,
-  "url": "https://www.senado.gob.ar/prensa/24387/noticias",
-  "fecha": "2026-09-18",
-  "titulo": "PRESENTACIÓN DEL LIBRO \"POLÍTICAS PARA CUIDAR LA VIDA\"",
-  "comisiones": []
- },
- {
-  "id": 24384,
-  "url": "https://www.senado.gob.ar/prensa/24384/noticias",
-  "fecha": "2026-09-17",
-  "titulo": "SE CONVIRTIÓ EN LEY INOCENCIA FISCAL II Y EL NUEVO RÉGIMEN DE BIOCOMBUSTIBLES OBTUVO MEDIA SANCIÓN",
-  "comisiones": [
-   "ACUERDOS"
-  ]
- },
- {
-  "id": 24383,
-  "url": "https://www.senado.gob.ar/prensa/24383/noticias",
-  "fecha": "2026-09-17",
-  "titulo": "POR EL DÍA DEL PROFESOR EL SENADO SE ILUMINA DE AZUL",
   "comisiones": []
  }
 ]
