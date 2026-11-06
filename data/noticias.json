@@ -1,5 +1,19 @@
 [
  {
+  "id": 24608,
+  "url": "https://www.senado.gob.ar/prensa/24608/noticias",
+  "fecha": "2026-11-06",
+  "titulo": "JUJUY BRILLA EN EL SENADO",
+  "comisiones": []
+ },
+ {
+  "id": 24607,
+  "url": "https://www.senado.gob.ar/prensa/24607/noticias",
+  "fecha": "2026-11-06",
+  "titulo": "EL SENADO ABRE SUS PUERTAS EN LA NOCHE DE LOS MUSEOS: HISTORIA, ARTE Y PATRIMONIO VIVO",
+  "comisiones": []
+ },
+ {
   "id": 24603,
   "url": "https://www.senado.gob.ar/prensa/24603/noticias",
   "fecha": "2026-11-04",
@@ -607,20 +621,6 @@
   "url": "https://www.senado.gob.ar/prensa/24394/noticias",
   "fecha": "2026-09-21",
   "titulo": "\"ALMA ITALIANA\", EL NUEVO CONCIERTO DE LA ORQUESTA DEL CONGRESO",
-  "comisiones": []
- },
- {
-  "id": 24393,
-  "url": "https://www.senado.gob.ar/prensa/24393/noticias",
-  "fecha": "2026-09-21",
-  "titulo": "NUEVO ESTRENO DEL CICLO “FIESTAS FEDERALES”, EN BARILOCHE",
-  "comisiones": []
- },
- {
-  "id": 24390,
-  "url": "https://www.senado.gob.ar/prensa/24390/noticias",
-  "fecha": "2026-09-19",
-  "titulo": "POR EL DÍA DE LAS PERSONAS SORDAS, EL SENADO SE ILUMINA DE AZUL",
   "comisiones": []
  }
 ]
