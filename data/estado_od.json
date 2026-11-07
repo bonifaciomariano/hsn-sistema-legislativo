@@ -2113,5 +2113,10 @@
     "estado": "PENDIENTE",
     "fecha": "05-11-2026",
     "expedientes_probados": 1
+  },
+  "424": {
+    "estado": "PENDIENTE",
+    "fecha": "06-11-2026",
+    "expedientes_probados": 1
   }
 }

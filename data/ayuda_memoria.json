@@ -1,5 +1,45 @@
 [
   {
+    "numero": "424",
+    "periodo": 2026,
+    "origen": "Poder Ejecutivo",
+    "categoria": "Proyecto de Ley",
+    "autor": null,
+    "descripcion": "Dictamen aceptando las modificaciones introducidas por la Honorable Cámara de Diputados al proyecto de ley del Poder Ejecutivo Nacional sobre inviolabilidad de la propiedad privada. (PE-13/26)",
+    "expedientes": [
+      {
+        "codigo": "PE-13/26",
+        "url": "https://www.senado.gob.ar/parlamentario/comisiones/verExp/13.26/PE/PL"
+      }
+    ],
+    "comisionCabecera": "Asuntos Constitucionales",
+    "fechaDictamen": "06/11/2026",
+    "odLink": "https://www.senado.gob.ar/parlamentario/parlamentaria/51768/downloadOrdenDia",
+    "comisiones": [
+      "Asuntos Constitucionales",
+      "DE ASUNTOS CONSTITUCIONALES",
+      "DE LEGISLACIÓN GENERAL"
+    ],
+    "tipoOD": "NORMAL",
+    "firmantesMayoria": [
+      "Agustín P. Coto",
+      "Nadia J. Márquez",
+      "Rodolfo A. Suárez",
+      "Bartolomé E. Abdala",
+      "María B. Monte de Oca",
+      "Gonzalo Guzmán Coraita",
+      "Luis A. Juez",
+      "Patricia Bullrich",
+      "Ivanna M. Arrascaeta",
+      "María E. Orozco",
+      "Carlos M. Espínola",
+      "Maximiliano Abad",
+      "Eduardo A. Vischi",
+      "María V. Huala",
+      "María C. Moisés"
+    ]
+  },
+  {
     "numero": "423",
     "periodo": 2026,
     "origen": "Senado",

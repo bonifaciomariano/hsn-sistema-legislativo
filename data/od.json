@@ -20828,5 +20828,21 @@
     ],
     "url_pdf": "https://www.senado.gob.ar/parlamentario/parlamentaria/51766/downloadOrdenDia",
     "fecha": null
+  },
+  {
+    "nro_od": 424,
+    "anio_od": 2026,
+    "tipo_od": "N",
+    "expedientes": [
+      {
+        "nro": 13,
+        "anio": 2026,
+        "tipo": "PL",
+        "origen": "PE",
+        "url": "https://www.senado.gob.ar/parlamentario/comisiones/verExp/13.26/PE/PL"
+      }
+    ],
+    "url_pdf": "https://www.senado.gob.ar/parlamentario/parlamentaria/51768/downloadOrdenDia",
+    "fecha": null
   }
 ]
