@@ -1,5 +1,12 @@
 [
  {
+  "id": 24609,
+  "url": "https://www.senado.gob.ar/prensa/24609/noticias",
+  "fecha": "2026-11-08",
+  "titulo": "POR LA VISITA DEL SANTO PADRE LEÓN XIV, EL CONGRESO SE ILUMINA DE AMARILLO",
+  "comisiones": []
+ },
+ {
   "id": 24608,
   "url": "https://www.senado.gob.ar/prensa/24608/noticias",
   "fecha": "2026-11-06",
@@ -614,13 +621,6 @@
   "url": "https://www.senado.gob.ar/prensa/24398/noticias",
   "fecha": "2026-09-21",
   "titulo": "EL SENADO PRESENTÓ EL LIBRO “MALVINAS, LA SENDA DEL HÉROE”",
-  "comisiones": []
- },
- {
-  "id": 24394,
-  "url": "https://www.senado.gob.ar/prensa/24394/noticias",
-  "fecha": "2026-09-21",
-  "titulo": "\"ALMA ITALIANA\", EL NUEVO CONCIERTO DE LA ORQUESTA DEL CONGRESO",
   "comisiones": []
  }
 ]
