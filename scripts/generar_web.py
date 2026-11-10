@@ -3165,31 +3165,28 @@ var AM_CAT_CODE={'Acuerdo':'AC','Acuerdo para dar cuenta':'DC','Proyecto de Ley'
 var AM_TIPO_FG={PL:'#1B5EA2',PD:'#7C3AED',PC:'#0d7a4a',PR:'#C2650C',AC:'#7a5c1a',DC:'#8a5a00'};
 var AM_TIPO_BG={PL:'#D6E4F0',PD:'#EDE4FB',PC:'#DCF0E8',PR:'#FBEADD',AC:'#F9F0DA',DC:'#FFE8B3'};
 var amCat='Todos',amComision='',amAutor='',amBloque='',amSearch='',amCurrent=null,amStep=0,amFiltered=[];
-/* Selector de autores: senadores individuales (no el texto compuesto de la
-   ficha). Con un bloque elegido sólo se listan los senadores de ese bloque. */
-function amFillAutores(){
-  var set={};
-  (AYUDA_MEMORIA||[]).forEach(function(d){
-    (d.autoresDet||[]).forEach(function(a){if(!amBloque||a.b===amBloque)set[a.n]=1});
+/* Todos los bloques con alguien que firmó la OD: mayoría, minoría y quienes
+   firmaron en disidencia (total o parcial) de cualquiera de las dos. */
+function amGruposBloque(d){
+  var grupos=(d.firmantesPorBloque||[]).concat((d.minoria&&d.minoria.firmantesPorBloque)||[]);
+  (d.disidenciasPorBloque||[]).concat((d.minoria&&d.minoria.disidenciasPorBloque)||[]).forEach(function(ds){
+    grupos=grupos.concat(ds.firmantesPorBloque||[]);
   });
-  var sel=document.getElementById('am-autor-select');
-  sel.innerHTML='<option value="">Todos los autores</option>';
-  fillSelect('am-autor-select',Object.keys(set).sort());
-  if(amAutor&&!set[amAutor])amAutor='';
-  sel.value=amAutor;
+  return grupos;
 }
 function amInit(){
-  var comSet={},bloqueSet={};
+  var comSet={},autorSet={},bloqueSet={};
   (AYUDA_MEMORIA||[]).forEach(function(d){
     (d.comisiones||[]).forEach(function(c){if(c)comSet[c]=1});
-    (d.bloquesAutor||[]).forEach(function(b){bloqueSet[b]=1});
+    if(d.autor)autorSet[d.autor]=1;
+    amGruposBloque(d).forEach(function(g){if(g.bloque)bloqueSet[g.bloque]=1});
   });
   fillSelectLabeled('am-comision-select',Object.keys(comSet).sort(),comLabel);
   document.getElementById('am-comision-select').addEventListener('change',function(e){amComision=e.target.value;renderAm()});
-  amFillAutores();
+  fillSelect('am-autor-select',Object.keys(autorSet).sort());
   document.getElementById('am-autor-select').addEventListener('change',function(e){amAutor=e.target.value;renderAm()});
   fillSelect('am-bloque-select',Object.keys(bloqueSet).sort());
-  document.getElementById('am-bloque-select').addEventListener('change',function(e){amBloque=e.target.value;amFillAutores();renderAm()});
+  document.getElementById('am-bloque-select').addEventListener('change',function(e){amBloque=e.target.value;renderAm()});
 
   var chipsEl=document.getElementById('am-chips');
   AM_CATS.forEach(function(c){
@@ -3239,8 +3236,8 @@ function renderAm(){
   amFiltered=data.filter(function(d){
     if(amCat!=='Todos'&&d.categoria!==amCat)return false;
     if(amComision&&(d.comisiones||[]).indexOf(amComision)<0)return false;
-    if(amAutor&&!(d.autoresDet||[]).some(function(a){return a.n===amAutor}))return false;
-    if(amBloque&&(d.bloquesAutor||[]).indexOf(amBloque)<0)return false;
+    if(amAutor&&d.autor!==amAutor)return false;
+    if(amBloque&&!amGruposBloque(d).some(function(g){return g.bloque===amBloque}))return false;
     if(amSearch){
       var hay=(d.descripcion+' '+(d.autor||'')+' '+(d.expedientes||[]).map(function(e){return e.codigo}).join(' ')).toLowerCase();
       if(hay.indexOf(amSearch)<0)return false;
@@ -6276,7 +6273,7 @@ HTML_TEMPLATE = """<!DOCTYPE html>
             </div>
             <div class="select-wrapper">
               <select class="filter-select" id="am-bloque-select">
-                <option value="">Todos los bloques (autor)</option>
+                <option value="">Todos los bloques</option>
               </select>
               <span class="select-arrow">&#9660;</span>
             </div>
@@ -6961,34 +6958,11 @@ def construir_ayuda_memoria(proyectos=None):
     for p in (proyectos or []):
         if p.get("url"):
             urls_por_exp.setdefault((p.get("origen"), p.get("nro"), p.get("anio")), p["url"])
-    bloques_por_exp = {
-        (p.get("origen"), p.get("nro"), p.get("anio")): p.get("bloques") or []
-        for p in (proyectos or [])
-    }
-    autores_por_exp = {
-        (p.get("origen"), p.get("nro"), p.get("anio")): (p.get("autores") or []) + (p.get("coautores") or [])
-        for p in (proyectos or [])
-    }
 
     for it in items:
         for e in it.get("expedientes") or []:
             if not e.get("url"):
                 e["url"] = urls_por_exp.get(_clave_exp_am(e.get("codigo")))
-        # Bloques de los AUTORES de los proyectos dictaminados (no de quienes
-        # firman el dictamen): es lo que filtra el selector de bloque.
-        claves_exp = [_clave_exp_am(e.get("codigo")) for e in it.get("expedientes") or []]
-        autores_det = {}
-        for k in claves_exp:
-            for nom in autores_por_exp.get(k, []):
-                autores_det.setdefault(nom, bloque_de_senador(nom))
-        it["autoresDet"] = [
-            {"n": nom.title(), "b": b}
-            for nom, b in sorted(autores_det.items())
-        ]
-        bloques = {b for b in autores_det.values() if b}
-        if not bloques or not all(autores_det.values()):
-            bloques.update(b for k in claves_exp for b in bloques_por_exp.get(k, []))
-        it["bloquesAutor"] = sorted(bloques)
         it["comisiones"] = list(dict.fromkeys(_com_oficial(c) for c in (it.get("comisiones") or [])))
         if it.get("comisionCabecera") and it["comisionCabecera"] != "Acuerdos":
             it["comisionCabecera"] = _com_oficial(it["comisionCabecera"])
