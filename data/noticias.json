@@ -1,5 +1,12 @@
 [
  {
+  "id": 24610,
+  "url": "https://www.senado.gob.ar/prensa/24610/noticias",
+  "fecha": "2026-11-09",
+  "titulo": "EL CONGRESO SE ILUMINA DE VIOLETA POR EL DÍA MUNDIAL DE LA ADOPCIÓN",
+  "comisiones": []
+ },
+ {
   "id": 24609,
   "url": "https://www.senado.gob.ar/prensa/24609/noticias",
   "fecha": "2026-11-08",
@@ -614,13 +621,6 @@
   "url": "https://www.senado.gob.ar/prensa/24405/noticias",
   "fecha": "2026-09-22",
   "titulo": "“EL SENADO VA A LA ESCUELA” VISITÓ LA PROVINCIA DE TIERRA DEL FUEGO, ANTÁRTIDA E ISLAS DEL ATLÁNTICO SUR",
-  "comisiones": []
- },
- {
-  "id": 24398,
-  "url": "https://www.senado.gob.ar/prensa/24398/noticias",
-  "fecha": "2026-09-21",
-  "titulo": "EL SENADO PRESENTÓ EL LIBRO “MALVINAS, LA SENDA DEL HÉROE”",
   "comisiones": []
  }
 ]
