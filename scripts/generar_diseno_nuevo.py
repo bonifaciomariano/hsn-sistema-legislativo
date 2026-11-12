@@ -397,7 +397,7 @@ body.nd-colapsado .mtab-btn[data-main="inicio"]::before{content:"In"}
 
 SANC_JS = r"""<script>
 /* Sanciones (solo diseño nuevo): muestra las "aprobado con modificaciones"
-   como "Vuelve a Diputados" y permite buscar por número de OD / observaciones. */
+   como "Pasa a Diputados" y permite buscar por número de OD / observaciones. */
 (function(){
   function esModif(it){return /^APROBAD\w*\s+con\s+modif/i.test(it.resultado||'');}
   window.sancAprobado=function(it){return it.resultado==='APROBADO'||it.resultado==='APROBADA'||esModif(it);};
@@ -409,10 +409,11 @@ SANC_JS = r"""<script>
       var cat=sancCategoriaLanding(it);
       if(!cat)return false;
       if(sancCat!=='TODOS'&&cat!==sancCat)return false;
+      if(sancFecha&&it.fecha_sesion!==sancFecha)return false;
       if(!q)return true;
       var exp=parseExpNumero(it.expediente);
       var p=exp?proyectoDeExp(exp):null;
-      var hay=nrm(it.expediente+' od '+(it.od_nro||'')+' od n '+(it.od_nro||'')+' '+(it.observaciones||'')+' '+(esModif(it)?'vuelve a diputados con modificaciones':'')+' '+(p&&p.extracto||''));
+      var hay=nrm(it.expediente+' od '+(it.od_nro||'')+' od n '+(it.od_nro||'')+' '+(it.observaciones||'')+' '+(esModif(it)?'pasa a diputados vuelve a diputados con modificaciones':'')+' '+(p&&p.extracto||''));
       return hay.indexOf(q)>=0;
     });
     lista=lista.slice().sort(function(a,b){return (b.fecha_sesion||'').localeCompare(a.fecha_sesion||'')});
@@ -423,7 +424,7 @@ SANC_JS = r"""<script>
   var _bsc=window.buildSancCard;
   window.buildSancCard=function(it){
     var h=_bsc(it);
-    if(esModif(it))h=h.replace('<div class="od-card-top">','<div class="od-card-top"><span class="od-tipo-tag" style="background:#FCEBD3;color:#8A4B08;border-color:#F0CFA0">Vuelve a Diputados</span>');
+    if(esModif(it))h=h.replace('<div class="od-card-top">','<div class="od-card-top"><span class="od-tipo-tag" style="background:#FCEBD3;color:#8A4B08;border-color:#F0CFA0">Pasa a Diputados</span>');
     return h;
   };
   if(typeof renderSanciones==='function')try{renderSanciones();}catch(e){}
@@ -698,7 +699,7 @@ BORRAR_JS = r"""<script>
     agenda:function(){['agenda-search','agenda-comision-select'].forEach(vac);
       try{agendaSearch='';agendaComision='';agendaOnFiltro();}catch(e){}},
     ayuda:function(){['am-search','am-comision-select','am-autor-select','am-bloque-select'].forEach(vac);},
-    sanciones:function(){vac('sanc-search');try{setSancCat('TODOS');}catch(e){}},
+    sanciones:function(){vac('sanc-search');vac('sanc-fecha-select');try{sancFecha='';setSancCat('TODOS');}catch(e){}},
     senadores:function(){['sen-q','sen-bloque','sen-prov','sen-ex'].forEach(vac);}
   };
   function boton(fn){var b=document.createElement('button');b.type='button';b.className='bf-btn';

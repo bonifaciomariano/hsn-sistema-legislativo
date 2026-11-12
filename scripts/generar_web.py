@@ -1405,6 +1405,7 @@ function init(){
   agendaInit();
   amInit();
   renderSancChips();
+  sancFillFechas();
   renderSanciones();
   renderPrefChips();
   renderPreferencias();
@@ -3750,7 +3751,7 @@ function cerrarFichaReunion(){
 
 /* ── Sanciones HSN (Boletín de Novedades) ─────────────────────────── */
 var SANC_SECCION_LABEL={ley:'Ley',decreto_res_com_dec:'Decreto/Res/Com/Dec',acuerdo:'Acuerdo',preferencia:'Preferencia'};
-var sancCat='TODOS',sancPrefCat='TODOS';
+var sancCat='TODOS',sancPrefCat='TODOS',sancFecha='';
 var SANC_CATS=['TODOS','LEY','PR','PD','PC','AC','OTROS'];
 var SANC_CAT_LABELS={TODOS:'Todos',LEY:'Ley',PR:'PR',PD:'PD',PC:'PC',AC:'Acuerdos',OTROS:'Otros'};
 function fechaSesionDisplay(iso){
@@ -3800,6 +3801,16 @@ function renderPrefChips(){
   }).join('');
   document.getElementById('sanc-pref-chips').innerHTML=html;
 }
+function sancFillFechas(){
+  var sel=document.getElementById('sanc-fecha-select');
+  if(!sel)return;
+  var set={};
+  (SANCIONES_DATA||[]).forEach(function(it){if(it.fecha_sesion&&it.seccion!=='preferencia')set[it.fecha_sesion]=1});
+  var fechas=Object.keys(set).sort().reverse();
+  sel.innerHTML='<option value="">Todas las sesiones</option>'+fechas.map(function(f){return '<option value="'+escAttr(f)+'">Sesi&oacute;n del '+esc(fechaSesionDisplay(f))+'</option>'}).join('');
+  if(sancFecha&&!set[sancFecha])sancFecha='';
+  sel.value=sancFecha;
+}
 function setSancCat(c){sancCat=c;renderSancChips();renderSanciones();}
 function setSancPrefCat(c){sancPrefCat=c;renderPrefChips();renderPreferencias();}
 function sancObsHtml(item){
@@ -3830,6 +3841,7 @@ function renderSanciones(){
     var cat=sancCategoriaLanding(it);
     if(!cat)return false;
     if(sancCat!=='TODOS'&&cat!==sancCat)return false;
+    if(sancFecha&&it.fecha_sesion!==sancFecha)return false;
     if(!q)return true;
     if(it.expediente.toLowerCase().indexOf(q)>=0)return true;
     var exp=parseExpNumero(it.expediente);
@@ -3876,6 +3888,9 @@ function irASanciones(expediente){
   }else{
     switchMain('sanciones');
     sancCat=(it&&sancCategoriaLanding(it))||'TODOS';
+    sancFecha='';
+    var fsel=document.getElementById('sanc-fecha-select');
+    if(fsel)fsel.value='';
     var searchEl=document.getElementById('sanc-search');
     if(searchEl)searchEl.value=expediente;
     renderSancChips();
@@ -6333,6 +6348,12 @@ HTML_TEMPLATE = """<!DOCTYPE html>
     </div>
     <div class="section-body">
       <div class="filter-row" id="sanc-chips"></div>
+      <div class="select-wrapper" style="display:inline-block;margin:0 10px 8px 0">
+        <select class="filter-select" id="sanc-fecha-select" onchange="sancFecha=this.value;renderSanciones()">
+          <option value="">Todas las sesiones</option>
+        </select>
+        <span class="select-arrow">&#9660;</span>
+      </div>
       <input class="search-box" type="text" id="sanc-search" placeholder="Buscar por n&uacute;mero de expediente o extracto&hellip;" oninput="renderSanciones()" style="max-width:360px">
       <div id="sanc-list" class="sanc-grid"></div>
     </div>

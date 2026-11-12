@@ -65,7 +65,7 @@ HEADERS = {
 PAUSA_ENTRE_REQUESTS = 1.0
 
 # Expediente: "S-289/26", "PE-98/26", "CD-20/24" (origen puede traer puntos: "P.E-133/26")
-RE_EXP = re.compile(r"\b([A-ZÑ.]{1,5}-\d+/\d{2})\b")
+RE_EXP = re.compile(r"\b([A-ZÑ.]{1,5}-\s?\d+/\d{2})\b")  # tolera "S- 1442/26"
 
 # En MOCIONES DE PREFERENCIA cada fila arranca con "Apellido: <expediente(s)...>"
 # -> el apellido de quien solicitó la preferencia.
@@ -146,7 +146,7 @@ def extraer_expedientes(texto):
     encontrados = []
     for m in RE_EXP.finditer(texto or ""):
         origen, resto = m.group(1).split("-", 1)
-        encontrados.append(f"{origen.replace('.', '')}-{resto}")
+        encontrados.append(f"{origen.replace('.', '')}-{resto.strip()}")
     return encontrados
 
 
@@ -194,7 +194,7 @@ def procesar_fila(celdas, seccion, nro_boletin, fecha_sesion):
         od_nro = None if od_celda.strip().upper() == "S/T" else parsear_od_nro(od_celda)
 
     items = []
-    for exp in extraer_expedientes(texto):
+    for exp in expedientes_texto(texto):  # entiende citas combinadas: "S-252 y 308/26", "S-1808 y S-1497/25"
         item = {
             "expediente": exp,
             "od_nro": od_nro,
@@ -260,7 +260,7 @@ RE_ENTRADA_ST = re.compile(r"^S/T\s*:\s*(.*)$", re.I)
 RE_EXP_INICIO = re.compile(r"^[A-ZÑ.]{1,5}-\d+(?:/\d{2}|\s*(?:,|y)\s*\d+/\d{2})")
 RE_PIE_TXT = re.compile(r"^(BOLET[IÍ]N DE NOVEDADES|DIRECCI[OÓ]N GENERAL DE COMISIONES|SE LEVANTA LA SESI[OÓ]N)", re.I)
 # Cita combinada: "S-252 y 308/26" o "S-252, 308 y 310/26"
-RE_EXP_COMBINADA = re.compile(r"\b([A-ZÑ.]{1,5})-(\d+(?:\s*(?:,|y)\s*\d+)+)/(\d{2})\b")
+RE_EXP_COMBINADA = re.compile(r"\b([A-ZÑ.]{1,5})-(\d+(?:\s*(?:,|y)\s*(?:[A-ZÑ.]{1,5}-)?\d+)+)/(\d{2})\b")
 
 
 def seccion_desde_titulo(titulo):
@@ -405,11 +405,20 @@ def main():
     procesados = cargar_procesados()
     # SANCIONES_REPROCESAR="8/26,9/26": vuelve a leer esos boletines (quita sus ítems anteriores
     # y los marca como no procesados). Sirve cuando se corrige el lector.
-    reprocesar = {x.strip() for x in os.getenv("SANCIONES_REPROCESAR", "").split(",") if x.strip()}
+    # SANCIONES_REPROCESAR="TODOS" relee todos los boletines del listado.
+    pedido = os.getenv("SANCIONES_REPROCESAR", "").strip()
+    if pedido.upper() == "TODOS":
+        reprocesar = {b["nro_boletin"] for b in boletines}
+    else:
+        reprocesar = {x.strip() for x in pedido.split(",") if x.strip()}
+    previas_por_boletin = {}
     if reprocesar and not TEST:
         previas = cargar_sanciones()
+        for it in previas:
+            if it.get("nro_boletin") in reprocesar:
+                previas_por_boletin.setdefault(it["nro_boletin"], []).append(it)
         quedan = [it for it in previas if it.get("nro_boletin") not in reprocesar]
-        log.info(f"  -> reprocesando {sorted(reprocesar)}: se descartan {len(previas) - len(quedan)} ítems previos")
+        log.info(f"  -> reprocesando {len(reprocesar)} boletines: se descartan {len(previas) - len(quedan)} ítems previos")
         guardar_sanciones(quedan)
         procesados -= reprocesar
     pendientes = [b for b in boletines if b["nro_boletin"] not in procesados]
@@ -437,6 +446,16 @@ def main():
         for it in items:
             total_nuevos[it["seccion"]] = total_nuevos.get(it["seccion"], 0) + 1
         log.info(f"    -> {len(items)} items extraidos")
+        if nro_boletin in previas_por_boletin:
+            # Comparación con lo que había cargado antes (por ejemplo, a mano): qué se suma y qué se pierde.
+            antes = {(i["expediente"], i["seccion"]) for i in previas_por_boletin[nro_boletin]}
+            ahora = {(i["expediente"], i["seccion"]) for i in items}
+            log.info(f"    [comparación {nro_boletin}] antes {len(antes)} | ahora {len(ahora)} | "
+                     f"se suman {len(ahora - antes)} | se pierden {len(antes - ahora)}")
+            if antes - ahora:
+                log.warning(f"      SE PIERDEN: {sorted(antes - ahora)[:20]}")
+            if ahora - antes:
+                log.info(f"      SE SUMAN: {sorted(ahora - antes)[:20]}")
 
         if TEST:
             print(json.dumps(items, ensure_ascii=False, indent=2))
