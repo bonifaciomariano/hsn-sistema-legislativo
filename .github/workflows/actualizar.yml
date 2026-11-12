@@ -31,7 +31,7 @@ on:
   workflow_dispatch:
     inputs:
       reprocesar_sanciones:
-        description: "Sanciones: boletines a volver a leer (ej. 8/26,9/26,10/26). Dejar vacío en el uso normal."
+        description: "Sanciones: boletines a volver a leer (ej. 8/26,9/26 o TODOS para releer todos). Dejar vacío en el uso normal."
         required: false
         default: ""
 
