@@ -1,5 +1,5 @@
 {
- "generado": "2026-11-11 19:19",
+ "generado": "2026-11-12 13:26",
  "pliegos": {
   "PE-103/26": {
    "archivo": "11/09/2026",
@@ -2634,6 +2634,23 @@
    },
    "sancion": "aprobada",
    "sancion_fecha": "04/06/2026"
+  },
+  "PE-362/26": {
+   "archivo": null,
+   "dado_cuenta": null,
+   "dae": "35/26",
+   "ingreso": "12/11/2026",
+   "nuevo": {
+    "candidato": "HORACIO ALEJANDRO LIBERTI",
+    "cargo": "JUEZ DEL JUZGADO NACIONAL DE PRIMERA INSTANCIA EN LO CIVIL N°33 DE LA CAPITAL FEDERAL",
+    "fuero": "Civil",
+    "provincia": "CABA",
+    "rango": "Juez/a (primera instancia)",
+    "url": "https://www.senado.gob.ar/parlamentario/comisiones/verExp/362.26/PE/AC"
+   },
+   "od": null,
+   "sancion": "",
+   "sancion_fecha": null
   },
   "PE-37/26": {
    "archivo": "25/09/2026",
