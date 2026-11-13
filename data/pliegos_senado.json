@@ -1,5 +1,5 @@
 {
- "generado": "2026-11-12 19:51",
+ "generado": "2026-11-13 19:17",
  "pliegos": {
   "PE-103/26": {
    "archivo": "11/09/2026",
@@ -1893,7 +1893,25 @@
    "sancion": "",
    "sancion_fecha": null
   },
+  "PE-285/26": {
+   "archivo": null,
+   "dado_cuenta": "17/09/2026",
+   "dae": "29/26",
+   "ingreso": "28/08/2026",
+   "od": null,
+   "sancion": "",
+   "sancion_fecha": null
+  },
   "PE-286/26": {
+   "archivo": null,
+   "dado_cuenta": "17/09/2026",
+   "dae": "29/26",
+   "ingreso": "28/08/2026",
+   "od": null,
+   "sancion": "",
+   "sancion_fecha": null
+  },
+  "PE-287/26": {
    "archivo": null,
    "dado_cuenta": "17/09/2026",
    "dae": "29/26",
