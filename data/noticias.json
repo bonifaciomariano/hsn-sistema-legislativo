@@ -1,5 +1,12 @@
 [
  {
+  "id": 24614,
+  "url": "https://www.senado.gob.ar/prensa/24614/noticias",
+  "fecha": "2026-11-15",
+  "titulo": "El CONGRESO FUE PROTAGONISTA DE UNA NUEVA NOCHE DE LOS MUSEOS",
+  "comisiones": []
+ },
+ {
   "id": 24610,
   "url": "https://www.senado.gob.ar/prensa/24610/noticias",
   "fecha": "2026-11-09",
@@ -614,13 +621,6 @@
   "url": "https://www.senado.gob.ar/prensa/24407/noticias",
   "fecha": "2026-09-22",
   "titulo": "PRESENTACIÓN DEL LIBRO INSTITUCIONAL: “POLÍTICAS PARA CUIDAR LA VIDA”",
-  "comisiones": []
- },
- {
-  "id": 24405,
-  "url": "https://www.senado.gob.ar/prensa/24405/noticias",
-  "fecha": "2026-09-22",
-  "titulo": "“EL SENADO VA A LA ESCUELA” VISITÓ LA PROVINCIA DE TIERRA DEL FUEGO, ANTÁRTIDA E ISLAS DEL ATLÁNTICO SUR",
   "comisiones": []
  }
 ]
