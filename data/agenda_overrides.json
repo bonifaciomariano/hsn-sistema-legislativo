@@ -195,6 +195,25 @@
       "suspendida": false,
       "actualizado": "2026-10-26T13:25:33.891Z",
       "actualizado_por": "Mariano"
+    },
+    {
+      "nueva": true,
+      "id": "manual_1794917297293",
+      "fecha": "17/11",
+      "hora": "14:00",
+      "dia": "MARTES",
+      "comisiones": [
+        "ACUERDOS"
+      ],
+      "salon_nuevo": "AZUL",
+      "tipo_nuevo": "senadores",
+      "temario_extra": null,
+      "expositores_extra": null,
+      "nota": null,
+      "suspendida": false,
+      "boletin_numero": "manual/26",
+      "actualizado": "2026-11-17T12:08:17.293Z",
+      "actualizado_por": "Paulina"
     }
   ]
 }
