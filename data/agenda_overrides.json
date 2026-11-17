@@ -198,25 +198,6 @@
     },
     {
       "nueva": true,
-      "id": "manual_1794917537733",
-      "fecha": "17/11",
-      "hora": "14:00",
-      "dia": "MARTES",
-      "comisiones": [
-        "ACUERDOS"
-      ],
-      "salon_nuevo": "AZUL",
-      "tipo_nuevo": "senadores",
-      "temario_extra": null,
-      "expositores_extra": null,
-      "nota": null,
-      "suspendida": false,
-      "boletin_numero": "manual/26",
-      "actualizado": "2026-11-17T12:12:17.734Z",
-      "actualizado_por": "Paulina"
-    },
-    {
-      "nueva": true,
       "id": "manual_1794917297293",
       "fecha": "17/11",
       "hora": "14:00",
@@ -252,6 +233,25 @@
       "boletin_numero": "manual/26",
       "actualizado": "2026-11-17T12:24:12.746Z",
       "actualizado_por": "Paulina"
+    },
+    {
+      "nueva": true,
+      "id": "manual_1794917537733",
+      "fecha": "17/11",
+      "hora": "14:00",
+      "dia": "MARTES",
+      "comisiones": [
+        "ACUERDOS"
+      ],
+      "salon_nuevo": "AZUL",
+      "tipo_nuevo": "senadores",
+      "temario_extra": null,
+      "expositores_extra": null,
+      "nota": null,
+      "suspendida": false,
+      "boletin_numero": "manual/26",
+      "actualizado": "2026-11-17T13:23:42.736Z",
+      "actualizado_por": "l"
     }
   ]
 }
