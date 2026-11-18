@@ -1,5 +1,14 @@
 [
  {
+  "id": 24628,
+  "url": "https://www.senado.gob.ar/prensa/24628/noticias",
+  "fecha": "2026-11-18",
+  "titulo": "ANALIZARON PLIEGOS JUDICIALES EN AUDIENCIA PÚBLICA",
+  "comisiones": [
+   "ACUERDOS"
+  ]
+ },
+ {
   "id": 24623,
   "url": "https://www.senado.gob.ar/prensa/24623/noticias",
   "fecha": "2026-11-17",
@@ -616,13 +625,6 @@
   "url": "https://www.senado.gob.ar/prensa/24427/noticias",
   "fecha": "2026-09-24",
   "titulo": "POR LA BATALLA DE TUCUMÁN Y LA VIRGEN DE LA MERCED, EL SENADO SE ILUMINA DE AZUL",
-  "comisiones": []
- },
- {
-  "id": 24421,
-  "url": "https://www.senado.gob.ar/prensa/24421/noticias",
-  "fecha": "2026-09-24",
-  "titulo": "MUESTRA \"TUCUMÁN: LA BATALLA CONTRA EL DESTINO\"",
   "comisiones": []
  }
 ]
