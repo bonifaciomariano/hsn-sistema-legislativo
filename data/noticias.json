@@ -1,5 +1,42 @@
 [
  {
+  "id": 24635,
+  "url": "https://www.senado.gob.ar/prensa/24635/noticias",
+  "fecha": "2026-11-18",
+  "titulo": "EL CONGRESO SE ILUMINA DE AZUL POR EL DÍA DE LA AUTONOMÍA POLÍTICA DE LA PROVINCIA DE JUJUY",
+  "comisiones": []
+ },
+ {
+  "id": 24633,
+  "url": "https://www.senado.gob.ar/prensa/24633/noticias",
+  "fecha": "2026-11-18",
+  "titulo": "EL SENADO AVANZÓ EN PROYECTOS VINCULADOS CON EL TURISMO, LA CIENCIA Y EL DESARROLLO PRODUCTIVO",
+  "comisiones": [
+   "ASUNTOS ADMINISTRATIVOS Y MUNICIPALES",
+   "CIENCIA Y TECNOLOGIA",
+   "ECONOMIAS REGIONALES ECONOMIA SOCIAL MICRO PEQUENA Y MEDIANA EMPRESA",
+   "TURISMO"
+  ]
+ },
+ {
+  "id": 24631,
+  "url": "https://www.senado.gob.ar/prensa/24631/noticias",
+  "fecha": "2026-11-18",
+  "titulo": "EL SENADO AVANZA EN EL TRATAMIENTO DE PENAS POR VANDALISMO RURAL",
+  "comisiones": [
+   "JUSTICIA Y ASUNTOS PENALES"
+  ]
+ },
+ {
+  "id": 24630,
+  "url": "https://www.senado.gob.ar/prensa/24630/noticias",
+  "fecha": "2026-11-18",
+  "titulo": "PASÓ A LA FIRMA EL PROYECTO DE REFORMA ELECTORAL INTEGRAL",
+  "comisiones": [
+   "ASUNTOS CONSTITUCIONALES"
+  ]
+ },
+ {
   "id": 24628,
   "url": "https://www.senado.gob.ar/prensa/24628/noticias",
   "fecha": "2026-11-18",
@@ -597,34 +634,6 @@
   "url": "https://www.senado.gob.ar/prensa/24434/noticias",
   "fecha": "2026-09-28",
   "titulo": "CULMINÓ EL CICLO DE PROMESAS DE LEALTAD A LA CONSTITUCIÓN NACIONAL EN EL SENADO",
-  "comisiones": []
- },
- {
-  "id": 24431,
-  "url": "https://www.senado.gob.ar/prensa/24431/noticias",
-  "fecha": "2026-09-28",
-  "titulo": "ENTRE RÍOS BRILLA EN EL SENADO",
-  "comisiones": []
- },
- {
-  "id": 24429,
-  "url": "https://www.senado.gob.ar/prensa/24429/noticias",
-  "fecha": "2026-09-25",
-  "titulo": "ESTUDIANTES REALIZARON LA PROMESA DE LEALTAD A LA CONSTITUCIÓN NACIONAL EN EL SENADO",
-  "comisiones": []
- },
- {
-  "id": 24428,
-  "url": "https://www.senado.gob.ar/prensa/24428/noticias",
-  "fecha": "2026-09-24",
-  "titulo": "SE CONVIRTIÓ EN LEY EL NUEVO RÉGIMEN DE ZONAS FRÍAS Y SE APROBÓ, CON MODIFICACIONES, LA CARTA ORGÁNICA DEL BCRA",
-  "comisiones": []
- },
- {
-  "id": 24427,
-  "url": "https://www.senado.gob.ar/prensa/24427/noticias",
-  "fecha": "2026-09-24",
-  "titulo": "POR LA BATALLA DE TUCUMÁN Y LA VIRGEN DE LA MERCED, EL SENADO SE ILUMINA DE AZUL",
   "comisiones": []
  }
 ]

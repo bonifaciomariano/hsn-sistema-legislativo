@@ -1617,7 +1617,7 @@
   "324": {
     "estado": "PENDIENTE",
     "fecha": "25-08-2026",
-    "expedientes_probados": 1
+    "expedientes_probados": 2
   },
   "325": {
     "estado": "PENDIENTE",
@@ -2142,6 +2142,31 @@
   "429": {
     "estado": "PENDIENTE",
     "fecha": "17-11-2026",
+    "expedientes_probados": 1
+  },
+  "430": {
+    "estado": "PENDIENTE",
+    "fecha": "18-11-2026",
+    "expedientes_probados": 1
+  },
+  "431": {
+    "estado": "PENDIENTE",
+    "fecha": "18-11-2026",
+    "expedientes_probados": 1
+  },
+  "432": {
+    "estado": "PENDIENTE",
+    "fecha": "18-11-2026",
+    "expedientes_probados": 1
+  },
+  "433": {
+    "estado": "PENDIENTE",
+    "fecha": "18-11-2026",
+    "expedientes_probados": 1
+  },
+  "434": {
+    "estado": "PENDIENTE",
+    "fecha": "18-11-2026",
     "expedientes_probados": 1
   }
 }

@@ -27,6 +27,44 @@
     "_ultima_revision": "2026-11-04"
   },
   {
+    "nro": 1973,
+    "anio": 2026,
+    "tipo": "PR",
+    "tipo_label": "Proyecto de Resolución",
+    "extracto": "PROYECTO DE RESOLUCIÓN QUE DISPONE EL 2027 COMO \"AÑO DEL CENTENARIO DEL NACIMIENTO DEL PRESIDENTE DR. RAÚL RICARDO ALFONSÍN\"",
+    "autores": [
+      "VISCHI, EDUARDO ALEJANDRO"
+    ],
+    "coautores": [],
+    "bloques": [
+      "UCR - UNIÓN CÍVICA RADICAL"
+    ],
+    "provincias": [
+      "CORRIENTES"
+    ],
+    "comisiones": [
+      "DE EDUCACIÓN Y CULTURA"
+    ],
+    "fecha": "12/11/2026",
+    "dae": "",
+    "origen": "S",
+    "url": "https://www.senado.gob.ar/parlamentario/comisiones/verExp/1973.26/S/PR",
+    "sancionado": false,
+    "ley_numero": null,
+    "fecha_ley": null,
+    "archivado": false,
+    "fecha_archivo": null,
+    "caduca": false,
+    "fecha_caduca": null,
+    "_ultima_revision": "2026-11-19",
+    "autores_caratula": [
+      "VISCHI, EDUARDO ALEJANDRO"
+    ],
+    "bloques_caratula": [
+      "UCR - UNIÓN CÍVICA RADICAL"
+    ]
+  },
+  {
     "nro": 1969,
     "anio": 2026,
     "tipo": "PD",
@@ -7620,7 +7658,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-11-03",
+    "_ultima_revision": "2026-11-19",
     "autores_caratula": [
       "SCHNEIDER, SILVANA LORENA"
     ],
@@ -7658,7 +7696,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-11-03",
+    "_ultima_revision": "2026-11-19",
     "autores_caratula": [
       "SCHNEIDER, SILVANA LORENA"
     ],
@@ -7696,7 +7734,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-11-03",
+    "_ultima_revision": "2026-11-19",
     "autores_caratula": [
       "SCHNEIDER, SILVANA LORENA"
     ],
@@ -7734,7 +7772,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-11-03",
+    "_ultima_revision": "2026-11-19",
     "autores_caratula": [
       "SCHNEIDER, SILVANA LORENA"
     ],
@@ -7775,7 +7813,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-11-03",
+    "_ultima_revision": "2026-11-19",
     "autores_caratula": [
       "VALENZUELA, MERCEDES GABRIELA"
     ],
@@ -7813,7 +7851,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-11-03",
+    "_ultima_revision": "2026-11-19",
     "autores_caratula": [
       "KIRCHNER, ALICIA MARGARITA ANTONIA"
     ],
@@ -7851,7 +7889,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-11-03",
+    "_ultima_revision": "2026-11-19",
     "autores_caratula": [
       "KIRCHNER, ALICIA MARGARITA ANTONIA"
     ],
@@ -7889,7 +7927,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-11-03",
+    "_ultima_revision": "2026-11-19",
     "autores_caratula": [
       "KIRCHNER, ALICIA MARGARITA ANTONIA"
     ],
@@ -7927,7 +7965,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-11-03",
+    "_ultima_revision": "2026-11-19",
     "autores_caratula": [
       "KIRCHNER, ALICIA MARGARITA ANTONIA"
     ],
@@ -7965,7 +8003,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-11-03",
+    "_ultima_revision": "2026-11-19",
     "autores_caratula": [
       "MORENO, ELIA ESTHER DEL CARMEN"
     ],
@@ -8003,7 +8041,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-11-03",
+    "_ultima_revision": "2026-11-19",
     "autores_caratula": [
       "AVILA, BEATRIZ LUISA"
     ],
@@ -8041,7 +8079,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-11-03",
+    "_ultima_revision": "2026-11-19",
     "autores_caratula": [
       "AVILA, BEATRIZ LUISA"
     ],
@@ -8079,7 +8117,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-11-03",
+    "_ultima_revision": "2026-11-19",
     "autores_caratula": [
       "AVILA, BEATRIZ LUISA"
     ],
@@ -8117,7 +8155,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-11-03",
+    "_ultima_revision": "2026-11-19",
     "autores_caratula": [
       "SALINO, FERNANDO ALDO"
     ],
@@ -8155,7 +8193,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-11-03",
+    "_ultima_revision": "2026-11-19",
     "autores_caratula": [
       "SALINO, FERNANDO ALDO"
     ],
@@ -8206,7 +8244,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-11-03",
+    "_ultima_revision": "2026-11-19",
     "autores_caratula": [
       "GALARETTO, EDUARDO HORACIO"
     ],
@@ -8244,7 +8282,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-11-03",
+    "_ultima_revision": "2026-11-19",
     "autores_caratula": [
       "CAPITANICH, JORGE MILTON"
     ],
@@ -8282,7 +8320,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-11-03",
+    "_ultima_revision": "2026-11-19",
     "autores_caratula": [
       "CAPITANICH, JORGE MILTON"
     ],
@@ -8320,7 +8358,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-11-03",
+    "_ultima_revision": "2026-11-19",
     "autores_caratula": [
       "CORROZA, JULIETA"
     ],
@@ -8356,7 +8394,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-11-03"
+    "_ultima_revision": "2026-11-19"
   },
   {
     "nro": 1750,
@@ -8388,7 +8426,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-11-03",
+    "_ultima_revision": "2026-11-19",
     "autores_caratula": [
       "CAPITANICH, JORGE MILTON"
     ],
@@ -8426,7 +8464,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-11-03",
+    "_ultima_revision": "2026-11-19",
     "autores_caratula": [
       "CAPITANICH, JORGE MILTON"
     ],
@@ -8464,7 +8502,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-11-03",
+    "_ultima_revision": "2026-11-19",
     "autores_caratula": [
       "BEDIA, VILMA FACUNDA"
     ],
@@ -8502,7 +8540,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-11-03",
+    "_ultima_revision": "2026-11-19",
     "autores_caratula": [
       "BEDIA, VILMA FACUNDA"
     ],
@@ -8540,7 +8578,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-11-03",
+    "_ultima_revision": "2026-11-19",
     "autores_caratula": [
       "CAPITANICH, JORGE MILTON"
     ],
@@ -8578,7 +8616,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-11-03",
+    "_ultima_revision": "2026-11-19",
     "autores_caratula": [
       "CAPITANICH, JORGE MILTON"
     ],
@@ -8616,7 +8654,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-11-03",
+    "_ultima_revision": "2026-11-19",
     "autores_caratula": [
       "CAPITANICH, JORGE MILTON"
     ],
@@ -8654,7 +8692,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-11-03",
+    "_ultima_revision": "2026-11-19",
     "autores_caratula": [
       "CAPITANICH, JORGE MILTON"
     ],
@@ -8694,7 +8732,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-11-03",
+    "_ultima_revision": "2026-11-19",
     "autores_caratula": [
       "CARAMBIA, JOSÉ MARÍA"
     ],
@@ -8748,7 +8786,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-11-03",
+    "_ultima_revision": "2026-11-19",
     "autores_caratula": [
       "ABDALA, BARTOLOMÉ ESTEBAN"
     ],
@@ -8787,7 +8825,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-11-03",
+    "_ultima_revision": "2026-11-19",
     "autores_caratula": [
       "ABDALA, BARTOLOMÉ ESTEBAN"
     ],
@@ -8828,7 +8866,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-11-03",
+    "_ultima_revision": "2026-11-19",
     "autores_caratula": [
       "LOSADA, CAROLINA",
       "VALENZUELA, MERCEDES GABRIELA"
@@ -62104,6 +62142,32 @@
     "_ultima_revision": "2026-09-10"
   },
   {
+    "nro": 364,
+    "anio": 2026,
+    "tipo": "CE",
+    "tipo_label": "Comunicación del Poder Ejecutivo",
+    "extracto": "REMITE EL INFORME ANUAL DEL AÑO 2025, ELABORADO POR LA AUTORIDAD DE CUENCA MATANZA RIACHUELO (ACUMAR), EN CUMPLIMIENTO DEL ART. 8° DE LA LEY 26.168.",
+    "autores": [],
+    "coautores": [],
+    "bloques": [],
+    "provincias": [],
+    "comisiones": [
+      "DE AMBIENTE Y DESARROLLO SUSTENTABLE"
+    ],
+    "fecha": "16/11/2026",
+    "dae": "",
+    "origen": "PE",
+    "url": "https://www.senado.gob.ar/parlamentario/comisiones/verExp/364.26/PE/CE",
+    "sancionado": false,
+    "ley_numero": null,
+    "fecha_ley": null,
+    "archivado": false,
+    "fecha_archivo": null,
+    "caduca": false,
+    "fecha_caduca": null,
+    "_ultima_revision": "2026-11-19"
+  },
+  {
     "nro": 363,
     "anio": 2026,
     "tipo": "PD",
@@ -62613,7 +62677,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-11-03"
+    "_ultima_revision": "2026-11-19"
   },
   {
     "nro": 357,
@@ -62717,7 +62781,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-11-03"
+    "_ultima_revision": "2026-11-19"
   },
   {
     "nro": 356,
@@ -139627,7 +139691,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-11-03",
+    "_ultima_revision": "2026-11-19",
     "autores_caratula": [
       "FERNÁNDEZ SAGASTI, ANABEL"
     ],
@@ -139667,7 +139731,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-11-03",
+    "_ultima_revision": "2026-11-19",
     "autores_caratula": [
       "FERNÁNDEZ SAGASTI, ANABEL"
     ],
@@ -139707,7 +139771,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-11-03",
+    "_ultima_revision": "2026-11-19",
     "autores_caratula": [
       "FERNÁNDEZ SAGASTI, ANABEL"
     ],
@@ -139747,7 +139811,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-11-03",
+    "_ultima_revision": "2026-11-19",
     "autores_caratula": [
       "FERNÁNDEZ SAGASTI, ANABEL"
     ],
@@ -139785,7 +139849,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-11-03",
+    "_ultima_revision": "2026-11-19",
     "autores_caratula": [
       "FERNÁNDEZ SAGASTI, ANABEL"
     ],
@@ -139824,7 +139888,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-11-03",
+    "_ultima_revision": "2026-11-19",
     "autores_caratula": [
       "FERNÁNDEZ SAGASTI, ANABEL"
     ],
@@ -139863,7 +139927,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-11-03",
+    "_ultima_revision": "2026-11-19",
     "autores_caratula": [
       "FERNÁNDEZ SAGASTI, ANABEL"
     ],
@@ -139902,7 +139966,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-11-03",
+    "_ultima_revision": "2026-11-19",
     "autores_caratula": [
       "FERNÁNDEZ SAGASTI, ANABEL"
     ],
@@ -139941,7 +140005,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-11-03",
+    "_ultima_revision": "2026-11-19",
     "autores_caratula": [
       "FERNÁNDEZ SAGASTI, ANABEL"
     ],
@@ -139979,7 +140043,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-11-03",
+    "_ultima_revision": "2026-11-19",
     "autores_caratula": [
       "FERNÁNDEZ SAGASTI, ANABEL"
     ],
@@ -140017,7 +140081,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-11-03",
+    "_ultima_revision": "2026-11-19",
     "autores_caratula": [
       "FERNÁNDEZ SAGASTI, ANABEL"
     ],
@@ -140056,7 +140120,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-11-03",
+    "_ultima_revision": "2026-11-19",
     "autores_caratula": [
       "FERNÁNDEZ SAGASTI, ANABEL"
     ],
@@ -140095,7 +140159,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-11-03",
+    "_ultima_revision": "2026-11-19",
     "autores_caratula": [
       "FERNÁNDEZ SAGASTI, ANABEL"
     ],
@@ -140133,7 +140197,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-11-03",
+    "_ultima_revision": "2026-11-19",
     "autores_caratula": [
       "FERNÁNDEZ SAGASTI, ANABEL"
     ],
@@ -140172,7 +140236,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-11-03",
+    "_ultima_revision": "2026-11-19",
     "autores_caratula": [
       "FERNÁNDEZ SAGASTI, ANABEL"
     ],
@@ -140212,7 +140276,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-11-03",
+    "_ultima_revision": "2026-11-19",
     "autores_caratula": [
       "FERNÁNDEZ SAGASTI, ANABEL"
     ],
@@ -140250,7 +140314,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-11-03",
+    "_ultima_revision": "2026-11-19",
     "autores_caratula": [
       "FERNÁNDEZ SAGASTI, ANABEL"
     ],
@@ -140289,7 +140353,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-11-03",
+    "_ultima_revision": "2026-11-19",
     "autores_caratula": [
       "FERNÁNDEZ SAGASTI, ANABEL"
     ],
@@ -140328,7 +140392,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-11-03",
+    "_ultima_revision": "2026-11-19",
     "autores_caratula": [
       "FERNÁNDEZ SAGASTI, ANABEL"
     ],
@@ -140366,7 +140430,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-11-03",
+    "_ultima_revision": "2026-11-19",
     "autores_caratula": [
       "FERNÁNDEZ SAGASTI, ANABEL"
     ],
@@ -140405,7 +140469,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-11-03",
+    "_ultima_revision": "2026-11-19",
     "autores_caratula": [
       "FERNÁNDEZ SAGASTI, ANABEL"
     ],
@@ -140445,7 +140509,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-11-03",
+    "_ultima_revision": "2026-11-19",
     "autores_caratula": [
       "FERNÁNDEZ SAGASTI, ANABEL"
     ],
@@ -140483,7 +140547,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-11-03",
+    "_ultima_revision": "2026-11-19",
     "autores_caratula": [
       "FERNÁNDEZ SAGASTI, ANABEL"
     ],
@@ -140523,7 +140587,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-11-03",
+    "_ultima_revision": "2026-11-19",
     "autores_caratula": [
       "FERNÁNDEZ SAGASTI, ANABEL"
     ],
@@ -140562,7 +140626,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-11-03",
+    "_ultima_revision": "2026-11-19",
     "autores_caratula": [
       "FERNÁNDEZ SAGASTI, ANABEL"
     ],
@@ -140600,7 +140664,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-11-03",
+    "_ultima_revision": "2026-11-19",
     "autores_caratula": [
       "FERNÁNDEZ SAGASTI, ANABEL"
     ],
@@ -140638,7 +140702,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-11-03",
+    "_ultima_revision": "2026-11-19",
     "autores_caratula": [
       "FERNÁNDEZ SAGASTI, ANABEL"
     ],
@@ -140677,7 +140741,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-11-03",
+    "_ultima_revision": "2026-11-19",
     "autores_caratula": [
       "FERNÁNDEZ SAGASTI, ANABEL"
     ],
@@ -140715,7 +140779,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-11-03",
+    "_ultima_revision": "2026-11-19",
     "autores_caratula": [
       "VISCHI, EDUARDO ALEJANDRO"
     ],
@@ -140823,7 +140887,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-11-03",
+    "_ultima_revision": "2026-11-19",
     "autores_caratula": [
       "ZIMMERMANN, VICTOR"
     ],
@@ -140877,7 +140941,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-11-03",
+    "_ultima_revision": "2026-11-19",
     "autores_caratula": [
       "ZIMMERMANN, VICTOR"
     ],
@@ -140928,7 +140992,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-11-03",
+    "_ultima_revision": "2026-11-19",
     "autores_caratula": [
       "DURÉ, MARÍA EUGENIA"
     ],
@@ -140984,7 +141048,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-11-03",
+    "_ultima_revision": "2026-11-19",
     "autores_caratula": [
       "HUALA, MARÍA VICTORIA"
     ],
@@ -141031,7 +141095,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-11-03",
+    "_ultima_revision": "2026-11-19",
     "autores_caratula": [
       "CREXELL, CARMEN LUCILA"
     ],
@@ -141073,7 +141137,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-11-03",
+    "_ultima_revision": "2026-11-19",
     "autores_caratula": [
       "CREXELL, CARMEN LUCILA"
     ],
@@ -141115,7 +141179,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-11-03",
+    "_ultima_revision": "2026-11-19",
     "autores_caratula": [
       "CREXELL, CARMEN LUCILA"
     ],
@@ -141159,7 +141223,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-11-03",
+    "_ultima_revision": "2026-11-19",
     "autores_caratula": [
       "DOÑATE, CLAUDIO MARTÍN"
     ],
@@ -141203,7 +141267,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-11-03",
+    "_ultima_revision": "2026-11-19",
     "autores_caratula": [
       "DOÑATE, CLAUDIO MARTÍN"
     ],
@@ -141256,7 +141320,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-11-03",
+    "_ultima_revision": "2026-11-19",
     "autores_caratula": [
       "KIRCHNER, ALICIA MARGARITA ANTONIA"
     ],
@@ -141302,7 +141366,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-11-03",
+    "_ultima_revision": "2026-11-19",
     "autores_caratula": [
       "KIRCHNER, ALICIA MARGARITA ANTONIA"
     ],
@@ -141351,7 +141415,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-11-03",
+    "_ultima_revision": "2026-11-19",
     "autores_caratula": [
       "KIRCHNER, ALICIA MARGARITA ANTONIA"
     ],
@@ -141399,7 +141463,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-11-03",
+    "_ultima_revision": "2026-11-19",
     "autores_caratula": [
       "KIRCHNER, ALICIA MARGARITA ANTONIA"
     ],
@@ -141439,7 +141503,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-11-03",
+    "_ultima_revision": "2026-11-19",
     "autores_caratula": [
       "VIGO, ALEJANDRA MARÍA"
     ],
@@ -141477,7 +141541,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-11-03",
+    "_ultima_revision": "2026-11-19",
     "autores_caratula": [
       "VIGO, ALEJANDRA MARÍA"
     ],
@@ -141516,7 +141580,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-11-03",
+    "_ultima_revision": "2026-11-19",
     "autores_caratula": [
       "VIGO, ALEJANDRA MARÍA"
     ],
@@ -141564,7 +141628,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-11-03",
+    "_ultima_revision": "2026-11-19",
     "autores_caratula": [
       "KIRCHNER, ALICIA MARGARITA ANTONIA"
     ],
@@ -141602,7 +141666,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-11-03",
+    "_ultima_revision": "2026-11-19",
     "autores_caratula": [
       "PILATTI VERGARA, MARÍA INÉS"
     ],
@@ -141695,7 +141759,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-11-03",
+    "_ultima_revision": "2026-11-19",
     "autores_caratula": [
       "OLIVERA LUCERO, BRUNO ANTONIO"
     ],
@@ -141733,7 +141797,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-11-03",
+    "_ultima_revision": "2026-11-19",
     "autores_caratula": [
       "DURÉ, MARÍA EUGENIA"
     ],
@@ -141774,7 +141838,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-11-03",
+    "_ultima_revision": "2026-11-19",
     "autores_caratula": [
       "DURÉ, MARÍA EUGENIA"
     ],
@@ -141826,7 +141890,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-11-03",
+    "_ultima_revision": "2026-11-19",
     "autores_caratula": [
       "DURÉ, MARÍA EUGENIA"
     ],
@@ -141877,7 +141941,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-11-03",
+    "_ultima_revision": "2026-11-19",
     "autores_caratula": [
       "DURÉ, MARÍA EUGENIA"
     ],
@@ -141918,7 +141982,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-11-03",
+    "_ultima_revision": "2026-11-19",
     "autores_caratula": [
       "JUEZ, LUIS ALFREDO"
     ],
@@ -141956,7 +142020,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-11-03",
+    "_ultima_revision": "2026-11-19",
     "autores_caratula": [
       "OLALLA, STELLA MARIS"
     ],
@@ -141998,7 +142062,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-11-03",
+    "_ultima_revision": "2026-11-19",
     "autores_caratula": [
       "OLALLA, STELLA MARIS"
     ],
@@ -142101,7 +142165,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-11-03",
+    "_ultima_revision": "2026-11-19",
     "autores_caratula": [
       "DURÉ, MARÍA EUGENIA"
     ],
@@ -142142,7 +142206,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-11-03",
+    "_ultima_revision": "2026-11-19",
     "autores_caratula": [
       "DURÉ, MARÍA EUGENIA"
     ],
@@ -142184,7 +142248,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-11-03",
+    "_ultima_revision": "2026-11-19",
     "autores_caratula": [
       "DURÉ, MARÍA EUGENIA"
     ],
@@ -142233,7 +142297,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-11-03",
+    "_ultima_revision": "2026-11-19",
     "autores_caratula": [
       "DURÉ, MARÍA EUGENIA"
     ],
@@ -142274,7 +142338,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-11-03",
+    "_ultima_revision": "2026-11-19",
     "autores_caratula": [
       "VISCHI, EDUARDO ALEJANDRO"
     ],
@@ -142326,7 +142390,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-11-03",
+    "_ultima_revision": "2026-11-19",
     "autores_caratula": [
       "GIMÉNEZ NAVARRO, MARÍA CELESTE"
     ],
@@ -142372,7 +142436,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-11-03",
+    "_ultima_revision": "2026-11-19",
     "autores_caratula": [
       "BLANCO, PABLO DANIEL"
     ],
@@ -142414,7 +142478,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-11-03",
+    "_ultima_revision": "2026-11-19",
     "autores_caratula": [
       "SAPAG, SILVIA ESTELA"
     ],
@@ -142663,7 +142727,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-11-03",
+    "_ultima_revision": "2026-11-19",
     "autores_caratula": [
       "BENSUSÁN, DANIEL PABLO"
     ],
@@ -142717,7 +142781,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-11-03",
+    "_ultima_revision": "2026-11-19",
     "autores_caratula": [
       "RODAS, ANTONIO JOSÉ",
       "CORPACCI, LUCÍA BENIGNA"
@@ -142757,7 +142821,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-11-03",
+    "_ultima_revision": "2026-11-19",
     "autores_caratula": [
       "RODAS, ANTONIO JOSÉ"
     ],
@@ -142798,7 +142862,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-11-03",
+    "_ultima_revision": "2026-11-19",
     "autores_caratula": [
       "PILATTI VERGARA, MARÍA INÉS"
     ],
@@ -142839,7 +142903,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-11-03",
+    "_ultima_revision": "2026-11-19",
     "autores_caratula": [
       "SILVA, MÓNICA ESTHER"
     ],
@@ -142939,7 +143003,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-11-03",
+    "_ultima_revision": "2026-11-19",
     "autores_caratula": [
       "MENDOZA, SANDRA MARIELA"
     ],
@@ -142980,7 +143044,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-11-03",
+    "_ultima_revision": "2026-11-19",
     "autores_caratula": [
       "PILATTI VERGARA, MARÍA INÉS"
     ],
@@ -143029,7 +143093,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-11-03",
+    "_ultima_revision": "2026-11-19",
     "autores_caratula": [
       "ROJAS DECUT, SONIA ELIZABETH"
     ],
@@ -143068,7 +143132,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-11-03",
+    "_ultima_revision": "2026-11-19",
     "autores_caratula": [
       "CRISTINA, ANDREA MARCELA"
     ],
@@ -143166,7 +143230,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-11-03",
+    "_ultima_revision": "2026-11-19",
     "autores_caratula": [
       "OLIVERA LUCERO, BRUNO ANTONIO"
     ],
@@ -143210,7 +143274,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-11-03",
+    "_ultima_revision": "2026-11-19",
     "autores_caratula": [
       "KIRCHNER, ALICIA MARGARITA ANTONIA"
     ],
@@ -143255,7 +143319,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-11-03",
+    "_ultima_revision": "2026-11-19",
     "autores_caratula": [
       "KIRCHNER, ALICIA MARGARITA ANTONIA"
     ],
@@ -143301,7 +143365,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-11-03",
+    "_ultima_revision": "2026-11-19",
     "autores_caratula": [
       "KIRCHNER, ALICIA MARGARITA ANTONIA"
     ],
@@ -143347,7 +143411,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-11-03",
+    "_ultima_revision": "2026-11-19",
     "autores_caratula": [
       "KIRCHNER, ALICIA MARGARITA ANTONIA"
     ],
@@ -143386,7 +143450,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-11-03",
+    "_ultima_revision": "2026-11-19",
     "autores_caratula": [
       "OLIVERA LUCERO, BRUNO ANTONIO"
     ],
@@ -143424,7 +143488,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-11-03",
+    "_ultima_revision": "2026-11-19",
     "autores_caratula": [
       "LEWANDOWSKI, MARCELO NÉSTOR"
     ],
@@ -143462,7 +143526,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-11-03",
+    "_ultima_revision": "2026-11-19",
     "autores_caratula": [
       "LINARES, CARLOS ALBERTO"
     ],
@@ -143500,7 +143564,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-11-03",
+    "_ultima_revision": "2026-11-19",
     "autores_caratula": [
       "ROMERO, JUAN CARLOS"
     ],
@@ -143541,7 +143605,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-11-03",
+    "_ultima_revision": "2026-11-19",
     "autores_caratula": [
       "GARCÍA LARRABURU, SILVINA MARCELA"
     ],
@@ -143582,7 +143646,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-11-03",
+    "_ultima_revision": "2026-11-19",
     "autores_caratula": [
       "GARCÍA LARRABURU, SILVINA MARCELA"
     ],
@@ -143628,7 +143692,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-11-03",
+    "_ultima_revision": "2026-11-19",
     "autores_caratula": [
       "GARCÍA LARRABURU, SILVINA MARCELA"
     ],
@@ -143671,7 +143735,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-11-03",
+    "_ultima_revision": "2026-11-19",
     "autores_caratula": [
       "LOSADA, CAROLINA"
     ],
@@ -143712,7 +143776,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-11-03",
+    "_ultima_revision": "2026-11-19",
     "autores_caratula": [
       "PILATTI VERGARA, MARÍA INÉS"
     ],
@@ -143754,7 +143818,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-11-03",
+    "_ultima_revision": "2026-11-19",
     "autores_caratula": [
       "PILATTI VERGARA, MARÍA INÉS"
     ],
@@ -143795,7 +143859,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-11-03",
+    "_ultima_revision": "2026-11-19",
     "autores_caratula": [
       "LOUSTEAU, MARTÍN"
     ],
@@ -143836,7 +143900,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-11-03",
+    "_ultima_revision": "2026-11-19",
     "autores_caratula": [
       "REJAL, JESÚS FERNANDO"
     ],
@@ -143874,7 +143938,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-11-03",
+    "_ultima_revision": "2026-11-19",
     "autores_caratula": [
       "RECALDE, MARIANO"
     ],
@@ -143912,7 +143976,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-11-03",
+    "_ultima_revision": "2026-11-19",
     "autores_caratula": [
       "ZIMMERMANN, VICTOR"
     ],
@@ -143953,7 +144017,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-11-03",
+    "_ultima_revision": "2026-11-19",
     "autores_caratula": [
       "ZIMMERMANN, VICTOR"
     ],
@@ -144103,7 +144167,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-11-03",
+    "_ultima_revision": "2026-11-19",
     "autores_caratula": [
       "LINARES, CARLOS ALBERTO"
     ],
@@ -144155,7 +144219,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-11-03",
+    "_ultima_revision": "2026-11-19",
     "autores_caratula": [
       "LEAVY, SERGIO NAPOLEÓN"
     ],
@@ -144208,7 +144272,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-11-03",
+    "_ultima_revision": "2026-11-19",
     "autores_caratula": [
       "PILATTI VERGARA, MARÍA INÉS"
     ],
@@ -144249,7 +144313,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-11-03",
+    "_ultima_revision": "2026-11-19",
     "autores_caratula": [
       "GIMÉNEZ, NORA DEL VALLE"
     ],
@@ -144291,7 +144355,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-11-03",
+    "_ultima_revision": "2026-11-19",
     "autores_caratula": [
       "GIMÉNEZ, NORA DEL VALLE"
     ],
@@ -144340,7 +144404,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-11-03",
+    "_ultima_revision": "2026-11-19",
     "autores_caratula": [
       "GIMÉNEZ, NORA DEL VALLE"
     ],
@@ -144381,7 +144445,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-11-03",
+    "_ultima_revision": "2026-11-19",
     "autores_caratula": [
       "GIMÉNEZ, NORA DEL VALLE"
     ],
@@ -144423,7 +144487,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-11-03",
+    "_ultima_revision": "2026-11-19",
     "autores_caratula": [
       "GIMÉNEZ, NORA DEL VALLE"
     ],
@@ -144466,7 +144530,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-11-03",
+    "_ultima_revision": "2026-11-19",
     "autores_caratula": [
       "JUEZ, LUIS ALFREDO"
     ],
@@ -144559,7 +144623,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-11-03",
+    "_ultima_revision": "2026-11-19",
     "autores_caratula": [
       "PAOLTRONI, FRANCISCO MANUEL"
     ],
@@ -144600,7 +144664,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-11-03",
+    "_ultima_revision": "2026-11-19",
     "autores_caratula": [
       "LINARES, CARLOS ALBERTO"
     ],
@@ -144657,7 +144721,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-11-03",
+    "_ultima_revision": "2026-11-19",
     "autores_caratula": [
       "DE PEDRO, EDUARDO ENRIQUE"
     ],
@@ -144695,7 +144759,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-11-03",
+    "_ultima_revision": "2026-11-19",
     "autores_caratula": [
       "ROJAS DECUT, SONIA ELIZABETH"
     ],
@@ -144741,7 +144805,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-11-03",
+    "_ultima_revision": "2026-11-19",
     "autores_caratula": [
       "JUEZ, LUIS ALFREDO"
     ],
@@ -144779,7 +144843,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-11-03",
+    "_ultima_revision": "2026-11-19",
     "autores_caratula": [
       "FERNÁNDEZ SAGASTI, ANABEL"
     ],
@@ -144818,7 +144882,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-11-03",
+    "_ultima_revision": "2026-11-19",
     "autores_caratula": [
       "FERNÁNDEZ SAGASTI, ANABEL"
     ],
@@ -144857,7 +144921,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-11-03",
+    "_ultima_revision": "2026-11-19",
     "autores_caratula": [
       "DURÉ, MARÍA EUGENIA"
     ],
@@ -144907,7 +144971,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-11-03",
+    "_ultima_revision": "2026-11-19",
     "autores_caratula": [
       "CRISTINA, ANDREA MARCELA"
     ],
@@ -144953,7 +145017,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-11-03",
+    "_ultima_revision": "2026-11-19",
     "autores_caratula": [
       "ROMERO, JUAN CARLOS"
     ],
@@ -144994,7 +145058,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-11-03",
+    "_ultima_revision": "2026-11-19",
     "autores_caratula": [
       "MENDOZA, SANDRA MARIELA"
     ],
@@ -145032,7 +145096,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-11-03",
+    "_ultima_revision": "2026-11-19",
     "autores_caratula": [
       "CORPACCI, LUCÍA BENIGNA"
     ],
@@ -145070,7 +145134,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-11-03",
+    "_ultima_revision": "2026-11-19",
     "autores_caratula": [
       "LOUSTEAU, MARTÍN"
     ],
@@ -145111,7 +145175,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-11-03",
+    "_ultima_revision": "2026-11-19",
     "autores_caratula": [
       "ROMERO, JUAN CARLOS"
     ],
@@ -145152,7 +145216,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-11-03",
+    "_ultima_revision": "2026-11-19",
     "autores_caratula": [
       "AVILA, BEATRIZ LUISA"
     ],
@@ -145191,7 +145255,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-11-03",
+    "_ultima_revision": "2026-11-19",
     "autores_caratula": [
       "AVILA, BEATRIZ LUISA"
     ],
@@ -145238,7 +145302,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-11-03",
+    "_ultima_revision": "2026-11-19",
     "autores_caratula": [
       "AVILA, BEATRIZ LUISA"
     ],
@@ -145284,7 +145348,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-11-03",
+    "_ultima_revision": "2026-11-19",
     "autores_caratula": [
       "AVILA, BEATRIZ LUISA"
     ],
@@ -145322,7 +145386,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-11-03",
+    "_ultima_revision": "2026-11-19",
     "autores_caratula": [
       "AVILA, BEATRIZ LUISA"
     ],
@@ -145372,7 +145436,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-11-03",
+    "_ultima_revision": "2026-11-19",
     "autores_caratula": [
       "PILATTI VERGARA, MARÍA INÉS"
     ],
@@ -145436,7 +145500,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-11-03",
+    "_ultima_revision": "2026-11-19",
     "autores_caratula": [
       "PILATTI VERGARA, MARÍA INÉS"
     ],
@@ -145612,7 +145676,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-11-03",
+    "_ultima_revision": "2026-11-19",
     "autores_caratula": [
       "DURÉ, MARÍA EUGENIA"
     ],
@@ -145659,7 +145723,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-11-03",
+    "_ultima_revision": "2026-11-19",
     "autores_caratula": [
       "ROMERO, JUAN CARLOS"
     ],
@@ -145701,7 +145765,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-11-03",
+    "_ultima_revision": "2026-11-19",
     "autores_caratula": [
       "OLALLA, STELLA MARIS"
     ],
@@ -145750,7 +145814,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-11-03",
+    "_ultima_revision": "2026-11-19",
     "autores_caratula": [
       "PILATTI VERGARA, MARÍA INÉS"
     ],
@@ -145791,7 +145855,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-11-03",
+    "_ultima_revision": "2026-11-19",
     "autores_caratula": [
       "PILATTI VERGARA, MARÍA INÉS"
     ],
@@ -145832,7 +145896,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-11-03",
+    "_ultima_revision": "2026-11-19",
     "autores_caratula": [
       "LINARES, CARLOS ALBERTO"
     ],
@@ -145870,7 +145934,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-11-03",
+    "_ultima_revision": "2026-11-19",
     "autores_caratula": [
       "FERNÁNDEZ SAGASTI, ANABEL"
     ],
@@ -145908,7 +145972,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-11-03",
+    "_ultima_revision": "2026-11-19",
     "autores_caratula": [
       "LEWANDOWSKI, MARCELO NÉSTOR"
     ],
@@ -145946,7 +146010,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-11-03",
+    "_ultima_revision": "2026-11-19",
     "autores_caratula": [
       "BLANCO, PABLO DANIEL"
     ],
@@ -145990,7 +146054,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-11-03",
+    "_ultima_revision": "2026-11-19",
     "autores_caratula": [
       "CARAMBIA, JOSÉ MARÍA"
     ],
@@ -146033,7 +146097,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-11-03",
+    "_ultima_revision": "2026-11-19",
     "autores_caratula": [
       "GARCÍA LARRABURU, SILVINA MARCELA"
     ],
@@ -146091,7 +146155,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-11-03",
+    "_ultima_revision": "2026-11-19",
     "autores_caratula": [
       "CORA, STEFANIA"
     ],
@@ -146135,7 +146199,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-11-03",
+    "_ultima_revision": "2026-11-19",
     "autores_caratula": [
       "DE ANGELI, ALFREDO LUIS"
     ],
@@ -146176,7 +146240,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-11-03",
+    "_ultima_revision": "2026-11-19",
     "autores_caratula": [
       "KRONEBERGER, DANIEL RICARDO"
     ],
@@ -146220,7 +146284,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-11-03",
+    "_ultima_revision": "2026-11-19",
     "autores_caratula": [
       "GARCÍA LARRABURU, SILVINA MARCELA"
     ],
@@ -146278,7 +146342,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-11-03",
+    "_ultima_revision": "2026-11-19",
     "autores_caratula": [
       "GARCÍA LARRABURU, SILVINA MARCELA",
       "MENDOZA, SANDRA MARIELA"
@@ -146373,7 +146437,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-11-03",
+    "_ultima_revision": "2026-11-19",
     "autores_caratula": [
       "JURI, MARIANA",
       "SUÁREZ, RODOLFO ALEJANDRO"
@@ -146413,7 +146477,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-11-03",
+    "_ultima_revision": "2026-11-19",
     "autores_caratula": [
       "PAOLTRONI, FRANCISCO MANUEL"
     ],
@@ -146452,7 +146516,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-11-03",
+    "_ultima_revision": "2026-11-19",
     "autores_caratula": [
       "BENSUSÁN, DANIEL PABLO"
     ],
@@ -146494,7 +146558,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-11-03",
+    "_ultima_revision": "2026-11-19",
     "autores_caratula": [
       "KRONEBERGER, DANIEL RICARDO"
     ],
@@ -146537,7 +146601,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-11-03",
+    "_ultima_revision": "2026-11-19",
     "autores_caratula": [
       "KRONEBERGER, DANIEL RICARDO"
     ],
@@ -146629,7 +146693,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-11-03",
+    "_ultima_revision": "2026-11-19",
     "autores_caratula": [
       "DURÉ, MARÍA EUGENIA"
     ],
@@ -146680,7 +146744,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-11-03",
+    "_ultima_revision": "2026-11-19",
     "autores_caratula": [
       "DE PEDRO, EDUARDO ENRIQUE"
     ],
@@ -146732,7 +146796,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-11-03",
+    "_ultima_revision": "2026-11-19",
     "autores_caratula": [
       "MENDOZA, SANDRA MARIELA"
     ],
@@ -146770,7 +146834,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-11-03",
+    "_ultima_revision": "2026-11-19",
     "autores_caratula": [
       "GIMÉNEZ, NORA DEL VALLE"
     ],
@@ -146811,7 +146875,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-11-03",
+    "_ultima_revision": "2026-11-19",
     "autores_caratula": [
       "GIMÉNEZ, NORA DEL VALLE"
     ],
@@ -146852,7 +146916,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-11-03",
+    "_ultima_revision": "2026-11-19",
     "autores_caratula": [
       "GIMÉNEZ, NORA DEL VALLE"
     ],
@@ -146893,7 +146957,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-11-03",
+    "_ultima_revision": "2026-11-19",
     "autores_caratula": [
       "GIMÉNEZ NAVARRO, MARÍA CELESTE"
     ],
@@ -146931,7 +146995,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-11-03",
+    "_ultima_revision": "2026-11-19",
     "autores_caratula": [
       "DURÉ, MARÍA EUGENIA"
     ],
@@ -147034,7 +147098,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-11-03",
+    "_ultima_revision": "2026-11-19",
     "autores_caratula": [
       "PILATTI VERGARA, MARÍA INÉS"
     ],
@@ -147090,7 +147154,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-11-03",
+    "_ultima_revision": "2026-11-19",
     "autores_caratula": [
       "PILATTI VERGARA, MARÍA INÉS"
     ],
@@ -147146,7 +147210,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-11-03",
+    "_ultima_revision": "2026-11-19",
     "autores_caratula": [
       "CORA, STEFANIA"
     ],
@@ -147194,7 +147258,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-11-03",
+    "_ultima_revision": "2026-11-19",
     "autores_caratula": [
       "OLALLA, STELLA MARIS"
     ],
@@ -147235,7 +147299,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-11-03",
+    "_ultima_revision": "2026-11-19",
     "autores_caratula": [
       "ZIMMERMANN, VICTOR"
     ],
@@ -147276,7 +147340,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-11-03",
+    "_ultima_revision": "2026-11-19",
     "autores_caratula": [
       "ZIMMERMANN, VICTOR"
     ],
@@ -147371,7 +147435,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-11-03",
+    "_ultima_revision": "2026-11-19",
     "autores_caratula": [
       "ZIMMERMANN, VICTOR"
     ],
@@ -147412,7 +147476,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-11-03",
+    "_ultima_revision": "2026-11-19",
     "autores_caratula": [
       "ZIMMERMANN, VICTOR"
     ],
@@ -147513,7 +147577,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-11-03",
+    "_ultima_revision": "2026-11-19",
     "autores_caratula": [
       "ZIMMERMANN, VICTOR"
     ],
@@ -147559,7 +147623,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-11-03",
+    "_ultima_revision": "2026-11-19",
     "autores_caratula": [
       "ABDALA, BARTOLOMÉ ESTEBAN"
     ],
@@ -147597,7 +147661,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-11-03",
+    "_ultima_revision": "2026-11-19",
     "autores_caratula": [
       "ABDALA, BARTOLOMÉ ESTEBAN"
     ],
@@ -147635,7 +147699,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-11-03",
+    "_ultima_revision": "2026-11-19",
     "autores_caratula": [
       "ABAD, MAXIMILIANO"
     ],
@@ -147673,7 +147737,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-11-03",
+    "_ultima_revision": "2026-11-19",
     "autores_caratula": [
       "DURÉ, MARÍA EUGENIA"
     ],
@@ -147720,7 +147784,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-11-03",
+    "_ultima_revision": "2026-11-19",
     "autores_caratula": [
       "CORA, STEFANIA"
     ],
@@ -147778,7 +147842,7 @@
     "fecha_archivo": null,
     "caduca": false,
     "fecha_caduca": null,
-    "_ultima_revision": "2026-11-03",
+    "_ultima_revision": "2026-11-19",
     "autores_caratula": [
       "CORA, STEFANIA"
     ],
