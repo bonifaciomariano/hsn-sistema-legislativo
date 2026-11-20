@@ -1,5 +1,5 @@
 {
- "generado": "2026-11-19 20:01",
+ "generado": "2026-11-20 19:41",
  "pliegos": {
   "PE-103/26": {
    "archivo": "11/09/2026",
@@ -1423,7 +1423,12 @@
    "dado_cuenta": "16/07/2026",
    "dae": "23/26",
    "ingreso": "25/06/2026",
-   "od": null,
+   "od": {
+    "anio": "2026",
+    "estado": "PENDIENTE",
+    "fecha": "19/11/2026",
+    "numero": "481"
+   },
    "sancion": "",
    "sancion_fecha": null
   },
@@ -1558,7 +1563,12 @@
    "dado_cuenta": "27/08/2026",
    "dae": "25/26",
    "ingreso": "17/07/2026",
-   "od": null,
+   "od": {
+    "anio": "2026",
+    "estado": "PENDIENTE",
+    "fecha": "19/11/2026",
+    "numero": "482"
+   },
    "sancion": "",
    "sancion_fecha": null
   },
@@ -1567,7 +1577,12 @@
    "dado_cuenta": "27/08/2026",
    "dae": "25/26",
    "ingreso": "17/07/2026",
-   "od": null,
+   "od": {
+    "anio": "2026",
+    "estado": "PENDIENTE",
+    "fecha": "19/11/2026",
+    "numero": "483"
+   },
    "sancion": "",
    "sancion_fecha": null
   },
@@ -1590,7 +1605,12 @@
    "dado_cuenta": "27/08/2026",
    "dae": "26/26",
    "ingreso": "03/08/2026",
-   "od": null,
+   "od": {
+    "anio": "2026",
+    "estado": "PENDIENTE",
+    "fecha": "19/11/2026",
+    "numero": "484"
+   },
    "sancion": "",
    "sancion_fecha": null
   },

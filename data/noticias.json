@@ -1,5 +1,12 @@
 [
  {
+  "id": 24648,
+  "url": "https://www.senado.gob.ar/prensa/24648/noticias",
+  "fecha": "2026-11-20",
+  "titulo": "PRESENTACIÓN DEL LIBRO \"LA POSIBILIDAD DE LA PAZ\" DE EDUARDO CUNDINS",
+  "comisiones": []
+ },
+ {
   "id": 24647,
   "url": "https://www.senado.gob.ar/prensa/24647/noticias",
   "fecha": "2026-11-20",
@@ -625,15 +632,5 @@
   "fecha": "2026-09-29",
   "titulo": "EL SENADO SE ILUMINA DE ROJO POR EL DÍA MUNDIAL DEL CORAZÓN",
   "comisiones": []
- },
- {
-  "id": 24435,
-  "url": "https://www.senado.gob.ar/prensa/24435/noticias",
-  "fecha": "2026-09-29",
-  "titulo": "FALLECIMIENTO DEL SENADOR NACIONAL JUAN CARLOS PAGOTTO",
-  "comisiones": [
-   "ACUERDOS",
-   "JUSTICIA Y ASUNTOS PENALES"
-  ]
  }
 ]
