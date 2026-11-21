@@ -1,5 +1,12 @@
 [
  {
+  "id": 24650,
+  "url": "https://www.senado.gob.ar/prensa/24650/noticias",
+  "fecha": "2026-11-20",
+  "titulo": "POR EL DÍA DE LA SOBERANÍA NACIONAL EL CONGRESO SE ILUMINA DE AZUL",
+  "comisiones": []
+ },
+ {
   "id": 24648,
   "url": "https://www.senado.gob.ar/prensa/24648/noticias",
   "fecha": "2026-11-20",
@@ -624,13 +631,6 @@
   "url": "https://www.senado.gob.ar/prensa/24444/noticias",
   "fecha": "2026-09-30",
   "titulo": "SENADO TV PRESENTA UN NUEVO EPISODIO DE \"ARGENTINA BAILA\"",
-  "comisiones": []
- },
- {
-  "id": 24442,
-  "url": "https://www.senado.gob.ar/prensa/24442/noticias",
-  "fecha": "2026-09-29",
-  "titulo": "EL SENADO SE ILUMINA DE ROJO POR EL DÍA MUNDIAL DEL CORAZÓN",
   "comisiones": []
  }
 ]
