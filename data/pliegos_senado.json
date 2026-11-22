@@ -1,5 +1,5 @@
 {
- "generado": "2026-11-21 19:01",
+ "generado": "2026-11-22 19:06",
  "pliegos": {
   "PE-103/26": {
    "archivo": "11/09/2026",
@@ -1903,6 +1903,20 @@
    "sancion": "",
    "sancion_fecha": null
   },
+  "PE-268/26": {
+   "archivo": null,
+   "dado_cuenta": "27/08/2026",
+   "dae": "27/26",
+   "ingreso": "05/08/2026",
+   "od": {
+    "anio": "2026",
+    "estado": "PENDIENTE",
+    "fecha": "19/11/2026",
+    "numero": "503"
+   },
+   "sancion": "",
+   "sancion_fecha": null
+  },
   "PE-269/26": {
    "archivo": null,
    "dado_cuenta": "27/08/2026",
@@ -2587,6 +2601,23 @@
    "sancion": "",
    "sancion_fecha": null
   },
+  "PE-345/26": {
+   "archivo": null,
+   "dado_cuenta": "19/11/2026",
+   "dae": "33/26",
+   "ingreso": "29/10/2026",
+   "nuevo": {
+    "candidato": "IGNACIO MARTIN REBAUDI BASAVILBASO",
+    "cargo": "VOCAL DE LA CAMARA NACIONAL DE APELACIONES EN LO CIVIL Y COMERCIAL FEDERAL DE LA CAPITAL FEDERAL, SALA III",
+    "fuero": "Comercial",
+    "provincia": "CABA",
+    "rango": "Camarista / Vocal de Cámara",
+    "url": "https://www.senado.gob.ar/parlamentario/comisiones/verExp/345.26/PE/AC"
+   },
+   "od": null,
+   "sancion": "",
+   "sancion_fecha": null
+  },
   "PE-346/26": {
    "archivo": null,
    "dado_cuenta": "19/11/2026",
@@ -2783,6 +2814,23 @@
     "provincia": "Nacional / Federal",
     "rango": "Camarista / Vocal de Cámara",
     "url": "https://www.senado.gob.ar/parlamentario/comisiones/verExp/356.26/PE/AC"
+   },
+   "od": null,
+   "sancion": "",
+   "sancion_fecha": null
+  },
+  "PE-359/26": {
+   "archivo": null,
+   "dado_cuenta": "19/11/2026",
+   "dae": "34/26",
+   "ingreso": "03/11/2026",
+   "nuevo": {
+    "candidato": "DANIEL EDUARDO RAFECAS",
+    "cargo": "VOCAL DE LA CAMARA NACIONAL DE CASACION EN LO CRIMINAL Y CORRECCIONAL DE LA CAPITAL FEDERAL, VOCALIA N° 7",
+    "fuero": "Casación Penal",
+    "provincia": "CABA",
+    "rango": "Camarista / Vocal de Cámara",
+    "url": "https://www.senado.gob.ar/parlamentario/comisiones/verExp/359.26/PE/AC"
    },
    "od": null,
    "sancion": "",
