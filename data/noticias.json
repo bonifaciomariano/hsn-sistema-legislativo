@@ -1,5 +1,12 @@
 [
  {
+  "id": 24651,
+  "url": "https://www.senado.gob.ar/prensa/24651/noticias",
+  "fecha": "2026-11-22",
+  "titulo": "EL PALACIO LEGISLATIVO SE ILUMINA DE AZUL POR EL FALLECIMIENTO DE FRANCISCO MORENO",
+  "comisiones": []
+ },
+ {
   "id": 24650,
   "url": "https://www.senado.gob.ar/prensa/24650/noticias",
   "fecha": "2026-11-20",
@@ -624,13 +631,6 @@
   "url": "https://www.senado.gob.ar/prensa/24447/noticias",
   "fecha": "2026-09-30",
   "titulo": "NUEVO ESTRENO DE “TEMPLOS”: LA OBRA DEL PADRE MARIO PANTALEO",
-  "comisiones": []
- },
- {
-  "id": 24444,
-  "url": "https://www.senado.gob.ar/prensa/24444/noticias",
-  "fecha": "2026-09-30",
-  "titulo": "SENADO TV PRESENTA UN NUEVO EPISODIO DE \"ARGENTINA BAILA\"",
   "comisiones": []
  }
 ]
