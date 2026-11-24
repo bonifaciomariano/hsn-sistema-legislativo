@@ -1,5 +1,29 @@
 [
  {
+  "id": 24656,
+  "url": "https://www.senado.gob.ar/prensa/24656/noticias",
+  "fecha": "2026-11-24",
+  "titulo": "EL SENADO RECIBIÓ A ESTUDIANTES SECUNDARIOS EN UNA JORNADA SOBRE LIDERAZGO Y PARTICIPACIÓN CIUDADANA",
+  "comisiones": []
+ },
+ {
+  "id": 24654,
+  "url": "https://www.senado.gob.ar/prensa/24654/noticias",
+  "fecha": "2026-11-24",
+  "titulo": "REUNIÓN INFORMATIVA SOBRE LA RESPONSABILIDAD EXTENDIDA DEL PRODUCTOR EN GESTIÓN AMBIENTAL DE ENVASES Y EMBALAJES",
+  "comisiones": [
+   "AMBIENTE Y DESARROLLO SUSTENTABLE",
+   "INDUSTRIA Y COMERCIO"
+  ]
+ },
+ {
+  "id": 24653,
+  "url": "https://www.senado.gob.ar/prensa/24653/noticias",
+  "fecha": "2026-11-24",
+  "titulo": "LA ORQUESTA DEL CONGRESO PRESENTA APOLO REVELADO EN SU TEMPORADA OFICIAL",
+  "comisiones": []
+ },
+ {
   "id": 24651,
   "url": "https://www.senado.gob.ar/prensa/24651/noticias",
   "fecha": "2026-11-22",
@@ -610,27 +634,6 @@
   "url": "https://www.senado.gob.ar/prensa/24457/noticias",
   "fecha": "2026-10-02",
   "titulo": "EL CONGRESO SE ILUMINÓ DE AZUL EN HOMENAJE AL NACIMIENTO DE ÁNGEL VICENTE PEÑALOZA",
-  "comisiones": []
- },
- {
-  "id": 24454,
-  "url": "https://www.senado.gob.ar/prensa/24454/noticias",
-  "fecha": "2026-10-02",
-  "titulo": "VILLARRUEL CERRÓ EL XII FORO PARLAMENTARIO IBEROAMERICANO CON UN LLAMADO A PONER LA TECNOLOGÍA AL SERVICIO DE LAS PERSONAS Y EL TRABAJO",
-  "comisiones": []
- },
- {
-  "id": 24449,
-  "url": "https://www.senado.gob.ar/prensa/24449/noticias",
-  "fecha": "2026-10-01",
-  "titulo": "VILLARRUEL Y SENADORES PARTICIPAN DEL XII FORO PARLAMENTARIO IBEROAMERICANO EN MADRID",
-  "comisiones": []
- },
- {
-  "id": 24447,
-  "url": "https://www.senado.gob.ar/prensa/24447/noticias",
-  "fecha": "2026-09-30",
-  "titulo": "NUEVO ESTRENO DE “TEMPLOS”: LA OBRA DEL PADRE MARIO PANTALEO",
   "comisiones": []
  }
 ]
