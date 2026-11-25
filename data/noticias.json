@@ -1,5 +1,12 @@
 [
  {
+  "id": 24657,
+  "url": "https://www.senado.gob.ar/prensa/24657/noticias",
+  "fecha": "2026-11-24",
+  "titulo": "LA BICAMERAL REVISORA DE CUENTAS COMENZÓ A TRATAR EL PROGRAMA DE ACCIÓN ANUAL 2027",
+  "comisiones": []
+ },
+ {
   "id": 24656,
   "url": "https://www.senado.gob.ar/prensa/24656/noticias",
   "fecha": "2026-11-24",
@@ -627,13 +634,6 @@
   "url": "https://www.senado.gob.ar/prensa/24460/noticias",
   "fecha": "2026-10-06",
   "titulo": "EL PALACIO LEGISLATIVO SE ILUMINÓ DE VERDE POR EL DÍA MUNDIAL DE LA PARÁLISIS CEREBRAL",
-  "comisiones": []
- },
- {
-  "id": 24457,
-  "url": "https://www.senado.gob.ar/prensa/24457/noticias",
-  "fecha": "2026-10-02",
-  "titulo": "EL CONGRESO SE ILUMINÓ DE AZUL EN HOMENAJE AL NACIMIENTO DE ÁNGEL VICENTE PEÑALOZA",
   "comisiones": []
  }
 ]
