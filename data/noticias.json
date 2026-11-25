@@ -1,5 +1,16 @@
 [
  {
+  "id": 24660,
+  "url": "https://www.senado.gob.ar/prensa/24660/noticias",
+  "fecha": "2026-11-25",
+  "titulo": "AVANZÓ EL TRATAMIENTO DEL PROYECTO DE LEY DE LUDOPATÍA",
+  "comisiones": [
+   "JUSTICIA Y ASUNTOS PENALES",
+   "LEGISLACION GENERAL",
+   "SALUD"
+  ]
+ },
+ {
   "id": 24657,
   "url": "https://www.senado.gob.ar/prensa/24657/noticias",
   "fecha": "2026-11-24",
@@ -628,12 +639,5 @@
   "comisiones": [
    "ACUERDOS"
   ]
- },
- {
-  "id": 24460,
-  "url": "https://www.senado.gob.ar/prensa/24460/noticias",
-  "fecha": "2026-10-06",
-  "titulo": "EL PALACIO LEGISLATIVO SE ILUMINÓ DE VERDE POR EL DÍA MUNDIAL DE LA PARÁLISIS CEREBRAL",
-  "comisiones": []
  }
 ]
