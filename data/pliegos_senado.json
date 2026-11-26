@@ -1,5 +1,5 @@
 {
- "generado": "2026-11-25 21:07",
+ "generado": "2026-11-26 21:00",
  "pliegos": {
   "PE-103/26": {
    "archivo": "11/09/2026",
@@ -1425,12 +1425,12 @@
    "ingreso": "25/06/2026",
    "od": {
     "anio": "2026",
-    "estado": "PENDIENTE",
+    "estado": "APROBADA",
     "fecha": "19/11/2026",
     "numero": "481"
    },
-   "sancion": "",
-   "sancion_fecha": null
+   "sancion": "aprobada",
+   "sancion_fecha": "26/11/2026"
   },
   "PE-221/26": {
    "archivo": "11/09/2026",
@@ -1565,12 +1565,12 @@
    "ingreso": "17/07/2026",
    "od": {
     "anio": "2026",
-    "estado": "PENDIENTE",
+    "estado": "APROBADA",
     "fecha": "19/11/2026",
     "numero": "482"
    },
-   "sancion": "",
-   "sancion_fecha": null
+   "sancion": "aprobada",
+   "sancion_fecha": "26/11/2026"
   },
   "PE-237/26": {
    "archivo": null,
@@ -1579,12 +1579,12 @@
    "ingreso": "17/07/2026",
    "od": {
     "anio": "2026",
-    "estado": "PENDIENTE",
+    "estado": "APROBADA",
     "fecha": "19/11/2026",
     "numero": "483"
    },
-   "sancion": "",
-   "sancion_fecha": null
+   "sancion": "aprobada",
+   "sancion_fecha": "26/11/2026"
   },
   "PE-24/26": {
    "archivo": "16/06/2026",
@@ -1607,12 +1607,12 @@
    "ingreso": "03/08/2026",
    "od": {
     "anio": "2026",
-    "estado": "PENDIENTE",
+    "estado": "APROBADA",
     "fecha": "19/11/2026",
     "numero": "484"
    },
-   "sancion": "",
-   "sancion_fecha": null
+   "sancion": "aprobada",
+   "sancion_fecha": "26/11/2026"
   },
   "PE-249/26": {
    "archivo": null,
@@ -1621,12 +1621,12 @@
    "ingreso": "03/08/2026",
    "od": {
     "anio": "2026",
-    "estado": "PENDIENTE",
+    "estado": "APROBADA",
     "fecha": "19/11/2026",
     "numero": "485"
    },
-   "sancion": "",
-   "sancion_fecha": null
+   "sancion": "aprobada",
+   "sancion_fecha": "26/11/2026"
   },
   "PE-25/26": {
    "archivo": "16/06/2026",
@@ -1649,12 +1649,12 @@
    "ingreso": "03/08/2026",
    "od": {
     "anio": "2026",
-    "estado": "PENDIENTE",
+    "estado": "APROBADA",
     "fecha": "19/11/2026",
     "numero": "486"
    },
-   "sancion": "",
-   "sancion_fecha": null
+   "sancion": "aprobada",
+   "sancion_fecha": "26/11/2026"
   },
   "PE-251/26": {
    "archivo": null,
@@ -1663,12 +1663,12 @@
    "ingreso": "03/08/2026",
    "od": {
     "anio": "2026",
-    "estado": "PENDIENTE",
+    "estado": "APROBADA",
     "fecha": "19/11/2026",
     "numero": "487"
    },
-   "sancion": "",
-   "sancion_fecha": null
+   "sancion": "aprobada",
+   "sancion_fecha": "26/11/2026"
   },
   "PE-252/26": {
    "archivo": null,
@@ -1677,12 +1677,12 @@
    "ingreso": "03/08/2026",
    "od": {
     "anio": "2026",
-    "estado": "PENDIENTE",
+    "estado": "APROBADA",
     "fecha": "19/11/2026",
     "numero": "488"
    },
-   "sancion": "",
-   "sancion_fecha": null
+   "sancion": "aprobada",
+   "sancion_fecha": "26/11/2026"
   },
   "PE-253/26": {
    "archivo": null,
@@ -1691,12 +1691,12 @@
    "ingreso": "03/08/2026",
    "od": {
     "anio": "2026",
-    "estado": "PENDIENTE",
+    "estado": "APROBADA",
     "fecha": "19/11/2026",
     "numero": "489"
    },
-   "sancion": "",
-   "sancion_fecha": null
+   "sancion": "aprobada",
+   "sancion_fecha": "26/11/2026"
   },
   "PE-254/26": {
    "archivo": null,
@@ -1705,12 +1705,12 @@
    "ingreso": "03/08/2026",
    "od": {
     "anio": "2026",
-    "estado": "PENDIENTE",
+    "estado": "APROBADA",
     "fecha": "19/11/2026",
     "numero": "490"
    },
-   "sancion": "",
-   "sancion_fecha": null
+   "sancion": "aprobada",
+   "sancion_fecha": "26/11/2026"
   },
   "PE-255/26": {
    "archivo": null,
@@ -1719,12 +1719,12 @@
    "ingreso": "03/08/2026",
    "od": {
     "anio": "2026",
-    "estado": "PENDIENTE",
+    "estado": "APROBADA",
     "fecha": "19/11/2026",
     "numero": "491"
    },
-   "sancion": "",
-   "sancion_fecha": null
+   "sancion": "aprobada",
+   "sancion_fecha": "26/11/2026"
   },
   "PE-256/26": {
    "archivo": null,
@@ -1733,12 +1733,12 @@
    "ingreso": "03/08/2026",
    "od": {
     "anio": "2026",
-    "estado": "PENDIENTE",
+    "estado": "APROBADA",
     "fecha": "19/11/2026",
     "numero": "492"
    },
-   "sancion": "",
-   "sancion_fecha": null
+   "sancion": "aprobada",
+   "sancion_fecha": "26/11/2026"
   },
   "PE-257/26": {
    "archivo": null,
@@ -1747,12 +1747,12 @@
    "ingreso": "03/08/2026",
    "od": {
     "anio": "2026",
-    "estado": "PENDIENTE",
+    "estado": "APROBADA",
     "fecha": "19/11/2026",
     "numero": "493"
    },
-   "sancion": "",
-   "sancion_fecha": null
+   "sancion": "aprobada",
+   "sancion_fecha": "26/11/2026"
   },
   "PE-258/26": {
    "archivo": null,
@@ -1761,12 +1761,12 @@
    "ingreso": "03/08/2026",
    "od": {
     "anio": "2026",
-    "estado": "PENDIENTE",
+    "estado": "APROBADA",
     "fecha": "19/11/2026",
     "numero": "494"
    },
-   "sancion": "",
-   "sancion_fecha": null
+   "sancion": "aprobada",
+   "sancion_fecha": "26/11/2026"
   },
   "PE-259/26": {
    "archivo": null,
@@ -1775,12 +1775,12 @@
    "ingreso": "03/08/2026",
    "od": {
     "anio": "2026",
-    "estado": "PENDIENTE",
+    "estado": "APROBADA",
     "fecha": "19/11/2026",
     "numero": "495"
    },
-   "sancion": "",
-   "sancion_fecha": null
+   "sancion": "aprobada",
+   "sancion_fecha": "26/11/2026"
   },
   "PE-26/26": {
    "archivo": "16/06/2026",
@@ -1803,12 +1803,12 @@
    "ingreso": "03/08/2026",
    "od": {
     "anio": "2026",
-    "estado": "PENDIENTE",
+    "estado": "APROBADA",
     "fecha": "19/11/2026",
     "numero": "496"
    },
-   "sancion": "",
-   "sancion_fecha": null
+   "sancion": "aprobada",
+   "sancion_fecha": "26/11/2026"
   },
   "PE-261/26": {
    "archivo": null,
@@ -1826,12 +1826,12 @@
    "ingreso": "03/08/2026",
    "od": {
     "anio": "2026",
-    "estado": "PENDIENTE",
+    "estado": "APROBADA",
     "fecha": "19/11/2026",
     "numero": "497"
    },
-   "sancion": "",
-   "sancion_fecha": null
+   "sancion": "aprobada",
+   "sancion_fecha": "26/11/2026"
   },
   "PE-263/26": {
    "archivo": null,
@@ -1840,12 +1840,12 @@
    "ingreso": "05/08/2026",
    "od": {
     "anio": "2026",
-    "estado": "PENDIENTE",
+    "estado": "APROBADA",
     "fecha": "19/11/2026",
     "numero": "498"
    },
-   "sancion": "",
-   "sancion_fecha": null
+   "sancion": "aprobada",
+   "sancion_fecha": "26/11/2026"
   },
   "PE-264/26": {
    "archivo": null,
@@ -1854,12 +1854,12 @@
    "ingreso": "05/08/2026",
    "od": {
     "anio": "2026",
-    "estado": "PENDIENTE",
+    "estado": "APROBADA",
     "fecha": "19/11/2026",
     "numero": "499"
    },
-   "sancion": "",
-   "sancion_fecha": null
+   "sancion": "aprobada",
+   "sancion_fecha": "26/11/2026"
   },
   "PE-265/26": {
    "archivo": null,
@@ -1868,12 +1868,12 @@
    "ingreso": "05/08/2026",
    "od": {
     "anio": "2026",
-    "estado": "PENDIENTE",
+    "estado": "APROBADA",
     "fecha": "19/11/2026",
     "numero": "500"
    },
-   "sancion": "",
-   "sancion_fecha": null
+   "sancion": "aprobada",
+   "sancion_fecha": "26/11/2026"
   },
   "PE-266/26": {
    "archivo": null,
@@ -1882,12 +1882,12 @@
    "ingreso": "05/08/2026",
    "od": {
     "anio": "2026",
-    "estado": "PENDIENTE",
+    "estado": "APROBADA",
     "fecha": "19/11/2026",
     "numero": "501"
    },
-   "sancion": "",
-   "sancion_fecha": null
+   "sancion": "aprobada",
+   "sancion_fecha": "26/11/2026"
   },
   "PE-267/26": {
    "archivo": null,
@@ -1896,12 +1896,12 @@
    "ingreso": "05/08/2026",
    "od": {
     "anio": "2026",
-    "estado": "PENDIENTE",
+    "estado": "APROBADA",
     "fecha": "19/11/2026",
     "numero": "502"
    },
-   "sancion": "",
-   "sancion_fecha": null
+   "sancion": "aprobada",
+   "sancion_fecha": "26/11/2026"
   },
   "PE-268/26": {
    "archivo": null,
@@ -1910,12 +1910,12 @@
    "ingreso": "05/08/2026",
    "od": {
     "anio": "2026",
-    "estado": "PENDIENTE",
+    "estado": "APROBADA",
     "fecha": "19/11/2026",
     "numero": "503"
    },
-   "sancion": "",
-   "sancion_fecha": null
+   "sancion": "aprobada",
+   "sancion_fecha": "26/11/2026"
   },
   "PE-269/26": {
    "archivo": null,
@@ -1924,12 +1924,12 @@
    "ingreso": "05/08/2026",
    "od": {
     "anio": "2026",
-    "estado": "PENDIENTE",
+    "estado": "APROBADA",
     "fecha": "19/11/2026",
     "numero": "504"
    },
-   "sancion": "",
-   "sancion_fecha": null
+   "sancion": "aprobada",
+   "sancion_fecha": "26/11/2026"
   },
   "PE-27/26": {
    "archivo": "16/06/2026",
@@ -1952,12 +1952,12 @@
    "ingreso": "27/08/2026",
    "od": {
     "anio": "2026",
-    "estado": "PENDIENTE",
+    "estado": "APROBADA",
     "fecha": "19/11/2026",
     "numero": "505"
    },
-   "sancion": "",
-   "sancion_fecha": null
+   "sancion": "aprobada",
+   "sancion_fecha": "26/11/2026"
   },
   "PE-278/26": {
    "archivo": null,
@@ -1966,12 +1966,12 @@
    "ingreso": "27/08/2026",
    "od": {
     "anio": "2026",
-    "estado": "PENDIENTE",
+    "estado": "APROBADA",
     "fecha": "19/11/2026",
     "numero": "506"
    },
-   "sancion": "",
-   "sancion_fecha": null
+   "sancion": "aprobada",
+   "sancion_fecha": "26/11/2026"
   },
   "PE-279/26": {
    "archivo": null,
@@ -1980,12 +1980,12 @@
    "ingreso": "27/08/2026",
    "od": {
     "anio": "2026",
-    "estado": "PENDIENTE",
+    "estado": "APROBADA",
     "fecha": "19/11/2026",
     "numero": "507"
    },
-   "sancion": "",
-   "sancion_fecha": null
+   "sancion": "aprobada",
+   "sancion_fecha": "26/11/2026"
   },
   "PE-28/26": {
    "archivo": "16/06/2026",
@@ -2008,12 +2008,12 @@
    "ingreso": "28/08/2026",
    "od": {
     "anio": "2026",
-    "estado": "PENDIENTE",
+    "estado": "APROBADA",
     "fecha": "19/11/2026",
     "numero": "508"
    },
-   "sancion": "",
-   "sancion_fecha": null
+   "sancion": "aprobada",
+   "sancion_fecha": "26/11/2026"
   },
   "PE-283/26": {
    "archivo": null,
@@ -2022,12 +2022,12 @@
    "ingreso": "28/08/2026",
    "od": {
     "anio": "2026",
-    "estado": "PENDIENTE",
+    "estado": "APROBADA",
     "fecha": "19/11/2026",
     "numero": "509"
    },
-   "sancion": "",
-   "sancion_fecha": null
+   "sancion": "aprobada",
+   "sancion_fecha": "26/11/2026"
   },
   "PE-284/26": {
    "archivo": null,
@@ -2036,12 +2036,12 @@
    "ingreso": "28/08/2026",
    "od": {
     "anio": "2026",
-    "estado": "PENDIENTE",
+    "estado": "APROBADA",
     "fecha": "19/11/2026",
     "numero": "510"
    },
-   "sancion": "",
-   "sancion_fecha": null
+   "sancion": "aprobada",
+   "sancion_fecha": "26/11/2026"
   },
   "PE-285/26": {
    "archivo": null,
@@ -2050,12 +2050,12 @@
    "ingreso": "28/08/2026",
    "od": {
     "anio": "2026",
-    "estado": "PENDIENTE",
+    "estado": "APROBADA",
     "fecha": "19/11/2026",
     "numero": "511"
    },
-   "sancion": "",
-   "sancion_fecha": null
+   "sancion": "aprobada",
+   "sancion_fecha": "26/11/2026"
   },
   "PE-286/26": {
    "archivo": null,
@@ -2064,12 +2064,12 @@
    "ingreso": "28/08/2026",
    "od": {
     "anio": "2026",
-    "estado": "PENDIENTE",
+    "estado": "APROBADA",
     "fecha": "19/11/2026",
     "numero": "512"
    },
-   "sancion": "",
-   "sancion_fecha": null
+   "sancion": "aprobada",
+   "sancion_fecha": "26/11/2026"
   },
   "PE-287/26": {
    "archivo": null,
@@ -2078,12 +2078,12 @@
    "ingreso": "28/08/2026",
    "od": {
     "anio": "2026",
-    "estado": "PENDIENTE",
+    "estado": "APROBADA",
     "fecha": "19/11/2026",
     "numero": "513"
    },
-   "sancion": "",
-   "sancion_fecha": null
+   "sancion": "aprobada",
+   "sancion_fecha": "26/11/2026"
   },
   "PE-288/26": {
    "archivo": null,
@@ -2092,12 +2092,12 @@
    "ingreso": "28/08/2026",
    "od": {
     "anio": "2026",
-    "estado": "PENDIENTE",
+    "estado": "APROBADA",
     "fecha": "19/11/2026",
     "numero": "514"
    },
-   "sancion": "",
-   "sancion_fecha": null
+   "sancion": "aprobada",
+   "sancion_fecha": "26/11/2026"
   },
   "PE-289/26": {
    "archivo": null,
@@ -2106,12 +2106,12 @@
    "ingreso": "28/08/2026",
    "od": {
     "anio": "2026",
-    "estado": "PENDIENTE",
+    "estado": "APROBADA",
     "fecha": "19/11/2026",
     "numero": "515"
    },
-   "sancion": "",
-   "sancion_fecha": null
+   "sancion": "aprobada",
+   "sancion_fecha": "26/11/2026"
   },
   "PE-29/26": {
    "archivo": "16/06/2026",
@@ -2134,12 +2134,12 @@
    "ingreso": "28/08/2026",
    "od": {
     "anio": "2026",
-    "estado": "PENDIENTE",
+    "estado": "APROBADA",
     "fecha": "19/11/2026",
     "numero": "516"
    },
-   "sancion": "",
-   "sancion_fecha": null
+   "sancion": "aprobada",
+   "sancion_fecha": "26/11/2026"
   },
   "PE-291/26": {
    "archivo": null,
@@ -2148,12 +2148,12 @@
    "ingreso": "28/08/2026",
    "od": {
     "anio": "2026",
-    "estado": "PENDIENTE",
+    "estado": "APROBADA",
     "fecha": "19/11/2026",
     "numero": "517"
    },
-   "sancion": "",
-   "sancion_fecha": null
+   "sancion": "aprobada",
+   "sancion_fecha": "26/11/2026"
   },
   "PE-292/26": {
    "archivo": null,
@@ -2162,12 +2162,12 @@
    "ingreso": "28/08/2026",
    "od": {
     "anio": "2026",
-    "estado": "PENDIENTE",
+    "estado": "APROBADA",
     "fecha": "19/11/2026",
     "numero": "518"
    },
-   "sancion": "",
-   "sancion_fecha": null
+   "sancion": "aprobada",
+   "sancion_fecha": "26/11/2026"
   },
   "PE-293/26": {
    "archivo": null,
@@ -2176,12 +2176,12 @@
    "ingreso": "28/08/2026",
    "od": {
     "anio": "2026",
-    "estado": "PENDIENTE",
+    "estado": "APROBADA",
     "fecha": "19/11/2026",
     "numero": "519"
    },
-   "sancion": "",
-   "sancion_fecha": null
+   "sancion": "aprobada",
+   "sancion_fecha": "26/11/2026"
   },
   "PE-30/26": {
    "archivo": "16/06/2026",
@@ -2213,12 +2213,12 @@
    "ingreso": "11/09/2026",
    "od": {
     "anio": "2026",
-    "estado": "PENDIENTE",
+    "estado": "APROBADA",
     "fecha": "19/11/2026",
     "numero": "520"
    },
-   "sancion": "",
-   "sancion_fecha": null
+   "sancion": "aprobada",
+   "sancion_fecha": "26/11/2026"
   },
   "PE-302/26": {
    "archivo": null,
@@ -2227,12 +2227,12 @@
    "ingreso": "11/09/2026",
    "od": {
     "anio": "2026",
-    "estado": "PENDIENTE",
+    "estado": "APROBADA",
     "fecha": "19/11/2026",
     "numero": "521"
    },
-   "sancion": "",
-   "sancion_fecha": null
+   "sancion": "aprobada",
+   "sancion_fecha": "26/11/2026"
   },
   "PE-303/26": {
    "archivo": null,
@@ -2241,12 +2241,12 @@
    "ingreso": "11/09/2026",
    "od": {
     "anio": "2026",
-    "estado": "PENDIENTE",
+    "estado": "APROBADA",
     "fecha": "19/11/2026",
     "numero": "522"
    },
-   "sancion": "",
-   "sancion_fecha": null
+   "sancion": "aprobada",
+   "sancion_fecha": "26/11/2026"
   },
   "PE-304/26": {
    "archivo": null,
@@ -2255,12 +2255,12 @@
    "ingreso": "11/09/2026",
    "od": {
     "anio": "2026",
-    "estado": "PENDIENTE",
+    "estado": "APROBADA",
     "fecha": "19/11/2026",
     "numero": "523"
    },
-   "sancion": "",
-   "sancion_fecha": null
+   "sancion": "aprobada",
+   "sancion_fecha": "26/11/2026"
   },
   "PE-308/26": {
    "archivo": null,

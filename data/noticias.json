@@ -1,5 +1,19 @@
 [
  {
+  "id": 24668,
+  "url": "https://www.senado.gob.ar/prensa/24668/noticias",
+  "fecha": "2026-11-26",
+  "titulo": "\"EL SENADO VA A ESCUELA\" VISITÓ LA PROVINCIA DE MISIONES POR PRIMERA VEZ",
+  "comisiones": []
+ },
+ {
+  "id": 24664,
+  "url": "https://www.senado.gob.ar/prensa/24664/noticias",
+  "fecha": "2026-11-25",
+  "titulo": "EL JEFE DE GABINETE, DIEGO SANTILLI, BRINDÓ SU PRIMER INFORME DE GESTIÓN",
+  "comisiones": []
+ },
+ {
   "id": 24660,
   "url": "https://www.senado.gob.ar/prensa/24660/noticias",
   "fecha": "2026-11-25",
@@ -622,22 +636,6 @@
   "comisiones": [
    "CIENCIA Y TECNOLOGIA",
    "SALUD"
-  ]
- },
- {
-  "id": 24466,
-  "url": "https://www.senado.gob.ar/prensa/24466/noticias",
-  "fecha": "2026-10-07",
-  "titulo": "SE REALIZÓ LA JORNADA FEDERAL SOBRE INTELIGENCIA ARTIFICIAL Y MODERNIZACIÓN PARLAMENTARIA",
-  "comisiones": []
- },
- {
-  "id": 24465,
-  "url": "https://www.senado.gob.ar/prensa/24465/noticias",
-  "fecha": "2026-10-07",
-  "titulo": "LA COMISIÓN DE ACUERDOS REALIZÓ UNA AUDIENCIA PÚBLICA PARA ANALIZAR 12 PLIEGOS",
-  "comisiones": [
-   "ACUERDOS"
   ]
  }
 ]
