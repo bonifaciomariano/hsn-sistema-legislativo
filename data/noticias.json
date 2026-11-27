@@ -1,5 +1,14 @@
 [
  {
+  "id": 24670,
+  "url": "https://www.senado.gob.ar/prensa/24670/noticias",
+  "fecha": "2026-11-27",
+  "titulo": "EL SENADO CONVIRTIÓ EN LEY EL PROYECTO DE PREVENCIÓN DE LA LUDOPATÍA Y OTORGÓ MEDIA SANCIÓN A LA REFORMA ELECTORAL",
+  "comisiones": [
+   "ACUERDOS"
+  ]
+ },
+ {
   "id": 24668,
   "url": "https://www.senado.gob.ar/prensa/24668/noticias",
   "fecha": "2026-11-26",
@@ -627,15 +636,5 @@
   "fecha": "2026-10-07",
   "titulo": "EL CONGRESO SE ILUMINÓ EN LA VIGILIA DEL DÍA INTERNACIONAL DE LA DISLEXIA",
   "comisiones": []
- },
- {
-  "id": 24469,
-  "url": "https://www.senado.gob.ar/prensa/24469/noticias",
-  "fecha": "2026-10-07",
-  "titulo": "EN COMISIÓN SE ABORDÓ EL IMPACTO DE LAS NUEVAS TECNOLOGÍAS EN LAS INFANCIAS Y ADOLESCENCIAS",
-  "comisiones": [
-   "CIENCIA Y TECNOLOGIA",
-   "SALUD"
-  ]
  }
 ]
