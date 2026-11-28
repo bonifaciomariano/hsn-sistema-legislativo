@@ -1,5 +1,14 @@
 [
  {
+  "id": 24672,
+  "url": "https://www.senado.gob.ar/prensa/24672/noticias",
+  "fecha": "2026-11-27",
+  "titulo": "LA COMISIÓN DE ACUERDOS ANALIZÓ 5 PLIEGOS EN AUDIENCIA PÚBLICA",
+  "comisiones": [
+   "ACUERDOS"
+  ]
+ },
+ {
   "id": 24670,
   "url": "https://www.senado.gob.ar/prensa/24670/noticias",
   "fecha": "2026-11-27",
@@ -628,13 +637,6 @@
   "url": "https://www.senado.gob.ar/prensa/24478/noticias",
   "fecha": "2026-10-08",
   "titulo": "EL CONGRESO SE ILUMINÓ DE AZUL EN HOMENAJE A CÉSAR MILSTEIN Y POR LA AUTONOMÍA DE TUCUMÁN Y SALTA",
-  "comisiones": []
- },
- {
-  "id": 24470,
-  "url": "https://www.senado.gob.ar/prensa/24470/noticias",
-  "fecha": "2026-10-07",
-  "titulo": "EL CONGRESO SE ILUMINÓ EN LA VIGILIA DEL DÍA INTERNACIONAL DE LA DISLEXIA",
   "comisiones": []
  }
 ]
